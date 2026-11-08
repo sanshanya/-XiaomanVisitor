@@ -586,6 +586,14 @@ internal static class CheckMod
             && typeof(CustomUIManager).GetMethod("HasLayer") != null
             && typeof(StoreUIManager).GetField("mainCamera") != null,
             "installed game supports scoped renderer suppression and the normal-camera UI projection");
+        foreach (string nativeWall in new[] { "wall", "wall2" })
+            Require(ShopPortraitRules.SupportsBackdrop(nativeWall,960,540,"desk",960,540),
+                "water-tap locked and unlocked native wall variants both enable the presenter");
+        Require(!ShopPortraitRules.SupportsBackdrop("wall",640,360,"desk",960,540)
+            && !ShopPortraitRules.SupportsBackdrop("other.mod.wall",960,540,"desk",960,540)
+            && !ShopPortraitRules.SupportsBackdrop(null,960,540,"desk",960,540)
+            && !ShopPortraitRules.SupportsBackdrop("wall2",960,540,"desk",960,360),
+            "unrelated or geometrically incompatible backdrops retain native rendering");
         Console.WriteLine("PASS: all 128 shop presentation states, native motion/special-camera fallback and serving-window clipping.");
     }
 

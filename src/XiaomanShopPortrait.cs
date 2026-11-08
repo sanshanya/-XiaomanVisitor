@@ -8,6 +8,15 @@ namespace XiaomanVisitor
         public static bool MayPresent(bool ownClient, bool inStore, bool arrived, bool moving,
             bool nativeVisible, bool normalMode, bool sourceReady)
         { return ownClient && inStore && arrived && !moving && nativeVisible && normalMode && sourceReady; }
+
+        public static bool SupportsBackdrop(string wallName, float wallWidth, float wallHeight,
+            string deskName, float deskWidth, float deskHeight)
+        {
+            // LoadFaucetUpdate selects wall2 before either water tap is unlocked.
+            // Both native variants have the same transparent serving window.
+            return (wallName == "wall" || wallName == "wall2") && wallWidth == 960 && wallHeight == 540
+                && deskName == "desk" && deskWidth == 960 && deskHeight == 540;
+        }
         // Native 960x540 wall's transparent serving window and desk alpha edge.
         public const float WindowLeft = 324f / 960f;
         public const float WindowRight = 639f / 960f;
@@ -24,36 +33,48 @@ namespace XiaomanVisitor
         private SpriteRenderer source, wall, desk;
         private Texture2D displayAtlas;
         private bool originalForceOff, ownsSource;
+        private string reportedState, prepareFailure;
         private MaterialPropertyBlock properties;
         private static readonly int SolidBlendId = Shader.PropertyToID("_SolidBlend");
+        private const string Diagnostic = "SHOP-HD 0.0.3.2: ";
 
         private void LateUpdate()
         {
-            if (!PlayerStore.HasInstance || XiaomanMod.Instance == null || StoreClientMono.Instance == null) { Hide(); return; }
+            if (!PlayerStore.HasInstance || XiaomanMod.Instance == null || StoreClientMono.Instance == null
+                || !XiaomanMod.CurrentClientIsXiaoman()) { Hide(); reportedState = null; return; }
             var client = StoreClientMono.Instance;
             var renderer = client.image;
-            if (!ShopPortraitRules.MayPresent(XiaomanMod.CurrentClientIsXiaoman(), !ModHelper.IsOutsideStore(),
-                PlayerStore.Instance.isClientArrived, client.IsMoving(), renderer != null && renderer.enabled && renderer.gameObject.activeInHierarchy,
-                StoreUIManager.Instance != null && !StoreUIManager.Instance.isShootingMode && !StoreUIManager.Instance.isMagnifyingMode,
-                renderer != null && renderer.sprite != null
-                    && PlayerStore.Instance.storeState == PlayerStore.StoreState.OPEN)) { Hide(); return; }
+            bool inside = !ModHelper.IsOutsideStore(), arrived = PlayerStore.Instance.isClientArrived,
+                moving = client.IsMoving(), visible = renderer != null && renderer.enabled && renderer.gameObject.activeInHierarchy,
+                normal = StoreUIManager.Instance != null && !StoreUIManager.Instance.isShootingMode && !StoreUIManager.Instance.isMagnifyingMode,
+                ready = renderer != null && renderer.sprite != null && PlayerStore.Instance.storeState == PlayerStore.StoreState.OPEN;
+            if (!ShopPortraitRules.MayPresent(true,inside,arrived,moving,visible,normal,ready)) {
+                Fallback("native state: inside=" + inside + ", arrived=" + arrived + ", moving=" + moving
+                    + ", visible=" + visible + ", normalCamera=" + normal + ", ready=" + ready);
+                return;
+            }
             int frameIndex = FindFrame(XiaomanMod.Instance, renderer.sprite);
-            if (frameIndex < 0) { Hide(); return; }
-            if (renderer.color.a < .999f || renderer.maskInteraction != SpriteMaskInteraction.None) { Hide(); return; }
+            if (frameIndex < 0) { Fallback("sprite is not an owned expression frame"); return; }
+            if (renderer.color.a < .999f || renderer.maskInteraction != SpriteMaskInteraction.None) {
+                Fallback("native alpha/mask transition"); return;
+            }
             if (properties == null) properties = new MaterialPropertyBlock();
             renderer.GetPropertyBlock(properties);
-            if (properties.GetFloat(SolidBlendId) > .001f) { Hide(); return; }
-            if (!Prepare() || StoreUIManager.Instance.mainCamera == null) { Hide(); return; }
+            if (properties.GetFloat(SolidBlendId) > .001f) { Fallback("native solid-color transition"); return; }
+            if (!Prepare()) { Fallback(prepareFailure); return; }
+            if (StoreUIManager.Instance.mainCamera == null) { Fallback("normal camera is missing"); return; }
             Camera camera = StoreUIManager.Instance.mainCamera.GetComponent<Camera>();
-            if (camera == null || !camera.isActiveAndEnabled) { Hide(); return; }
+            if (camera == null || !camera.isActiveAndEnabled) { Fallback("normal camera is inactive"); return; }
             Rect body, opening, counter;
             if (!Project(camera, renderer, renderer.sprite.bounds.min, renderer.sprite.bounds.max, out body)
                 || !Project(camera, wall, WallPoint(ShopPortraitRules.WindowLeft,0), WallPoint(ShopPortraitRules.WindowRight,1), out opening)
-                || !Project(camera, desk, DeskPoint(0,ShopPortraitRules.DeskTop), DeskPoint(1,1), out counter)) { Hide(); return; }
+                || !Project(camera, desk, DeskPoint(0,ShopPortraitRules.DeskTop), DeskPoint(1,1), out counter)) {
+                Fallback("world-to-UI projection is not ready"); return;
+            }
             // Clip below the opaque desktop; leave the original serving-window
             // sides in place. All coordinates follow the native transforms.
             float bottom = Mathf.Max(opening.yMin, counter.yMin);
-            if (bottom >= opening.yMax || !body.Overlaps(opening)) { Hide(); return; }
+            if (bottom >= opening.yMax || !body.Overlaps(opening)) { Fallback("portrait is outside the serving window"); return; }
             opening.yMin = bottom;
             if (clip.GetSiblingIndex() != 0) clip.SetAsFirstSibling();
             clip.anchorMin = clip.anchorMax = parent.pivot;
@@ -70,12 +91,12 @@ namespace XiaomanVisitor
             if (source != renderer) { ReleaseSource(); source = renderer; }
             if (!ownsSource) {
                 originalForceOff = renderer.forceRenderingOff;
-                if (originalForceOff) { Hide(); return; }
+                if (originalForceOff) { Fallback("native renderer is already suppressed by another owner"); return; }
                 ownsSource = true;
-                XiaomanMod.Instance.Log.Log("SHOP-HD 0.0.3.1: full-resolution presenter active; image=384x688, nativeFrame="
+                Report("active; image=384x688, nativeFrame="
                     + renderer.sprite.rect.width + "x" + renderer.sprite.rect.height + ", viewport=" + LetterboxManager.GameAreaHeight
                     + ", nativeCamera=" + camera.pixelWidth + "x" + camera.pixelHeight
-                    + ", layer=front (behind native dialogue); input, entrance/exit, counter clipping and native magnifier retained.");
+                    + ", wall=" + wall.sprite.name + ", layer=front (behind native dialogue).");
             }
             renderer.forceRenderingOff = true;
             clip.gameObject.SetActive(true);
@@ -83,15 +104,17 @@ namespace XiaomanVisitor
 
         private bool Prepare()
         {
+            prepareFailure = "native front UI layer is unavailable";
             if (CustomUIManager.Instance == null || !CustomUIManager.HasLayer("front")) return false;
             if (displayAtlas == null) {
                 bool detailed;
                 displayAtlas = XiaomanMod.Instance.TavernPortraitAtlas(out detailed);
-                if (!detailed) { displayAtlas = null; return false; }
+                if (!detailed) { displayAtlas = null; prepareFailure = "full-detail atlas could not be loaded"; return false; }
             }
             // The native front canvas is below dialogue, papers, transitions and
             // menus. Meta is above them and would let the actor cover the UI.
             RectTransform root = CustomUIManager.Instance.GetLayerRoot("front");
+            prepareFailure = "native front canvas is inactive";
             if (root == null || !root.gameObject.activeInHierarchy) return false;
             Canvas canvas = root.GetComponentInParent<Canvas>();
             if (canvas == null || !canvas.isActiveAndEnabled) return false;
@@ -106,12 +129,15 @@ namespace XiaomanVisitor
                 image.rectTransform.anchorMin = image.rectTransform.anchorMax = image.rectTransform.pivot = new Vector2(.5f,.5f);
                 clip.gameObject.SetActive(false);
             }
-            if (wall == null) { var go = GameObject.Find("EmporiumWall"); wall = go == null ? null : go.GetComponent<SpriteRenderer>(); }
+            wall = StoreUIManager.Instance.wallRenderer;
             if (desk == null) { var go = GameObject.Find("Desk"); desk = go == null ? null : go.GetComponent<SpriteRenderer>(); }
-            return wall != null && desk != null && wall.sprite != null && desk.sprite != null
-                && wall.sprite.name == "wall" && desk.sprite.name == "desk"
-                && wall.sprite.rect.width == 960 && wall.sprite.rect.height == 540
-                && desk.sprite.rect.width == 960 && desk.sprite.rect.height == 540;
+            prepareFailure = "native wall or desk renderer is missing";
+            if (wall == null || desk == null || wall.sprite == null || desk.sprite == null) return false;
+            if (ShopPortraitRules.SupportsBackdrop(wall.sprite.name,wall.sprite.rect.width,wall.sprite.rect.height,
+                desk.sprite.name,desk.sprite.rect.width,desk.sprite.rect.height)) return true;
+            prepareFailure = "unsupported backdrop: " + wall.sprite.name + " " + wall.sprite.rect.size
+                + " / " + desk.sprite.name + " " + desk.sprite.rect.size;
+            return false;
         }
 
         private static int FindFrame(XiaomanMod mod, Sprite sprite)
@@ -156,6 +182,14 @@ namespace XiaomanVisitor
         }
         private void Hide()
         { if (clip != null) clip.gameObject.SetActive(false); ReleaseSource(); }
+        private void Fallback(string reason)
+        { Hide(); Report("native fallback; " + reason); }
+        private void Report(string state)
+        {
+            if (reportedState == state) return;
+            reportedState = state;
+            if (XiaomanMod.Instance != null) XiaomanMod.Instance.Log.Log(Diagnostic + state);
+        }
         internal void Shutdown()
         {
             Hide();
