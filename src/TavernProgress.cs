@@ -7,7 +7,8 @@ namespace XiaomanVisitor
 {
     public static class TavernRules
     {
-        public const int OpeningDay = 3;
+        // Development test access; the planned release opening remains day 3.
+        public const int OpeningDay = 1;
         public const int CupPrice = 35;
         public const string SaveKey = "tavern_v1_progress";
         public const string SceneFolder = "Scenes/Tavern/";

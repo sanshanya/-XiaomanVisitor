@@ -91,7 +91,7 @@ def import_layers(source):
                          "size": [384, 48], "covers_current_actor_footprint_only": True},
         "viewport": {"fit": "contain", "preserve_aspect": True,
                      "shared_transform_for_all_layers": True},
-        "integration": {"opening_game_day": 3, "independent_night_actor_required": True,
+        "integration": {"opening_game_day": 1, "planned_release_opening_game_day": 3, "independent_night_actor_required": True,
                         "reuse_voice_envelope": True, "modify_native_customer_queue": False},
         "supplied_preview_sha256": digest(source / "xiaoman-tavern-preview.png"),
         "compact_layers_reproduce_supplied_preview_exactly": True,
@@ -230,7 +230,7 @@ def main():
             shutil.copyfile(SCENE / name, target / name)
             files.append(dict(source=name, packaged=(target / name).relative_to(PACKAGE).as_posix(),
                               sha256=digest(target / name), bytes=(target / name).stat().st_size))
-        save(SCENE / "runtime-manifest.json", dict(schema=1, files=files, opening_game_day=3,
+        save(SCENE / "runtime-manifest.json", dict(schema=1, files=files, opening_game_day=1, planned_release_opening_game_day=3,
              texture_memory_bytes=(1672*941 + 384*48)*4, existing_portraits_reused=True))
     report = validate(recipe)
     if args.preview:

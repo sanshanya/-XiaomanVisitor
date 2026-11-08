@@ -80,7 +80,7 @@ def main():
         assert original.getchannel("A").tobytes() == pink.getchannel("A").tobytes(), "Notebook slot shape changed"
         assert hashlib.sha256((ROOT / icon["source"]).read_bytes()).hexdigest() == icon["source_sha256"]
     assert list(Image.open(PACKAGE / tavern_map["packaged"]).size) == tavern_map["size"] == [592,336]
-    assert tavern_map["phase"] == "tavern_stage_one" and tavern_map["enterable"] and tavern_map["opening_game_day"] == 3
+    assert tavern_map["phase"] == "tavern_stage_one" and tavern_map["enterable"] and tavern_map["opening_game_day"] == 1
     assert tavern_map["image_key"] == "sansm.xiaoman.visitor:" + Path(tavern_map["packaged"]).stem
     assert current == expected, "Approved texture changed, missing or unexpected"
     detail = json.loads((ROOT / "assets/portrait-detail.json").read_text(encoding="utf-8"))

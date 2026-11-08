@@ -14,7 +14,8 @@
       "bytes": 4667
     }
   ],
-  "opening_game_day": 3,
+  "opening_game_day": 1,
   "texture_memory_bytes": 6367136,
-  "existing_portraits_reused": true
+  "existing_portraits_reused": true,
+  "planned_release_opening_game_day": 3
 }

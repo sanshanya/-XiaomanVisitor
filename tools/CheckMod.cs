@@ -509,21 +509,23 @@ internal static class CheckMod
                 foreach (bool hasRun in new[] { false, true })
                     foreach (bool departed in new[] { false, true })
                         Require(TavernRules.IsOpen(enabled, hasRun, day, departed)
-                            == (enabled && hasRun && day >= 3 && !departed), "day-3 access respects no-run/disabled/departed states");
-        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,2,false) == "ui_tavern_renovating", "days 1-2 renovation");
-        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,3,false) == null, "open card retains native available status");
+                            == (enabled && hasRun && day >= 1 && !departed), "day-1 test access respects no-run/disabled/departed states");
+        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,0,false) == "ui_tavern_renovating", "unstarted run retains renovation status");
+        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,1,false) == null, "day-one card retains native available status");
         Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,99,true) == "ui_tavern_closed", "legacy departure is not reversed");
         Require(TavernRules.StatusKey("commissary",true,true,1,false) == null, "other locations retain native status");
         var p = TavernProgress.Restore(null,1);
-        Require(p.OpenedOn == 3 && !p.MayAct(2) && p.MayAct(3), "new run opens at day three");
-        Require(!p.Buy(3,34) && p.Entries.Count == 0 && !p.Buy(2,999), "insufficient funds/early action never records payment");
-        Require(p.Buy(3,35) && p.Cups == 1 && p.Receipts == 35, "exact-price ordinary cup is charged once");
-        Require(!p.Buy(3,999) && !p.Help(3), "double clicks and cross-action repeats are rejected");
+        Require(p.OpenedOn == 1 && !p.MayAct(0) && p.MayAct(1), "test run opens at day one");
+        Require(!p.Buy(1,34) && p.Entries.Count == 0 && !p.Buy(0,999), "insufficient funds/early action never records payment");
+        Require(p.Buy(1,35) && p.Cups == 1 && p.Receipts == 35, "exact-price ordinary cup is charged once");
+        Require(!p.Buy(1,999) && !p.Help(1), "double clicks and cross-action repeats are rejected");
+        p = TavernProgress.Restore(p.Data,1);
+        Require(p.Cups == 1 && p.Receipts == 35 && !p.MayAct(1), "reload preserves consumption and the night receipt");
+        Require(p.Help(2) && p.PickupPointReady && p.Receipts == 35 && !p.Buy(2,999), "L1 help persists without inventing cash income");
         p = TavernProgress.Restore(p.Data,3);
-        Require(p.Cups == 1 && p.Receipts == 35 && !p.MayAct(3), "reload preserves consumption and the night receipt");
-        Require(p.Help(4) && p.PickupPointReady && p.Receipts == 35 && !p.Buy(4,999), "L1 help persists without inventing cash income");
-        p = TavernProgress.Restore(p.Data,5);
-        Require(p.PickupPointReady && !p.Help(5) && p.Buy(5,100), "completed project cannot be repeated; a later night's drink remains available");
+        Require(p.PickupPointReady && !p.Help(3) && p.Buy(3,100), "completed project cannot be repeated; a later night's drink remains available");
+        var scheduled = TavernProgress.Restore("{\"Schema\":1,\"OpenedOn\":3,\"Entries\":[]}",1);
+        Require(scheduled.OpenedOn == 1 && scheduled.MayBuy(1,35), "an existing day-one test save scheduled for day three opens immediately");
         Require(p.Receipts == 70 && p.Cups == 2, "ledger sums actual purchases only");
         var existing = TavernProgress.Restore(null,52);
         Require(existing.OpenedOn == 52 && !existing.MayAct(51) && existing.MayAct(52) && existing.Receipts == 0,
@@ -540,7 +542,7 @@ internal static class CheckMod
         Require(TavernRules.FitScale(0,1080) == 0 && TavernRules.FitScale(double.NaN,1080) == 0, "unready viewports do not generate invalid transforms");
         for (int mood=0;mood<6;mood++) for (int mouth=0;mouth<3;mouth++)
             Require(TavernRules.FrameIndex((Mood)mood,mouth) == mood*3+mouth, "all eighteen night portrait states retain approved mapping");
-        Console.WriteLine("PASS: day-3 tavern access, migration, 35-CR purchase, one activity/night, persistent L1 pickup point, ledger/reload and resolution-independent layer geometry.");
+        Console.WriteLine("PASS: day-1 test tavern access, migration, 35-CR purchase, one activity/night, persistent L1 pickup point, ledger/reload and resolution-independent layer geometry.");
     }
     private static void CheckPortraitDetail()
     {

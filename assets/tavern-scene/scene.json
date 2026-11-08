@@ -58,10 +58,11 @@
     "shared_transform_for_all_layers": true
   },
   "integration": {
-    "opening_game_day": 3,
+    "opening_game_day": 1,
     "independent_night_actor_required": true,
     "reuse_voice_envelope": true,
-    "modify_native_customer_queue": false
+    "modify_native_customer_queue": false,
+    "planned_release_opening_game_day": 3
   },
   "supplied_preview_sha256": "e7b0e93c7fd38a0e5822909120d97667ef0fd577d6a29fa4895e84ecb7485524",
   "compact_layers_reproduce_supplied_preview_exactly": true,
