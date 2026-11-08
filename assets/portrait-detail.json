@@ -21,9 +21,9 @@
   "sharpening": false,
   "appearance": "original pixel edges",
   "lazy_load": true,
-  "viewport_height_above": 1080,
+  "viewport_height_above": 0,
   "world_geometry_unchanged": true,
-  "usage": "shop",
+  "usage": "native_nearest_fallback",
   "frames": [
     {
       "index": 0,

@@ -23,7 +23,7 @@
   "lazy_load": true,
   "viewport_height_above": 0,
   "world_geometry_unchanged": true,
-  "usage": "tavern",
+  "usage": "native_shop_and_tavern",
   "frames": [
     {
       "index": 0,

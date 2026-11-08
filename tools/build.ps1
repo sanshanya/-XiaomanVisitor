@@ -9,9 +9,9 @@ $projectRoot = Split-Path -Parent $PSScriptRoot
 $managed = Join-Path $GameRoot 'Probably Stolen_Data\Managed'
 $compiler = Get-XiaomanCompiler
 $package = Join-Path $projectRoot 'package\XiaomanVisitor'
-$refs = @('mscorlib.dll','netstandard.dll','System.dll','System.Core.dll','Assembly-CSharp.dll','0Harmony.dll','Newtonsoft.Json.dll',
+$refs = @('mscorlib.dll','netstandard.dll','System.dll','System.Core.dll','Assembly-CSharp.dll','Assembly-CSharp-firstpass.dll','0Harmony.dll','Newtonsoft.Json.dll',
     'UnityEngine.CoreModule.dll','UnityEngine.AudioModule.dll','UnityEngine.InputLegacyModule.dll','Febucci.TextAnimator.Runtime.dll',
-    'Febucci.TextAnimator.TMP.Runtime.dll','Unity.TextMeshPro.dll','UnityEngine.UI.dll','UnityEngine.UIModule.dll','UnityEngine.ImageConversionModule.dll')
+    'Febucci.TextAnimator.TMP.Runtime.dll','Unity.TextMeshPro.dll','UnityEngine.UI.dll','UnityEngine.UIModule.dll','UnityEngine.ImageConversionModule.dll','Unity.2D.PixelPerfect.dll')
 $compilerArgs = @('/nologo','/target:library','/nostdlib+','/langversion:latest','/optimize+','/deterministic+',
     ('/out:' + (Join-Path $package 'XiaomanVisitor.dll')))
 foreach ($name in $refs) { $compilerArgs += '/reference:' + (Join-Path $managed $name) }

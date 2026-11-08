@@ -28,7 +28,7 @@ namespace XiaomanVisitor
         private Dictionary<string, Sprite> registeredDictionary;
         private Texture2D atlas;
         private GameObject driverObject;
-        private XiaomanShopPortrait shopPortrait;
+        private XiaomanNativeRendering nativeRendering;
         private StoreClient moodOwner;
         private Mood mood;
         private bool enabled;
@@ -62,7 +62,7 @@ namespace XiaomanVisitor
             driverObject = new GameObject("XiaomanVisitor.Animator");
             UnityEngine.Object.DontDestroyOnLoad(driverObject);
             driverObject.AddComponent<XiaomanAnimator>();
-            shopPortrait = driverObject.AddComponent<XiaomanShopPortrait>();
+            nativeRendering = driverObject.AddComponent<XiaomanNativeRendering>();
             Voice = driverObject.AddComponent<XiaomanVoicePlayer>();
             Voice.Configure(this);
             ModHelper.AddDebugFunction(Id, ModHelper.DEBUG_CATEGORY_SPAWN, "Preview Xiaoman voice", () => Voice?.Preview());
@@ -73,7 +73,7 @@ namespace XiaomanVisitor
         public void OnDisable()
         {
             enabled = false;
-            if (shopPortrait != null) shopPortrait.Shutdown();
+            if (nativeRendering != null) nativeRendering.Shutdown();
             XiaomanLetterInk.ReleaseAll();
             if (Voice != null) Voice.Shutdown();
             ModHook.OnModAssetsLoaded -= OnAssetsLoaded;
@@ -152,7 +152,7 @@ namespace XiaomanVisitor
             if (!enabled || atlas == null || SpriteDict.Instance == null || SpriteDict.Instance.spriteDictionary == null) return false;
             var dict = SpriteDict.Instance.spriteDictionary;
             Texture2D selectedAtlas = SelectPortraitAtlas();
-            bool highDetail = selectedAtlas == highDetailAtlas && highDetailAtlas != null;
+            bool highDetail = selectedAtlas != null && selectedAtlas != atlas;
             int detailScale = highDetail ? PortraitDetailRules.HighScale : 1;
             int columns = highDetail ? PortraitDetailRules.HighColumns : 3;
             int rows = highDetail ? PortraitDetailRules.HighRows : 6;

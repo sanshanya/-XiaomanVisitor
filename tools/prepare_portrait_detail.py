@@ -16,7 +16,7 @@ def main():
     assert len(source["files"]) == 18
     profiles = (
         ("shop", "Portraits/xiaoman_atlas_hd.png", "assets/portrait-detail.json", Image.Resampling.NEAREST,
-         "nearest from approved original composites", "original pixel edges", 1080),
+         "nearest from approved original composites", "original pixel edges", 0),
         ("tavern", "Portraits/xiaoman_tavern_atlas.png", "assets/tavern-scene/portrait-detail.json", Image.Resampling.BILINEAR,
          "premultiplied-alpha bilinear from approved original composites", "natural edges and softer dithering", 0),
     )
@@ -43,7 +43,7 @@ def main():
                         bytes=target.stat().st_size,size=[2304,2064],frame=list(FRAME),scale=4,
                         columns=6,rows=3,source_frame=[340,608],resize=resize,sharpening=False,
                         appearance=appearance,lazy_load=True,viewport_height_above=viewport,
-                        world_geometry_unchanged=True,usage=name,frames=entries)
+                        world_geometry_unchanged=True,usage="native_nearest_fallback" if name == "shop" else "native_shop_and_tavern",frames=entries)
         (ROOT / metadata).write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
         print(name,manifest["sha256"],manifest["bytes"])
 

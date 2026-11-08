@@ -12,7 +12,7 @@ namespace XiaomanVisitor
 
         public static bool WantsHighDetail(int viewportHeight, int maxTextureSize)
         {
-            return viewportHeight > 1080
+            return viewportHeight > 0
                 && maxTextureSize >= FrameWidth * HighScale * HighColumns
                 && maxTextureSize >= FrameHeight * HighScale * HighRows;
         }

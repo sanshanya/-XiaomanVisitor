@@ -5,8 +5,8 @@ namespace XiaomanVisitor
 {
     public sealed partial class XiaomanMod
     {
-        // The room and stationary shop UI borrow this full-detail texture. Its
-        // ownership stays here; native sprite selection and cameras are separate.
+        // The room actor and native shop SpriteRenderer share the accepted
+        // pixels. This class alone owns and releases the texture.
         private Texture2D tavernHighAtlas;
         private bool tavernHighAttempted;
         internal const string TavernAtlasFile = "Portraits/xiaoman_tavern_atlas.png";

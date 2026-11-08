@@ -8,10 +8,22 @@ namespace XiaomanVisitor
         private Texture2D highDetailAtlas;
         private Texture2D activePortraitAtlas;
         private bool highDetailAttempted;
+        internal bool HasDetailedPortraits { get { return activePortraitAtlas != null && activePortraitAtlas != atlas; } }
+        internal bool OwnsPortrait(Sprite sprite)
+        {
+            if (sprite == null) return false;
+            for (int mood=0;mood<6;mood++) for (int mouth=0;mouth<3;mouth++)
+                if (frames[mood,mouth] == sprite) return true;
+            return false;
+        }
 
         private Texture2D SelectPortraitAtlas()
         {
             if (!PortraitDetailRules.WantsHighDetail(LetterboxManager.GameAreaHeight, SystemInfo.maxTextureSize)) return atlas;
+            // Share the accepted room pixels through the native SpriteRenderer.
+            bool detailed;
+            Texture2D accepted = TavernPortraitAtlas(out detailed);
+            if (detailed) return accepted;
             if (!highDetailAttempted)
             {
                 highDetailAttempted = true;

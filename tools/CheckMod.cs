@@ -5,6 +5,7 @@ using System.Reflection;
 using HarmonyLib;
 using Newtonsoft.Json;
 using XiaomanVisitor;
+using UnityEngine.U2D;
 
 internal static class CheckMod
 {
@@ -271,7 +272,8 @@ internal static class CheckMod
             typeof(XiaomanVoiceDisplayPatch), typeof(XiaomanVoiceSinglePatch), typeof(XiaomanVoiceSchedulePatch), typeof(XiaomanVoiceEndPatch),
             typeof(XiaomanVoiceActionPatch), typeof(XiaomanVoiceManualPatch), typeof(XiaomanVoiceInterruptPatch), typeof(XiaomanVoiceHidePatch),
             typeof(XiaomanVoiceChannelPatch), typeof(XiaomanVoiceChannelStopPatch), typeof(XiaomanStoryActionPatch), typeof(XiaomanStoryDealPatch),
-            typeof(XiaomanLetterPagePatch), typeof(XiaomanItemSourceTooltipPatch), typeof(XiaomanTavernMapCardPatch) })
+            typeof(XiaomanLetterPagePatch), typeof(XiaomanItemSourceTooltipPatch), typeof(XiaomanTavernMapCardPatch),
+            typeof(XiaomanNativeArrivalPatch), typeof(XiaomanNativeDisplayPatch) })
         {
             var attribute = (HarmonyPatch)patch.GetCustomAttributes(typeof(HarmonyPatch), false).Single();
             var info = attribute.info;
@@ -287,7 +289,7 @@ internal static class CheckMod
         Require(!ItemPresentation.OwnsItemId(null) && !ItemPresentation.OwnsItemId("water")
             && !ItemPresentation.OwnsItemId("other.mod.cocktail.sunset_blue")
             && !ItemPresentation.OwnsItemId(XiaomanMod.Id + "_other.tape"), "native and other mod items keep source tooltips");
-        Console.WriteLine("PASS: all nineteen Harmony declarations bind uniquely; item source footers are scoped to Xiaoman's item namespace.");
+        Console.WriteLine("PASS: all twenty-one Harmony declarations bind uniquely; item source footers are scoped to Xiaoman's item namespace.");
     }
     private static void CheckVoices()
     {
@@ -468,7 +470,7 @@ internal static class CheckMod
             && typeof(GameInventory).GetProperty("mayInventoryAddItemFunc").PropertyType == typeof(Func<GameItem, GameInventory, bool>),
             "case and warehouse extension bind to the installed game's native container APIs");
         var patches = typeof(XiaomanMod).Assembly.GetTypes().Where(type => type.IsDefined(typeof(HarmonyPatch), false)).ToArray();
-        Require(patches.Length == 19 && patches.All(type => ((HarmonyPatch)type.GetCustomAttributes(typeof(HarmonyPatch), false).Single())
+        Require(patches.Length == 21 && patches.All(type => ((HarmonyPatch)type.GetCustomAttributes(typeof(HarmonyPatch), false).Single())
             .info.declaringType != typeof(MachineCassettePlayer)), "no added global cassette playback patch");
         Console.WriteLine("PASS: cassette case capacity, exact owned-tape whitelist, legacy storage, native filter preservation and unchanged playback bindings.");
     }
@@ -546,11 +548,11 @@ internal static class CheckMod
     }
     private static void CheckPortraitDetail()
     {
-        foreach (int height in new[] { -1, 0, 540, 720, 768, 900, 1080 })
-            Require(!PortraitDetailRules.WantsHighDetail(height,8192), "approved portrait rendering remains unchanged through 1080p");
-        foreach (int height in new[] { 1081, 1440, 1600, 2160, 4320 })
+        foreach (int height in new[] { -1, 0 })
+            Require(!PortraitDetailRules.WantsHighDetail(height,8192), "unready viewports retain the standard fallback");
+        foreach (int height in new[] { 540, 720, 768, 900, 1080, 1081, 1440, 1600, 2160, 4320 })
         {
-            Require(PortraitDetailRules.WantsHighDetail(height,4096), "high viewport uses original-detail portrait frames");
+            Require(PortraitDetailRules.WantsHighDetail(height,4096), "ready viewport uses detailed native Sprite frames");
             Require(!PortraitDetailRules.WantsHighDetail(height,2048) && !PortraitDetailRules.WantsHighDetail(height,0),
                 "unsupported GPU limits retain the standard portrait fallback");
         }
@@ -564,37 +566,45 @@ internal static class CheckMod
         Require(File.Exists(Path.Combine(package,PortraitDetailRules.HighFile)), "original-detail pack is installed for lazy loading");
         Require(typeof(LetterboxManager).GetProperty("GameAreaHeight") != null,
             "detail selection uses the installed game's actual letterboxed viewport height");
-        Console.WriteLine("PASS: 1080p compatibility, 1440p/2160p detail selection, GPU fallback and identical portrait world size.");
+        Console.WriteLine("PASS: detailed frames across all ready viewport sizes, GPU fallback and identical portrait world size.");
     }
     private static void CheckShopPortrait()
     {
-        // A shared native renderer must be restored in every other customer,
-        // transition and special-camera state, including magnifier and shooting.
-        for (int state = 0; state < 128; state++) {
-            bool own = (state & 1) != 0, inside = (state & 2) != 0,
-                arrived = (state & 4) != 0, moving = (state & 8) != 0,
-                visible = (state & 16) != 0, normal = (state & 32) != 0,
-                ready = (state & 64) != 0;
-            Require(ShopPortraitRules.MayPresent(own,inside,arrived,moving,visible,normal,ready)
-                == (state == 119), "only a ready, stationary Xiaoman in the normal shop camera uses the presenter");
+        for (int state = 0; state < 64; state++)
+            Require(NativePortraitRules.MayUseDetail((state&1)!=0,(state&2)!=0,(state&4)!=0,(state&8)!=0,(state&16)!=0,(state&32)!=0)
+                == (state == 61 || state == 62 || state == 63),
+                "visible Xiaoman keeps sampling through departure even after the native current-client field is cleared");
+        foreach (bool pixelPerfect in new[] { false,true }) foreach (bool force in new[] { false,true }) {
+            var lease = new NativeSamplingLease(); bool restored, target;
+            Require(lease.Begin(pixelPerfect,force) && lease.Active, "capture native sampling values once");
+            Require(!lease.Begin(false,false), "later frames cannot overwrite the original native settings");
+            Require(lease.End(out restored,out target) && restored == pixelPerfect && target == force && !lease.Active,
+                "departure/disable restores original native state exactly");
+            Require(!lease.End(out restored,out target), "cleanup is idempotent");
+            lease.Begin(pixelPerfect,force); lease.UpdatePreference(!pixelPerfect);
+            Require(lease.End(out restored,out target) && restored != pixelPerfect && target == force,
+                "a native display preference changed during the visit is respected on departure");
         }
-        Require(Math.Abs(ShopPortraitRules.WindowLeft*960 - 324) < .0001
-            && Math.Abs(ShopPortraitRules.WindowRight*960 - 639) < .0001
-            && Math.Abs(ShopPortraitRules.DeskTop*540 - 271) < .0001,
-            "portrait clips to the native serving window and opaque counter edge");
-        Require(typeof(UnityEngine.Renderer).GetProperty("forceRenderingOff") != null
-            && typeof(CustomUIManager).GetMethod("HasLayer") != null
-            && typeof(StoreUIManager).GetField("mainCamera") != null,
-            "installed game supports scoped renderer suppression and the normal-camera UI projection");
-        foreach (string nativeWall in new[] { "wall", "wall2" })
-            Require(ShopPortraitRules.SupportsBackdrop(nativeWall,960,540,"desk",960,540),
-                "water-tap locked and unlocked native wall variants both enable the presenter");
-        Require(!ShopPortraitRules.SupportsBackdrop("wall",640,360,"desk",960,540)
-            && !ShopPortraitRules.SupportsBackdrop("other.mod.wall",960,540,"desk",960,540)
-            && !ShopPortraitRules.SupportsBackdrop(null,960,540,"desk",960,540)
-            && !ShopPortraitRules.SupportsBackdrop("wall2",960,540,"desk",960,360),
-            "unrelated or geometrically incompatible backdrops retain native rendering");
-        Console.WriteLine("PASS: all 128 shop presentation states, native motion/special-camera fallback and serving-window clipping.");
+        // Exercise the installed native camera's managed target calculation.
+        // No Unity native object is created and no graphical playtest is claimed.
+        var pixels = (PixelPerfectCamera)System.Runtime.CompilerServices.RuntimeHelpers.GetUninitializedObject(typeof(PixelPerfectCamera));
+        pixels.assetsPPU=100; pixels.refResolutionX=960; pixels.refResolutionY=540;
+        pixels.upscaleRT=true; pixels.pixelSnapping=true; pixels.cropFrameX=false; pixels.cropFrameY=false; pixels.stretchFill=false;
+        Type native = typeof(PixelPerfectCamera).Assembly.GetType("UnityEngine.U2D.PixelPerfectCameraInternal",true);
+        object internals = Activator.CreateInstance(native,BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic,
+            null,new object[] { pixels },null);
+        var calculate = native.GetMethod("CalculateCameraProperties",BindingFlags.Instance|BindingFlags.NonPublic);
+        var fields = BindingFlags.Instance|BindingFlags.Public|BindingFlags.NonPublic;
+        foreach (int multiplier in new[] { 2,4 }) {
+            calculate.Invoke(internals,new object[] { 960*multiplier,540*multiplier });
+            Require((bool)native.GetField("useOffscreenRT",fields).GetValue(internals)
+                && (int)native.GetField("offscreenRTWidth",fields).GetValue(internals)==960
+                && (int)native.GetField("offscreenRTHeight",fields).GetValue(internals)==540,
+                "installed native camera reduces 1080p and 4K to a 960x540 intermediate when enabled");
+            Require(Math.Abs((float)native.GetField("orthoSize",fields).GetValue(internals)-2.7)<.00001,
+                "native framing is 2.7 before the full-resolution rendering mode");
+        }
+        Console.WriteLine("PASS: native movement-independent scope, snapshot/restore, display changes and installed-camera downsampling calculation.");
     }
 
     private static void CheckPaper()

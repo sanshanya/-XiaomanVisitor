@@ -13,6 +13,7 @@ $argsForCompiler = @('/nologo','/target:exe','/nostdlib+',('/out:' + $checker))
 foreach ($reference in $refs) { $argsForCompiler += '/reference:' + $reference.FullName }
 $argsForCompiler += '/reference:' + (Join-Path $managed 'Assembly-CSharp.dll')
 $argsForCompiler += '/reference:' + (Join-Path $managed 'UnityEngine.CoreModule.dll')
+$argsForCompiler += '/reference:' + (Join-Path $managed 'Unity.2D.PixelPerfect.dll')
 $argsForCompiler += '/reference:' + (Join-Path $managed '0Harmony.dll')
 $argsForCompiler += '/reference:' + (Join-Path $managed 'Newtonsoft.Json.dll')
 $argsForCompiler += '/reference:' + (Join-Path $projectRoot 'package\XiaomanVisitor\XiaomanVisitor.dll')
