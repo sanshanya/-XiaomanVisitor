@@ -12,9 +12,13 @@ ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "package/XiaomanVisitor"
 SOURCE = ROOT / "story/小满的十四个星期一_v3.4_专属动作台词_TTS演出整合.md"
 MOODS = {"平静": "Neutral", "柔和": "Soft", "害羞": "Shy", "微笑": "Smile", "担心": "Worried", "音效": "Neutral"}
-TRACKS = ["title", "intro", "nightfall", "intro2", "midnight", "latenight", "diary", "gallery1", "lost", "gallery2", "deepnight", "outro2", "outro", "rainysound"]
-DEMANDS = ["FoodOrWater", "Household", "Food", "Water", "Household", "Water", "Food", "Household", "Food", "Water", "Household", "Food", "Household", "Water"]
-BUDGETS = [150, 200, 250, 300, 350, 400, 450, 500, 450, 400, 350, 300, 250, 200]
+SCHEDULE_PATH = ROOT / "story/来访安排.json"
+SCHEDULE = json.loads(SCHEDULE_PATH.read_text(encoding="utf-8"))["visits"]
+assert [row["visit"] for row in SCHEDULE] == list(range(1,15))
+TRACKS = [row["track_key"] for row in SCHEDULE]
+DEMANDS = [row["demand"] for row in SCHEDULE]
+BUDGETS = [row["credits"] for row in SCHEDULE]
+
 
 
 def save(path, value):
@@ -56,8 +60,8 @@ def main():
     parser.add_argument("--source", type=Path, default=SOURCE)
     args = parser.parse_args()
     text = args.source.read_text(encoding="utf-8-sig")
-    english = json.loads((ROOT / "story/英文剧情与动作_0.01.json").read_text(encoding="utf-8"))
-    translated_notes = {n["visit"]: n for n in json.loads((ROOT / "story/纸条译文_0.01.json").read_text(encoding="utf-8"))["notes"]}
+    english = json.loads((ROOT / "story/英文台词.json").read_text(encoding="utf-8"))
+    translated_notes = {n["visit"]: n for n in json.loads((ROOT / "story/纸条正文.json").read_text(encoding="utf-8"))["notes"]}
     paper_style_path = ROOT / "assets/paper-style.json"
     paper_style = json.loads(paper_style_path.read_text(encoding="utf-8")) if paper_style_path.exists() else None
     loc = {}
@@ -107,7 +111,8 @@ def main():
             loc[lang][f"story_note_{n:02d}_signature"] = pieces[-1]
             loc[lang][f"story_note_{n:02d}_name"] = "小满留下的纸条" if lang != "ja" else "みちるの手紙"
         loc["en"][f"story_note_{n:02d}_title"] = "Dear shopkeeper,"
-        loc["en"][f"story_note_{n:02d}_body"] = translated_notes[n]["en"]
+        for lang in ("zh", "ja", "en"):
+            loc[lang][f"story_note_{n:02d}_body"] = translated_notes[n][lang]
         loc["en"][f"story_note_{n:02d}_signature"] = "— Xiaoman"
         loc["en"][f"story_note_{n:02d}_name"] = "A note from Xiaoman"
         episodes.append(dict(index=n, title=match[2], credits=BUDGETS[i], demand=DEMANDS[i], track=TRACKS[i], opening=opening,
@@ -187,7 +192,7 @@ def main():
     for c in catalog:
         generated.append("            new CassetteTrack(" + ", ".join(quote(c[k]) for k in ("key", "title", "sprite", "storyNode")) + "),")
     generated += ["        };", "    }", "}", ""]
-    (ROOT / "src/CassetteCatalog.Generated.cs").write_text("\n".join(generated), encoding="utf-8")
+    (ROOT / "src/Generated/CassetteCatalog.Generated.cs").write_text("\n".join(generated), encoding="utf-8")
     manifest_path = ROOT / "assets/audio/cassette-manifest.json"
     old_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     save(manifest_path, [dict(next(r for r in old_manifest if r["key"] == key), number=n, storyNode=f"visit_{n:02d}") for n, key in enumerate(TRACKS, 1)])
@@ -201,7 +206,7 @@ def main():
         originals = ", ".join(quote(v) for v in a["originals"])
         csharp.append(f"            new StoryActionSpec({quote(a['native_key'])}, {quote(a['key'])}, Mood.{a['mood']}, {'true' if a['kind']=='sfx' else 'false'}, new string[] {{ {originals} }}),")
     csharp += ["        };", "    }", "}", ""]
-    (ROOT / "src/StoryCatalog.Generated.cs").write_text("\n".join(csharp), encoding="utf-8")
+    (ROOT / "src/Generated/StoryCatalog.Generated.cs").write_text("\n".join(csharp), encoding="utf-8")
     for e in episodes:
         for key in e["opening"] + [e["accept"], e["goodbye"]] + ([e["cocktail"]] if e["cocktail"] else []):
             lines[key]["reference"] = False

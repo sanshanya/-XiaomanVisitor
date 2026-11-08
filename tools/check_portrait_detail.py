@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 import sys
-from PIL import Image, ImageDraw
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -29,7 +29,7 @@ def main():
         assert frame.tobytes() == expected.tobytes(), "Changed artwork or wrong expression/mouth cell"
     assert data["scale"] == 4 and data["frame"] == [384,688] and data["lazy_load"]
     assert not data["sharpening"] and data["resize"].startswith("nearest")
-    assert data["sha256"] == "980846867b55c6367e7c988f9737967c71e06e593721eb2cf0f6c1160476e253", "Shop atlas must match the earlier clear snapshot"
+    assert data["sha256"] == "980846867b55c6367e7c988f9737967c71e06e593721eb2cf0f6c1160476e253", "Shop atlas must match the approved nearest fallback"
     tavern = json.loads((ROOT / "assets/tavern-scene/portrait-detail.json").read_text(encoding="utf-8"))
     assert tavern["packaged"] != data["packaged"]
     assert tavern["sha256"] == "6ba7596e421a37ff926d07dafbeab1ff55294757ab84132c39018b306b25e0a3", "Keep the already accepted tavern portrait unchanged"
@@ -37,17 +37,7 @@ def main():
     standard = ROOT / "package/XiaomanVisitor/Textures/xiaoman_atlas.png"
     approved = json.loads((ROOT / "assets/approved-textures.sha256.json").read_text(encoding="utf-8"))
     assert hashlib.sha256(standard.read_bytes()).hexdigest() == approved["files"]["Textures/xiaoman_atlas.png"]
-    # This is an asset comparison at identical screen size, not an in-game capture.
-    old = Image.open(standard).convert("RGBA").crop((0,0,96,172)).resize((384,688),Image.Resampling.NEAREST)
-    new = atlas.crop((0,0,384,688))
-    preview = Image.new("RGBA",(800,728),(38,33,46,255)); draw = ImageDraw.Draw(preview)
-    draw.text((16,12),"Previous low-resolution frame enlarged",fill="white")
-    draw.text((416,12),"Original detail / same size and expression",fill="white")
-    preview.alpha_composite(old,(8,32));preview.alpha_composite(new,(408,32))
-    output = ROOT / "experiments/hires/portrait-comparison.png"
-    output.parent.mkdir(parents=True,exist_ok=True)
-    preview.convert("RGB").save(output,optimize=True)
-    print("PASS: all 18 shop frames exactly restore the earlier nearest snapshot; the accepted tavern atlas, standard atlas, source artwork and geometry are unchanged.")
+    print("PASS: approved portrait pixels, frame mapping and shared/fallback atlas hashes.")
 
 
 if __name__ == "__main__":

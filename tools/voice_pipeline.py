@@ -16,6 +16,10 @@ DEFAULT_SCRIPT = ROOT / "story/配音脚本_ja.json"
 IGNORED_PREFIXES = ("cfg_", "ui_", "gift_", "collection_", "cocktail_", "drink_", "story_note_")
 
 
+def audio_report_path():
+    return ROOT / ".dev/reports/voice-audio.json"
+
+
 def load(path):
     return json.loads(Path(path).read_text(encoding="utf-8-sig"))
 
@@ -255,7 +259,7 @@ def pack(path):
     pending[script["language"]] = len(report) - ready
     result = {"schema": 1, "lines": records, "pending_lines": sum(pending.values()), "pending_by_language": pending}
     save(PACKAGE / "Voices/index.json", result)
-    save(ROOT / f"story/配音制作状态_{script['language']}.json", {"ready": ready, "pending": pending[script["language"]], "lines": report})
+    save(ROOT / f".dev/reports/voice-pack-{script['language']}.json", {"ready": ready, "pending": pending[script["language"]], "lines": report})
     return result
 
 

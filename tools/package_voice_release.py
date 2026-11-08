@@ -19,7 +19,7 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--with-audio", action="store_true", help="Also export a separately playable voice ZIP.")
-    parser.add_argument("--skip-installed-check", action="store_true", help="Prepare files while the running game still holds the installed DLL.")
+    parser.add_argument("--skip-installed-check", action="store_true", help="Prepare an archive without requiring this build to be installed.")
     parser.add_argument("--development", action="store_true", help="Build a local test archive without Workshop drafts or publication state.")
     args = parser.parse_args()
     root, package = pipeline.ROOT, pipeline.PACKAGE
@@ -29,7 +29,10 @@ def main():
     assert manifest.findtext("ID") == "sansm.xiaoman.visitor", "Keep the save-data namespace stable"
     assert manifest.find("Capabilities") is not None and not list(manifest.find("Capabilities"))
     script = pipeline.load(pipeline.DEFAULT_SCRIPT)
-    report = pipeline.load(root / f"story/配音音频检查_{version}.json")
+    report_path = pipeline.audio_report_path()
+    if not report_path.exists():
+        raise SystemExit("Run tools/verify-dev.ps1 -Full before packaging.")
+    report = pipeline.load(report_path)
     pack = pipeline.load(package / "Voices/index.json")
     assert pack["pending_lines"] == 0 and len(pack["lines"]) == len(script["lines"]) == report["recorded_lines"]
     assert report["version"] == version and not report["warnings"]
@@ -63,6 +66,7 @@ def main():
         assert {f.relative_to(installed).as_posix() for f in installed.rglob("*") if f.is_file()} == set(checksums)
 
     output.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(report_path, output / "audio-validation.json")
     archive = output / f"XiaomanVisitor-{version}{'-dev' if args.development else ''}.zip"
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for file in files:
@@ -121,8 +125,8 @@ def main():
     pipeline.save(output / "release-manifest.json", release)
     (output / "SHA256SUMS.txt").write_text("".join(f"{a['sha256']}  {a['file']}\n" for a in results), encoding="utf-8")
     if args.development:
-        instructions = root / f"story/酒馆第一阶段_{version}_测试说明.txt"
-        if instructions.exists(): shutil.copyfile(instructions, output / "测试说明.txt")
+        instructions = root / "docs/实机验收.md"
+        if instructions.exists(): shutil.copyfile(instructions, output / "实机验收.md")
         print(json.dumps({k:v for k,v in release.items() if k != "files"}, ensure_ascii=False, indent=2))
         return
     vdf = output / "workshop-item.vdf.draft"

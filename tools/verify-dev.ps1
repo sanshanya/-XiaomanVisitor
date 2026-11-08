@@ -1,4 +1,4 @@
-param([string]$GameRoot)
+param([string]$GameRoot, [switch]$Full)
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'dev-environment.ps1')
 $GameRoot = Resolve-XiaomanGameRoot $GameRoot
@@ -9,8 +9,12 @@ Get-XiaomanCompiler | Out-Null
 Get-XiaomanNet8Runtime | Out-Null
 & (Join-Path $PSScriptRoot 'build.ps1') -GameRoot $GameRoot
 & (Join-Path $PSScriptRoot 'check.ps1') -GameRoot $GameRoot
-foreach ($name in @('check_assets.py','check_portrait_detail.py','check_handwriting.py','check_voice_audio.py','test_voice_pipeline.py','prepare_tavern_scene.py')) {
-    & $python (Join-Path $PSScriptRoot $name)
-    if ($LASTEXITCODE -ne 0) { throw ('Validation failed: ' + $name) }
+& $python -m unittest discover -s (Join-Path $projectRoot 'tests') -p 'test_*.py'
+if ($LASTEXITCODE -ne 0) { throw 'Offline authoring and architecture checks failed.' }
+if ($Full) {
+    foreach ($name in @('check_assets.py','check_portrait_detail.py','check_handwriting.py','check_voice_audio.py','prepare_tavern_scene.py')) {
+        & $python (Join-Path $PSScriptRoot $name)
+        if ($LASTEXITCODE -ne 0) { throw ('Asset validation failed: ' + $name) }
+    }
 }
-Write-Output 'PASS: build, native scanner, story rules, assets, handwriting, portraits and offline voice checks. No installation or upload performed.'
+Write-Output ('PASS: build, native compatibility and focused regressions' + $(if ($Full) { ', full asset audit' } else { '' }) + '. No installation, paid generation or upload performed.')

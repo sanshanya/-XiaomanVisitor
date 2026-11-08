@@ -18,7 +18,7 @@ def main():
         with (PACKAGE / f"Localization/{language}.csv").open(encoding="utf-8-sig", newline="") as f:
             rows = list(csv.reader(f))
         assert all(len(row) == 2 and row[0] and row[1] for row in rows)
-        texts[language] = dict(rows)
+        texts[language] = {key: value.replace("\\n", "\n") for key, value in rows}
         assert len(texts[language]) == len(rows), "Duplicate localization key"
     assert set(texts["zh"]) == set(texts["en"]) == set(texts["ja"])
     presentation = json.loads((ROOT / "assets/item-presentation.json").read_text(encoding="utf-8"))
@@ -87,8 +87,8 @@ def main():
     assert hashlib.sha256((PACKAGE / detail["packaged"]).read_bytes()).hexdigest() == detail["sha256"]
     assert list(Image.open(PACKAGE / detail["packaged"]).size) == detail["size"] == [2304,2064]
     print(f"PASS: original {len(baseline['files'])} PNGs and paper unchanged; tavern preview and two pink notebook states verified.")
-    english = json.loads((ROOT / "story/英文剧情与动作_0.01.json").read_text(encoding="utf-8"))
-    notes = json.loads((ROOT / "story/纸条译文_0.01.json").read_text(encoding="utf-8"))["notes"]
+    english = json.loads((ROOT / "story/英文台词.json").read_text(encoding="utf-8"))
+    notes = json.loads((ROOT / "story/纸条正文.json").read_text(encoding="utf-8"))["notes"]
     assert set(english) == {line["key"] for line in story["lines"]}
     assert all(texts["en"][key].replace("\\n", "\n") == value for key, value in english.items())
     for note in notes:

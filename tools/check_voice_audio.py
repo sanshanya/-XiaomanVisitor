@@ -57,7 +57,7 @@ def main():
     result = dict(version=version, language="ja", voice="ayano", recorded_lines=len(rows), pending_lines=0,
                   seconds=round(sum(r["seconds"] for r in rows),3), sample_rate=24000, channels=1, bit_depth=16,
                   speed=1.1, first_performance_preserved=True, warnings=warnings, lines=rows)
-    output = pipeline.ROOT / f"story/配音音频检查_{version}.json"
+    output = pipeline.audio_report_path()
     pipeline.save(output, result)
     summary = [f"小满 {version} 日语配音文件检查", "", f"录音键：{len(rows)}，待制作：0。", "音色：Ayano；语言：日语；统一实际语速：1.1。",
                "首句保留已确认原录音，以保持音高的时间伸缩制作1.1倍速副本，原素材未改。",
@@ -66,7 +66,7 @@ def main():
                "107个在用录音键全部与终版字幕、口播文本、速度及打包音频hash匹配。",
                "敲门为单独音效，没有把舞台说明交给TTS。", f"波形异常待复核项：{len(warnings)}。",
                "本检查覆盖文件、格式、完整性、静音、削波、台词绑定；不是逐句真人日语听审。", ""]
-    (pipeline.ROOT / f"story/配音音频检查_{version}.txt").write_text("\n".join(summary),encoding="utf-8-sig")
+    output.with_suffix(".txt").write_text("\n".join(summary),encoding="utf-8-sig")
     print(json.dumps({k:v for k,v in result.items() if k != "lines"},ensure_ascii=False,indent=2))
 
 

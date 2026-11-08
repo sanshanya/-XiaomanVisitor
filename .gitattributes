@@ -34,4 +34,5 @@ assets/tavern-scene/provided-layout.json -text -whitespace
 package/** -whitespace
 reference/** -whitespace
 story/** -whitespace
+docs/history/** -whitespace
 experiments/handwriting/fonts/** -whitespace

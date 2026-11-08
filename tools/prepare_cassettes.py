@@ -79,7 +79,7 @@ def main():
         fields = [track["key"], track["title"], track["sprite"], track.get("storyNode", "")]
         generated.append("            new CassetteTrack(" + ", ".join(json.dumps(v) for v in fields) + "),")
     generated.extend(["        };", "    }", "}", ""])
-    (ROOT / "src/CassetteCatalog.Generated.cs").write_text("\n".join(generated), encoding="utf-8")
+    (ROOT / "src/Generated/CassetteCatalog.Generated.cs").write_text("\n".join(generated), encoding="utf-8")
     if (ROOT / "assets/audio/music-encoding.json").is_file():
         from optimize_music import optimize
         optimize(apply=True)

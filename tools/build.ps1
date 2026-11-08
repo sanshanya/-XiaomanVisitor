@@ -15,7 +15,7 @@ $refs = @('mscorlib.dll','netstandard.dll','System.dll','System.Core.dll','Assem
 $compilerArgs = @('/nologo','/target:library','/nostdlib+','/langversion:latest','/optimize+','/deterministic+',
     ('/out:' + (Join-Path $package 'XiaomanVisitor.dll')))
 foreach ($name in $refs) { $compilerArgs += '/reference:' + (Join-Path $managed $name) }
-$compilerArgs += @(Get-ChildItem -LiteralPath (Join-Path $projectRoot 'src') -Filter '*.cs' -File | Select-Object -ExpandProperty FullName)
+$compilerArgs += @(Get-ChildItem -LiteralPath (Join-Path $projectRoot 'src') -Filter '*.cs' -Recurse -File | Sort-Object FullName | Select-Object -ExpandProperty FullName)
 & $compiler @compilerArgs
 if ($LASTEXITCODE -ne 0) { throw 'Mod compilation failed.' }
 Write-Output ('Built ' + (Join-Path $package 'XiaomanVisitor.dll'))

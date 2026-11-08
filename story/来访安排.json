@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "description": "当前十四次来访的预算、需求和磁带安排；剧情正文与演出由定稿维护。",
+  "visits": [
+    {
+      "visit": 1,
+      "credits": 150,
+      "demand": "FoodOrWater",
+      "track_key": "title"
+    },
+    {
+      "visit": 2,
+      "credits": 200,
+      "demand": "Household",
+      "track_key": "intro"
+    },
+    {
+      "visit": 3,
+      "credits": 250,
+      "demand": "Food",
+      "track_key": "nightfall"
+    },
+    {
+      "visit": 4,
+      "credits": 300,
+      "demand": "Water",
+      "track_key": "intro2"
+    },
+    {
+      "visit": 5,
+      "credits": 350,
+      "demand": "Household",
+      "track_key": "midnight"
+    },
+    {
+      "visit": 6,
+      "credits": 400,
+      "demand": "Water",
+      "track_key": "latenight"
+    },
+    {
+      "visit": 7,
+      "credits": 450,
+      "demand": "Food",
+      "track_key": "diary"
+    },
+    {
+      "visit": 8,
+      "credits": 500,
+      "demand": "Household",
+      "track_key": "gallery1"
+    },
+    {
+      "visit": 9,
+      "credits": 450,
+      "demand": "Food",
+      "track_key": "lost"
+    },
+    {
+      "visit": 10,
+      "credits": 400,
+      "demand": "Water",
+      "track_key": "gallery2"
+    },
+    {
+      "visit": 11,
+      "credits": 350,
+      "demand": "Household",
+      "track_key": "deepnight"
+    },
+    {
+      "visit": 12,
+      "credits": 300,
+      "demand": "Food",
+      "track_key": "outro2"
+    },
+    {
+      "visit": 13,
+      "credits": 250,
+      "demand": "Household",
+      "track_key": "outro"
+    },
+    {
+      "visit": 14,
+      "credits": 200,
+      "demand": "Water",
+      "track_key": "rainysound"
+    }
+  ],
+  "budget_progression": "第一至第八次每次增加50；从第九次起每次减少50。按剧情来访序号确定，不因延期跳档。"
+}

@@ -1,74 +1,26 @@
 # 深空小满：可能很迷醉？
 
-《Probably Stolen / 深空当铺》的小满角色模组。当前稳定版为 **0.0.2**，包含十四次周一剧情、日语配音、中日英文本、十四盘磁带、六款效果饮品、信笺簿与磁带盒。
+《Probably Stolen / 深空当铺》的小满角色模组。[Steam 创意工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3835383562)
 
-[Steam 创意工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3835383562)
-
-本仓库保存开发源码、剧情、制作输入与运行素材。**工坊稳定版 0.0.2 的酒馆仍为“装修中”地图卡片。`develop/tavern` 已实现 0.0.3.4 第一阶段测试版：第 1 天进入分层酒馆、独立动态小满、35 CR 普通杯、取餐台协作和来访账本。** 完整经营、贷款和留下分支尚未接入；实机验收由作者进行。
-
-## 在 Windows 上准备环境
-
-需要已安装的 Probably Stolen、Git（含 Git LFS）、uv、Python 3.12 与 .NET 8 x64 运行时。uv 可以下载缺少的 Python；完整 .NET SDK 不是本项目的构建前提。编译引用直接读取自己的游戏安装目录，仓库不附带游戏程序集。
+**开发与需求的统一入口：[项目手册](docs/项目手册.md)。** 当前开发版本只以 [运行清单](package/XiaomanVisitor/manifest.xml) 为准。工坊稳定版是 `main` / `v0.0.2`；开发分支为 `develop/tavern`。已验证的立绘方案保存在 `baseline/native-render-0.0.3.3`。
 
 ```powershell
-git clone https://github.com/sanshanya/-XiaomanVisitor.git XiaomanVisitor
-cd XiaomanVisitor
-git lfs install --local
-git lfs pull
+# 首次准备：需要自己的游戏安装、Git LFS、uv 与 .NET 8 运行时
 & .\tools\setup-dev.ps1 -GameRoot 'E:\app\steam\steamapps\common\Probably Stolen'
-& .\tools\verify-dev.ps1
-```
 
-`setup-dev.ps1` 建立独立 `.venv`，按 `requirements.lock` 校验并安装 Python 依赖，恢复固定版本 Roslyn 4.8.0，核对编译器哈希，并将游戏路径写入不入库的 `.dev/local.json`。其他电脑可通过 `-GameRoot` 指定自己的安装位置。
-
-`verify-dev.ps1` 构建 DLL，运行原生模组扫描与剧情规则检查，再核对三语文本、贴图、高清立绘、42 张手写纸条、107 条录音和离线配音工具。检查只生成本地构建与报告，不安装到游戏、不生成付费录音、不上传工坊。
-
-## 日常开发
-
-```powershell
-# 编译；使用 setup-dev 保存的游戏路径
-& .\tools\build.ps1
-
-# 运行完整检查
+# 日常代码检查：编译、原生兼容、关键规则和离线配音工具
 & .\tools\verify-dev.ps1
 
-# 需要实机测试时安装到本机游戏
-& .\tools\build.ps1 -Install
+# 改素材、文本或准备发布时：增加全部素材与录音校验
+& .\tools\verify-dev.ps1 -Full
 ```
 
-游戏正在使用不同版本的 DLL 时，安装会要求先保存并退出游戏。不要同时启用本机测试版和工坊版。
+检查不会安装、调用付费配音或上传工坊。安装和发布是独立操作，见项目手册。
 
-稳定基线保存在 `main`，标签 `v0.0.2` 对应当前发布内容；正式酒馆开发使用 `develop/tavern`。之后可从开发分支拆出具体功能分支。工坊发布沿用条目 `3835383562`，单独执行发布流程。
+- [实机验收](docs/实机验收.md)：作者验证画面、进出场和交互。
+- [渲染复盘与性能取舍](docs/渲染问题复盘与性能取舍.md)：已确认的原因、日志证据和测量边界。
+- [历史资料索引](docs/history/README.md)：旧规则、旧记录和一次性脚本的位置，不能作为当前需求。
 
-## 目录与素材
+源码在 `src/Domain`、`src/Runtime`、`src/Generated`；测试在 `tests`；定稿输入在 `story` 与 `assets`；可打包资源在 `package/XiaomanVisitor`。报告、工具缓存、备份与发布 ZIP 放在不入库的 `.dev` / `release`。音频、图片和字体使用 Git LFS。
 
-| 目录 | 内容 |
-| --- | --- |
-| `src` | 模组 C# 源码与生成后的剧情绑定 |
-| `story` | 剧情终稿、三语纸条、配音脚本、酒馆需求与开发计划 |
-| `assets` | 核准立绘、饮品、原录音、制作配置与哈希基线 |
-| `package/XiaomanVisitor` | 可打包的运行素材；DLL 由本地构建生成 |
-| `tools` | 构建、检查、制作、离线配音与工坊发布工具 |
-| `reference` | 仅入库制作所需的小部分原始图层、图标与对白快照 |
-| `experiments/handwriting/fonts` | 手写纸条所需悠哉 Regular 及 OFL 授权文件 |
-
-音频、图片与字体通过 **Git LFS** 保存。存档备份、密钥、虚拟环境、游戏反编译参考、旧开发缓存、发布 ZIP 与 Steam 上传状态均不入库。`release`、`outputs` 和其他实验输出在本机保留。
-
-现有音乐与录音随素材一并保存，普通构建不需要原作安装目录或配音服务。历史提取、重新压缩音乐等工具可能仍引用作者本机的原始来源；这些步骤独立于日常构建。配音始终预先生成，模组只播放现成文件；只有明确运行生成命令时才使用本机 `VUILABS_API_KEY` 环境变量。
-
-工坊上传所需的页面草稿、图片顺序与上传状态由作者本地发布目录管理，不由环境准备脚本创建或推送。
-
-`story/酒馆设计` 保留作者提供的 v0.3 原稿、试算表和独立模拟脚本，均为候选设计参考，未接入运行模组。正式开业时点仍按“第 3 天开放”设计；当前测试版提前至第 1 天；具体账期与文案在正式开发时对齐。
-
-酒馆室内素材在 `assets/tavern-scene`。背景、现有角色帧、吧台遮挡分开绘制，保留作者 v2 构图。`tools/prepare_tavern_scene.py` 核对布局与现有 18 帧立绘，`--pack` 复制两张场景贴图到运行包，`--preview` 生成离线动画预览。酒馆使用独立 UI 场景、图集与语音通道，复用口型包络，不占用原生顾客队列。新招呼尚待录音，点单和协助沿用已有且文本匹配的日语录音，没有调用 TTS。测试步骤见 `story/酒馆第一阶段_0.0.3.4_测试说明.txt`。
-
-店铺立绘在 0.0.3.3 回到原生渲染链：SpriteDict 注册帧，StoreClientMono 的同一个 SpriteRenderer 负责进出场、原生 SolidBlend 暗影渐亮、动态表情及前景层级。已撤下 0.0.3.2 的额外 UI 立绘与手动柜台裁切。小满在普通店铺可见期间暂用原生非像素相机模式，保持原生取景与 Outliner 初始化；她离场、进入特殊视窗或停用时恢复，接待期间更改的显示设置也会保留。普通顾客仍使用原设置。
-
-原生证据：主摄像机的 PixelPerfectCamera 默认开启，Shooting_camera 上的同组件默认关闭；原生 EmporiumOption 在 1080p/4K 开启、1440p 关闭。用当前游戏 DLL 的原生 CalculateCameraProperties 离线计算，1080p 与 4K 都先生成 960×540 中间画面。素材变大但仍经这一阶段，会丢失人物细节。0.0.3.3 验证日志记录了实际相机输出尺寸；0.0.3.4 移除常驻探针并保留证据文件。人物外观共用已确认酒馆图集（SHA256 `6ba7596e…`），原最近邻图集（`98084686…`）作为资源后备，原图、尺寸、枢轴和动画帧顺序保持；纹理尺寸受限或资源加载失败时仍可回退。
-
-素材来自《雨音に満ちる夜 / A Night Filled With the Sound of Rain》；字体为悠哉 Regular。相关来源与字体许可保留在运行包说明及 `Licenses` 中。本仓库未为游戏原作素材授予新的开源许可。
-
-更早的制作记录见 `README.txt`；当前开发入口与目录政策以本页为准。
-
-
-0.0.3.3 已得到作者的立绘画面确认，并保存为 `baseline/native-render-0.0.3.3`。0.0.3.4 保留方案、精简实现；[渲染问题复盘与性能取舍](docs/渲染问题复盘与性能取舍.md) 汇总原因、实测记录、GPU 成本估算和仍待验证的边界。
+素材来自《雨音に満ちる夜 / A Night Filled With the Sound of Rain》；字体许可随运行包保留。本仓库未为原作素材授予新的开源许可。
