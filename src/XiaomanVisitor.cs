@@ -89,7 +89,7 @@ namespace XiaomanVisitor
                 PlayerStore.Instance.storeClientManager.clientStack.RemoveAll(c => c != null && c.identifier == ClientId);
             if (registeredDictionary != null) registeredDictionary.Remove(SpriteKey);
             DestroySprites();
-            ReleaseHighDetailPortraits();
+            ReleasePortraitAssets();
             if (driverObject != null) UnityEngine.Object.Destroy(driverObject);
             if (Instance == this) Instance = null;
         }

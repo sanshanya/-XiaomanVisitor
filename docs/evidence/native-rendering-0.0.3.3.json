@@ -1,0 +1,47 @@
+{
+  "version": "0.0.3.3",
+  "commit": "bfe2832",
+  "author_visual_feedback": "效果不错",
+  "confirmed_scope": "portrait clarity shown in author screenshot; not a full narrative or performance benchmark",
+  "game_version": "0.46D",
+  "game_assembly_sha256": "d9abc029f6b390619c31175df5735901aec6dc071c35c50ce5b3fdf92e3ede46",
+  "dll_sha256": "9337dd8d61fd735f6ae87267b777c89b6a671a88237b1d3bd8a39c9dc6997072",
+  "capture_source": "Player.log",
+  "native_render_lines": [
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native SpriteRenderer throughout movement and dialogue; low-resolution upscale disabled; native material, foreground sorting, tint and solid-colour fade retained.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native output=3840x2160, viewport=3840x2160, textureTarget=True, pixelCameraEnabled=False, upscaleRT=True; no UI portrait or renderer suppression.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: original sampling restored.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: original sampling; visible=True, normal=False, detail=True",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native SpriteRenderer throughout movement and dialogue; low-resolution upscale disabled; native material, foreground sorting, tint and solid-colour fade retained.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native output=3840x2160, viewport=3840x2160, textureTarget=True, pixelCameraEnabled=False, upscaleRT=True; no UI portrait or renderer suppression.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native output=2560x1440, viewport=2560x1440, textureTarget=True, pixelCameraEnabled=False, upscaleRT=True; no UI portrait or renderer suppression.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native output=1920x1080, viewport=1920x1080, textureTarget=True, pixelCameraEnabled=False, upscaleRT=True; no UI portrait or renderer suppression.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: original sampling restored.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: original sampling; visible=True, normal=False, detail=True",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native SpriteRenderer throughout movement and dialogue; low-resolution upscale disabled; native material, foreground sorting, tint and solid-colour fade retained.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native output=3840x2160, viewport=3840x2160, textureTarget=True, pixelCameraEnabled=False, upscaleRT=True; no UI portrait or renderer suppression.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: original sampling restored.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: original sampling; visible=True, normal=False, detail=True",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native SpriteRenderer throughout movement and dialogue; low-resolution upscale disabled; native material, foreground sorting, tint and solid-colour fade retained.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: native output=3840x2160, viewport=3840x2160, textureTarget=True, pixelCameraEnabled=False, upscaleRT=True; no UI portrait or renderer suppression.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: original sampling restored.",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: original sampling; visible=True, normal=True, detail=True",
+    "[深空小满：可能很迷醉？]: SHOP-NATIVE 0.0.3.3: original sampling; visible=False, normal=True, detail=True"
+  ],
+  "observed_output_sizes": [
+    [
+      1920,
+      1080
+    ],
+    [
+      2560,
+      1440
+    ],
+    [
+      3840,
+      2160
+    ]
+  ],
+  "performance_benchmark_measured": false,
+  "archive_sha256": "861d4d7bcb8fe80bc92937d661fe80e4192309ed65d23bd36cb9ad64fcb7546f"
+}

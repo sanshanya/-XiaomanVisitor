@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "scope": "main world camera while visible Xiaoman is in the ordinary shop; not portrait-only supersampling",
+  "measured_fps_or_gpu_time": false,
+  "texture_rgba32_mib": 18.140625,
+  "texture_png_bytes": 551273,
+  "fallback_png_bytes": 146866,
+  "normal_high_atlas_count": 1,
+  "modes": [
+    {
+      "display": [
+        1920,
+        1080
+      ],
+      "native_pixel_perfect": true,
+      "default_scene_pixels": 518400,
+      "detail_scene_pixels": 2073600,
+      "pixel_area_ratio": 4.0,
+      "rgba32_one_colour_buffer_mib": 7.91015625
+    },
+    {
+      "display": [
+        2560,
+        1440
+      ],
+      "native_pixel_perfect": false,
+      "default_scene_pixels": 3686400,
+      "detail_scene_pixels": 3686400,
+      "pixel_area_ratio": 1.0,
+      "rgba32_one_colour_buffer_mib": 14.0625
+    },
+    {
+      "display": [
+        3840,
+        2160
+      ],
+      "native_pixel_perfect": true,
+      "default_scene_pixels": 518400,
+      "detail_scene_pixels": 8294400,
+      "pixel_area_ratio": 16.0,
+      "rgba32_one_colour_buffer_mib": 31.640625
+    }
+  ],
+  "rgba32_assumption": "one colour buffer without depth, HDR, MSAA, outline intermediate targets or driver overhead",
+  "limitations": [
+    "pixel area ratio is not a frame-time multiplier",
+    "render target size was observed; GPU time and exact VRAM were not profiled",
+    "the first historical introduction commit remains unidentified"
+  ]
+}

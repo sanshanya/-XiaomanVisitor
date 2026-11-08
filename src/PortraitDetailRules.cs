@@ -8,6 +8,7 @@ namespace XiaomanVisitor
         public const int HighScale = 4;
         public const int HighColumns = 6;
         public const int HighRows = 3;
+        public const string PreferredFile = "Portraits/xiaoman_tavern_atlas.png";
         public const string HighFile = "Portraits/xiaoman_atlas_hd.png";
 
         public static bool WantsHighDetail(int viewportHeight, int maxTextureSize)

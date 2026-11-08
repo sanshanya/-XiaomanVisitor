@@ -37,11 +37,11 @@ namespace XiaomanVisitor
     internal sealed class XiaomanNativeRendering : MonoBehaviour
     {
         private readonly NativeSamplingLease lease = new NativeSamplingLease();
+        private GameObject cameraRoot;
         private Camera nativeCamera;
         private PixelPerfectCamera pixelCamera;
-        private XiaomanNativeCameraObserver observer;
-        private string reported;
-        private const string Diagnostic = "SHOP-NATIVE 0.0.3.3: ";
+        private Outliner outline;
+        private bool changedMode;
         internal static XiaomanNativeRendering Running;
         internal bool Active { get { return lease.Active && nativeCamera != null && pixelCamera != null; } }
         private void OnEnable() { Running = this; }
@@ -50,39 +50,41 @@ namespace XiaomanVisitor
         {
             XiaomanMod mod = XiaomanMod.Instance;
             if (mod == null || !PlayerStore.HasInstance) {
-                Restore(); reported = null; return;
+                Restore(); return;
             }
             StoreUIManager ui = StoreUIManager.Instance;
             SpriteRenderer image = StoreClientMono.Instance == null ? null : StoreClientMono.Instance.image;
             bool ownClient = XiaomanMod.CurrentClientIsXiaoman();
             bool ownSprite = image != null && mod.OwnsPortrait(image.sprite);
-            if (!ownClient && !ownSprite) { Restore(); reported = null; return; }
+            if (!ownClient && !ownSprite) { Restore(); return; }
             bool visible = image != null && image.enabled && image.gameObject.activeInHierarchy;
             bool normal = ui != null && !ui.isShootingMode && !ui.isMagnifyingMode;
             // DismissCurrentClient clears the client before walking out. Keep
             // that existing sprite alive; do not rebuild it in mid-departure.
-            bool detailed = (ownClient ? mod.EnsurePortraits() : ownSprite) && mod.HasDetailedPortraits;
+            bool detailed = mod.HasDetailedPortraits;
             if (!NativePortraitRules.MayUseDetail(ownClient,ownSprite,!ModHelper.IsOutsideStore(),visible,normal,detailed)) {
-                Restore(); Report("original sampling; visible=" + visible + ", normal=" + normal + ", detail=" + detailed); return;
+                Restore(); return;
             }
-            Camera camera = ui.mainCamera == null ? null : ui.mainCamera.GetComponent<Camera>();
-            PixelPerfectCamera pixels = camera == null ? null : camera.GetComponent<PixelPerfectCamera>();
-            if (camera == null || !camera.isActiveAndEnabled || pixels == null) {
-                Restore(); Report("original sampling; native camera is unavailable"); return;
-            }
-            if (camera != nativeCamera || pixels != pixelCamera) Restore();
+            if (!BindNativeCamera(ui.mainCamera)) { Restore(); return; }
             if (!lease.Active) {
-                nativeCamera = camera; pixelCamera = pixels;
-                lease.Begin(pixels.enabled,camera.forceIntoRenderTexture);
-                if (observer != null && observer.gameObject != camera.gameObject) {
-                    observer.Owner = null; UnityEngine.Object.Destroy(observer); observer = null;
-                }
-                if (observer == null) observer = camera.gameObject.AddComponent<XiaomanNativeCameraObserver>();
-                observer.Owner = this; observer.ResetReport();
-                Report("native SpriteRenderer throughout movement and dialogue; low-resolution upscale disabled; "
-                    + "native material, foreground sorting, tint and solid-colour fade retained.");
+                lease.Begin(pixelCamera.enabled,nativeCamera.forceIntoRenderTexture);
+                changedMode = false;
             }
             UseNativeDetailedMode();
+        }
+
+        private bool BindNativeCamera(GameObject root)
+        {
+            if (cameraRoot != root || nativeCamera == null || pixelCamera == null) {
+                Restore();
+                cameraRoot = root;
+                if (root != null) {
+                    nativeCamera = root.GetComponent<Camera>();
+                    pixelCamera = root.GetComponent<PixelPerfectCamera>();
+                    outline = root.GetComponent<Outliner>();
+                }
+            }
+            return nativeCamera != null && nativeCamera.isActiveAndEnabled && pixelCamera != null;
         }
 
         private void UseNativeDetailedMode()
@@ -90,14 +92,14 @@ namespace XiaomanVisitor
             if (!Active || !pixelCamera.enabled) return;
             float intended = LetterboxManager.GetIntendedOrthographicSize(nativeCamera);
             pixelCamera.enabled = false;
+            changedMode = true;
             LetterboxManager.SetIntendedOrthographicSize(nativeCamera,intended);
-            RefreshNativeOutline(nativeCamera);
+            RefreshNativeOutline();
         }
 
         // EmporiumOption does this same refresh after changing camera mode.
-        private static void RefreshNativeOutline(Camera camera)
+        private void RefreshNativeOutline()
         {
-            Outliner outline = camera.GetComponent<Outliner>();
             if (outline != null && outline.enabled) { outline.enabled = false; outline.enabled = true; }
         }
 
@@ -108,69 +110,36 @@ namespace XiaomanVisitor
             lease.UpdatePreference(enabled);
             UseNativeDetailedMode();
         }
-        internal void ClientShown() { LateUpdate(); }
-
-        internal void ObserveNativeTarget()
+        internal void ClientShown()
         {
-            if (!Active) return;
-            RenderTexture target = nativeCamera.activeTexture;
-            int width = target == null ? nativeCamera.pixelWidth : target.width;
-            int height = target == null ? nativeCamera.pixelHeight : target.height;
-            observer.ReportTarget(width,height,target != null,pixelCamera.enabled);
-        }
-
-        internal void LogTarget(int width, int height, bool texture, bool pixels)
-        {
-            Report("native output=" + width + "x" + height + ", viewport=" + LetterboxManager.GameAreaWidth + "x"
-                + LetterboxManager.GameAreaHeight + ", textureTarget=" + texture + ", pixelCameraEnabled=" + pixels
-                + ", upscaleRT=" + pixelCamera.upscaleRT + "; no UI portrait or renderer suppression.");
+            XiaomanMod mod = XiaomanMod.Instance;
+            if (mod != null && XiaomanMod.CurrentClientIsXiaoman()) mod.EnsurePortraits();
+            LateUpdate();
         }
 
         private void Restore()
         {
             bool enabled, forceTexture;
             if (lease.End(out enabled,out forceTexture)) {
-                if (pixelCamera != null) pixelCamera.enabled = enabled;
-                if (nativeCamera != null) {
-                    nativeCamera.forceIntoRenderTexture = forceTexture;
-                    RefreshNativeOutline(nativeCamera);
+                if (pixelCamera != null && pixelCamera.enabled != enabled) {
+                    pixelCamera.enabled = enabled;
+                    changedMode = true;
                 }
-                if (XiaomanMod.Instance != null) XiaomanMod.Instance.Log.Log(Diagnostic + "original sampling restored.");
+                if (changedMode && nativeCamera != null) {
+                    nativeCamera.forceIntoRenderTexture = forceTexture;
+                    RefreshNativeOutline();
+                }
             }
-            if (observer != null) observer.Owner = null;
-            nativeCamera = null; pixelCamera = null;
+            cameraRoot = null; nativeCamera = null; pixelCamera = null; outline = null; changedMode = false;
         }
 
-        private void Report(string state)
-        {
-            if (reported == state) return;
-            reported = state;
-            if (XiaomanMod.Instance != null) XiaomanMod.Instance.Log.Log(Diagnostic + state);
-        }
         internal void Shutdown()
         {
             Restore();
-            if (observer != null) UnityEngine.Object.Destroy(observer);
-            observer = null;
             if (Running == this) Running = null;
         }
         private void OnDisable() { Restore(); if (Running == this) Running = null; }
         private void OnDestroy() { Shutdown(); }
-    }
-
-    [DefaultExecutionOrder(1000)]
-    internal sealed class XiaomanNativeCameraObserver : MonoBehaviour
-    {
-        internal XiaomanNativeRendering Owner;
-        private int width = -1, height = -1;
-        internal void ResetReport() { width = height = -1; }
-        private void OnPostRender() { if (Owner != null) Owner.ObserveNativeTarget(); }
-        internal void ReportTarget(int w, int h, bool texture, bool pixels)
-        {
-            if (width == w && height == h) return;
-            width = w; height = h;
-            if (Owner != null) Owner.LogTarget(w,h,texture,pixels);
-        }
     }
 
     // Prepare before the first visible walk frame; do not wait for arrival.

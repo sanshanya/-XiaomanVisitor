@@ -39,7 +39,7 @@ namespace XiaomanVisitor
             foregroundTexture = ReadTexture("bar-occluder.png", 384, 48);
             background = Image("Background", backgroundTexture);
             bool detailed;
-            Texture2D portraits = mod.TavernPortraitAtlas(out detailed);
+            Texture2D portraits = mod.SharedPortraitAtlas(out detailed);
             if (portraits == null) throw new InvalidOperationException("Portrait assets are not ready");
             highDetail = detailed;
             actor = Image("Xiaoman", portraits);

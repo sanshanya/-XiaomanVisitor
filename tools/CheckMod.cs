@@ -564,12 +564,17 @@ internal static class CheckMod
                 "resolution switch cannot enlarge the character or move its pivot");
         }
         Require(File.Exists(Path.Combine(package,PortraitDetailRules.HighFile)), "original-detail pack is installed for lazy loading");
+        Require(File.Exists(Path.Combine(package,PortraitDetailRules.PreferredFile))
+            && PortraitDetailRules.PreferredFile != PortraitDetailRules.HighFile,
+            "shared accepted artwork and the separately packaged nearest fallback both exist");
         Require(typeof(LetterboxManager).GetProperty("GameAreaHeight") != null,
             "detail selection uses the installed game's actual letterboxed viewport height");
         Console.WriteLine("PASS: detailed frames across all ready viewport sizes, GPU fallback and identical portrait world size.");
     }
     private static void CheckShopPortrait()
     {
+        Require(typeof(XiaomanMod).Assembly.GetType("XiaomanVisitor.XiaomanNativeCameraObserver") == null,
+            "production renderer has no permanent per-render diagnostic probe");
         for (int state = 0; state < 64; state++)
             Require(NativePortraitRules.MayUseDetail((state&1)!=0,(state&2)!=0,(state&4)!=0,(state&8)!=0,(state&16)!=0,(state&32)!=0)
                 == (state == 61 || state == 62 || state == 63),
