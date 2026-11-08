@@ -23,12 +23,17 @@ def main():
         assert hashlib.sha256(original_file.read_bytes()).hexdigest() == row["source_sha256"] == source["files"][index]["sha256"]
         original = Image.open(original_file).convert("RGBA")
         expected = Image.new("RGBA", (384,688))
-        expected.paste(original.convert("RGBa").resize((384,684),Image.Resampling.BILINEAR).convert("RGBA"),(0,4))
+        expected.paste(original.resize((384,684),Image.Resampling.NEAREST),(0,4))
         assert row["x"] == index % 6 * 384 and row["y"] == index // 6 * 688
         frame = atlas.crop((row["x"],row["y"],row["x"]+384,row["y"]+688))
         assert frame.tobytes() == expected.tobytes(), "Changed artwork or wrong expression/mouth cell"
     assert data["scale"] == 4 and data["frame"] == [384,688] and data["lazy_load"]
-    assert not data["sharpening"] and data["resize"].startswith("premultiplied-alpha bilinear")
+    assert not data["sharpening"] and data["resize"].startswith("nearest")
+    assert data["sha256"] == "980846867b55c6367e7c988f9737967c71e06e593721eb2cf0f6c1160476e253", "Shop atlas must match the earlier clear snapshot"
+    tavern = json.loads((ROOT / "assets/tavern-scene/portrait-detail.json").read_text(encoding="utf-8"))
+    assert tavern["packaged"] != data["packaged"]
+    assert tavern["sha256"] == "6ba7596e421a37ff926d07dafbeab1ff55294757ab84132c39018b306b25e0a3", "Keep the already accepted tavern portrait unchanged"
+    assert hashlib.sha256((ROOT / "package/XiaomanVisitor" / tavern["packaged"]).read_bytes()).hexdigest() == tavern["sha256"]
     standard = ROOT / "package/XiaomanVisitor/Textures/xiaoman_atlas.png"
     approved = json.loads((ROOT / "assets/approved-textures.sha256.json").read_text(encoding="utf-8"))
     assert hashlib.sha256(standard.read_bytes()).hexdigest() == approved["files"]["Textures/xiaoman_atlas.png"]
@@ -42,7 +47,7 @@ def main():
     output = ROOT / "experiments/hires/portrait-comparison.png"
     output.parent.mkdir(parents=True,exist_ok=True)
     preview.convert("RGB").save(output,optimize=True)
-    print("PASS: all 18 HD frames use a light linear resample of the approved originals; no sharpening; standard atlas and world geometry unchanged.")
+    print("PASS: all 18 shop frames exactly restore the earlier nearest snapshot; the accepted tavern atlas, standard atlas, source artwork and geometry are unchanged.")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 {
   "packaged": "Portraits/xiaoman_atlas_hd.png",
-  "sha256": "6ba7596e421a37ff926d07dafbeab1ff55294757ab84132c39018b306b25e0a3",
-  "bytes": 551273,
+  "sha256": "980846867b55c6367e7c988f9737967c71e06e593721eb2cf0f6c1160476e253",
+  "bytes": 146866,
   "size": [
     2304,
     2064
@@ -17,12 +17,13 @@
     340,
     608
   ],
-  "resize": "premultiplied-alpha bilinear from approved original composites",
+  "resize": "nearest from approved original composites",
   "sharpening": false,
-  "appearance": "natural edges and softer dithering",
+  "appearance": "original pixel edges",
   "lazy_load": true,
   "viewport_height_above": 1080,
   "world_geometry_unchanged": true,
+  "usage": "shop",
   "frames": [
     {
       "index": 0,

@@ -32,8 +32,9 @@ def save(path, document):
 
 
 def current_frames():
-    atlas_path = PACKAGE / "Portraits/xiaoman_atlas_hd.png"
-    assert digest(atlas_path) == load(ROOT / "assets/portrait-detail.json")["sha256"]
+    detail = load(SCENE / "portrait-detail.json")
+    atlas_path = PACKAGE / detail["packaged"]
+    assert digest(atlas_path) == detail["sha256"]
     atlas = Image.open(atlas_path).convert("RGBA")
     assert atlas.size == (2304, 2064)
     return [atlas.crop((i % 6 * 384, i // 6 * 688,
@@ -84,7 +85,7 @@ def import_layers(source):
         "background": {"file": "background.png", "texture_size": [1672, 941],
                        "reference_scale": 3, "resampling": "nearest", "art_repainted": False},
         "character": {"reference_file": "character-reference.png", "position": [x, y],
-                      "size": [384, 688], "atlas": "Portraits/xiaoman_atlas_hd.png",
+                      "size": [384, 688], "atlas": "Portraits/xiaoman_tavern_atlas.png",
                       "atlas_grid": [6, 3], "moods": 6, "mouth_states": 3,
                       "use_existing_approved_frames": True},
         "bar_occluder": {"file": "bar-occluder.png", "position": list(bounds[:2]),

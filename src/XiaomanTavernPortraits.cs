@@ -9,6 +9,7 @@ namespace XiaomanVisitor
         // lazy-load flags, sprite registry or display settings from 0.0.2.
         private Texture2D tavernHighAtlas;
         private bool tavernHighAttempted;
+        internal const string TavernAtlasFile = "Portraits/xiaoman_tavern_atlas.png";
 
         internal Texture2D TavernPortraitAtlas(out bool highDetail)
         {
@@ -16,7 +17,7 @@ namespace XiaomanVisitor
                 tavernHighAttempted = true;
                 Texture2D pending = null;
                 try {
-                    byte[] bytes = ModHelper.ReadModFileBytes(Id, PortraitDetailRules.HighFile);
+                    byte[] bytes = ModHelper.ReadModFileBytes(Id, TavernAtlasFile);
                     if (bytes == null) throw new InvalidOperationException("Missing night portrait atlas");
                     pending = new Texture2D(2,2,TextureFormat.RGBA32,false);
                     if (!ImageConversion.LoadImage(pending,bytes,true) || pending.width != 2304 || pending.height != 2064)
