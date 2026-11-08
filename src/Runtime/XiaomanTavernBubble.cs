@@ -139,7 +139,7 @@ namespace XiaomanVisitor
                 layoutDirty = false;
             }
             float x = actor.anchoredPosition.x + actor.rect.width * .55f;
-            float y = actor.anchoredPosition.y - actor.rect.height * .58f;
+            float y = actor.anchoredPosition.y - actor.rect.height * .9f;
             float actualWidth = body.rect.width * body.localScale.x;
             x = Mathf.Clamp(x, 16f, Mathf.Max(16f, rightEdge - actualWidth));
             root.anchoredPosition = new Vector2(x, y);
