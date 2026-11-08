@@ -28,6 +28,7 @@
 package/** -text
 reference/** -text
 story/酒馆设计/** -text
+assets/tavern-scene/provided-layout.json -text -whitespace
 
 # Keep published bytes, original manuscripts and upstream license formatting.
 package/** -whitespace

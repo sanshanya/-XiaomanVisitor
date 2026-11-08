@@ -1,0 +1,63 @@
+{
+  "canvas": {
+    "width": 5016,
+    "height": 2823
+  },
+  "background": {
+    "source_size": [
+      1672,
+      941
+    ],
+    "scale": 3,
+    "resampling": "nearest-neighbor",
+    "source_pixels_changed": false
+  },
+  "character": {
+    "source_size": [
+      384,
+      688
+    ],
+    "scale": 1,
+    "x": 2628,
+    "y": 1004,
+    "rotation": 0,
+    "opacity": 1,
+    "rgba_pixels_changed": false,
+    "source_alpha_preserved": true
+  },
+  "layer_order_bottom_to_top": [
+    "background",
+    "full_character",
+    "bar_foreground"
+  ],
+  "relative_character_size_vs_v1": 0.6666666666666666,
+  "bar_occlusion_y_at_character": 1644,
+  "expression_reference": {
+    "eyes-original": {
+      "source_box_xyxy_exclusive": [
+        86,
+        224,
+        294,
+        280
+      ],
+      "scene_position": [
+        2714,
+        1228
+      ],
+      "purpose": "Original reference frame only; no new animation frame generated."
+    },
+    "mouth-original": {
+      "source_box_xyxy_exclusive": [
+        165,
+        304,
+        219,
+        334
+      ],
+      "scene_position": [
+        2793,
+        1308
+      ],
+      "purpose": "Original reference frame only; no new animation frame generated."
+    }
+  }
+}

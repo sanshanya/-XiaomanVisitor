@@ -1,0 +1,74 @@
+{
+  "schema": 1,
+  "status": "verified_asset_candidate_not_runtime_integration",
+  "source_package": "xiaoman-tavern-complete-package-v2/xiaoman-scene-v2",
+  "reference_canvas": [
+    5016,
+    2823
+  ],
+  "layer_order": [
+    "background",
+    "animated_character",
+    "bar_occluder"
+  ],
+  "background": {
+    "file": "background.png",
+    "texture_size": [
+      1672,
+      941
+    ],
+    "reference_scale": 3,
+    "resampling": "nearest",
+    "art_repainted": false
+  },
+  "character": {
+    "reference_file": "character-reference.png",
+    "position": [
+      2628,
+      1004
+    ],
+    "size": [
+      384,
+      688
+    ],
+    "atlas": "Portraits/xiaoman_atlas_hd.png",
+    "atlas_grid": [
+      6,
+      3
+    ],
+    "moods": 6,
+    "mouth_states": 3,
+    "use_existing_approved_frames": true
+  },
+  "bar_occluder": {
+    "file": "bar-occluder.png",
+    "position": [
+      2628,
+      1644
+    ],
+    "size": [
+      384,
+      48
+    ],
+    "covers_current_actor_footprint_only": true
+  },
+  "viewport": {
+    "fit": "contain",
+    "preserve_aspect": true,
+    "shared_transform_for_all_layers": true
+  },
+  "integration": {
+    "opening_game_day": 3,
+    "independent_night_actor_required": true,
+    "reuse_voice_envelope": true,
+    "modify_native_customer_queue": false
+  },
+  "supplied_preview_sha256": "e7b0e93c7fd38a0e5822909120d97667ef0fd577d6a29fa4895e84ecb7485524",
+  "compact_layers_reproduce_supplied_preview_exactly": true,
+  "files": {
+    "background.png": "4a5a957669ce0aa0dad07e511dc755c99445c4c739cb34b683d80c836134502f",
+    "bar-occluder.png": "8b6de91420640b13e920ecfd824f5d5cdd577da5d3f89fdc481c11002c032c59",
+    "character-reference.png": "e0502fd4d7d0f55cde6f6741a9f22b8030890fcc0602e92de7043de456d3708e",
+    "provided-layout.json": "7fbd37792490c76f5e351b667dfd1f807a7f1a3566f8cede9ae249e402cd7f8a"
+  }
+}

@@ -9,7 +9,7 @@ Get-XiaomanCompiler | Out-Null
 Get-XiaomanNet8Runtime | Out-Null
 & (Join-Path $PSScriptRoot 'build.ps1') -GameRoot $GameRoot
 & (Join-Path $PSScriptRoot 'check.ps1') -GameRoot $GameRoot
-foreach ($name in @('check_assets.py','check_portrait_detail.py','check_handwriting.py','check_voice_audio.py','test_voice_pipeline.py')) {
+foreach ($name in @('check_assets.py','check_portrait_detail.py','check_handwriting.py','check_voice_audio.py','test_voice_pipeline.py','prepare_tavern_scene.py')) {
     & $python (Join-Path $PSScriptRoot $name)
     if ($LASTEXITCODE -ne 0) { throw ('Validation failed: ' + $name) }
 }
