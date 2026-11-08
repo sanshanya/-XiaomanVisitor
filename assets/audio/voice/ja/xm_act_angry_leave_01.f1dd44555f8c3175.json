@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……もう結構です。今日は帰ります。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "30",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.163,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 199852
+  },
+  "sha256": "6a2d3dedb5cb86aa4fd188f806729b078bc170541c9b66045ef518eedf48b3fd",
+  "binding": {
+    "key": "xm_act_angry_leave_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……够了。今天我先回去了。",
+      "ja": "……もう結構です。今日は帰ります。",
+      "en": "...That's enough. I'm going home."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_angry_leave_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "……够了。今天我先回去了。",
+        "ja": "……もう結構です。今日は帰ります。",
+        "en": "……够了。今天我先回去了。"
+      },
+      "generic": false
+    }
+  ]
+}

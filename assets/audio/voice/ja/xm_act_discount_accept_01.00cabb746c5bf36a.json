@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ、少し安くなるんですね。ありがとうございます。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "45",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.68,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 272682
+  },
+  "sha256": "1f714379dd7bd442ad012f37aa7677995db365793105d6ca4bd05a679d6ed908",
+  "binding": {
+    "key": "xm_act_discount_accept_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "啊，稍微便宜了一些。谢谢你。",
+      "ja": "あ、少し安くなるんですね。ありがとうございます。",
+      "en": "Oh, a little cheaper. Thank you."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_discount_accept_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "啊，稍微便宜了一些。谢谢你。",
+        "ja": "あ、少し安くなるんですね。ありがとうございます。",
+        "en": "啊，稍微便宜了一些。谢谢你。"
+      },
+      "generic": false
+    }
+  ]
+}

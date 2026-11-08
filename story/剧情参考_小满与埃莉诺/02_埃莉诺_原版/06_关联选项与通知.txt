@@ -1,0 +1,30 @@
+埃莉诺原版关联选项、角色名、通知和事件文字
+
+有些选项复用了非eleanor命名的文本，仍由原版埃莉诺函数引用；这是原版复用关系。
+
+[Dialogue / dialog_georgio_loan_choice_decline]
+[拒绝]
+
+[ClientName / name_eleanor]
+埃莉诺
+
+[ClientName / name_security_officer]
+治安部警官
+
+[ClientName / name_eleanor_uncle]
+埃莉诺的叔叔
+
+[ClientName / name_black_market_thug]
+黑市打手
+
+[Mechanic / mech_notify_eleanor_drive_bounty]
+黑市为埃莉诺的数据盘付了你{0}信用点。
+
+[Mechanic / event_eleanor_leak_news]
+帕斯泰尔营养果的秘密遭到泄露！
+
+[Mechanic / event_eleanor_leak_desc]
+一篇研究论文已经发表，揭示了如何让普通营养果重新结籽。全空间站的生物黑客已经开始种植这一新品种，种子价格随之暴跌。同一天早上，因挪用公款入狱的空间站最大水培农场前负责人被发现死在牢房中。帕斯泰尔公司拒绝置评。
+
+[UI / ui_eleanor_reward_body]
+埃莉诺的谢礼：任选一份。

@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "52",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.331,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 303912
+  },
+  "sha256": "e8c3e8b907d50add4183230a686265a63d126017ce31f53a5e53f4bd675a7828",
+  "binding": {
+    "key": "xm_act_after_sale_low_budget_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "啊……预算差不多用完了。今天就这些吧。",
+      "ja": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
+      "en": "Oh... That's nearly all my money. That'll be enough for today."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_after_sale_low_budget_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "啊……预算差不多用完了。今天就这些吧。",
+        "ja": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
+        "en": "啊……预算差不多用完了。今天就这些吧。"
+      },
+      "generic": false
+    }
+  ]
+}

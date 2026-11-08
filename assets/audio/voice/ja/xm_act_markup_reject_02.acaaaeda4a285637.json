@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "うーん……ちょっと予算が足りなくて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "33",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.053,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 194604
+  },
+  "sha256": "fc1c33389bc6f22748d1d6cbf1abfb6aa17ffdebfb1ffd1bd8bea0dea44aa78c",
+  "binding": {
+    "key": "xm_act_markup_reject_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "唔……预算有点不够。",
+      "ja": "うーん……ちょっと予算が足りなくて。",
+      "en": "Hmm... That's a little beyond my budget."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_reject_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "唔……预算有点不够。",
+        "ja": "うーん……ちょっと予算が足りなくて。",
+        "en": "唔……预算有点不够。"
+      },
+      "generic": false
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ほかにもありますか？ もう少し見てみたいです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "43",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.854,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 233054
+  },
+  "sha256": "8e83c2a124adf98c2964734c9da61976ba6d1bdd952713f5670bfe447a4aba6b",
+  "binding": {
+    "key": "xm_act_after_sale_continue_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "还有别的吗？我想再看看。",
+      "ja": "ほかにもありますか？ もう少し見てみたいです。",
+      "en": "Do you have anything else? I'd like another look."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_after_sale_continue_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "还有别的吗？我想再看看。",
+        "ja": "ほかにもありますか？ もう少し見てみたいです。",
+        "en": "还有别的吗？我想再看看。"
+      },
+      "generic": false
+    }
+  ]
+}

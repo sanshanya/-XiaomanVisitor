@@ -1,0 +1,83 @@
+{
+  "color": "dusty pink",
+  "native_atlas_untouched": true,
+  "alpha_and_grid_unchanged": true,
+  "palette": [
+    {
+      "source": [
+        62,
+        105,
+        121
+      ],
+      "pink": [
+        181,
+        119,
+        146
+      ]
+    },
+    {
+      "source": [
+        69,
+        145,
+        139
+      ],
+      "pink": [
+        212,
+        155,
+        178
+      ]
+    },
+    {
+      "source": [
+        53,
+        82,
+        113
+      ],
+      "pink": [
+        143,
+        88,
+        115
+      ]
+    },
+    {
+      "source": [
+        48,
+        58,
+        65
+      ],
+      "pink": [
+        98,
+        65,
+        82
+      ]
+    }
+  ],
+  "files": [
+    {
+      "source": "reference/notebook-icons/tutorial_book.png",
+      "source_sha256": "3e9d90d25575bba30778bb71b7b22d18e3089ec9a65d717f18ddbce570f02141",
+      "sprite_key": "xiaoman_letterbook",
+      "packaged": "Textures/Items/xiaoman_letterbook.png",
+      "sha256": "09a1a48cdac8bcc0d7d5b8ccd2707f57d2b8a91934baee88a8d06b927e9f8abf",
+      "size": [
+        32,
+        48
+      ],
+      "bytes": 297,
+      "changed_pixels": 858
+    },
+    {
+      "source": "reference/notebook-icons/tutorial_book_full.png",
+      "source_sha256": "6a7a3bbbaabe9cb701bfa7372f9814800fbc7ef624423b14760fd9d2f07f3cc2",
+      "sprite_key": "xiaoman_letterbook_full",
+      "packaged": "Textures/Items/xiaoman_letterbook_full.png",
+      "sha256": "f1c2753d365e3fb90d029adb847f6bc53975fd0c564079db04a71b99034fb602",
+      "size": [
+        32,
+        48
+      ],
+      "bytes": 339,
+      "changed_pixels": 770
+    }
+  ]
+}

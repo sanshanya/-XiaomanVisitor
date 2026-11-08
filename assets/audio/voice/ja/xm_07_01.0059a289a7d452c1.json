@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "72",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.927,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 428536
+  },
+  "sha256": "d3cbd8c55b00e86cbf0d47302c0a6392ea96169cecd0b84d08334ab39316c085",
+  "binding": {
+    "key": "xm_07_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好。昨天收到朋友们聚餐的合照。",
+      "ja": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
+      "en": "Good evening. My friends sent me a photo of their get-together yesterday."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_07_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "晚上好。昨天收到朋友们聚餐的合照。",
+        "ja": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
+        "en": "晚上好。昨天收到朋友们聚餐的合照。"
+      },
+      "generic": false
+    }
+  ]
+}

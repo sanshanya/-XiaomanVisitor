@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……分かりました。それでお願いします。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "34",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.163,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 199852
+  },
+  "sha256": "3426d6bb5a5901e18d519d2aa37c6123c7acb9b1c6677f2258e9bec4876bdc4a",
+  "binding": {
+    "key": "xm_act_markup_accept_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……好吧。那就这样。",
+      "ja": "……分かりました。それでお願いします。",
+      "en": "...All right. Let's do that."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_accept_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "……好吧。那就这样。",
+        "ja": "……分かりました。それでお願いします。",
+        "en": "……好吧。那就这样。"
+      },
+      "generic": false
+    }
+  ]
+}

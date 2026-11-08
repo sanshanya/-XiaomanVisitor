@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……それは、ちょっとひどくないですか。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "34",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.545,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 170180
+  },
+  "sha256": "746097d5f2ed1ea4b860f5b604496c98dc50b9c1a2a89cd860acb39926f391ef",
+  "binding": {
+    "key": "xm_act_shutter_close_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……这样有点过分了吧。",
+      "ja": "……それは、ちょっとひどくないですか。",
+      "en": "...That's a little much, isn't it?"
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_shutter_close_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "……这样有点过分了吧。",
+        "ja": "……それは、ちょっとひどくないですか。",
+        "en": "……这样有点过分了吧。"
+      },
+      "generic": false
+    }
+  ]
+}

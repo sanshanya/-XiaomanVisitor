@@ -1,0 +1,147 @@
+埃莉诺原版：剧情流程、触发条件与分支
+
+依据：当前本机Assembly-CSharp.dll中的StoreClientUniqueList、StoreClientData、StoreClientManager、StorylineSchedule与EventListUnique。
+以下是代码核对后的整理，正文台词见同目录02_按节点对话全文.txt。
+
+一、日期与状态
+S = StorylineSchedule.StartDay("eleanor")，新档名义起点是23。
+前三次来访与叔叔事件使用相等日期判断；后期主要按状态日期加相对间隔判断。
+旧档可能有重新锚定的S，所以不要把所有剧情简单写成固定第23、25、27天。
+死亡标记isEleanorDead会停止通常的埃莉诺来访；公开数据后的种子状态处理仍单独检查。
+早期来访与叔叔的安排有非无尽模式条件。具体调度分支保留在原版逻辑摘录中。
+
+二、早期主线
+
+01 EleanorIntro：首次来访，默认S（通常第23天）
+身份与态度：上层区出身，轻蔑下层区，母亲被控挪用公款。
+游戏行为：购买FOOD，预算300，要求商品种类多样。
+制作参考：用一次普通交易同时交代身份、困境和人物缺点。
+
+02 Eleanor2：S+2
+情况变化：仍回不了上层区，开始承认自己可能要长期滞留。
+游戏行为：购买HOUSEHOLD_GOOD，预算200。
+制作参考：需求商品变化就能表现生活处境变化，不必只增加说明性台词。
+
+03 Eleanor3：S+4
+情况变化：财务压力加剧，立绘不再佩戴珠宝。
+游戏行为：出售bottled_water_premium、box_tampon、neuroactive_perfume。
+出售设置：SetWholesale(50)，禁止讨价还价。
+制作参考：用卖出私人物品表现失去原有生活。
+
+04 CreateEleanorUncle：S+5
+来访者：自称叔叔的男子，实际剧情中与埃莉诺无亲属关系。
+游戏行为：向玩家交付luxury_supply_crate，要求转交给她；箱子出场时男子可被举报。
+如果成功捕获/举报该男子，记录eleanorUncleReported。
+这不是单纯对话选项：箱子的所有权、所在柜台与举报行为都会参与判断。
+
+三、叔叔、警告、求助和栽赃
+
+分支A：举报男子
+CanEleanorWarnedVisit：已举报男子，尚未播放警告来访，埃莉诺未被捕，且日期至少S+6。
+EleanorWarned：店长告知情况，埃莉诺确认没有叔叔并致谢。
+玩家从portable_water_purifier与pheromone_perfume中选择奖励。
+净水器当前耐久设为175；香水当前使用次数设为5。
+警告开始时记录eleanorWarnedDay。
+此路线的第四次主线日期改为eleanorWarnedDay+3。
+
+分支B：未举报男子
+第四次主线日期直接为S+6。
+
+05 Eleanor4：困境与援助
+预算0，接受FOOD、TREAT、BREVAGE。
+显式选项：玩家至少持有50信用点时，可给她50信用点；扣款并增加eleanorHelpedTimes。
+当次接受交易后的相应回调也会增加帮助计数，并结束来访。
+台词后使用原生交易和选择流程，不是只播放完文字就算帮助成功。
+
+补给箱陷阱：Eleanor4或Eleanor5来访期间
+玩家拥有的luxury_supply_crate放在前/后柜台上会触发延迟检查。
+若仍是她在场、箱子仍在柜台，则尝试以赃物逮捕她。
+成功后记录eleanorArrested、eleanorArrestDay和eleanorArrestVisit（4或5）。
+若逮捕失败，代码恢复箱子所有权与陷阱状态。
+
+06 Eleanor5：拾荒谋生
+要求eleanorHelpedTimes>0，且未被捕。
+通常日期是第四次主线计划日+2。
+如果她在第四次主线被捕，则改为获释回来那天+2；尚未获释时没有这个日期。
+游戏行为：出售4件junkTable与3件materialTable物品。
+出售设置：SetWholesale(33)，禁止讨价还价。
+这次来访也保留补给箱陷阱；离店时清理该箱子的赃物状态。
+
+四、被捕后的救回分支
+
+07 CreateEleanorBailOfficer：被捕至少2天后
+要求：她已被捕，且尚未选择保释处理方式。
+选项一：支付500信用点，现金足够时可选；记录保释选择1与当天日期。
+选项二：治安声望至少40时替她担保；记录选择2与当天日期。
+选项三：拒绝；记录选择3。这个拒绝选项复用dialog_georgio_loan_choice_decline。
+拒绝并不会设置获释条件。
+
+08 EleanorFreed：支付或担保后的至少1天
+首次进入对话时记录eleanorFreedVisitDay，清除eleanorArrested，并增加eleanorHelpedTimes。
+她明确说箱子不是自己的，也没有叔叔。
+如果第五次主线被捕，后续调查计划改用获释日作为日期基准。
+
+五、筹款：用多次实际交易推进
+
+09 Eleanor6：调查计划
+条件：eleanorHelpedTimes>0、未被捕、尚未提出计划，并且到达计划基准日+4。
+计划基准：通常是GetEleanorVisit5Day()；若第五次主线被捕，则使用获释来访日。
+开始对话时记录eleanorPlanDay。
+目标：累计筹集800信用点雇用侦探，继续出售拾荒物。
+
+10 EleanorScav：可重复的筹款来访
+条件：已有调查计划、累计收入不足800、未被捕。
+距离max(eleanorPlanDay, eleanorScavLastDay)至少4天后再来。
+每次开始时更新eleanorScavLastDay。
+实际出售物品的onItemSold回调把非负付款额累加到eleanorSavings。
+未达目标时，反馈还差多少；跨过800时，记录eleanorSavingsDoneDay并播放达标台词。
+这段并非“来访固定次数后自动通过”，关键条件是实际交易收入。
+
+六、证据、威胁与最终选择
+
+11 Eleanor7：交易收入达标至少4天后
+条件：已经记录达标日期，未播放本节点，未被捕。
+她带来侦探找到的数据盘信息；开始时记录eleanorDriveVisitDay。
+类型是DIALOGUE，不进行普通买卖；对话结束后离开。
+
+12 CreateEleanorThreat：数据盘来访至少1天后
+黑市打手上门，提出以归还数据盘换取其母亲自由的条件，并许诺300信用点。
+开始时记录eleanorThreatVisitDay。
+
+13 Eleanor8：威胁事件至少1天后
+此前尚未做最终选择时触发。
+店长说明情况，玩家决定如何处理数据盘。
+
+选择一：归还数据盘
+记录eleanorDriveChoice=1与eleanorChoiceDay。
+结束对话时给玩家300信用点，并显示对应通知。
+
+选择二：公开数据盘
+记录eleanorDriveChoice=2与eleanorChoiceDay。
+首次选择时安排1天后的EleanorLeak新闻事件。
+另一个日常检查在选择至少1天后调用PlantList.FreeNutrifruit，影响营养果种子状态。
+
+七、两种结局
+
+14 Eleanor9：选择后至少2天
+首次进入时记录eleanorConclusionDay，之后不重复。
+
+归还路线（eleanorDriveChoice不为2）
+母亲获释并被流放到下层区，母女重聚。
+她送给玩家一件标记为二手的self_refilling_neuroactive_perfume。
+感谢、礼物与告别按线性顺序播放，然后离店。
+
+公开路线（eleanorDriveChoice=2）
+她告知母亲在新闻刊登后被杀，自己加入革命军。
+同样送出二手的self_refilling_neuroactive_perfume。
+随后以预算350购买WEAPON，临时恢复可结束接待。
+原生tryInterceptDismiss保证离店前会先播放最后告别，避免玩家直接跳过结尾。
+
+八、对写小满有用的结构观察
+这部分是写作分析，不是埃莉诺原文。
+1. 来访先有一个可操作的交易目的，人物变化通过需求、货品、预算和立绘共同表现。
+2. 把“见过她”“帮助过她”“卖出了多少钱”“选择了哪条路线”分别存为状态。
+3. 在实际物品转移或选择确认后更新关键状态，台词播放完成和交易完成分开处理。
+4. 重复来访提供短回应和动态进度，达标后切换到一次性剧情节点。
+5. 关系回报与具体物品连接，结尾还会影响后续交易与世界事件。
+6. 固定日期、前置状态与相对延迟都明确写进节点设计，避免剧情只靠随意抽取。

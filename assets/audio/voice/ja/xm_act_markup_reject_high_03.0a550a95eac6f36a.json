@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それなら、今日はやめておきます。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "30",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.545,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 170180
+  },
+  "sha256": "a73315b10a29d8f58bcbd1800ddeb7b657c3812a6ec26a9a77bde13fd35cf80f",
+  "binding": {
+    "key": "xm_act_markup_reject_high_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这样的话，今天还是算了。",
+      "ja": "それなら、今日はやめておきます。",
+      "en": "In that case, I'll leave it for today."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_reject_high_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "这样的话，今天还是算了。",
+        "ja": "それなら、今日はやめておきます。",
+        "en": "这样的话，今天还是算了。"
+      },
+      "generic": false
+    }
+  ]
+}

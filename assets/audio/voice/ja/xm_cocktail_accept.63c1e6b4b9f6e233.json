@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ありがとうございます。お口に合うといいんですけど。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "48",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.363,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 257478
+  },
+  "sha256": "acc5ee8c81a84d82875dc3a2773bd109c176290d62d9ba474b477beb5f7a650d",
+  "binding": {
+    "key": "xm_cocktail_accept",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "谢谢，希望合你的口味。",
+      "ja": "ありがとうございます。お口に合うといいんですけど。",
+      "en": "Thank you. I hope it's to your taste."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_cocktail_accept",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "谢谢，希望合你的口味。",
+        "ja": "ありがとうございます。お口に合うといいんですけど。",
+        "en": "谢谢，希望合你的口味。"
+      },
+      "generic": false
+    }
+  ]
+}

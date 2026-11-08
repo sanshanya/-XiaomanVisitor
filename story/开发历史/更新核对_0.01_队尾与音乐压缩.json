@@ -1,0 +1,19 @@
+{
+  "version": "0.01",
+  "installed_verified": true,
+  "steam_uploaded": false,
+  "queue_policy": "additional_after_all_native_customers",
+  "shortcut_policy": "tail_only",
+  "native_count_and_relative_order_preserved": true,
+  "headless_assertions": 3777,
+  "real_game_testing": "Not performed by the agent; user handles gameplay review.",
+  "music_before_MiB": 99.64,
+  "music_after_MiB": 61.21,
+  "music_saved_percent": 38.57,
+  "source_masters_unchanged": true,
+  "voice_files_unchanged": 107,
+  "final_track_preserved_exactly": true,
+  "zip_MiB": 83.32,
+  "installed_MiB": 93.46,
+  "archive_sha256": "70744b1f70f51e6c06b6b703e6f1b9234ba3752ab270419d06082b8bd49559bd"
+}

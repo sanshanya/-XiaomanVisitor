@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは。今日はやっと階を間違えずに来られました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "50",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.946,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 285432
+  },
+  "sha256": "3d8c24a2ffa571952f29188ccf062a4eba30122c1dfc3403cb54b38da6f654f2",
+  "binding": {
+    "key": "xm_03_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好。今天总算没走错楼层。",
+      "ja": "こんばんは。今日はやっと階を間違えずに来られました。",
+      "en": "Good evening. I finally made it to the right floor today."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_03_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "晚上好。今天总算没走错楼层。",
+        "ja": "こんばんは。今日はやっと階を間違えずに来られました。",
+        "en": "晚上好。今天总算没走错楼层。"
+      },
+      "generic": false
+    }
+  ]
+}

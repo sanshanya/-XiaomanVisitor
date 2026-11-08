@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "56",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.419,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 308140
+  },
+  "sha256": "d695763820f9b135e09c6bc2184c1eb4c2b1ff15f6f8fec5210f6aef36f4a42b",
+  "binding": {
+    "key": "xm_act_blackmail_innocent_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "为什么突然说这种话？我只是来买东西的。",
+      "ja": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
+      "en": "Why would you say that? I only came here to buy things."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_blackmail_innocent_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "为什么突然说这种话？我只是来买东西的。",
+        "ja": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
+        "en": "为什么突然说这种话？我只是来买东西的。"
+      },
+      "generic": false
+    }
+  ]
+}

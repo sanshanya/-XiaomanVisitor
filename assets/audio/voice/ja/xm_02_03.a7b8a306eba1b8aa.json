@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こっちに来てから、何か足りないなって思ってたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "50",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.327,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 255762
+  },
+  "sha256": "969ec150bde33547141612b9fb2ff648fd3e80166048faef7b63b6ef86049dd4",
+  "binding": {
+    "key": "xm_02_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "刚搬来那会儿，总觉得少了点什么。",
+      "ja": "こっちに来てから、何か足りないなって思ってたんです。",
+      "en": "When I first got here, I kept feeling as if something was missing."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_02_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "刚搬来那会儿，总觉得少了点什么。",
+        "ja": "こっちに来てから、何か足りないなって思ってたんです。",
+        "en": "刚搬来那会儿，总觉得少了点什么。"
+      },
+      "generic": false
+    }
+  ]
+}

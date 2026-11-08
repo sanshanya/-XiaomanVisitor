@@ -1,0 +1,42 @@
+小满·雨夜来客 0.8.1 音乐来源
+
+14首雨夜收藏磁带
+本版直接使用用户已下载的MP3，完整复制，未转码、未裁剪、未改动音频数据。
+本机来源目录：D:\apps\CloudMusic\save\电台节目
+合集名称：雨夜迷醉时（雨音に満ちる夜）BGM合集
+下载文件所示上传者：白咲绯文丶（合集整理者；不据此认定为作曲者）。
+各曲在本合集中的标签名：
+Title、Intro、Intro2、Nightfall、Midnight、Latenight、Deepnight、Lost、Diary、
+Gallery1、Gallery2、Outro、Outro2、Rainysound。
+Rainysound约20分钟，其余曲目约1至5分钟，总计约56.7分钟。
+mod文件名：Sounds\rain_曲目英文小写.mp3
+上述英文名称沿用下载合集标签；不将其认定为作曲者的正式曲名。
+完整文件对应、时长及SHA256记录保存在开发目录assets\audio\cassette-manifest.json。
+
+旧版磁带（保留供旧存档兼容）
+
+磁带包装名：小满留下的雨夜
+实际曲目：No.678
+作曲：トーマス大森音楽工房 / Thomas Oomori Music Studio
+原作者页面：https://www.youtube.com/watch?v=7w9WHMd0oM4
+
+提取自本机 Steam 游戏：
+E:\app\steam\steamapps\common\A Night Filled With the Sound of Rain
+audio\bgm\EGThomasOmoriMusicStudio1.ogg_
+
+此曲在原作公共事件2中作为酒吧BGM使用。
+音频时长约182.65秒，保留原始Ogg Vorbis数据，未进行有损转码。
+mod中的文件名：Sounds\rain_bgm.ogg
+《雨夜迷醉时》开发：RetroLab；发行：Kagura Games。
+音乐权利归原作曲者所有。
+
+提取的17份非RPG Maker示例库BGM另存在开发目录 assets\audio\original-bgm。
+其中包括不同编码版本及未直接调用的备用曲目。
+No.678与下载合集Nightfall的解码波形包络比对相关系数约0.9966，按同一曲处理旧存档收藏状态。
+
+磁带外观：本机Probably Stolen的14种原生磁带素材，各曲使用不同的sprite。
+
+正式剧情固定顺序（编号对应实际来访章节）
+01 Title、02 Intro、03 Nightfall、04 Intro2、05 Midnight、06 Latenight、
+07 Diary、08 Gallery1、09 Lost、10 Gallery2、11 Deepnight、12 Outro2、13 Outro、14 Rainysound。
+音频文件及物品ID保持稳定，收藏编号随正式剧情顺序调整。

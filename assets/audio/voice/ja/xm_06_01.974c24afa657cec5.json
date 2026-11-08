@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "70",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.005,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 384288
+  },
+  "sha256": "1c6c087fd61bdaa3bad4ee70458a2030c14153db13184215dfa9d8640fc280d9",
+  "binding": {
+    "key": "xm_06_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好。前两天有个客人说，我调的酒有点甜。",
+      "ja": "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
+      "en": "Good evening. A customer told me the other day that my cocktails were a little sweet."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_06_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "晚上好。前两天有个客人说，我调的酒有点甜。",
+        "ja": "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
+        "en": "晚上好。前两天有个客人说，我调的酒有点甜。"
+      },
+      "generic": false
+    }
+  ]
+}

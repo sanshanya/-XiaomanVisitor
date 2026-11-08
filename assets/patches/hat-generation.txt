@@ -1,0 +1,9 @@
+工具：内置 image_gen（imagegen 技能），透明背景编辑。
+输入：assets/portraits/xiaoman_neutral_0.png，原版340×576透明立绘。
+生成结果：xiaoman_hat_generated.png；只使用其新增帽顶，生成结果中的脸部和身体不用于模组。
+最终素材：xiaoman_hat_crown.png（340×32）。
+生成图注册到原裁切线后，仅裁出上方新增部分，匹配原作的三种帽顶颜色并清理透明边缘。
+其余340×576身体像素继续逐像素使用原素材，18张表情都使用同一个帽顶。
+
+最终提示词：
+Use case: precise-object-edit. Edit target: the attached transparent pixel-art game portrait. Restore ONLY the tiny missing TOP CROWN of the blue beret, which was cut flat by the upper image boundary. Extend the canvas upward by approximately 32 original pixels, leaving transparent breathing room. The existing beret at the old top boundary is 144 pixels wide on a 340 pixel-wide portrait: it needs only a shallow rounded dome about 18-24 original pixels high, not a tall new hat. Continue the existing light blue outer rim/highlight and muted medium blue fill, matching the hard stair-step 2-pixel grid and original palette. The rounded crown must join the two existing sloping sides seamlessly. Preserve the original character's face, eyes, mouth, hair, ribbon, clothes, body proportions, color, and every original pixel below the old upper boundary; no repainting or smoothing of the character. Keep her original height and width; just add the small missing crown and transparent margin above it. Prefer a 340x608 transparent PNG, with the original 340x576 portrait positioned exactly 32 pixels below the new top. Output one single isolated sprite on actual alpha transparency, no backdrop, no checkerboard, no shadow, no labels. Pixel art only, no blur, no antialiasing, no new accessories.

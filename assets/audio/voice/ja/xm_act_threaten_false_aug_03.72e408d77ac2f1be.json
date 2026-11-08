@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "そんなことで脅かさないでください……本当に違うんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "51",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.126,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 294110
+  },
+  "sha256": "7f845be57bddf1924c999385847f4cf55013019b0781bb3da9bdff2fbc2e47b0",
+  "binding": {
+    "key": "xm_act_threaten_false_aug_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "别拿这个吓我……真的不是。",
+      "ja": "そんなことで脅かさないでください……本当に違うんです。",
+      "en": "Don't try to scare me with that... I'm really not."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_threaten_false_aug_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "别拿这个吓我……真的不是。",
+        "ja": "そんなことで脅かさないでください……本当に違うんです。",
+        "en": "别拿这个吓我……真的不是。"
+      },
+      "generic": false
+    }
+  ]
+}

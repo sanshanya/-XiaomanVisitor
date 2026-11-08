@@ -1,0 +1,969 @@
+StoreClientUniqueList：原版埃莉诺相关逻辑摘录
+
+来自当前本机Assembly-CSharp.dll的只读反编译。
+只供阅读，省略了其他成员与上下文，不是可独立编译的模组源码。
+
+	public const int ELEANOR4_CREDITS_GIFT = 50;
+	public const string ELEANOR_SCAV_SPRITE = "eleanor_scav";
+	public const int ELEANOR_SCAV_WHOLESALE = 30;
+	public const int ELEANOR_REV_WEAPON_BUDGET = 350;
+	public const string ELEANOR_CRATE_ID = "luxury_supply_crate";
+	public const string ELEANOR_UNCLE_SPRITE = "maleBM5";
+	public const int ELEANOR_GIFT_PURIFIER_DURABILITY = 175;
+	public const int ELEANOR_GIFT_PERFUME_USES = 5;
+
+// 原始反编译行号 1298，SetupEleanor
+	private static void SetupEleanor(StoreClient storeClient)
+	{
+		storeClient.nonShootable = false;
+		storeClient.forceShootable = true;
+		storeClient.holsterResumesDialogue = true;
+		storeClient.unholsterDialogue = () => new Dialogue().SetText("CLIENT", LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_gun_drawn", "Whoa, you are scaring me..."));
+		storeClient.onShotDead = delegate
+		{
+			PlayerStore.GetStoreClientData().isEleanorDead = true;
+		};
+	}
+
+// 原始反编译行号 1310，EleanorIntro
+	public static StoreClient EleanorIntro()
+	{
+		StoreClient storeClient = new StoreClient();
+		storeClient.identifier = "eleanorIntro";
+		SetupEleanor(storeClient);
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		storeClient.spriteName = SpriteDict.GetUniqueEleanorNormal();
+		StoreClientFactionSetup.InitUpperLevelCitizen(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.BUY;
+		storeClient.clientBuyingTagList.Add("FOOD");
+		storeClient.SetBudget(300);
+		storeClient.SetVariety();
+		storeClient.mainDialogue.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_intro_1")).NextDialogue().SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_intro_2"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_intro_3"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_intro_4"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_intro_5"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_intro_6"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_intro_7"))
+			.SetEndAction(delegate
+			{
+			});
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 1340，Eleanor2
+	public static StoreClient Eleanor2()
+	{
+		StoreClient storeClient = new StoreClient();
+		storeClient.identifier = "eleanor2";
+		SetupEleanor(storeClient);
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		storeClient.spriteName = SpriteDict.GetUniqueEleanorNormal();
+		StoreClientFactionSetup.InitUpperLevelCitizen(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.BUY;
+		storeClient.clientBuyingTagList.Add("HOUSEHOLD_GOOD");
+		storeClient.SetBudget(200);
+		storeClient.mainDialogue.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor2_1")).NextDialogue().SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor2_2"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor2_3"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor2_4"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor2_5"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor2_6"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor2_7"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor2_8"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor2_9"))
+			.SetEndAction(delegate
+			{
+			});
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 1373，Eleanor3
+	public static StoreClient Eleanor3()
+	{
+		StoreClient storeClient = new StoreClient();
+		storeClient.identifier = "eleanor3";
+		SetupEleanor(storeClient);
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		storeClient.spriteName = SpriteDict.GetUniqueEleanorNoJewel();
+		StoreClientFactionSetup.InitUpperLevelCitizen(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.SELL;
+		storeClient.SetWholesale(50);
+		storeClient.isBargainAvailable = false;
+		storeClient.mainDialogue.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor3_1")).NextDialogue().SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor3_2"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor3_3"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor3_no_family", "I don't have any family left."))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor3_4"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor3_5"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor3_6"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor3_7"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor3_8"))
+			.SetEndAction(delegate
+			{
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.Spawn("bottled_water_premium"));
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.Spawn("box_tampon"));
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.Spawn("neuroactive_perfume"));
+			});
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 1409，Eleanor4
+	public static StoreClient Eleanor4()
+	{
+		StoreClient storeClient = new StoreClient
+		{
+			identifier = "eleanor4"
+		};
+		SetupEleanor(storeClient);
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		storeClient.spriteName = SpriteDict.GetUniqueEleanorSad();
+		StoreClientFactionSetup.InitUpperLevelCitizen(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.BUY;
+		storeClient.SetBudget(0);
+		storeClient.isBargainAvailable = false;
+		bool isCreditsGiven = false;
+		Action choiceAction = delegate
+		{
+			if (!isCreditsGiven && PlayerStore.Instance.GetCash() >= 50)
+			{
+				isCreditsGiven = true;
+				PlayerStore.Instance.ModCash(-50);
+				PlayerStore.Instance.storeClientData.eleanorHelpedTimes++;
+			}
+		};
+		Dialogue dialogue = new Dialogue();
+		dialogue.SetText("PLAYER", LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor4_choice_credits", "[Give her {0} Credits]", 50)).NextDialogue().SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_accept"))
+			.SetEndAction(delegate
+			{
+				DialogUIManager.Instance.CurrentClientLeave(0f);
+			});
+		storeClient.mainDialogue.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_1")).NextDialogue().SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_2"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_3"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_4"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_5"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_6"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_7"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_8"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_9"))
+			.SetEndAction(delegate
+			{
+			})
+			.AddChoice(DirectoryMaster.Item("$"), "no choice", "", dialogue, choiceAction, () => PlayerStore.Instance.GetCash() >= 50);
+		storeClient.tradeReputationMultiplier = 2.0;
+		storeClient.acceptDealDialogue = new Dialogue();
+		storeClient.acceptDealDialogue.SetPriority(6);
+		storeClient.acceptDealDialogue.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor4_accept")).SetStartAction(delegate
+		{
+			DialogUIManager.Instance.HideChoiceBubble();
+		}).SetEndAction(delegate
+		{
+			PlayerStore.Instance.storeClientData.eleanorHelpedTimes++;
+			DialogUIManager.Instance.CurrentClientLeave(0f);
+		});
+		storeClient.clientBuyingTagList.Add("FOOD");
+		storeClient.clientBuyingTagList.Add("TREAT");
+		storeClient.clientBuyingTagList.Add("BREVAGE");
+		AddEleanorCrateTrap(storeClient, 4);
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 1476，Eleanor5
+	public static StoreClient Eleanor5()
+	{
+		StoreClient storeClient = new StoreClient();
+		storeClient.identifier = "eleanor5";
+		SetupEleanor(storeClient);
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		storeClient.spriteName = "eleanor_scav";
+		StoreClientFactionSetup.InitUpperLevelCitizen(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.SELL;
+		storeClient.SetWholesale(33);
+		storeClient.isBargainAvailable = false;
+		storeClient.mainDialogue.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_1")).NextDialogue().SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_2"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_3"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_4"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_5"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_6"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_7"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_8"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_9"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_10"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor5_11"))
+			.SetEndAction(delegate
+			{
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.SpawnFromTable("junkTable"));
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.SpawnFromTable("junkTable"));
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.SpawnFromTable("junkTable"));
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.SpawnFromTable("junkTable"));
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.SpawnFromTable("materialTable"));
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.SpawnFromTable("materialTable"));
+				PlayerStore.Instance.AddDirectSellingItemToTable(ItemSpawner.SpawnFromTable("materialTable"));
+			});
+		AddEleanorCrateTrap(storeClient, 5);
+		storeClient.OnDismiss = ClearEleanorCrateHeat;
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 1522，ClearEleanorCrateHeat
+	public static void ClearEleanorCrateHeat()
+	{
+		if (EmporiumEntry.Instance == null)
+		{
+			return;
+		}
+		foreach (GameItem allItem in EmporiumEntry.Instance.GetAllItems())
+		{
+			if (allItem.identifier == "luxury_supply_crate")
+			{
+				StolenHelper.RemoveStolenStatus(allItem);
+			}
+		}
+	}
+
+// 原始反编译行号 1537，Eleanor6
+	public static StoreClient Eleanor6()
+	{
+		StoreClient storeClient = CreateEleanorSeller("eleanor6");
+		string displayName = storeClient.displayName;
+		storeClient.mainDialogue.SetStartAction(delegate
+		{
+			StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+			if (storeClientData.eleanorPlanDay < 0)
+			{
+				storeClientData.eleanorPlanDay = StoreStation.Instance.dayCounter;
+			}
+		}).SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor6_1")).NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor6_2"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor6_3"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor6_4", 800))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor6_5"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor6_6"))
+			.SetEndAction(StoreClientList.AddScavGeneralStock);
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 1563，EleanorScav
+	public static StoreClient EleanorScav()
+	{
+		StoreClient storeClient = CreateEleanorSeller("eleanorScav");
+		string displayName = storeClient.displayName;
+		storeClient.mainDialogue.SetStartAction(delegate
+		{
+			PlayerStore.Instance.storeClientData.eleanorScavLastDay = StoreStation.Instance.dayCounter;
+		}).SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_scav_1")).NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_scav_2", StoreClientData.GetEleanorSavingsRemaining()))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_scav_3"))
+			.SetEndAction(StoreClientList.AddScavGeneralStock);
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 1579，Eleanor7
+	public static StoreClient Eleanor7()
+	{
+		StoreClient obj = new StoreClient
+		{
+			identifier = "eleanor7"
+		};
+		SetupEleanor(obj);
+		obj.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		obj.spriteName = "eleanor_scav";
+		StoreClientFactionSetup.InitUpperLevelCitizen(obj);
+		obj.clientIntent = StoreClient.ClientIntent.DIALOGUE;
+		obj.dismissable = false;
+		string displayName = obj.displayName;
+		obj.mainDialogue.SetStartAction(delegate
+		{
+			StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+			if (storeClientData.eleanorDriveVisitDay < 0)
+			{
+				storeClientData.eleanorDriveVisitDay = StoreStation.Instance.dayCounter;
+			}
+		}).SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_1")).NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_2"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_3"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_4"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_5"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_6"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_7"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_8"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_9"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_10"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_11"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_12"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor7_13"))
+			.SetEndAction(delegate
+			{
+				PlayerStore.Instance.DismissCurrentClient(callNextWhenPossible: false);
+			});
+		obj.AddBasicDialog();
+		obj.CompleteClientCreation();
+		return obj;
+	}
+
+// 原始反编译行号 1632，CreateEleanorThreat
+	public static StoreClient CreateEleanorThreat()
+	{
+		StoreClient storeClient = new StoreClient();
+		storeClient.identifier = "eleanorThreat";
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_black_market_thug");
+		storeClient.spriteName = "maleBM5";
+		StoreClientFactionSetup.InitBlackMarket(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.DIALOGUE;
+		storeClient.dismissable = false;
+		storeClient.arrestable = false;
+		storeClient.nonShootable = true;
+		string displayName = storeClient.displayName;
+		storeClient.mainDialogue.SetStartAction(delegate
+		{
+			StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+			if (storeClientData.eleanorThreatVisitDay < 0)
+			{
+				storeClientData.eleanorThreatVisitDay = StoreStation.Instance.dayCounter;
+			}
+		}).SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_threat_1")).NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_threat_2"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_threat_3"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_threat_4"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_threat_5", 300))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_threat_6"))
+			.SetEndAction(delegate
+			{
+				PlayerStore.Instance.DismissCurrentClient(callNextWhenPossible: false);
+			});
+		storeClient.AddBasicDialog();
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 1670，Eleanor8
+	public static StoreClient Eleanor8()
+	{
+		StoreClient obj = new StoreClient
+		{
+			identifier = "eleanor8"
+		};
+		SetupEleanor(obj);
+		obj.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		obj.spriteName = "eleanor_scav";
+		StoreClientFactionSetup.InitUpperLevelCitizen(obj);
+		obj.clientIntent = StoreClient.ClientIntent.DIALOGUE;
+		obj.dismissable = false;
+		string displayName = obj.displayName;
+		Action<int> choose = delegate(int choice)
+		{
+			StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+			if (storeClientData.eleanorDriveChoice == 0)
+			{
+				storeClientData.eleanorDriveChoice = choice;
+				storeClientData.eleanorChoiceDay = StoreStation.Instance.dayCounter;
+			}
+		};
+		Dialogue dialogue = new Dialogue();
+		dialogue.SetText("PLAYER", LocHelper.GetLocalizedDialogue("dialog_eleanor8_choice_return")).NextDialogue().SetStartAction(delegate
+		{
+			choose(1);
+		})
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor8_return_1"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor8_return_2"))
+			.SetEndAction(delegate
+			{
+				PlayerStore.Instance.DismissCurrentClient(callNextWhenPossible: false);
+				PlayerStore.Instance.ModCash(300);
+				StoreUIManager.Instance.Notify(LocHelper.GetLocalizedMechanic("mech_notify_eleanor_drive_bounty", 300));
+			});
+		Dialogue dialogue2 = new Dialogue();
+		dialogue2.SetText("PLAYER", LocHelper.GetLocalizedDialogue("dialog_eleanor8_choice_leak")).NextDialogue().SetStartAction(delegate
+		{
+			bool num = PlayerStore.Instance.storeClientData.eleanorDriveChoice == 0;
+			choose(2);
+			if (num)
+			{
+				StoreStation.Instance.storeEventManager.QueueFuturEvent(EventListUnique.CreateEleanorLeakNews(), 1, IsKnown: false);
+			}
+		})
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor8_leak_1"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor8_leak_2"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor8_leak_3"))
+			.SetEndAction(delegate
+			{
+				PlayerStore.Instance.DismissCurrentClient(callNextWhenPossible: false);
+			});
+		Dialogue dialogue3 = new Dialogue();
+		dialogue3.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor8_4")).AddChoice(DirectoryMaster.Item("yes"), "", "", dialogue, delegate
+		{
+		}).AddChoice(DirectoryMaster.Item("yes"), "", "", dialogue2, delegate
+		{
+		});
+		obj.mainDialogue.SetText("PLAYER", LocHelper.GetLocalizedDialogue("dialog_eleanor8_player")).NextDialogue().SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor8_1"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor8_2"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor8_3"))
+			.SetNextDialogue(dialogue3);
+		obj.AddBasicDialog();
+		obj.CompleteClientCreation();
+		return obj;
+	}
+
+// 原始反编译行号 1742，Eleanor9
+	public static StoreClient Eleanor9()
+	{
+		StoreClient storeClient = new StoreClient();
+		bool num = PlayerStore.Instance.storeClientData.eleanorDriveChoice == 2;
+		storeClient.identifier = "eleanor9";
+		SetupEleanor(storeClient);
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		string name = storeClient.displayName;
+		Action startAction = delegate
+		{
+			StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+			if (storeClientData.eleanorConclusionDay < 0)
+			{
+				storeClientData.eleanorConclusionDay = StoreStation.Instance.dayCounter;
+			}
+		};
+		bool isGiven = false;
+		Action startAction2 = delegate
+		{
+			if (!isGiven)
+			{
+				isGiven = true;
+				GameItem gameItem = ItemFeatureHelper.SetSecondHand(DirectoryMaster.Item("self_refilling_neuroactive_perfume"));
+				PlayerStore.Instance.AddDirectSellingItemToTableMiddle(gameItem, isOwend: true);
+			}
+		};
+		if (!num)
+		{
+			storeClient.spriteName = "eleanor_scav";
+			StoreClientFactionSetup.InitUpperLevelCitizen(storeClient);
+			storeClient.clientIntent = StoreClient.ClientIntent.DIALOGUE;
+			storeClient.dismissable = false;
+			storeClient.mainDialogue.SetStartAction(startAction).SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_free_1")).NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_free_2"))
+				.NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_free_3"))
+				.NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_thanks"))
+				.NextDialogue()
+				.SetStartAction(startAction2)
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_free_gift"))
+				.NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_free_gift_2"))
+				.NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_free_bye"))
+				.NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_farewell_1"))
+				.NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_farewell_2"))
+				.NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_farewell_3"))
+				.SetEndAction(delegate
+				{
+					PlayerStore.Instance.DismissCurrentClient(callNextWhenPossible: false);
+				});
+			storeClient.AddBasicDialog();
+			storeClient.CompleteClientCreation();
+			return storeClient;
+		}
+		storeClient.spriteName = "eleanor_rev";
+		StoreClientFactionSetup.InitRev(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.BUY;
+		storeClient.clientBuyingTagList.Add("WEAPON");
+		storeClient.SetBudget(350);
+		storeClient.dismissable = false;
+		storeClient.mainDialogue.SetStartAction(startAction).SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_rev_1")).NextDialogue()
+			.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_rev_2"))
+			.NextDialogue()
+			.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_rev_3"))
+			.NextDialogue()
+			.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_thanks"))
+			.NextDialogue()
+			.SetStartAction(startAction2)
+			.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_rev_gift"))
+			.NextDialogue()
+			.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_rev_gun"))
+			.SetEndAction(delegate
+			{
+				storeClient.dismissable = true;
+			});
+		bool isFarewellStarted = false;
+		Func<Dialogue> createFarewell = delegate
+		{
+			Dialogue dialogue2 = new Dialogue();
+			dialogue2.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_rev_bye")).SetStartAction(delegate
+			{
+				isFarewellStarted = true;
+				storeClient.tryInterceptDismiss = null;
+				storeClient.dismissable = false;
+				DialogUIManager.Instance.HideChoiceBubble();
+			}).NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_farewell_1"))
+				.NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_farewell_2"))
+				.NextDialogue()
+				.SetText(name, LocHelper.GetLocalizedDialogue("dialog_eleanor9_farewell_3"))
+				.SetEndAction(delegate
+				{
+					if (PlayerStore.Instance.currentClientInstance != null && PlayerStore.Instance.currentClientInstance.GetClientBlueprint() == storeClient)
+					{
+						PlayerStore.Instance.DismissCurrentClient(callNextWhenPossible: false);
+					}
+				});
+			return dialogue2;
+		};
+		storeClient.tryInterceptDismiss = delegate
+		{
+			if (isFarewellStarted)
+			{
+				return false;
+			}
+			Dialogue dialogue = createFarewell();
+			dialogue.SetPriority(7);
+			return DialogUIManager.Instance.StartDialogue(dialogue);
+		};
+		storeClient.AddBasicDialog();
+		storeClient.allDoneDialogue = createFarewell();
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 1863，CreateEleanorSeller
+	private static StoreClient CreateEleanorSeller(string identifier)
+	{
+		StoreClient storeClient = new StoreClient();
+		storeClient.identifier = identifier;
+		SetupEleanor(storeClient);
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		storeClient.spriteName = "eleanor_scav";
+		StoreClientFactionSetup.InitUpperLevelCitizen(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.SELL;
+		storeClient.SetWholesale(30);
+		storeClient.staysAfterFailedBargain = true;
+		bool isEnoughThisDeal = false;
+		int paidThisDeal = 0;
+		storeClient.onItemSold = delegate(GameItem item, int paid)
+		{
+			StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+			bool flag2 = storeClientData.eleanorSavings < 800;
+			storeClientData.eleanorSavings += Mathf.Max(0, paid);
+			paidThisDeal += Mathf.Max(0, paid);
+			if (flag2 && storeClientData.eleanorSavings >= 800)
+			{
+				isEnoughThisDeal = true;
+				storeClientData.eleanorSavingsDoneDay = StoreStation.Instance.dayCounter;
+			}
+		};
+		storeClient.onDealAccepted = delegate
+		{
+			bool flag = paidThisDeal > 0;
+			paidThisDeal = 0;
+			if (!isEnoughThisDeal)
+			{
+				if (flag && PlayerStore.Instance.storeClientData.eleanorSavings < 800 && (PlayerStore.Instance.currentClientInstance == null || !StoreClientInstance.IsClientBusinessDone(PlayerStore.Instance.currentClientInstance)))
+				{
+					Dialogue dialogue = new Dialogue();
+					dialogue.SetPriority(7);
+					dialogue.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor6_to_go", StoreClientData.GetEleanorSavingsRemaining()));
+					DialogUIManager.Instance.StartDialogue(dialogue, forcedStart: true);
+				}
+			}
+			else
+			{
+				isEnoughThisDeal = false;
+				Dialogue dialogue2 = new Dialogue();
+				dialogue2.SetPriority(7);
+				dialogue2.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_scav_enough_1")).NextDialogue().SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_scav_enough_2"));
+				DialogUIManager.Instance.StartDialogue(dialogue2, forcedStart: true);
+			}
+		};
+		storeClient.AddBasicDialog();
+		Dialogue allDone = new Dialogue();
+		allDone.SetPriority(4);
+		allDone.SetText(storeClient.displayName, EleanorAllDoneLine());
+		allDone.SetStartAction(delegate
+		{
+			allDone.SetText(storeClient.displayName, EleanorAllDoneLine());
+		});
+		allDone.SetEndAction(delegate
+		{
+			PlayerStore.Instance.DismissCurrentClient(callNextWhenPossible: false);
+		});
+		storeClient.allDoneDialogue = allDone;
+		return storeClient;
+	}
+
+// 原始反编译行号 1927，EleanorAllDoneLine
+	private static string EleanorAllDoneLine()
+	{
+		if (PlayerStore.Instance.storeClientData.eleanorSavings >= 800)
+		{
+			return StoreClientDialogList.GetRandomDialogDoneString();
+		}
+		return LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_scav_all_done", "That's all I have today. {0} more Credits and I can hire the investigator.", StoreClientData.GetEleanorSavingsRemaining());
+	}
+
+// 原始反编译行号 1936，CreateEleanorUncle
+	public static StoreClient CreateEleanorUncle()
+	{
+		StoreClient storeClient = new StoreClient();
+		storeClient.identifier = "eleanorUncle";
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_eleanor_uncle");
+		storeClient.spriteName = "maleBM5";
+		StoreClientFactionSetup.InitBlackMarket(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.SELL;
+		storeClient.isBargainAvailable = false;
+		storeClient.nonShootable = true;
+		storeClient.dismissable = false;
+		storeClient.arrestable = false;
+		storeClient.reportDegradesFaction = false;
+		GameItem crate = null;
+		Action action = delegate
+		{
+			if (crate == null)
+			{
+				crate = DirectoryMaster.Item("luxury_supply_crate");
+				crate.AddItemFeature(ItemFeatureList.FreeFeature());
+				PlayerStore.Instance.AddDirectSellingItemToTableMiddle(crate);
+				storeClient.arrestable = true;
+			}
+		};
+		storeClient.mainDialogue.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_1")).NextDialogue().SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_2"))
+			.SetEndAction(action)
+			.NextDialogue()
+			.SetStartAction(action)
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_3"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_4"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_5"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_6"))
+			.NextDialogue()
+			.SetText(storeClient.displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_7"))
+			.SetEndAction(delegate
+			{
+				storeClient.dismissable = true;
+			});
+		storeClient.onDealAccepted = delegate
+		{
+			storeClient.dismissable = true;
+			if (crate != null && crate.parentInventory != null)
+			{
+				crate.RemoveItemFeatureByID("free");
+			}
+		};
+		storeClient.onReportAction = delegate
+		{
+			if (crate != null && crate.parentInventory != null && GeneralHelper.IsItemOwned(crate))
+			{
+				if (EmporiumEntry.Instance.frontInvinvElement.childItems.Contains(crate) || EmporiumEntry.Instance.backInvinvElement.childItems.Contains(crate))
+				{
+					GeneralHelper.SetItemOwned(crate, own: false);
+				}
+				else
+				{
+					PlayerStore.Instance.AddDirectSellingItemToTableMiddle(crate);
+				}
+			}
+		};
+		storeClient.onCaptureAction = delegate
+		{
+			storeClient.displayName = LocHelper.GetLocalizedClientName("name_black_market_thug");
+			PlayerStore.Instance.storeClientData.eleanorUncleReported = true;
+		};
+		storeClient.customOnArrestDialogue = new Dialogue();
+		storeClient.customOnArrestDialogue.SetText("SEC", LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_arrest_sec_1")).NextDialogue().SetText("CLIENT", LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_arrest_client_1"))
+			.NextDialogue()
+			.SetText("SEC", LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_arrest_sec_2"))
+			.NextDialogue()
+			.SetText("CLIENT", LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_arrest_client_2"))
+			.NextDialogue()
+			.SetText("SEC", LocHelper.GetLocalizedDialogue("dialog_eleanor_uncle_arrest_sec_3"))
+			.SetEndAction(delegate
+			{
+				if (crate != null && crate.parentInventory != null && !GeneralHelper.IsItemOwned(crate))
+				{
+					crate.Destroy();
+				}
+				StoreUIManager.Instance.OnArrestDialoguePlayed();
+			});
+		storeClient.AddBasicDialog();
+		storeClient.allDoneDialogue = new Dialogue();
+		storeClient.allDoneDialogue.priority = 4;
+		storeClient.allDoneDialogue.SetText(storeClient.displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_uncle_handed", "Good. Her hands, not yours. I'll know."));
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 2028，EleanorWarned
+	public static StoreClient EleanorWarned()
+	{
+		StoreClient storeClient = new StoreClient();
+		storeClient.identifier = "eleanorWarned";
+		SetupEleanor(storeClient);
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		storeClient.spriteName = SpriteDict.GetUniqueEleanorNoJewel();
+		StoreClientFactionSetup.InitUpperLevelCitizen(storeClient);
+		string displayName = storeClient.displayName;
+		BarterOffer barterOffer = BarterOfferList.CreateFreeRewardChoice(LocHelper.GetLocalizedUI("ui_eleanor_reward_body"), delegate
+		{
+			GameItem gameItem2 = DirectoryMaster.Item("portable_water_purifier");
+			DurabilityHelper.SetDurability(gameItem2, 175, DurabilityHelper.GetMaxDurability(gameItem2), DurabilityHelper.GetMaxDurability(gameItem2));
+			PlayerStore.Instance.AddDirectSellingItemToTableMiddle(gameItem2);
+		}, delegate
+		{
+			GameItem gameItem = DirectoryMaster.Item("pheromone_perfume");
+			UseCountHelper.SetCurrentUseCount(gameItem, 5);
+			PlayerStore.Instance.AddDirectSellingItemToTableMiddle(gameItem);
+		});
+		storeClient.SetBarterOffer(barterOffer);
+		Dialogue dialogue = new Dialogue();
+		storeClient.mainDialogue.SetStartAction(delegate
+		{
+			StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+			if (storeClientData.eleanorWarnedDay < 0)
+			{
+				storeClientData.eleanorWarnedDay = StoreStation.Instance.dayCounter;
+			}
+		}).SetText("PLAYER", LocHelper.GetLocalizedDialogue("dialog_eleanor_warned_player")).NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_warned_1"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_warned_2"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_warned_3"))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_warned_4"))
+			.SetNextDialogue(dialogue);
+		dialogue.SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_warned_5")).SetEndAction(delegate
+		{
+			storeClient.barterOffer.InstanciateOffer();
+		});
+		storeClient.repeatDialogue = dialogue;
+		storeClient.CompleteClientCreation();
+		storeClient.acceptDealDialogue = new Dialogue().SetText(displayName, LocHelper.GetLocalizedDialogue("dialog_eleanor_warned_leave")).SetEndAction(delegate
+		{
+			DialogUIManager.Instance.CurrentClientLeave();
+		});
+		return storeClient;
+	}
+
+// 原始反编译行号 2079，AddEleanorCrateTrap
+	private static void AddEleanorCrateTrap(StoreClient eleanor, int visit)
+	{
+		bool isSprung = false;
+		StoreClient storeClient = eleanor;
+		storeClient.onItemAddedToCounters = (Action<GameItem>)Delegate.Combine(storeClient.onItemAddedToCounters, (Action<GameItem>)delegate(GameItem item)
+		{
+			if (!isSprung && item != null && !(item.identifier != "luxury_supply_crate") && GeneralHelper.IsItemOwned(item))
+			{
+				isSprung = true;
+				DialogUIManager.Instance.StartCoroutine(MetaHelper.WaitAndDo(0.3f, delegate
+				{
+					bool num = PlayerStore.Instance.currentClientInstance != null && PlayerStore.Instance.currentClientInstance.GetClientBlueprint() == eleanor;
+					bool flag = EmporiumEntry.Instance.backInvinvElement.childItems.Contains(item) || EmporiumEntry.Instance.frontInvinvElement.childItems.Contains(item);
+					if (!num || !flag)
+					{
+						isSprung = false;
+					}
+					else
+					{
+						GeneralHelper.SetItemOwned(item, own: false);
+						eleanor.customOnArrestDialogue = CreateEleanorArrest(item);
+						if (PlayerStore.Instance.ArrestCurrentClientForStolenGoods())
+						{
+							StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+							storeClientData.eleanorArrested = true;
+							storeClientData.eleanorArrestDay = StoreStation.Instance.dayCounter;
+							storeClientData.eleanorArrestVisit = visit;
+						}
+						else
+						{
+							GeneralHelper.SetItemOwned(item);
+							eleanor.customOnArrestDialogue = null;
+							isSprung = false;
+						}
+					}
+				}));
+			}
+		});
+	}
+
+// 原始反编译行号 2119，CreateEleanorArrest
+	private static Dialogue CreateEleanorArrest(GameItem crate)
+	{
+		Dialogue dialogue = new Dialogue();
+		dialogue.SetText("SEC", LocHelper.GetLocalizedDialogue("dialog_eleanor_arrest_sec_1")).NextDialogue().SetText("CLIENT", LocHelper.GetLocalizedDialogue("dialog_eleanor_arrest_client_1"))
+			.NextDialogue()
+			.SetText("SEC", LocHelper.GetLocalizedDialogue("dialog_eleanor_arrest_sec_2"))
+			.NextDialogue()
+			.SetText("CLIENT", LocHelper.GetLocalizedDialogue("dialog_eleanor_arrest_client_2"))
+			.SetEndAction(delegate
+			{
+				if (crate != null && crate.parentInventory != null)
+				{
+					crate.Destroy();
+				}
+				StoreUIManager.Instance.OnArrestDialoguePlayed();
+			});
+		return dialogue;
+	}
+
+// 原始反编译行号 2138，CreateEleanorBailOfficer
+	public static StoreClient CreateEleanorBailOfficer()
+	{
+		StoreClient storeClient = new StoreClient();
+		storeClient.identifier = "eleanorBailOfficer";
+		storeClient.displayName = LocHelper.GetLocalizedClientName("name_security_officer");
+		storeClient.spriteName = SpriteDict.GetRandomSecSpriteName();
+		StoreClientFactionSetup.InitSecurity(storeClient);
+		storeClient.clientIntent = StoreClient.ClientIntent.DIALOGUE;
+		storeClient.dismissable = false;
+		storeClient.arrestable = false;
+		storeClient.nonShootable = true;
+		string displayName = storeClient.displayName;
+		Action endAction = delegate
+		{
+			DialogUIManager.Instance.CurrentClientLeave();
+		};
+		Action<int> choose = delegate(int choice)
+		{
+			StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+			if (storeClientData.eleanorBailChoice == 0)
+			{
+				storeClientData.eleanorBailChoice = choice;
+				storeClientData.eleanorBailDay = StoreStation.Instance.dayCounter;
+			}
+		};
+		Action choiceAction = delegate
+		{
+			if (PlayerStore.Instance.storeClientData.eleanorBailChoice == 0 && PlayerStore.Instance.GetCash() >= 500)
+			{
+				PlayerStore.Instance.ModCash(-500);
+				choose(1);
+			}
+		};
+		Dialogue dialogue = new Dialogue();
+		dialogue.SetText("PLAYER", LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_bail_choice_pay", "[Pay her bail ({0} Credits)]", 500)).NextDialogue().SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_bail_paid", "Paid in full. She'll be out by tomorrow."))
+			.SetEndAction(endAction);
+		Dialogue dialogue2 = new Dialogue();
+		dialogue2.SetText("PLAYER", LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_bail_choice_vouch", "[Vouch for her ({0} Security rep+)]", 40)).NextDialogue().SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_bail_vouched", "Ok, you've done a few favors for us. We will let this slide."))
+			.SetEndAction(endAction);
+		Dialogue dialogue3 = new Dialogue();
+		dialogue3.SetText("PLAYER", LocHelper.GetLocalizedDialogue("dialog_georgio_loan_choice_decline")).NextDialogue().SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_bail_declined", "Suit yourself. She stays where she is."))
+			.SetEndAction(endAction);
+		storeClient.mainDialogue.SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_bail_1", "Shopkeeper. A word about the girl we picked up here, Eleanor.")).NextDialogue().SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_bail_2", "She swears someone set her up. She says you might be willing to post her bail."))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_bail_3", "Bail is set at {0} Credits.", 500))
+			.AddChoice(DirectoryMaster.Item("$"), "no choice", "", dialogue, choiceAction, () => PlayerStore.Instance.GetCash() >= 500)
+			.AddChoice(DirectoryMaster.Item("$"), "no choice", "", dialogue2, delegate
+			{
+				choose(2);
+			}, () => StoreReputation.GetSecReputation() >= 40)
+			.AddChoice(DirectoryMaster.Item("$"), "no choice", "", dialogue3, delegate
+			{
+				choose(3);
+			});
+		storeClient.CompleteClientCreation();
+		return storeClient;
+	}
+
+// 原始反编译行号 2196，EleanorFreed
+	public static StoreClient EleanorFreed()
+	{
+		StoreClient obj = new StoreClient
+		{
+			identifier = "eleanorFreed"
+		};
+		SetupEleanor(obj);
+		obj.displayName = LocHelper.GetLocalizedClientName("name_eleanor");
+		obj.spriteName = SpriteDict.GetUniqueEleanorSad();
+		StoreClientFactionSetup.InitUpperLevelCitizen(obj);
+		obj.clientIntent = StoreClient.ClientIntent.DIALOGUE;
+		obj.dismissable = false;
+		obj.arrestable = false;
+		string displayName = obj.displayName;
+		obj.mainDialogue.SetStartAction(delegate
+		{
+			StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+			if (storeClientData.eleanorFreedVisitDay < 0)
+			{
+				storeClientData.eleanorFreedVisitDay = StoreStation.Instance.dayCounter;
+				storeClientData.eleanorArrested = false;
+				storeClientData.eleanorHelpedTimes++;
+			}
+		}).SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_freed_1", "Security let me go. They said it was thanks to you.")).NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_freed_2", "That crate wasn't mine and I don't have an uncle."))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_freed_3", "Someone wanted me behind bars, just like my mother."))
+			.NextDialogue()
+			.SetText(displayName, LocHelper.GetLocalizedOrDefault("Dialogue", "dialog_eleanor_freed_4", "I won't forget this. Thank you."))
+			.SetEndAction(delegate
+			{
+				DialogUIManager.Instance.CurrentClientLeave();
+			});
+		obj.CompleteClientCreation();
+		return obj;
+	}

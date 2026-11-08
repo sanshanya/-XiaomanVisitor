@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今度は友達も一緒で。[chuckles] 二人とも、わたしの名前を覚えてたんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "70",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.418,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 404114
+  },
+  "sha256": "c1102b3d5caefabf01b07a44b15d92a430b70d61dd666a03f5abf39b1f38aec3",
+  "binding": {
+    "key": "xm_10_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "她还带了朋友。两个人居然都记得我的名字。",
+      "ja": "今度は友達も一緒で。二人とも、わたしの名前を覚えてたんですよ。",
+      "en": "She brought a friend along. Both of them even remembered my name."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_10_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "她还带了朋友。两个人居然都记得我的名字。",
+        "ja": "今度は友達も一緒で。二人とも、わたしの名前を覚えてたんですよ。",
+        "en": "她还带了朋友。两个人居然都记得我的名字。"
+      },
+      "generic": false
+    }
+  ]
+}

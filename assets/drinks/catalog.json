@@ -1,0 +1,86 @@
+[
+  {
+    "number": 1,
+    "name_zh": "鲸鱼之梦",
+    "name_en": "The Dream of a Whale",
+    "detail": "original/cocktail/detail_01.png",
+    "source_size": [
+      1024,
+      576
+    ],
+    "detail_has_transparency": false,
+    "cutin_frames_in_source": 15,
+    "motif": "海洋、鲸鱼、蓝色光点",
+    "suggested_mod_use": "酒吧招牌或初次到访纪念"
+  },
+  {
+    "number": 2,
+    "name_zh": "蔚蓝日落",
+    "name_en": "Sunset in Blue",
+    "detail": "original/cocktail/detail_02.png",
+    "source_size": [
+      1024,
+      576
+    ],
+    "detail_has_transparency": false,
+    "cutin_frames_in_source": 15,
+    "motif": "蓝紫渐变与夕阳",
+    "suggested_mod_use": "日常特调；杯脚缩小后需保留"
+  },
+  {
+    "number": 3,
+    "name_zh": "幸运青鸟",
+    "name_en": "The Bluebird of Happiness",
+    "detail": "original/cocktail/detail_03.png",
+    "source_size": [
+      1024,
+      576
+    ],
+    "detail_has_transparency": false,
+    "cutin_frames_in_source": 15,
+    "motif": "鸟形杯口与心形装饰",
+    "suggested_mod_use": "感情剧情中的限定饮品"
+  },
+  {
+    "number": 4,
+    "name_zh": "宇宙空间",
+    "name_en": "Cosmo Zone",
+    "detail": "original/cocktail/detail_04.png",
+    "source_size": [
+      1024,
+      576
+    ],
+    "detail_has_transparency": false,
+    "cutin_frames_in_source": 15,
+    "motif": "星空、行星与深蓝色",
+    "suggested_mod_use": "优先推荐：契合赛博深空的宇宙意象"
+  },
+  {
+    "number": 5,
+    "name_zh": "放晴天空",
+    "name_en": "Sky After Rain",
+    "detail": "original/cocktail/detail_05.png",
+    "source_size": [
+      1024,
+      576
+    ],
+    "detail_has_transparency": false,
+    "cutin_frames_in_source": 15,
+    "motif": "彩虹与雨后的天空",
+    "suggested_mod_use": "剧情转折或雨后主题饮品"
+  },
+  {
+    "number": 6,
+    "name_zh": "青色雨幕",
+    "name_en": "Rainy Blue",
+    "detail": "original/cocktail/detail_06.png",
+    "source_size": [
+      1024,
+      576
+    ],
+    "detail_has_transparency": false,
+    "cutin_frames_in_source": 15,
+    "motif": "雨伞、水纹与蓝色雨夜",
+    "suggested_mod_use": "优先推荐：契合小满的雨夜主题"
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "source": "C:\\Users\\sansm\\Downloads\\8cba20ca-af66-4031-b20e-91012ee47de6.png",
+  "packaged": "Textures/Paper/xiaoman_letter_paper.png",
+  "sha256": "1f934025268d03ec6dcffa238953ed6e9361d4277668e50847012bfa7e7719e4",
+  "sprite": "sansm.xiaoman.visitor:xiaoman_letter_paper",
+  "pixel_width": 1122,
+  "pixel_height": 1402,
+  "design_width": 314,
+  "design_height": 392.3600713012478,
+  "display_width": 628,
+  "display_height": 784.7201426024956,
+  "ink_color": "#1B304A",
+  "body_font_size": 9
+}

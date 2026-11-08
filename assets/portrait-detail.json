@@ -1,0 +1,190 @@
+{
+  "packaged": "Portraits/xiaoman_atlas_hd.png",
+  "sha256": "6ba7596e421a37ff926d07dafbeab1ff55294757ab84132c39018b306b25e0a3",
+  "bytes": 551273,
+  "size": [
+    2304,
+    2064
+  ],
+  "frame": [
+    384,
+    688
+  ],
+  "scale": 4,
+  "columns": 6,
+  "rows": 3,
+  "source_frame": [
+    340,
+    608
+  ],
+  "resize": "premultiplied-alpha bilinear from approved original composites",
+  "sharpening": false,
+  "appearance": "natural edges and softer dithering",
+  "lazy_load": true,
+  "viewport_height_above": 1080,
+  "world_geometry_unchanged": true,
+  "frames": [
+    {
+      "index": 0,
+      "file": "xiaoman_neutral_0.png",
+      "mood": "neutral",
+      "mouth": 0,
+      "source_sha256": "81986ab60e60b39bc041724f30c0aa96178ed48dc6ae5976bc6df37431ced652",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "index": 1,
+      "file": "xiaoman_neutral_1.png",
+      "mood": "neutral",
+      "mouth": 1,
+      "source_sha256": "1049fb98bef3e421e96135dfd369f6e09aa084238788c0bbf31f91b16332bad8",
+      "x": 384,
+      "y": 0
+    },
+    {
+      "index": 2,
+      "file": "xiaoman_neutral_2.png",
+      "mood": "neutral",
+      "mouth": 2,
+      "source_sha256": "ae50f147c22f939181ccbf92a3f269a0fd21e557bc8f335a70b6908eeac59c33",
+      "x": 768,
+      "y": 0
+    },
+    {
+      "index": 3,
+      "file": "xiaoman_soft_0.png",
+      "mood": "soft",
+      "mouth": 0,
+      "source_sha256": "a45228ad9a1cc81bea2879ec4983b99e6cbaef711e4d717845542ca90d8d6706",
+      "x": 1152,
+      "y": 0
+    },
+    {
+      "index": 4,
+      "file": "xiaoman_soft_1.png",
+      "mood": "soft",
+      "mouth": 1,
+      "source_sha256": "b2591cee135c3b555d35b4f049e87bef7a3ab6f761be6a2b24b985e5ee3c2c78",
+      "x": 1536,
+      "y": 0
+    },
+    {
+      "index": 5,
+      "file": "xiaoman_soft_2.png",
+      "mood": "soft",
+      "mouth": 2,
+      "source_sha256": "0e8370f07ebaff0cfd5cb4638f10f5eee6a6c91431c1b319fb7b433f7ae51eb9",
+      "x": 1920,
+      "y": 0
+    },
+    {
+      "index": 6,
+      "file": "xiaoman_closed_0.png",
+      "mood": "closed",
+      "mouth": 0,
+      "source_sha256": "8c3e39f5c01e2a1597500de1c6063bd8adf2df4bb84cc97b8c640ae458588f02",
+      "x": 0,
+      "y": 688
+    },
+    {
+      "index": 7,
+      "file": "xiaoman_closed_1.png",
+      "mood": "closed",
+      "mouth": 1,
+      "source_sha256": "6c53073cb284a7368fd6222d59ae9a92cb2c44dfbe9fe066f2aa98fa484eb447",
+      "x": 384,
+      "y": 688
+    },
+    {
+      "index": 8,
+      "file": "xiaoman_closed_2.png",
+      "mood": "closed",
+      "mouth": 2,
+      "source_sha256": "d61d25e0f50d12549daee5552d7503452fc3769d581a58329d936bc04e0c7727",
+      "x": 768,
+      "y": 688
+    },
+    {
+      "index": 9,
+      "file": "xiaoman_smile_0.png",
+      "mood": "smile",
+      "mouth": 0,
+      "source_sha256": "183a618a59c938fd2714fb308ddf38eb0f3b21a996a5b11349c2b8bb34e74e78",
+      "x": 1152,
+      "y": 688
+    },
+    {
+      "index": 10,
+      "file": "xiaoman_smile_1.png",
+      "mood": "smile",
+      "mouth": 1,
+      "source_sha256": "9c3865aee8a12611420a0538b78cc6e72a98ba2678f1a1b17fa7fcce8ac86ad9",
+      "x": 1536,
+      "y": 688
+    },
+    {
+      "index": 11,
+      "file": "xiaoman_smile_2.png",
+      "mood": "smile",
+      "mouth": 2,
+      "source_sha256": "608537de4471910037f21c092c73d9419e75b0655c09fd328ad24dedcb404ccf",
+      "x": 1920,
+      "y": 688
+    },
+    {
+      "index": 12,
+      "file": "xiaoman_shy_0.png",
+      "mood": "shy",
+      "mouth": 0,
+      "source_sha256": "1b374cb29758260b130871892642330646e8120e79c205e87910a8ab9f747019",
+      "x": 0,
+      "y": 1376
+    },
+    {
+      "index": 13,
+      "file": "xiaoman_shy_1.png",
+      "mood": "shy",
+      "mouth": 1,
+      "source_sha256": "d13daafdb15ae79ed0a7b0c5182c3459a1f34562f77f02e53f327223c46c8142",
+      "x": 384,
+      "y": 1376
+    },
+    {
+      "index": 14,
+      "file": "xiaoman_shy_2.png",
+      "mood": "shy",
+      "mouth": 2,
+      "source_sha256": "887e31f95c9258cf7a3020c8b1a483071e53217eb57a18fce20376d55219cb3b",
+      "x": 768,
+      "y": 1376
+    },
+    {
+      "index": 15,
+      "file": "xiaoman_worried_0.png",
+      "mood": "worried",
+      "mouth": 0,
+      "source_sha256": "ad05d03c572cb47d135e2d13116ddaa2d7c4c6f92f04a9d4aa4f1c1b0a116a3b",
+      "x": 1152,
+      "y": 1376
+    },
+    {
+      "index": 16,
+      "file": "xiaoman_worried_1.png",
+      "mood": "worried",
+      "mouth": 1,
+      "source_sha256": "d9b4b52d23fc7c260003ea26d1218fc80bf42e2b3e9efe634dd24970575c598e",
+      "x": 1536,
+      "y": 1376
+    },
+    {
+      "index": 17,
+      "file": "xiaoman_worried_2.png",
+      "mood": "worried",
+      "mouth": 2,
+      "source_sha256": "3c6ebfec6985353ac198a51e282f5ca562fe8bea579ff4487dd030a8030e5d07",
+      "x": 1920,
+      "y": 1376
+    }
+  ]
+}

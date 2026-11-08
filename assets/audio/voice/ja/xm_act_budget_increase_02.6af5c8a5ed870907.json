@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "浮いた分で、もう一つ見てみようかな。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "34",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.113,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 197482
+  },
+  "sha256": "a5ffd381fcea319a49a60341a170ac0ed4dc54cba024f6467262a6914012995f",
+  "binding": {
+    "key": "xm_act_budget_increase_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "省下的这点钱，可以再挑一样。",
+      "ja": "浮いた分で、もう一つ見てみようかな。",
+      "en": "With what I've saved, I can pick out one more thing."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_budget_increase_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "省下的这点钱，可以再挑一样。",
+        "ja": "浮いた分で、もう一つ見てみようかな。",
+        "en": "省下的这点钱，可以再挑一样。"
+      },
+      "generic": false
+    }
+  ]
+}

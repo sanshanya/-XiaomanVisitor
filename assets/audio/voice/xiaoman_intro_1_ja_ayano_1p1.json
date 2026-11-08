@@ -1,0 +1,57 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": false,
+    "speed": 1.0,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "55",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.15,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 295284
+  },
+  "sha256": "df8db937df8e04c601fbc73900920c3447bc23fed95795b9a6d0cf625f678a5a",
+  "binding": {
+    "key": "intro_1",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……你好。看见这边还亮着灯，就进来了。",
+      "ja": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+      "en": "...Hello. I saw the light was still on, so I came in."
+    },
+    "generic": false
+  },
+  "processing": {
+    "method": "ffmpeg atempo",
+    "factor": 1.1,
+    "effective_speed": 1.1,
+    "source_audio": "assets/audio/voice/xiaoman_intro_1_ja_ayano.wav",
+    "source_sha256": "74df231363ed189decb0a6f81c328d0757c2fe3ba3962ea0401061d67e9007a0"
+  },
+  "binding_history": [
+    {
+      "key": "intro_1",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "……你好。看见这边还亮着灯，就进来了。",
+        "ja": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+        "en": "……你好。看见这边还亮着灯，就进来了。"
+      },
+      "generic": false
+    }
+  ]
+}

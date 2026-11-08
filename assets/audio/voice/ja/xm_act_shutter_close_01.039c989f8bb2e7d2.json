@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "えっ、[gasps] ちょっと待ってください！ まだ買い物の途中で……！",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "58",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.236,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 299358
+  },
+  "sha256": "9ffe1931bd934898376e39c2437fb86a0913c6edf5c9d6299a97dbefb10c8bfb",
+  "binding": {
+    "key": "xm_act_shutter_close_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "诶，等一下！我还没买完呢！",
+      "ja": "えっ、ちょっと待ってください！ まだ買い物の途中で……！",
+      "en": "Oh, wait! I'm not done shopping yet!"
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_shutter_close_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "诶，等一下！我还没买完呢！",
+        "ja": "えっ、ちょっと待ってください！ まだ買い物の途中で……！",
+        "en": "诶，等一下！我还没买完呢！"
+      },
+      "generic": false
+    }
+  ]
+}

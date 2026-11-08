@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "68",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.782,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 421572
+  },
+  "sha256": "48d5754117475c984d52078b228e333f92b55c48427995e6f7aa885b244fcf55",
+  "binding": {
+    "key": "xm_13_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好。最近在找结实一点的箱子。准备搬家了。",
+      "ja": "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
+      "en": "Good evening. I've been looking for some sturdy boxes. I'm getting ready to move."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_13_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "晚上好。最近在找结实一点的箱子。准备搬家了。",
+        "ja": "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
+        "en": "晚上好。最近在找结实一点的箱子。准备搬家了。"
+      },
+      "generic": false
+    }
+  ]
+}

@@ -1,0 +1,230 @@
+name,Xiaoman
+intro_1,"...Hello. I saw the light was still on, so I came in."
+intro_2,I'm Xiaoman. I just moved nearby. I still end up on the wrong floor sometimes.
+intro_3,Oh... you even have a cassette player here.
+return_1,Good evening. Here I am again.
+shopping,I'd like some drinking water today. Nothing fancy. I've brought {0} credits.
+accept,Thank you. I'm glad I made it in time.
+goodbye,I'd better go. See you next time.
+wrong_item,This... I don't need it today.
+right_item,"Yes, that's the kind I meant."
+repeat,Just ordinary drinking water. I don't need anything else today.
+cfg_size,Portrait size
+cfg_animation,Blinking and talking animation
+cfg_shortcut,Enable invitation shortcut
+cfg_shortcut_tip,"On an open Monday, queue the pending visit at the end. Keeps every existing customer in order; cannot skip dates or replay a completed visit."
+gift_tape_name,Cassette: A Rainy Night from Xiaoman
+gift_tape_desc,An old cassette Xiaoman left you. The label is written with care.
+gift_tape_credit,A melody brought from somewhere far away.
+gift_note_name,A note from Xiaoman
+gift_note_desc,A carefully folded note with thoughtful handwriting.
+gift_note_title,"Dear shopkeeper,"
+gift_note_body,"Thank you for yesterday.\n\nI'd always thought the lower district was full of bad people. I'd braced myself for it.\n\nI hadn't expected you to be so kind.\n\nI've been moving things around so much lately that food and drink slipped my mind.\n\nAfter seeing the cassette player on your counter yesterday, I went through my luggage for quite a while and found this tape.\n\nBack home, I would play this when it rained heavily.\n\nI hope you like it."
+gift_note_signature,— Xiaoman
+collection_tape_name,Cassette: Xiaoman's Rainy Night · {0}
+collection_tape_desc,A cassette Xiaoman left for you. The label carefully reads '{0}'.
+collection_tape_flavor,A rainy night held on tape.
+cocktail_origin,A cocktail made by Xiaoman.
+cocktail_whale_dream_name,The Dream of a Whale
+cocktail_whale_dream_desc,A blue ocean glows in the glass. A whale drifts quietly through it.
+cocktail_sunset_blue_name,Sunset in Blue
+cocktail_sunset_blue_desc,The sun sinks into a blue sea and leaves a violet afterglow.
+cocktail_bluebird_name,The Bluebird of Happiness
+cocktail_bluebird_desc,A little heart floats inside a glass shaped like a bluebird.
+cocktail_cosmo_zone_name,Cosmo Zone
+cocktail_cosmo_zone_desc,A distant planet seems to float in the deep blue drink.
+cocktail_sky_after_rain_name,Sky After Rain
+cocktail_sky_after_rain_desc,A patch of clear sky after the rain with a rainbow caught in the glass.
+cocktail_rainy_blue_name,Rainy Blue
+cocktail_rainy_blue_desc,Blue ripples spread beneath a little umbrella that seems to shelter the rain.
+shopping_food,I'd like some food today. Something that keeps well. I've brought {0} credits.
+shopping_household,I'd like some everyday supplies today. I've brought {0} credits.
+accept_return,Thank you. You've helped me out again.
+goodbye_discount,"You even gave me a discount... Thank you, that really helps. I'd better get going."
+repeat_food,Just food. I don't need anything else this time.
+repeat_household,Everyday supplies. I'd like to get those sorted out today.
+collection_title_name,Cassette: Rainy Night · Title
+collection_title_flavor,Prologue
+drink_tier_1,Juice version
+drink_tier_2,Alcoholic version
+drink_buff_luck,Luck +{0}
+drink_buff_tradereputation,Trade reputation gain +{0}%
+drink_buff_scavenging,Daily scavenging attempts +{0}
+drink_buff_duration,Lasts 3 days.
+cfg_voice_enabled,Enable Xiaoman voice
+cfg_voice_volume,Xiaoman voice volume
+cfg_voice_wait,Wait for Xiaoman voice before auto-advance
+cfg_voice_language,Xiaoman voice language
+cfg_voice_language_tip,"Japanese by default, independently of subtitles. Follow UI plays only matching-language recordings; missing recordings keep normal subtitles."
+xm_01_01,"...Hello. I saw the light was still on, so I came in."
+xm_01_02,"I'm Xiaoman. I just moved nearby, and I'm still finding my way around."
+xm_01_03,Oh... you have a cassette player here.
+xm_01_shop,I'd like some food or drinking water. I've brought 150 credits.
+xm_01_accept,Thank you. That really helps.
+xm_01_bye,I'd better get going. See you next time.
+story_note_01_title,"Dear shopkeeper,"
+story_note_01_body,"Thank you for yesterday.\n\nI'd always thought the lower district was full of bad people. I'd braced myself for it.\n\nI hadn't expected you to be so kind.\n\nI've been moving things around so much lately that food and drink slipped my mind.\n\nAfter seeing the cassette player on your counter yesterday, I went through my luggage for quite a while and found this tape.\n\nBack home, I would play this when it rained heavily.\n\nI hope you like it."
+story_note_01_signature,— Xiaoman
+story_note_01_name,A note from Xiaoman
+xm_02_01,Good evening. Here I am again.
+xm_02_02,"The machines never stop humming here, even at night. But there's no sound of rain."
+xm_02_03,"When I first got here, I kept feeling as if something was missing."
+xm_02_shop,My place is still being renovated. I'm looking for a few everyday supplies.
+story_note_02_title,"Dear shopkeeper,"
+story_note_02_body,"Today I peeled the protective film off my little shop's glass door. It turns out the blue billboard opposite is reflected in it all the time.\n\nI haven't even switched on the lights inside, but from outside it already looks open.\n\nI wonder if you've listened to the last tape. I hope you like it.\n\nI found this one while I was unpacking.\n\nThe rhythm is gentler than the last one. You can turn the volume up."
+story_note_02_signature,— Xiaoman
+story_note_02_name,A note from Xiaoman
+xm_03_01,Good evening. I finally made it to the right floor today.
+xm_03_02,I wrote the opening hours on the glass door. Then I went outside and saw they were all backwards.
+xm_03_shop,"I'd like some food. I've been so busy lately, I keep forgetting to eat."
+story_note_03_title,"Dear shopkeeper,"
+story_note_03_body,My little shop is almost ready to open.\n\nI bought so many glasses. Arranging them all on the wall took me a very long time.\n\nThey look wonderful with the lights on.\n\nYou should find a few decorations for your shop too.\n\nI'm going to start a trial opening next week.\n\nToday's tape is what I played while testing the speakers. I'll leave it here for you.\n\nI'm actually quite good at mixing drinks.\n\nI hope you'll come by.
+story_note_03_signature,— Xiaoman
+story_note_03_name,A note from Xiaoman
+xm_04_01,Good evening. That little place I mentioned is finally open.
+xm_04_02,"It's actually a little bar, down in the shopping passage below."
+xm_04_shop,I'd like to stock up on drinking water today.
+xm_04_cocktail,"Oh, I brought a few cocktails from my bar. Would you buy things like these?"
+story_note_04_title,"Dear shopkeeper,"
+story_note_04_body,"When it was time to close on my little bar's first night, most of the customers were still there. I ended up wiping the clean glasses all over again while I waited for them to leave.\n\nThe glass door clearly says we close at two in the morning. By the time I finally turned out the lights, it was nearly dawn.\n\nYour shop always seems pretty quiet. Don't get too jealous~\n\nThis is what I played when I opened that night. It's yours.\n\nIt's lovely to meet someone else on this space station who listens to tapes."
+story_note_04_signature,— Xiaoman
+story_note_04_name,A note from Xiaoman
+xm_05_01,Good evening. A customer called me 'the owner' yesterday.
+xm_05_02,It took me a moment to realise she meant me. Even though it is my own place.
+xm_05_shop,I'd like a few everyday supplies today.
+story_note_05_title,"Dear shopkeeper,"
+story_note_05_body,"Thank you for yesterday.\n\nA friend back home asked how the new place was going. I spent ages choosing a photo and finally sent one of the bar just after I'd switched on the lights.\n\nShe said, 'It looks wonderful.'\n\nIt's my own place, but hearing someone say that somehow made me more nervous.\n\nPlease come by more often. I've put up lots of new decorations.\n\nI'd love a few pointers from someone with more experience."
+story_note_05_signature,— Xiaoman
+story_note_05_name,A note from Xiaoman
+xm_06_01,Good evening. A customer told me the other day that my cocktails were a little sweet.
+xm_06_02,But I thought they were just right... Am I the only one?
+xm_06_shop,I've come for some drinking water today.
+story_note_06_title,"Dear shopkeeper,"
+story_note_06_body,"A wealthy customer from the upper district said my cocktails were too sweet last night.\n\nToday I kept adjusting the drink they said was too sweet.\n\nA little less sugar, a sip. Then I put it back.\n\nAll they really said was 'a little sweet,' not that it tasted bad. Why have I been thinking about it for two days?\n\nI'm leaving the menu alone today.\n\nI'd like to know what you think."
+story_note_06_signature,— Xiaoman
+story_note_06_name,A note from Xiaoman
+xm_07_01,Good evening. My friends sent me a photo of their get-together yesterday.
+xm_07_02,They left an empty seat for me and even drew me into it. It doesn't look like me at all.
+xm_07_shop,I'd like some food today.
+story_note_07_title,"Dear shopkeeper,"
+story_note_07_body,"About that group photo...\n\nI spent ages looking at an enlarged version.\n\nThe girl sitting next to me has cut her hair short. We used to talk about going for a haircut together, but we never got around to it.\n\nShe asked how things were going here. I wanted to send her a photo of myself, but when I looked through my pictures, all the recent ones were glasses and bottles.\n\nI'll have to get someone to take a photo of me next time."
+story_note_07_signature,— Xiaoman
+story_note_07_name,A note from Xiaoman
+xm_08_01,Good evening. A few girls came in after their night shift yesterday. They were quite a lively bunch.
+xm_08_02,They kept telling jokes about work. I didn't understand a single one.
+xm_08_shop,I'm looking for some everyday supplies today.
+story_note_08_title,"Dear shopkeeper,"
+story_note_08_body,"Last night someone left a sparkly hair clip on the bar. I put it away, thinking they'd probably come back for it.\n\nSure enough, a girl came running back today. But the first thing she said was, 'Do you still have that drink with the cherry from yesterday?'\n\nWhen I tried to give her the clip back, she told me to keep it as a deposit on her next drink.\n\n...Can you really use something like that as a deposit?"
+story_note_08_signature,— Xiaoman
+story_note_08_name,A note from Xiaoman
+xm_09_01,Good evening. The motion light outside my door came on several times yesterday.
+xm_09_02,I thought I had customers. It was just delivery carts passing by.
+xm_09_shop,I'd like some food today. Just a little will do.
+story_note_09_title,"Dear shopkeeper,"
+story_note_09_body,I was taking stock today and found half a crate of lemons left. I used to worry about running out. Now I'll have to find a way to use them up.\n\nSomething seems to have changed in the shopping passage lately. There aren't as many people passing through.\n\nI stood by the glass door for quite a while.\n\nI haven't had this much time to relax in ages.\n\nWhat do you usually do when you don't have any customers?
+story_note_09_signature,— Xiaoman
+story_note_09_name,A note from Xiaoman
+xm_10_01,Good evening. Someone who'd visited before came back yesterday.
+xm_10_02,She brought a friend along. Both of them even remembered my name.
+xm_10_shop,I'd like some drinking water.
+story_note_10_title,"Dear shopkeeper,"
+story_note_10_body,"About the customers who came yesterday.\n\nThey said they could have taken the direct lift back to their dorm, but they made a detour to see me.\n\nOne wanted something sweet. The other insisted on something sour. Once I set both glasses down, they started swapping them.\n\nThey laughed so loudly and kept telling terrible jokes.\n\nI wish I could meet such friendly customers every day."
+story_note_10_signature,— Xiaoman
+story_note_10_name,A note from Xiaoman
+xm_11_01,Good evening. I've changed the opening hours on my door.
+xm_11_02,It used to say two in the morning. Now it says midnight. That gives me time to get home and eat something.
+xm_11_shop,I'd like some everyday supplies today.
+story_note_11_title,"Dear shopkeeper,"
+story_note_11_body,"I closed up early yesterday, just in time for a call from my mum.\n\nShe sent me a photo of the cherry tree at home in full bloom.\n\nDo you know cherry blossoms?\n\nTonight I'm going to try a new range of cherry blossom drinks.\n\nPlease come and try them."
+story_note_11_signature,— Xiaoman
+story_note_11_name,A note from Xiaoman
+xm_12_01,Good evening. I've been rewriting the drinks menu.
+xm_12_02,The old one was crammed full. There's still plenty of blank space on the new one.
+xm_12_shop,I'd like some food today.
+story_note_12_title,"Dear shopkeeper,"
+story_note_12_body,"Today I folded up the old drinks menu and tucked it into the account book.\n\nI wrote the first page just after I arrived, when I didn't know anyone here.\n\nLast night I poured myself a little drink and sat down by the glass door for a rest.\n\nI waited a long time, but no customers came.\n\nThe billboard opposite happened to turn orange. With the blue light from the bar shining through, there seemed to be two colours in my glass.\n\nI sat looking at it for a while. Then an idea for a new cocktail came to me.\n\nPlease come and try my new creation."
+story_note_12_signature,— Xiaoman
+story_note_12_name,A note from Xiaoman
+xm_13_01,Good evening. I've been looking for some sturdy boxes. I'm getting ready to move.
+xm_13_02,Glasses are much harder to pack than clothes. I wish I hadn't bought quite so many.
+xm_13_shop,I'd like some everyday supplies today.
+story_note_13_title,"Dear shopkeeper,"
+story_note_13_body,"The man from the repair shop next door came to help move a cabinet. He asked if I still wanted the blue light.\n\nI told him he could have it. He said his daughter loved that colour.\n\nIt turned out he didn't mean just the light. He meant the whole frame, sign and all.\n\n...He certainly knows what to ask for.\n\nStill, that's fine. At least I won't have to find a box big enough for it."
+story_note_13_signature,— Xiaoman
+story_note_13_name,A note from Xiaoman
+xm_14_01,...Good evening. I'm taking the ship tomorrow. I've decided to go home.
+xm_14_02,I've sent everything ahead. It's just me and a backpack now. A bit like when I first arrived.
+xm_14_shop,I'd like some water for the journey.
+xm_14_accept,"Yes, thank you. Just right."
+xm_14_bye,Well... I'd better go.
+story_note_14_title,"Dear shopkeeper,"
+story_note_14_body,"I've returned the keys to the landlord. My lovely glasses have gone ahead on the cargo ship. All I have left is a backpack.\n\nI told my mum I was coming home. She laughed and laughed on the other end of the call.\n\nI made three cocktails with the ingredients I had left, and left them here with the tape.\n\nThank you for everything, my friend."
+story_note_14_signature,— Xiaoman
+story_note_14_name,A note from Xiaoman
+xm_right_item,"Yes, this will do."
+xm_wrong_item,"I don't need this today, thank you."
+xm_repeat_first,Food or drinking water. Either is fine.
+xm_repeat_water,I'd like drinking water today. Nothing fancy.
+xm_repeat_food,I'm looking for some food today.
+xm_repeat_goods,I'm looking for everyday supplies today.
+xm_accept,Thank you. That helps.
+xm_accept_more,"Yes, I'll take this as well."
+xm_goodbye,I'd better go. See you next time.
+xm_retry,Good evening. I thought I'd have another look today.
+xm_cocktail_accept,Thank you. I hope it's to your taste.
+xm_act_discount_accept_01,"Oh, a little cheaper. Thank you."
+xm_act_discount_accept_02,"Are you sure? I'll take you up on that, then."
+xm_act_discount_accept_03,That really helps. Let's go with that price.
+xm_act_discount_accept_high_01,"Oh, that much off? ...Are you sure?"
+xm_act_discount_accept_high_02,"You're being so kind to me... Thank you, really."
+xm_act_discount_accept_high_03,You surprised me. I'll gladly take you up on that.
+xm_act_budget_increase_01,That leaves enough to buy something else.
+xm_act_budget_increase_02,"With what I've saved, I can pick out one more thing."
+xm_act_budget_increase_03,I still have some money left. Could I look at something else?
+xm_act_markup_accept_01,...All right. Let's do that.
+xm_act_markup_accept_02,That's a little more than before... But I do need it today.
+xm_act_markup_accept_03,Hmm... I'll go with your price this time.
+xm_act_markup_accept_high_01,That much more...? Never mind. I still need to buy it this time.
+xm_act_markup_accept_high_02,That's expensive. ...I really do need this.
+xm_act_markup_accept_high_03,...You're sure that's the price? I understand.
+xm_act_budget_decrease_01,Oh... I don't have much money left.
+xm_act_budget_decrease_02,"I won't be able to buy very much today, then."
+xm_act_budget_decrease_03,I was hoping to get one more thing... Oh well. Next time.
+xm_act_markup_reject_01,"I'm sorry, but I'll have to pass at that price."
+xm_act_markup_reject_02,Hmm... That's a little beyond my budget.
+xm_act_markup_reject_03,That price is a little hard to accept.
+xm_act_markup_reject_high_01,...What? That's far too expensive.
+xm_act_markup_reject_high_02,"I'm sorry, I can't buy it at that price."
+xm_act_markup_reject_high_03,"In that case, I'll leave it for today."
+xm_act_angry_leave_01,...That's enough. I'm going home.
+xm_act_angry_leave_02,There's no point in discussing this any further. Excuse me.
+xm_act_angry_leave_03,"I'm sorry, but I can't keep shopping here."
+xm_act_bad_word_01,I'll make sure the people I know hear about this.
+xm_act_bad_word_02,"I'm sorry... But if someone asks about this shop, I can't pretend nothing happened."
+xm_act_bad_word_03,Word travels fast here. I hope you won't do this again.
+xm_act_blackmail_innocent_01,...A criminal? Do you mean me? I'm not. Please don't accuse people like that.
+xm_act_blackmail_innocent_02,That isn't funny at all. I haven't done anything.
+xm_act_blackmail_innocent_03,Why would you say that? I only came here to buy things.
+xm_act_threaten_false_aug_01,...An aug? I'm not.
+xm_act_threaten_false_aug_02,Could you take a proper look first? I'm not an aug.
+xm_act_threaten_false_aug_03,Don't try to scare me with that... I'm really not.
+xm_act_after_sale_continue_01,Do you have anything else? I'd like another look.
+xm_act_after_sale_low_budget_01,Oh... That's nearly all my money. That'll be enough for today.
+xm_act_reject_contraband_01,"I'm sorry, I can't buy things like that."
+xm_act_remove_filter_01,"Excuse me, could you take the filter out first? I only want the water."
+xm_act_shutter_close_01,"Oh, wait! I'm not done shopping yet!"
+xm_act_shutter_close_02,(Two light knocks on the shutter.)
+xm_act_shutter_close_03,"...That's a little much, isn't it?"
+xm_act_shutter_close_04,"Oh, are you closing already?"
+xm_act_expose_water_base_01,"Hmm... This is ordinary water, isn't it? That's not what the label says."
+xm_act_expose_water_high_01,This should be high-quality water. The label seems to say otherwise.
+xm_act_expose_water_other_01,The purity of this water doesn't match the label.
+xm_act_expose_water_other_02,The description and the reading don't match. Could it be the wrong label?
+xm_act_expose_water_other_03,That number on the label... Are you sure it's right?
+collection_hello_track,Hello! (Rain Mix)
+gift_notebook_name,Xiaoman's Letterbook
+gift_notebook_desc,A pink notebook for the notes Xiaoman leaves you.
+gift_cassette_case_name,Xiaoman's Cassette Case
+gift_cassette_case_desc,A case for the tapes Xiaoman leaves you. Fits in the cassette player's storage.
+ui_tavern_name,Xiaoman's Tavern
+ui_tavern_renovating,Under renovation

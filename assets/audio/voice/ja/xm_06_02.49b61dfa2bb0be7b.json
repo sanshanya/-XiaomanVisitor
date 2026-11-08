@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "でも、わたしはちょうどいいと思うんですけど……[breath] わたしだけかな。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "67",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.253,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 348204
+  },
+  "sha256": "4c3135ade223941d7de6372239cfe95d5b8e56164d0304055316e3dd1cd15314",
+  "binding": {
+    "key": "xm_06_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "可我觉得刚刚好啊……是不是只有我这么觉得？",
+      "ja": "でも、わたしはちょうどいいと思うんですけど……わたしだけかな。",
+      "en": "But I thought they were just right... Am I the only one?"
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_06_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "可我觉得刚刚好啊……是不是只有我这么觉得？",
+        "ja": "でも、わたしはちょうどいいと思うんですけど……わたしだけかな。",
+        "en": "可我觉得刚刚好啊……是不是只有我这么觉得？"
+      },
+      "generic": false
+    }
+  ]
+}

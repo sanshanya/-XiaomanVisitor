@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは。またお邪魔しちゃいました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "36",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.163,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 199852
+  },
+  "sha256": "e6fc89df1950f28053b11e8faeee61b7be2c7cfdcfcd06503d5300f819c2b42e",
+  "binding": {
+    "key": "xm_02_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好。又来打扰啦。",
+      "ja": "こんばんは。またお邪魔しちゃいました。",
+      "en": "Good evening. Here I am again."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_02_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "晚上好。又来打扰啦。",
+        "ja": "こんばんは。またお邪魔しちゃいました。",
+        "en": "晚上好。又来打扰啦。"
+      },
+      "generic": false
+    }
+  ]
+}

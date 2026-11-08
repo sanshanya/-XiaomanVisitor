@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "そういう冗談、笑えません。わたし、何もしてませんよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "48",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.66,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 319732
+  },
+  "sha256": "44a05a6354f81b93a958492e806109624016d42619cadae591d66d46f2dedc32",
+  "binding": {
+    "key": "xm_act_blackmail_innocent_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这个玩笑，一点也不好笑。我什么都没做。",
+      "ja": "そういう冗談、笑えません。わたし、何もしてませんよ。",
+      "en": "That isn't funny at all. I haven't done anything."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_blackmail_innocent_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "这个玩笑，一点也不好笑。我什么都没做。",
+        "ja": "そういう冗談、笑えません。わたし、何もしてませんよ。",
+        "en": "这个玩笑，一点也不好笑。我什么都没做。"
+      },
+      "generic": false
+    }
+  ]
+}

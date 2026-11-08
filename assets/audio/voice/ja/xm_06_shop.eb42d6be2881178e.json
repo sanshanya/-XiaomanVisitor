@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今日は飲み水を少し買いに来ました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "33",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.618,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 173714
+  },
+  "sha256": "da764496eae11e7ba77d839dbf590dd465952ee1ff16ed906aba04d2b1fc4e1d",
+  "binding": {
+    "key": "xm_06_shop",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "今天来买点饮用水。",
+      "ja": "今日は飲み水を少し買いに来ました。",
+      "en": "I've come for some drinking water today."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_06_shop",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "今天来买点饮用水。",
+        "ja": "今日は飲み水を少し買いに来ました。",
+        "en": "今天来买点饮用水。"
+      },
+      "generic": false
+    }
+  ]
+}

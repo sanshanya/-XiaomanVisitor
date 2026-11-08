@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-07",
+  "scope": "local vanilla Probably Stolen, no subscribed mod dialogue",
+  "xiaoman_version": "0.4.2",
+  "eleanor_dialogue_count": 144,
+  "related_text_count": 9,
+  "source_method_count": 40,
+  "sources": [
+    {
+      "path": "E:\\app\\steam\\steamapps\\common\\Probably Stolen\\Probably Stolen_Data\\Managed\\Assembly-CSharp.dll",
+      "sha256": "d9abc029f6b390619c31175df5735901aec6dc071c35c50ce5b3fdf92e3ede46"
+    },
+    {
+      "path": "E:\\app\\steam\\steamapps\\common\\Probably Stolen\\Probably Stolen_Data\\StreamingAssets\\aa\\StandaloneWindows64\\localization-assets-shared_assets_all.bundle",
+      "sha256": "738b304471095fa6a1e1081d393fd8e8b80633ea66a484d5b2cb1a215d7a91de"
+    },
+    {
+      "path": "E:\\app\\steam\\steamapps\\common\\Probably Stolen\\Probably Stolen_Data\\StreamingAssets\\aa\\StandaloneWindows64\\localization-string-tables-chinese(simplified)(zh)_assets_all.bundle",
+      "sha256": "0b22ce010e4d231b41058b9d230ff176991130f04cb5f08990d67e3cb46a6edc"
+    },
+    {
+      "path": "D:\\ds\\ProbablyStolen-Xiaoman\\reference\\StoreClientUniqueList.current.cs",
+      "sha256": "0de42c6acb3b5ab56ff064f9a91840157470fc26f0e2ab8d6d6357af4ab1053a"
+    },
+    {
+      "path": "D:\\ds\\ProbablyStolen-Xiaoman\\reference\\StoreClientData.current.cs",
+      "sha256": "0b41e1f82279fd5d79e083f0c70469a7abe1066683c1e3f33e24ce7e77eab046"
+    },
+    {
+      "path": "D:\\ds\\ProbablyStolen-Xiaoman\\reference\\StoreClientManager.current.cs",
+      "sha256": "437b8cf62f426923311b9c5650188477490b574dbe6e54ab4ccbea42dd50537f"
+    },
+    {
+      "path": "D:\\ds\\ProbablyStolen-Xiaoman\\reference\\EventListUnique.current.cs",
+      "sha256": "bd99d64e972d1ddbcf2baa21f9a8696320f3ad3a6812edd2139a8542d09ff7cd"
+    },
+    {
+      "path": "D:\\ds\\ProbablyStolen-Xiaoman\\reference\\StorylineSchedule.current.cs",
+      "sha256": "11aa92f32738db7c89ad60f2c6720d38c59e40499e223b7eeb8a8486dc9526ee"
+    }
+  ]
+}

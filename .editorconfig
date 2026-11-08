@@ -1,0 +1,20 @@
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+
+[*.{cs,py,ps1,json,md,yml,yaml}]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+
+[*.{json,yml,yaml}]
+indent_size = 2
+
+# Preserve reviewed dialogue whitespace and approved package bytes.
+[package/**]
+insert_final_newline = unset
+
+[*.csv]
+insert_final_newline = unset

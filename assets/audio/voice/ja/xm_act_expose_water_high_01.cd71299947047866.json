@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "61",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.363,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 353452
+  },
+  "sha256": "d0644438703c25536b69ee8d63db0100665862939d738d94b206512f300a6c43",
+  "binding": {
+    "key": "xm_act_expose_water_high_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这应该是优质水吧？标签上好像不是这么写的。",
+      "ja": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
+      "en": "This should be high-quality water. The label seems to say otherwise."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_expose_water_high_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "这应该是优质水吧？标签上好像不是这么写的。",
+        "ja": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
+        "en": "这应该是优质水吧？标签上好像不是这么写的。"
+      },
+      "generic": false
+    }
+  ]
+}

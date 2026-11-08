@@ -1,0 +1,64 @@
+# Local environments, caches and generated build products
+/.venv/
+/.dev/
+/_待清理开发冗余/
+**/__pycache__/
+*.py[cod]
+*.dll
+*.exe
+*.pdb
+*.runtimeconfig.json
+*.log
+*.tmp
+*.bak
+*.zip
+*.nupkg
+.DS_Store
+Thumbs.db
+/.vs/
+/.idea/
+/.vscode/
+
+# Author credentials and machine-specific settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*secrets*.json
+
+# Rebuildable tools; setup-dev.ps1 restores the pinned compiler
+/tools/compilers/
+/tools/ilspycmd/
+/tools/workshop-uploader/
+
+# Local exports, Steam upload state and release archives
+/outputs/
+/release/
+
+# Keep only the exact reference inputs needed by the asset pipeline.
+# Personal saves, game decompilations and research dumps stay local.
+/reference/*
+!/reference/action-localization.snapshot.json
+!/reference/cassette-icons/
+!/reference/notebook-icons/
+!/reference/paper-icons/
+!/reference/original-composites-0.1.1/
+!/reference/tavern-cover/
+!/reference/source-candidates/
+/reference/source-candidates/*
+!/reference/source-candidates/girl2/
+
+# Yozai is a reproducible authoring dependency, not an experiment output.
+/experiments/*
+!/experiments/handwriting/
+/experiments/handwriting/*
+!/experiments/handwriting/fonts/
+/experiments/handwriting/fonts/*
+!/experiments/handwriting/fonts/Yozai-Regular.ttf
+!/experiments/handwriting/fonts/Yozai-Regular-OFL.txt
+!/experiments/handwriting/fonts/sources.json
+
+# Old extracted reference material is available locally, outside source control.
+/story/写作参考_小满与埃莉诺/

@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Mod>
+  <ID>sansm.xiaoman.visitor</ID>
+  <Name>深空小满：可能很迷醉？</Name>
+  <Author>sansm</Author>
+  <ModVersion>0.0.2</ModVersion>
+  <Description>空间站来了一位青涩的酒馆女老板，将你视作朋友。她有什么样的秘密，你和她之间又会发生？
+
+---
+
+- 动态立绘
+- 人物剧情
+- 六种独特酒品道具
+- 全日语配音
+- 14 卷磁带
+
+---
+
+素材来自《雨音に満ちる夜 / A Night Filled With the Sound of Rain》 侵删
+
+---
+
+0.0.2 更新内容
+
+1. 添加唱片盒和信纸簿，用来收拢信纸和磁带。
+2. 优化了小满的立绘在高分辨率下的表现。</Description>
+  <GameVersions>
+    <Version>0.46D</Version>
+  </GameVersions>
+  <Assemblies>
+    <Assembly>XiaomanVisitor.dll</Assembly>
+  </Assemblies>
+  <Capabilities />
+</Mod>

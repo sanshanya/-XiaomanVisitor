@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ごめんなさい。そのお値段では買えません。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "38",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.59,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 220340
+  },
+  "sha256": "ce4819619f03e167968299b69354b835fbe83053758306d2d6f503288a700e59",
+  "binding": {
+    "key": "xm_act_markup_reject_high_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "对不起，这个价钱我买不了。",
+      "ja": "ごめんなさい。そのお値段では買えません。",
+      "en": "I'm sorry, I can't buy it at that price."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_reject_high_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "对不起，这个价钱我买不了。",
+        "ja": "ごめんなさい。そのお値段では買えません。",
+        "en": "对不起，这个价钱我买不了。"
+      },
+      "generic": false
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "もう一つ買うつもりだったんですけど……また今度にします。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "53",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.836,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 280184
+  },
+  "sha256": "f6a35c3a00439373341fef8077d7c01136a89fac7c866c85b0dd3283ce5034c1",
+  "binding": {
+    "key": "xm_act_budget_decrease_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "原本还想多买一样……算啦，下次吧。",
+      "ja": "もう一つ買うつもりだったんですけど……また今度にします。",
+      "en": "I was hoping to get one more thing... Oh well. Next time."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_budget_decrease_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "原本还想多买一样……算啦，下次吧。",
+        "ja": "もう一つ買うつもりだったんですけど……また今度にします。",
+        "en": "原本还想多买一样……算啦，下次吧。"
+      },
+      "generic": false
+    }
+  ]
+}

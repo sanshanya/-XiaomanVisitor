@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "お安くしてくれたんですね……ありがとうございます。[chuckles] ちょっと助かっちゃいました。それじゃ、また。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "99",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.855,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 521080
+  },
+  "sha256": "aa3d782032a381bf65e8c2d536b7d0dd26334e55195c2b8ca24928bae63dc359",
+  "binding": {
+    "key": "goodbye_discount",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "还特地算便宜了……谢谢，帮大忙了。那我先走啦。",
+      "ja": "お安くしてくれたんですね……ありがとうございます。助かりました。それじゃ、また。",
+      "en": "You even gave me a discount... Thank you, that really helps. I'd better get going."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "goodbye_discount",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "还特地算便宜了……谢谢，帮大忙了。那我先走啦。",
+        "ja": "お安くしてくれたんですね……ありがとうございます。助かりました。それじゃ、また。",
+        "en": "还特地算便宜了……谢谢，帮大忙了。那我先走啦。"
+      },
+      "generic": false
+    }
+  ]
+}

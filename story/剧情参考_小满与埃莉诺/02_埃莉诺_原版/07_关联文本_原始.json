@@ -1,0 +1,47 @@
+[
+  {
+    "table": "Dialogue",
+    "key": "dialog_georgio_loan_choice_decline",
+    "text": "[拒绝]"
+  },
+  {
+    "table": "ClientName",
+    "key": "name_eleanor",
+    "text": "埃莉诺"
+  },
+  {
+    "table": "ClientName",
+    "key": "name_security_officer",
+    "text": "治安部警官"
+  },
+  {
+    "table": "ClientName",
+    "key": "name_eleanor_uncle",
+    "text": "埃莉诺的叔叔"
+  },
+  {
+    "table": "ClientName",
+    "key": "name_black_market_thug",
+    "text": "黑市打手"
+  },
+  {
+    "table": "Mechanic",
+    "key": "mech_notify_eleanor_drive_bounty",
+    "text": "黑市为埃莉诺的数据盘付了你{0}信用点。"
+  },
+  {
+    "table": "Mechanic",
+    "key": "event_eleanor_leak_news",
+    "text": "帕斯泰尔营养果的秘密遭到泄露！"
+  },
+  {
+    "table": "Mechanic",
+    "key": "event_eleanor_leak_desc",
+    "text": "一篇研究论文已经发表，揭示了如何让普通营养果重新结籽。全空间站的生物黑客已经开始种植这一新品种，种子价格随之暴跌。同一天早上，因挪用公款入狱的空间站最大水培农场前负责人被发现死在牢房中。帕斯泰尔公司拒绝置评。"
+  },
+  {
+    "table": "UI",
+    "key": "ui_eleanor_reward_body",
+    "text": "埃莉诺的谢礼：任选一份。"
+  }
+]

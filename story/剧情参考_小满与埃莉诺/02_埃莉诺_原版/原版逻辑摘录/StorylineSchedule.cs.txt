@@ -1,0 +1,134 @@
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public static class StorylineSchedule
+{
+	public const string GEORGIO = "georgio";
+
+	public const string LUN = "lun";
+
+	public const string ELEANOR = "eleanor";
+
+	public const string NELLIS = "nellis";
+
+	public const string SERPICO = "serpico";
+
+	public const int GRACE_DAYS = 2;
+
+	public const int SPACING_DAYS = 4;
+
+	private static readonly string[] LEGACY = new string[5] { "georgio", "lun", "eleanor", "nellis", "serpico" };
+
+	private static readonly string[] Known = new string[5] { "georgio", "lun", "nellis", "eleanor", "serpico" };
+
+	private static StoreClientData Data => PlayerStore.Instance.storeClientData;
+
+	public static int Nominal(string id)
+	{
+		return id switch
+		{
+			"georgio" => 6, 
+			"lun" => 11, 
+			"eleanor" => 23, 
+			"nellis" => 21, 
+			"serpico" => 40, 
+			_ => int.MaxValue, 
+		};
+	}
+
+	public static int StartDay(string id)
+	{
+		StoreClientData data = Data;
+		if (data != null && data.storylineAnchors != null && data.storylineAnchors.TryGetValue(id, out var value))
+		{
+			return value;
+		}
+		return Nominal(id);
+	}
+
+	public static bool IsAnchored(string id)
+	{
+		StoreClientData data = Data;
+		if (data != null && data.storylineAnchors != null)
+		{
+			return data.storylineAnchors.ContainsKey(id);
+		}
+		return false;
+	}
+
+	public static void Resolve(int today)
+	{
+		StoreClientData data = Data;
+		if (data == null)
+		{
+			return;
+		}
+		StoreClientData storeClientData = data;
+		if (storeClientData.storylineAnchors == null)
+		{
+			storeClientData.storylineAnchors = new Dictionary<string, int>();
+		}
+		if (!data.storylineAnchorsSeeded)
+		{
+			string[] lEGACY = LEGACY;
+			foreach (string text in lEGACY)
+			{
+				if (!data.storylineAnchors.ContainsKey(text))
+				{
+					data.storylineAnchors[text] = Nominal(text);
+				}
+			}
+			data.storylineAnchorsSeeded = true;
+		}
+		foreach (string item in Known.OrderBy(Nominal))
+		{
+			if (!data.storylineAnchors.ContainsKey(item))
+			{
+				int num = Nominal(item);
+				int num2 = ((today <= num) ? num : CatchUpDay(today, data.storylineAnchors.Values));
+				data.storylineAnchors[item] = num2;
+				if (num2 != num)
+				{
+					Debug.Log("[StorylineSchedule] " + item + " is new to this save (day " + today + ", nominal " + num + "): anchored on day " + num2);
+				}
+			}
+		}
+	}
+
+	private static int CatchUpDay(int today, IEnumerable<int> taken)
+	{
+		List<int> source = taken.ToList();
+		int day;
+		for (day = today + 2; source.Any((int a) => Mathf.Abs(day - a) < 4); day++)
+		{
+		}
+		return day;
+	}
+
+	public static int DebugReanchor(string id, int today)
+	{
+		StoreClientData data = Data;
+		StoreClientData storeClientData = data;
+		if (storeClientData.storylineAnchors == null)
+		{
+			storeClientData.storylineAnchors = new Dictionary<string, int>();
+		}
+		data.storylineAnchors.Remove(id);
+		int num = CatchUpDay(today, data.storylineAnchors.Values);
+		data.storylineAnchors[id] = num;
+		return num;
+	}
+
+	public static string Describe()
+	{
+		StoreClientData data = Data;
+		if (data == null || data.storylineAnchors == null || data.storylineAnchors.Count == 0)
+		{
+			return "no anchors yet (seeded " + (data?.storylineAnchorsSeeded ?? false) + ")";
+		}
+		return string.Join(", ", from p in data.storylineAnchors
+			orderby p.Value
+			select p.Key + " " + p.Value + ((p.Value == Nominal(p.Key)) ? "" : (" (nominal " + Nominal(p.Key) + ")")));
+	}
+}

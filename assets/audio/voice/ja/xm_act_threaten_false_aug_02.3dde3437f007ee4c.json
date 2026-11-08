@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "64",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.999,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 335992
+  },
+  "sha256": "5c9a2c9ef7b671d6e0a02323a43ffdad350b6de6077605915381e7ef4ecad8d6",
+  "binding": {
+    "key": "xm_act_threaten_false_aug_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "能不能看清楚再说？我不是改造体。",
+      "ja": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
+      "en": "Could you take a proper look first? I'm not an aug."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_threaten_false_aug_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "能不能看清楚再说？我不是改造体。",
+        "ja": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
+        "en": "能不能看清楚再说？我不是改造体。"
+      },
+      "generic": false
+    }
+  ]
+}

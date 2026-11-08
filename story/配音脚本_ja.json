@@ -1,0 +1,1617 @@
+{
+  "schema": 1,
+  "language": "ja",
+  "voice_id": "ayano",
+  "model_id": "luna-tts-1.5",
+  "speed": 1.1,
+  "text_normalization": true,
+  "lines": [
+    {
+      "key": "xm_01_02",
+      "subtitle_templates": {
+        "zh": "我叫小满。刚搬到附近，还有点认不清路。",
+        "ja": "わたし、みちるっていいます。最近この近くに引っ越してきたばかりで、まだ道がよく分からなくて。",
+        "en": "I'm Xiaoman. I just moved nearby, and I'm still finding my way around."
+      },
+      "spoken_text": "わたし、みちるっていいます。最近この近くに引っ越してきたばかりで、まだ道がよく分からなくて。",
+      "generate_text": "わたし、みちるっていいます。最近この近くに引っ越してきたばかりで、まだ道がよく分からなくて。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_01_02.b7a16bab1056624e.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "2e2337e45ca688ac58392e7d7e76fd8c4d049b294827edea45f0a84eb3ca0f5f"
+    },
+    {
+      "key": "xm_01_03",
+      "subtitle_templates": {
+        "zh": "咦……你这里还有磁带机。",
+        "ja": "あ……ここ、カセットデッキがあるんですね。",
+        "en": "Oh... you have a cassette player here."
+      },
+      "spoken_text": "あ……ここ、カセットデッキがあるんですね。",
+      "generate_text": "あ……ここ、カセットデッキがあるんですね。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_01_03.9b30e2049b14616f.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "2bd8d8db31f2b98e24277badf08e16a65d9c9e4d16a0f0fae61af09dd03c34c1"
+    },
+    {
+      "key": "xm_01_shop",
+      "subtitle_templates": {
+        "zh": "想买点吃的或者饮用水。带了 150 信用点。",
+        "ja": "食べるものか、飲み水を少し買いたくて。今日は150クレジット持ってきました。",
+        "en": "I'd like some food or drinking water. I've brought 150 credits."
+      },
+      "spoken_text": "食べるものか、飲み水を少し買いたくて。今日は百五十クレジット持ってきました。",
+      "generate_text": "食べるものか、飲み水を少し買いたくて。今日は百五十クレジット持ってきました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_01_shop.e2bbfcedea79e5b3.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "ec51a24ab1faa3d3c27a469115b985a65457eb210055b5e532d4e08dd0d0bc54"
+    },
+    {
+      "key": "xm_01_accept",
+      "subtitle_templates": {
+        "zh": "谢谢。帮大忙了。",
+        "ja": "ありがとうございます。助かりました。",
+        "en": "Thank you. That really helps."
+      },
+      "spoken_text": "ありがとうございます。助かりました。",
+      "generate_text": "ありがとうございます。助かりました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_01_accept.7912030c5a8f9d2d.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "ef57641ffce6845d28de384018947585dbbb6ffb4aa94a266955a7c9562e87cd"
+    },
+    {
+      "key": "xm_01_bye",
+      "subtitle_templates": {
+        "zh": "那我先走啦。下次见。",
+        "ja": "それじゃ、また来ますね。",
+        "en": "I'd better get going. See you next time."
+      },
+      "spoken_text": "それじゃ、また来ますね。",
+      "generate_text": "それじゃ、また来ますね。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_01_bye.ad498732dafe927c.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "d04b8e2f4aeadf9a9fe7a257ec57a07c17cd03e82ad165e3ec282bbdc9813408"
+    },
+    {
+      "key": "xm_02_01",
+      "subtitle_templates": {
+        "zh": "晚上好。又来打扰啦。",
+        "ja": "こんばんは。またお邪魔しちゃいました。",
+        "en": "Good evening. Here I am again."
+      },
+      "spoken_text": "こんばんは。またお邪魔しちゃいました。",
+      "generate_text": "こんばんは。またお邪魔しちゃいました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_02_01.f228eeddfe0bdbc0.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "2ccbf66fc5d7d4a2d31bfd76c933235df92ddcd512c721a5ae3089c26557f1f4"
+    },
+    {
+      "key": "xm_02_02",
+      "subtitle_templates": {
+        "zh": "这里晚上也总有机器在响呢。可是听不到雨声。",
+        "ja": "ここって、夜もずっと機械の音がするんですね。……でも、雨の音はしないんだ。",
+        "en": "The machines never stop humming here, even at night. But there's no sound of rain."
+      },
+      "spoken_text": "ここって、夜もずっと機械の音がするんですね。……でも、雨の音はしないんだ。",
+      "generate_text": "ここって、夜もずっと機械の音がするんですね。……でも、雨の音はしないんだ。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_02_02.4111b2ce4d4de04c.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "d8b18047145ba19c5dfe5b22af81346eab12fed0c3cf6845cba8e6bfd8c0d0b4"
+    },
+    {
+      "key": "xm_02_03",
+      "subtitle_templates": {
+        "zh": "刚搬来那会儿，总觉得少了点什么。",
+        "ja": "こっちに来てから、何か足りないなって思ってたんです。",
+        "en": "When I first got here, I kept feeling as if something was missing."
+      },
+      "spoken_text": "こっちに来てから、何か足りないなって思ってたんです。",
+      "generate_text": "こっちに来てから、何か足りないなって思ってたんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_02_03.a7b8a306eba1b8aa.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "677666f653f19c168b3302ca249013b8538a3e8026308049ecf00ff370b734c9"
+    },
+    {
+      "key": "xm_02_shop",
+      "subtitle_templates": {
+        "zh": "最近店里还在装修，想买些日用品。",
+        "ja": "お店がまだ改装中で。今日は日用品を少し探してるんです。",
+        "en": "My place is still being renovated. I'm looking for a few everyday supplies."
+      },
+      "spoken_text": "お店がまだ改装中で。今日は日用品を少し探してるんです。",
+      "generate_text": "お店がまだ改装中で。今日は日用品を少し探してるんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_02_shop.27a7532c20155069.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "595a2dd9a9dab081829ab5557506684b41d1c9cc6df8c9dd2c3e858d43a9660b"
+    },
+    {
+      "key": "xm_03_01",
+      "subtitle_templates": {
+        "zh": "晚上好。今天总算没走错楼层。",
+        "ja": "こんばんは。今日はやっと階を間違えずに来られました。",
+        "en": "Good evening. I finally made it to the right floor today."
+      },
+      "spoken_text": "こんばんは。今日はやっと階を間違えずに来られました。",
+      "generate_text": "こんばんは。今日はやっと階を間違えずに来られました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_03_01.05024eb198b6f294.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "3625ec26090c452c9f1ba940095bf0f70d77ac883b36a9f639f1246acb157732"
+    },
+    {
+      "key": "xm_03_02",
+      "subtitle_templates": {
+        "zh": "在玻璃门上写了营业时间，出去一看，字全是反的。",
+        "ja": "ガラスのドアに営業時間を書いたら、外からは文字が全部反対向きで。",
+        "en": "I wrote the opening hours on the glass door. Then I went outside and saw they were all backwards."
+      },
+      "spoken_text": "ガラスのドアに営業時間を書いたら…… 外からは文字が全部反対向きで。",
+      "generate_text": "ガラスのドアに営業時間を書いたら……[chuckles] 外からは文字が全部反対向きで。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_03_02.274e51e88d4ccda3.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "3f299edf14722f89553faf62c628ec1725f0b1a87b446f89b0e26fcc836f6ec5"
+    },
+    {
+      "key": "xm_03_shop",
+      "subtitle_templates": {
+        "zh": "想买点吃的。最近忙起来，总是忘记吃饭。",
+        "ja": "食べるものを少し。最近ばたばたして、つい食事を忘れちゃうんです。",
+        "en": "I'd like some food. I've been so busy lately, I keep forgetting to eat."
+      },
+      "spoken_text": "食べるものを少し。最近ばたばたして、つい食事を忘れちゃうんです。",
+      "generate_text": "食べるものを少し。最近ばたばたして、つい食事を忘れちゃうんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_03_shop.0ed0f6a38c746cf1.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "d884daec0422dc620ca25cfd0965046b9e6f95b4ed6e9ecd1eea9605a4b55c0f"
+    },
+    {
+      "key": "xm_04_01",
+      "subtitle_templates": {
+        "zh": "晚上好。上次说的小店，终于开门了。",
+        "ja": "こんばんは。この前話したお店、やっとオープンしたんです。",
+        "en": "Good evening. That little place I mentioned is finally open."
+      },
+      "spoken_text": "こんばんは。この前話したお店、やっとオープンしたんです。",
+      "generate_text": "こんばんは。この前話したお店、やっとオープンしたんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_04_01.58a14d9d9b030e60.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "84c6fdc0fcbdc8e09831e73101e403f43100ee503f9b6be155dea2251b536ce9"
+    },
+    {
+      "key": "xm_04_02",
+      "subtitle_templates": {
+        "zh": "其实是间小酒吧。就在下面那条商业通道。",
+        "ja": "実は、小さなバーなんです。下の商業通路にあるんですよ。",
+        "en": "It's actually a little bar, down in the shopping passage below."
+      },
+      "spoken_text": "実は、小さなバーなんです。下の商業通路にあるんですよ。",
+      "generate_text": "実は、小さなバーなんです。下の商業通路にあるんですよ。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_04_02.c7c0d5d11de03fad.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "a5be0c34154c24138cc8cdac5280529c29484ffd60f410e3ea3d3f1130240389"
+    },
+    {
+      "key": "xm_04_shop",
+      "subtitle_templates": {
+        "zh": "今天想补些饮用水。",
+        "ja": "今日は飲み水を少し買い足したくて。",
+        "en": "I'd like to stock up on drinking water today."
+      },
+      "spoken_text": "今日は飲み水を少し買い足したくて。",
+      "generate_text": "今日は飲み水を少し買い足したくて。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_04_shop.72ab135b2e3a6262.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "4b1139e20f579c7768fc32b313e14b107b77fb635e94140c0a8385d4721b1516"
+    },
+    {
+      "key": "xm_04_cocktail",
+      "subtitle_templates": {
+        "zh": "对了，我带了几杯店里的鸡尾酒。你这儿会收吗？",
+        "ja": "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
+        "en": "Oh, I brought a few cocktails from my bar. Would you buy things like these?"
+      },
+      "spoken_text": "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
+      "generate_text": "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_04_cocktail.4135d249113d5dbf.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "fb0b7c6088597d086825073a60a722bb0ece8b0da53e002cbb4bbf0552a4b0ec"
+    },
+    {
+      "key": "xm_05_01",
+      "subtitle_templates": {
+        "zh": "晚上好。昨天有客人叫我「老板」了。",
+        "ja": "こんばんは。昨日、お客さんに「店長さん」って呼ばれたんです。",
+        "en": "Good evening. A customer called me 'the owner' yesterday."
+      },
+      "spoken_text": "こんばんは。昨日ね、 お客さんに「店長さん」って呼ばれたんです。",
+      "generate_text": "こんばんは。昨日ね、[chuckles] お客さんに「店長さん」って呼ばれたんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_05_01.4bfd872edb64f1ff.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "8b7e214103a2ef7b676209b2210913f5dade91aabed1eb21f3e4648536204e91"
+    },
+    {
+      "key": "xm_05_02",
+      "subtitle_templates": {
+        "zh": "我愣了一下才发现是在叫我。明明是自己的店呢。",
+        "ja": "一瞬、誰のことかと思っちゃいました。自分のお店なのに、変ですよね。",
+        "en": "It took me a moment to realise she meant me. Even though it is my own place."
+      },
+      "spoken_text": "一瞬、誰のことかと思っちゃいました。自分のお店なのに、変ですよね。",
+      "generate_text": "一瞬、誰のことかと思っちゃいました。自分のお店なのに、変ですよね。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_05_02.c07fafe68a0219c0.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "a0b80d2c7d0ba9606dce4577f560af9f774ec744e6163339a0c6a4280f480ff1"
+    },
+    {
+      "key": "xm_05_shop",
+      "subtitle_templates": {
+        "zh": "今天想补点日用品。",
+        "ja": "今日は日用品を少し買い足したくて。",
+        "en": "I'd like a few everyday supplies today."
+      },
+      "spoken_text": "今日は日用品を少し買い足したくて。",
+      "generate_text": "今日は日用品を少し買い足したくて。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_05_shop.64af3d7f18289b20.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "623776ed5e34c9a3c6a42f3b5f4b716c9468fe5e5c7a863dc8e647399ea1d93b"
+    },
+    {
+      "key": "xm_06_01",
+      "subtitle_templates": {
+        "zh": "晚上好。前两天有个客人说，我调的酒有点甜。",
+        "ja": "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
+        "en": "Good evening. A customer told me the other day that my cocktails were a little sweet."
+      },
+      "spoken_text": "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
+      "generate_text": "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_06_01.974c24afa657cec5.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "0a9060e10fdbbc938c887dca32259bd7e3aee43956379197abeff948044b0b64"
+    },
+    {
+      "key": "xm_06_02",
+      "subtitle_templates": {
+        "zh": "可我觉得刚刚好啊……是不是只有我这么觉得？",
+        "ja": "でも、わたしはちょうどいいと思うんですけど……わたしだけかな。",
+        "en": "But I thought they were just right... Am I the only one?"
+      },
+      "spoken_text": "でも、わたしはちょうどいいと思うんですけど…… わたしだけかな。",
+      "generate_text": "でも、わたしはちょうどいいと思うんですけど……[breath] わたしだけかな。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_06_02.49b61dfa2bb0be7b.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "fe295d878b448226936f62cca5bce4667eca13314858dd64e2e571ababd95eb3"
+    },
+    {
+      "key": "xm_06_shop",
+      "subtitle_templates": {
+        "zh": "今天来买点饮用水。",
+        "ja": "今日は飲み水を少し買いに来ました。",
+        "en": "I've come for some drinking water today."
+      },
+      "spoken_text": "今日は飲み水を少し買いに来ました。",
+      "generate_text": "今日は飲み水を少し買いに来ました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_06_shop.eb42d6be2881178e.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "6f7d5b83b549ed4b358f6cc9851fa3578e285f3435870293a6da9d8aa399180c"
+    },
+    {
+      "key": "xm_07_01",
+      "subtitle_templates": {
+        "zh": "晚上好。昨天收到朋友们聚餐的合照。",
+        "ja": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
+        "en": "Good evening. My friends sent me a photo of their get-together yesterday."
+      },
+      "spoken_text": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
+      "generate_text": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_07_01.0059a289a7d452c1.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "c0f1d09f8a3eb736831d0947ce620ea1f38534623db4b0a97cbca2660681fd4d"
+    },
+    {
+      "key": "xm_07_02",
+      "subtitle_templates": {
+        "zh": "她们给我留了个空位，还在上面画了个我。画得一点都不像。",
+        "ja": "写真の空いた席に、わたしの絵まで描き足してくれて。全然似てないんですけどね。",
+        "en": "They left an empty seat for me and even drew me into it. It doesn't look like me at all."
+      },
+      "spoken_text": "写真の空いた席に、わたしの絵まで描き足してくれて。 全然似てないんですけどね。",
+      "generate_text": "写真の空いた席に、わたしの絵まで描き足してくれて。[chuckles] 全然似てないんですけどね。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_07_02.4a5fa5667867379b.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "6aed96bf019bc52bf6029cdb830c536c62aceb44c284099eaaad1f4ac43a85fe"
+    },
+    {
+      "key": "xm_07_shop",
+      "subtitle_templates": {
+        "zh": "今天买点吃的。",
+        "ja": "今日は食べるものを少し。",
+        "en": "I'd like some food today."
+      },
+      "spoken_text": "今日は食べるものを少し。",
+      "generate_text": "今日は食べるものを少し。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_07_shop.9c4f6492a80ccb3d.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "ea5c6807a70df97268095c95306befb46c4ad630caf1b898968675c970f5f886"
+    },
+    {
+      "key": "xm_08_01",
+      "subtitle_templates": {
+        "zh": "晚上好。昨晚来了几个刚下夜班的姑娘，吵吵闹闹的。",
+        "ja": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。すごくにぎやかだったんです。",
+        "en": "Good evening. A few girls came in after their night shift yesterday. They were quite a lively bunch."
+      },
+      "spoken_text": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。 すごくにぎやかだったんです。",
+      "generate_text": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。[laughs] すごくにぎやかだったんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_08_01.7cae149554e66d2b.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "d0840e3f6195c29a6428ec39c688d4db95c984e422c2741c385cd35dbf92a6fd"
+    },
+    {
+      "key": "xm_08_02",
+      "subtitle_templates": {
+        "zh": "她们讲的工作笑话，我一句都没听懂。",
+        "ja": "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
+        "en": "They kept telling jokes about work. I didn't understand a single one."
+      },
+      "spoken_text": "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
+      "generate_text": "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_08_02.18a717607cf18f6a.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "6361a78d3c20ff9653abf2df3a4e3fd2ea4494f9ba7822ded029dc03eb8ad4b4"
+    },
+    {
+      "key": "xm_08_shop",
+      "subtitle_templates": {
+        "zh": "今天想买些日用品。",
+        "ja": "今日は日用品を少し買いに来ました。",
+        "en": "I'm looking for some everyday supplies today."
+      },
+      "spoken_text": "今日は日用品を少し買いに来ました。",
+      "generate_text": "今日は日用品を少し買いに来ました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_08_shop.08fcbc7bbc21d47f.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "d333d853a2b620534496ec4b2c15575e0e59d954e947601c8cb63d9473e9dffa"
+    },
+    {
+      "key": "xm_09_01",
+      "subtitle_templates": {
+        "zh": "晚上好。昨天门口的感应灯亮了好几次。",
+        "ja": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+        "en": "Good evening. The motion light outside my door came on several times yesterday."
+      },
+      "spoken_text": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+      "generate_text": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_09_01.d0923572becba715.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "72bb2529eb28e06faadede98386d4381991c93b44a434df9ba7de4c3b99ef6b1"
+    },
+    {
+      "key": "xm_09_02",
+      "subtitle_templates": {
+        "zh": "我还以为是客人呢。结果都是运货车从门前经过。",
+        "ja": "お客さんかと思ったら、通りかかるのは運搬カートばっかりで。",
+        "en": "I thought I had customers. It was just delivery carts passing by."
+      },
+      "spoken_text": "お客さんかと思ったら…… 通りかかるのは運搬カートばっかりで。",
+      "generate_text": "お客さんかと思ったら……[exhale] 通りかかるのは運搬カートばっかりで。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_09_02.b769fd9e12ea0ed9.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "0deefa6dbe99fd28a2517e52400724fabc177aaf5e657269398fcb5e1561ae37"
+    },
+    {
+      "key": "xm_09_shop",
+      "subtitle_templates": {
+        "zh": "今天想买点吃的。少一些就好。",
+        "ja": "今日は食べるものを。少なめでお願いします。",
+        "en": "I'd like some food today. Just a little will do."
+      },
+      "spoken_text": "今日は食べるものを。少なめでお願いします。",
+      "generate_text": "今日は食べるものを。少なめでお願いします。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_09_shop.4ad7779da26d4fed.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "5ea2d04b88c6aeb91dd2c674c6b5e9082a8bcce85e90d68f23904677ad65cba2"
+    },
+    {
+      "key": "xm_10_01",
+      "subtitle_templates": {
+        "zh": "晚上好。上次来过的一个客人，昨天又来了。",
+        "ja": "こんばんは。前に来たお客さんが、昨日また顔を出してくれたんです。",
+        "en": "Good evening. Someone who'd visited before came back yesterday."
+      },
+      "spoken_text": "こんばんは。前に来たお客さんが、昨日また顔を出してくれたんです。",
+      "generate_text": "こんばんは。前に来たお客さんが、昨日また顔を出してくれたんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_10_01.5450d0c591f9db9e.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "c13d8f8d98e3ba8a75c8c4c920148eb91fff23c5b115b816e36f0aac65c1ba9a"
+    },
+    {
+      "key": "xm_10_02",
+      "subtitle_templates": {
+        "zh": "她还带了朋友。两个人居然都记得我的名字。",
+        "ja": "今度は友達も一緒で。二人とも、わたしの名前を覚えてたんですよ。",
+        "en": "She brought a friend along. Both of them even remembered my name."
+      },
+      "spoken_text": "今度は友達も一緒で。 二人とも、わたしの名前を覚えてたんですよ。",
+      "generate_text": "今度は友達も一緒で。[chuckles] 二人とも、わたしの名前を覚えてたんですよ。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_10_02.bb2c89fb4bb5212a.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "ea3ee60881fd83970309224aca03fa2d85dd586fd0b1eac52daba74c75d95f11"
+    },
+    {
+      "key": "xm_10_shop",
+      "subtitle_templates": {
+        "zh": "想买些饮用水。",
+        "ja": "飲み水を少しお願いします。",
+        "en": "I'd like some drinking water."
+      },
+      "spoken_text": "飲み水を少しお願いします。",
+      "generate_text": "飲み水を少しお願いします。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_10_shop.23c1617c9693735d.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "ee43781edf38e3624474041c3f5c8a9b33c3792beda05167125f24f106f3debe"
+    },
+    {
+      "key": "xm_11_01",
+      "subtitle_templates": {
+        "zh": "晚上好。我把店门上的营业时间改了。",
+        "ja": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
+        "en": "Good evening. I've changed the opening hours on my door."
+      },
+      "spoken_text": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
+      "generate_text": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_11_01.872b71e151f81e38.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "b1ab86806e19d6eefe283faf3ece559a8989e12c77694e2d952b6138dbc6add8"
+    },
+    {
+      "key": "xm_11_02",
+      "subtitle_templates": {
+        "zh": "原来写到凌晨两点，现在改成十二点。这样也能早点回去吃点东西。",
+        "ja": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+        "en": "It used to say two in the morning. Now it says midnight. That gives me time to get home and eat something."
+      },
+      "spoken_text": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+      "generate_text": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_11_02.83b74ff92fa54798.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "467bbb8d156054392723f250bd866aa708356609505f879e77e7dc96a40ece72"
+    },
+    {
+      "key": "xm_11_shop",
+      "subtitle_templates": {
+        "zh": "今天买些日用品。",
+        "ja": "今日は日用品を少し。",
+        "en": "I'd like some everyday supplies today."
+      },
+      "spoken_text": "今日は日用品を少し。",
+      "generate_text": "今日は日用品を少し。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_11_shop.1d08549c65cd8748.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "5eed348488b05f9c8106a5cda0051321f189118f114055dc022fb31b70bc7c6c"
+    },
+    {
+      "key": "xm_12_01",
+      "subtitle_templates": {
+        "zh": "晚上好。最近重新写了酒单。",
+        "ja": "こんばんは。最近、メニューを書き直したんです。",
+        "en": "Good evening. I've been rewriting the drinks menu."
+      },
+      "spoken_text": "こんばんは。最近、メニューを書き直したんです。",
+      "generate_text": "こんばんは。最近、メニューを書き直したんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_12_01.ea5a7ef20d1c2a6d.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "91a5ac727fb1e39a4d4aad4e1aa2cd9a345cccf8486e490a48a9a8ec014d979a"
+    },
+    {
+      "key": "xm_12_02",
+      "subtitle_templates": {
+        "zh": "原来那张塞得满满的，新的一张倒还剩好多空白。",
+        "ja": "前のはぎっしり書いてたのに、新しいのは、まだ余白がたくさんあって。",
+        "en": "The old one was crammed full. There's still plenty of blank space on the new one."
+      },
+      "spoken_text": "前のはぎっしり書いてたのに、新しいのは、まだ余白がたくさんあって。",
+      "generate_text": "前のはぎっしり書いてたのに、新しいのは、まだ余白がたくさんあって。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_12_02.775d289ef0d185ae.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "dc9548a251bb6300255cfe1895003cdb6e12d039b740acdd1730895b8fbf634d"
+    },
+    {
+      "key": "xm_12_shop",
+      "subtitle_templates": {
+        "zh": "今天想买点吃的。",
+        "ja": "今日は食べるものを少し。",
+        "en": "I'd like some food today."
+      },
+      "spoken_text": "今日は食べるものを少し。",
+      "generate_text": "今日は食べるものを少し。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_12_shop.9c4f6492a80ccb3d.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "12404867575c5595ac77ee4ab7288b05feabb16263231386fb88c45b4557a497"
+    },
+    {
+      "key": "xm_13_01",
+      "subtitle_templates": {
+        "zh": "晚上好。最近在找结实一点的箱子。准备搬家了。",
+        "ja": "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
+        "en": "Good evening. I've been looking for some sturdy boxes. I'm getting ready to move."
+      },
+      "spoken_text": "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
+      "generate_text": "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_13_01.5a9c546b061d1e22.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "bc2484d61f743349d4e97b29c64ef87c8ad16b18309f74f09089fdb3b21e735e"
+    },
+    {
+      "key": "xm_13_02",
+      "subtitle_templates": {
+        "zh": "酒杯比衣服难装多了。早知道就不买那么多了。",
+        "ja": "グラスって、服よりずっと荷造りが大変で。……こんなに買わなきゃよかったかな。",
+        "en": "Glasses are much harder to pack than clothes. I wish I hadn't bought quite so many."
+      },
+      "spoken_text": "グラスって、服よりずっと荷造りが大変で。 こんなに買わなきゃよかったかな。",
+      "generate_text": "グラスって、服よりずっと荷造りが大変で。[chuckles] こんなに買わなきゃよかったかな。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_13_02.3d9b00c8907b1a0d.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "915a491ca76bc95ff86c11cfdb7c3536da00bc27cd2dbbd2522f447d8fe676da"
+    },
+    {
+      "key": "xm_13_shop",
+      "subtitle_templates": {
+        "zh": "今天想买些日用品。",
+        "ja": "今日は日用品を少し買いたくて。",
+        "en": "I'd like some everyday supplies today."
+      },
+      "spoken_text": "今日は日用品を少し買いたくて。",
+      "generate_text": "今日は日用品を少し買いたくて。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_13_shop.5dc00a9a7ee8b785.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "0aa574b4d8db0383551c5684f7582eb11b224998b7c22128aacc1569855c0e45"
+    },
+    {
+      "key": "xm_14_01",
+      "subtitle_templates": {
+        "zh": "……晚上好。明天就坐船了，要回老家去。",
+        "ja": "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
+        "en": "...Good evening. I'm taking the ship tomorrow. I've decided to go home."
+      },
+      "spoken_text": "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
+      "generate_text": "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_14_01.9d45043f366828dc.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "404f3ad3778f8dd6394cf8d4c1fa3ca10e0a025223dad4c4096acb967dc92ad2"
+    },
+    {
+      "key": "xm_14_02",
+      "subtitle_templates": {
+        "zh": "东西都寄走了，剩我一个人带着背包。倒像刚搬来的时候。",
+        "ja": "荷物は先に送っちゃって、今はリュック一つだけ。……なんだか、来たばかりの頃みたいですね。",
+        "en": "I've sent everything ahead. It's just me and a backpack now. A bit like when I first arrived."
+      },
+      "spoken_text": "荷物は先に送っちゃって、今はリュック一つだけ。……なんだか、来たばかりの頃みたいですね。",
+      "generate_text": "荷物は先に送っちゃって、今はリュック一つだけ。……なんだか、来たばかりの頃みたいですね。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_14_02.d82a3c6b819469ef.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "aeb4eb5d6db0aea9ddddba864b73f45142bf458f9809214eff63f98a0878bc27"
+    },
+    {
+      "key": "xm_14_shop",
+      "subtitle_templates": {
+        "zh": "想买点路上喝的水。",
+        "ja": "船で飲む水を、少し買いたくて。",
+        "en": "I'd like some water for the journey."
+      },
+      "spoken_text": "船で飲む水を、少し買いたくて。",
+      "generate_text": "船で飲む水を、少し買いたくて。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_14_shop.960c5d4a2495684a.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "bcc95d91a97d4c6ca59b65620a124ca0fe8dd090a7f1138a42ded58101120681"
+    },
+    {
+      "key": "xm_14_accept",
+      "subtitle_templates": {
+        "zh": "嗯，谢谢。正好。",
+        "ja": "うん、ちょうどよかった。ありがとうございます。",
+        "en": "Yes, thank you. Just right."
+      },
+      "spoken_text": "うん、ちょうどよかった。ありがとうございます。",
+      "generate_text": "うん、ちょうどよかった。ありがとうございます。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_14_accept.f0bb57a245d200c2.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "55cb6eead365add9a3077dba21d330ff52db41943d733959b8481b90e1540517"
+    },
+    {
+      "key": "xm_14_bye",
+      "subtitle_templates": {
+        "zh": "那……我走啦。",
+        "ja": "それじゃ……行きますね。",
+        "en": "Well... I'd better go."
+      },
+      "spoken_text": "それじゃ……行きますね。",
+      "generate_text": "それじゃ……行きますね。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_14_bye.0a85b9f43f520df6.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "a9f17b7bb0bb327912c1c50ecc7eb8ff12b4c687758939184d0b875bd75afd98"
+    },
+    {
+      "key": "xm_repeat_first",
+      "subtitle_templates": {
+        "zh": "吃的或者饮用水，都可以。",
+        "ja": "食べるものでも、飲み水でも大丈夫です。",
+        "en": "Food or drinking water. Either is fine."
+      },
+      "spoken_text": "食べるものでも、飲み水でも大丈夫です。",
+      "generate_text": "食べるものでも、飲み水でも大丈夫です。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_repeat_first.e178eddcf54fc265.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "8b919828a716cdca280244fc819abc9736f92ea5d59247932d0b4621faffc6c7"
+    },
+    {
+      "key": "xm_cocktail_accept",
+      "subtitle_templates": {
+        "zh": "谢谢，希望合你的口味。",
+        "ja": "ありがとうございます。お口に合うといいんですけど。",
+        "en": "Thank you. I hope it's to your taste."
+      },
+      "spoken_text": "ありがとうございます。お口に合うといいんですけど。",
+      "generate_text": "ありがとうございます。お口に合うといいんですけど。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_cocktail_accept.63c1e6b4b9f6e233.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "f942bb2405cb2dc9d4c5755c052b5a0d65bcbd676223c4de3228ddc7aa172bba"
+    },
+    {
+      "key": "intro_1",
+      "subtitle_templates": {
+        "zh": "……你好。看见这边还亮着灯，就进来了。",
+        "ja": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+        "en": "...Hello. I saw the light was still on, so I came in."
+      },
+      "spoken_text": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+      "generate_text": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/xiaoman_intro_1_ja_ayano_1p1.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "c15fbdbd49a197a54fb484b9a371e3dd1f02335047afe00440dc6feda43f9ee0",
+      "speed": 1.1,
+      "text_normalization": false
+    },
+    {
+      "key": "goodbye",
+      "subtitle_templates": {
+        "zh": "那我先走啦。下次见。",
+        "ja": "それじゃ、そろそろ行きますね。また。",
+        "en": "I'd better go. See you next time."
+      },
+      "spoken_text": "それじゃ、そろそろ行きますね。また。",
+      "generate_text": "それじゃ、そろそろ行きますね。また。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/goodbye.f2f34fdee09cccac.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "ee1fb5a6b1fca4d9fd91ca50fe481f6633960c17e7c3055c4bff3885bb845f1f"
+    },
+    {
+      "key": "wrong_item",
+      "subtitle_templates": {
+        "zh": "这个……今天暂时用不上。",
+        "ja": "これは……今日は使わないかな。",
+        "en": "This... I don't need it today."
+      },
+      "spoken_text": "これは……今日は使わないかな。",
+      "generate_text": "これは……今日は使わないかな。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/wrong_item.1a8a4bbef2d2dc31.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "1786fcd3b9a106253ba9dd69f0540957c30cecee13854920d3b2ff3038bf02b1"
+    },
+    {
+      "key": "right_item",
+      "subtitle_templates": {
+        "zh": "嗯，就是这种。",
+        "ja": "うん、これです。",
+        "en": "Yes, that's the kind I meant."
+      },
+      "spoken_text": "うん、これです。",
+      "generate_text": "うん、これです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/right_item.96a2835e687e5b4f.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "7a226cfd1bfe09cfe24e172564fa3996439a4992200615cc7b0f00755cf294a9"
+    },
+    {
+      "key": "repeat",
+      "subtitle_templates": {
+        "zh": "普通饮用水就好。别的先不用啦。",
+        "ja": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
+        "en": "Just ordinary drinking water. I don't need anything else today."
+      },
+      "spoken_text": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
+      "generate_text": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/repeat.280d54bf5d014ec1.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "1756f07dad98a89a10d138b2013b156af12282ea540df68a0ae6b2ee630725cd"
+    },
+    {
+      "key": "accept_return",
+      "subtitle_templates": {
+        "zh": "嗯，谢谢。今天也帮上忙了。",
+        "ja": "うん、ありがとう。今日も助かりました。",
+        "en": "Thank you. You've helped me out again."
+      },
+      "spoken_text": "うん、ありがとう。今日も助かりました。",
+      "generate_text": "うん、ありがとう。今日も助かりました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/accept_return.c48e9ea4333d2758.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "a710fd88cdd21b6f590f1d552af014b0f281ed7f602c655afef2135de612cbfd"
+    },
+    {
+      "key": "goodbye_discount",
+      "subtitle_templates": {
+        "zh": "还特地算便宜了……谢谢，帮大忙了。那我先走啦。",
+        "ja": "お安くしてくれたんですね……ありがとうございます。助かりました。それじゃ、また。",
+        "en": "You even gave me a discount... Thank you, that really helps. I'd better get going."
+      },
+      "spoken_text": "お安くしてくれたんですね……ありがとうございます。 ちょっと助かっちゃいました。それじゃ、また。",
+      "generate_text": "お安くしてくれたんですね……ありがとうございます。[chuckles] ちょっと助かっちゃいました。それじゃ、また。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/goodbye_discount.4a5deadaefaeda52.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "2f3f3b2373b00a22eec3942b158440fbd24c0820e691c21f0e2aecd6daddc86b"
+    },
+    {
+      "key": "repeat_food",
+      "subtitle_templates": {
+        "zh": "吃的就好。其他东西这次先不买啦。",
+        "ja": "食べ物だけで大丈夫です。他のものは、また今度。",
+        "en": "Just food. I don't need anything else this time."
+      },
+      "spoken_text": "食べ物だけで大丈夫です。他のものは、また今度。",
+      "generate_text": "食べ物だけで大丈夫です。他のものは、また今度。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/repeat_food.d52bedb69c0a8104.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "2716e0a90e4b01aa8fec4aea42610a742555df0e016dadfef2a149196194a627"
+    },
+    {
+      "key": "repeat_household",
+      "subtitle_templates": {
+        "zh": "日常用的东西就好，今天先把这些买齐。",
+        "ja": "普段使うものを。今日はそれを揃えたくて。",
+        "en": "Everyday supplies. I'd like to get those sorted out today."
+      },
+      "spoken_text": "普段使うものを。今日はそれを揃えたくて。",
+      "generate_text": "普段使うものを。今日はそれを揃えたくて。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/repeat_household.fc8945de73d65d6f.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "1194c6b24f77c1f2f2bfff8a75b3a40368f91bbcf8c3bd4fd8d3f83effeaa276"
+    },
+    {
+      "key": "xm_act_discount_accept_01",
+      "subtitle_templates": {
+        "zh": "啊，稍微便宜了一些。谢谢你。",
+        "ja": "あ、少し安くなるんですね。ありがとうございます。",
+        "en": "Oh, a little cheaper. Thank you."
+      },
+      "spoken_text": "あ、少し安くなるんですね。ありがとうございます。",
+      "generate_text": "あ、少し安くなるんですね。ありがとうございます。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_discount_accept_01.00cabb746c5bf36a.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "9cd7b73a944429287df21c5efe6deb312cfd87f90d2fc3aaae96bb150547d779"
+    },
+    {
+      "key": "xm_act_discount_accept_02",
+      "subtitle_templates": {
+        "zh": "真的可以吗？那就拜托啦。",
+        "ja": "いいんですか？ じゃあ、お願いします。",
+        "en": "Are you sure? I'll take you up on that, then."
+      },
+      "spoken_text": "いいんですか？ じゃあ、お願いします。",
+      "generate_text": "いいんですか？ じゃあ、お願いします。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_discount_accept_02.c005aa89de7bfdc6.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "133dda6a9ace299dfe9fd68a58ed20ed13881273e3b380822a7a5224f6d05d55"
+    },
+    {
+      "key": "xm_act_discount_accept_03",
+      "subtitle_templates": {
+        "zh": "帮大忙了。那就按这个价钱吧。",
+        "ja": "助かります。それじゃ、このお値段でお願いします。",
+        "en": "That really helps. Let's go with that price."
+      },
+      "spoken_text": "助かります。それじゃ、このお値段でお願いします。",
+      "generate_text": "助かります。それじゃ、このお値段でお願いします。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_discount_accept_03.31c6d01d2006debf.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "181debef687b84704eadd1d157d288539d5e931d03d5addbd4a42b70b57479ec"
+    },
+    {
+      "key": "xm_act_discount_accept_high_01",
+      "subtitle_templates": {
+        "zh": "诶，便宜这么多？……真的可以吗？",
+        "ja": "えっ、そんなに安くしてくれるんですか？ 本当にいいんですか？",
+        "en": "Oh, that much off? ...Are you sure?"
+      },
+      "spoken_text": "えっ、 そんなに安くしてくれるんですか？ 本当にいいんですか？",
+      "generate_text": "えっ、[gasps] そんなに安くしてくれるんですか？ 本当にいいんですか？",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_discount_accept_high_01.23353900353ef310.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "1a60e9fd0057566444c8c96791f9435cb4befc3c7d8f9ee8ddc6fa8a541a140d"
+    },
+    {
+      "key": "xm_act_discount_accept_high_02",
+      "subtitle_templates": {
+        "zh": "太照顾我了……真的谢谢。",
+        "ja": "そこまでしてもらって……本当にありがとうございます。",
+        "en": "You're being so kind to me... Thank you, really."
+      },
+      "spoken_text": "そこまでしてもらって……本当にありがとうございます。",
+      "generate_text": "そこまでしてもらって……本当にありがとうございます。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_discount_accept_high_02.11f73dc4d4fa51d6.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "e3d06240ad82a7e2b9e7f25b1dcf168b704671db3db4981c41df74e9390644bc"
+    },
+    {
+      "key": "xm_act_discount_accept_high_03",
+      "subtitle_templates": {
+        "zh": "吓我一跳。那我就不客气了。",
+        "ja": "びっくりしました。じゃあ、お言葉に甘えちゃおうかな。",
+        "en": "You surprised me. I'll gladly take you up on that."
+      },
+      "spoken_text": "びっくりしました。 じゃあ、お言葉に甘えちゃおうかな。",
+      "generate_text": "びっくりしました。[chuckles] じゃあ、お言葉に甘えちゃおうかな。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_discount_accept_high_03.2c044755d0f761bc.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "3f6c8f68a6d766801b93dd0cbd8c6b5988d08e8e530ceedfdbc7f3d4affbfba9"
+    },
+    {
+      "key": "xm_act_budget_increase_01",
+      "subtitle_templates": {
+        "zh": "这样还能再买点别的呢。",
+        "ja": "これなら、もう少し買い物できそうですね。",
+        "en": "That leaves enough to buy something else."
+      },
+      "spoken_text": "これなら、もう少し買い物できそうですね。",
+      "generate_text": "これなら、もう少し買い物できそうですね。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_budget_increase_01.f0ff18d67ad4dcc5.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "b4d2b17a9e0cbf3f6f7ce96043c459fe95536af305a946056e45813c19a1464d"
+    },
+    {
+      "key": "xm_act_budget_increase_02",
+      "subtitle_templates": {
+        "zh": "省下的这点钱，可以再挑一样。",
+        "ja": "浮いた分で、もう一つ見てみようかな。",
+        "en": "With what I've saved, I can pick out one more thing."
+      },
+      "spoken_text": "浮いた分で、もう一つ見てみようかな。",
+      "generate_text": "浮いた分で、もう一つ見てみようかな。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_budget_increase_02.6af5c8a5ed870907.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "fdc18735444a7b02a4ed775c8251e136a4ffda639e7de1e7473dc2d99a9dd5f1"
+    },
+    {
+      "key": "xm_act_budget_increase_03",
+      "subtitle_templates": {
+        "zh": "还有预算。能再看看别的吗？",
+        "ja": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
+        "en": "I still have some money left. Could I look at something else?"
+      },
+      "spoken_text": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
+      "generate_text": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_budget_increase_03.66ad699950aaff55.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "189a84c218bf2e53dc2174cc019338a53ee2a4b74c18f99f9e64966af4b513ba"
+    },
+    {
+      "key": "xm_act_markup_accept_01",
+      "subtitle_templates": {
+        "zh": "……好吧。那就这样。",
+        "ja": "……分かりました。それでお願いします。",
+        "en": "...All right. Let's do that."
+      },
+      "spoken_text": "……分かりました。それでお願いします。",
+      "generate_text": "……分かりました。それでお願いします。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_accept_01.6b4b5fd210b73aa5.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "243e03ec8930745902257a2bd47ed6642dd17c6cb2d53f2424a4aac867fc662c"
+    },
+    {
+      "key": "xm_act_markup_accept_02",
+      "subtitle_templates": {
+        "zh": "是比刚才贵一点……不过今天确实需要。",
+        "ja": "さっきより高いけど……今日は必要なので。",
+        "en": "That's a little more than before... But I do need it today."
+      },
+      "spoken_text": "さっきより高いけど……今日は必要なので。",
+      "generate_text": "さっきより高いけど……今日は必要なので。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_accept_02.176fcabcb6827166.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "bb3f431c75e515698aa9e7c64730b9babb309871775f6abd958c2aa2a11d18e5"
+    },
+    {
+      "key": "xm_act_markup_accept_03",
+      "subtitle_templates": {
+        "zh": "嗯……这回就按你说的吧。",
+        "ja": "うーん……今回は、そのお値段で。",
+        "en": "Hmm... I'll go with your price this time."
+      },
+      "spoken_text": "うーん……今回は、そのお値段で。",
+      "generate_text": "うーん……今回は、そのお値段で。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_accept_03.bd210b05ab625e16.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "6d4e3df4cb8652e976c3d8fe8a2f8d7cef6d7cd329fe14f8d5ec86d7b9f1829b"
+    },
+    {
+      "key": "xm_act_markup_accept_high_01",
+      "subtitle_templates": {
+        "zh": "居然加这么多……算了，这次还是要买。",
+        "ja": "こんなに上がるんですか……。でも、今回はお願いします。",
+        "en": "That much more...? Never mind. I still need to buy it this time."
+      },
+      "spoken_text": "こんなに上がるんですか……。でも、今回はお願いします。",
+      "generate_text": "こんなに上がるんですか……。でも、今回はお願いします。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_accept_high_01.c7064605315c7f94.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "425aeb0bf934b184f497e7e130e09c2ca8b38d558ca72fb5ee03fe8fb097d736"
+    },
+    {
+      "key": "xm_act_markup_accept_high_02",
+      "subtitle_templates": {
+        "zh": "好贵啊。……我是真的需要这个。",
+        "ja": "高いですね……。これだけは必要なので。",
+        "en": "That's expensive. ...I really do need this."
+      },
+      "spoken_text": "高いですね……。 これだけは必要なので。",
+      "generate_text": "高いですね……。[sighs] これだけは必要なので。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_accept_high_02.6ccdf58cc875c6ad.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "b679a7031f2b8bde4c1281d692245de181b110d762f2d24dd8819352334e6d43"
+    },
+    {
+      "key": "xm_act_markup_accept_high_03",
+      "subtitle_templates": {
+        "zh": "……确认是这个价钱？我明白了。",
+        "ja": "……本当にこのお値段なんですね。分かりました。",
+        "en": "...You're sure that's the price? I understand."
+      },
+      "spoken_text": "……本当にこのお値段なんですね。分かりました。",
+      "generate_text": "……本当にこのお値段なんですね。分かりました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_accept_high_03.bd0affb69e59f3f6.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "cb8050574e7cb449ea69a2fbd5a7c9950317f8d26c31ded96718aa414b1109a8"
+    },
+    {
+      "key": "xm_act_budget_decrease_01",
+      "subtitle_templates": {
+        "zh": "啊……剩下的钱不多了。",
+        "ja": "あ……残りの予算、少なくなっちゃいました。",
+        "en": "Oh... I don't have much money left."
+      },
+      "spoken_text": "あ……残りの予算、少なくなっちゃいました。",
+      "generate_text": "あ……残りの予算、少なくなっちゃいました。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_budget_decrease_01.96800c83fad34b4a.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "5d1396906a761d3fb6b7b2ef65795dde2076771459e5b866a83a4061cbd6e424"
+    },
+    {
+      "key": "xm_act_budget_decrease_02",
+      "subtitle_templates": {
+        "zh": "这样今天就不能买太多了呢。",
+        "ja": "これだと、今日はあまり買えませんね。",
+        "en": "I won't be able to buy very much today, then."
+      },
+      "spoken_text": "これだと、今日はあまり買えませんね。",
+      "generate_text": "これだと、今日はあまり買えませんね。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_budget_decrease_02.5d95e788aec4986e.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "9877dc221a2ef1291bb2f9bf583048b9527e2068f1d909fb70b8b6edbd2cf6e5"
+    },
+    {
+      "key": "xm_act_budget_decrease_03",
+      "subtitle_templates": {
+        "zh": "原本还想多买一样……算啦，下次吧。",
+        "ja": "もう一つ買うつもりだったんですけど……また今度にします。",
+        "en": "I was hoping to get one more thing... Oh well. Next time."
+      },
+      "spoken_text": "もう一つ買うつもりだったんですけど……また今度にします。",
+      "generate_text": "もう一つ買うつもりだったんですけど……また今度にします。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_budget_decrease_03.62bd563231166737.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "52162b61418855b1ac016d0fa916334d738eaf32159a046f22bd03dfc67b3d0f"
+    },
+    {
+      "key": "xm_act_markup_reject_01",
+      "subtitle_templates": {
+        "zh": "抱歉，这个价钱我还是不要了。",
+        "ja": "すみません。そのお値段なら、今回はやめておきます。",
+        "en": "I'm sorry, but I'll have to pass at that price."
+      },
+      "spoken_text": "すみません。そのお値段なら、今回はやめておきます。",
+      "generate_text": "すみません。そのお値段なら、今回はやめておきます。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_reject_01.47776892bbbef0c1.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "1cbad916daa9ec75dddd48cd173f6a423fe7a718d24405146efc88554f7ab3f2"
+    },
+    {
+      "key": "xm_act_markup_reject_02",
+      "subtitle_templates": {
+        "zh": "唔……预算有点不够。",
+        "ja": "うーん……ちょっと予算が足りなくて。",
+        "en": "Hmm... That's a little beyond my budget."
+      },
+      "spoken_text": "うーん……ちょっと予算が足りなくて。",
+      "generate_text": "うーん……ちょっと予算が足りなくて。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_reject_02.acaaaeda4a285637.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "7592dc321cc1fdc9fadbcc50c2457eb1f67f8dfd644b8456cd51a3bc92c15404"
+    },
+    {
+      "key": "xm_act_markup_reject_03",
+      "subtitle_templates": {
+        "zh": "这个价钱有点难接受。",
+        "ja": "その金額だと、ちょっと難しいです。",
+        "en": "That price is a little hard to accept."
+      },
+      "spoken_text": "その金額だと、ちょっと難しいです。",
+      "generate_text": "その金額だと、ちょっと難しいです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_reject_03.c86fd13739721f51.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "d1e57f9b9ec7645a3ec99ebda2ad46c36ded51283cd193b4f94c0a3787d5420b"
+    },
+    {
+      "key": "xm_act_markup_reject_high_01",
+      "subtitle_templates": {
+        "zh": "……诶？这也太贵了吧。",
+        "ja": "……えっ？ さすがに高すぎませんか。",
+        "en": "...What? That's far too expensive."
+      },
+      "spoken_text": "……えっ、 さすがに高すぎませんか。",
+      "generate_text": "……えっ、[gasps] さすがに高すぎませんか。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_reject_high_01.f1d0fd571272b5cb.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "30dc35991ebdead54cac09b3f5bd74f0fcf9311e78cd8047d9a68bb0b4f2ae0f"
+    },
+    {
+      "key": "xm_act_markup_reject_high_02",
+      "subtitle_templates": {
+        "zh": "对不起，这个价钱我买不了。",
+        "ja": "ごめんなさい。そのお値段では買えません。",
+        "en": "I'm sorry, I can't buy it at that price."
+      },
+      "spoken_text": "ごめんなさい。そのお値段では買えません。",
+      "generate_text": "ごめんなさい。そのお値段では買えません。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_reject_high_02.5c5c2ba748887188.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "1c139bde4f3454c6fd343a58254c7ed14f4602d55e3b82b38fe6bb338e5c439a"
+    },
+    {
+      "key": "xm_act_markup_reject_high_03",
+      "subtitle_templates": {
+        "zh": "这样的话，今天还是算了。",
+        "ja": "それなら、今日はやめておきます。",
+        "en": "In that case, I'll leave it for today."
+      },
+      "spoken_text": "それなら、今日はやめておきます。",
+      "generate_text": "それなら、今日はやめておきます。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_markup_reject_high_03.0a550a95eac6f36a.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "c40b5b4456dd553b4bdc23fe502b7ffca53578cad9143a49c4aba3b4d82f5e28"
+    },
+    {
+      "key": "xm_act_angry_leave_01",
+      "subtitle_templates": {
+        "zh": "……够了。今天我先回去了。",
+        "ja": "……もう結構です。今日は帰ります。",
+        "en": "...That's enough. I'm going home."
+      },
+      "spoken_text": "……もう結構です。今日は帰ります。",
+      "generate_text": "……もう結構です。今日は帰ります。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_angry_leave_01.f1dd44555f8c3175.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "2c4141276560a0a51b56c338ff5096e53e481b869ce804f0f5c924ec3ddacda4"
+    },
+    {
+      "key": "xm_act_angry_leave_02",
+      "subtitle_templates": {
+        "zh": "继续说也没意义了。失礼了。",
+        "ja": "これ以上お話ししても仕方なさそうなので。失礼します。",
+        "en": "There's no point in discussing this any further. Excuse me."
+      },
+      "spoken_text": "これ以上お話ししても仕方なさそうなので。失礼します。",
+      "generate_text": "これ以上お話ししても仕方なさそうなので。失礼します。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_angry_leave_02.4a5cd663d09e952c.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "5912f2c472c73a2e77fa943b2cf7e8ad12577174555b221bdcd982a0e78025b3"
+    },
+    {
+      "key": "xm_act_angry_leave_03",
+      "subtitle_templates": {
+        "zh": "对不起，我没办法继续在这里买东西了。",
+        "ja": "すみません。もうここでは買い物できません。",
+        "en": "I'm sorry, but I can't keep shopping here."
+      },
+      "spoken_text": "すみません。もうここでは買い物できません。",
+      "generate_text": "すみません。もうここでは買い物できません。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_angry_leave_03.771e5400facb9aba.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "2801d947ead5fc7777c1c08f93bbf7175eadb51bc0a3f57241998b85691195b5"
+    },
+    {
+      "key": "xm_act_bad_word_01",
+      "subtitle_templates": {
+        "zh": "这种事，我会和认识的人说清楚的。",
+        "ja": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
+        "en": "I'll make sure the people I know hear about this."
+      },
+      "spoken_text": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
+      "generate_text": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_bad_word_01.bd3529df724f80db.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "0fe567e8fcd13815b8cd0c6f503d16d10c29e907e158dbe8548add80706b7f4a"
+    },
+    {
+      "key": "xm_act_bad_word_02",
+      "subtitle_templates": {
+        "zh": "抱歉……但别人问起这家店，我没法当作什么都没发生。",
+        "ja": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
+        "en": "I'm sorry... But if someone asks about this shop, I can't pretend nothing happened."
+      },
+      "spoken_text": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
+      "generate_text": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_bad_word_02.588b3904d22f851a.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "c5959592b386dc2f22bc26a21b42364a72f6bf7b78426531188d0596f1a02068"
+    },
+    {
+      "key": "xm_act_bad_word_03",
+      "subtitle_templates": {
+        "zh": "这里的传闻很快的。希望你以后别这样了。",
+        "ja": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
+        "en": "Word travels fast here. I hope you won't do this again."
+      },
+      "spoken_text": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
+      "generate_text": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_bad_word_03.4c6d5eeb27928672.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "a2cf6425f1d6e364822087a8e71e9c607946a28e1d588649551c840a74832d32"
+    },
+    {
+      "key": "xm_act_blackmail_innocent_01",
+      "subtitle_templates": {
+        "zh": "……罪犯？是在说我吗？不是的。请不要随便这样指控人。",
+        "ja": "……犯罪者って、わたしのことですか？ 違います。そんなふうに決めつけないでください。",
+        "en": "...A criminal? Do you mean me? I'm not. Please don't accuse people like that."
+      },
+      "spoken_text": "……犯罪者って、わたしのことですか？  違います。そんなふうに決めつけないでください。",
+      "generate_text": "……犯罪者って、わたしのことですか？ [inhales] 違います。そんなふうに決めつけないでください。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_blackmail_innocent_01.4959121cb9d400ca.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "0b0c5caa1d587ef96ba9e717bafd1f8f1c9c53703f4bb1b8bd0301444811efee"
+    },
+    {
+      "key": "xm_act_blackmail_innocent_02",
+      "subtitle_templates": {
+        "zh": "这个玩笑，一点也不好笑。我什么都没做。",
+        "ja": "そういう冗談、笑えません。わたし、何もしてませんよ。",
+        "en": "That isn't funny at all. I haven't done anything."
+      },
+      "spoken_text": "そういう冗談、笑えません。わたし、何もしてませんよ。",
+      "generate_text": "そういう冗談、笑えません。わたし、何もしてませんよ。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_blackmail_innocent_02.6cf83ac3928b6760.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "89e6b9a8304776811abc1fbcfa9cbb3d9d7eecac095ad3c5546f2e06c504e825"
+    },
+    {
+      "key": "xm_act_blackmail_innocent_03",
+      "subtitle_templates": {
+        "zh": "为什么突然说这种话？我只是来买东西的。",
+        "ja": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
+        "en": "Why would you say that? I only came here to buy things."
+      },
+      "spoken_text": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
+      "generate_text": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_blackmail_innocent_03.30568327d8c253fc.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "fb96dfe8242e9eb98773b359db09dae4b47aa9e781ec177e9ccf19267ad4afd1"
+    },
+    {
+      "key": "xm_act_threaten_false_aug_01",
+      "subtitle_templates": {
+        "zh": "……改造体？我不是。",
+        "ja": "……AI人間？ わたし、違いますよ。",
+        "en": "...An aug? I'm not."
+      },
+      "spoken_text": "……AI人間？ わたし、違いますよ。",
+      "generate_text": "……AI人間？ わたし、違いますよ。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_threaten_false_aug_01.b1207e187de5b219.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "97f85272d3c815c772684eb3a1e6a50a48dab75e678000d7dcddea351976e9a1"
+    },
+    {
+      "key": "xm_act_threaten_false_aug_02",
+      "subtitle_templates": {
+        "zh": "能不能看清楚再说？我不是改造体。",
+        "ja": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
+        "en": "Could you take a proper look first? I'm not an aug."
+      },
+      "spoken_text": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
+      "generate_text": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_threaten_false_aug_02.3dde3437f007ee4c.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "608bd5fd339be5af83ac32b998641cd377f1a245efd450f8db4f2e9945fa3910"
+    },
+    {
+      "key": "xm_act_threaten_false_aug_03",
+      "subtitle_templates": {
+        "zh": "别拿这个吓我……真的不是。",
+        "ja": "そんなことで脅かさないでください……本当に違うんです。",
+        "en": "Don't try to scare me with that... I'm really not."
+      },
+      "spoken_text": "そんなことで脅かさないでください……本当に違うんです。",
+      "generate_text": "そんなことで脅かさないでください……本当に違うんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_threaten_false_aug_03.72e408d77ac2f1be.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "97963b120b8d8eeae7633d5abf64973954fd32d8239d1c69dbcb1330136c1f80"
+    },
+    {
+      "key": "xm_act_after_sale_continue_01",
+      "subtitle_templates": {
+        "zh": "还有别的吗？我想再看看。",
+        "ja": "ほかにもありますか？ もう少し見てみたいです。",
+        "en": "Do you have anything else? I'd like another look."
+      },
+      "spoken_text": "ほかにもありますか？ もう少し見てみたいです。",
+      "generate_text": "ほかにもありますか？ もう少し見てみたいです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_after_sale_continue_01.fe2051041ac5711a.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "5334acbfadd057f301a55e78ce3a42dc5e4e81897217d1248f0afcd8834aee8c"
+    },
+    {
+      "key": "xm_act_after_sale_low_budget_01",
+      "subtitle_templates": {
+        "zh": "啊……预算差不多用完了。今天就这些吧。",
+        "ja": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
+        "en": "Oh... That's nearly all my money. That'll be enough for today."
+      },
+      "spoken_text": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
+      "generate_text": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_after_sale_low_budget_01.587103802da1a590.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "0779158c45463af773150d209b2fd986b9096fd4895d9f067cbb74510de62ca4"
+    },
+    {
+      "key": "xm_act_reject_contraband_01",
+      "subtitle_templates": {
+        "zh": "抱歉，这种东西我不能买。",
+        "ja": "すみません。こういうものは、買えないんです。",
+        "en": "I'm sorry, I can't buy things like that."
+      },
+      "spoken_text": "すみません。こういうものは、買えないんです。",
+      "generate_text": "すみません。こういうものは、買えないんです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_reject_contraband_01.a7a328cf26ca8272.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "a1f4f668ace33d85f67939d005dcb74fd3022dd0a4ec9c947fd4a7faa58a9037"
+    },
+    {
+      "key": "xm_act_remove_filter_01",
+      "subtitle_templates": {
+        "zh": "不好意思，可以先把里面的滤芯取出来吗？我只买水。",
+        "ja": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
+        "en": "Excuse me, could you take the filter out first? I only want the water."
+      },
+      "spoken_text": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
+      "generate_text": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_remove_filter_01.813e77b550e10d8b.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "9d9520ed3bd2dd6341ebe5e785302147af6f07c07acde1e2f6366bb6fc0a4013"
+    },
+    {
+      "key": "xm_act_shutter_close_01",
+      "subtitle_templates": {
+        "zh": "诶，等一下！我还没买完呢！",
+        "ja": "えっ、ちょっと待ってください！ まだ買い物の途中で……！",
+        "en": "Oh, wait! I'm not done shopping yet!"
+      },
+      "spoken_text": "えっ、 ちょっと待ってください！ まだ買い物の途中で……！",
+      "generate_text": "えっ、[gasps] ちょっと待ってください！ まだ買い物の途中で……！",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_shutter_close_01.039c989f8bb2e7d2.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "a307354aac3c46d2cfcd191f0a4ebf2f229a133b9ff3b7ea7c0d8272061b51c8"
+    },
+    {
+      "key": "xm_act_shutter_close_03",
+      "subtitle_templates": {
+        "zh": "……这样有点过分了吧。",
+        "ja": "……それは、ちょっとひどくないですか。",
+        "en": "...That's a little much, isn't it?"
+      },
+      "spoken_text": "……それは、ちょっとひどくないですか。",
+      "generate_text": "……それは、ちょっとひどくないですか。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_shutter_close_03.c3d418866d139f51.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "8c4226daca31441f387f0d7accf714c8bf66d4b27321838d03990fdafe7f1802"
+    },
+    {
+      "key": "xm_act_shutter_close_04",
+      "subtitle_templates": {
+        "zh": "咦，已经要打烊了吗？",
+        "ja": "えっ、もう閉めちゃうんですか？",
+        "en": "Oh, are you closing already?"
+      },
+      "spoken_text": "えっ、もう閉めちゃうんですか？",
+      "generate_text": "えっ、もう閉めちゃうんですか？",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_shutter_close_04.bd7b6b78ea08ba52.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "7598533c8b78cd31e9bdeb084dbfbedc277bb65906d53d21ea489b5b4b9bdc59"
+    },
+    {
+      "key": "xm_act_expose_water_base_01",
+      "subtitle_templates": {
+        "zh": "嗯……这就是普通水吧？和标签不太一样。",
+        "ja": "あれ……これ、普通のお水ですよね。ラベルとちょっと違うみたいです。",
+        "en": "Hmm... This is ordinary water, isn't it? That's not what the label says."
+      },
+      "spoken_text": "あれ……これ、普通のお水ですよね。ラベルとちょっと違うみたいです。",
+      "generate_text": "あれ……これ、普通のお水ですよね。ラベルとちょっと違うみたいです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_expose_water_base_01.1d9074ff33c1ffa9.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "6bdba77471f8a9a06a835ab4d2683a70e39eb62c3b2332509c8b5a2fc83ef59f"
+    },
+    {
+      "key": "xm_act_expose_water_high_01",
+      "subtitle_templates": {
+        "zh": "这应该是优质水吧？标签上好像不是这么写的。",
+        "ja": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
+        "en": "This should be high-quality water. The label seems to say otherwise."
+      },
+      "spoken_text": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
+      "generate_text": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_expose_water_high_01.cd71299947047866.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "527092f3e7add1de8ceb7dc5d47f549bdf071c083c014f210d3a012ab6895fc4"
+    },
+    {
+      "key": "xm_act_expose_water_other_01",
+      "subtitle_templates": {
+        "zh": "这水的纯度和标签上写的不一样。",
+        "ja": "この水、純度がラベルの表示と違うみたいです。",
+        "en": "The purity of this water doesn't match the label."
+      },
+      "spoken_text": "この水、純度がラベルの表示と違うみたいです。",
+      "generate_text": "この水、純度がラベルの表示と違うみたいです。",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_expose_water_other_01.e7da09ab501254ef.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "2a03935fa11954834f74ea91c74f4662c87c977894155a4f5eb6e8e2660ecb08"
+    },
+    {
+      "key": "xm_act_expose_water_other_02",
+      "subtitle_templates": {
+        "zh": "说明和测出来的数值对不上呢。是不是贴错了？",
+        "ja": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
+        "en": "The description and the reading don't match. Could it be the wrong label?"
+      },
+      "spoken_text": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
+      "generate_text": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_expose_water_other_02.4d1a88fb916e160d.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "0e7df354a0665b3216a13bf740a0d7c2375213cb220c9e29a9486612e85040be"
+    },
+    {
+      "key": "xm_act_expose_water_other_03",
+      "subtitle_templates": {
+        "zh": "这个标签上的数字……你确定没写错吗？",
+        "ja": "このラベルの数字……間違ってませんか？",
+        "en": "That number on the label... Are you sure it's right?"
+      },
+      "spoken_text": "このラベルの数字……間違ってませんか？",
+      "generate_text": "このラベルの数字……間違ってませんか？",
+      "generic": false,
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_act_expose_water_other_03.c4f4d50658b25684.wav",
+      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
+      "source_sha256": "8ad660316e7455fe6acf188a684b68a3ca789439587ff4ea6b9f271576f3fed9"
+    }
+  ]
+}

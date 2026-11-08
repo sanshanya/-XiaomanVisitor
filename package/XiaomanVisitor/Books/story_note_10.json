@@ -1,0 +1,77 @@
+{
+  "id": "story_note_10",
+  "title": "A letter from Xiaoman",
+  "background": "sansm.xiaoman.visitor:xiaoman_letter_paper",
+  "width": 628,
+  "height": 784.7201426024956,
+  "designWidth": 314,
+  "designHeight": 392.3600713012478,
+  "posX": -250,
+  "posY": 0,
+  "chrome": [
+    {
+      "type": "button",
+      "id": "close",
+      "action": "close",
+      "sprite": "sansm.xiaoman.visitor:xiaoman_note_close",
+      "hoverSprite": "sansm.xiaoman.visitor:xiaoman_note_close_hover",
+      "x": 297,
+      "y": 2.5,
+      "w": 14,
+      "h": 15
+    }
+  ],
+  "pages": [
+    {
+      "name": "Note",
+      "elements": [
+        {
+          "type": "text",
+          "id": "title",
+          "loc": "story_note_10_title",
+          "style": "title",
+          "fontSize": 12,
+          "x": 30,
+          "y": 30,
+          "w": 250,
+          "h": 22,
+          "color": "#1B304A"
+        },
+        {
+          "type": "text",
+          "id": "body",
+          "loc": "story_note_10_body",
+          "style": "body",
+          "fontSize": 9,
+          "x": 30,
+          "y": 70,
+          "w": 250,
+          "h": 262.3600713012478,
+          "wrap": true,
+          "color": "#1B304A"
+        },
+        {
+          "type": "text",
+          "id": "signature",
+          "loc": "story_note_10_signature",
+          "style": "body",
+          "fontSize": 10,
+          "align": "right",
+          "x": 30,
+          "y": 356.3600713012478,
+          "w": 250,
+          "h": 24,
+          "color": "#1B304A"
+        }
+      ]
+    }
+  ],
+  "item": {
+    "id": "sansm.xiaoman.visitor.story_note_10",
+    "nameLoc": "story_note_10_name",
+    "descriptionLoc": "gift_note_desc",
+    "sprite": "items_misc/handnote",
+    "value": 0,
+    "important": true
+  }
+}

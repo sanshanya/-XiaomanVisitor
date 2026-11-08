@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "これは……今日は使わないかな。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "27",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.718,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 178522
+  },
+  "sha256": "e8065d92a9d14ee62a4afd9d9a2e90aed8148a57ef7d0dcfc1e047dee0561491",
+  "binding": {
+    "key": "wrong_item",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这个……今天暂时用不上。",
+      "ja": "これは……今日は使わないかな。",
+      "en": "This... I don't need it today."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "wrong_item",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "这个……今天暂时用不上。",
+        "ja": "これは……今日は使わないかな。",
+        "en": "这个……今天暂时用不上。"
+      },
+      "generic": false
+    }
+  ]
+}

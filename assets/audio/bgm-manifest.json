@@ -1,0 +1,591 @@
+[
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\49tsukino_hikari.ogg_",
+    "file": "49tsukino_hikari.ogg",
+    "seconds": 285.807,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 0.46218,
+    "tags": {
+      "title": [
+        "月の光"
+      ],
+      "encoder": [
+        "Lavc58.134.100 libvorbis"
+      ],
+      "artist": [
+        "MMT38"
+      ],
+      "lyrics-jpn": [
+        ""
+      ]
+    },
+    "used_in": [],
+    "sha256": "0d5e87f3760a6ed7a86f25b39ebdadbb85d41722d56810347b91805ff5c9a5cc"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EG-1046.ogg_",
+    "file": "EG-1046.ogg",
+    "seconds": 169.501,
+    "sample_rate": 48000,
+    "channels": 2,
+    "peak": 1.16811,
+    "tags": {
+      "initial key": [
+        "C"
+      ],
+      "composer": [
+        "トーマス大森音楽工房"
+      ],
+      "comments": [
+        " 00000000 00000210 000007CA 00000000007C1DA6 00000000 00675840 00000000 00000000 00000000 00000000 00000000 00000000"
+      ],
+      "software": [
+        "Logic Pro X 10.7.5"
+      ],
+      "date": [
+        "2015-03-01T23:44"
+      ],
+      "title": [
+        "No.1046"
+      ],
+      "bpm (beats per minute)": [
+        "148"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ]
+    },
+    "used_in": [
+      "System.json:titleBgm"
+    ],
+    "sha256": "978fc35cc78498d64333f601dbbed9f10fc682236f34bec5385431a35557fe7e"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EG-822.ogg_",
+    "file": "EG-822.ogg",
+    "seconds": 195.044,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 1.13913,
+    "tags": {
+      "initial key": [
+        "C"
+      ],
+      "composer": [
+        "トーマス大森音楽工房"
+      ],
+      "comments": [
+        " 00000000 00000210 000007A4 00000000008337CC 00000000 0076ECE6 00000000 00000000 00000000 00000000 00000000 00000000"
+      ],
+      "software": [
+        "Logic Pro X 10.7.5"
+      ],
+      "date": [
+        "2022-06-13T14:47"
+      ],
+      "title": [
+        "No.822"
+      ],
+      "bpm (beats per minute)": [
+        "80"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ]
+    },
+    "used_in": [],
+    "sha256": "1cb52ba1b9529181c4ad540616812dee75b10252fabf72dbf375034f10e67888"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EG-905.ogg_",
+    "file": "EG-905.ogg",
+    "seconds": 168.844,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 1.12557,
+    "tags": {
+      "initial key": [
+        "C"
+      ],
+      "composer": [
+        "トーマス大森音楽工房"
+      ],
+      "comments": [
+        " 00000000 00000210 00000780 0000000000719670 00000000 0066EF06 00000000 00000000 00000000 00000000 00000000 00000000"
+      ],
+      "software": [
+        "Logic Pro X 10.7.5"
+      ],
+      "date": [
+        "2022-09-05T18:48"
+      ],
+      "title": [
+        "No.905"
+      ],
+      "bpm (beats per minute)": [
+        "75"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ]
+    },
+    "used_in": [],
+    "sha256": "7030fec311213e3c2c424a5f55a1f03962c03448d3493f91aa9ab9b773cbc104"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EG-komori1.ogg_",
+    "file": "EG-komori1.ogg",
+    "seconds": 130.809,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 0.99134,
+    "tags": {
+      "software": [
+        "GarageBand 10.4.11"
+      ],
+      "comments": [
+        " 00000000 00000210 0000077C 000000000057FE74 00000000 002FD4E6 00000000 00000000 00000000 00000000 00000000 00000000"
+      ]
+    },
+    "used_in": [],
+    "sha256": "5ac6aeee819ba7a96f1a8f69a1ecb21cc2a3bd4339f22b6d66bfee73d8a48c92"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EG-MusMus-BGM-175.ogg_",
+    "file": "EG-MusMus-BGM-175.ogg",
+    "seconds": 197.556,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 1.2026,
+    "tags": {
+      "album": [
+        "MusMus"
+      ],
+      "software": [
+        "Studio One 5.5.2.86528"
+      ],
+      "date": [
+        "2024"
+      ],
+      "title": [
+        "ノスタルジア"
+      ],
+      "band": [
+        "watson"
+      ],
+      "genre": [
+        "Lofi"
+      ],
+      "artist": [
+        "watson"
+      ]
+    },
+    "used_in": [],
+    "sha256": "9de14abe3abbdfc5cea90ee5d70048c7093f8e75bf4d0982cab445caf6938c22"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EG-SleepingClock.ogg_",
+    "file": "EG-SleepingClock.ogg",
+    "seconds": 223.875,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 1.0279,
+    "tags": {
+      "title": [
+        "時計は眠っている"
+      ],
+      "encoded by": [
+        "Sound Player Lilith [Ogg Vorbis Plug-in Encoder v0.992Test Release] Author's Site is Project9k at http://www.project9k.jp/"
+      ],
+      "artist": [
+        "FICUSEL"
+      ],
+      "album": [
+        "FICUSEL音楽素材"
+      ]
+    },
+    "used_in": [
+      "CommonEvents.json"
+    ],
+    "sha256": "6757b24771a1686262c42fc0b12ea4afb85309911029479a11c71212b2493ab2"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EG-ThomasOmoriMusicStudio8.ogg_",
+    "file": "EG-ThomasOmoriMusicStudio8.ogg",
+    "seconds": 195.056,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 1.15909,
+    "tags": {
+      "tbp": [
+        "80"
+      ],
+      "tcm": [
+        "トーマス大森音楽工房"
+      ],
+      "tss": [
+        "Logic Pro X 10.7.5"
+      ],
+      "title": [
+        "No.822"
+      ],
+      "date": [
+        "2022-06-13 14:47"
+      ],
+      "encoder": [
+        "Lavc57.64.101 libvorbis"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ],
+      "tke": [
+        "C"
+      ]
+    },
+    "used_in": [
+      "Map002.json"
+    ],
+    "sha256": "c88fb57bed723001da04212dc6e44eeef7d8af96f51cdd31bc9af214bcfa525c"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EG-ThomasOmoriMusicStudio9.ogg_",
+    "file": "EG-ThomasOmoriMusicStudio9.ogg",
+    "seconds": 147.057,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 1.05816,
+    "tags": {
+      "initial key": [
+        "C"
+      ],
+      "composer": [
+        "トーマス大森音楽工房"
+      ],
+      "comments": [
+        " 00000000 00000210 000009E4 000000000062EB0C 00000000 0059A2F1 00000000 00000000 00000000 00000000 00000000 00000000"
+      ],
+      "software": [
+        "Logic Pro X 10.7.5"
+      ],
+      "date": [
+        "2021-12-21T00:51"
+      ],
+      "title": [
+        "No.646"
+      ],
+      "bpm (beats per minute)": [
+        "80"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ]
+    },
+    "used_in": [
+      "Map015.json"
+    ],
+    "sha256": "a102489ec1b9f4ade9406c52f00bd2f25a843b5b9707d2764ce3868946bdfeaf"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EGThomasOmoriMusicStudio1.ogg_",
+    "file": "EGThomasOmoriMusicStudio1.ogg",
+    "seconds": 182.651,
+    "sample_rate": 48000,
+    "channels": 2,
+    "peak": 1.14059,
+    "tags": {
+      "date": [
+        "20220121"
+      ],
+      "title": [
+        "フリーBGM【おしゃれ/カフェ/チル/雨/リラックス/Vlog music/Lofi Hiphop】NCM/NCS"
+      ],
+      "synopsis": [
+        "ご視聴ありがとうございます！\nトーマス大森音楽工房は、個人のフリーBGM制作者として日本一の投稿本数を目指しています。\n活動の励みになりますので、是非チャンネル登録をお願いします！\n\n⬇︎チャンネル登録はこちら⬇︎\nhttps://www.youtube.com/c/FreeMusicThomasOomori\n\n■■■トーマス大森ご支援リンク■■■　お恵みを…😢🙏\nhttps://www.amazon.jp/hz/wishlist/ls/26KVX8RX7L490?ref_=wl_share\n\nBGM：No.678\n1時間耐久版(No.819)：https://youtu.be/5LnzYU97SNA\n5時間耐久版(No.1553)：https://youtu.be/2TGMNo2S8J8\n\n■利用規約で許可されている範囲内であれば、商用・非商用問わず動画や配信などのコンテンツで、無償にて自由にご利用いただけます。\n■コメントやTwitterのDMなどへの使用許可連絡などは不要です。\n■クレジット表記は可能な限りお願いしております。\n\n⬇︎クレジット&URL表記はこちら⬇︎\n--------------------------------------------------------\nBGM：トーマス大森音楽工房\nhttps://www.youtube.com/c/freemusicthomasoomori\n--------------------------------------------------------\n\n【公式 DL ページ】\nダウンロード(Download)：https://dl.tracks.co.jp/?m=192ad2\n楽曲利用規約(License)：https://dl.tracks.co.jp/l?m=192ad2\n※ダウンロードの前に必ずチャンネル登録をお願いします。\n\n■■■トーマス大森ご支援リンク■■■　そして、お恵みを…😢🙏\nhttps://www.amazon.jp/hz/wishlist/ls/26KVX8RX7L490?ref_=wl_share\n\nレコードアニメーション素材 - TELOPICT.com 様\nYoutube：https://www.youtube.com/channel/UC2vxlj33PZ9jqxnPrwR9tZQ\nTELOPICT ：https://telopict.com/\nTELOPICTION： https://bside.telopict.com/\n\n\n■ゲーム実況や作業用にオススメな再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBExhlfo2sVK2uWWnCEdjdur\n\n■おしゃれなLo-fi Hip hop が 再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBE3gS7IQ-Qt2_pqMsCCnfT9\n\n\nTwitter\nhttps://twitter.com/FM_ThomasOomori\n\nInstagram\nhttps://www.instagram.com/thomas_oomori/\n\nApple Music\nhttps://music.apple.com/jp/album/1511968666?app=itunes\n\nSpotify\nhttps://open.spotify.com/album/7Mbday2yhsz1QzK40seoba\n\nNo copyright sounds / FreeBackground Music by Thomas Oomori\n\n\n#フリーBGM #NCM #著作権フリー #フリー素材"
+      ],
+      "purl": [
+        "https://www.youtube.com/watch?v=7w9WHMd0oM4"
+      ],
+      "description": [
+        "https://www.youtube.com/watch?v=7w9WHMd0oM4"
+      ],
+      "encoder": [
+        "Lavc58.134.100 libvorbis"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ],
+      "language": [
+        "jpn"
+      ]
+    },
+    "used_in": [
+      "CommonEvents.json"
+    ],
+    "sha256": "73f8c4e41c34f206e3654c0ffbf8917f97fe416058513191b38c54e5b008cfb0"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EGThomasOmoriMusicStudio10.ogg_",
+    "file": "EGThomasOmoriMusicStudio10.ogg",
+    "seconds": 99.462,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 1.06481,
+    "tags": {
+      "umid": [
+        "0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000009B00E40A"
+      ],
+      "composer": [
+        "トーマス大森音楽工房"
+      ],
+      "software": [
+        "Lavf60.4.100"
+      ],
+      "encoded by": [
+        "Logic Pro X"
+      ],
+      "date": [
+        "2020-11-04"
+      ],
+      "title": [
+        "No.116"
+      ],
+      "time_reference": [
+        "158760000"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ]
+    },
+    "used_in": [
+      "Map015.json"
+    ],
+    "sha256": "cedc6c21d8fc75199866ad63ae5a24ebb4ec668c24c9bb8a189dd62d51b8ae1c"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EGThomasOmoriMusicStudio2.ogg_",
+    "file": "EGThomasOmoriMusicStudio2.ogg",
+    "seconds": 177.519,
+    "sample_rate": 48000,
+    "channels": 2,
+    "peak": 1.14687,
+    "tags": {
+      "date": [
+        "20220307"
+      ],
+      "title": [
+        "フリーBGM【おしゃれ/ピアノ/カフェ/チル/リラックス/Vlog music/Lofi Hiphop】NCM/NCS"
+      ],
+      "synopsis": [
+        "ご視聴ありがとうございました！\n今後も毎日投稿して参りますので、気に入って頂けたらチャンネル登録をお願いします！活動の励みになります。\n\n⬇︎チャンネル登録はこちら⬇︎\nhttps://www.youtube.com/c/FreeMusicThomasOomori\n\n☆チャンネルのメンバーも募集中！\nhttps://www.youtube.com/channel/UC5DJL9DiUOXxv2Q1DMZNCUw/join\n\n【トーマス大森音楽工房 - No.723】\n著作権フリーの無料BGMです。\n商用/配信/YouTube動画のBGMなど、ご自由にお使い下さい。\n\nOPアニメ&レコードアニメ素材：TELOPICT.com 様\nhttps://telopict.com/\n\n■ゲーム実況や作業用にオススメな再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBExhlfo2sVK2uWWnCEdjdur\n\n■おしゃれなLo-fi Hip hop 再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBE3gS7IQ-Qt2_pqMsCCnfT9\n\n■短いジングルなどの再生リスト\nhttps://www.youtube.com/c/FreeMusicThomasOomori/playlists?view=50&sort=dd&shelf_id=4\n\n【クレジット表記について】\n\n⬇︎ご利用の際のクレジット&URL表記はこちら⬇︎\n----------------------------------------------------------------------------------------\nBGM：トーマス大森音楽工房\nhttps://www.youtube.com/c/FreeMusicThomasOomori\n----------------------------------------------------------------------------------------\n※クレジット表記については、現在必須ではございませんが「利用規約の禁止事項」に対しての防止策となり、フリーBGMとして皆様にお使い頂ける状態を保つことに繋がります。また作曲者としても非常に励みになりますので、是非ご協力下さい。\n\n■■■■利用者様へのお願い■■■■\n収益金を基に、BGMの専用ダウンロードWebサイトの立ち上げを計画しておりますので、ご利用の方は勿論、気に入って頂けた方も、是非チャンネル登録のご協力をお願い致します。\n\n【利用規約】\n\n■注意事項\n著作権フリーと題していますが、著作権は放棄しておりません。著作権はトーマス大森に帰属します。\n\n■禁止事項\n(1) 楽曲名称・作曲者名を偽る行為\n(2) 音楽ファイルの無断販売\n(3) YouTube Content IDやJASRACなどの著作権管理団体への登録\n(4) 「作業用、まとめ」など、創作性の無いBGMコンテンツへの利用\n\n公開中の音源については、著作権管理団体への登録を行う予定はございません。\n\nTwitter\nhttps://twitter.com/FM_ThomasOomori\n\nInstagram\nhttps://www.instagram.com/thomas_oomori/\n\nApple Music\nhttps://music.apple.com/jp/album/1511968666?app=itunes\n\nSpotify\nhttps://open.spotify.com/album/7Mbday2yhsz1QzK40seoba\n\nNo copyright sounds / FreeBackground Music\nby Thomas Oomori\n\n\n#フリーBGM #NCM #著作権フリー #フリー素材"
+      ],
+      "purl": [
+        "https://www.youtube.com/watch?v=pl0BLbEghaI"
+      ],
+      "description": [
+        "https://www.youtube.com/watch?v=pl0BLbEghaI"
+      ],
+      "encoder": [
+        "Lavc58.134.100 libvorbis"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ],
+      "language": [
+        "eng"
+      ]
+    },
+    "used_in": [
+      "Map015.json"
+    ],
+    "sha256": "94440ece6191f0fe3ea87e759cfc04f19cc7892030f62220ab121e351a28853c"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EGThomasOmoriMusicStudio3.ogg_",
+    "file": "EGThomasOmoriMusicStudio3.ogg",
+    "seconds": 61.837,
+    "sample_rate": 48000,
+    "channels": 2,
+    "peak": 1.1337,
+    "tags": {
+      "date": [
+        "20230428"
+      ],
+      "title": [
+        "フリーBGM【おしゃれ/雨/カフェ/チル/リラックス/Vlog music/Lofi Hiphop】NCM/NCS"
+      ],
+      "synopsis": [
+        "ご視聴ありがとうございます！\nトーマス大森音楽工房は、個人のフリーBGM制作者として日本一の投稿本数を目指しています。\n活動の励みになりますので、是非チャンネル登録をお願いします！\n\n⬇︎チャンネル登録はこちら⬇︎\nhttps://www.youtube.com/c/FreeMusicThomasOomori\n\nBGM：No.1140\n\n■利用規約で許可されている範囲内であれば、商用・非商用問わず動画や配信などのコンテンツで、無償にて自由にご利用いただけます。\n■コメントやTwitterのDMなどへの使用許可連絡などは不要です。\n■クレジット表記は可能な限りお願いしております。\n\n⬇︎クレジット&URL表記はこちら⬇︎\n--------------------------------------------------------\nBGM：トーマス大森音楽工房\nhttps://www.youtube.com/c/freemusicthomasoomori\n--------------------------------------------------------\n\n【公式 DL ページ】\nダウンロード(Download)：https://dl.tracks.co.jp/?m=b62996\n楽曲利用規約(License)：https://dl.tracks.co.jp/l?m=b62996\n※ダウンロードの前に必ずチャンネル登録をお願いします。\n\n■■■トーマス大森ご支援リンク■■■\nhttps://www.amazon.jp/hz/wishlist/ls/26KVX8RX7L490?ref_=wl_share\n\n\nレコードアニメーション素材 - TELOPICT.com 様\nYoutube：https://www.youtube.com/channel/UC2vxlj33PZ9jqxnPrwR9tZQ\nTELOPICT ：https://telopict.com/\nTELOPICTION： https://bside.telopict.com/\n\n\n■ゲーム実況や作業用にオススメな再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBExhlfo2sVK2uWWnCEdjdur\n\n■おしゃれなLo-fi Hip hop が 再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBE3gS7IQ-Qt2_pqMsCCnfT9\n\n\nTwitter\nhttps://twitter.com/FM_ThomasOomori\n\nInstagram\nhttps://www.instagram.com/thomas_oomori/\n\nApple Music\nhttps://music.apple.com/jp/album/1511968666?app=itunes\n\nSpotify\nhttps://open.spotify.com/album/7Mbday2yhsz1QzK40seoba\n\nNo copyright sounds / FreeBackground Music by Thomas Oomori\n\n\n#フリーBGM #NCM #著作権フリー #フリー素材"
+      ],
+      "purl": [
+        "https://www.youtube.com/watch?v=GAsEiESQUy4"
+      ],
+      "description": [
+        "https://www.youtube.com/watch?v=GAsEiESQUy4"
+      ],
+      "encoder": [
+        "Lavc58.134.100 libvorbis"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ],
+      "language": [
+        "eng"
+      ]
+    },
+    "used_in": [
+      "CommonEvents.json"
+    ],
+    "sha256": "ab285ae5fa2234ad68ed62e4f8a3e4ffad8f302b450f3c5c3eb4a770ad9e00de"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EGThomasOmoriMusicStudio4.ogg_",
+    "file": "EGThomasOmoriMusicStudio4.ogg",
+    "seconds": 172.481,
+    "sample_rate": 48000,
+    "channels": 2,
+    "peak": 1.09681,
+    "tags": {
+      "date": [
+        "20220204"
+      ],
+      "title": [
+        "フリーBGM【おしゃれ/ピアノ/雨/カフェ/チル/リラックス/Vlog music/Lofi Hiphop】NCM/NCS"
+      ],
+      "synopsis": [
+        "ご視聴ありがとうございました！\n今後も毎日投稿して参りますので、気に入って頂けたらチャンネル登録をお願いします！活動の励みになります。\n\n⬇︎チャンネル登録はこちら⬇︎\nhttps://www.youtube.com/c/FreeMusicThomasOomori\n\n☆チャンネルのメンバーも募集中！\nhttps://www.youtube.com/channel/UC5DJL9DiUOXxv2Q1DMZNCUw/join\n\n【トーマス大森音楽工房 - No.692】\n著作権フリーの無料BGMです。\n商用/配信/YouTube動画のBGMなど、ご自由にお使い下さい。\n\nOPアニメ&レコードアニメ素材：TELOPICT.com 様\nhttps://telopict.com/\n\n■ゲーム実況や作業用にオススメな再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBExhlfo2sVK2uWWnCEdjdur\n\n■おしゃれなLo-fi Hip hop 再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBE3gS7IQ-Qt2_pqMsCCnfT9\n\n■短いジングルなどの再生リスト\nhttps://www.youtube.com/c/FreeMusicThomasOomori/playlists?view=50&sort=dd&shelf_id=4\n\n【クレジット表記について】\n\n⬇︎ご利用の際のクレジット&URL表記はこちら⬇︎\n----------------------------------------------------------------------------------------\nBGM：トーマス大森音楽工房\nhttps://www.youtube.com/c/FreeMusicThomasOomori\n----------------------------------------------------------------------------------------\n※クレジット表記については、現在必須ではございませんが「利用規約の禁止事項」に対しての防止策となり、フリーBGMとして皆様にお使い頂ける状態を保つことに繋がります。また作曲者としても非常に励みになりますので、是非ご協力下さい。\n\n■■■■利用者様へのお願い■■■■\n収益金を基に、BGMの専用ダウンロードWebサイトの立ち上げを計画しておりますので、ご利用の方は勿論、気に入って頂けた方も、是非チャンネル登録のご協力をお願い致します。\n\n【利用規約】\n\n■注意事項\n著作権フリーと題していますが、著作権は放棄しておりません。著作権はトーマス大森に帰属します。\n\n■禁止事項\n(1) 楽曲名称・作曲者名を偽る行為\n(2) 音楽ファイルの無断販売\n(3) YouTube Content IDやJASRACなどの著作権管理団体への登録\n(4) 「作業用、まとめ」など、創作性の無いBGMコンテンツへの利用\n\n公開中の音源については、著作権管理団体への登録を行う予定はございません。\n\nTwitter\nhttps://twitter.com/FM_ThomasOomori\n\nInstagram\nhttps://www.instagram.com/thomas_oomori/\n\nApple Music\nhttps://music.apple.com/jp/album/1511968666?app=itunes\n\nSpotify\nhttps://open.spotify.com/album/7Mbday2yhsz1QzK40seoba\n\nNo copyright sounds / FreeBackground Music\nby Thomas Oomori\n\n\n#フリーBGM #NCM #著作権フリー #フリー素材"
+      ],
+      "purl": [
+        "https://www.youtube.com/watch?v=51OFSRvUdXI"
+      ],
+      "description": [
+        "https://www.youtube.com/watch?v=51OFSRvUdXI"
+      ],
+      "encoder": [
+        "Lavc58.134.100 libvorbis"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ],
+      "language": [
+        "jpn"
+      ]
+    },
+    "used_in": [
+      "Map015.json"
+    ],
+    "sha256": "4a6c54be9afccf247505420a02dff5d250b69f3834833b76425f1b73644c9470"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EGThomasOmoriMusicStudio5.ogg_",
+    "file": "EGThomasOmoriMusicStudio5.ogg",
+    "seconds": 185.112,
+    "sample_rate": 48000,
+    "channels": 2,
+    "peak": 1.07852,
+    "tags": {
+      "date": [
+        "20220308"
+      ],
+      "title": [
+        "フリーBGM【おしゃれ/ピアノ/雨/カフェ/チル/リラックス/Vlog music/Lofi Hiphop】NCM/NCS"
+      ],
+      "synopsis": [
+        "ご視聴ありがとうございました！\n今後も毎日投稿して参りますので、気に入って頂けたらチャンネル登録をお願いします！活動の励みになります。\n\n⬇︎チャンネル登録はこちら⬇︎\nhttps://www.youtube.com/c/FreeMusicThomasOomori\n\n☆チャンネルのメンバーも募集中！\nhttps://www.youtube.com/channel/UC5DJL9DiUOXxv2Q1DMZNCUw/join\n\n【トーマス大森音楽工房 - No.724】\n著作権フリーの無料BGMです。\n商用/配信/YouTube動画のBGMなど、ご自由にお使い下さい。\n\nOPアニメ&レコードアニメ素材：TELOPICT.com 様\nhttps://telopict.com/\n\n■ゲーム実況や作業用にオススメな再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBExhlfo2sVK2uWWnCEdjdur\n\n■おしゃれなLo-fi Hip hop 再生リスト\nhttps://youtube.com/playlist?list=PLDj6ZOi17OBE3gS7IQ-Qt2_pqMsCCnfT9\n\n■短いジングルなどの再生リスト\nhttps://www.youtube.com/c/FreeMusicThomasOomori/playlists?view=50&sort=dd&shelf_id=4\n\n【クレジット表記について】\n\n⬇︎ご利用の際のクレジット&URL表記はこちら⬇︎\n----------------------------------------------------------------------------------------\nBGM：トーマス大森音楽工房\nhttps://www.youtube.com/c/FreeMusicThomasOomori\n----------------------------------------------------------------------------------------\n※クレジット表記については、現在必須ではございませんが「利用規約の禁止事項」に対しての防止策となり、フリーBGMとして皆様にお使い頂ける状態を保つことに繋がります。また作曲者としても非常に励みになりますので、是非ご協力下さい。\n\n■■■■利用者様へのお願い■■■■\n収益金を基に、BGMの専用ダウンロードWebサイトの立ち上げを計画しておりますので、ご利用の方は勿論、気に入って頂けた方も、是非チャンネル登録のご協力をお願い致します。\n\n【利用規約】\n\n■注意事項\n著作権フリーと題していますが、著作権は放棄しておりません。著作権はトーマス大森に帰属します。\n\n■禁止事項\n(1) 楽曲名称・作曲者名を偽る行為\n(2) 音楽ファイルの無断販売\n(3) YouTube Content IDやJASRACなどの著作権管理団体への登録\n(4) 「作業用、まとめ」など、創作性の無いBGMコンテンツへの利用\n\n公開中の音源については、著作権管理団体への登録を行う予定はございません。\n\nTwitter\nhttps://twitter.com/FM_ThomasOomori\n\nInstagram\nhttps://www.instagram.com/thomas_oomori/\n\nApple Music\nhttps://music.apple.com/jp/album/1511968666?app=itunes\n\nSpotify\nhttps://open.spotify.com/album/7Mbday2yhsz1QzK40seoba\n\nNo copyright sounds / FreeBackground Music\nby Thomas Oomori\n\n\n#フリーBGM #NCM #著作権フリー #フリー素材"
+      ],
+      "purl": [
+        "https://www.youtube.com/watch?v=t_KmMMYZVJs"
+      ],
+      "description": [
+        "https://www.youtube.com/watch?v=t_KmMMYZVJs"
+      ],
+      "encoder": [
+        "Lavc58.134.100 libvorbis"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ],
+      "language": [
+        "eng"
+      ]
+    },
+    "used_in": [
+      "Map015.json"
+    ],
+    "sha256": "59884ff46d8cf80d86f10c55b85c2a0cf487cb9cd121eb8b9b8f8ed83ef61ce7"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EGThomasOmoriMusicStudio6.ogg_",
+    "file": "EGThomasOmoriMusicStudio6.ogg",
+    "seconds": 169.378,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 1.2158,
+    "tags": {
+      "tbp": [
+        "80"
+      ],
+      "tcm": [
+        "トーマス大森音楽工房"
+      ],
+      "tss": [
+        "Logic Pro X 10.7.5"
+      ],
+      "title": [
+        "No.1147"
+      ],
+      "date": [
+        "2023-05-05 16:56"
+      ],
+      "encoder": [
+        "Lavc57.64.101 libvorbis"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ],
+      "tke": [
+        "C"
+      ]
+    },
+    "used_in": [
+      "CommonEvents.json"
+    ],
+    "sha256": "b61117b341ed472a6dfe03efc09e9d6538849feab19571b63a5cd39be62cb1ef"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\audio\\bgm\\EGThomasOmoriMusicStudio7.ogg_",
+    "file": "EGThomasOmoriMusicStudio7.ogg",
+    "seconds": 168.856,
+    "sample_rate": 44100,
+    "channels": 2,
+    "peak": 1.11671,
+    "tags": {
+      "tbp": [
+        "75"
+      ],
+      "tcm": [
+        "トーマス大森音楽工房"
+      ],
+      "tss": [
+        "Logic Pro X 10.7.5"
+      ],
+      "title": [
+        "No.905"
+      ],
+      "date": [
+        "2022-09-05 18:48"
+      ],
+      "encoder": [
+        "Lavc57.64.101 libvorbis"
+      ],
+      "artist": [
+        "トーマス大森音楽工房"
+      ],
+      "tke": [
+        "C"
+      ]
+    },
+    "used_in": [],
+    "sha256": "eb55dc361cd220c4afef081a9d428d7e5a28c5251c8a155195594a622f4b0850"
+  }
+]

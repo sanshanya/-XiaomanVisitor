@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "船で飲む水を、少し買いたくて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "28",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.823,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 183534
+  },
+  "sha256": "2e6b4512b197da82172aefd4bca284702852ddf378b0ec4112290b7cead1aed8",
+  "binding": {
+    "key": "xm_14_shop",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "想买点路上喝的水。",
+      "ja": "船で飲む水を、少し買いたくて。",
+      "en": "I'd like some water for the journey."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_14_shop",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "想买点路上喝的水。",
+        "ja": "船で飲む水を、少し買いたくて。",
+        "en": "想买点路上喝的水。"
+      },
+      "generic": false
+    }
+  ]
+}

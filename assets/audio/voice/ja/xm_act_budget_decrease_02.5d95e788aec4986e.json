@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "これだと、今日はあまり買えませんね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "34",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.823,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 183558
+  },
+  "sha256": "8dd12341bf8df5345cd089134f73ad4a84a318bb695332eb3dfd86d7469ddc27",
+  "binding": {
+    "key": "xm_act_budget_decrease_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这样今天就不能买太多了呢。",
+      "ja": "これだと、今日はあまり買えませんね。",
+      "en": "I won't be able to buy very much today, then."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_budget_decrease_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "这样今天就不能买太多了呢。",
+        "ja": "これだと、今日はあまり買えませんね。",
+        "en": "这样今天就不能买太多了呢。"
+      },
+      "generic": false
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "100",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.855,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 521080
+  },
+  "sha256": "73cb807683b36852818ddee8f19ff2814c13b708202ce78bbfddb746bfce8e22",
+  "binding": {
+    "key": "xm_11_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "原来写到凌晨两点，现在改成十二点。这样也能早点回去吃点东西。",
+      "ja": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+      "en": "It used to say two in the morning. Now it says midnight. That gives me time to get home and eat something."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_11_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "原来写到凌晨两点，现在改成十二点。这样也能早点回去吃点东西。",
+        "ja": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+        "en": "原来写到凌晨两点，现在改成十二点。这样也能早点回去吃点东西。"
+      },
+      "generic": false
+    }
+  ]
+}

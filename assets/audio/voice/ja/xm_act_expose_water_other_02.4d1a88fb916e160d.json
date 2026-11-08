@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "57",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.49,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 311570
+  },
+  "sha256": "29325f6d9682b66b245af696edefc85bbd34c6eff3e441936beaaee1ae349f15",
+  "binding": {
+    "key": "xm_act_expose_water_other_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "说明和测出来的数值对不上呢。是不是贴错了？",
+      "ja": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
+      "en": "The description and the reading don't match. Could it be the wrong label?"
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_expose_water_other_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "说明和测出来的数值对不上呢。是不是贴错了？",
+        "ja": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
+        "en": "说明和测出来的数值对不上呢。是不是贴错了？"
+      },
+      "generic": false
+    }
+  ]
+}

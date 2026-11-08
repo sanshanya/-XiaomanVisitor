@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "高いですね……。[sighs] これだけは必要なので。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "42",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.399,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 259192
+  },
+  "sha256": "b8adadc58f1477cd7ea861280d3962bcdc58dd91d5c2b53e91ac2c12bc80d999",
+  "binding": {
+    "key": "xm_act_markup_accept_high_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "好贵啊。……我是真的需要这个。",
+      "ja": "高いですね……。これだけは必要なので。",
+      "en": "That's expensive. ...I really do need this."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_accept_high_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "好贵啊。……我是真的需要这个。",
+        "ja": "高いですね……。これだけは必要なので。",
+        "en": "好贵啊。……我是真的需要这个。"
+      },
+      "generic": false
+    }
+  ]
+}

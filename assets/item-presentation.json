@@ -1,0 +1,48 @@
+{
+  "zh": {
+    "gift_cassette_case_name": "小满的磁带盒",
+    "gift_cassette_case_desc": "用来收好小满留下的磁带，能放进磁带机仓库。",
+    "gift_notebook_name": "小满的信笺簿",
+    "gift_notebook_desc": "一本粉色封面的笔记本，用来收好小满留下的纸条。",
+    "cocktail_origin": "小满调制的鸡尾酒。",
+    "drink_tier_1": "果汁版",
+    "drink_tier_2": "酒精版",
+    "drink_buff_tradereputation": "交易声望收益 +{0}%",
+    "drink_buff_duration": "持续3天。",
+    "collection_tape_desc": "小满留下的磁带，标签上认真写着“{0}”。",
+    "collection_tape_flavor": "一段留在磁带里的雨夜。",
+    "collection_title_flavor": "序章",
+    "gift_tape_credit": "一段从远方带来的旋律。"
+  },
+  "ja": {
+    "gift_cassette_case_name": "みちるのカセットケース",
+    "gift_cassette_case_desc": "みちるが残したカセットをしまうケース。カセットデッキの保管庫にも収まる。",
+    "gift_notebook_name": "みちるの手紙帳",
+    "gift_notebook_desc": "みちるが残した手紙をしまっておく、ピンク色の表紙のノート。",
+    "cocktail_origin": "みちるが作ったカクテル。",
+    "drink_tier_1": "ジュース版",
+    "drink_tier_2": "アルコール版",
+    "drink_buff_tradereputation": "取引の評判獲得量 +{0}%",
+    "drink_buff_duration": "効果は3日間。",
+    "collection_tape_desc": "みちるが残したカセット。ラベルには「{0}」と丁寧に書かれている。",
+    "collection_tape_flavor": "テープに残された、ある雨の夜。",
+    "collection_title_flavor": "序章",
+    "gift_tape_desc": "みちるが置いていった古いカセット。ラベルは丁寧に書かれている。",
+    "gift_tape_credit": "遠い場所から持ってきたメロディー。"
+  },
+  "en": {
+    "gift_cassette_case_name": "Xiaoman's Cassette Case",
+    "gift_cassette_case_desc": "A case for the tapes Xiaoman leaves you. Fits in the cassette player's storage.",
+    "gift_notebook_name": "Xiaoman's Letterbook",
+    "gift_notebook_desc": "A pink notebook for the notes Xiaoman leaves you.",
+    "cocktail_origin": "A cocktail made by Xiaoman.",
+    "drink_tier_1": "Juice version",
+    "drink_tier_2": "Alcoholic version",
+    "drink_buff_tradereputation": "Trade reputation gain +{0}%",
+    "drink_buff_duration": "Lasts 3 days.",
+    "collection_tape_desc": "A cassette Xiaoman left for you. The label carefully reads '{0}'.",
+    "collection_tape_flavor": "A rainy night held on tape.",
+    "collection_title_flavor": "Prologue",
+    "gift_tape_credit": "A melody brought from somewhere far away."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "encoder": "libmp3lame",
+  "vbr_quality": 1,
+  "minimum_waveform_snr_db": 30,
+  "keep_original_keys": ["rainysound"],
+  "sample_rate": "preserve",
+  "channels": "preserve",
+  "ffmpeg": "C:/mpv/ffmpeg.exe"
+}

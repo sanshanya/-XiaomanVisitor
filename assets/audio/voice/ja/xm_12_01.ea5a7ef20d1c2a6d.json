@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは。最近、メニューを書き直したんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "43",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.532,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 265580
+  },
+  "sha256": "b98478ac5b2ca8eb80cdd4291b24d21497718661e95508b38d8527da4f2a40d0",
+  "binding": {
+    "key": "xm_12_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好。最近重新写了酒单。",
+      "ja": "こんばんは。最近、メニューを書き直したんです。",
+      "en": "Good evening. I've been rewriting the drinks menu."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_12_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "晚上好。最近重新写了酒单。",
+        "ja": "こんばんは。最近、メニューを書き直したんです。",
+        "en": "晚上好。最近重新写了酒单。"
+      },
+      "generic": false
+    }
+  ]
+}

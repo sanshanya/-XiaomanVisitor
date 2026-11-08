@@ -1,0 +1,22 @@
+EventListUnique：原版埃莉诺相关逻辑摘录
+
+来自当前本机Assembly-CSharp.dll的只读反编译。
+只供阅读，省略了其他成员与上下文，不是可独立编译的模组源码。
+
+
+// 原始反编译行号 49，CreateEleanorLeakNews
+	public static StoreEvent CreateEleanorLeakNews()
+	{
+		StoreEvent obj = new StoreEvent
+		{
+			identifier = "eleanorLeak",
+			newsName = LocHelper.GetLocalizedMechanic("event_eleanor_leak_news")
+		};
+		obj.displayName = obj.newsName;
+		obj.newsDescription = LocHelper.GetLocalizedMechanic("event_eleanor_leak_desc");
+		obj.duration = 1;
+		obj.importance = 9;
+		obj.eventArea = StoreEvent.EventArea.ALL;
+		obj.eventType = StoreEvent.EventType.COSMETIC;
+		return obj;
+	}

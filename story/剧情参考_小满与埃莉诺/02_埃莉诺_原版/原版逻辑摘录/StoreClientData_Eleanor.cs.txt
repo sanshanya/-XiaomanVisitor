@@ -1,0 +1,215 @@
+StoreClientData：原版埃莉诺相关逻辑摘录
+
+来自当前本机Assembly-CSharp.dll的只读反编译。
+只供阅读，省略了其他成员与上下文，不是可独立编译的模组源码。
+
+	public const int ELEANOR_STORYLINE_STARTING_DAY = 23;
+	public bool isEleanorDead;
+	public int eleanorFund = 500;
+	public int eleanorHelpedTimes;
+	public bool eleanorArrested;
+	public const int ELEANOR_BAIL_OFFICER_DELAY = 2;
+	public const int ELEANOR_FREED_DELAY = 1;
+	public const int ELEANOR_BAIL_COST = 500;
+	public const int ELEANOR_BAIL_SEC_REP_REQUIRED = 40;
+	public const int ELEANOR_BAIL_NONE = 0;
+	public const int ELEANOR_BAIL_PAID = 1;
+	public const int ELEANOR_BAIL_VOUCHED = 2;
+	public const int ELEANOR_BAIL_DECLINED = 3;
+	public int eleanorArrestDay = -1;
+	public int eleanorArrestVisit;
+	public int eleanorBailChoice;
+	public int eleanorBailDay = -1;
+	public int eleanorFreedVisitDay = -1;
+	public const int ELEANOR_WARNED_RETURN_DELAY = 3;
+	public bool eleanorUncleReported;
+	public int eleanorWarnedDay = -1;
+	public const int ELEANOR_PLAN_DELAY = 4;
+	public const int ELEANOR_SCAV_INTERVAL = 4;
+	public const int ELEANOR_INVESTIGATOR_COST = 800;
+	public int eleanorSavings;
+	public int eleanorPlanDay = -1;
+	public int eleanorScavLastDay = -1;
+	public const int ELEANOR_DRIVE_DELAY = 4;
+	public int eleanorSavingsDoneDay = -1;
+	public int eleanorDriveVisitDay = -1;
+	public const int ELEANOR_THREAT_DELAY = 1;
+	public const int ELEANOR_DRIVE_BOUNTY = 300;
+	public int eleanorThreatVisitDay = -1;
+	public const int ELEANOR_CHOICE_DELAY = 1;
+	public const int ELEANOR_CONCLUSION_DELAY = 2;
+	public const int ELEANOR_CHOICE_NONE = 0;
+	public const int ELEANOR_CHOICE_RETURNED = 1;
+	public const int ELEANOR_CHOICE_LEAKED = 2;
+	public int eleanorDriveChoice;
+	public int eleanorChoiceDay = -1;
+	public int eleanorConclusionDay = -1;
+	public bool nutrifruitSeedsFreed;
+
+// 原始反编译行号 678，MigrateEleanorBail
+	public static void MigrateEleanorBail(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorArrested && storeClientData.eleanorArrestDay < 0)
+		{
+			storeClientData.eleanorArrestDay = day;
+			if (storeClientData.eleanorArrestVisit == 0)
+			{
+				storeClientData.eleanorArrestVisit = 5;
+			}
+			Debug.Log("[Eleanor] Arrest from before the bail update anchored on day " + day + ": the bail officer comes in " + 2 + " days");
+		}
+	}
+
+// 原始反编译行号 692，CanEleanorBailOfficerVisit
+	public static bool CanEleanorBailOfficerVisit(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorArrested && storeClientData.eleanorArrestDay >= 0 && storeClientData.eleanorBailChoice == 0)
+		{
+			return day >= storeClientData.eleanorArrestDay + 2;
+		}
+		return false;
+	}
+
+// 原始反编译行号 702，CanEleanorFreedVisit
+	public static bool CanEleanorFreedVisit(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if ((storeClientData.eleanorBailChoice == 1 || storeClientData.eleanorBailChoice == 2) && storeClientData.eleanorFreedVisitDay < 0)
+		{
+			return day >= storeClientData.eleanorBailDay + 1;
+		}
+		return false;
+	}
+
+// 原始反编译行号 712，GetEleanorVisit4Day
+	public static int GetEleanorVisit4Day()
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (!storeClientData.eleanorUncleReported)
+		{
+			return StorylineSchedule.StartDay("eleanor") + 6;
+		}
+		if (storeClientData.eleanorWarnedDay >= 0)
+		{
+			return storeClientData.eleanorWarnedDay + 3;
+		}
+		return -1;
+	}
+
+// 原始反编译行号 726，GetEleanorVisit5Day
+	public static int GetEleanorVisit5Day()
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorArrestVisit == 4)
+		{
+			if (storeClientData.eleanorFreedVisitDay >= 0)
+			{
+				return storeClientData.eleanorFreedVisitDay + 2;
+			}
+			return -1;
+		}
+		int eleanorVisit4Day = GetEleanorVisit4Day();
+		if (eleanorVisit4Day >= 0)
+		{
+			return eleanorVisit4Day + 2;
+		}
+		return -1;
+	}
+
+// 原始反编译行号 745，GetEleanorPlanBaseDay
+	public static int GetEleanorPlanBaseDay()
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorArrestVisit == 5)
+		{
+			return storeClientData.eleanorFreedVisitDay;
+		}
+		return GetEleanorVisit5Day();
+	}
+
+// 原始反编译行号 755，CanEleanorWarnedVisit
+	public static bool CanEleanorWarnedVisit(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorUncleReported && storeClientData.eleanorWarnedDay < 0 && !storeClientData.eleanorArrested)
+		{
+			return day >= StorylineSchedule.StartDay("eleanor") + 6;
+		}
+		return false;
+	}
+
+// 原始反编译行号 765，GetEleanorSavingsRemaining
+	public static int GetEleanorSavingsRemaining()
+	{
+		return Mathf.Max(0, 800 - PlayerStore.Instance.storeClientData.eleanorSavings);
+	}
+
+// 原始反编译行号 770，CanEleanorPlanVisit
+	public static bool CanEleanorPlanVisit(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		int eleanorPlanBaseDay = GetEleanorPlanBaseDay();
+		if (storeClientData.eleanorPlanDay < 0 && storeClientData.eleanorHelpedTimes > 0 && !storeClientData.eleanorArrested && eleanorPlanBaseDay >= 0)
+		{
+			return day >= eleanorPlanBaseDay + 4;
+		}
+		return false;
+	}
+
+// 原始反编译行号 781，CanEleanorThreatVisit
+	public static bool CanEleanorThreatVisit(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorDriveVisitDay >= 0 && storeClientData.eleanorThreatVisitDay < 0)
+		{
+			return day >= storeClientData.eleanorDriveVisitDay + 1;
+		}
+		return false;
+	}
+
+// 原始反编译行号 791，CanEleanorChoiceVisit
+	public static bool CanEleanorChoiceVisit(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorThreatVisitDay >= 0 && storeClientData.eleanorDriveChoice == 0)
+		{
+			return day >= storeClientData.eleanorThreatVisitDay + 1;
+		}
+		return false;
+	}
+
+// 原始反编译行号 801，CanEleanorConclusionVisit
+	public static bool CanEleanorConclusionVisit(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorDriveChoice != 0 && storeClientData.eleanorConclusionDay < 0)
+		{
+			return day >= storeClientData.eleanorChoiceDay + 2;
+		}
+		return false;
+	}
+
+// 原始反编译行号 811，CanEleanorDriveVisit
+	public static bool CanEleanorDriveVisit(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorSavingsDoneDay >= 0 && storeClientData.eleanorDriveVisitDay < 0 && !storeClientData.eleanorArrested)
+		{
+			return day >= storeClientData.eleanorSavingsDoneDay + 4;
+		}
+		return false;
+	}
+
+// 原始反编译行号 821，CanEleanorScavVisit
+	public static bool CanEleanorScavVisit(int day)
+	{
+		StoreClientData storeClientData = PlayerStore.Instance.storeClientData;
+		if (storeClientData.eleanorPlanDay < 0 || storeClientData.eleanorSavings >= 800 || storeClientData.eleanorArrested)
+		{
+			return false;
+		}
+		int num = Mathf.Max(storeClientData.eleanorPlanDay, storeClientData.eleanorScavLastDay);
+		return day >= num + 4;
+	}

@@ -1,0 +1,36 @@
+{
+  "mode": "built-in image_gen",
+  "generated_reference": "xiaoman_hat_generated.png",
+  "output": "xiaoman_hat_crown.png",
+  "size": [
+    340,
+    32
+  ],
+  "generated_anchor_row": 115,
+  "generated_anchor_span": [
+    274,
+    678
+  ],
+  "original_anchor_span": [
+    96,
+    239
+  ],
+  "palette": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      183,
+      220,
+      255
+    ],
+    [
+      107,
+      151,
+      217
+    ]
+  ],
+  "original_body_pixels_used_unchanged": true
+}

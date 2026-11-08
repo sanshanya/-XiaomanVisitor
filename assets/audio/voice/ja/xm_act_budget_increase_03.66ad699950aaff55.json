@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "52",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.788,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 277878
+  },
+  "sha256": "d34d11b7312aabfb98e2fd05717ebb19767b95475d51d53928f59fbb0a917330",
+  "binding": {
+    "key": "xm_act_budget_increase_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "还有预算。能再看看别的吗？",
+      "ja": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
+      "en": "I still have some money left. Could I look at something else?"
+    },
+    "generic": false
+  }
+}

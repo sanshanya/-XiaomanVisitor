@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "写真の空いた席に、わたしの絵まで描き足してくれて。[chuckles] 全然似てないんですけどね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "84",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.181,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 440748
+  },
+  "sha256": "1a7f1ea8fede743e1185d49bd21dfd5b22626ebb7bb1297eb4c6cd85853beaf1",
+  "binding": {
+    "key": "xm_07_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "她们给我留了个空位，还在上面画了个我。画得一点都不像。",
+      "ja": "写真の空いた席に、わたしの絵まで描き足してくれて。全然似てないんですけどね。",
+      "en": "They left an empty seat for me and even drew me into it. It doesn't look like me at all."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_07_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "她们给我留了个空位，还在上面画了个我。画得一点都不像。",
+        "ja": "写真の空いた席に、わたしの絵まで描き足してくれて。全然似てないんですけどね。",
+        "en": "她们给我留了个空位，还在上面画了个我。画得一点都不像。"
+      },
+      "generic": false
+    }
+  ]
+}

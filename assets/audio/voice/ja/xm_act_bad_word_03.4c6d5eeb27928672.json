@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "74",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.733,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 419230
+  },
+  "sha256": "bccb1005d2d5cb5eecf9b053c6eb30b250bccdc78a2d671de3c446d72582db81",
+  "binding": {
+    "key": "xm_act_bad_word_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这里的传闻很快的。希望你以后别这样了。",
+      "ja": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
+      "en": "Word travels fast here. I hope you won't do this again."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_bad_word_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "这里的传闻很快的。希望你以后别这样了。",
+        "ja": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
+        "en": "这里的传闻很快的。希望你以后别这样了。"
+      },
+      "generic": false
+    }
+  ]
+}

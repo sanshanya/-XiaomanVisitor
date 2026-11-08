@@ -1,0 +1,8 @@
+{
+  "source": "reference/tavern-cover/xiaoman_tavern_cover_source.png",
+  "source_kind": "user_supplied_cover",
+  "crop": [300, 4, 1854, 886],
+  "size": [592, 336],
+  "filter": "lanczos",
+  "padding": false
+}

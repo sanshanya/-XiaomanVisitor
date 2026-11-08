@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "びっくりしました。[chuckles] じゃあ、お言葉に甘えちゃおうかな。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "60",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.599,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 316818
+  },
+  "sha256": "70d5b4f319ade40165dc3d356436acc8762e55ed8b284e2dac7f03cbdb7f4f0c",
+  "binding": {
+    "key": "xm_act_discount_accept_high_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "吓我一跳。那我就不客气了。",
+      "ja": "びっくりしました。じゃあ、お言葉に甘えちゃおうかな。",
+      "en": "You surprised me. I'll gladly take you up on that."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_discount_accept_high_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "吓我一跳。那我就不客气了。",
+        "ja": "びっくりしました。じゃあ、お言葉に甘えちゃおうかな。",
+        "en": "吓我一跳。那我就不客气了。"
+      },
+      "generic": false
+    }
+  ]
+}

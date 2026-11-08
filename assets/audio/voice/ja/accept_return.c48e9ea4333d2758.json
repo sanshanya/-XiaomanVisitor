@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "うん、ありがとう。今日も助かりました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "35",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.781,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 229522
+  },
+  "sha256": "f76caf6b2c03a9000f28fedbc16aeda1f5b8150eb465e2eeb5874013461ef6f3",
+  "binding": {
+    "key": "accept_return",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "嗯，谢谢。今天也帮上忙了。",
+      "ja": "うん、ありがとう。今日も助かりました。",
+      "en": "Thank you. You've helped me out again."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "accept_return",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "嗯，谢谢。今天也帮上忙了。",
+        "ja": "うん、ありがとう。今日も助かりました。",
+        "en": "嗯，谢谢。今天也帮上忙了。"
+      },
+      "generic": false
+    }
+  ]
+}

@@ -1,0 +1,1442 @@
+[
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_intro_1",
+    "text": "呵，你们下层区管这种地方叫“商店”啊？",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorIntro"
+    ],
+    "group": "01 初次来访：食物与上层区身份"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_intro_2",
+    "text": "真是开眼了。要是没见过像样的店铺，大概还会觉得这儿挺好吧。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorIntro"
+    ],
+    "group": "01 初次来访：食物与上层区身份"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_intro_3",
+    "text": "喂，那边那个，在我能回到上层区之前，我需要一些食物。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorIntro"
+    ],
+    "group": "01 初次来访：食物与上层区身份"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_intro_4",
+    "text": "用不了多久，他们就会意识到自己犯了多么愚蠢的错误。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorIntro"
+    ],
+    "group": "01 初次来访：食物与上层区身份"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_intro_5",
+    "text": "他们以挪用公款的罪名监禁了我的母亲，而她经营的可是全空间站最大的水培农场。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorIntro"
+    ],
+    "group": "01 初次来访：食物与上层区身份"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_intro_6",
+    "text": "荒谬至极，这个空间站有一半的人能吃上饭都得归功于她！",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorIntro"
+    ],
+    "group": "01 初次来访：食物与上层区身份"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_intro_7",
+    "text": "那么，你这里有什么吃的吗？最好是新鲜的，种类多样一点就更好了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorIntro"
+    ],
+    "group": "01 初次来访：食物与上层区身份"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor2_1",
+    "text": "我真不敢相信我会被困在这里。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor2"
+    ],
+    "group": "02 第二次来访：滞留下层区与日用品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor2_2",
+    "text": "母亲杳无音信，他们也不让我回上面去。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor2"
+    ],
+    "group": "02 第二次来访：滞留下层区与日用品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor2_3",
+    "text": "为什么这种事会发生在我身上？",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor2"
+    ],
+    "group": "02 第二次来访：滞留下层区与日用品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor2_4",
+    "text": "我讨厌这下面，这太不公平了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor2"
+    ],
+    "group": "02 第二次来访：滞留下层区与日用品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor2_5",
+    "text": "<i>叹气</i>，你有生活用品吗？",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor2"
+    ],
+    "group": "02 第二次来访：滞留下层区与日用品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor2_6",
+    "text": "看来我得在这里待上一阵子了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor2"
+    ],
+    "group": "02 第二次来访：滞留下层区与日用品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor2_7",
+    "text": "我在配给站对面找到了一间还算体面的房间。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor2"
+    ],
+    "group": "02 第二次来访：滞留下层区与日用品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor2_8",
+    "text": "虽然很小，但至少没有异味。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor2"
+    ],
+    "group": "02 第二次来访：滞留下层区与日用品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor2_9",
+    "text": "我真不敢相信底层人竟然一辈子都在这种环境里生活。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor2"
+    ],
+    "group": "02 第二次来访：滞留下层区与日用品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor3_1",
+    "text": "嘿，我又来了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor3"
+    ],
+    "group": "03 第三次来访：变卖随身物品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor3_2",
+    "text": "我手头的钱开始不够用了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor3"
+    ],
+    "group": "03 第三次来访：变卖随身物品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor3_3",
+    "text": "他们当初没让我带太多东西出来。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor3"
+    ],
+    "group": "03 第三次来访：变卖随身物品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor3_no_family",
+    "text": "我已经没有家人了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor3"
+    ],
+    "group": "03 第三次来访：变卖随身物品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor3_4",
+    "text": "如果能回到上面去，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor3"
+    ],
+    "group": "03 第三次来访：变卖随身物品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor3_5",
+    "text": "我就能解释清楚一切，洗清我们的罪名，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor3"
+    ],
+    "group": "03 第三次来访：变卖随身物品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor3_6",
+    "text": "这样一切都能恢复正常了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor3"
+    ],
+    "group": "03 第三次来访：变卖随身物品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor3_7",
+    "text": "我就再也不用每顿饭都吃营养果了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor3"
+    ],
+    "group": "03 第三次来访：变卖随身物品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor3_8",
+    "text": "总之，我带了些自己的东西来卖。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor3"
+    ],
+    "group": "03 第三次来访：变卖随身物品"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_1",
+    "text": "你好啊。你认识埃莉诺，对吧？我是她的……叔叔。",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "04 自称叔叔的男子：交付补给箱"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_2",
+    "text": "我们给她准备了一份小小的心意。全是上层区最好的东西。",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "04 自称叔叔的男子：交付补给箱"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_3",
+    "text": "可我怎么也找不到她。",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "04 自称叔叔的男子：交付补给箱"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_4",
+    "text": "下次她来的时候，你能把这个交给她吗？",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "04 自称叔叔的男子：交付补给箱"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_5",
+    "text": "一定要交到她手上。不是你，是她。",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "04 自称叔叔的男子：交付补给箱"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_6",
+    "text": "要是有人问起，你从没见过我。",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "04 自称叔叔的男子：交付补给箱"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_7",
+    "text": "哦，还有，别让治安部插手。这是家务事。",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "04 自称叔叔的男子：交付补给箱"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_handed",
+    "text": "很好。交到她手上，不是你。我会知道的。",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "04 自称叔叔的男子：交付补给箱"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_arrest_sec_1",
+    "text": "你好，店主。你举报了一件赃物？",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "05 揭穿并举报男子：治安对话"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_arrest_client_1",
+    "text": "这不是我偷的！收据在这儿。",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "05 揭穿并举报男子：治安对话"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_arrest_sec_2",
+    "text": "那你为什么报案说这东西被偷了？",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "05 揭穿并举报男子：治安对话"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_arrest_client_2",
+    "text": "……",
+    "speaker_hint": "自称叔叔的男子",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "05 揭穿并举报男子：治安对话"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_uncle_arrest_sec_3",
+    "text": "谎报盗窃可是犯罪。老老实实跟我们走一趟！",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorUncle"
+    ],
+    "group": "05 揭穿并举报男子：治安对话"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_warned_player",
+    "text": "<i>*告诉她那个自称是她叔叔的男人的事*</i>",
+    "speaker_hint": "店长（PLAYER）",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorWarned"
+    ],
+    "group": "06 警告来访：识破骗局后的致谢"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_warned_1",
+    "text": "我叔叔？我根本没有叔叔。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorWarned"
+    ],
+    "group": "06 警告来访：识破骗局后的致谢"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_warned_2",
+    "text": "他给我留了个箱子？还是被报了失窃的？",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorWarned"
+    ],
+    "group": "06 警告来访：识破骗局后的致谢"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_warned_3",
+    "text": "他们想让我被抓。就像我母亲一样。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorWarned"
+    ],
+    "group": "06 警告来访：识破骗局后的致谢"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_warned_4",
+    "text": "我……我需要点时间好好想想。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorWarned"
+    ],
+    "group": "06 警告来访：识破骗局后的致谢"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_warned_5",
+    "text": "但你提醒了我。请收下点东西吧，这是我从家里带出来的最后一点东西了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorWarned"
+    ],
+    "group": "06 警告来访：识破骗局后的致谢"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_warned_leave",
+    "text": "等我理清头绪了再来。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorWarned"
+    ],
+    "group": "06 警告来访：识破骗局后的致谢"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_1",
+    "text": "我实在受不了了，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_2",
+    "text": "我已经没有钱了，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_3",
+    "text": "昨晚遭了贼，把我仅剩的那点东西全拿走了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_4",
+    "text": "我不知道该怎么办了，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_5",
+    "text": "判决下来了，他们认定我母亲有罪。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_6",
+    "text": "我这辈子都得困在这里，妈妈也只能把牢底坐穿了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_7",
+    "text": "我简直不敢相信自己会开这个口，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_8",
+    "text": "但你能分我一点食物吗？",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_9",
+    "text": "只要能吃的就行，求求你。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_choice_credits",
+    "text": "[给她{0}信用点]",
+    "speaker_hint": "玩家选项",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor4_accept",
+    "text": "万分感谢，救命之恩我铭记于心。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor4"
+    ],
+    "group": "07 第四次主线来访：困境与援助"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_1",
+    "text": "嘿！我又回来了！",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_2",
+    "text": "我们上次交谈之后，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_3",
+    "text": "我意识到日子还得继续过下去，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_4",
+    "text": "况且，我差不多也习惯这股恶臭了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_5",
+    "text": "我母亲多半是被上层区的某个人栽赃了，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_6",
+    "text": "我必须重新振作起来，想办法还她清白，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_7",
+    "text": "当务之急，是先解决生计。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_8",
+    "text": "所以，我盘算着去垃圾场拾荒，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_9",
+    "text": "我的室友给我上了一堂拾荒速成课，",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_10",
+    "text": "不得不承认，这里有着真正的社区精神。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor5_11",
+    "text": "总之，来看看我的收获吧！",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor5"
+    ],
+    "group": "08 第五次主线来访：拾荒与重新谋生"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_arrest_sec_1",
+    "text": "不许动！这个箱子被报了失窃。",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorArrest"
+    ],
+    "group": "09 补给箱栽赃：埃莉诺被捕"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_arrest_client_1",
+    "text": "什么？这不是我的！我从没见过它！",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorArrest"
+    ],
+    "group": "09 补给箱栽赃：埃莉诺被捕"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_arrest_sec_2",
+    "text": "有其母必有其女。跟我们走一趟。",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorArrest"
+    ],
+    "group": "09 补给箱栽赃：埃莉诺被捕"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_arrest_client_2",
+    "text": "求你们了，是有人陷害我！店主，你快跟他们说啊！",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorArrest"
+    ],
+    "group": "09 补给箱栽赃：埃莉诺被捕"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_bail_1",
+    "text": "店主，跟你说一下我们在这里带走的那个姑娘，埃莉诺。",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorBailOfficer"
+    ],
+    "group": "10 治安员保释分支"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_bail_2",
+    "text": "她发誓说是有人陷害她。她说你也许愿意替她交保释金。",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorBailOfficer"
+    ],
+    "group": "10 治安员保释分支"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_bail_3",
+    "text": "保释金定为{0}信用点。",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorBailOfficer"
+    ],
+    "group": "10 治安员保释分支"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_bail_choice_pay",
+    "text": "[替她交保释金（{0}信用点）]",
+    "speaker_hint": "玩家选项",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorBailOfficer"
+    ],
+    "group": "10 治安员保释分支"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_bail_paid",
+    "text": "已经全额付清。她明天就能出来。",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorBailOfficer"
+    ],
+    "group": "10 治安员保释分支"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_bail_choice_vouch",
+    "text": "[为她担保（治安部声望{0}+）]",
+    "speaker_hint": "玩家选项",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorBailOfficer"
+    ],
+    "group": "10 治安员保释分支"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_bail_vouched",
+    "text": "行吧，你帮过我们几次忙。这次就算了。",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorBailOfficer"
+    ],
+    "group": "10 治安员保释分支"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_bail_declined",
+    "text": "随你。那她就待在里面吧。",
+    "speaker_hint": "治安人员",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorBailOfficer"
+    ],
+    "group": "10 治安员保释分支"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_freed_1",
+    "text": "治安部放我出来了。他们说，是多亏了你。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorFreed"
+    ],
+    "group": "11 获释后的来访"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_freed_2",
+    "text": "那个箱子不是我的，我也根本没有叔叔。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorFreed"
+    ],
+    "group": "11 获释后的来访"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_freed_3",
+    "text": "有人想把我关进牢里，就像我母亲一样。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorFreed"
+    ],
+    "group": "11 获释后的来访"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_freed_4",
+    "text": "这份恩情我不会忘记。谢谢你。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorFreed"
+    ],
+    "group": "11 获释后的来访"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor6_1",
+    "text": "嘿，我一直在想接下来该怎么办。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor6"
+    ],
+    "group": "12 第六次主线来访：筹钱请侦探"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor6_2",
+    "text": "我敢肯定，是上层区有人陷害了我母亲。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor6"
+    ],
+    "group": "12 第六次主线来访：筹钱请侦探"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor6_3",
+    "text": "我没法上去打听，但私家侦探可以。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor6"
+    ],
+    "group": "12 第六次主线来访：筹钱请侦探"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor6_4",
+    "text": "找个靠谱的要{0}信用点。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor6"
+    ],
+    "group": "12 第六次主线来访：筹钱请侦探"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor6_5",
+    "text": "所以我会继续去垃圾场拾荒，把找到的东西卖给你。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor6"
+    ],
+    "group": "12 第六次主线来访：筹钱请侦探"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor6_6",
+    "text": "给个公道价，好吗？每一个信用点都能让我离目标更近一步。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor6"
+    ],
+    "group": "12 第六次主线来访：筹钱请侦探"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_scav_1",
+    "text": "嘿，又是我。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorScav"
+    ],
+    "group": "13 可重复拾荒来访及交易反馈"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_scav_2",
+    "text": "再攒{0}信用点，我就能雇侦探了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorScav"
+    ],
+    "group": "13 可重复拾荒来访及交易反馈"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_scav_3",
+    "text": "这是我这次在垃圾场找到的东西。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorScav"
+    ],
+    "group": "13 可重复拾荒来访及交易反馈"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor6_to_go",
+    "text": "谢谢你！只差{0}信用点了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorSeller"
+    ],
+    "group": "13 可重复拾荒来访及交易反馈"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_scav_all_done",
+    "text": "今天就这些了。再攒{0}信用点，我就能雇侦探了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.EleanorAllDoneLine"
+    ],
+    "group": "13 可重复拾荒来访及交易反馈"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_scav_enough_1",
+    "text": "好了，我想钱应该够了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorSeller"
+    ],
+    "group": "13 可重复拾荒来访及交易反馈"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_scav_enough_2",
+    "text": "谢谢你。我一定要查出是谁害了我母亲。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorSeller"
+    ],
+    "group": "13 可重复拾荒来访及交易反馈"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_1",
+    "text": "嘿。侦探查到了一些东西。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_2",
+    "text": "一个数据盘，藏在我母亲以前在水培农场的实验室里。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_3",
+    "text": "有密码锁着，但我知道密码。妈妈总是用我的生日。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_4",
+    "text": "我等不及了。就在这儿打开吧。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_5",
+    "text": "<i>*看着屏幕*</i>",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_6",
+    "text": "这是……基因研究。关于营养果的。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_7",
+    "text": "她找到了让普通营养果重新结籽的方法。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_8",
+    "text": "有了这些数据，随便哪个像样的生物黑客都能改造它。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_9",
+    "text": "再也不用从帕斯泰尔买种子了。这会让帕斯泰尔损失惨重。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_10",
+    "text": "所以他们才对她下手。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_11",
+    "text": "挪用公款的指控是捏造的。全都是。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_12",
+    "text": "是帕斯泰尔公司驻空间站的代表一手策划的。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor7_13",
+    "text": "我……我需要点时间想想该怎么办。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor7"
+    ],
+    "group": "14 第七次主线来访：侦探与数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_threat_1",
+    "text": "还记得我吗？",
+    "speaker_hint": "黑市打手",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorThreat"
+    ],
+    "group": "15 黑市打手的威胁与交易条件"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_threat_2",
+    "text": "我们知道你一直跟埃莉诺有来往。也知道数据盘的事。",
+    "speaker_hint": "黑市打手",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorThreat"
+    ],
+    "group": "15 黑市打手的威胁与交易条件"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_threat_3",
+    "text": "告诉她把东西还给我们，不然她母亲就没命了。",
+    "speaker_hint": "黑市打手",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorThreat"
+    ],
+    "group": "15 黑市打手的威胁与交易条件"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_threat_4",
+    "text": "只要她交出来，我们就放了她母亲。人会被流放到下层区，但能保住命。",
+    "speaker_hint": "黑市打手",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorThreat"
+    ],
+    "group": "15 黑市打手的威胁与交易条件"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_threat_5",
+    "text": "要是你能让她还回来，少不了你{0}信用点的好处。",
+    "speaker_hint": "黑市打手",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorThreat"
+    ],
+    "group": "15 黑市打手的威胁与交易条件"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_threat_6",
+    "text": "别磨蹭太久。",
+    "speaker_hint": "黑市打手",
+    "source_methods": [
+      "StoreClientUniqueList.CreateEleanorThreat"
+    ],
+    "group": "15 黑市打手的威胁与交易条件"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_player",
+    "text": "<i>*告诉她对方提出放了她母亲的条件*</i>",
+    "speaker_hint": "店长（PLAYER）",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_1",
+    "text": "只要我把数据盘还回去，他们就会放了她？",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_2",
+    "text": "被流放到这下面……但还活着。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_3",
+    "text": "可要是我把它公开，他们就会杀了她。但那样的话，再也没人需要帕斯泰尔的种子了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_4",
+    "text": "我不知道该怎么办。换作是你，你会怎么做？",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_choice_return",
+    "text": "[把数据盘还回去，救她母亲]",
+    "speaker_hint": "玩家选项",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_return_1",
+    "text": "你说得对。她是我唯一的亲人了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_return_2",
+    "text": "我会把它交给他们。谢谢你。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_choice_leak",
+    "text": "[把它泄露给下层区的报纸]",
+    "speaker_hint": "玩家选项",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_leak_1",
+    "text": "你说得对。这件事比我们都重要。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_leak_2",
+    "text": "妈妈也会希望大家都能用上它。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor8_leak_3",
+    "text": "我今天就把它送去下层区的报社。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor8"
+    ],
+    "group": "16 第八次主线来访：归还或公开数据盘"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_free_1",
+    "text": "嘿！我妈妈自由了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "17 结局A：归还数据盘后的重聚"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_free_2",
+    "text": "她被流放到了下层区，但我们又在一起了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "17 结局A：归还数据盘后的重聚"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_free_3",
+    "text": "现在我们一起在垃圾场拾荒。虽然比不上从前的日子，但这是我们自己的生活。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "17 结局A：归还数据盘后的重聚"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_free_gift",
+    "text": "这是出事前不久，我给妈妈买的生日礼物。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "17 结局A：归还数据盘后的重聚"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_free_gift_2",
+    "text": "她现在已经用不上这种东西了。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "17 结局A：归还数据盘后的重聚"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_free_bye",
+    "text": "我想把它送给你。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "17 结局A：归还数据盘后的重聚"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_rev_1",
+    "text": "嘿，是我。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "18 结局B：公开数据盘后的革命军路线"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_rev_2",
+    "text": "报纸登出来的那天早上，他们杀了我妈妈。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "18 结局B：公开数据盘后的革命军路线"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_rev_3",
+    "text": "我加入了革命军。他们会帮我让帕斯泰尔付出代价，也能让我躲开公司的魔爪。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "18 结局B：公开数据盘后的革命军路线"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_rev_gift",
+    "text": "这是我给妈妈买的生日礼物。现在大概也无所谓了。送给你吧。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "18 结局B：公开数据盘后的革命军路线"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_rev_gun",
+    "text": "好了，我需要一件武器。你这儿有什么？",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "18 结局B：公开数据盘后的革命军路线"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_rev_bye",
+    "text": "再次谢谢你，谢谢你的一切。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "18 结局B：公开数据盘后的革命军路线"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_thanks",
+    "text": "谢谢你为我做的一切。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "19 两种结局共用的感谢和告别"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_farewell_1",
+    "text": "要是没有你，我大概撑不到今天。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "19 两种结局共用的感谢和告别"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_farewell_2",
+    "text": "希望以后还能再见到你。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "19 两种结局共用的感谢和告别"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor9_farewell_3",
+    "text": "照顾好自己。",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.Eleanor9"
+    ],
+    "group": "19 两种结局共用的感谢和告别"
+  },
+  {
+    "table": "Dialogue",
+    "key": "dialog_eleanor_gun_drawn",
+    "text": "哇，你吓到我了……",
+    "speaker_hint": "埃莉诺",
+    "source_methods": [
+      "StoreClientUniqueList.SetupEleanor"
+    ],
+    "group": "20 掏枪时的通用回应"
+  }
+]

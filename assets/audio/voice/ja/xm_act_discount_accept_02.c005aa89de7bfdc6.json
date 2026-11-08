@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "いいんですか？ じゃあ、お願いします。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "34",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.455,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 213880
+  },
+  "sha256": "f72fb44b31af247b15caacab62b682772320e128b4dd21fe01aca94650ab66ad",
+  "binding": {
+    "key": "xm_act_discount_accept_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "真的可以吗？那就拜托啦。",
+      "ja": "いいんですか？ じゃあ、お願いします。",
+      "en": "Are you sure? I'll take you up on that, then."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_discount_accept_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "真的可以吗？那就拜托啦。",
+        "ja": "いいんですか？ じゃあ、お願いします。",
+        "en": "真的可以吗？那就拜托啦。"
+      },
+      "generic": false
+    }
+  ]
+}

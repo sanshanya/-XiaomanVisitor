@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "助かります。それじゃ、このお値段でお願いします。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "45",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.685,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 272936
+  },
+  "sha256": "76dba6f53f3c12ba0341371e5f46a1618f004975b42de0013a5a37ddd02d3f27",
+  "binding": {
+    "key": "xm_act_discount_accept_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "帮大忙了。那就按这个价钱吧。",
+      "ja": "助かります。それじゃ、このお値段でお願いします。",
+      "en": "That really helps. Let's go with that price."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_discount_accept_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "帮大忙了。那就按这个价钱吧。",
+        "ja": "助かります。それじゃ、このお値段でお願いします。",
+        "en": "帮大忙了。那就按这个价钱吧。"
+      },
+      "generic": false
+    }
+  ]
+}

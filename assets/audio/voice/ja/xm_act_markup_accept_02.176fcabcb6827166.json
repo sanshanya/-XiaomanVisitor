@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "さっきより高いけど……今日は必要なので。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "37",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.781,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 229522
+  },
+  "sha256": "e352598e4ca903a3d6764e4e87bca29b76b694adc1bf0b36ff091f48f820e8cd",
+  "binding": {
+    "key": "xm_act_markup_accept_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "是比刚才贵一点……不过今天确实需要。",
+      "ja": "さっきより高いけど……今日は必要なので。",
+      "en": "That's a little more than before... But I do need it today."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_accept_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "是比刚才贵一点……不过今天确实需要。",
+        "ja": "さっきより高いけど……今日は必要なので。",
+        "en": "是比刚才贵一点……不过今天确实需要。"
+      },
+      "generic": false
+    }
+  ]
+}

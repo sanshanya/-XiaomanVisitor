@@ -1,0 +1,5 @@
+Pillow==13.0.0
+UnityPy==1.25.4
+mutagen==1.48.1
+soundfile==0.14.0
+numpy==2.5.4

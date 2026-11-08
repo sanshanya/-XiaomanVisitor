@@ -1,0 +1,82 @@
+[
+  {
+    "file": "00_阅读说明.txt",
+    "bytes": 2517,
+    "sha256": "b6f0519fbc037ddd5525bdd96b40647a363ae7fb3270825723ca43d5f845ff90"
+  },
+  {
+    "file": "01_小满/小满_剧情节点模板.txt",
+    "bytes": 3563,
+    "sha256": "748a489d98e9b59fde77aae871c5e0d0a4fa8de5f23f5398f6cb56b85d6fc091"
+  },
+  {
+    "file": "01_小满/小满_现有对话_0.4.2.txt",
+    "bytes": 5061,
+    "sha256": "c22e899ba24f619b26d2656fb5f07bfb43bb82ffd67037dfbdef267f815220a0"
+  },
+  {
+    "file": "02_埃莉诺_原版/01_剧情流程与分支.txt",
+    "bytes": 7832,
+    "sha256": "1f7ade0f2484b0aa880993ed39f7958b41532bc2772b29ce311aa7658f305967"
+  },
+  {
+    "file": "02_埃莉诺_原版/02_按节点对话全文.txt",
+    "bytes": 16893,
+    "sha256": "985b5e87837b43fa5dfda73684ee8c8725473bbf6bd1c61a6d8ecb101682d246"
+  },
+  {
+    "file": "02_埃莉诺_原版/03_节点写作参考.txt",
+    "bytes": 3944,
+    "sha256": "66b4ae12ab3632904af0274755d2ec2d0f7be3b10786480a1faf84e7d5ad52b6"
+  },
+  {
+    "file": "02_埃莉诺_原版/04_全部对话_原始.csv",
+    "bytes": 23444,
+    "sha256": "1a9281727fc03805c0138f64ecfc5480cb7b547d214a351271e4fa121e3c958c"
+  },
+  {
+    "file": "02_埃莉诺_原版/05_全部对话_原始.json",
+    "bytes": 44837,
+    "sha256": "61f41c6c5722b3ec37b11f4280e7ef9177643bd3c21cc6329b9d5140e8130ea7"
+  },
+  {
+    "file": "02_埃莉诺_原版/06_关联选项与通知.txt",
+    "bytes": 1070,
+    "sha256": "94039038d34488480e552b3312ff12a5b04fd8357be76eed6a4cc6912890ccb9"
+  },
+  {
+    "file": "02_埃莉诺_原版/07_关联文本_原始.json",
+    "bytes": 1344,
+    "sha256": "6bb013bb589f49aff2d60e76e393f9f97b4e9a619315a4c841b1b35015c88b48"
+  },
+  {
+    "file": "02_埃莉诺_原版/原版逻辑摘录/EventListUnique_Eleanor.cs.txt",
+    "bytes": 747,
+    "sha256": "a37069e6e5ec7b566dd6888c7527f136646fa60032bf276d5c1a332282218091"
+  },
+  {
+    "file": "02_埃莉诺_原版/原版逻辑摘录/StoreClientData_Eleanor.cs.txt",
+    "bytes": 7579,
+    "sha256": "0bf99d4cb958f12b887641a16a6e9fe4d95f3a069495169b5ef06a0b0152aebe"
+  },
+  {
+    "file": "02_埃莉诺_原版/原版逻辑摘录/StoreClientManager_Eleanor.cs.txt",
+    "bytes": 3551,
+    "sha256": "88b8150b68a7896a91fe1fb2a17841319977329d4c292ee907e26bfdb5c9e691"
+  },
+  {
+    "file": "02_埃莉诺_原版/原版逻辑摘录/StoreClientUniqueList_Eleanor.cs.txt",
+    "bytes": 43381,
+    "sha256": "7327cc48feead268d532b622b1f08fe7be7ef3bac17b2c7ce61fcf7dbc0179a1"
+  },
+  {
+    "file": "02_埃莉诺_原版/原版逻辑摘录/StorylineSchedule.cs.txt",
+    "bytes": 3526,
+    "sha256": "555db903a49c5001627eff3d4156c7c61fe5b5e3fa005faeb3017c0536115cd1"
+  },
+  {
+    "file": "来源与版本.json",
+    "bytes": 1993,
+    "sha256": "f82adf3f932f590ce35a54658feaab33bf94a0684d8e705dd383e3e3bd00fef7"
+  }
+]

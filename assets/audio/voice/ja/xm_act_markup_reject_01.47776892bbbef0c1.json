@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "すみません。そのお値段なら、今回はやめておきます。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "47",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.017,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 288862
+  },
+  "sha256": "c4c001b49beb768e3f13811c520eb048bf8e7eb6653750517ed4e5f30e3f4884",
+  "binding": {
+    "key": "xm_act_markup_reject_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "抱歉，这个价钱我还是不要了。",
+      "ja": "すみません。そのお値段なら、今回はやめておきます。",
+      "en": "I'm sorry, but I'll have to pass at that price."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_reject_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "抱歉，这个价钱我还是不要了。",
+        "ja": "すみません。そのお値段なら、今回はやめておきます。",
+        "en": "抱歉，这个价钱我还是不要了。"
+      },
+      "generic": false
+    }
+  ]
+}

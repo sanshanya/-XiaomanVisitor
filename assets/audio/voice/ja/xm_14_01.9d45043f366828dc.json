@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "58",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.401,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 355268
+  },
+  "sha256": "08ee65b30bd9e4a552ac4687a9fe49ef5a653965d1e1a6db4c868c78bd97d9dc",
+  "binding": {
+    "key": "xm_14_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……晚上好。明天就坐船了，要回老家去。",
+      "ja": "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
+      "en": "...Good evening. I'm taking the ship tomorrow. I've decided to go home."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_14_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "……晚上好。明天就坐船了，要回老家去。",
+        "ja": "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
+        "en": "……晚上好。明天就坐船了，要回老家去。"
+      },
+      "generic": false
+    }
+  ]
+}

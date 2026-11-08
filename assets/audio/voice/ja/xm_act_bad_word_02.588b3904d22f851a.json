@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "71",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.199,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 393618
+  },
+  "sha256": "422a09dddd20e1a0de7caa6c263449df4542ef0f30a9ebb214d1119906887062",
+  "binding": {
+    "key": "xm_act_bad_word_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "抱歉……但别人问起这家店，我没法当作什么都没发生。",
+      "ja": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
+      "en": "I'm sorry... But if someone asks about this shop, I can't pretend nothing happened."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_bad_word_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "抱歉……但别人问起这家店，我没法当作什么都没发生。",
+        "ja": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
+        "en": "抱歉……但别人问起这家店，我没法当作什么都没发生。"
+      },
+      "generic": false
+    }
+  ]
+}

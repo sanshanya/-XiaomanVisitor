@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "68",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.327,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 351736
+  },
+  "sha256": "7c8e85e4f7c1d84251d2f41814438d33ac3cb37137d0565053fa432b19b1b5b9",
+  "binding": {
+    "key": "xm_act_remove_filter_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "不好意思，可以先把里面的滤芯取出来吗？我只买水。",
+      "ja": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
+      "en": "Excuse me, could you take the filter out first? I only want the water."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_remove_filter_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "不好意思，可以先把里面的滤芯取出来吗？我只买水。",
+        "ja": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
+        "en": "不好意思，可以先把里面的滤芯取出来吗？我只买水。"
+      },
+      "generic": false
+    }
+  ]
+}

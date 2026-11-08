@@ -1,0 +1,14 @@
+{
+  "zh": {
+    "ui_tavern_name": "小满的酒馆",
+    "ui_tavern_renovating": "装修中"
+  },
+  "ja": {
+    "ui_tavern_name": "みちるのバー",
+    "ui_tavern_renovating": "内装工事中"
+  },
+  "en": {
+    "ui_tavern_name": "Xiaoman's Tavern",
+    "ui_tavern_renovating": "Under renovation"
+  }
+}

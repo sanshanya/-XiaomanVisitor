@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんなに上がるんですか……。でも、今回はお願いします。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "49",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.041,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 290026
+  },
+  "sha256": "c1781d99639c40790c6fed07729d3a1b948dacb92b98304f33f5208fde1fddac",
+  "binding": {
+    "key": "xm_act_markup_accept_high_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "居然加这么多……算了，这次还是要买。",
+      "ja": "こんなに上がるんですか……。でも、今回はお願いします。",
+      "en": "That much more...? Never mind. I still need to buy it this time."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_accept_high_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "居然加这么多……算了，这次还是要买。",
+        "ja": "こんなに上がるんですか……。でも、今回はお願いします。",
+        "en": "居然加这么多……算了，这次还是要买。"
+      },
+      "generic": false
+    }
+  ]
+}

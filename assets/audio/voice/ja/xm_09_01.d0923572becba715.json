@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "57",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.89,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 330744
+  },
+  "sha256": "b68fa3bed454168d4982b659e6a4512a9b9f0bb22a31c0499f739dbdede51c9a",
+  "binding": {
+    "key": "xm_09_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好。昨天门口的感应灯亮了好几次。",
+      "ja": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+      "en": "Good evening. The motion light outside my door came on several times yesterday."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_09_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "晚上好。昨天门口的感应灯亮了好几次。",
+        "ja": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+        "en": "晚上好。昨天门口的感应灯亮了好几次。"
+      },
+      "generic": false
+    }
+  ]
+}

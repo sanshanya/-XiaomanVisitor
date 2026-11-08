@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "この水、純度がラベルの表示と違うみたいです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "42",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.035,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 241734
+  },
+  "sha256": "8000adb16f430e700b6b6727ac4e57579db0f249d19c6f7dd78000bc290903e3",
+  "binding": {
+    "key": "xm_act_expose_water_other_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这水的纯度和标签上写的不一样。",
+      "ja": "この水、純度がラベルの表示と違うみたいです。",
+      "en": "The purity of this water doesn't match the label."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_expose_water_other_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "这水的纯度和标签上写的不一样。",
+        "ja": "この水、純度がラベルの表示と違うみたいです。",
+        "en": "这水的纯度和标签上写的不一样。"
+      },
+      "generic": false
+    }
+  ]
+}

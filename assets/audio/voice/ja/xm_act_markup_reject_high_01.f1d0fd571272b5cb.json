@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……えっ、[gasps] さすがに高すぎませんか。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "38",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.455,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 213880
+  },
+  "sha256": "f7681d2d50615421e545ecce1d7e094c7a03b1157ebb8f3171650e212b7cb6ea",
+  "binding": {
+    "key": "xm_act_markup_reject_high_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……诶？这也太贵了吧。",
+      "ja": "……えっ？ さすがに高すぎませんか。",
+      "en": "...What? That's far too expensive."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_reject_high_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "……诶？这也太贵了吧。",
+        "ja": "……えっ？ さすがに高すぎませんか。",
+        "en": "……诶？这也太贵了吧。"
+      },
+      "generic": false
+    }
+  ]
+}

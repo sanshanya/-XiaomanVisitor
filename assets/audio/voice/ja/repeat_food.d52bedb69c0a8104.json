@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "食べ物だけで大丈夫です。他のものは、また今度。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "43",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.017,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 288862
+  },
+  "sha256": "80fa57aa95037ca9679236175b8893c98fee149b6fbc3c927291776ad6c5a82e",
+  "binding": {
+    "key": "repeat_food",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "吃的就好。其他东西这次先不买啦。",
+      "ja": "食べ物だけで大丈夫です。他のものは、また今度。",
+      "en": "Just food. I don't need anything else this time."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "repeat_food",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "吃的就好。其他东西这次先不买啦。",
+        "ja": "食べ物だけで大丈夫です。他のものは、また今度。",
+        "en": "吃的就好。其他东西这次先不买啦。"
+      },
+      "generic": false
+    }
+  ]
+}

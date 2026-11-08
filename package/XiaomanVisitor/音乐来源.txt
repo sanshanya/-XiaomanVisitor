@@ -1,0 +1,47 @@
+深空小满：可能很迷醉？ 0.0.2 音乐来源
+
+14盘收藏磁带
+音乐取自用户提供的原始MP3，原文件由作者保留。原声磁带的发布副本已做保守的高品质可变码率压缩，并移除重复内嵌封面。
+保持原有48kHz立体声及完整解码采样数；没有裁剪曲目。制作文档分别记录原始文件与发布副本的SHA256及处理参数。
+第14盘Hello!（雨声混音）保留提供文件；原有日语配音和敲门音效不参与本次压缩。
+
+第1至13盘
+来自已下载的“雨夜迷醉时（雨音に満ちる夜）BGM合集”。
+合集整理者：白咲绯文丶（不据此认定为作曲者）。
+沿用合集标签：Title、Intro、Nightfall、Intro2、Midnight、Latenight、Diary、Gallery1、Lost、Gallery2、Deepnight、Outro2、Outro。
+这些英文名称是下载合集标签，不将其认定为原作者的正式曲名。
+
+第14盘
+Hello!（雨声混音），约2分43秒。
+提供文件标注艺人：長谷川智樹、美野春樹、岩永知樹。
+原文件名：長谷川智樹,美野春樹,岩永知樹 - Hello! (雨声混音).mp3
+此曲为作者指定的替换音乐，不能据此认定来自《雨音に満ちる夜》。
+本盘沿用内部标识rainysound及Sounds/rain_rainysound.mp3，以兼容既有物品；实际播放内容已经替换，不再是20分钟的Rainysound。
+
+当前14首合计约39.42分钟。
+音乐权利归各原权利人所有。
+
+旧版磁带（保留供旧存档兼容）
+
+磁带包装名：小满留下的雨夜
+实际曲目：No.678
+作曲：トーマス大森音楽工房 / Thomas Oomori Music Studio
+原作者页面：https://www.youtube.com/watch?v=7w9WHMd0oM4
+
+来源游戏：《A Night Filled With the Sound of Rain / 雨音に満ちる夜》
+原始文件：audio\bgm\EGThomasOmoriMusicStudio1.ogg_
+
+此曲在原作公共事件2中作为酒吧BGM使用。
+音频时长约182.65秒，保留原始Ogg Vorbis数据，未进行有损转码。
+mod中的文件名：Sounds\rain_bgm.ogg
+《雨夜迷醉时》开发：RetroLab；发行：Kagura Games。
+音乐权利归原作曲者所有。
+
+No.678与下载合集Nightfall的解码波形包络比对相关系数约0.9966，按同一曲处理旧存档收藏状态。
+
+磁带外观：运行时引用Probably Stolen的14种原生磁带sprite，各曲外观不同。
+
+正式剧情固定顺序（编号对应实际来访章节）
+01 Title、02 Intro、03 Nightfall、04 Intro2、05 Midnight、06 Latenight、
+07 Diary、08 Gallery1、09 Lost、10 Gallery2、11 Deepnight、12 Outro2、13 Outro、14 Hello!（雨声混音）。
+编号、赠送节点和物品ID保持稳定。

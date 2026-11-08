@@ -1,0 +1,19 @@
+小满·雨夜来客 Demo 0.2.0 音乐来源
+
+磁带包装名：小满留下的雨夜
+实际曲目：No.678
+作曲：トーマス大森音楽工房 / Thomas Oomori Music Studio
+原作者页面：https://www.youtube.com/watch?v=7w9WHMd0oM4
+
+提取自本机 Steam 游戏：
+E:\app\steam\steamapps\common\A Night Filled With the Sound of Rain
+audio\bgm\EGThomasOmoriMusicStudio1.ogg_
+
+此曲在原作公共事件2中作为酒吧BGM使用。
+音频时长约182.65秒，保留原始Ogg Vorbis数据，未进行有损转码。
+mod中的文件名：Sounds\rain_bgm.ogg
+《雨夜迷醉时》开发：RetroLab；发行：Kagura Games。
+音乐权利归原作曲者所有。
+
+提取的17份非RPG Maker示例库BGM另存在开发目录 assets\audio\original-bgm。
+其中包括不同编码版本及未直接调用的备用曲目；Demo首份礼物只载入酒吧音乐No.678。

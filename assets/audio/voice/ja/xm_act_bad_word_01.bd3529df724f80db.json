@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "60",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.801,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 278470
+  },
+  "sha256": "d185c6c2bf939ba6c5d52e13b3c967a8fdd350f335a68125d47dc7e2b667adc5",
+  "binding": {
+    "key": "xm_act_bad_word_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这种事，我会和认识的人说清楚的。",
+      "ja": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
+      "en": "I'll make sure the people I know hear about this."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_bad_word_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "这种事，我会和认识的人说清楚的。",
+        "ja": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
+        "en": "这种事，我会和认识的人说清楚的。"
+      },
+      "generic": false
+    }
+  ]
+}

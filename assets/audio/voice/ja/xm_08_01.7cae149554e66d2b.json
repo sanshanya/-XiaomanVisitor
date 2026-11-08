@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。[laughs] すごくにぎやかだったんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "85",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.273,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 493126
+  },
+  "sha256": "e4f8e456dc842eea27e0d8c0b049c42075c65c8fec957f5f35819c81b7d4b939",
+  "binding": {
+    "key": "xm_08_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好。昨晚来了几个刚下夜班的姑娘，吵吵闹闹的。",
+      "ja": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。すごくにぎやかだったんです。",
+      "en": "Good evening. A few girls came in after their night shift yesterday. They were quite a lively bunch."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_08_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "晚上好。昨晚来了几个刚下夜班的姑娘，吵吵闹闹的。",
+        "ja": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。すごくにぎやかだったんです。",
+        "en": "晚上好。昨晚来了几个刚下夜班的姑娘，吵吵闹闹的。"
+      },
+      "generic": false
+    }
+  ]
+}

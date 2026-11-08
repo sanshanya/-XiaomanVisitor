@@ -1,0 +1,322 @@
+[
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cocktail\\background_cocktail.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cocktail\\background_cocktail.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      1024,
+      576
+    ],
+    "sha256": "105206c404daa8ab82f4742eadb1faced0aac7e85e79841bc3fac4aaff685700"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cocktail\\detail_01.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cocktail\\detail_01.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      1024,
+      576
+    ],
+    "sha256": "97a1d09bb06b92272b0db3661f81ba1e130bac82edec46b388cb4089cecd5c92"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cocktail\\detail_02.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cocktail\\detail_02.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      1024,
+      576
+    ],
+    "sha256": "bf1ce8ff944c07feb12dc05a8efd50d1001c641b7b48820f44561ae894b53dd5"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cocktail\\detail_03.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cocktail\\detail_03.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      1024,
+      576
+    ],
+    "sha256": "b16579ae542b41d666cf8b662f83d98d31534ff4d6a4ba9b0b4de3c696bd60a1"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cocktail\\detail_04.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cocktail\\detail_04.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      1024,
+      576
+    ],
+    "sha256": "8fb38f186cddc8ee5337475d7ce636fda641b3ce6aa0cf2ee929ed98a6a65f14"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cocktail\\detail_05.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cocktail\\detail_05.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      1024,
+      576
+    ],
+    "sha256": "3eb8be88e652754ce6700b3b8be56597a13db0ac8b5b357e9ed4921f945645e3"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cocktail\\detail_06.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cocktail\\detail_06.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGB",
+    "alpha_range": [
+      255,
+      255
+    ],
+    "bbox": [
+      0,
+      0,
+      1024,
+      576
+    ],
+    "sha256": "1ebdf6039c70bb4070c144ea2afc49c6e0477d691ec9587ab084b30c5cf18897"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cocktail\\menu.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cocktail\\menu.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "bbox": [
+      282,
+      20,
+      684,
+      540
+    ],
+    "sha256": "932c777c5e1279bdeb8baff106a8920eda5b166020ed3c13d0c4fe88bb92a761"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cocktail\\menu_old.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cocktail\\menu_old.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "bbox": [
+      290,
+      44,
+      692,
+      564
+    ],
+    "sha256": "f902b166bb4a187bb402020b5a89329a0d675760e17eae74378b294a90069cff"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cutin\\cocktail01\\cocktail_00.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cutin\\cocktail01\\cocktail_00.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      118,
+      1024,
+      473
+    ],
+    "sha256": "15b3e2b6935cdbb190df2fdab2bc54c15e21bc5295ebd699cf552fdc7802f1c3"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cutin\\cocktail01\\cocktail_14.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cutin\\cocktail01\\cocktail_14.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      118,
+      1024,
+      473
+    ],
+    "sha256": "eed641665dd6664343dcb91c42b41df20bdab7edf98bb1cc9019588ee6a7c326"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cutin\\cocktail02\\cocktail_14.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cutin\\cocktail02\\cocktail_14.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      118,
+      1024,
+      473
+    ],
+    "sha256": "83c261b50bd56c807b2ffb8885bb2772a950c48c9f0f9f2dd645c455164e03c8"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cutin\\cocktail03\\cocktail_14.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cutin\\cocktail03\\cocktail_14.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      118,
+      1024,
+      473
+    ],
+    "sha256": "9d679a8b230fa3b5510c5f1d5fee8e99976265998c8c2005eac4b214c4e76666"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cutin\\cocktail04\\cocktail_14.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cutin\\cocktail04\\cocktail_14.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      118,
+      1024,
+      473
+    ],
+    "sha256": "42aa9debbbb479265d2ca78a399aec444c4426cbe584a99093e7ac1dfacb014e"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cutin\\cocktail05\\cocktail_14.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cutin\\cocktail05\\cocktail_14.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      118,
+      1024,
+      473
+    ],
+    "sha256": "5850d66db4d3fb93dc29c1e6db84fd4c5f2e30bdb23053dbdf09110bc625fbab"
+  },
+  {
+    "source": "E:\\app\\steam\\steamapps\\common\\A Night Filled With the Sound of Rain\\img\\pictures\\cutin\\cocktail06\\cocktail_14.png_",
+    "output": "D:\\ds\\ProbablyStolen-Xiaoman\\assets\\drinks\\original\\cutin\\cocktail06\\cocktail_14.png",
+    "size": [
+      1024,
+      576
+    ],
+    "mode": "RGBA",
+    "alpha_range": [
+      0,
+      255
+    ],
+    "bbox": [
+      0,
+      118,
+      1024,
+      473
+    ],
+    "sha256": "c9b17275b33ecd680129c4b7fe88a070eac783c1914e581ec7cf07d91e083d3d"
+  }
+]

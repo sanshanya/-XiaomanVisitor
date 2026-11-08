@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "その金額だと、ちょっと難しいです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "32",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.127,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 198136
+  },
+  "sha256": "e9f60032f8366216eaa1afe3a62c5daa92943a2d435041000a58263c207c132c",
+  "binding": {
+    "key": "xm_act_markup_reject_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这个价钱有点难接受。",
+      "ja": "その金額だと、ちょっと難しいです。",
+      "en": "That price is a little hard to accept."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_markup_reject_03",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "这个价钱有点难接受。",
+        "ja": "その金額だと、ちょっと難しいです。",
+        "en": "这个价钱有点难接受。"
+      },
+      "generic": false
+    }
+  ]
+}

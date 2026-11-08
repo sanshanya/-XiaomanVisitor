@@ -1,0 +1,15 @@
+{
+  "approved_version": "0.4.2",
+  "source_archive_sha256": "a2d77ac95031943e96826211a3069a3c73ff1e6070edab988307d3a06372beeb",
+  "files": {
+    "Textures/Items/xiaoman_cocktail_bluebird.png": "fb1fbef30ed0693d31eb4aa7aa855433b07ec3a2b5a06100cc9ff72f50d3fbd8",
+    "Textures/Items/xiaoman_cocktail_cosmo_zone.png": "e395abbc6565ae4f46e07f20e00f785b7125188bd03f14c9c34428eab350b1fc",
+    "Textures/Items/xiaoman_cocktail_rainy_blue.png": "19c3a9f50efe9a323263dd9be719038e28173b06e7dcb462dcdf2a12bd6706ef",
+    "Textures/Items/xiaoman_cocktail_sky_after_rain.png": "dc5725628ecfe16468db4c14aa1371491b4e68a4488a8be9a6def60e06b9e7e7",
+    "Textures/Items/xiaoman_cocktail_sunset_blue.png": "3b909805e861c49e4d44f0f5c2927083dc8bb701fd1aa89e3aacb799c4b4e93c",
+    "Textures/Items/xiaoman_cocktail_whale_dream.png": "9cd29834ef05fb9d256e62f296e0baa0d61a3ea5a792905c114ec1e0202d00b6",
+    "Textures/Paper/xiaoman_note_close.png": "2628ef14c499c30b191e6d8e22d8610cbca80011b21442153e193984ed575a1c",
+    "Textures/Paper/xiaoman_note_close_hover.png": "00b5263016aa642474735cacb6a31e1633cf3082b77aa4b0c89b09a0964a6b49",
+    "Textures/xiaoman_atlas.png": "389d202d39398ff613a6f1c155c9bf0ad8a55e86f92581510b038081f2aa3049"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "えっ、[gasps] そんなに安くしてくれるんですか？ 本当にいいんですか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "64",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.472,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 358700
+  },
+  "sha256": "62eeff4c15f37860e77aaddc45a282136177653e86210bbaa45367a8874c52f2",
+  "binding": {
+    "key": "xm_act_discount_accept_high_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "诶，便宜这么多？……真的可以吗？",
+      "ja": "えっ、そんなに安くしてくれるんですか？ 本当にいいんですか？",
+      "en": "Oh, that much off? ...Are you sure?"
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_discount_accept_high_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "诶，便宜这么多？……真的可以吗？",
+        "ja": "えっ、そんなに安くしてくれるんですか？ 本当にいいんですか？",
+        "en": "诶，便宜这么多？……真的可以吗？"
+      },
+      "generic": false
+    }
+  ]
+}

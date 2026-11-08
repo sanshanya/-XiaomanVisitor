@@ -1,0 +1,33 @@
+{
+  "source_kind": "user_supplied_cover",
+  "source_image": "reference/tavern-cover/xiaoman_tavern_cover_source.png",
+  "source_sha256": "445e623a52d1357d16e68f96003b4f693ce63942b23ce62c5aff7b7de7d27012",
+  "filter": "lanczos",
+  "padding": false,
+  "source_size": [
+    2305,
+    891
+  ],
+  "source_crop": [
+    300,
+    4,
+    1854,
+    886
+  ],
+  "room_size": [
+    1554,
+    882
+  ],
+  "packaged": "Textures/Items/xiaoman_tavern_map.png",
+  "size": [
+    592,
+    336
+  ],
+  "sha256": "2c19bbcdccf2818c6bc4fe20825b3a3427f76743f4952b0433fad572e2ddaf71",
+  "bytes": 311078,
+  "source_art_preserved": true,
+  "location_id": "sansm.xiaoman.visitor.tavern",
+  "image_key": "sansm.xiaoman.visitor:xiaoman_tavern_map",
+  "phase": "renovation_placeholder",
+  "enterable": false
+}

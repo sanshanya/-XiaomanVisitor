@@ -1,0 +1,2171 @@
+{
+  "schema": 1,
+  "version": "3.4",
+  "source": "D:\\ds\\ProbablyStolen-Xiaoman\\story\\小满的十四个星期一_v3.4_专属动作台词_TTS演出整合.md",
+  "source_sha256": "c6ddd57c2d0111288f16a3f68d503df860550ccdd70f759a00d7f6e37b31f190",
+  "episodes": [
+    {
+      "index": 1,
+      "title": "还亮着灯",
+      "credits": 150,
+      "demand": "FoodOrWater",
+      "track": "title",
+      "opening": [
+        "xm_01_01",
+        "xm_01_02",
+        "xm_01_03",
+        "xm_01_shop"
+      ],
+      "accept": "xm_01_accept",
+      "goodbye": "xm_01_bye",
+      "cocktail": "",
+      "note_id": "story_note_01"
+    },
+    {
+      "index": 2,
+      "title": "没有雨声的晚上",
+      "credits": 200,
+      "demand": "Household",
+      "track": "intro",
+      "opening": [
+        "xm_02_01",
+        "xm_02_02",
+        "xm_02_03",
+        "xm_02_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_02"
+    },
+    {
+      "index": 3,
+      "title": "还没写好的营业时间",
+      "credits": 250,
+      "demand": "Food",
+      "track": "nightfall",
+      "opening": [
+        "xm_03_01",
+        "xm_03_02",
+        "xm_03_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_03"
+    },
+    {
+      "index": 4,
+      "title": "第一杯",
+      "credits": 300,
+      "demand": "Water",
+      "track": "intro2",
+      "opening": [
+        "xm_04_01",
+        "xm_04_02",
+        "xm_04_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "xm_04_cocktail",
+      "note_id": "story_note_04"
+    },
+    {
+      "index": 5,
+      "title": "被叫作老板",
+      "credits": 350,
+      "demand": "Household",
+      "track": "midnight",
+      "opening": [
+        "xm_05_01",
+        "xm_05_02",
+        "xm_05_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_05"
+    },
+    {
+      "index": 6,
+      "title": "甜一点也没关系",
+      "credits": 400,
+      "demand": "Water",
+      "track": "latenight",
+      "opening": [
+        "xm_06_01",
+        "xm_06_02",
+        "xm_06_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_06"
+    },
+    {
+      "index": 7,
+      "title": "合照里的空位",
+      "credits": 450,
+      "demand": "Food",
+      "track": "diary",
+      "opening": [
+        "xm_07_01",
+        "xm_07_02",
+        "xm_07_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_07"
+    },
+    {
+      "index": 8,
+      "title": "闪亮的发夹",
+      "credits": 500,
+      "demand": "Household",
+      "track": "gallery1",
+      "opening": [
+        "xm_08_01",
+        "xm_08_02",
+        "xm_08_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_08"
+    },
+    {
+      "index": 9,
+      "title": "感应灯",
+      "credits": 450,
+      "demand": "Food",
+      "track": "lost",
+      "opening": [
+        "xm_09_01",
+        "xm_09_02",
+        "xm_09_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_09"
+    },
+    {
+      "index": 10,
+      "title": "特地绕过来的客人",
+      "credits": 400,
+      "demand": "Water",
+      "track": "gallery2",
+      "opening": [
+        "xm_10_01",
+        "xm_10_02",
+        "xm_10_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_10"
+    },
+    {
+      "index": 11,
+      "title": "十二点",
+      "credits": 350,
+      "demand": "Household",
+      "track": "deepnight",
+      "opening": [
+        "xm_11_01",
+        "xm_11_02",
+        "xm_11_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_11"
+    },
+    {
+      "index": 12,
+      "title": "旧酒单",
+      "credits": 300,
+      "demand": "Food",
+      "track": "outro2",
+      "opening": [
+        "xm_12_01",
+        "xm_12_02",
+        "xm_12_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_12"
+    },
+    {
+      "index": 13,
+      "title": "纸箱",
+      "credits": 250,
+      "demand": "Household",
+      "track": "outro",
+      "opening": [
+        "xm_13_01",
+        "xm_13_02",
+        "xm_13_shop"
+      ],
+      "accept": "accept_return",
+      "goodbye": "goodbye",
+      "cocktail": "",
+      "note_id": "story_note_13"
+    },
+    {
+      "index": 14,
+      "title": "路上喝的水",
+      "credits": 200,
+      "demand": "Water",
+      "track": "rainysound",
+      "opening": [
+        "xm_14_01",
+        "xm_14_02",
+        "xm_14_shop"
+      ],
+      "accept": "xm_14_accept",
+      "goodbye": "xm_14_bye",
+      "cocktail": "",
+      "note_id": "story_note_14"
+    }
+  ],
+  "actions": [
+    {
+      "native_key": "dialog_bargain_accept_grateful_1",
+      "key": "xm_act_discount_accept_01",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "这才叫好买卖嘛，谢啦。",
+        "それはお得ですね。ありがとうございます。",
+        "Now that's what I call a deal. Thanks."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_grateful_2",
+      "key": "xm_act_discount_accept_02",
+      "mood": "Smile",
+      "kind": "speech",
+      "originals": [
+        "老板大气，我接受了。",
+        "気前がいいですね。買い取ります。",
+        "Generous of you. I'll take it."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_grateful_3",
+      "key": "xm_act_discount_accept_03",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "非常感谢，合作愉快。",
+        "ありがとうございます。取引できて光栄です。",
+        "Appreciate it. Pleasure doing business."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_very_grateful_1",
+      "key": "xm_act_discount_accept_high_01",
+      "mood": "Shy",
+      "kind": "speech",
+      "originals": [
+        "哇哦，你可真是太关照我了。谢谢。",
+        "えっ？ ありがとうございます、とても助かります。",
+        "Wow. You're really hooking me up. Thank you."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_very_grateful_2",
+      "key": "xm_act_discount_accept_high_02",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "简直难以置信，我欠你一个人情。",
+        "すごいですね。この恩はいつか返します。",
+        "This is incredible. I owe you one."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_very_grateful_3",
+      "key": "xm_act_discount_accept_high_03",
+      "mood": "Smile",
+      "kind": "speech",
+      "originals": [
+        "你是认真的吗？太不可思议了。成交！",
+        "いいんですか？ それなら取引成立です！",
+        "Are you serious? That's amazing. Deal!"
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_budget_increase_1",
+      "key": "xm_act_budget_increase_01",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "你刚刚让我的预算更宽松了，我能多买点东西了。",
+        "予算に余裕ができたので、もっと買えますね。",
+        "You just stretched my budget. I can pick up more now."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_budget_increase_2",
+      "key": "xm_act_budget_increase_02",
+      "mood": "Smile",
+      "kind": "speech",
+      "originals": [
+        "替我省了点钱，那我今天还能再多挑几样。",
+        "節約できたので、今日はまだ予算が残ってますね。",
+        "Saved me some credits, so my budget for today goes further."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_budget_increase_3",
+      "key": "xm_act_budget_increase_03",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "这下我又有余钱了，给我看看你还有什么别的东西吧。",
+        "予算に余裕ができますね。もっと見せてください。",
+        "That frees up my budget. Show me what else you've got."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_reluctant_1",
+      "key": "xm_act_markup_accept_01",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "……好吧。成交。",
+        "……いいでしょう。",
+        "...Fine. Deal."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_reluctant_2",
+      "key": "xm_act_markup_accept_02",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "啧。算了，成交吧。",
+        "はあ。いいですよ、そうしましょう。",
+        "Tch. Alright, you've got a deal."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_reluctant_3",
+      "key": "xm_act_markup_accept_03",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "我不是很满意，但我接受了。",
+        "仕方ないですね、受け入れましょう。",
+        "I don't love it, but I'll take it."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_very_reluctant_1",
+      "key": "xm_act_markup_accept_high_01",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "……这也太黑了。行吧，勉强让你赚这一笔。",
+        "……攻めた要求ですね。まあ受け入れてあげます。",
+        "...That's a lot. Fine. You've got a deal, barely."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_very_reluctant_2",
+      "key": "xm_act_markup_accept_high_02",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "你可真会得寸进尺。行吧，算你狠。",
+        "強引な交渉ですが、いいでしょう。",
+        "You're really pushing it. Alright, deal."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_accept_very_reluctant_3",
+      "key": "xm_act_markup_accept_high_03",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "我是真有急需，算你走运了。",
+        "私が本当に欲しくて幸運でしたね。",
+        "You're lucky I really needed this."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_budget_decrease_1",
+      "key": "xm_act_budget_decrease_01",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "我的预算一下子去了一大块，别指望我还能买多少。",
+        "予算が一気になくなりました。これ以上は買いませんよ。",
+        "There goes a chunk of my budget. Don't expect me to buy much more."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_budget_decrease_2",
+      "key": "xm_act_budget_decrease_02",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "我的预算现在更紧了。",
+        "もう予算がカツカツです。",
+        "My budget's tighter now."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_budget_decrease_3",
+      "key": "xm_act_budget_decrease_03",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "挨这么一下，我剩下的钱可得省着点花了。",
+        "こんなギリギリでは、他の出費を削らないといけませんね。",
+        "That dent in my budget means I'm cutting back on the rest."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_reject_1",
+      "key": "xm_act_markup_reject_01",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "不，我不要了。",
+        "いえ、結構です。",
+        "No, I'll pass."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_reject_2",
+      "key": "xm_act_markup_reject_02",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "不感兴趣。",
+        "興味ありません。",
+        "Not interested."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_reject_3",
+      "key": "xm_act_markup_reject_03",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "不。这个价格不行。",
+        "いえ、その価格は無理です。",
+        "Nope. Not at that price."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_hard_reject_1",
+      "key": "xm_act_markup_reject_high_01",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "想都别想，你这是明抢啊。",
+        "無理です。もはや強盗ですよ。",
+        "Absolutely not. That's robbery."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_hard_reject_2",
+      "key": "xm_act_markup_reject_high_02",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "想得美。我不吃这一套。",
+        "とんでもない。他を当たってください。",
+        "Hell no. Find someone else for that."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_hard_reject_3",
+      "key": "xm_act_markup_reject_high_03",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "你疯了吧，不干。",
+        "頭がおかしいんですか？ ナシです。",
+        "You're out of your mind. No deal."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_leave_1",
+      "key": "xm_act_angry_leave_01",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "不要了，我走了。",
+        "もういいです。帰ります。",
+        "Forget it. I'm out of here."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_leave_2",
+      "key": "xm_act_angry_leave_02",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "没什么好谈的了。",
+        "もう用はありません。",
+        "We're done here."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_leave_3",
+      "key": "xm_act_angry_leave_03",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "见鬼去吧，我走了。",
+        "帰らせていただきます。",
+        "Hell with this, I'm leaving."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_talk_bad_1",
+      "key": "xm_act_bad_word_01",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "我会让所有人都知道这家店的老板是条毒蛇。",
+        "ここの店主の悪人ぶりは、きっちり広めておきます。",
+        "Everyone's going to hear what a snake runs this place."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_talk_bad_2",
+      "key": "xm_act_bad_word_02",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "我会让所有人都知道你开的是家什么店。",
+        "ここがどんな店なのか、知らしめますから。",
+        "I'll make sure folks know what kind of store you run."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_talk_bad_3",
+      "key": "xm_act_bad_word_03",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "这地方坏名声传得快，以后就没几个回头客了。",
+        "悪い噂は一瞬で広まりますから、客は一気に減るでしょうね。",
+        "Bad word travels fast around here. Won't be many coming back."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_innocent_blackmail_1",
+      "key": "xm_act_blackmail_innocent_01",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "什么？！我才不是罪犯。你怎么敢这样指控我？",
+        "はあ！？ 何てことを言うんですか。犯罪者じゃありませんよ。",
+        "What?! I'm no criminal. How dare you accuse me of that."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_innocent_blackmail_2",
+      "key": "xm_act_blackmail_innocent_02",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "我是个本分守己的顾客，你那套把戏留着对付别人吧。",
+        "まっとうな客ですけど。寝言は他の人に言ってください。",
+        "I'm an honest customer. Try that nonsense on someone else."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_innocent_blackmail_3",
+      "key": "xm_act_blackmail_innocent_03",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "罪犯？你瞎眼了吧，岂有此理。",
+        "犯罪者？ ふざけないでください、まったくの誤解です。",
+        "Criminal? You've got the wrong person. That's outrageous."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_false_threaten_1",
+      "key": "xm_act_threaten_false_aug_01",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "你到底在说什么鬼话？我才不是改造体。",
+        "何を言ってるんですか？ AI人間じゃありませんよ。",
+        "What the hell are you talking about? I'm no aug."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_false_threaten_2",
+      "key": "xm_act_threaten_false_aug_02",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "改造体？你眼瞎了吧，朋友。说话注意点。",
+        "AI人間？ 違います。もっと考えてから言ってください。",
+        "Aug? You're way off, friend. Better watch your mouth."
+      ]
+    },
+    {
+      "native_key": "dialog_bargain_false_threaten_3",
+      "key": "xm_act_threaten_false_aug_03",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "我身正不怕影子斜。搞这种花招，你就等着吃苦头吧。",
+        "潔白な人間です。撃って痛い目を見るのはあなたですよ。",
+        "I'm clean. Pulling a stunt like that could get you hurt."
+      ]
+    },
+    {
+      "native_key": "dialog_util_after_sell",
+      "key": "xm_act_after_sale_continue_01",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "还有别的吗？",
+        "他にはありますか？",
+        "Was there anything else?"
+      ]
+    },
+    {
+      "native_key": "dialog_util_after_sell_done",
+      "key": "xm_act_after_sale_low_budget_01",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "就这些吗？",
+        "これで全部ですか？",
+        "Is that all?"
+      ]
+    },
+    {
+      "native_key": "dialog_util_no_contraband",
+      "key": "xm_act_reject_contraband_01",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "我不买违禁品。",
+        "禁制品は買いませんよ。",
+        "I am not buying Contraband."
+      ]
+    },
+    {
+      "native_key": "dialog_water_buyer_filter_inside",
+      "key": "xm_act_remove_filter_01",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "先把里面的滤水器拿出来。我只想买水。",
+        "先にそのろ過器を取り出してください。欲しいのは水だけです。",
+        "Take that filter out first. I only want to buy the water."
+      ]
+    },
+    {
+      "native_key": "dialog_util_shutter_1",
+      "key": "xm_act_shutter_close_01",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "喂等等，我这还没完事呢！",
+        "まだ終わってませんよ！",
+        "Wait, I am not done yet!"
+      ]
+    },
+    {
+      "native_key": "dialog_util_shutter_2",
+      "key": "xm_act_shutter_close_02",
+      "mood": "Neutral",
+      "kind": "sfx",
+      "originals": [
+        "<i>*砰砰砸着卷帘门*</i>",
+        "（シャッターを叩く音が聞こえる）",
+        "<i>*Banging On The Shutter Door*</i>"
+      ]
+    },
+    {
+      "native_key": "dialog_util_shutter_3",
+      "key": "xm_act_shutter_close_03",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "真是没点素质！",
+        "失礼ですね！",
+        "How rude!"
+      ]
+    },
+    {
+      "native_key": "dialog_util_shutter_4",
+      "key": "xm_act_shutter_close_04",
+      "mood": "Worried",
+      "kind": "speech",
+      "originals": [
+        "哎哎，你干嘛呢你？",
+        "ちょっと、何してるんです？",
+        "Woah, what are you doing?"
+      ]
+    },
+    {
+      "native_key": "dialog_expose_water_basewater",
+      "key": "xm_act_expose_water_base_01",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "根据我的检测，这只是基础水。",
+        "調べたところ、ただのベースウォーターですね。",
+        "According to my test, this is only Basewater"
+      ]
+    },
+    {
+      "native_key": "dialog_expose_water_highquality",
+      "key": "xm_act_expose_water_high_01",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "这只是优质水而已。你想诈骗我吗？",
+        "ただの高品質な水ですけど。騙そうとしてるんですか？",
+        "This is only High Quality Water. Are you trying to scam me?"
+      ]
+    },
+    {
+      "native_key": "dialog_expose_water_scam_1",
+      "key": "xm_act_expose_water_other_01",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "这水的纯度和标签上标的不一样！",
+        "この水の純度、ラベルと違いますよ！",
+        "This water's purity is not as labeled!"
+      ]
+    },
+    {
+      "native_key": "dialog_expose_water_scam_2",
+      "key": "xm_act_expose_water_other_02",
+      "mood": "Soft",
+      "kind": "speech",
+      "originals": [
+        "你是怎么做买卖的？这水的纯度有问题！",
+        "どんな商売をしてるんですか？ 水の純度が違いますよ！",
+        "What kind of business are you running? This water's purity is off!"
+      ]
+    },
+    {
+      "native_key": "dialog_expose_water_scam_3",
+      "key": "xm_act_expose_water_other_03",
+      "mood": "Neutral",
+      "kind": "speech",
+      "originals": [
+        "这个标签是假的，你这开的是什么黑店？",
+        "ラベルに書いてあることは間違いです。これって詐欺ですよね？",
+        "This label's a lie, what kind of scam are you running here?"
+      ]
+    }
+  ],
+  "lines": [
+    {
+      "key": "xm_01_01",
+      "zh": "……你好。看见这边还亮着灯，就进来了。",
+      "ja": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+      "en": "...Hello. I saw the light was still on, so I came in.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+      "reference": false,
+      "voice_alias": "intro_1"
+    },
+    {
+      "key": "xm_01_02",
+      "zh": "我叫小满。刚搬到附近，还有点认不清路。",
+      "ja": "わたし、みちるっていいます。最近この近くに引っ越してきたばかりで、まだ道がよく分からなくて。",
+      "en": "I'm Xiaoman. I just moved nearby, and I'm still finding my way around.",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "わたし、みちるっていいます。最近この近くに引っ越してきたばかりで、まだ道がよく分からなくて。",
+      "reference": false
+    },
+    {
+      "key": "xm_01_03",
+      "zh": "咦……你这里还有磁带机。",
+      "ja": "あ……ここ、カセットデッキがあるんですね。",
+      "en": "Oh... you have a cassette player here.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "あ……ここ、カセットデッキがあるんですね。",
+      "reference": false
+    },
+    {
+      "key": "xm_01_shop",
+      "zh": "想买点吃的或者饮用水。带了 150 信用点。",
+      "ja": "食べるものか、飲み水を少し買いたくて。今日は150クレジット持ってきました。",
+      "en": "I'd like some food or drinking water. I've brought 150 credits.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "食べるものか、飲み水を少し買いたくて。今日は百五十クレジット持ってきました。",
+      "reference": false
+    },
+    {
+      "key": "xm_01_accept",
+      "zh": "谢谢。帮大忙了。",
+      "ja": "ありがとうございます。助かりました。",
+      "en": "Thank you. That really helps.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "ありがとうございます。助かりました。",
+      "reference": false
+    },
+    {
+      "key": "xm_01_bye",
+      "zh": "那我先走啦。下次见。",
+      "ja": "それじゃ、また来ますね。",
+      "en": "I'd better get going. See you next time.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "それじゃ、また来ますね。",
+      "reference": false
+    },
+    {
+      "key": "xm_02_01",
+      "zh": "晚上好。又来打扰啦。",
+      "ja": "こんばんは。またお邪魔しちゃいました。",
+      "en": "Good evening. Here I am again.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "こんばんは。またお邪魔しちゃいました。",
+      "reference": false
+    },
+    {
+      "key": "xm_02_02",
+      "zh": "这里晚上也总有机器在响呢。可是听不到雨声。",
+      "ja": "ここって、夜もずっと機械の音がするんですね。……でも、雨の音はしないんだ。",
+      "en": "The machines never stop humming here, even at night. But there's no sound of rain.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "ここって、夜もずっと機械の音がするんですね。……でも、雨の音はしないんだ。",
+      "reference": false
+    },
+    {
+      "key": "xm_02_03",
+      "zh": "刚搬来那会儿，总觉得少了点什么。",
+      "ja": "こっちに来てから、何か足りないなって思ってたんです。",
+      "en": "When I first got here, I kept feeling as if something was missing.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "こっちに来てから、何か足りないなって思ってたんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_02_shop",
+      "zh": "最近店里还在装修，想买些日用品。",
+      "ja": "お店がまだ改装中で。今日は日用品を少し探してるんです。",
+      "en": "My place is still being renovated. I'm looking for a few everyday supplies.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "お店がまだ改装中で。今日は日用品を少し探してるんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_03_01",
+      "zh": "晚上好。今天总算没走错楼层。",
+      "ja": "こんばんは。今日はやっと階を間違えずに来られました。",
+      "en": "Good evening. I finally made it to the right floor today.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "こんばんは。今日はやっと階を間違えずに来られました。",
+      "reference": false
+    },
+    {
+      "key": "xm_03_02",
+      "zh": "在玻璃门上写了营业时间，出去一看，字全是反的。",
+      "ja": "ガラスのドアに営業時間を書いたら、外からは文字が全部反対向きで。",
+      "en": "I wrote the opening hours on the glass door. Then I went outside and saw they were all backwards.",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "ガラスのドアに営業時間を書いたら……[chuckles] 外からは文字が全部反対向きで。",
+      "performance_optional": true,
+      "reference": false
+    },
+    {
+      "key": "xm_03_shop",
+      "zh": "想买点吃的。最近忙起来，总是忘记吃饭。",
+      "ja": "食べるものを少し。最近ばたばたして、つい食事を忘れちゃうんです。",
+      "en": "I'd like some food. I've been so busy lately, I keep forgetting to eat.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "食べるものを少し。最近ばたばたして、つい食事を忘れちゃうんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_04_01",
+      "zh": "晚上好。上次说的小店，终于开门了。",
+      "ja": "こんばんは。この前話したお店、やっとオープンしたんです。",
+      "en": "Good evening. That little place I mentioned is finally open.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "こんばんは。この前話したお店、やっとオープンしたんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_04_02",
+      "zh": "其实是间小酒吧。就在下面那条商业通道。",
+      "ja": "実は、小さなバーなんです。下の商業通路にあるんですよ。",
+      "en": "It's actually a little bar, down in the shopping passage below.",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "実は、小さなバーなんです。下の商業通路にあるんですよ。",
+      "reference": false
+    },
+    {
+      "key": "xm_04_shop",
+      "zh": "今天想补些饮用水。",
+      "ja": "今日は飲み水を少し買い足したくて。",
+      "en": "I'd like to stock up on drinking water today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は飲み水を少し買い足したくて。",
+      "reference": false
+    },
+    {
+      "key": "xm_04_cocktail",
+      "zh": "对了，我带了几杯店里的鸡尾酒。你这儿会收吗？",
+      "ja": "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
+      "en": "Oh, I brought a few cocktails from my bar. Would you buy things like these?",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
+      "reference": false
+    },
+    {
+      "key": "xm_05_01",
+      "zh": "晚上好。昨天有客人叫我「老板」了。",
+      "ja": "こんばんは。昨日、お客さんに「店長さん」って呼ばれたんです。",
+      "en": "Good evening. A customer called me 'the owner' yesterday.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "こんばんは。昨日ね、[chuckles] お客さんに「店長さん」って呼ばれたんです。",
+      "performance_optional": true,
+      "reference": false
+    },
+    {
+      "key": "xm_05_02",
+      "zh": "我愣了一下才发现是在叫我。明明是自己的店呢。",
+      "ja": "一瞬、誰のことかと思っちゃいました。自分のお店なのに、変ですよね。",
+      "en": "It took me a moment to realise she meant me. Even though it is my own place.",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "一瞬、誰のことかと思っちゃいました。自分のお店なのに、変ですよね。",
+      "reference": false
+    },
+    {
+      "key": "xm_05_shop",
+      "zh": "今天想补点日用品。",
+      "ja": "今日は日用品を少し買い足したくて。",
+      "en": "I'd like a few everyday supplies today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は日用品を少し買い足したくて。",
+      "reference": false
+    },
+    {
+      "key": "xm_06_01",
+      "zh": "晚上好。前两天有个客人说，我调的酒有点甜。",
+      "ja": "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
+      "en": "Good evening. A customer told me the other day that my cocktails were a little sweet.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_06_02",
+      "zh": "可我觉得刚刚好啊……是不是只有我这么觉得？",
+      "ja": "でも、わたしはちょうどいいと思うんですけど……わたしだけかな。",
+      "en": "But I thought they were just right... Am I the only one?",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "でも、わたしはちょうどいいと思うんですけど……[breath] わたしだけかな。",
+      "performance_optional": true,
+      "reference": false
+    },
+    {
+      "key": "xm_06_shop",
+      "zh": "今天来买点饮用水。",
+      "ja": "今日は飲み水を少し買いに来ました。",
+      "en": "I've come for some drinking water today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は飲み水を少し買いに来ました。",
+      "reference": false
+    },
+    {
+      "key": "xm_07_01",
+      "zh": "晚上好。昨天收到朋友们聚餐的合照。",
+      "ja": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
+      "en": "Good evening. My friends sent me a photo of their get-together yesterday.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_07_02",
+      "zh": "她们给我留了个空位，还在上面画了个我。画得一点都不像。",
+      "ja": "写真の空いた席に、わたしの絵まで描き足してくれて。全然似てないんですけどね。",
+      "en": "They left an empty seat for me and even drew me into it. It doesn't look like me at all.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "写真の空いた席に、わたしの絵まで描き足してくれて。[chuckles] 全然似てないんですけどね。",
+      "performance_optional": true,
+      "reference": false
+    },
+    {
+      "key": "xm_07_shop",
+      "zh": "今天买点吃的。",
+      "ja": "今日は食べるものを少し。",
+      "en": "I'd like some food today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は食べるものを少し。",
+      "reference": false
+    },
+    {
+      "key": "xm_08_01",
+      "zh": "晚上好。昨晚来了几个刚下夜班的姑娘，吵吵闹闹的。",
+      "ja": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。すごくにぎやかだったんです。",
+      "en": "Good evening. A few girls came in after their night shift yesterday. They were quite a lively bunch.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。[laughs] すごくにぎやかだったんです。",
+      "performance_optional": true,
+      "reference": false
+    },
+    {
+      "key": "xm_08_02",
+      "zh": "她们讲的工作笑话，我一句都没听懂。",
+      "ja": "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
+      "en": "They kept telling jokes about work. I didn't understand a single one.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
+      "reference": false
+    },
+    {
+      "key": "xm_08_shop",
+      "zh": "今天想买些日用品。",
+      "ja": "今日は日用品を少し買いに来ました。",
+      "en": "I'm looking for some everyday supplies today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は日用品を少し買いに来ました。",
+      "reference": false
+    },
+    {
+      "key": "xm_09_01",
+      "zh": "晚上好。昨天门口的感应灯亮了好几次。",
+      "ja": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+      "en": "Good evening. The motion light outside my door came on several times yesterday.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_09_02",
+      "zh": "我还以为是客人呢。结果都是运货车从门前经过。",
+      "ja": "お客さんかと思ったら、通りかかるのは運搬カートばっかりで。",
+      "en": "I thought I had customers. It was just delivery carts passing by.",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "お客さんかと思ったら……[exhale] 通りかかるのは運搬カートばっかりで。",
+      "performance_optional": true,
+      "reference": false
+    },
+    {
+      "key": "xm_09_shop",
+      "zh": "今天想买点吃的。少一些就好。",
+      "ja": "今日は食べるものを。少なめでお願いします。",
+      "en": "I'd like some food today. Just a little will do.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は食べるものを。少なめでお願いします。",
+      "reference": false
+    },
+    {
+      "key": "xm_10_01",
+      "zh": "晚上好。上次来过的一个客人，昨天又来了。",
+      "ja": "こんばんは。前に来たお客さんが、昨日また顔を出してくれたんです。",
+      "en": "Good evening. Someone who'd visited before came back yesterday.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "こんばんは。前に来たお客さんが、昨日また顔を出してくれたんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_10_02",
+      "zh": "她还带了朋友。两个人居然都记得我的名字。",
+      "ja": "今度は友達も一緒で。二人とも、わたしの名前を覚えてたんですよ。",
+      "en": "She brought a friend along. Both of them even remembered my name.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "今度は友達も一緒で。[chuckles] 二人とも、わたしの名前を覚えてたんですよ。",
+      "performance_optional": true,
+      "reference": false
+    },
+    {
+      "key": "xm_10_shop",
+      "zh": "想买些饮用水。",
+      "ja": "飲み水を少しお願いします。",
+      "en": "I'd like some drinking water.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "飲み水を少しお願いします。",
+      "reference": false
+    },
+    {
+      "key": "xm_11_01",
+      "zh": "晚上好。我把店门上的营业时间改了。",
+      "ja": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
+      "en": "Good evening. I've changed the opening hours on my door.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_11_02",
+      "zh": "原来写到凌晨两点，现在改成十二点。这样也能早点回去吃点东西。",
+      "ja": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+      "en": "It used to say two in the morning. Now it says midnight. That gives me time to get home and eat something.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+      "reference": false
+    },
+    {
+      "key": "xm_11_shop",
+      "zh": "今天买些日用品。",
+      "ja": "今日は日用品を少し。",
+      "en": "I'd like some everyday supplies today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は日用品を少し。",
+      "reference": false
+    },
+    {
+      "key": "xm_12_01",
+      "zh": "晚上好。最近重新写了酒单。",
+      "ja": "こんばんは。最近、メニューを書き直したんです。",
+      "en": "Good evening. I've been rewriting the drinks menu.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "こんばんは。最近、メニューを書き直したんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_12_02",
+      "zh": "原来那张塞得满满的，新的一张倒还剩好多空白。",
+      "ja": "前のはぎっしり書いてたのに、新しいのは、まだ余白がたくさんあって。",
+      "en": "The old one was crammed full. There's still plenty of blank space on the new one.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "前のはぎっしり書いてたのに、新しいのは、まだ余白がたくさんあって。",
+      "reference": false
+    },
+    {
+      "key": "xm_12_shop",
+      "zh": "今天想买点吃的。",
+      "ja": "今日は食べるものを少し。",
+      "en": "I'd like some food today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は食べるものを少し。",
+      "reference": false
+    },
+    {
+      "key": "xm_13_01",
+      "zh": "晚上好。最近在找结实一点的箱子。准备搬家了。",
+      "ja": "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
+      "en": "Good evening. I've been looking for some sturdy boxes. I'm getting ready to move.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
+      "reference": false
+    },
+    {
+      "key": "xm_13_02",
+      "zh": "酒杯比衣服难装多了。早知道就不买那么多了。",
+      "ja": "グラスって、服よりずっと荷造りが大変で。……こんなに買わなきゃよかったかな。",
+      "en": "Glasses are much harder to pack than clothes. I wish I hadn't bought quite so many.",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "グラスって、服よりずっと荷造りが大変で。[chuckles] こんなに買わなきゃよかったかな。",
+      "performance_optional": true,
+      "reference": false
+    },
+    {
+      "key": "xm_13_shop",
+      "zh": "今天想买些日用品。",
+      "ja": "今日は日用品を少し買いたくて。",
+      "en": "I'd like some everyday supplies today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は日用品を少し買いたくて。",
+      "reference": false
+    },
+    {
+      "key": "xm_14_01",
+      "zh": "……晚上好。明天就坐船了，要回老家去。",
+      "ja": "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
+      "en": "...Good evening. I'm taking the ship tomorrow. I've decided to go home.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
+      "reference": false
+    },
+    {
+      "key": "xm_14_02",
+      "zh": "东西都寄走了，剩我一个人带着背包。倒像刚搬来的时候。",
+      "ja": "荷物は先に送っちゃって、今はリュック一つだけ。……なんだか、来たばかりの頃みたいですね。",
+      "en": "I've sent everything ahead. It's just me and a backpack now. A bit like when I first arrived.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "荷物は先に送っちゃって、今はリュック一つだけ。……なんだか、来たばかりの頃みたいですね。",
+      "reference": false
+    },
+    {
+      "key": "xm_14_shop",
+      "zh": "想买点路上喝的水。",
+      "ja": "船で飲む水を、少し買いたくて。",
+      "en": "I'd like some water for the journey.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "船で飲む水を、少し買いたくて。",
+      "reference": false
+    },
+    {
+      "key": "xm_14_accept",
+      "zh": "嗯，谢谢。正好。",
+      "ja": "うん、ちょうどよかった。ありがとうございます。",
+      "en": "Yes, thank you. Just right.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "うん、ちょうどよかった。ありがとうございます。",
+      "reference": false
+    },
+    {
+      "key": "xm_14_bye",
+      "zh": "那……我走啦。",
+      "ja": "それじゃ……行きますね。",
+      "en": "Well... I'd better go.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "それじゃ……行きますね。",
+      "reference": false
+    },
+    {
+      "key": "xm_right_item",
+      "zh": "嗯，这种就可以。",
+      "ja": "あ、そうそう。こういうのを探してたんです。",
+      "en": "Yes, this will do.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "あ、そうそう。こういうのを探してたんです。",
+      "reference": true
+    },
+    {
+      "key": "xm_wrong_item",
+      "zh": "这个今天先不用，谢谢。",
+      "ja": "あ、すみません。今日はそれじゃなくて。",
+      "en": "I don't need this today, thank you.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "あ、すみません。今日はそれじゃなくて。",
+      "reference": true
+    },
+    {
+      "key": "xm_repeat_first",
+      "zh": "吃的或者饮用水，都可以。",
+      "ja": "食べるものでも、飲み水でも大丈夫です。",
+      "en": "Food or drinking water. Either is fine.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "食べるものでも、飲み水でも大丈夫です。",
+      "reference": false
+    },
+    {
+      "key": "xm_repeat_water",
+      "zh": "今天想买饮用水，普通的就好。",
+      "ja": "今日は飲み水を。普通ので大丈夫です。",
+      "en": "I'd like drinking water today. Nothing fancy.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は飲み水を。普通ので大丈夫です。",
+      "reference": true
+    },
+    {
+      "key": "xm_repeat_food",
+      "zh": "今天想买点吃的。",
+      "ja": "今日は食べるものを少し。",
+      "en": "I'm looking for some food today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は食べるものを少し。",
+      "reference": true
+    },
+    {
+      "key": "xm_repeat_goods",
+      "zh": "今天在找日用品。",
+      "ja": "今日は日用品を探してるんです。",
+      "en": "I'm looking for everyday supplies today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は日用品を探してるんです。",
+      "reference": true
+    },
+    {
+      "key": "xm_accept",
+      "zh": "谢谢，帮上忙了。",
+      "ja": "ありがとうございます。助かりました。",
+      "en": "Thank you. That helps.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "ありがとうございます。助かりました。",
+      "reference": true
+    },
+    {
+      "key": "xm_accept_more",
+      "zh": "嗯，这个也要。",
+      "ja": "あ、これもお願いします。",
+      "en": "Yes, I'll take this as well.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "あ、これもお願いします。",
+      "reference": true
+    },
+    {
+      "key": "xm_goodbye",
+      "zh": "那我先走啦。下次见。",
+      "ja": "それじゃ、そろそろ帰りますね。また来ます。",
+      "en": "I'd better go. See you next time.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "それじゃ、そろそろ帰りますね。また来ます。",
+      "reference": true
+    },
+    {
+      "key": "xm_retry",
+      "zh": "晚上好。今天再来看看。",
+      "ja": "こんばんは。今日も少し見せてもらいに来ました。",
+      "en": "Good evening. I thought I'd have another look today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "こんばんは。今日も少し見せてもらいに来ました。",
+      "reference": true
+    },
+    {
+      "key": "xm_cocktail_accept",
+      "zh": "谢谢，希望合你的口味。",
+      "ja": "ありがとうございます。お口に合うといいんですけど。",
+      "en": "Thank you. I hope it's to your taste.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "ありがとうございます。お口に合うといいんですけど。",
+      "reference": false
+    },
+    {
+      "key": "intro_1",
+      "zh": "……你好。看见这边还亮着灯，就进来了。",
+      "ja": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+      "en": "...Hello. I saw the light was still on, so I came in.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "……こんばんは。まだ明かりがついていたので、入ってきました。",
+      "reference": false
+    },
+    {
+      "key": "intro_2",
+      "zh": "我叫小满。刚搬到附近，有时候还会走错楼层。",
+      "ja": "わたし、みちるっていいます。近くに越してきたばかりで、まだ階を間違えることがあるんです。",
+      "en": "I'm Xiaoman. I just moved nearby. I still end up on the wrong floor sometimes.",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "わたし、みちるっていいます。近くに越してきたばかりで、まだ階を間違えることがあるんです。",
+      "reference": true
+    },
+    {
+      "key": "intro_3",
+      "zh": "咦……你这里居然还有磁带机。",
+      "ja": "あれ……ここ、カセットデッキもあるんですね。",
+      "en": "Oh... you even have a cassette player here.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "あれ……ここ、カセットデッキもあるんですね。",
+      "reference": true
+    },
+    {
+      "key": "return_1",
+      "zh": "晚上好，又来打扰啦。",
+      "ja": "こんばんは。またお邪魔しちゃいました。",
+      "en": "Good evening. Here I am again.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "こんばんは。またお邪魔しちゃいました。",
+      "reference": true
+    },
+    {
+      "key": "shopping",
+      "zh": "今天想买些饮用水。普通的就好，带了 {0} 信用点。",
+      "ja": "今日は飲み水を買いたくて。普通ので大丈夫です。{0}クレジット持ってきました。",
+      "en": "I'd like some drinking water today. Nothing fancy. I've brought {0} credits.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は飲み水を買いたくて。普通ので大丈夫です。",
+      "reference": true
+    },
+    {
+      "key": "accept",
+      "zh": "谢谢。还好赶上了。",
+      "ja": "ありがとう。間に合ってよかった。",
+      "en": "Thank you. I'm glad I made it in time.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "ありがとう。間に合ってよかった。",
+      "reference": true
+    },
+    {
+      "key": "goodbye",
+      "zh": "那我先走啦。下次见。",
+      "ja": "それじゃ、そろそろ行きますね。また。",
+      "en": "I'd better go. See you next time.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "それじゃ、そろそろ行きますね。また。",
+      "reference": false
+    },
+    {
+      "key": "wrong_item",
+      "zh": "这个……今天暂时用不上。",
+      "ja": "これは……今日は使わないかな。",
+      "en": "This... I don't need it today.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "これは……今日は使わないかな。",
+      "reference": false
+    },
+    {
+      "key": "right_item",
+      "zh": "嗯，就是这种。",
+      "ja": "うん、これです。",
+      "en": "Yes, that's the kind I meant.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "うん、これです。",
+      "reference": false
+    },
+    {
+      "key": "repeat",
+      "zh": "普通饮用水就好。别的先不用啦。",
+      "ja": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
+      "en": "Just ordinary drinking water. I don't need anything else today.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
+      "reference": false
+    },
+    {
+      "key": "shopping_food",
+      "zh": "今天想买些吃的。方便存放的就好，带了 {0} 信用点。",
+      "ja": "今日は日持ちする食べ物が欲しくて。{0}クレジット持ってきました。",
+      "en": "I'd like some food today. Something that keeps well. I've brought {0} credits.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は食べるものを少し買いに来ました。",
+      "reference": true
+    },
+    {
+      "key": "shopping_household",
+      "zh": "今天想补些日用品。带了 {0} 信用点。",
+      "ja": "今日は日用品を少し。{0}クレジット持ってきました。",
+      "en": "I'd like some everyday supplies today. I've brought {0} credits.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "今日は日用品を少し買い足したくて。",
+      "reference": true
+    },
+    {
+      "key": "accept_return",
+      "zh": "嗯，谢谢。今天也帮上忙了。",
+      "ja": "うん、ありがとう。今日も助かりました。",
+      "en": "Thank you. You've helped me out again.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "うん、ありがとう。今日も助かりました。",
+      "reference": false
+    },
+    {
+      "key": "goodbye_discount",
+      "zh": "还特地算便宜了……谢谢，帮大忙了。那我先走啦。",
+      "ja": "お安くしてくれたんですね……ありがとうございます。助かりました。それじゃ、また。",
+      "en": "You even gave me a discount... Thank you, that really helps. I'd better get going.",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "お安くしてくれたんですね……ありがとうございます。[chuckles] ちょっと助かっちゃいました。それじゃ、また。",
+      "reference": false
+    },
+    {
+      "key": "repeat_food",
+      "zh": "吃的就好。其他东西这次先不买啦。",
+      "ja": "食べ物だけで大丈夫です。他のものは、また今度。",
+      "en": "Just food. I don't need anything else this time.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "食べ物だけで大丈夫です。他のものは、また今度。",
+      "reference": false
+    },
+    {
+      "key": "repeat_household",
+      "zh": "日常用的东西就好，今天先把这些买齐。",
+      "ja": "普段使うものを。今日はそれを揃えたくて。",
+      "en": "Everyday supplies. I'd like to get those sorted out today.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "普段使うものを。今日はそれを揃えたくて。",
+      "reference": false
+    },
+    {
+      "key": "xm_act_discount_accept_01",
+      "zh": "啊，稍微便宜了一些。谢谢你。",
+      "ja": "あ、少し安くなるんですね。ありがとうございます。",
+      "en": "Oh, a little cheaper. Thank you.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "あ、少し安くなるんですね。ありがとうございます。",
+      "native_key": "dialog_bargain_accept_grateful_1"
+    },
+    {
+      "key": "xm_act_discount_accept_02",
+      "zh": "真的可以吗？那就拜托啦。",
+      "ja": "いいんですか？ じゃあ、お願いします。",
+      "en": "Are you sure? I'll take you up on that, then.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "いいんですか？ じゃあ、お願いします。",
+      "native_key": "dialog_bargain_accept_grateful_2"
+    },
+    {
+      "key": "xm_act_discount_accept_03",
+      "zh": "帮大忙了。那就按这个价钱吧。",
+      "ja": "助かります。それじゃ、このお値段でお願いします。",
+      "en": "That really helps. Let's go with that price.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "助かります。それじゃ、このお値段でお願いします。",
+      "native_key": "dialog_bargain_accept_grateful_3"
+    },
+    {
+      "key": "xm_act_discount_accept_high_01",
+      "zh": "诶，便宜这么多？……真的可以吗？",
+      "ja": "えっ、そんなに安くしてくれるんですか？ 本当にいいんですか？",
+      "en": "Oh, that much off? ...Are you sure?",
+      "mood": "Shy",
+      "kind": "speech",
+      "generate_text": "えっ、[gasps] そんなに安くしてくれるんですか？ 本当にいいんですか？",
+      "native_key": "dialog_bargain_accept_very_grateful_1"
+    },
+    {
+      "key": "xm_act_discount_accept_high_02",
+      "zh": "太照顾我了……真的谢谢。",
+      "ja": "そこまでしてもらって……本当にありがとうございます。",
+      "en": "You're being so kind to me... Thank you, really.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "そこまでしてもらって……本当にありがとうございます。",
+      "native_key": "dialog_bargain_accept_very_grateful_2"
+    },
+    {
+      "key": "xm_act_discount_accept_high_03",
+      "zh": "吓我一跳。那我就不客气了。",
+      "ja": "びっくりしました。じゃあ、お言葉に甘えちゃおうかな。",
+      "en": "You surprised me. I'll gladly take you up on that.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "びっくりしました。[chuckles] じゃあ、お言葉に甘えちゃおうかな。",
+      "native_key": "dialog_bargain_accept_very_grateful_3"
+    },
+    {
+      "key": "xm_act_budget_increase_01",
+      "zh": "这样还能再买点别的呢。",
+      "ja": "これなら、もう少し買い物できそうですね。",
+      "en": "That leaves enough to buy something else.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "これなら、もう少し買い物できそうですね。",
+      "native_key": "dialog_bargain_budget_increase_1"
+    },
+    {
+      "key": "xm_act_budget_increase_02",
+      "zh": "省下的这点钱，可以再挑一样。",
+      "ja": "浮いた分で、もう一つ見てみようかな。",
+      "en": "With what I've saved, I can pick out one more thing.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "浮いた分で、もう一つ見てみようかな。",
+      "native_key": "dialog_bargain_budget_increase_2"
+    },
+    {
+      "key": "xm_act_budget_increase_03",
+      "zh": "还有预算。能再看看别的吗？",
+      "ja": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
+      "en": "I still have some money left. Could I look at something else?",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
+      "native_key": "dialog_bargain_budget_increase_3"
+    },
+    {
+      "key": "xm_act_markup_accept_01",
+      "zh": "……好吧。那就这样。",
+      "ja": "……分かりました。それでお願いします。",
+      "en": "...All right. Let's do that.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "……分かりました。それでお願いします。",
+      "native_key": "dialog_bargain_accept_reluctant_1"
+    },
+    {
+      "key": "xm_act_markup_accept_02",
+      "zh": "是比刚才贵一点……不过今天确实需要。",
+      "ja": "さっきより高いけど……今日は必要なので。",
+      "en": "That's a little more than before... But I do need it today.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "さっきより高いけど……今日は必要なので。",
+      "native_key": "dialog_bargain_accept_reluctant_2"
+    },
+    {
+      "key": "xm_act_markup_accept_03",
+      "zh": "嗯……这回就按你说的吧。",
+      "ja": "うーん……今回は、そのお値段で。",
+      "en": "Hmm... I'll go with your price this time.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "うーん……今回は、そのお値段で。",
+      "native_key": "dialog_bargain_accept_reluctant_3"
+    },
+    {
+      "key": "xm_act_markup_accept_high_01",
+      "zh": "居然加这么多……算了，这次还是要买。",
+      "ja": "こんなに上がるんですか……。でも、今回はお願いします。",
+      "en": "That much more...? Never mind. I still need to buy it this time.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "こんなに上がるんですか……。でも、今回はお願いします。",
+      "native_key": "dialog_bargain_accept_very_reluctant_1"
+    },
+    {
+      "key": "xm_act_markup_accept_high_02",
+      "zh": "好贵啊。……我是真的需要这个。",
+      "ja": "高いですね……。これだけは必要なので。",
+      "en": "That's expensive. ...I really do need this.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "高いですね……。[sighs] これだけは必要なので。",
+      "native_key": "dialog_bargain_accept_very_reluctant_2"
+    },
+    {
+      "key": "xm_act_markup_accept_high_03",
+      "zh": "……确认是这个价钱？我明白了。",
+      "ja": "……本当にこのお値段なんですね。分かりました。",
+      "en": "...You're sure that's the price? I understand.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "……本当にこのお値段なんですね。分かりました。",
+      "native_key": "dialog_bargain_accept_very_reluctant_3"
+    },
+    {
+      "key": "xm_act_budget_decrease_01",
+      "zh": "啊……剩下的钱不多了。",
+      "ja": "あ……残りの予算、少なくなっちゃいました。",
+      "en": "Oh... I don't have much money left.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "あ……残りの予算、少なくなっちゃいました。",
+      "native_key": "dialog_bargain_budget_decrease_1"
+    },
+    {
+      "key": "xm_act_budget_decrease_02",
+      "zh": "这样今天就不能买太多了呢。",
+      "ja": "これだと、今日はあまり買えませんね。",
+      "en": "I won't be able to buy very much today, then.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "これだと、今日はあまり買えませんね。",
+      "native_key": "dialog_bargain_budget_decrease_2"
+    },
+    {
+      "key": "xm_act_budget_decrease_03",
+      "zh": "原本还想多买一样……算啦，下次吧。",
+      "ja": "もう一つ買うつもりだったんですけど……また今度にします。",
+      "en": "I was hoping to get one more thing... Oh well. Next time.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "もう一つ買うつもりだったんですけど……また今度にします。",
+      "native_key": "dialog_bargain_budget_decrease_3"
+    },
+    {
+      "key": "xm_act_markup_reject_01",
+      "zh": "抱歉，这个价钱我还是不要了。",
+      "ja": "すみません。そのお値段なら、今回はやめておきます。",
+      "en": "I'm sorry, but I'll have to pass at that price.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "すみません。そのお値段なら、今回はやめておきます。",
+      "native_key": "dialog_bargain_reject_1"
+    },
+    {
+      "key": "xm_act_markup_reject_02",
+      "zh": "唔……预算有点不够。",
+      "ja": "うーん……ちょっと予算が足りなくて。",
+      "en": "Hmm... That's a little beyond my budget.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "うーん……ちょっと予算が足りなくて。",
+      "native_key": "dialog_bargain_reject_2"
+    },
+    {
+      "key": "xm_act_markup_reject_03",
+      "zh": "这个价钱有点难接受。",
+      "ja": "その金額だと、ちょっと難しいです。",
+      "en": "That price is a little hard to accept.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "その金額だと、ちょっと難しいです。",
+      "native_key": "dialog_bargain_reject_3"
+    },
+    {
+      "key": "xm_act_markup_reject_high_01",
+      "zh": "……诶？这也太贵了吧。",
+      "ja": "……えっ？ さすがに高すぎませんか。",
+      "en": "...What? That's far too expensive.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "……えっ、[gasps] さすがに高すぎませんか。",
+      "native_key": "dialog_bargain_hard_reject_1"
+    },
+    {
+      "key": "xm_act_markup_reject_high_02",
+      "zh": "对不起，这个价钱我买不了。",
+      "ja": "ごめんなさい。そのお値段では買えません。",
+      "en": "I'm sorry, I can't buy it at that price.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "ごめんなさい。そのお値段では買えません。",
+      "native_key": "dialog_bargain_hard_reject_2"
+    },
+    {
+      "key": "xm_act_markup_reject_high_03",
+      "zh": "这样的话，今天还是算了。",
+      "ja": "それなら、今日はやめておきます。",
+      "en": "In that case, I'll leave it for today.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "それなら、今日はやめておきます。",
+      "native_key": "dialog_bargain_hard_reject_3"
+    },
+    {
+      "key": "xm_act_angry_leave_01",
+      "zh": "……够了。今天我先回去了。",
+      "ja": "……もう結構です。今日は帰ります。",
+      "en": "...That's enough. I'm going home.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "……もう結構です。今日は帰ります。",
+      "native_key": "dialog_bargain_leave_1"
+    },
+    {
+      "key": "xm_act_angry_leave_02",
+      "zh": "继续说也没意义了。失礼了。",
+      "ja": "これ以上お話ししても仕方なさそうなので。失礼します。",
+      "en": "There's no point in discussing this any further. Excuse me.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "これ以上お話ししても仕方なさそうなので。失礼します。",
+      "native_key": "dialog_bargain_leave_2"
+    },
+    {
+      "key": "xm_act_angry_leave_03",
+      "zh": "对不起，我没办法继续在这里买东西了。",
+      "ja": "すみません。もうここでは買い物できません。",
+      "en": "I'm sorry, but I can't keep shopping here.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "すみません。もうここでは買い物できません。",
+      "native_key": "dialog_bargain_leave_3"
+    },
+    {
+      "key": "xm_act_bad_word_01",
+      "zh": "这种事，我会和认识的人说清楚的。",
+      "ja": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
+      "en": "I'll make sure the people I know hear about this.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
+      "native_key": "dialog_bargain_talk_bad_1"
+    },
+    {
+      "key": "xm_act_bad_word_02",
+      "zh": "抱歉……但别人问起这家店，我没法当作什么都没发生。",
+      "ja": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
+      "en": "I'm sorry... But if someone asks about this shop, I can't pretend nothing happened.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
+      "native_key": "dialog_bargain_talk_bad_2"
+    },
+    {
+      "key": "xm_act_bad_word_03",
+      "zh": "这里的传闻很快的。希望你以后别这样了。",
+      "ja": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
+      "en": "Word travels fast here. I hope you won't do this again.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
+      "native_key": "dialog_bargain_talk_bad_3"
+    },
+    {
+      "key": "xm_act_blackmail_innocent_01",
+      "zh": "……罪犯？是在说我吗？不是的。请不要随便这样指控人。",
+      "ja": "……犯罪者って、わたしのことですか？ 違います。そんなふうに決めつけないでください。",
+      "en": "...A criminal? Do you mean me? I'm not. Please don't accuse people like that.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "……犯罪者って、わたしのことですか？ [inhales] 違います。そんなふうに決めつけないでください。",
+      "native_key": "dialog_bargain_innocent_blackmail_1"
+    },
+    {
+      "key": "xm_act_blackmail_innocent_02",
+      "zh": "这个玩笑，一点也不好笑。我什么都没做。",
+      "ja": "そういう冗談、笑えません。わたし、何もしてませんよ。",
+      "en": "That isn't funny at all. I haven't done anything.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "そういう冗談、笑えません。わたし、何もしてませんよ。",
+      "native_key": "dialog_bargain_innocent_blackmail_2"
+    },
+    {
+      "key": "xm_act_blackmail_innocent_03",
+      "zh": "为什么突然说这种话？我只是来买东西的。",
+      "ja": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
+      "en": "Why would you say that? I only came here to buy things.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
+      "native_key": "dialog_bargain_innocent_blackmail_3"
+    },
+    {
+      "key": "xm_act_threaten_false_aug_01",
+      "zh": "……改造体？我不是。",
+      "ja": "……AI人間？ わたし、違いますよ。",
+      "en": "...An aug? I'm not.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "……AI人間？ わたし、違いますよ。",
+      "native_key": "dialog_bargain_false_threaten_1"
+    },
+    {
+      "key": "xm_act_threaten_false_aug_02",
+      "zh": "能不能看清楚再说？我不是改造体。",
+      "ja": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
+      "en": "Could you take a proper look first? I'm not an aug.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
+      "native_key": "dialog_bargain_false_threaten_2"
+    },
+    {
+      "key": "xm_act_threaten_false_aug_03",
+      "zh": "别拿这个吓我……真的不是。",
+      "ja": "そんなことで脅かさないでください……本当に違うんです。",
+      "en": "Don't try to scare me with that... I'm really not.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "そんなことで脅かさないでください……本当に違うんです。",
+      "native_key": "dialog_bargain_false_threaten_3"
+    },
+    {
+      "key": "xm_act_after_sale_continue_01",
+      "zh": "还有别的吗？我想再看看。",
+      "ja": "ほかにもありますか？ もう少し見てみたいです。",
+      "en": "Do you have anything else? I'd like another look.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "ほかにもありますか？ もう少し見てみたいです。",
+      "native_key": "dialog_util_after_sell"
+    },
+    {
+      "key": "xm_act_after_sale_low_budget_01",
+      "zh": "啊……预算差不多用完了。今天就这些吧。",
+      "ja": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
+      "en": "Oh... That's nearly all my money. That'll be enough for today.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
+      "native_key": "dialog_util_after_sell_done"
+    },
+    {
+      "key": "xm_act_reject_contraband_01",
+      "zh": "抱歉，这种东西我不能买。",
+      "ja": "すみません。こういうものは、買えないんです。",
+      "en": "I'm sorry, I can't buy things like that.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "すみません。こういうものは、買えないんです。",
+      "native_key": "dialog_util_no_contraband"
+    },
+    {
+      "key": "xm_act_remove_filter_01",
+      "zh": "不好意思，可以先把里面的滤芯取出来吗？我只买水。",
+      "ja": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
+      "en": "Excuse me, could you take the filter out first? I only want the water.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
+      "native_key": "dialog_water_buyer_filter_inside"
+    },
+    {
+      "key": "xm_act_shutter_close_01",
+      "zh": "诶，等一下！我还没买完呢！",
+      "ja": "えっ、ちょっと待ってください！ まだ買い物の途中で……！",
+      "en": "Oh, wait! I'm not done shopping yet!",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "えっ、[gasps] ちょっと待ってください！ まだ買い物の途中で……！",
+      "native_key": "dialog_util_shutter_1"
+    },
+    {
+      "key": "xm_act_shutter_close_02",
+      "zh": "（轻敲卷帘门两下）",
+      "ja": "（シャッターを二度、軽くたたく音）",
+      "en": "(Two light knocks on the shutter.)",
+      "mood": "Neutral",
+      "kind": "sfx",
+      "generate_text": "",
+      "native_key": "dialog_util_shutter_2"
+    },
+    {
+      "key": "xm_act_shutter_close_03",
+      "zh": "……这样有点过分了吧。",
+      "ja": "……それは、ちょっとひどくないですか。",
+      "en": "...That's a little much, isn't it?",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "……それは、ちょっとひどくないですか。",
+      "native_key": "dialog_util_shutter_3"
+    },
+    {
+      "key": "xm_act_shutter_close_04",
+      "zh": "咦，已经要打烊了吗？",
+      "ja": "えっ、もう閉めちゃうんですか？",
+      "en": "Oh, are you closing already?",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "えっ、もう閉めちゃうんですか？",
+      "native_key": "dialog_util_shutter_4"
+    },
+    {
+      "key": "xm_act_expose_water_base_01",
+      "zh": "嗯……这就是普通水吧？和标签不太一样。",
+      "ja": "あれ……これ、普通のお水ですよね。ラベルとちょっと違うみたいです。",
+      "en": "Hmm... This is ordinary water, isn't it? That's not what the label says.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "あれ……これ、普通のお水ですよね。ラベルとちょっと違うみたいです。",
+      "native_key": "dialog_expose_water_basewater"
+    },
+    {
+      "key": "xm_act_expose_water_high_01",
+      "zh": "这应该是优质水吧？标签上好像不是这么写的。",
+      "ja": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
+      "en": "This should be high-quality water. The label seems to say otherwise.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
+      "native_key": "dialog_expose_water_highquality"
+    },
+    {
+      "key": "xm_act_expose_water_other_01",
+      "zh": "这水的纯度和标签上写的不一样。",
+      "ja": "この水、純度がラベルの表示と違うみたいです。",
+      "en": "The purity of this water doesn't match the label.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "この水、純度がラベルの表示と違うみたいです。",
+      "native_key": "dialog_expose_water_scam_1"
+    },
+    {
+      "key": "xm_act_expose_water_other_02",
+      "zh": "说明和测出来的数值对不上呢。是不是贴错了？",
+      "ja": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
+      "en": "The description and the reading don't match. Could it be the wrong label?",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
+      "native_key": "dialog_expose_water_scam_2"
+    },
+    {
+      "key": "xm_act_expose_water_other_03",
+      "zh": "这个标签上的数字……你确定没写错吗？",
+      "ja": "このラベルの数字……間違ってませんか？",
+      "en": "That number on the label... Are you sure it's right?",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "このラベルの数字……間違ってませんか？",
+      "native_key": "dialog_expose_water_scam_3"
+    }
+  ],
+  "voice_keys": [
+    "xm_01_02",
+    "xm_01_03",
+    "xm_01_shop",
+    "xm_01_accept",
+    "xm_01_bye",
+    "xm_02_01",
+    "xm_02_02",
+    "xm_02_03",
+    "xm_02_shop",
+    "xm_03_01",
+    "xm_03_02",
+    "xm_03_shop",
+    "xm_04_01",
+    "xm_04_02",
+    "xm_04_shop",
+    "xm_04_cocktail",
+    "xm_05_01",
+    "xm_05_02",
+    "xm_05_shop",
+    "xm_06_01",
+    "xm_06_02",
+    "xm_06_shop",
+    "xm_07_01",
+    "xm_07_02",
+    "xm_07_shop",
+    "xm_08_01",
+    "xm_08_02",
+    "xm_08_shop",
+    "xm_09_01",
+    "xm_09_02",
+    "xm_09_shop",
+    "xm_10_01",
+    "xm_10_02",
+    "xm_10_shop",
+    "xm_11_01",
+    "xm_11_02",
+    "xm_11_shop",
+    "xm_12_01",
+    "xm_12_02",
+    "xm_12_shop",
+    "xm_13_01",
+    "xm_13_02",
+    "xm_13_shop",
+    "xm_14_01",
+    "xm_14_02",
+    "xm_14_shop",
+    "xm_14_accept",
+    "xm_14_bye",
+    "xm_repeat_first",
+    "xm_cocktail_accept",
+    "intro_1",
+    "goodbye",
+    "wrong_item",
+    "right_item",
+    "repeat",
+    "accept_return",
+    "goodbye_discount",
+    "repeat_food",
+    "repeat_household",
+    "xm_act_discount_accept_01",
+    "xm_act_discount_accept_02",
+    "xm_act_discount_accept_03",
+    "xm_act_discount_accept_high_01",
+    "xm_act_discount_accept_high_02",
+    "xm_act_discount_accept_high_03",
+    "xm_act_budget_increase_01",
+    "xm_act_budget_increase_02",
+    "xm_act_budget_increase_03",
+    "xm_act_markup_accept_01",
+    "xm_act_markup_accept_02",
+    "xm_act_markup_accept_03",
+    "xm_act_markup_accept_high_01",
+    "xm_act_markup_accept_high_02",
+    "xm_act_markup_accept_high_03",
+    "xm_act_budget_decrease_01",
+    "xm_act_budget_decrease_02",
+    "xm_act_budget_decrease_03",
+    "xm_act_markup_reject_01",
+    "xm_act_markup_reject_02",
+    "xm_act_markup_reject_03",
+    "xm_act_markup_reject_high_01",
+    "xm_act_markup_reject_high_02",
+    "xm_act_markup_reject_high_03",
+    "xm_act_angry_leave_01",
+    "xm_act_angry_leave_02",
+    "xm_act_angry_leave_03",
+    "xm_act_bad_word_01",
+    "xm_act_bad_word_02",
+    "xm_act_bad_word_03",
+    "xm_act_blackmail_innocent_01",
+    "xm_act_blackmail_innocent_02",
+    "xm_act_blackmail_innocent_03",
+    "xm_act_threaten_false_aug_01",
+    "xm_act_threaten_false_aug_02",
+    "xm_act_threaten_false_aug_03",
+    "xm_act_after_sale_continue_01",
+    "xm_act_after_sale_low_budget_01",
+    "xm_act_reject_contraband_01",
+    "xm_act_remove_filter_01",
+    "xm_act_shutter_close_01",
+    "xm_act_shutter_close_03",
+    "xm_act_shutter_close_04",
+    "xm_act_expose_water_base_01",
+    "xm_act_expose_water_high_01",
+    "xm_act_expose_water_other_01",
+    "xm_act_expose_water_other_02",
+    "xm_act_expose_water_other_03"
+  ],
+  "sale_rule": {
+    "first": 4,
+    "last": 13,
+    "later_chance_percent": 30,
+    "count": 2,
+    "basic_only": true,
+    "excluded_visits": [
+      6
+    ]
+  },
+  "fixed_drink_gift": {
+    "visit": 6,
+    "count": 1,
+    "tier": 2,
+    "random_once": true,
+    "next_day": true,
+    "replaces_trade_reward": true
+  },
+  "tts": {
+    "language": "ja",
+    "voice_id": "ayano",
+    "model_id": "luna-tts-1.5",
+    "speed": 1.1,
+    "audio_format": "wav",
+    "text_normalization": true
+  }
+}

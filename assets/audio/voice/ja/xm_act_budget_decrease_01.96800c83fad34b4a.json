@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ……残りの予算、少なくなっちゃいました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "38",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.145,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 246982
+  },
+  "sha256": "7282c218b5cd428b6a92c84f0b4a97c030b16b7a8cedb7575c27dd3907b2e0d8",
+  "binding": {
+    "key": "xm_act_budget_decrease_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "啊……剩下的钱不多了。",
+      "ja": "あ……残りの予算、少なくなっちゃいました。",
+      "en": "Oh... I don't have much money left."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_act_budget_decrease_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "啊……剩下的钱不多了。",
+        "ja": "あ……残りの予算、少なくなっちゃいました。",
+        "en": "啊……剩下的钱不多了。"
+      },
+      "generic": false
+    }
+  ]
+}

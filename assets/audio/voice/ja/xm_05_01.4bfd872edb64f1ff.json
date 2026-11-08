@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは。昨日ね、[chuckles] お客さんに「店長さん」って呼ばれたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "68",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.981,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 383122
+  },
+  "sha256": "d630aae8835acce39be50b1902f3e5bc56c47b0c56fb1889d93745ddb6a6cfba",
+  "binding": {
+    "key": "xm_05_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好。昨天有客人叫我「老板」了。",
+      "ja": "こんばんは。昨日、お客さんに「店長さん」って呼ばれたんです。",
+      "en": "Good evening. A customer called me 'the owner' yesterday."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_05_01",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "晚上好。昨天有客人叫我「老板」了。",
+        "ja": "こんばんは。昨日、お客さんに「店長さん」って呼ばれたんです。",
+        "en": "晚上好。昨天有客人叫我「老板」了。"
+      },
+      "generic": false
+    }
+  ]
+}

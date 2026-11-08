@@ -1,0 +1,163 @@
+{
+  "source_game": "雨音に満ちる夜 -A night filled with the sound of rain-",
+  "source_folder": "img/pictures/busts/girl2",
+  "crop": [
+    342,
+    0,
+    682,
+    576
+  ],
+  "frame_width": 340,
+  "frame_height": 608,
+  "head_padding": 32,
+  "hat_repair": "patches/xiaoman_hat_crown.png",
+  "original_layers_preserved": true,
+  "rest_expression": "original normal.png, no facial overlays",
+  "rest_mouth_layer": "normal_2_0",
+  "runtime_flat_mouth_min_size": [
+    2,
+    1
+  ],
+  "runtime_frame_width": 96,
+  "runtime_frame_height": 172,
+  "runtime_body_height": 162,
+  "runtime_head_padding": 10,
+  "runtime_resize": "premultiplied-alpha Lanczos",
+  "columns": 3,
+  "rows": [
+    "neutral",
+    "soft",
+    "closed",
+    "smile",
+    "shy",
+    "worried"
+  ],
+  "files": [
+    {
+      "file": "xiaoman_neutral_0.png",
+      "mood": "neutral",
+      "mouth": 0,
+      "sha256": "81986ab60e60b39bc041724f30c0aa96178ed48dc6ae5976bc6df37431ced652",
+      "runtime_sha256": "f6cd68ed6f31ccd1fde1b417492d875c40fe1b94decae11dd63a99a71615e9f2"
+    },
+    {
+      "file": "xiaoman_neutral_1.png",
+      "mood": "neutral",
+      "mouth": 1,
+      "sha256": "1049fb98bef3e421e96135dfd369f6e09aa084238788c0bbf31f91b16332bad8",
+      "runtime_sha256": "25f567bf1faada5d9e4abec5733fd0eb532e6029956e6e6cf48432d17d7cb038"
+    },
+    {
+      "file": "xiaoman_neutral_2.png",
+      "mood": "neutral",
+      "mouth": 2,
+      "sha256": "ae50f147c22f939181ccbf92a3f269a0fd21e557bc8f335a70b6908eeac59c33",
+      "runtime_sha256": "7f3cbde7ca5d7ba151bd43ebfe0ad6050d7dc96102575f182dc418dc8f9ff014"
+    },
+    {
+      "file": "xiaoman_soft_0.png",
+      "mood": "soft",
+      "mouth": 0,
+      "sha256": "a45228ad9a1cc81bea2879ec4983b99e6cbaef711e4d717845542ca90d8d6706",
+      "runtime_sha256": "7af6809e452bdca76f128c7937b7c9aa0ed59328971ceb1a5ebf5c9620639961"
+    },
+    {
+      "file": "xiaoman_soft_1.png",
+      "mood": "soft",
+      "mouth": 1,
+      "sha256": "b2591cee135c3b555d35b4f049e87bef7a3ab6f761be6a2b24b985e5ee3c2c78",
+      "runtime_sha256": "eee58f571d80a4e4d15968e75583becfacb6df3307bba05ce448aaa10de12db4"
+    },
+    {
+      "file": "xiaoman_soft_2.png",
+      "mood": "soft",
+      "mouth": 2,
+      "sha256": "0e8370f07ebaff0cfd5cb4638f10f5eee6a6c91431c1b319fb7b433f7ae51eb9",
+      "runtime_sha256": "79bc417e1e4b694c164c440a9fff10a94dfa1d444ee9bb757ba2ad562580f833"
+    },
+    {
+      "file": "xiaoman_closed_0.png",
+      "mood": "closed",
+      "mouth": 0,
+      "sha256": "8c3e39f5c01e2a1597500de1c6063bd8adf2df4bb84cc97b8c640ae458588f02",
+      "runtime_sha256": "911e66b31a7e9d5e4b26acd3f55dd37c57903d147ee60cf50604dba131071d14"
+    },
+    {
+      "file": "xiaoman_closed_1.png",
+      "mood": "closed",
+      "mouth": 1,
+      "sha256": "6c53073cb284a7368fd6222d59ae9a92cb2c44dfbe9fe066f2aa98fa484eb447",
+      "runtime_sha256": "fb860f4c4c0b08ebb8e7ed59654256b15a5e834d44738741756ee8ab9b460cf3"
+    },
+    {
+      "file": "xiaoman_closed_2.png",
+      "mood": "closed",
+      "mouth": 2,
+      "sha256": "d61d25e0f50d12549daee5552d7503452fc3769d581a58329d936bc04e0c7727",
+      "runtime_sha256": "950f43d92aed684699837c329e56cb4dd56b18fd20a875b291f16bedd5f59cad"
+    },
+    {
+      "file": "xiaoman_smile_0.png",
+      "mood": "smile",
+      "mouth": 0,
+      "sha256": "183a618a59c938fd2714fb308ddf38eb0f3b21a996a5b11349c2b8bb34e74e78",
+      "runtime_sha256": "769dd856b261fbfe8d5f1e7519996c49e0ce08becd9e3cf45bb427fae7b076bb"
+    },
+    {
+      "file": "xiaoman_smile_1.png",
+      "mood": "smile",
+      "mouth": 1,
+      "sha256": "9c3865aee8a12611420a0538b78cc6e72a98ba2678f1a1b17fa7fcce8ac86ad9",
+      "runtime_sha256": "334728b783bf6182bbcde51a7cea8487716445695ee0521c5385c12476c5d8a1"
+    },
+    {
+      "file": "xiaoman_smile_2.png",
+      "mood": "smile",
+      "mouth": 2,
+      "sha256": "608537de4471910037f21c092c73d9419e75b0655c09fd328ad24dedcb404ccf",
+      "runtime_sha256": "273cb902cd2dbd6bed182420a737dff1faa7553b07fefb140342f2f91e07712a"
+    },
+    {
+      "file": "xiaoman_shy_0.png",
+      "mood": "shy",
+      "mouth": 0,
+      "sha256": "1b374cb29758260b130871892642330646e8120e79c205e87910a8ab9f747019",
+      "runtime_sha256": "d1f8ca15f1de9c4b8cdb9d0192312fbc3f8d4e51b839d904b296d2c9f5f2fb6c"
+    },
+    {
+      "file": "xiaoman_shy_1.png",
+      "mood": "shy",
+      "mouth": 1,
+      "sha256": "d13daafdb15ae79ed0a7b0c5182c3459a1f34562f77f02e53f327223c46c8142",
+      "runtime_sha256": "c78a161c7c18bd773f9ecdb38f4326df63ec84e458637730eac3da8bce23088e"
+    },
+    {
+      "file": "xiaoman_shy_2.png",
+      "mood": "shy",
+      "mouth": 2,
+      "sha256": "887e31f95c9258cf7a3020c8b1a483071e53217eb57a18fce20376d55219cb3b",
+      "runtime_sha256": "c0c4559905db60e677f2ca3b0680b5f045938dfe76b8a95afab707b0f8f18368"
+    },
+    {
+      "file": "xiaoman_worried_0.png",
+      "mood": "worried",
+      "mouth": 0,
+      "sha256": "ad05d03c572cb47d135e2d13116ddaa2d7c4c6f92f04a9d4aa4f1c1b0a116a3b",
+      "runtime_sha256": "2b28d357f7f14df8af27298f420ef48bd4a56eb000d3f2c0b7aee5f6053ddc76"
+    },
+    {
+      "file": "xiaoman_worried_1.png",
+      "mood": "worried",
+      "mouth": 1,
+      "sha256": "d9b4b52d23fc7c260003ea26d1218fc80bf42e2b3e9efe634dd24970575c598e",
+      "runtime_sha256": "7972d28c00907ea100b5bdc8f38e5d9ae0bedff328ea20148e76f69348a806bd"
+    },
+    {
+      "file": "xiaoman_worried_2.png",
+      "mood": "worried",
+      "mouth": 2,
+      "sha256": "3c6ebfec6985353ac198a51e282f5ca562fe8bea579ff4487dd030a8030e5d07",
+      "runtime_sha256": "e881a52c714bfe984d617cd25d91779f7e970f0a945b779f1c1882ef2268f01a"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+[
+  {
+    "key": "title",
+    "title": "Title",
+    "sprite": "cassette14b",
+    "storyNode": "visit_01"
+  },
+  {
+    "key": "intro",
+    "title": "Intro",
+    "sprite": "cassette8",
+    "storyNode": "visit_02"
+  },
+  {
+    "key": "nightfall",
+    "title": "Nightfall",
+    "sprite": "cassette1",
+    "storyNode": "visit_03"
+  },
+  {
+    "key": "intro2",
+    "title": "Intro2",
+    "sprite": "cassette8b",
+    "storyNode": "visit_04"
+  },
+  {
+    "key": "midnight",
+    "title": "Midnight",
+    "sprite": "cassette3",
+    "storyNode": "visit_05"
+  },
+  {
+    "key": "latenight",
+    "title": "Latenight",
+    "sprite": "cassette9b",
+    "storyNode": "visit_06"
+  },
+  {
+    "key": "diary",
+    "title": "Diary",
+    "sprite": "cassette10b",
+    "storyNode": "visit_07"
+  },
+  {
+    "key": "gallery1",
+    "title": "Gallery1",
+    "sprite": "cassette5",
+    "storyNode": "visit_08"
+  },
+  {
+    "key": "lost",
+    "title": "Lost",
+    "sprite": "cassette4",
+    "storyNode": "visit_09"
+  },
+  {
+    "key": "gallery2",
+    "title": "Gallery2",
+    "sprite": "cassette7",
+    "storyNode": "visit_10"
+  },
+  {
+    "key": "deepnight",
+    "title": "Deepnight",
+    "sprite": "cassette11b",
+    "storyNode": "visit_11"
+  },
+  {
+    "key": "outro2",
+    "title": "Outro2",
+    "sprite": "cassette10",
+    "storyNode": "visit_12"
+  },
+  {
+    "key": "outro",
+    "title": "Outro",
+    "sprite": "cassette9",
+    "storyNode": "visit_13"
+  },
+  {
+    "key": "rainysound",
+    "title": "Hello!（雨声混音）",
+    "sprite": "cassette12b",
+    "storyNode": "visit_14",
+    "source": "C:\\Users\\sansm\\Downloads\\長谷川智樹,美野春樹,岩永知樹 - Hello! (雨声混音).mp3"
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "49",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.599,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 316818
+  },
+  "sha256": "929d092c13ae5203c92f0e6cda47389ef0ee739fed80e9ea50f73208899433e6",
+  "binding": {
+    "key": "repeat",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "普通饮用水就好。别的先不用啦。",
+      "ja": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
+      "en": "Just ordinary drinking water. I don't need anything else today."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "repeat",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "普通饮用水就好。别的先不用啦。",
+        "ja": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
+        "en": "普通饮用水就好。别的先不用啦。"
+      },
+      "generic": false
+    }
+  ]
+}

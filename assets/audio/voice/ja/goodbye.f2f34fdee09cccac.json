@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それじゃ、そろそろ行きますね。また。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "33",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.346,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 208632
+  },
+  "sha256": "44984ca425de0facafb4915c5bdbde97cbc64a72ffac9c120320cc2b2f945c48",
+  "binding": {
+    "key": "goodbye",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那我先走啦。下次见。",
+      "ja": "それじゃ、そろそろ行きますね。また。",
+      "en": "I'd better go. See you next time."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "goodbye",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "那我先走啦。下次见。",
+        "ja": "それじゃ、そろそろ行きますね。また。",
+        "en": "那我先走啦。下次见。"
+      },
+      "generic": false
+    }
+  ]
+}

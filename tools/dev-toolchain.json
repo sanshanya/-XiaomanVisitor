@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "python": "3.12",
+  "dotnet_runtime_major": 8,
+  "compiler": {
+    "version": "4.8.0",
+    "url": "https://api.nuget.org/v3-flatcontainer/microsoft.net.compilers.toolset/4.8.0/microsoft.net.compilers.toolset.4.8.0.nupkg",
+    "archive_sha256": "37333f4f1e2ce55e621355d6da651dc23d4cb5f94a8f76b9478816e87f110ad9",
+    "csc_sha256": "c9b43db498213e8e8ca5d7e03a25defdda2031d5e025553b8eb9773f79ebd226"
+  }
+}

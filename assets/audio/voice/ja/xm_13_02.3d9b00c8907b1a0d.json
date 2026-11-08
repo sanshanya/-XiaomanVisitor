@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "グラスって、服よりずっと荷造りが大変で。[chuckles] こんなに買わなきゃよかったかな。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "80",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.563,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 411076
+  },
+  "sha256": "17f4cf8a5d6a15e4155cd3a44cf1ed766f592c1ab87fde81ac0eb6cdfe813099",
+  "binding": {
+    "key": "xm_13_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "酒杯比衣服难装多了。早知道就不买那么多了。",
+      "ja": "グラスって、服よりずっと荷造りが大変で。……こんなに買わなきゃよかったかな。",
+      "en": "Glasses are much harder to pack than clothes. I wish I hadn't bought quite so many."
+    },
+    "generic": false
+  },
+  "binding_history": [
+    {
+      "key": "xm_13_02",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "酒杯比衣服难装多了。早知道就不买那么多了。",
+        "ja": "グラスって、服よりずっと荷造りが大変で。……こんなに買わなきゃよかったかな。",
+        "en": "酒杯比衣服难装多了。早知道就不买那么多了。"
+      },
+      "generic": false
+    }
+  ]
+}
