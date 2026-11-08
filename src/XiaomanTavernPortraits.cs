@@ -5,8 +5,8 @@ namespace XiaomanVisitor
 {
     public sealed partial class XiaomanMod
     {
-        // Night UI owns its texture. It never changes the store atlas selection,
-        // lazy-load flags, sprite registry or display settings from 0.0.2.
+        // The room and stationary shop UI borrow this full-detail texture. Its
+        // ownership stays here; native sprite selection and cameras are separate.
         private Texture2D tavernHighAtlas;
         private bool tavernHighAttempted;
         internal const string TavernAtlasFile = "Portraits/xiaoman_tavern_atlas.png";

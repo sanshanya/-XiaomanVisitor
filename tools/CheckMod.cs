@@ -27,7 +27,7 @@ internal static class CheckMod
         if (scan.Error != null) Console.Error.WriteLine(scan.Error);
         if (scan.Findings.Count > 0 || scan.HardFlags.Count > 0) Console.WriteLine(scan.FormatFindings(30));
         if (scan.Refused || scan.Capabilities.Except(manifest.Capabilities).Any()) return 2;
-        CheckStory.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail();
+        CheckStory.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait();
         Console.WriteLine("PASS: " + assertions + " assertions; native manifest, capability scanner and paper parser accepted.");
         return 0;
     }
@@ -566,6 +566,29 @@ internal static class CheckMod
             "detail selection uses the installed game's actual letterboxed viewport height");
         Console.WriteLine("PASS: 1080p compatibility, 1440p/2160p detail selection, GPU fallback and identical portrait world size.");
     }
+    private static void CheckShopPortrait()
+    {
+        // A shared native renderer must be restored in every other customer,
+        // transition and special-camera state, including magnifier and shooting.
+        for (int state = 0; state < 128; state++) {
+            bool own = (state & 1) != 0, inside = (state & 2) != 0,
+                arrived = (state & 4) != 0, moving = (state & 8) != 0,
+                visible = (state & 16) != 0, normal = (state & 32) != 0,
+                ready = (state & 64) != 0;
+            Require(ShopPortraitRules.MayPresent(own,inside,arrived,moving,visible,normal,ready)
+                == (state == 119), "only a ready, stationary Xiaoman in the normal shop camera uses the presenter");
+        }
+        Require(Math.Abs(ShopPortraitRules.WindowLeft*960 - 324) < .0001
+            && Math.Abs(ShopPortraitRules.WindowRight*960 - 639) < .0001
+            && Math.Abs(ShopPortraitRules.DeskTop*540 - 271) < .0001,
+            "portrait clips to the native serving window and opaque counter edge");
+        Require(typeof(UnityEngine.Renderer).GetProperty("forceRenderingOff") != null
+            && typeof(CustomUIManager).GetMethod("HasLayer") != null
+            && typeof(StoreUIManager).GetField("mainCamera") != null,
+            "installed game supports scoped renderer suppression and the normal-camera UI projection");
+        Console.WriteLine("PASS: all 128 shop presentation states, native motion/special-camera fallback and serving-window clipping.");
+    }
+
     private static void CheckPaper()
     {
         string inkPath;
