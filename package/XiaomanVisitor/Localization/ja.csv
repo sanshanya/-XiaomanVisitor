@@ -234,7 +234,7 @@ ui_tavern_cash,所持クレジット：{0}
 ui_tavern_buy,一杯頼む · {0} CR
 ui_tavern_help,受け取り台の片付けを手伝う
 ui_tavern_ledger,帳面を開く
-ui_tavern_rest,今夜は、ゆっくりしていってね。
+ui_tavern_rest,今夜の行動は完了。
 ui_tavern_pickup_ready,受け取り用の場所が整っている。
 ui_tavern_pickup_waiting,持ち帰り用のグラスが、カウンターのグラスと混ざっている。
 ui_tavern_ledger_total,"店長さんの注文：{0} 杯

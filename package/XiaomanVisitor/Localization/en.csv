@@ -234,7 +234,7 @@ ui_tavern_cash,Credits on hand: {0}
 ui_tavern_buy,Order a drink · {0} CR
 ui_tavern_help,Help tidy the pickup counter
 ui_tavern_ledger,Open the ledger
-ui_tavern_rest,Take it easy for the rest of the evening.
+ui_tavern_rest,Tonight's activity is complete.
 ui_tavern_pickup_ready,The pickup counter is ready.
 ui_tavern_pickup_waiting,Pickup glasses are still mixed in with those at the bar.
 ui_tavern_ledger_total,"Your orders: {0} drinks

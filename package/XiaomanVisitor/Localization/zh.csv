@@ -234,7 +234,7 @@ ui_tavern_cash,随身信用点：{0}
 ui_tavern_buy,点一杯 · {0} CR
 ui_tavern_help,帮忙整理取餐台
 ui_tavern_ledger,翻开账本
-ui_tavern_rest,今晚就歇一会儿吧。
+ui_tavern_rest,今晚的活动已完成。
 ui_tavern_pickup_ready,取餐的位置已经整理好了。
 ui_tavern_pickup_waiting,取餐的杯子还和吧台上的摆在一起。
 ui_tavern_ledger_total,"店长点过的酒：{0} 杯
