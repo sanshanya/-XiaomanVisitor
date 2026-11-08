@@ -27,7 +27,7 @@ internal static class CheckMod
         if (scan.Error != null) Console.Error.WriteLine(scan.Error);
         if (scan.Findings.Count > 0 || scan.HardFlags.Count > 0) Console.WriteLine(scan.FormatFindings(30));
         if (scan.Refused || scan.Capabilities.Except(manifest.Capabilities).Any()) return 2;
-        CheckStory.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckPortraitDetail();
+        CheckStory.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail();
         Console.WriteLine("PASS: " + assertions + " assertions; native manifest, capability scanner and paper parser accepted.");
         return 0;
     }
@@ -479,14 +479,14 @@ internal static class CheckMod
         Require(location.Id == TavernMapRules.LocationId && location.Source == XiaomanMod.Id,
             "tavern is a uniquely named mod-owned extra location");
         Require(location.IsDiscovered() && !location.IsAvailable(),
-            "renovation card is visible but native selection and travel guards reject entry");
+            "disabled/no-run location remains unavailable without constructing a store or scene");
         Require(location.ImageKey == TavernMapRules.ImageKey && location.title != null,
             "native card resolves a namespaced local preview and localized title");
-        Require(location.onArrive == null && location.onLeave == null && location.onTick == null && location.buildPanel == null
+        Require(location.onArrive != null && location.onLeave != null && location.onTick != null && location.buildPanel != null
             && location.stageObject == null && location.panelObject == null,
-            "placeholder has no travel scene, business tick, payment, gift or story action");
+            "night callbacks exist; scene and panel are allocated lazily through native travel");
         Require(!location.UsesAfterhourBag && !location.ShowsStoreCounters && !location.AllowsHazardousWaste && !location.CountsDumpedWaste,
-            "closed placeholder cannot transfer inventory or act as a native service");
+            "tavern does not expose player inventory, waste or native service counters");
         Require(TavernMapRules.UsesRenovationLabel(location.Id, true)
             && !TavernMapRules.UsesRenovationLabel(location.Id, false), "status label only applies while this mod is enabled");
         foreach (string other in new[] { null, "", "dumping_ground", "commissary", "dr_jackson", "night_market",
@@ -497,7 +497,50 @@ internal static class CheckMod
             "extra location uses the native registration and source-scoped removal APIs");
         Require(File.Exists(Path.Combine(package,"Textures","Items",TavernMapRules.PreviewKey + ".png")),
             "preview is in the installed loader's native sprite folder");
-        Console.WriteLine("PASS: visible renovation-only map card, native travel rejection, scoped labels, local image and safe removal bindings.");
+        foreach (string file in new[] { "background.png", "bar-occluder.png" })
+            Require(File.Exists(Path.Combine(package,"Scenes","Tavern",file)), "night scene texture is packaged");
+        Console.WriteLine("PASS: native extra-location registration, lazy night scene, scoped status labels and source-safe removal.");
+    }
+
+    private static void CheckTavernProgress()
+    {
+        for (int day = -1; day <= 100; day++)
+            foreach (bool enabled in new[] { false, true })
+                foreach (bool hasRun in new[] { false, true })
+                    foreach (bool departed in new[] { false, true })
+                        Require(TavernRules.IsOpen(enabled, hasRun, day, departed)
+                            == (enabled && hasRun && day >= 3 && !departed), "day-3 access respects no-run/disabled/departed states");
+        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,2,false) == "ui_tavern_renovating", "days 1-2 renovation");
+        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,3,false) == null, "open card retains native available status");
+        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,99,true) == "ui_tavern_closed", "legacy departure is not reversed");
+        Require(TavernRules.StatusKey("commissary",true,true,1,false) == null, "other locations retain native status");
+        var p = TavernProgress.Restore(null,1);
+        Require(p.OpenedOn == 3 && !p.MayAct(2) && p.MayAct(3), "new run opens at day three");
+        Require(!p.Buy(3,34) && p.Entries.Count == 0 && !p.Buy(2,999), "insufficient funds/early action never records payment");
+        Require(p.Buy(3,35) && p.Cups == 1 && p.Receipts == 35, "exact-price ordinary cup is charged once");
+        Require(!p.Buy(3,999) && !p.Help(3), "double clicks and cross-action repeats are rejected");
+        p = TavernProgress.Restore(p.Data,3);
+        Require(p.Cups == 1 && p.Receipts == 35 && !p.MayAct(3), "reload preserves consumption and the night receipt");
+        Require(p.Help(4) && p.PickupPointReady && p.Receipts == 35 && !p.Buy(4,999), "L1 help persists without inventing cash income");
+        p = TavernProgress.Restore(p.Data,5);
+        Require(p.PickupPointReady && !p.Help(5) && p.Buy(5,100), "completed project cannot be repeated; a later night's drink remains available");
+        Require(p.Receipts == 70 && p.Cups == 2, "ledger sums actual purchases only");
+        var existing = TavernProgress.Restore(null,52);
+        Require(existing.OpenedOn == 52 && !existing.MayAct(51) && existing.MayAct(52) && existing.Receipts == 0,
+            "existing saves open on installation day without retrospective charges");
+        Require(TavernProgress.Restore("not json",9).OpenedOn == 9, "invalid old data has a safe migration");
+        var corrupt = TavernProgress.Restore("{\"Schema\":1,\"OpenedOn\":3,\"Entries\":[{\"Day\":3,\"Action\":\"cup\",\"Paid\":35},{\"Day\":3,\"Action\":\"cup\",\"Paid\":35},{\"Day\":4,\"Action\":\"cup\",\"Paid\":-35},{\"Day\":99,\"Action\":\"cup\",\"Paid\":35}]}",5);
+        Require(corrupt.Cups == 1 && corrupt.Receipts == 35, "duplicate, negative and future ledger entries are rejected");
+        foreach (int height in new[] { 540,720,900,1080,1440,2160 }) {
+            double width = height * 16.0 / 9;
+            double scale = TavernRules.FitScale(width,height);
+            Require(scale > 0 && scale*5016 <= width+1e-8 && scale*2823 <= height+1e-8, "one contain transform fits all room layers");
+            Require(Math.Abs((1644-1004)*scale - 640*scale) < 1e-8, "bar/actor overlap stays aligned at every resolution");
+        }
+        Require(TavernRules.FitScale(0,1080) == 0 && TavernRules.FitScale(double.NaN,1080) == 0, "unready viewports do not generate invalid transforms");
+        for (int mood=0;mood<6;mood++) for (int mouth=0;mouth<3;mouth++)
+            Require(TavernRules.FrameIndex((Mood)mood,mouth) == mood*3+mouth, "all eighteen night portrait states retain approved mapping");
+        Console.WriteLine("PASS: day-3 tavern access, migration, 35-CR purchase, one activity/night, persistent L1 pickup point, ledger/reload and resolution-independent layer geometry.");
     }
     private static void CheckPortraitDetail()
     {

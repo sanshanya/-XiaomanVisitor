@@ -1,7 +1,7 @@
-深空小满：可能很迷醉？ / 当前发布版本 0.0.2
+﻿深空小满：可能很迷醉？ / 工坊稳定版 0.0.2 / 开发测试版 0.0.3
 
 Git开发入口：README.md。首次准备请运行tools/setup-dev.ps1；完整构建与检查运行tools/verify-dev.ps1。
-后续酒馆按作者最新要求从游戏第3天开放；当前发布版仍为装修中卡片，环境初始化不改变玩法。
+工坊0.0.2仍为装修中卡片；develop/tavern的0.0.3已接入第3天开放的独立酒馆场景与基础互动。
 
 发布包：release/0.0.2/XiaomanVisitor-0.0.2.zip
 原生模组内容：package/XiaomanVisitor

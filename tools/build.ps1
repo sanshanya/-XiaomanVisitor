@@ -11,7 +11,7 @@ $compiler = Get-XiaomanCompiler
 $package = Join-Path $projectRoot 'package\XiaomanVisitor'
 $refs = @('mscorlib.dll','netstandard.dll','System.dll','System.Core.dll','Assembly-CSharp.dll','0Harmony.dll','Newtonsoft.Json.dll',
     'UnityEngine.CoreModule.dll','UnityEngine.AudioModule.dll','UnityEngine.InputLegacyModule.dll','Febucci.TextAnimator.Runtime.dll',
-    'Febucci.TextAnimator.TMP.Runtime.dll','Unity.TextMeshPro.dll','UnityEngine.UI.dll','UnityEngine.ImageConversionModule.dll')
+    'Febucci.TextAnimator.TMP.Runtime.dll','Unity.TextMeshPro.dll','UnityEngine.UI.dll','UnityEngine.UIModule.dll','UnityEngine.ImageConversionModule.dll')
 $compilerArgs = @('/nologo','/target:library','/nostdlib+','/langversion:latest','/optimize+','/deterministic+',
     ('/out:' + (Join-Path $package 'XiaomanVisitor.dll')))
 foreach ($name in $refs) { $compilerArgs += '/reference:' + (Join-Path $managed $name) }
@@ -42,7 +42,7 @@ if ($Install) {
         }
         Copy-Item -LiteralPath $sourceFile -Destination $installedFile -Force
     }
-    foreach ($folder in @('Textures','Portraits','Localization','Sounds','Books','Voices','Letters','Licenses')) {
+    foreach ($folder in @('Textures','Portraits','Localization','Sounds','Books','Voices','Letters','Licenses','Scenes')) {
         Copy-Item -LiteralPath (Join-Path $package $folder) -Destination $installPath -Recurse -Force
     }
     foreach ($oldVoice in Get-ChildItem -LiteralPath (Join-Path $installPath 'Sounds') -Filter 'xm_voice_*.wav' -File) {

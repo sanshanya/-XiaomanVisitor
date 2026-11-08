@@ -228,3 +228,19 @@ gift_cassette_case_name,小满的磁带盒
 gift_cassette_case_desc,用来收好小满留下的磁带，能放进磁带机仓库。
 ui_tavern_name,小满的酒馆
 ui_tavern_renovating,装修中
+ui_tavern_closed,已歇业
+ui_tavern_welcome,……店长？欢迎，找个地方坐吧。
+ui_tavern_cash,随身信用点：{0}
+ui_tavern_buy,点一杯 · {0} CR
+ui_tavern_help,帮忙整理取餐台
+ui_tavern_ledger,翻开账本
+ui_tavern_rest,今晚就歇一会儿吧。
+ui_tavern_pickup_ready,取餐的位置已经整理好了。
+ui_tavern_pickup_waiting,取餐的杯子还和吧台上的摆在一起。
+ui_tavern_ledger_total,"店长点过的酒：{0} 杯
+收款：{1} CR"
+ui_tavern_ledger_empty,这一页还没有记过什么。
+ui_tavern_ledger_cup,第 {0} 天 · 一杯 · {1} CR
+ui_tavern_ledger_help,第 {0} 天 · 整理了取餐台
+ui_tavern_close_ledger,合上账本
+ui_tavern_pickup_sign,取餐

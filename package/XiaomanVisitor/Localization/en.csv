@@ -228,3 +228,19 @@ gift_cassette_case_name,Xiaoman's Cassette Case
 gift_cassette_case_desc,A case for the tapes Xiaoman leaves you. Fits in the cassette player's storage.
 ui_tavern_name,Xiaoman's Tavern
 ui_tavern_renovating,Under renovation
+ui_tavern_closed,Closed
+ui_tavern_welcome,…Shopkeeper? Welcome. Make yourself comfortable.
+ui_tavern_cash,Credits on hand: {0}
+ui_tavern_buy,Order a drink · {0} CR
+ui_tavern_help,Help tidy the pickup counter
+ui_tavern_ledger,Open the ledger
+ui_tavern_rest,Take it easy for the rest of the evening.
+ui_tavern_pickup_ready,The pickup counter is ready.
+ui_tavern_pickup_waiting,Pickup glasses are still mixed in with those at the bar.
+ui_tavern_ledger_total,"Your orders: {0} drinks
+Received: {1} CR"
+ui_tavern_ledger_empty,Nothing has been written on this page yet.
+ui_tavern_ledger_cup,Day {0} · One drink · {1} CR
+ui_tavern_ledger_help,Day {0} · Tidied the pickup counter
+ui_tavern_close_ledger,Close the ledger
+ui_tavern_pickup_sign,Pickup

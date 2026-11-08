@@ -28,6 +28,7 @@
   "source_art_preserved": true,
   "location_id": "sansm.xiaoman.visitor.tavern",
   "image_key": "sansm.xiaoman.visitor:xiaoman_tavern_map",
-  "phase": "renovation_placeholder",
-  "enterable": false
+  "phase": "tavern_stage_one",
+  "enterable": true,
+  "opening_game_day": 3
 }

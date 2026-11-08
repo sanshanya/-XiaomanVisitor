@@ -53,7 +53,8 @@ def main():
                     packaged="Textures/Items/xiaoman_tavern_map.png", size=list(card.size),
                     sha256=digest(target.read_bytes()), bytes=target.stat().st_size,
                     source_art_preserved=True, location_id="sansm.xiaoman.visitor.tavern",
-                    image_key="sansm.xiaoman.visitor:xiaoman_tavern_map", phase="renovation_placeholder", enterable=False)
+                    image_key="sansm.xiaoman.visitor:xiaoman_tavern_map", phase="tavern_stage_one", enterable=True,
+                    opening_game_day=3)
     (ROOT / "assets/tavern-map.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({key: manifest[key] for key in ("packaged", "size", "bytes", "phase", "enterable")}, indent=2))
 

@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import re
+import shutil
 import sys
 import zipfile
 import xml.etree.ElementTree as ET
@@ -19,6 +20,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--with-audio", action="store_true", help="Also export a separately playable voice ZIP.")
     parser.add_argument("--skip-installed-check", action="store_true", help="Prepare files while the running game still holds the installed DLL.")
+    parser.add_argument("--development", action="store_true", help="Build a local test archive without Workshop drafts or publication state.")
     args = parser.parse_args()
     root, package = pipeline.ROOT, pipeline.PACKAGE
     manifest = ET.parse(package / "manifest.xml").getroot()
@@ -31,7 +33,7 @@ def main():
     pack = pipeline.load(package / "Voices/index.json")
     assert pack["pending_lines"] == 0 and len(pack["lines"]) == len(script["lines"]) == report["recorded_lines"]
     assert report["version"] == version and not report["warnings"]
-    output = root / "release" / version
+    output = root / "release" / ("dev-" + version if args.development else version)
     page_path = output / "工坊页面.json"
     page = pipeline.load(page_path) if page_path.exists() else {}
     confirmed = page.get("status") == "confirmed_by_user"
@@ -47,7 +49,9 @@ def main():
     allowed = {".dll", ".xml", ".png", ".csv", ".json", ".wav", ".mp3", ".ogg", ".txt"}
     listed_dlls = {e.text for e in manifest.findall("Assemblies/Assembly")}
     checksums = {}
-    installed = Path(r"E:\app\steam\steamapps\common\Probably Stolen\Mods\XiaomanVisitor")
+    local_config = root / ".dev/local.json"
+    game_root = Path(pipeline.load(local_config)["game_root"]) if local_config.exists() else Path(r"E:\app\steam\steamapps\common\Probably Stolen")
+    installed = game_root / "Mods/XiaomanVisitor"
     for file in files:
         name = file.relative_to(package).as_posix()
         assert file.suffix.lower() in allowed and not any(p.startswith(".") for p in Path(name).parts), name
@@ -59,7 +63,7 @@ def main():
         assert {f.relative_to(installed).as_posix() for f in installed.rglob("*") if f.is_file()} == set(checksums)
 
     output.mkdir(parents=True, exist_ok=True)
-    archive = output / f"XiaomanVisitor-{version}.zip"
+    archive = output / f"XiaomanVisitor-{version}{'-dev' if args.development else ''}.zip"
     with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for file in files:
             z.write(file, "XiaomanVisitor/" + file.relative_to(package).as_posix())
@@ -111,8 +115,16 @@ def main():
         gallery.append(dict(entry, bytes=image.stat().st_size, sha256=digest(image)))
     if gallery:
         release["gallery"] = gallery
+    if args.development:
+        release.update(status="development_not_uploaded", gameplay_tested=False,
+                       title_status="retained_author_title", description_status="development_description")
     pipeline.save(output / "release-manifest.json", release)
     (output / "SHA256SUMS.txt").write_text("".join(f"{a['sha256']}  {a['file']}\n" for a in results), encoding="utf-8")
+    if args.development:
+        instructions = root / f"story/酒馆第一阶段_{version}_测试说明.txt"
+        if instructions.exists(): shutil.copyfile(instructions, output / "测试说明.txt")
+        print(json.dumps({k:v for k,v in release.items() if k != "files"}, ensure_ascii=False, indent=2))
+        return
     vdf = output / "workshop-item.vdf.draft"
     escape = lambda s: s.replace("\\", "\\\\").replace('"', '\\"')
     description = page["description_bbcode"].replace("\n", "") if confirmed else manifest.findtext("Description").replace("\n", " ")

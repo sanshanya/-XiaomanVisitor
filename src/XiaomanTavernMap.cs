@@ -16,20 +16,30 @@ namespace XiaomanVisitor
     public sealed partial class XiaomanMod
     {
         internal bool TavernMapEnabled { get { return enabled; } }
-        internal string TavernRenovationLabel { get { return Text("ui_tavern_renovating"); } }
+        private DelegateAfterhourLocation tavernLocation;
+        private XiaomanTavernStage tavernStage;
+        internal string TavernStatusLabel
+        {
+            get {
+                string key = TavernRules.StatusKey(TavernMapRules.LocationId, enabled, PlayerStore.HasInstance,
+                    PlayerStore.HasInstance ? StoreStation.Instance.dayCounter : 0, PlayerStore.HasInstance && ReadStory().Finished);
+                return key == null ? null : Text(key);
+            }
+        }
 
         private DelegateAfterhourLocation CreateTavernMapLocation()
         {
-            // Phase one is a visible closed location only. No arrival callback,
-            // expenses, business clock or story transition can run from this card.
-            return new DelegateAfterhourLocation {
+            return tavernLocation = new DelegateAfterhourLocation {
                 id = TavernMapRules.LocationId,
                 source = Id,
                 title = () => Text("ui_tavern_name"),
                 imageKey = TavernMapRules.ImageKey,
-                backgroundKey = TavernMapRules.ImageKey,
                 isDiscovered = () => true,
-                isAvailable = () => false,
+                isAvailable = CanEnterTavern,
+                onArrive = ArriveAtTavern,
+                onLeave = LeaveTavern,
+                onTick = TickTavernPanel,
+                buildPanel = BuildTavernPanel,
                 usesAfterhourBag = false,
                 showsStoreCounters = false,
                 allowsHazardousWaste = false,
@@ -39,12 +49,20 @@ namespace XiaomanVisitor
 
         private void EnsureTavernMap()
         {
+            if (enabled && PlayerStore.HasInstance) InitializeTavernProgress();
             if (!enabled || ModHelper.GetAfterhourLocation(TavernMapRules.LocationId) != null) return;
             AfterhourLocation.Register(CreateTavernMapLocation());
         }
 
         private void DisableTavernMap()
-        { ModHelper.RemoveAfterhourLocations(Id); }
+        {
+            if (ModHelper.GetCurrentAfterhourLocationId() == TavernMapRules.LocationId)
+                ModHelper.ReturnFromAfterhour(false);
+            LeaveTavern();
+            ModHelper.RemoveAfterhourLocations(Id);
+            if (tavernStage != null) UnityEngine.Object.Destroy(tavernStage.gameObject);
+            tavernStage = null; tavernLocation = null;
+        }
     }
 
     [HarmonyPatch(typeof(TransitUI), "BuildCard", new[] { typeof(AfterhourLocation), typeof(float) })]
@@ -55,11 +73,11 @@ namespace XiaomanVisitor
             XiaomanMod mod = XiaomanMod.Instance;
             if (mod == null || __result == null
                 || !TavernMapRules.UsesRenovationLabel(location == null ? null : location.Id, mod.TavernMapEnabled)) return;
-            // Keep the native unavailable card, font, color and travel guard.
-            // Only this location's status wording changes; no fake timed event.
+            string text = mod.TavernStatusLabel;
+            if (text == null) return;
             var status = __result.transform.Find("Status");
             var label = status == null ? null : status.GetComponent<TextMeshProUGUI>();
-            if (label != null) label.text = mod.TavernRenovationLabel;
+            if (label != null) label.text = text;
         }
     }
 }

@@ -1,7 +1,7 @@
 """Import the author's layered room and validate existing animated portrait frames.
 
-This is an offline asset tool. It neither changes the runtime package nor opens
-the tavern in game. Previews use existing approved frames, not generated artwork.
+This is an offline asset tool. Only --pack copies the two scene textures into
+the runtime package. Previews use existing frames, not generated artwork.
 """
 import argparse
 import hashlib
@@ -119,6 +119,10 @@ def validate(recipe):
     # All existing expression/mouth variants share the same full-frame geometry.
     assert all(frame.size == (384, 688) for frame in frames)
     assert len({hashlib.sha256(frame.tobytes()).digest() for frame in frames}) == 18
+    manifest = SCENE / "runtime-manifest.json"
+    if manifest.exists():
+        for file in load(manifest)["files"]:
+            assert digest(PACKAGE / file["packaged"]) == file["sha256"] == digest(SCENE / file["source"])
     before = 3 * 5016 * 2823 * 4
     scene_memory = (1672 * 941 + 384 * 48) * 4
     return {
@@ -213,10 +217,21 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--import-from", type=Path)
     parser.add_argument("--preview", action="store_true")
+    parser.add_argument("--pack", action="store_true")
     args = parser.parse_args()
     if args.import_from:
         import_layers(args.import_from)
     recipe = load(SCENE / "scene.json")
+    if args.pack:
+        files = []
+        target = PACKAGE / "Scenes/Tavern"
+        target.mkdir(parents=True, exist_ok=True)
+        for name in ("background.png", "bar-occluder.png"):
+            shutil.copyfile(SCENE / name, target / name)
+            files.append(dict(source=name, packaged=(target / name).relative_to(PACKAGE).as_posix(),
+                              sha256=digest(target / name), bytes=(target / name).stat().st_size))
+        save(SCENE / "runtime-manifest.json", dict(schema=1, files=files, opening_game_day=3,
+             texture_memory_bytes=(1672*941 + 384*48)*4, existing_portraits_reused=True))
     report = validate(recipe)
     if args.preview:
         render_preview(recipe, report)

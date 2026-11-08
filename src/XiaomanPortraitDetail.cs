@@ -12,6 +12,18 @@ namespace XiaomanVisitor
         private Texture2D SelectPortraitAtlas()
         {
             if (!PortraitDetailRules.WantsHighDetail(LetterboxManager.GameAreaHeight, SystemInfo.maxTextureSize)) return atlas;
+            return LoadHighDetailAtlas() ?? atlas;
+        }
+
+        internal Texture2D TavernPortraitAtlas(out bool highDetail)
+        {
+            Texture2D selected = SystemInfo.maxTextureSize >= 2304 ? LoadHighDetailAtlas() : null;
+            highDetail = selected != null;
+            return selected ?? atlas;
+        }
+
+        private Texture2D LoadHighDetailAtlas()
+        {
             if (!highDetailAttempted)
             {
                 highDetailAttempted = true;
@@ -38,7 +50,7 @@ namespace XiaomanVisitor
                 finally
                 { if (pending != null) UnityEngine.Object.Destroy(pending); }
             }
-            return highDetailAtlas == null ? atlas : highDetailAtlas;
+            return highDetailAtlas;
         }
 
         private void ReleaseHighDetailPortraits()

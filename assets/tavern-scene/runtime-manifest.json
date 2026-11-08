@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "source": "background.png",
+      "packaged": "Scenes/Tavern/background.png",
+      "sha256": "4a5a957669ce0aa0dad07e511dc755c99445c4c739cb34b683d80c836134502f",
+      "bytes": 2252046
+    },
+    {
+      "source": "bar-occluder.png",
+      "packaged": "Scenes/Tavern/bar-occluder.png",
+      "sha256": "8b6de91420640b13e920ecfd824f5d5cdd577da5d3f89fdc481c11002c032c59",
+      "bytes": 4667
+    }
+  ],
+  "opening_game_day": 3,
+  "texture_memory_bytes": 6367136,
+  "existing_portraits_reused": true
+}
