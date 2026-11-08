@@ -198,8 +198,12 @@ internal static class CheckMod
             var info = attribute.info;
             var targets = info.declaringType.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static | BindingFlags.Instance)
                 .Where(m => m.Name == info.methodName && (info.argumentTypes == null || m.GetParameters().Select(p => p.ParameterType).SequenceEqual(info.argumentTypes))).ToArray();
-            Require(targets.Length == 1 && targets[0].DeclaringType.Assembly == typeof(GameItem).Assembly,
-                "one exact native game method per patch: " + patch.Name);
+            Require(targets.Length == 1 && (targets[0].DeclaringType.Assembly == typeof(GameItem).Assembly
+                || patch == typeof(XiaomanTavernTypewriterSpeedPatch)
+                    && info.declaringType.FullName == "Febucci.UI.Core.TypewriterCore"
+                    && Path.GetFullPath(targets[0].DeclaringType.Assembly.Location)
+                        == Path.GetFullPath(Path.Combine(managed, "Febucci.TextAnimator.Runtime.dll"))),
+                "one exact installed-game method per patch: " + patch.Name);
         }
         Require(CocktailCatalog.Drinks.All(d => ItemPresentation.OwnsItemId(d.ItemId))
             && CassetteCollection.Tracks.All(t => ItemPresentation.OwnsItemId(t.ItemId))
@@ -439,6 +443,14 @@ internal static class CheckMod
             "preview is in the installed loader's native sprite folder");
         foreach (string file in new[] { "background.png", "bar-occluder.png" })
             Require(File.Exists(Path.Combine(package,"Scenes","Tavern",file)), "night scene texture is packaged");
+        Type typewriter = typeof(TextBubble).GetField("typewriter").FieldType;
+        foreach (string callback in new[] { "onTextShowed", "onTypewriterStart", "onTextDisappeared", "onCharacterVisible", "onMessage" })
+            Require(typeof(UnityEngine.Events.UnityEventBase).IsAssignableFrom(typewriter.GetField(callback).FieldType),
+                "cloned native dialogue callback can be detached from shop flow: " + callback);
+        Require(typeof(DialogBubbleClickAdvance).GetMethod("Attach", new[] { typeof(UnityEngine.GameObject), typeof(Action) }) != null
+            && typeof(DialogBubbleWidth).GetField("maxWidth").FieldType == typeof(float)
+            && typeof(DialogUIManager).GetMethod("ScaleByDialogSpeed", new[] { typeof(float) }) != null,
+            "native bubble click, wrapping and timing APIs match the installed game");
         Console.WriteLine("PASS: default-off experimental tavern, restart-scoped opt-in/out, native registration, lazy scene and source-safe removal.");
     }
 

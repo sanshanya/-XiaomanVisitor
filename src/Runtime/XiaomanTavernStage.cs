@@ -7,6 +7,7 @@ using UnityEngine.UI;
 namespace XiaomanVisitor
 {
     // Independent night actor. It never reads or replaces a native store client.
+    [DefaultExecutionOrder(1000)]
     internal sealed class XiaomanTavernStage : MonoBehaviour
     {
         private XiaomanMod mod;
@@ -19,8 +20,8 @@ namespace XiaomanVisitor
         private AudioClip recording;
         private SpeechEnvelope envelope;
         private readonly Dictionary<AudioClip, SpeechEnvelope> envelopes = new Dictionary<AudioClip, SpeechEnvelope>();
-        private TextMeshProUGUI caption;
-        private string sentence = "";
+        private XiaomanTavernBubble speech;
+        private RectTransform actionPanel;
         private Mood authored;
         private float lineStart, nextBlink, blinkStart = -100f;
 
@@ -55,6 +56,7 @@ namespace XiaomanVisitor
             pickupPlate.gameObject.SetActive(false);
             channel = gameObject.AddComponent<AudioSource>();
             channel.playOnAwake = false; channel.loop = false; channel.spatialBlend = 0;
+            speech = new XiaomanTavernBubble(room, StopVoice);
             nextBlink = Time.unscaledTime + 3f;
             Layout();
             Pose(Mood.Neutral, 0);
@@ -101,25 +103,26 @@ namespace XiaomanVisitor
             rect.sizeDelta = new Vector2(w * scale, h * scale);
         }
 
-        internal void AttachCaption(TextMeshProUGUI text)
-        {
-            caption = text;
-            if (pickupText != null && text != null) pickupText.font = text.font;
-        }
+        internal void AttachPanel(RectTransform panel) { actionPanel = panel; }
+        internal void SetSpeechSpeed(float speed) { speech?.SetSpeed(speed); }
+        internal bool AdvanceSpeech()
+        { if (speech == null || !speech.Visible) return false; speech.Advance(); return true; }
 
         internal void SetPickupPoint(bool ready, string text)
         {
             if (pickupPlate == null) return;
             pickupPlate.gameObject.SetActive(ready);
-            if (caption != null && pickupText.font != caption.font) pickupText.font = caption.font;
+            if (DialogUIManager.Instance != null && DialogUIManager.Instance.clientNameTMP != null)
+                pickupText.font = DialogUIManager.Instance.clientNameTMP.font;
             pickupText.text = text;
         }
 
-        internal void Say(string text, Mood mood, VoiceRecording voice)
+        internal void Say(string speaker, string text, Mood mood, VoiceRecording voice)
         {
             StopVoice();
-            sentence = text ?? ""; authored = mood; lineStart = Time.unscaledTime;
-            if (caption != null) { caption.text = sentence; caption.maxVisibleCharacters = 0; }
+            authored = mood; lineStart = Time.unscaledTime;
+            speech.Show(speaker, text ?? "");
+            StoreUIManager.Instance.SetTypewriterSpeed();
             AudioClip clip = voice == null ? null : mod.VoiceClip(voice);
             if (clip == null || !mod.VoiceEnabled.Value || !AudioManager.Exists) return;
             recording = clip; hadRecording = true;
@@ -152,15 +155,20 @@ namespace XiaomanVisitor
                 1f - (index / columns + 1f) / rows, 1f / columns, 1f / rows);
         }
 
-        private void LateUpdate()
+        private void Update()
         {
             if (mod == null || actor == null) return;
             Layout();
+            speech.PrepareLayout(actionPanel);
+        }
+
+        private void LateUpdate()
+        {
+            if (mod == null || actor == null) return;
             float now = Time.unscaledTime;
-            int revealed = Math.Min(sentence.Length, Math.Max(0, (int)((now - lineStart) * 30f)));
-            if (caption != null) caption.maxVisibleCharacters = revealed;
             if (channel != null && channel.isPlaying && !mod.VoiceEnabled.Value) channel.Stop();
             bool busy = channel != null && recording != null && channel.clip == recording && channel.isPlaying;
+            speech.Tick(actor.rectTransform, busy, mod.VoiceWait.Value);
             int mouth = 0;
             if (busy) {
                 ApplyVoiceVolume();
@@ -168,8 +176,8 @@ namespace XiaomanVisitor
                     mouth = envelope == null ? PortraitTiming.Cadence(channel.time) : envelope.MouthAt(channel.time);
             }
             DialoguePose pose = mod.Animate.Value
-                ? PortraitTiming.Resolve(caption != null, true, authored, hadRecording, busy,
-                    revealed < sentence.Length, mouth, now - lineStart)
+                ? PortraitTiming.Resolve(speech.Visible, true, authored, hadRecording, busy,
+                    speech.Typing, mouth, now - lineStart)
                 : new DialoguePose(Mood.Neutral, 0, false);
             Mood expression = pose.Expression;
             if (mod.Animate.Value) {
@@ -183,7 +191,7 @@ namespace XiaomanVisitor
 
         internal void EndSession()
         {
-            StopVoice(); caption = null; sentence = "";
+            StopVoice(); speech?.Hide(); actionPanel = null;
             if (actor != null) Pose(Mood.Neutral, 0);
         }
         private void StopVoice()

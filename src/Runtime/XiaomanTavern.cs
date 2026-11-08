@@ -69,11 +69,7 @@ namespace XiaomanVisitor
             });
             builder.AddLabel("", "xiaoman_tavern_cash"); tavernCash = builder.Last;
             tavernCash.SetPreferredSize(324, 32);
-            builder.AddLabel("", "xiaoman_tavern_speech");
-            CustomUIElement speech = builder.Last;
-            speech.SetPreferredSize(324, 100);
-            if (speech.text != null) { speech.text.fontSize = 19; speech.text.enableWordWrapping = true; }
-            tavernStage?.AttachCaption(speech.text);
+            tavernStage?.AttachPanel(tavernPanel.Rect);
             builder.AddButton("", BuyTavernCup, "xiaoman_tavern_drink"); tavernDrink = builder.Last;
             tavernDrink.SetPreferredSize(324, 50);
             builder.AddButton("", HelpTavern, "xiaoman_tavern_help"); tavernHelp = builder.Last;
@@ -91,8 +87,11 @@ namespace XiaomanVisitor
             tavernSpeechKey = key; tavernSpeechMood = expression;
             string text = Text(key);
             VoiceRecording recording = Voices.Resolve(key, SelectedVoiceLanguage, text);
-            tavernStage?.Say(text, expression, recording);
+            tavernStage?.Say(Text("name"), text, expression, recording);
         }
+
+        internal void SetTavernSpeechSpeed(float speed) { tavernStage?.SetSpeechSpeed(speed); }
+        internal bool AdvanceTavernSpeech() { return AtTavern && (tavernStage?.AdvanceSpeech() ?? false); }
 
         private void TickTavernPanel()
         {
