@@ -62,6 +62,7 @@ namespace XiaomanVisitor
             ModHelper.RemoveAfterhourLocations(Id);
             if (tavernStage != null) UnityEngine.Object.Destroy(tavernStage.gameObject);
             tavernStage = null; tavernLocation = null;
+            ReleaseTavernPortraits();
         }
     }
 
