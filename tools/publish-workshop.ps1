@@ -1,7 +1,8 @@
 param(
-    [ValidateSet('check','publish','gallery','verify')][string]$Action='check',
+    [ValidateSet('check','inspect','publish','metadata','gallery','verify')][string]$Action='check',
     [string]$GameRoot,
-    [string]$ExpectedSteamId=''
+    [string]$ExpectedSteamId='',
+    [ValidateSet('schinese','english','japanese')][string]$Language='schinese'
 )
 $ErrorActionPreference='Stop'
 . (Join-Path $PSScriptRoot 'dev-environment.ps1')
@@ -25,8 +26,7 @@ $compileArgs+=Join-Path $PSScriptRoot 'WorkshopPublisher.cs'
 if ($LASTEXITCODE -ne 0) { throw 'Workshop uploader compilation failed.' }
 @{runtimeOptions=@{tfm='net8.0';framework=@{name='Microsoft.NETCore.App';version=$runtime.Name}}} | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $output 'WorkshopPublisher.runtimeconfig.json') -Encoding utf8
 Set-Content -LiteralPath (Join-Path $output 'steam_appid.txt') -Value '4348910' -Encoding ascii
-$publisherArguments=@($Action,$projectRoot)
-if ($ExpectedSteamId) { $publisherArguments+=$ExpectedSteamId }
+$publisherArguments=@($Action,$projectRoot,$ExpectedSteamId,$Language)
 Push-Location -LiteralPath $output
 try { dotnet (Join-Path $output 'WorkshopPublisher.dll') @publisherArguments; $publisherExitCode=$LASTEXITCODE }
 finally { Pop-Location }

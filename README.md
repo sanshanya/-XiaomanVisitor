@@ -2,7 +2,7 @@
 
 《Probably Stolen / 深空当铺》的小满角色模组。[Steam 创意工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3835383562)
 
-**开发与需求的统一入口：[项目手册](docs/项目手册.md)。** 当前开发版本只以 [运行清单](package/XiaomanVisitor/manifest.xml) 为准。工坊稳定版是 `main` / `v0.0.2`；开发分支为 `develop/tavern`。已验证的立绘方案保存在 `baseline/native-render-0.0.3.3`。
+**开发与需求的统一入口：[项目手册](docs/项目手册.md)。** 当前版本只以 [运行清单](package/XiaomanVisitor/manifest.xml) 为准。`main` 保存工坊发布基线，已发布版本以 `v*` 标签留档；开发分支为 `develop/tavern`。已验证的立绘方案保存在 `baseline/native-render-0.0.3.3`。
 
 ```powershell
 # 首次准备：需要自己的游戏安装、Git LFS、uv 与 .NET 8 运行时

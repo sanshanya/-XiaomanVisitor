@@ -15,7 +15,11 @@ using Steamworks;
 internal static class WorkshopPublisher
 {
     private const uint App = 4348910;
+    private const ulong ExistingItem = 3835383562;
     private static string root, release, stateFile, version;
+    private static string language;
+    private static string PageFile { get { return Path.Combine(release,
+        language == "schinese" ? "工坊页面.json" : "工坊页面_" + language + ".json"); } }
     private static JObject state;
     private static readonly AppId_t AppId = new AppId_t(App);
     private static UGCUpdateHandle_t update;
@@ -24,8 +28,10 @@ internal static class WorkshopPublisher
     private static int Main(string[] args)
     {
         Console.OutputEncoding = new UTF8Encoding(false);
-        if (args.Length < 2 || (args[0] != "check" && args[0] != "publish" && args[0] != "gallery" && args[0] != "verify"))
-        { Console.Error.WriteLine("Usage: WorkshopPublisher check|publish|gallery|verify <project-root> [expected-SteamID64]"); return 2; }
+        if (args.Length < 2 || !new[] { "check", "inspect", "publish", "metadata", "gallery", "verify" }.Contains(args[0]))
+        { Console.Error.WriteLine("Usage: WorkshopPublisher check|inspect|publish|metadata|gallery|verify <project-root> [expected-SteamID64] [schinese|english|japanese]"); return 2; }
+        language = args.Length > 3 ? args[3] : "schinese";
+        Require(new[] { "schinese", "english", "japanese" }.Contains(language), "Unsupported Workshop language.");
         root = Path.GetFullPath(args[1]);
         version = XDocument.Load(Path.Combine(root,"package","XiaomanVisitor","manifest.xml")).Root.Element("ModVersion").Value;
         Require(Regex.IsMatch(version,@"^\d+(?:\.\d+)*$"), "Invalid release version.");
@@ -38,23 +44,24 @@ internal static class WorkshopPublisher
             ulong owner = SteamUser.GetSteamID().m_SteamID;
             Require(SteamUser.BLoggedOn(), "Steam client is not signed in online.");
             Require(SteamUtils.GetAppID().m_AppId == App, "Unexpected Steam app context.");
-            Require(args.Length < 3 || owner == ulong.Parse(args[2]), "Signed-in Steam account does not match the active desktop account.");
+            Require(args.Length < 3 || string.IsNullOrEmpty(args[2]) || owner == ulong.Parse(args[2]), "Signed-in Steam account does not match the active desktop account.");
             Require(SteamApps.BIsSubscribedApp(AppId), "The active account does not have access to the target game.");
             Console.WriteLine("Steam session verified: " + SteamFriends.GetPersonaName() + " / " + owner + " / app " + App + ".");
             if (args[0] == "check") return 0;
             state["owner_steamid"] = owner.ToString(); state["appid"] = App;
+            if (args[0] == "inspect") { Inspect(PublishedId(), owner); return 0; }
             if (args[0] == "verify") { Verify(PublishedId(), owner); return 0; }
-            Publish(owner, args[0] == "gallery");
+            Publish(owner, args[0] == "gallery", args[0] == "metadata");
             return state.Value<bool?>("needs_legal_agreement") == true ? 20 : 0;
         }
         catch (Exception error) { Console.Error.WriteLine(error.ToString()); return 1; }
         finally { SteamAPI.Shutdown(); }
     }
 
-    private static void Publish(ulong owner, bool galleryOnly)
+    private static void Publish(ulong owner, bool galleryOnly, bool metadataOnly)
     {
         JObject manifest = JObject.Parse(File.ReadAllText(Path.Combine(release, "release-manifest.json")));
-        JObject page = JObject.Parse(File.ReadAllText(Path.Combine(release, "工坊页面.json")));
+        JObject page = JObject.Parse(File.ReadAllText(PageFile));
         string content = Path.GetFullPath((string)manifest["content_folder"]);
         Require(content == Path.Combine(root, "package", "XiaomanVisitor"), "Unexpected content root.");
         foreach (JProperty file in ((JObject)manifest["files"]).Properties())
@@ -73,50 +80,41 @@ internal static class WorkshopPublisher
                 "Approved preview changed or exceeds Steam's preview limit.");
         }
         ulong id = PublishedId();
-        Require(!galleryOnly || id != 0, "A gallery-only update requires an existing published item.");
-        bool created = false;
-        if (id == 0)
-        {
-            Console.WriteLine("Creating the new Workshop item...");
-            CreateItemResult_t result = Wait<CreateItemResult_t>(SteamUGC.CreateItem(AppId, EWorkshopFileType.k_EWorkshopFileTypeCommunity), 180);
-            Require(result.m_eResult == EResult.k_EResultOK, "CreateItem: " + result.m_eResult);
-            id = result.m_nPublishedFileId.m_PublishedFileId;
-            state["publishedfileid"] = id.ToString(); state["status"] = "created_pending_upload";
-            state["needs_legal_agreement"] = result.m_bUserNeedsToAcceptWorkshopLegalAgreement;
-            SaveState(); WriteVdf(id);
-            created = true;
-            Console.WriteLine("Created item " + id + "; ID saved before uploading to prevent duplicates.");
-        }
-        RemoteInfo old = created ? null : Query(id);
-        if (old != null)
-        {
-            Require(old.Owner == owner && old.ConsumerApp == App, "Existing item belongs to another account or game.");
-            string priorDescription = (string)page["base_description_bbcode"];
-            if (!galleryOnly && priorDescription != null)
-                Require(old.Title == (string)page["title"]
-                    && (old.Description == priorDescription || old.Description == (string)page["description_bbcode"]),
-                    "Workshop title or description changed since preparation; stopped before overwriting it.");
-        }
+        if (metadataOnly)
+            Require(state.Value<string>("uploaded_version") == version
+                && JToken.DeepEquals(state["uploaded_files_sha256"], manifest["files"]),
+                "Publish the matching content before updating localized text.");
+        RemoteInfo old = Query(id);
+        Require(old.Owner == owner && old.ConsumerApp == App, "Existing item belongs to another account or game.");
+        string priorDescription = (string)page["base_description_bbcode"];
+        if (!galleryOnly && priorDescription != null)
+            Require((old.Title == (string)page["title"] || old.Title == (string)page["base_title"])
+                && (old.Description == priorDescription || old.Description == (string)page["description_bbcode"]),
+                "Workshop title or description changed since preparation; stopped before overwriting it.");
         update = SteamUGC.StartItemUpdate(AppId, new PublishedFileId_t(id)); hasUpdate = true;
+        Require(SteamUGC.SetItemUpdateLanguage(update, language), "SetItemUpdateLanguage failed.");
         Require(SteamUGC.SetItemTitle(update, (string)page["title"]), "SetItemTitle failed.");
         Require(SteamUGC.SetItemDescription(update, (string)page["description_bbcode"]), "SetItemDescription failed.");
-        if (!galleryOnly) Require(SteamUGC.SetItemContent(update, content), "SetItemContent failed.");
-        Require(SteamUGC.SetItemPreview(update, primary), "SetItemPreview failed.");
-        Require(SteamUGC.SetItemVisibility(update, ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic),
-            "SetItemVisibility failed.");
-        // Steam's main preview is separate from its highlight carousel. Upload
-        // all three approved images into the carousel in the requested order.
-        if (old != null)
+        if (!galleryOnly && !metadataOnly) Require(SteamUGC.SetItemContent(update, content), "SetItemContent failed.");
+        if (!metadataOnly)
+        {
+            Require(SteamUGC.SetItemPreview(update, primary), "SetItemPreview failed.");
+            Require(SteamUGC.SetItemVisibility(update, ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic),
+                "SetItemVisibility failed.");
+            // Main preview and the three-image carousel are separate native fields.
             for (int i = (int)old.AdditionalPreviews - 1; i >= 0; i--)
                 Require(SteamUGC.RemoveItemPreview(update, (uint)i), "Could not replace old additional previews.");
-        for (int i = 0; i < gallery.Count; i++)
-            Require(SteamUGC.AddItemPreviewFile(update, Path.Combine(root, (string)gallery[i]["file"]), EItemPreviewType.k_EItemPreviewType_Image),
-                "Additional preview upload was not accepted.");
+            for (int i = 0; i < gallery.Count; i++)
+                Require(SteamUGC.AddItemPreviewFile(update, Path.Combine(root, (string)gallery[i]["file"]), EItemPreviewType.k_EItemPreviewType_Image),
+                    "Additional preview upload was not accepted.");
+        }
+        state["publishedfileid"] = id.ToString();
         state["status"] = "uploading"; SaveState();
-        Console.WriteLine("Uploading approved " + version + " content, public visibility, portrait + screenshot + expression sheet...");
+        Console.WriteLine(metadataOnly ? "Updating " + language + " Workshop text..."
+            : "Uploading approved " + version + " content, public visibility, portrait + screenshot + expression sheet...");
         string notePath = Path.Combine(release, "workshop-update-note.txt");
-        string changeNote = galleryOnly ? "完善发布图片：设定图、实机截图、表情图。"
-            : created ? version + " 首次发布" : File.Exists(notePath) ? File.ReadAllText(notePath).Trim() : version + " 更新";
+        string changeNote = metadataOnly ? null : galleryOnly ? "完善发布图片：设定图、实机截图、表情图。"
+            : File.Exists(notePath) ? File.ReadAllText(notePath).Trim() : version + " 更新";
         SubmitItemUpdateResult_t submitted = Wait<SubmitItemUpdateResult_t>(SteamUGC.SubmitItemUpdate(update, changeNote), 1800);
         hasUpdate = false;
         Require(submitted.m_eResult == EResult.k_EResultOK, "SubmitItemUpdate: " + submitted.m_eResult);
@@ -124,9 +122,12 @@ internal static class WorkshopPublisher
         state["needs_legal_agreement"] = submitted.m_bUserNeedsToAcceptWorkshopLegalAgreement
             || state.Value<bool?>("needs_legal_agreement") == true;
         state["url"] = "https://steamcommunity.com/sharedfiles/filedetails/?id=" + id;
-        state["uploaded_version"] = version;
-        state["last_change_note"] = changeNote;
-        state["uploaded_files_sha256"] = manifest["files"].DeepClone();
+        if (!metadataOnly)
+        {
+            state["uploaded_version"] = version;
+            state["last_change_note"] = changeNote;
+            state["uploaded_files_sha256"] = manifest["files"].DeepClone();
+        }
         SaveState(); WriteVdf(id);
         Verify(id, owner);
     }
@@ -148,6 +149,7 @@ internal static class WorkshopPublisher
         Require(SteamUGC.SetReturnLongDescription(query, true), "Could not request the complete description.");
         try
         {
+            Require(SteamUGC.SetLanguage(query, language), "Could not set the verification language.");
             SteamUGCQueryCompleted_t response = Wait<SteamUGCQueryCompleted_t>(SteamUGC.SendQueryUGCRequest(query), 180);
             Require(response.m_eResult == EResult.k_EResultOK && response.m_unNumResultsReturned == 1,
                 "Workshop verification query: " + response.m_eResult);
@@ -173,7 +175,7 @@ internal static class WorkshopPublisher
     private static void Verify(ulong id, ulong owner)
     {
         Require(id != 0, "No published item ID has been recorded.");
-        JObject page = JObject.Parse(File.ReadAllText(Path.Combine(release, "工坊页面.json")));
+        JObject page = JObject.Parse(File.ReadAllText(PageFile));
         RemoteInfo remote = Query(id);
         Require(remote.Owner == owner && remote.ConsumerApp == App && !remote.Banned, "Uploaded item's ownership/app/state mismatch.");
         Require(remote.Title == (string)page["title"] && remote.Description == (string)page["description_bbcode"],
@@ -187,10 +189,31 @@ internal static class WorkshopPublisher
                 "Remote carousel image order differs from the approved order.");
         state["visibility"] = "public"; state["additional_previews"] = remote.AdditionalPreviews;
         state["carousel"] = remote.Previews;
-        state["title"] = remote.Title; state["remote_metadata_verified"] = true;
+        if (language == "schinese") state["title"] = remote.Title;
+        JObject localized = state["metadata_by_language"] as JObject ?? new JObject();
+        localized[language] = new JObject { ["title"] = remote.Title, ["description"] = remote.Description,
+            ["verified_utc"] = DateTimeOffset.UtcNow.ToString("o") };
+        state["metadata_by_language"] = localized;
+        state["remote_metadata_verified"] = true;
         state["status"] = state.Value<bool?>("needs_legal_agreement") == true ? "uploaded_needs_legal_agreement" : "published";
         SaveState();
         Console.WriteLine("VERIFIED " + state["status"] + ": https://steamcommunity.com/sharedfiles/filedetails/?id=" + id);
+    }
+
+    private static void Inspect(ulong id, ulong owner)
+    {
+        Require(id != 0, "No existing item ID has been recorded.");
+        RemoteInfo remote = Query(id);
+        Require(remote.Owner == owner && remote.ConsumerApp == App, "Item ownership/app mismatch.");
+        string directory = Path.Combine(root, ".dev", "reports");
+        Directory.CreateDirectory(directory);
+        string path = Path.Combine(directory, "workshop-remote-" + language + ".json");
+        var observed = new JObject { ["publishedfileid"] = id.ToString(), ["language"] = language,
+            ["title"] = remote.Title, ["description"] = remote.Description, ["owner"] = owner.ToString(),
+            ["visibility"] = remote.Visibility.ToString(), ["banned"] = remote.Banned,
+            ["previews"] = remote.Previews, ["observed_utc"] = DateTimeOffset.UtcNow.ToString("o") };
+        File.WriteAllText(path, observed.ToString(Formatting.Indented), new UTF8Encoding(false));
+        Console.WriteLine("Observed " + language + ": " + remote.Title + "; report: " + path);
     }
 
     private static T Wait<T>(SteamAPICall_t call, int seconds) where T : struct
@@ -221,15 +244,17 @@ internal static class WorkshopPublisher
     private static ulong PublishedId()
     {
         ulong id;
-        if (ulong.TryParse(state.Value<string>("publishedfileid"), out id) && id != 0) return id;
+        if (ulong.TryParse(state.Value<string>("publishedfileid"), out id) && id != 0)
+        { Require(id == ExistingItem, "Unexpected Workshop update target."); return id; }
         foreach (string name in new[] { "workshop-item.vdf", "workshop-item.vdf.draft" })
         {
             string path = Path.Combine(release, name);
             if (!File.Exists(path)) continue;
             Match match = Regex.Match(File.ReadAllText(path), "\"publishedfileid\"\\s+\"(\\d+)\"");
-            if (match.Success && ulong.TryParse(match.Groups[1].Value, out id) && id != 0) return id;
+            if (match.Success && ulong.TryParse(match.Groups[1].Value, out id) && id != 0)
+            { Require(id == ExistingItem, "Unexpected Workshop update target."); return id; }
         }
-        return 0;
+        return ExistingItem;
     }
 
     private static void WriteVdf(ulong id)
