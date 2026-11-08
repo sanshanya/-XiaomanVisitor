@@ -395,12 +395,31 @@ internal static class CheckMod
     }
     private static void CheckTavernMap()
     {
+        var mod = new XiaomanMod();
         var create = typeof(XiaomanMod).GetMethod("CreateTavernMapLocation", BindingFlags.NonPublic | BindingFlags.Instance);
-        var location = (DelegateAfterhourLocation)create.Invoke(new XiaomanMod(), null);
+        var location = (DelegateAfterhourLocation)create.Invoke(mod, null);
         Require(location.Id == TavernMapRules.LocationId && location.Source == XiaomanMod.Id,
             "tavern is a uniquely named mod-owned extra location");
-        Require(location.IsDiscovered() && !location.IsAvailable(),
-            "disabled/no-run location remains unavailable without constructing a store or scene");
+        Require(!location.IsDiscovered() && !location.IsAvailable(),
+            "experimental location starts hidden and unavailable without constructing a store or scene");
+        var flags = BindingFlags.NonPublic | BindingFlags.Instance;
+        var capture = typeof(XiaomanMod).GetMethod("CaptureTavernSetting", flags);
+        var setting = (ConfigEntry<bool>)Activator.CreateInstance(typeof(ConfigEntry<bool>), flags, null,
+            new object[] { TavernRules.ExperimentalDefault }, null);
+        typeof(XiaomanMod).GetField("experimentalTavern", flags).SetValue(mod, setting);
+        typeof(XiaomanMod).GetField("enabled", flags).SetValue(mod, true);
+        capture.Invoke(mod, null);
+        typeof(XiaomanMod).GetMethod("EnsureTavernMap", flags).Invoke(mod, null);
+        Require(!setting.Default && !location.IsDiscovered() && !location.IsAvailable(),
+            "active mod keeps the default-off tavern hidden and skips native registration and save initialization");
+        setting.Set(true);
+        Require(!location.IsDiscovered(), "restart-required opt-in does not change the current travel session");
+        capture.Invoke(mod, null);
+        Require(location.IsDiscovered(), "the next enabled session discovers the opted-in tavern");
+        setting.Set(false);
+        Require(location.IsDiscovered(), "pending opt-out does not dismantle an active tavern session");
+        capture.Invoke(mod, null);
+        Require(!location.IsDiscovered() && !location.IsAvailable(), "the next disabled session hides the tavern again");
         Require(location.ImageKey == TavernMapRules.ImageKey && location.title != null,
             "native card resolves a namespaced local preview and localized title");
         Require(location.onArrive != null && location.onLeave != null && location.onTick != null && location.buildPanel != null
@@ -420,7 +439,7 @@ internal static class CheckMod
             "preview is in the installed loader's native sprite folder");
         foreach (string file in new[] { "background.png", "bar-occluder.png" })
             Require(File.Exists(Path.Combine(package,"Scenes","Tavern",file)), "night scene texture is packaged");
-        Console.WriteLine("PASS: native extra-location registration, lazy night scene, scoped status labels and source-safe removal.");
+        Console.WriteLine("PASS: default-off experimental tavern, restart-scoped opt-in/out, native registration, lazy scene and source-safe removal.");
     }
 
     private static void CheckTavernProgress()

@@ -17,6 +17,8 @@ namespace XiaomanVisitor
 
     public static class TavernRules
     {
+        public const string ExperimentalConfigKey = "experimental_tavern";
+        public const bool ExperimentalDefault = false;
         // Development test access; the planned release opening remains day 3.
         public const int OpeningDay = 1;
         public const int CupPrice = 35;

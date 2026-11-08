@@ -22,19 +22,20 @@ namespace XiaomanVisitor
                 ModHelper.SetModData(Id, TavernRules.SaveKey, ReadTavern().Data);
         }
         private bool AtTavern
-        { get { return enabled && PlayerStore.HasInstance && ModHelper.GetCurrentAfterhourLocationId() == TavernMapRules.LocationId; } }
+        { get { return TavernMapEnabled && PlayerStore.HasInstance && ModHelper.GetCurrentAfterhourLocationId() == TavernMapRules.LocationId; } }
         private bool TavernMayAct
         { get { return AtTavern && MapUIManager.Instance != null && !MapUIManager.Instance.IsInTransit; } }
 
         private bool CanEnterTavern()
         {
-            if (!enabled || !PlayerStore.HasInstance) return false;
+            if (!TavernMapEnabled || !PlayerStore.HasInstance) return false;
             if (!TavernRules.IsOpen(true, true, StoreStation.Instance.dayCounter, ReadStory().Finished)) return false;
             return EnsureTavernStage();
         }
 
         private bool EnsureTavernStage()
         {
+            if (!TavernMapEnabled) return false;
             if (tavernStage != null) return true;
             if (tavernLocation == null || CustomUIManager.Instance == null || atlas == null) return false;
             GameObject stage = null;

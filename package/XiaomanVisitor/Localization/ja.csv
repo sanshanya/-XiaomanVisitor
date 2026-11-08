@@ -244,3 +244,5 @@ ui_tavern_ledger_cup,{0} 日目 · 一杯 · {1} CR
 ui_tavern_ledger_help,{0} 日目 · 受け取り台を片付けた
 ui_tavern_close_ledger,帳面を閉じる
 ui_tavern_pickup_sign,お受け取り
+cfg_experimental_tavern,みちるのバー（実験的）
+cfg_experimental_tavern_tip,初期設定はオフです。有効にすると1日目から試作版のバーで注文、お手伝い、帳面の確認ができます。変更はゲーム再起動後に反映されます。無効にしてもバーの記録は残ります。

@@ -244,3 +244,5 @@ ui_tavern_ledger_cup,Day {0} · One drink · {1} CR
 ui_tavern_ledger_help,Day {0} · Tidied the pickup counter
 ui_tavern_close_ledger,Close the ledger
 ui_tavern_pickup_sign,Pickup
+cfg_experimental_tavern,Xiaoman's Tavern (Experimental)
+cfg_experimental_tavern_tip,"Off by default. Enable to visit the test tavern from day 1 for drinks, a helping activity and the ledger. Restart the game to apply changes. Disabling keeps your tavern progress."

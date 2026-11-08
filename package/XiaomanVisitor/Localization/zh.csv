@@ -244,3 +244,5 @@ ui_tavern_ledger_cup,第 {0} 天 · 一杯 · {1} CR
 ui_tavern_ledger_help,第 {0} 天 · 整理了取餐台
 ui_tavern_close_ledger,合上账本
 ui_tavern_pickup_sign,取餐
+cfg_experimental_tavern,小满的酒馆（实验性）
+cfg_experimental_tavern_tip,默认关闭。开启后可从第1天进入测试酒馆，体验点单、协助和账本。更改后需重启游戏生效。关闭不会清除酒馆进度。

@@ -5,13 +5,20 @@ namespace XiaomanVisitor
 {
     public sealed partial class XiaomanMod
     {
-        internal bool TavernMapEnabled { get { return enabled; } }
+        private ConfigEntry<bool> experimentalTavern;
+        private bool tavernEnabledForSession;
+        internal bool TavernMapEnabled { get { return enabled && tavernEnabledForSession; } }
+
+        // Match the native restart-required option; never tear down travel in progress.
+        private void CaptureTavernSetting()
+        { tavernEnabledForSession = experimentalTavern != null && experimentalTavern.Value; }
+
         private DelegateAfterhourLocation tavernLocation;
         private XiaomanTavernStage tavernStage;
         internal string TavernStatusLabel
         {
             get {
-                string key = TavernRules.StatusKey(TavernMapRules.LocationId, enabled, PlayerStore.HasInstance,
+                string key = TavernRules.StatusKey(TavernMapRules.LocationId, TavernMapEnabled, PlayerStore.HasInstance,
                     PlayerStore.HasInstance ? StoreStation.Instance.dayCounter : 0, PlayerStore.HasInstance && ReadStory().Finished);
                 return key == null ? null : Text(key);
             }
@@ -24,7 +31,7 @@ namespace XiaomanVisitor
                 source = Id,
                 title = () => Text("ui_tavern_name"),
                 imageKey = TavernMapRules.ImageKey,
-                isDiscovered = () => true,
+                isDiscovered = () => TavernMapEnabled,
                 isAvailable = CanEnterTavern,
                 onArrive = ArriveAtTavern,
                 onLeave = LeaveTavern,
@@ -39,8 +46,9 @@ namespace XiaomanVisitor
 
         private void EnsureTavernMap()
         {
-            if (enabled && PlayerStore.HasInstance) InitializeTavernProgress();
-            if (!enabled || ModHelper.GetAfterhourLocation(TavernMapRules.LocationId) != null) return;
+            if (!TavernMapEnabled) return;
+            if (PlayerStore.HasInstance) InitializeTavernProgress();
+            if (ModHelper.GetAfterhourLocation(TavernMapRules.LocationId) != null) return;
             AfterhourLocation.Register(CreateTavernMapLocation());
         }
 

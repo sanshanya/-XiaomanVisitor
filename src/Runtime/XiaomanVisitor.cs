@@ -40,6 +40,9 @@ namespace XiaomanVisitor
             Animate = config.Define("animate_expressions", true, "小满 / Xiaoman", () => Text("cfg_animation"));
             shortcut = config.Define("enable_invite_shortcut", true, "小满 / Xiaoman", () => Text("cfg_shortcut"),
                 tooltip: () => Text("cfg_shortcut_tip"));
+            experimentalTavern = config.Define(TavernRules.ExperimentalConfigKey, TavernRules.ExperimentalDefault,
+                "实验性 / Experimental", () => Text("cfg_experimental_tavern"),
+                tooltip: () => Text("cfg_experimental_tavern_tip"), requiresRestart: true);
             InitVoice(config);
             size.OnChanged += _ => { registeredDictionary = null; };
             Log.Log("Initialized: independent customer, original portrait layers, three temporary drink effects.");
@@ -48,6 +51,7 @@ namespace XiaomanVisitor
         public void OnEnable()
         {
             enabled = true;
+            CaptureTavernSetting();
             ModHook.OnModAssetsLoaded += OnAssetsLoaded;
             ModHook.OnGameLoadedEarly += OnGameLoaded;
             ModHook.OnGameLoadedLate += OnGameLoaded;
