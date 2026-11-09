@@ -58,12 +58,32 @@ public static class NativeGunPortraits {
     static void ShadeForehead(Bitmap frame) {
         // Only exposed forehead skin between the original bangs. The gradient
         // ends above the eyes; no eye, brow-ink, hair or silhouette is redrawn.
+        var shade=new bool[Width,Height];
+        var pending=new System.Collections.Generic.Queue<Point>();
         for(int y=178;y<224;y++) for(int x=102;x<282;x++) {
             Color c=frame.GetPixel(x,y);
             bool skin=Math.Abs(c.R-153)<=2&&Math.Abs(c.G-176)<=2&&Math.Abs(c.B-231)<=2;
             bool forehead=Math.Abs(c.R-135)<=2&&Math.Abs(c.G-115)<=2&&Math.Abs(c.B-166)<=2;
             if(c.A!=255||(!skin&&!forehead))continue;
-            int a=64*(224-y)/46,b=255-a;
+            shade[x,y]=true;pending.Enqueue(new Point(x,y));
+        }
+        // Include connected skin highlights and their antialiased edges. Dark
+        // bang outlines separate these from the hair's similarly blue glints.
+        while(pending.Count>0) {
+            Point p=pending.Dequeue();
+            foreach(Point step in new[]{new Point(-1,0),new Point(1,0),new Point(0,-1),new Point(0,1)}) {
+                int x=p.X+step.X,y=p.Y+step.Y;
+                if(x<102||x>=282||y<178||y>=224||shade[x,y])continue;
+                Color c=frame.GetPixel(x,y);
+                if(c.A==255&&c.R>=105&&c.R<=165&&c.G>=105&&c.G<=182&&c.B>=155&&c.B<=250) {
+                    shade[x,y]=true;pending.Enqueue(new Point(x,y));
+                }
+            }
+        }
+        for(int y=178;y<224;y++) for(int x=102;x<282;x++) {
+            if(!shade[x,y])continue;
+            Color c=frame.GetPixel(x,y);
+            int a=y<208?160:160*(224-y)/16,b=255-a;
             frame.SetPixel(x,y,Color.FromArgb(c.A,(c.R*b+48*a)/255,(c.G*b+56*a)/255,(c.B*b+107*a)/255));
         }
     }
@@ -122,7 +142,7 @@ $gunRecord = [ordered]@{
     forehead_bounds=@(102,178,282,224)
     previous_png_sha256='3bd38bc249196533585e7337cd847f7f9931a41711984b08003ca9e7d01f3b62'
     previous_masked_rgba_sha256='204ea1c43a972fa381805bdd949babb26a1daca25dee8494045526ea16b86297'
-    art_status='Previous original expressions restored; only subtle exposed-forehead shading added; author gameplay review pending'
+    art_status='Original expressions preserved; stronger stable forehead shading with a short lower fade; author gameplay review pending'
     new_runtime_objects=6; lazy_load=$true; mipmaps=$false
 }
 [IO.File]::WriteAllText((Join-Path $gunProject 'assets\gun-portraits\manifest.json'),($gunRecord | ConvertTo-Json -Depth 5) + "`n",(New-Object Text.UTF8Encoding($false)))

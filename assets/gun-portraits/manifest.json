@@ -64,7 +64,7 @@
                          334
                      ],
     "base_sha256":  "6ba7596e421a37ff926d07dafbeab1ff55294757ab84132c39018b306b25e0a3",
-    "sha256":  "22e6267420bbc7e8f9cc4e04999a0fa5fff1408eee00ef4a335f56f5ddb62a91",
+    "sha256":  "ba1c7b9606ae9c277daf8e2edbdfe989e34665d92dc69790f75f641f85436b1b",
     "body_and_silhouette_preserved":  true,
     "generated_face_used":  false,
     "forehead_bounds":  [
@@ -75,7 +75,7 @@
                         ],
     "previous_png_sha256":  "3bd38bc249196533585e7337cd847f7f9931a41711984b08003ca9e7d01f3b62",
     "previous_masked_rgba_sha256":  "204ea1c43a972fa381805bdd949babb26a1daca25dee8494045526ea16b86297",
-    "art_status":  "Previous original expressions restored; only subtle exposed-forehead shading added; author gameplay review pending",
+    "art_status":  "Original expressions preserved; stronger stable forehead shading with a short lower fade; author gameplay review pending",
     "new_runtime_objects":  6,
     "lazy_load":  true,
     "mipmaps":  false

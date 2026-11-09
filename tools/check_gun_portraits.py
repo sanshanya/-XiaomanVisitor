@@ -64,20 +64,27 @@ def main():
                     masked[offset:offset+180*4] = bytes(180*4)
         assert hashlib.sha256(masked).hexdigest() == previous_hash, "Eyes, sweat, mouth or other previous pixels changed outside the forehead"
         original_worried = original.convert("RGBA").crop((3*384, 2*688, 4*384, 3*688))
+        assert row_frames[0][0].crop((167, 178, 212, 224)).tobytes() == original_worried.crop((167, 178, 212, 224)).tobytes(), "Central bangs changed with the forehead shadow"
         shaded_pixels = 0
+        middle_darkening, middle_pixels = 0, 0
         for y in range(178, 224):
             for x in range(102, 282):
                 p, q = original_worried.getpixel((x, y)), row_frames[0][0].getpixel((x, y))
-                assert all(0 <= p[i]-q[i] <= 32 for i in range(3)), "Forehead tint must remain subtle"
+                assert all(0 <= p[i]-q[i] <= 92 for i in range(3)), "Forehead shading lost its original color detail"
                 skin = any(all(abs(p[i]-color[i]) <= 2 for i in range(3))
                            for color in ((153, 176, 231), (135, 115, 166)))
-                if not skin:
+                skin_or_highlight = 105 <= p[0] <= 165 and 105 <= p[1] <= 182 and 155 <= p[2] <= 250
+                if not skin_or_highlight:
                     assert p == q, "Hair or brow ink was changed by the forehead tint"
+                if skin and 192 <= y < 208:
+                    middle_darkening += sum(p[i]-q[i] for i in range(3))/3
+                    middle_pixels += 1
                 shaded_pixels += any(p[i]-q[i] >= 3 for i in range(3))
         assert shaded_pixels >= 100, "Forehead tint is absent"
+        assert middle_pixels >= 100 and middle_darkening/middle_pixels >= 25, "Forehead middle is still too faint"
     text = json.loads((ROOT / "story/持枪反应.json").read_text(encoding="utf-8"))["localization"]
     assert set(text) == {"zh", "ja", "en"} and all(set(rows) == set(text["zh"]) for rows in text.values())
-    print(f"PASS: previous eyes/sweat/mouth and all pixels outside the forehead restored exactly; {shaded_pixels} subtly shaded forehead pixels; normal artwork/body/silhouette and three-language dialogue unchanged.")
+    print(f"PASS: previous eyes/sweat/mouth and all pixels outside the forehead unchanged; {shaded_pixels} shaded forehead pixels with clear middle tones; normal artwork/body/silhouette and three-language dialogue unchanged.")
 
 
 if __name__ == "__main__":

@@ -2,10 +2,10 @@
   "mode": "Original game layer composition; no image generation",
   "source_game": "雨音に満ちる夜 -A night filled with the sound of rain-",
   "source": "Approved worried frames 15–17 plus original normal_1_1, normal_3_1 and normal_4_2 layers",
-  "purpose": "Restore the author's selected previous original expressions, adding only a subtle cool tint on exposed forehead skin between the bangs",
+  "purpose": "Preserve the selected original expressions, with a stronger stable cool shadow over exposed forehead skin and connected highlights, fading only at its lower edge",
   "prompt": null,
   "authoring_file": "tools/prepare_gun_portraits.ps1",
-  "art_status": "Previous expressions preserved outside the forehead; subtle shading preview inspected, author gameplay review pending",
+  "art_status": "Original eyes and expressions preserved; strengthened forehead shading preview inspected, author gameplay review pending",
   "reference_only": {
     "workshop_item": "3835157116",
     "name": "可能是收书的",
