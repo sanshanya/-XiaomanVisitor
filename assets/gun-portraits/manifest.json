@@ -1,18 +1,18 @@
 {
     "schema":  3,
-    "method":  "manual-native-pixel-art",
+    "method":  "original-layers-forehead-shadow",
     "sources":  [
                     {
-                        "path":  "assets/layers/normal_1_2.png",
-                        "sha256":  "14e49b7a941f984f015e247b6f5497f824400e7c5206f2dfa83db2eb1d46663a"
+                        "path":  "assets/layers/normal_1_1.png",
+                        "sha256":  "5b71ef05cd274547f5e7909b4b9f3dd4f44d0748cd5bd63865edb14aa0e9fbc2"
                     },
                     {
                         "path":  "assets/layers/normal_3_1.png",
                         "sha256":  "a0fc66928abfe051843c65fca960215ac8b3963a6229ce9de6e5cf891e09e809"
                     },
                     {
-                        "path":  "assets/portraits/xiaoman_neutral_0.png",
-                        "sha256":  "81986ab60e60b39bc041724f30c0aa96178ed48dc6ae5976bc6df37431ced652"
+                        "path":  "assets/layers/normal_4_2.png",
+                        "sha256":  "7f25f9ff26b3c3c666000b3c400d5fb5cdaa607a5c41cdf0648813cc1de278ad"
                     }
                 ],
     "base":  "Portraits/xiaoman_tavern_atlas.png",
@@ -28,8 +28,8 @@
               ],
     "columns":  3,
     "rows":  [
-                 "startled",
-                 "frightened"
+                 "worried",
+                 "worried_soft"
              ],
     "original_canvas":  [
                             1024,
@@ -64,11 +64,18 @@
                          334
                      ],
     "base_sha256":  "6ba7596e421a37ff926d07dafbeab1ff55294757ab84132c39018b306b25e0a3",
-    "sha256":  "9b60f0f824c2f5879710fba23ddebbf77443fda34181177dc329f819fda96dfa",
+    "sha256":  "22e6267420bbc7e8f9cc4e04999a0fa5fff1408eee00ef4a335f56f5ddb62a91",
     "body_and_silhouette_preserved":  true,
     "generated_face_used":  false,
-    "authoring_file":  "tools/prepare_gun_portraits.ps1",
-    "art_status":  "Manual pixel-art fear, original blue irises and mouths; offline preview inspected, author gameplay review pending",
+    "forehead_bounds":  [
+                            102,
+                            178,
+                            282,
+                            224
+                        ],
+    "previous_png_sha256":  "3bd38bc249196533585e7337cd847f7f9931a41711984b08003ca9e7d01f3b62",
+    "previous_masked_rgba_sha256":  "204ea1c43a972fa381805bdd949babb26a1daca25dee8494045526ea16b86297",
+    "art_status":  "Previous original expressions restored; only subtle exposed-forehead shading added; author gameplay review pending",
     "new_runtime_objects":  6,
     "lazy_load":  true,
     "mipmaps":  false

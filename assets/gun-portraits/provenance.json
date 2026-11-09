@@ -1,11 +1,11 @@
 {
-  "mode": "Hand-authored pixel eye shapes over original game layers; no image generation",
+  "mode": "Original game layer composition; no image generation",
   "source_game": "雨音に満ちる夜 -A night filled with the sound of rain-",
-  "source": "Approved worried frames 15–17, original normal_1_2 and normal_3_1 layers, and blue iris pixels from the original neutral portrait",
-  "purpose": "Make fear visibly recognizable through widened eyelids, smaller blue irises, raised inner brows, cold forehead shading and a temple sweat bead, preserving original face contour and mouth states",
+  "source": "Approved worried frames 15–17 plus original normal_1_1, normal_3_1 and normal_4_2 layers",
+  "purpose": "Restore the author's selected previous original expressions, adding only a subtle cool tint on exposed forehead skin between the bangs",
   "prompt": null,
   "authoring_file": "tools/prepare_gun_portraits.ps1",
-  "art_status": "Offline sprite comparison and mouth preview inspected; author gameplay review pending",
+  "art_status": "Previous expressions preserved outside the forehead; subtle shading preview inspected, author gameplay review pending",
   "reference_only": {
     "workshop_item": "3835157116",
     "name": "可能是收书的",

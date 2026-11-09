@@ -7,20 +7,14 @@ from PIL import Image, ImageChops
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def count_rgb(image, box, predicate):
-    region = image.crop(box).convert("RGB")
-    pixels = region.load()
-    return sum(predicate(*pixels[x, y]) for y in range(region.height) for x in range(region.width))
-
-
 def main():
     manifest = json.loads((ROOT / "assets/gun-portraits/manifest.json").read_text(encoding="utf-8-sig"))
     package = ROOT / "package/XiaomanVisitor"
-    assert manifest["method"] == "manual-native-pixel-art" and not manifest["generated_face_used"]
+    assert manifest["method"] == "original-layers-forehead-shadow" and not manifest["generated_face_used"]
     original_sources = {
-        "assets/layers/normal_1_2.png": "14e49b7a941f984f015e247b6f5497f824400e7c5206f2dfa83db2eb1d46663a",
+        "assets/layers/normal_1_1.png": "5b71ef05cd274547f5e7909b4b9f3dd4f44d0748cd5bd63865edb14aa0e9fbc2",
         "assets/layers/normal_3_1.png": "a0fc66928abfe051843c65fca960215ac8b3963a6229ce9de6e5cf891e09e809",
-        "assets/portraits/xiaoman_neutral_0.png": "81986ab60e60b39bc041724f30c0aa96178ed48dc6ae5976bc6df37431ced652",
+        "assets/layers/normal_4_2.png": "7f25f9ff26b3c3c666000b3c400d5fb5cdaa607a5c41cdf0648813cc1de278ad",
     }
     assert {row["path"]: row["sha256"] for row in manifest["sources"]} == original_sources
     expected_files = [(ROOT / path, digest) for path, digest in original_sources.items()]
@@ -57,33 +51,33 @@ def main():
                     assert mouth_bounds and mouth_bounds[0] >= mx0 and mouth_bounds[1] >= my0 \
                         and mouth_bounds[2] <= mx1 and mouth_bounds[3] <= my1, "Eyes/brows/sweat jitter between mouth states"
         assert len(set(frames[:3])) == len(set(frames[3:])) == 3, "Speaking mouth states must differ"
-        # These visual requirements reject the previous 'normal face plus sweat'
-        # asset even if its dimensions, hashes and runtime bindings all pass.
-        for row, expression in enumerate(row_frames):
-            frame = expression[0]
-            white_ratios, iris_ratios = [], []
-            for box in ((90, 216, 171, 283), (209, 216, 290, 283)):
-                white = lambda r, g, b: r >= 180 and g >= 200 and b >= 225
-                ratio = count_rgb(frame, box, white) / count_rgb(base, box, white)
-                assert ratio >= 3, "Fear must visibly widen both eyes, beyond adding sweat"
-                white_ratios.append(round(ratio, 2))
-            for box in ((116, 231, 156, 277), (226, 231, 266, 277)):
-                blue = lambda r, g, b: r < 120 and b-r > 90 and b-g > 35
-                ratio = count_rgb(frame, box, blue) / count_rgb(base, box, blue)
-                assert .3 < ratio < .9, "Keep visible blue irises, smaller than the neutral expression"
-                iris_ratios.append(round(ratio, 2))
-            shadow_pixels = 0
-            for y in range(195, 228):
-                for x in range(100, 288):
-                    p, q = base.getpixel((x, y)), frame.getpixel((x, y))
-                    skin = any(all(abs(p[i]-color[i]) < 3 for i in range(3))
-                               for color in ((153, 176, 231), (135, 115, 166)))
-                    shadow_pixels += skin and all(q[i] <= p[i]-10 for i in range(3))
-            assert shadow_pixels >= 500, "Forehead shadow must be visible on the original skin"
-            print(f"Fear row {row}: eye-white ratios={white_ratios}; blue-iris ratios={iris_ratios}; shaded forehead pixels={shadow_pixels}.")
+        # The author chose the previous expressions again. Pin every pixel of
+        # that atlas except the small forehead region, including both eye states.
+        assert manifest["forehead_bounds"] == [102, 178, 282, 224]
+        previous_hash = "204ea1c43a972fa381805bdd949babb26a1daca25dee8494045526ea16b86297"
+        assert manifest["previous_masked_rgba_sha256"] == previous_hash
+        masked = bytearray(sheet.convert("RGBA").tobytes())
+        for row in range(2):
+            for column in range(3):
+                for y in range(178, 224):
+                    offset = ((row*688+y)*1152+column*384+102)*4
+                    masked[offset:offset+180*4] = bytes(180*4)
+        assert hashlib.sha256(masked).hexdigest() == previous_hash, "Eyes, sweat, mouth or other previous pixels changed outside the forehead"
+        original_worried = original.convert("RGBA").crop((3*384, 2*688, 4*384, 3*688))
+        shaded_pixels = 0
+        for y in range(178, 224):
+            for x in range(102, 282):
+                p, q = original_worried.getpixel((x, y)), row_frames[0][0].getpixel((x, y))
+                assert all(0 <= p[i]-q[i] <= 32 for i in range(3)), "Forehead tint must remain subtle"
+                skin = any(all(abs(p[i]-color[i]) <= 2 for i in range(3))
+                           for color in ((153, 176, 231), (135, 115, 166)))
+                if not skin:
+                    assert p == q, "Hair or brow ink was changed by the forehead tint"
+                shaded_pixels += any(p[i]-q[i] >= 3 for i in range(3))
+        assert shaded_pixels >= 100, "Forehead tint is absent"
     text = json.loads((ROOT / "story/持枪反应.json").read_text(encoding="utf-8"))["localization"]
     assert set(text) == {"zh", "ja", "en"} and all(set(rows) == set(text["zh"]) for rows in text.values())
-    print("PASS: six visibly frightened frames, original mouths, stationary eyes while speaking, visible forehead shading, unchanged normal artwork/body/silhouette and three-language dialogue. Gameplay review remains with the author.")
+    print(f"PASS: previous eyes/sweat/mouth and all pixels outside the forehead restored exactly; {shaded_pixels} subtly shaded forehead pixels; normal artwork/body/silhouette and three-language dialogue unchanged.")
 
 
 if __name__ == "__main__":
