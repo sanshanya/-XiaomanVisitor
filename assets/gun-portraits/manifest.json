@@ -1,0 +1,82 @@
+{
+    "schema":  3,
+    "method":  "original-layers-forehead-shadow",
+    "sources":  [
+                    {
+                        "path":  "assets/layers/normal_1_1.png",
+                        "sha256":  "5b71ef05cd274547f5e7909b4b9f3dd4f44d0748cd5bd63865edb14aa0e9fbc2"
+                    },
+                    {
+                        "path":  "assets/layers/normal_3_1.png",
+                        "sha256":  "a0fc66928abfe051843c65fca960215ac8b3963a6229ce9de6e5cf891e09e809"
+                    },
+                    {
+                        "path":  "assets/layers/normal_4_2.png",
+                        "sha256":  "7f25f9ff26b3c3c666000b3c400d5fb5cdaa607a5c41cdf0648813cc1de278ad"
+                    }
+                ],
+    "base":  "Portraits/xiaoman_tavern_atlas.png",
+    "base_frames":  [
+                        15,
+                        16,
+                        17
+                    ],
+    "packaged":  "Portraits/xiaoman_gun_atlas.png",
+    "frame":  [
+                  384,
+                  688
+              ],
+    "columns":  3,
+    "rows":  [
+                 "worried",
+                 "worried_soft"
+             ],
+    "original_canvas":  [
+                            1024,
+                            576
+                        ],
+    "crop":  [
+                 342,
+                 0,
+                 682,
+                 576
+             ],
+    "padded_frame":  [
+                         340,
+                         608
+                     ],
+    "runtime_rectangle":  [
+                              0,
+                              4,
+                              384,
+                              684
+                          ],
+    "edited_bounds":  [
+                          69,
+                          142,
+                          305,
+                          334
+                      ],
+    "mouth_bounds":  [
+                         176,
+                         310,
+                         204,
+                         334
+                     ],
+    "base_sha256":  "6ba7596e421a37ff926d07dafbeab1ff55294757ab84132c39018b306b25e0a3",
+    "sha256":  "927801547f1e8596452adf15b67956b1dc43f165cb3546cd6c1f01743e3f59d8",
+    "body_and_silhouette_preserved":  true,
+    "generated_face_used":  false,
+    "forehead_bounds":  [
+                            102,
+                            142,
+                            282,
+                            214
+                        ],
+    "previous_png_sha256":  "3bd38bc249196533585e7337cd847f7f9931a41711984b08003ca9e7d01f3b62",
+    "previous_masked_rgba_sha256":  "c385cb9d53cf1c5942097f8c8c80bd9fb70f7626be2ad84dac0d2217ebc2bbce",
+    "art_status":  "Original expressions preserved; shadow raised to darker roots and faded earlier above the eyes; author gameplay review pending",
+    "new_runtime_objects":  6,
+    "lazy_load":  true,
+    "mipmaps":  false
+}

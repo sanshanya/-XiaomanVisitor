@@ -246,7 +246,8 @@ namespace XiaomanVisitor
             Dialogue line = owner.currentDialog;
             if (mod == null || !mod.VoiceWait.Value || mod.RecordingFor(line) == null) return;
             Action original = action;
-            action = () => StartCoroutine(WaitFlow(owner, line, original));
+            // Use the native mod-owned scheduler so pausing and disabling remain scoped.
+            action = () => ModHelper.StartCoroutine(XiaomanMod.Id, WaitFlow(owner, line, original));
         }
 
         private IEnumerator WaitFlow(DialogUIManager owner, Dialogue line, Action action)
@@ -259,7 +260,7 @@ namespace XiaomanVisitor
         {
             Dialogue line = owner.currentDialog;
             if (mod == null || !mod.VoiceWait.Value || !BusyFor(line)) return false;
-            if (pendingEnds.Add(line)) StartCoroutine(WaitEnd(owner, line));
+            if (pendingEnds.Add(line)) ModHelper.StartCoroutine(XiaomanMod.Id, WaitEnd(owner, line));
             return true;
         }
 
@@ -273,7 +274,7 @@ namespace XiaomanVisitor
         internal bool DeferAction(Dialogue line)
         {
             if (mod == null || !mod.VoiceWait.Value || line.endAction == null || line.isEndActionExecuted || !BusyFor(line)) return false;
-            if (pendingActions.Add(line)) StartCoroutine(WaitAction(line));
+            if (pendingActions.Add(line)) ModHelper.StartCoroutine(XiaomanMod.Id, WaitAction(line));
             return true;
         }
 
@@ -289,7 +290,7 @@ namespace XiaomanVisitor
             Stop();
             foreach (Dialogue line in new List<Dialogue>(pendingActions))
                 if (!line.isEndActionExecuted) line.ExecuteEndAction();
-            StopAllCoroutines(); pendingActions.Clear(); pendingEnds.Clear();
+            ModHelper.StopAllCoroutines(XiaomanMod.Id); pendingActions.Clear(); pendingEnds.Clear();
         }
     }
 }

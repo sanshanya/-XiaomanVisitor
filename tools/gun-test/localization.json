@@ -1,0 +1,20 @@
+{
+  "zh": {
+    "gun_test_intro": "店长？……怎么了吗？",
+    "gun_test_waiting": "……我在这里。",
+    "cfg_shortcut": "邀请测试小满（Ctrl+Shift+M）",
+    "cfg_shortcut_tip": "营业时将测试小满追加到队尾，不受星期或主线进度限制。"
+  },
+  "ja": {
+    "gun_test_intro": "店長さん？……どうかしましたか？",
+    "gun_test_waiting": "……ここにいますよ。",
+    "cfg_shortcut": "テスト用みちるを呼ぶ（Ctrl+Shift+M）",
+    "cfg_shortcut_tip": "営業中なら曜日や本編の進行に関係なく、客の列の最後に追加します。"
+  },
+  "en": {
+    "gun_test_intro": "Shopkeeper? …Is something wrong?",
+    "gun_test_waiting": "…I'm here.",
+    "cfg_shortcut": "Invite test Xiaoman (Ctrl+Shift+M)",
+    "cfg_shortcut_tip": "While open, add test Xiaoman to the end of the queue on any day, regardless of story progress."
+  }
+}

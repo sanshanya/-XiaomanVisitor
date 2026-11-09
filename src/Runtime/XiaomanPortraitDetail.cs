@@ -8,7 +8,8 @@ namespace XiaomanVisitor
         internal bool HasDetailedPortraits { get { return activePortraitAtlas != null && activePortraitAtlas != atlas; } }
         internal bool OwnsPortrait(Sprite sprite)
         {
-            return sprite != null && activePortraitAtlas != null && sprite.texture == activePortraitAtlas;
+            return sprite != null && ((activePortraitAtlas != null && sprite.texture == activePortraitAtlas)
+                || (gunAtlas != null && sprite.texture == gunAtlas));
         }
 
         private Texture2D SelectPortraitAtlas()
