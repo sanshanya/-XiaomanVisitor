@@ -287,8 +287,10 @@ ui_tavern_help_confirm,メニューを渡す
 ui_tavern_help_skip,今はやめておく
 ui_tavern_drunk_today,今日はもう一杯いただきました。
 ui_tavern_one_glass,一日一杯、店内でお召し上がりください。
-ui_tavern_drink_list,{0} · {1} CR\n{2} · {3} · {4}
-ui_tavern_drink_price,価格：{0} CR\n所持クレジット：{1}
+ui_tavern_drink_list,"{0} · {1} CR
+{2} · {3} · {4}"
+ui_tavern_drink_price,"価格：{0} CR
+所持クレジット：{1}"
 ui_tavern_confirm_drink,支払って店内で飲む
 ui_tavern_takeaway,持ち帰りについて聞く
 ui_tavern_music,テープを選ぶ
@@ -337,3 +339,8 @@ ui_tavern_work_phase_3,後片づけ
 ui_tavern_wage_pending,今回のお給料は、まだ確認中です。
 xm_gun_plead,あ、あの……先に銃を下ろしてもらえませんか？
 xm_gun_holstered,……びっくりしました。
+ui_tavern_backpack,持ち物
+gift_note_arrived,みちるから手紙が届きました。
+gift_tape_arrived,みちるからテープが届きました。
+gift_note_stored,みちるの手紙を手紙帳にしまいました。
+gift_tape_stored,みちるのテープをカセットケースにしまいました。

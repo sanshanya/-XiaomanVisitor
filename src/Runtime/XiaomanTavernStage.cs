@@ -24,12 +24,15 @@ namespace XiaomanVisitor
         private SpeechEnvelope envelope;
         private readonly Dictionary<AudioClip, SpeechEnvelope> envelopes = new Dictionary<AudioClip, SpeechEnvelope>();
         private XiaomanTavernBubble speech;
+        private XiaomanTavernChoices choices;
+        private readonly Vector3[] bagCorners=new Vector3[4];
         private RectTransform actionPanel;
         private Mood authored;
         private float lineStart, nextBlink, blinkStart = -100f;
         private Vector2 layoutSize = new Vector2(-1f, -1f);
         private Vector2 actorRest;
         private float idleStarted, roomScale;
+        private float conversationBottom;
         internal bool Speaking { get { return speech!=null && speech.Visible; } }
 
         internal void Configure(XiaomanMod owner, RectTransform parent)
@@ -63,6 +66,7 @@ namespace XiaomanVisitor
             music=gameObject.AddComponent<AudioSource>();
             music.playOnAwake=false; music.loop=true; music.spatialBlend=0;
             speech = new XiaomanTavernBubble(room, StopVoice);
+            choices = new XiaomanTavernChoices(room);
             nextBlink = Time.unscaledTime + 3f;
             Layout();
             Pose(Mood.Neutral, 0);
@@ -166,6 +170,15 @@ namespace XiaomanVisitor
         internal void HideWorkProgress() { if (workBar!=null) workBar.gameObject.SetActive(false); }
 
         internal void AttachPanel(RectTransform panel) { actionPanel = panel; }
+        internal void ShowChoices(TavernChoice[] options) { choices.Show(options); }
+        internal void HideChoices() { choices?.Hide(); }
+        private float ConversationBottom()
+        {
+            var bag=EmporiumEntry.Instance?.afterhourWindow;
+            if (bag==null || bag.handler==null || !bag.handler.gameObject.activeInHierarchy) return room.rect.height;
+            bag.rectTransform.GetWorldCorners(bagCorners);
+            return Mathf.Clamp(room.rect.height*.5f-room.InverseTransformPoint(bagCorners[1]).y,32,room.rect.height);
+        }
         internal void SetSpeechSpeed(float speed) { speech?.SetSpeed(speed); }
         internal bool AdvanceSpeech()
         { if (speech == null || !speech.Visible) return false; speech.Advance(); return true; }
@@ -236,7 +249,9 @@ namespace XiaomanVisitor
         {
             if (mod == null || actor == null) return;
             Layout();
-            speech.PrepareLayout(actionPanel);
+            conversationBottom=ConversationBottom();
+            choices.Tick(actor.rectTransform,actorRest,conversationBottom);
+            speech.PrepareLayout(choices.Visible ? choices.Root : actionPanel);
         }
 
         private void LateUpdate()
@@ -248,7 +263,7 @@ namespace XiaomanVisitor
             bool busy = channel != null && recording != null && channel.clip == recording && channel.isPlaying;
             if (music!=null)
                 music.volume=Mathf.Clamp01(EmporiumOption.Instance.musicVolume)*(busy ? .4f : 1f);
-            speech.Tick(actor.rectTransform, busy, mod.VoiceWait.Value, actorRest);
+            speech.Tick(actor.rectTransform, busy, mod.VoiceWait.Value, actorRest,conversationBottom);
             int mouth = 0;
             if (busy) {
                 ApplyVoiceVolume();
@@ -271,7 +286,7 @@ namespace XiaomanVisitor
 
         internal void EndSession()
         {
-            StopVoice(); StopMusic(); speech?.Hide(); HideWorkProgress(); actionPanel = null;
+            StopVoice(); StopMusic(); speech?.Hide(); choices?.Hide(); HideWorkProgress(); actionPanel = null;
             if (actor != null) { actor.rectTransform.anchoredPosition = actorRest; Pose(Mood.Neutral, 0); }
         }
         private void StopVoice()

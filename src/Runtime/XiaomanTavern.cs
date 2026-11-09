@@ -32,12 +32,15 @@ namespace XiaomanVisitor
         {
             if (!TavernMapEnabled) return false;
             if (tavernStage!=null) return true;
-            if (tavernLocation==null || CustomUIManager.Instance==null || atlas==null) return false;
+            if (tavernLocation==null || CustomUIManager.Instance==null || atlas==null
+                || RenderHandler.current==null || RenderHandler.current.windowUICanvas==null) return false;
             GameObject stage=null;
             try {
                 stage=new GameObject("Xiaoman.Tavern",typeof(RectTransform)); stage.SetActive(false);
                 var actor=stage.AddComponent<XiaomanTavernStage>();
-                actor.Configure(this,CustomUIManager.Instance.GetLayerRoot("meta"));
+                // The native ground/backpack windows share this canvas. Keep our
+                // scene first, below them, rather than covering them on the meta layer.
+                actor.Configure(this,(RectTransform)RenderHandler.current.windowUICanvas.transform);
                 tavernStage=actor; tavernLocation.stageObject=stage; return true;
             }
             catch (Exception error) {
@@ -64,13 +67,14 @@ namespace XiaomanVisitor
         private void BuildTavernPanel(CustomUIBuilder builder)
         {
             tavernPanel=builder.Handle;
-            builder.SetSize(280,170).SetDraggable(false).SetCloseOnEscape(false).OnClose(() => {
+            builder.SetSize(280,218).SetDraggable(false).SetCloseOnEscape(false).OnClose(() => {
                 if (AtTavern && !MapUIManager.Instance.IsInTransit) ModHelper.ReturnFromAfterhour();
             });
             builder.AddLabel("","xiaoman_tavern_cash"); tavernCash=builder.Last;
             tavernCash.SetPreferredSize(244,30);
             builder.AddLabel("","xiaoman_tavern_notice"); tavernNotice=builder.Last;
             tavernNotice.SetPreferredSize(244,32);
+            builder.AddButton(Text("ui_tavern_backpack"),ToggleTavernBackpack);builder.Last.SetPreferredSize(244,42);
             tavernStage.AttachPanel(tavernPanel.Rect);
             tavernLocale=null;
         }
@@ -101,8 +105,8 @@ namespace XiaomanVisitor
         {
             if (!AtTavern || tavernPanel==null || !tavernPanel.IsAlive) return;
             var rect=tavernPanel.Rect;
-            rect.anchorMin=rect.anchorMax=rect.pivot=new Vector2(1,0);
-            rect.anchoredPosition=new Vector2(-24,24);
+            rect.anchorMin=rect.anchorMax=rect.pivot=new Vector2(1,1);
+            rect.anchoredPosition=new Vector2(-24,-24);
             TickTavernWork();
             if (tavernSequence) ShowNextTavernLine();
             if (Time.unscaledTime<tavernNextRefresh) return;
@@ -111,11 +115,23 @@ namespace XiaomanVisitor
             if (locale!=tavernLocale) {
                 tavernLocale=locale; tavernPanel.SetTitle(Text("ui_tavern_name"));
                 tavernNotice.SetText(Text("ui_tavern_scene_hint"));
-                if (tavernMenuPage!=null && tavernMenu!=null && tavernMenu.IsAlive) ShowTavernMenu(tavernMenuPage,tavernSelectedDrink);
+                if (tavernMenuPage!=null) ShowTavernMenu(tavernMenuPage,tavernSelectedDrink);
             }
             tavernCash?.SetText(Text("ui_tavern_cash",PlayerStore.Instance.GetCash()));
         }
         private void TavernNotice(string key) { tavernNotice?.SetText(Text(key)); }
+        private void ToggleTavernBackpack()
+        {
+            if (!TavernMayAct || EmporiumEntry.Instance?.afterhourWindow==null) return;
+            CloseTavernMenu();
+            var bag=EmporiumEntry.Instance.afterhourWindow;
+            if (bag.handler.gameObject.activeSelf) EmporiumEntry.Instance.HideAfterhourInv();
+            else {
+                var position=bag.rectTransform.anchoredPosition;
+                EmporiumEntry.Instance.ShowAfterhourInv();
+                bag.rectTransform.anchoredPosition=position;
+            }
+        }
 
         internal void ClickTavernSpot(string spot)
         {
@@ -143,6 +159,7 @@ namespace XiaomanVisitor
         private void CloseTavernMenu()
         {
             tavernMenuPage=null;
+            tavernStage?.HideChoices();
             if (CustomUIManager.Instance!=null) CustomUIManager.Instance.CloseWindow(TavernMenuId);
             tavernMenu=null;
             tavernStage?.AttachPanel(tavernPanel?.Rect);
@@ -150,6 +167,10 @@ namespace XiaomanVisitor
         private void ShowTavernMenu(string page,string drink=null)
         {
             if (!TavernMayAct || CustomUIManager.Instance==null) return;
+            if (page=="root" || page=="interaction" || page=="help" || page=="work") {
+                ShowTavernChoices(page);return;
+            }
+            tavernStage?.HideChoices();
             tavernMenuPage=page; tavernSelectedDrink=drink;
             CustomUIBuilder builder;
             if (tavernMenu!=null && tavernMenu.IsAlive) {
@@ -169,41 +190,7 @@ namespace XiaomanVisitor
             tavernMenu.SetTitle(Text(page=="drinks" || page=="detail"?"ui_tavern_menu":page=="music"?"ui_tavern_music":"ui_tavern_name"));
             var progress=ReadTavern();
             Action<string,Action> button=(key,click) => { builder.AddButton(Text(key),() => { if (!TavernDialogueBusy && !tavernActionBusy) click(); }); builder.Last.SetPreferredSize(334,48); };
-            if (page=="root") {
-                button("ui_tavern_menu",() => { CloseTavernMenu(); QueueTavernSpeech(new[]{"xm_tavern_w02_menu"},blockInput:false); ShowTavernMenu("drinks"); });
-                button("ui_tavern_interaction",() => ShowTavernMenu("interaction"));
-                button("ui_tavern_look",CloseTavernMenu);
-            }
-            else if (page=="interaction") {
-                button("ui_tavern_chat",() => {
-                    int day=StoreStation.Instance.dayCounter;
-                    string key=ReadTavern().NextChat(day,ReadWork().WorkedOn(day));
-                    string receipt=TavernProgress.ChatReceipt(key,day);
-                    CloseTavernMenu(); QueueTavernSpeech(new[]{key},() => UpdateTavern(p => { if (!p.ChatSeen.Contains(receipt)) p.ChatSeen.Add(receipt); }));
-                });
-                if (progress.MayHelp(StoreStation.Instance.dayCounter)) button("ui_tavern_reception",() => {
-                    CloseTavernMenu(); ModHelper.PlaySound3(Id,"xm_shutter_knock");
-                    QueueTavernSpeech(new[]{"xm_tavern_w02_help_intro"},() => ShowTavernMenu("help"));
-                });
-                else if (StoreStation.Instance.dayCounter>=TavernWorkConfig.UnlockDay) {
-                    builder.AddButton(Text("ui_tavern_paid_work",TavernWorkConfig.Wage),RequestTavernWork);
-                    builder.Last.SetPreferredSize(334,48);
-                }
-                button("ui_tavern_back",() => ShowTavernMenu("root"));
-            }
-            else if (page=="help") {
-                button("ui_tavern_help_confirm",() => {
-                    var p=ReadTavern(); if (!p.Help(StoreStation.Instance.dayCounter)) return;
-                    SaveTavern(p); CloseTavernMenu(); QueueTavernSpeech(new[]{"xm_tavern_w02_help_done"});
-                });
-                button("ui_tavern_help_skip",() => { CloseTavernMenu(); QueueTavernSpeech(new[]{"xm_tavern_w02_help_skip"}); });
-            }
-            else if (page=="work") {
-                builder.AddLabel(Text("ui_tavern_work_wage",TavernWorkConfig.Wage));
-                button("ui_tavern_work_confirm",StartTavernWork);
-                button("ui_tavern_work_decline",() => { CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w03_work_decline"}); });
-            }
-            else if (page=="drinks") {
+            if (page=="drinks") {
                 builder.AddLabel(Text("ui_tavern_cash",PlayerStore.Instance.GetCash()));
                 builder.AddLabel(Text(progress.Drank(StoreStation.Instance.dayCounter)?"ui_tavern_drunk_today":"ui_tavern_one_glass"));
                 foreach (var spec in CocktailCatalog.Drinks.OrderBy(d => d.Tier)) {
@@ -232,7 +219,7 @@ namespace XiaomanVisitor
             else if (page=="music") {
                 foreach (string key in TavernRules.MusicKeys(ReadStory().VisitIndex)) {
                     string track=key;
-                    builder.AddButton(Text("collection_"+track+"_name"),() => {
+                    builder.AddButton(TavernTrackTitle(track),() => {
                         if (!TavernMayAct || TavernDialogueBusy) return;
                         if (tavernStage.PlayMusic(track)) UpdateTavern(p => p.SelectedTrack=track);
                     }); builder.Last.SetPreferredSize(334,40);
@@ -243,6 +230,51 @@ namespace XiaomanVisitor
             tavernMenuPage=page; tavernSelectedDrink=drink;
             rect.anchorMin=rect.anchorMax=rect.pivot=new Vector2(1,.5f); rect.anchoredPosition=new Vector2(-24,0);
             tavernStage.AttachPanel(tavernMenu.Rect);
+        }
+        private static string TavernTrackTitle(string key)
+        {
+            var track=CassetteCollection.Find(key);
+            return key=="title" ? Text("collection_title_name") : key=="rainysound" ? Text("collection_hello_track") : track?.Title ?? key;
+        }
+        private void ShowTavernChoices(string page)
+        {
+            CloseTavernMenu();
+            var options=new List<TavernChoice>();
+            Action<string,Action> choice=(label,click) => options.Add(new TavernChoice(label,() => {
+                if (TavernMayAct && !TavernDialogueBusy && !tavernActionBusy) click();
+            }));
+            if (page=="root") {
+                choice(Text("ui_tavern_menu"),() => { CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w02_menu"},blockInput:false);ShowTavernMenu("drinks"); });
+                choice(Text("ui_tavern_interaction"),() => ShowTavernMenu("interaction"));
+                choice(Text("ui_tavern_look"),CloseTavernMenu);
+            }
+            else if (page=="interaction") {
+                choice(Text("ui_tavern_chat"),() => {
+                    int day=StoreStation.Instance.dayCounter;
+                    string key=ReadTavern().NextChat(day,ReadWork().WorkedOn(day));
+                    string receipt=TavernProgress.ChatReceipt(key,day);
+                    CloseTavernMenu();QueueTavernSpeech(new[]{key},() => UpdateTavern(p => { if (!p.ChatSeen.Contains(receipt)) p.ChatSeen.Add(receipt); }));
+                });
+                if (ReadTavern().MayHelp(StoreStation.Instance.dayCounter)) choice(Text("ui_tavern_reception"),() => {
+                    CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w02_help_intro"},() => ShowTavernMenu("help"));
+                });
+                else if (StoreStation.Instance.dayCounter>=TavernWorkConfig.UnlockDay)
+                    choice(Text("ui_tavern_paid_work",TavernWorkConfig.Wage),RequestTavernWork);
+                choice(Text("ui_tavern_back"),() => ShowTavernMenu("root"));
+            }
+            else if (page=="help") {
+                choice(Text("ui_tavern_help_confirm"),() => {
+                    var p=ReadTavern();if (!p.Help(StoreStation.Instance.dayCounter)) return;
+                    SaveTavern(p);CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w02_help_done"});
+                });
+                choice(Text("ui_tavern_help_skip"),() => { CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w02_help_skip"}); });
+            }
+            else if (page=="work") {
+                choice(Text("ui_tavern_paid_work",TavernWorkConfig.Wage),StartTavernWork);
+                choice(Text("ui_tavern_work_decline"),() => { CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w03_work_decline"}); });
+            }
+            tavernMenuPage=page;
+            tavernStage.ShowChoices(options.ToArray());
         }
         private void LeaveTavern()
         {

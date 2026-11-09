@@ -158,6 +158,12 @@ namespace XiaomanVisitor
                         progress.MarkPartDelivered(pending.Index, part, today);
                         SaveStory(progress);
                         Log.Log("Story gift " + pending.Index + "/14, part " + part + " delivered on day " + today + ".");
+                        if (part<2 && StoreUIManager.Instance!=null && ReputationUIManager.Instance!=null) {
+                            string owner=item.parentInventory?.GetParentItem()?.identifier;
+                            string key=part==0 ? owner==NotebookRules.ItemId ? "gift_note_stored" : "gift_note_arrived"
+                                : owner==CassetteCaseRules.ItemId ? "gift_tape_stored" : "gift_tape_arrived";
+                            StoreUIManager.Instance.Notify(Text(key));
+                        }
                     }
                 }
                 TryDeliverDrink(today);

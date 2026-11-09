@@ -82,6 +82,10 @@ namespace XiaomanVisitor
         private bool TryPlaceStoryGift(GameItem item)
         {
             if (item == null) return false;
+            ModHelper.SetItemOwnerShip(item, true);
+            // Newly delivered gifts should be visible before being filed away.
+            GraphUtils.TryAcceptAllMid(EmporiumEntry.Instance.frontInvinvElement,item);
+            if (item.parentInventory!=null) return true;
             if (NotebookRules.IsLetter(item.identifier))
             {
                 ModHelper.SetItemOwnerShip(item, true);

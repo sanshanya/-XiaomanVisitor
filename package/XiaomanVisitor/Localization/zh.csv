@@ -287,8 +287,10 @@ ui_tavern_help_confirm,帮忙递出酒单
 ui_tavern_help_skip,暂时不了
 ui_tavern_drunk_today,今天已经喝过一杯。
 ui_tavern_one_glass,每日一杯，店内饮用。
-ui_tavern_drink_list,{0} · {1} CR\n{2} · {3} · {4}
-ui_tavern_drink_price,售价：{0} CR\n随身信用点：{1}
+ui_tavern_drink_list,"{0} · {1} CR
+{2} · {3} · {4}"
+ui_tavern_drink_price,"售价：{0} CR
+随身信用点：{1}"
 ui_tavern_confirm_drink,付款并现场饮用
 ui_tavern_takeaway,询问外带
 ui_tavern_music,选择磁带
@@ -337,3 +339,8 @@ ui_tavern_work_phase_3,收尾
 ui_tavern_wage_pending,这班的工资还在核对中。
 xm_gun_plead,那、那个……可以先把枪放下吗？
 xm_gun_holstered,……吓了我一跳。
+ui_tavern_backpack,背包
+gift_note_arrived,小满留下了一封纸条。
+gift_tape_arrived,小满留下了一盘磁带。
+gift_note_stored,小满的纸条已放入信笺簿。
+gift_tape_stored,小满的磁带已放入磁带盒。

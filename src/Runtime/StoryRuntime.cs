@@ -24,9 +24,9 @@ namespace XiaomanVisitor
         private void SaveStory(StoryProgress progress)
         { ModHelper.SetModData(Id, "story_v34_progress", progress.Data); }
 
-        private Dialogue StoryLine(StoreClient client, string key, Mood expression)
+        private Dialogue StoryLine(StoreClient client, string key, Mood expression, params object[] args)
         {
-            Dialogue line = Line(client, key, expression);
+            Dialogue line = Line(client, key, expression, args);
             if (key == "xm_01_01") BindVoice(line, "intro_1", Text(key));
             return line;
         }
@@ -51,7 +51,7 @@ namespace XiaomanVisitor
             {
                 string key=TavernRules.OpeningLineKey(index,spec.Key,session.Day);
                 if (key=="xm_03_04" && ReadWork().HasWorked) key="xm_03_04_already_worked";
-                Dialogue next = StoryLine(client,key,spec.Mood);
+                Dialogue next = StoryLine(client,key,spec.Mood,episode.Credits);
                 if (tail == null) client.mainDialogue = next;
                 else tail.nextDialogue = next;
                 tail = next;

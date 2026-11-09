@@ -70,7 +70,7 @@ namespace XiaomanVisitor
             name.GetComponent<Image>().sprite = palette.GetSprite("default");
         }
 
-        private static void Clear(UnityEventBase callbacks)
+        internal static void Clear(UnityEventBase callbacks)
         {
             for (int i = 0; i < callbacks.GetPersistentEventCount(); i++)
                 callbacks.SetPersistentListenerState(i, UnityEventCallState.Off);
@@ -126,7 +126,7 @@ namespace XiaomanVisitor
             if (Mathf.Abs(previousScale - scale) > .001f) { previousScale = scale; layoutDirty = true; }
         }
 
-        internal void Tick(RectTransform actor, bool voiceBusy, bool waitForVoice, Vector2 restPosition)
+        internal void Tick(RectTransform actor, bool voiceBusy, bool waitForVoice, Vector2 restPosition,float bottom)
         {
             if (!Visible) return;
             if (completedAt >= 0 && (!waitForVoice || !voiceBusy)
@@ -143,6 +143,7 @@ namespace XiaomanVisitor
             float y = restPosition.y - actor.rect.height * .9f;
             float actualWidth = body.rect.width * body.localScale.x;
             x = Mathf.Clamp(x, 16f, Mathf.Max(16f, rightEdge - actualWidth));
+            y=-Mathf.Max(8,Mathf.Min(-y,bottom-body.rect.height*body.localScale.y-8));
             root.anchoredPosition = new Vector2(x, y);
         }
 

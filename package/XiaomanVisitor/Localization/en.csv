@@ -287,8 +287,10 @@ ui_tavern_help_confirm,Hand over the menu
 ui_tavern_help_skip,Not right now
 ui_tavern_drunk_today,You've already had a glass today.
 ui_tavern_one_glass,One glass per day. Enjoy it here.
-ui_tavern_drink_list,{0} · {1} CR\n{2} · {3} · {4}
-ui_tavern_drink_price,Price: {0} CR\nCredits on hand: {1}
+ui_tavern_drink_list,"{0} · {1} CR
+{2} · {3} · {4}"
+ui_tavern_drink_price,"Price: {0} CR
+Credits on hand: {1}"
 ui_tavern_confirm_drink,Pay and drink here
 ui_tavern_takeaway,Ask about takeaway
 ui_tavern_music,Choose a tape
@@ -337,3 +339,8 @@ ui_tavern_work_phase_3,Tidying up
 ui_tavern_wage_pending,This shift's pay is still being checked.
 xm_gun_plead,U-um… could you put the gun down first?
 xm_gun_holstered,…You startled me.
+ui_tavern_backpack,Backpack
+gift_note_arrived,Xiaoman left you a letter.
+gift_tape_arrived,Xiaoman left you a tape.
+gift_note_stored,Xiaoman's letter was placed in the notebook.
+gift_tape_stored,Xiaoman's tape was placed in the cassette case.
