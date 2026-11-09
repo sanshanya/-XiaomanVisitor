@@ -60,7 +60,7 @@ public static class NativeGunPortraits {
         // ends above the eyes; no eye, brow-ink, hair or silhouette is redrawn.
         var shade=new bool[Width,Height];
         var pending=new System.Collections.Generic.Queue<Point>();
-        for(int y=178;y<224;y++) for(int x=102;x<282;x++) {
+        for(int y=142;y<214;y++) for(int x=102;x<282;x++) {
             Color c=frame.GetPixel(x,y);
             bool skin=Math.Abs(c.R-153)<=2&&Math.Abs(c.G-176)<=2&&Math.Abs(c.B-231)<=2;
             bool forehead=Math.Abs(c.R-135)<=2&&Math.Abs(c.G-115)<=2&&Math.Abs(c.B-166)<=2;
@@ -73,17 +73,17 @@ public static class NativeGunPortraits {
             Point p=pending.Dequeue();
             foreach(Point step in new[]{new Point(-1,0),new Point(1,0),new Point(0,-1),new Point(0,1)}) {
                 int x=p.X+step.X,y=p.Y+step.Y;
-                if(x<102||x>=282||y<178||y>=224||shade[x,y])continue;
+                if(x<102||x>=282||y<142||y>=214||shade[x,y])continue;
                 Color c=frame.GetPixel(x,y);
                 if(c.A==255&&c.R>=105&&c.R<=165&&c.G>=105&&c.G<=182&&c.B>=155&&c.B<=250) {
                     shade[x,y]=true;pending.Enqueue(new Point(x,y));
                 }
             }
         }
-        for(int y=178;y<224;y++) for(int x=102;x<282;x++) {
+        for(int y=142;y<214;y++) for(int x=102;x<282;x++) {
             if(!shade[x,y])continue;
             Color c=frame.GetPixel(x,y);
-            int a=y<208?160:160*(224-y)/16,b=255-a;
+            int a=y<176?200:200*(214-y)/38,b=255-a;
             frame.SetPixel(x,y,Color.FromArgb(c.A,(c.R*b+48*a)/255,(c.G*b+56*a)/255,(c.B*b+107*a)/255));
         }
     }
@@ -135,14 +135,14 @@ $gunRecord = [ordered]@{
     base='Portraits/xiaoman_tavern_atlas.png'; base_frames=@(15,16,17)
     packaged='Portraits/xiaoman_gun_atlas.png'; frame=@(384,688); columns=3; rows=@('worried','worried_soft')
     original_canvas=@(1024,576); crop=@(342,0,682,576); padded_frame=@(340,608)
-    runtime_rectangle=@(0,4,384,684); edited_bounds=@(69,174,305,334); mouth_bounds=@(176,310,204,334)
+    runtime_rectangle=@(0,4,384,684); edited_bounds=@(69,142,305,334); mouth_bounds=@(176,310,204,334)
     base_sha256=(Get-FileHash -LiteralPath $gunBase -Algorithm SHA256).Hash.ToLowerInvariant()
     sha256=(Get-FileHash -LiteralPath $gunOutput -Algorithm SHA256).Hash.ToLowerInvariant()
     body_and_silhouette_preserved=$true; generated_face_used=$false
-    forehead_bounds=@(102,178,282,224)
+    forehead_bounds=@(102,142,282,214)
     previous_png_sha256='3bd38bc249196533585e7337cd847f7f9931a41711984b08003ca9e7d01f3b62'
-    previous_masked_rgba_sha256='204ea1c43a972fa381805bdd949babb26a1daca25dee8494045526ea16b86297'
-    art_status='Original expressions preserved; stronger stable forehead shading with a short lower fade; author gameplay review pending'
+    previous_masked_rgba_sha256='c385cb9d53cf1c5942097f8c8c80bd9fb70f7626be2ad84dac0d2217ebc2bbce'
+    art_status='Original expressions preserved; shadow raised to darker roots and faded earlier above the eyes; author gameplay review pending'
     new_runtime_objects=6; lazy_load=$true; mipmaps=$false
 }
 [IO.File]::WriteAllText((Join-Path $gunProject 'assets\gun-portraits\manifest.json'),($gunRecord | ConvertTo-Json -Depth 5) + "`n",(New-Object Text.UTF8Encoding($false)))
