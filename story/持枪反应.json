@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "scope": "仅小满在当铺接待时；先测试瞄准，暂不开火；不改变交易、章节、赠礼或存档",
+  "voice": "本轮仅字幕，使用原生打字机口型；不生成新录音",
+  "presentation": "突然睁眼缩瞳，随后持续紧张；蓝色瞳孔、冷汗和刘海下的浅蓝紫色阴影；说话开合嘴，停顿和说完闭嘴；收枪后短暂保留余悸",
+  "localization": {
+    "zh": {
+      "xm_gun_plead": "那、那个……可以先把枪放下吗？",
+      "xm_gun_holstered": "……吓了我一跳。"
+    },
+    "ja": {
+      "xm_gun_plead": "あ、あの……先に銃を下ろしてもらえませんか？",
+      "xm_gun_holstered": "……びっくりしました。"
+    },
+    "en": {
+      "xm_gun_plead": "U-um… could you put the gun down first?",
+      "xm_gun_holstered": "…You startled me."
+    }
+  }
+}

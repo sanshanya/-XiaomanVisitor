@@ -237,8 +237,7 @@ ui_tavern_ledger,Open the ledger
 ui_tavern_rest,Tonight's activity is complete.
 ui_tavern_pickup_ready,The pickup counter is ready.
 ui_tavern_pickup_waiting,Pickup glasses are still mixed in with those at the bar.
-ui_tavern_ledger_total,"Your orders: {0} drinks
-Received: {1} CR"
+ui_tavern_ledger_total,Your orders: {0} drinks\nReceived: {1} CR
 ui_tavern_ledger_empty,Nothing has been written on this page yet.
 ui_tavern_ledger_cup,Day {0} · One drink · {1} CR
 ui_tavern_ledger_help,Day {0} · Tidied the pickup counter
@@ -246,3 +245,5 @@ ui_tavern_close_ledger,Close the ledger
 ui_tavern_pickup_sign,Pickup
 cfg_experimental_tavern,Xiaoman's Tavern (Experimental)
 cfg_experimental_tavern_tip,"Off by default. Enable to visit the test tavern from day 1 for drinks, a helping activity and the ledger. Restart the game to apply changes. Disabling keeps your tavern progress."
+xm_gun_plead,U-um… could you put the gun down first?
+xm_gun_holstered,…You startled me.

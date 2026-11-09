@@ -43,6 +43,7 @@ namespace XiaomanVisitor
                 clientIntent = session.SaleKeys.Length > 0 ? StoreClient.ClientIntent.SELLNBUY : StoreClient.ClientIntent.BUY,
                 cooldown = 0, arrestable = false, nonShootable = true, noAcceptingContraband = true };
             session.Client = client;
+            ConfigureGunReaction(client);
             client.SetBudget(episode.Credits);
             client.willAcceptItem = item => IsChapterDemand(item, episode.Demand);
             Dialogue tail = null;
@@ -69,7 +70,7 @@ namespace XiaomanVisitor
             client.repeatDialogue = Line(client, repeat, Mood.Soft);
             AttachStoryTrading(session);
             client.OnArrival = () => { storySession = session; SetMood(client, Mood.Neutral); };
-            client.OnDismiss = () => { Voice?.Stop(); SetMood(client, Mood.Neutral); if (storySession == session) storySession = null; };
+            client.OnDismiss = () => { Voice?.Stop(); ResetGunReaction(); SetMood(client, Mood.Neutral); if (storySession == session) storySession = null; };
             client.CompleteClientCreation();
             client.noAcceptingContraband = true;
             return client;

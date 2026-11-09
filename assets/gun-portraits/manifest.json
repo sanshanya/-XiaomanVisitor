@@ -1,0 +1,28 @@
+{
+    "schema":  1,
+    "source":  "assets/gun-portraits/source.png",
+    "base":  "Portraits/xiaoman_tavern_atlas.png",
+    "packaged":  "Portraits/xiaoman_gun_atlas.png",
+    "frame":  [
+                  384,
+                  688
+              ],
+    "columns":  3,
+    "rows":  [
+                 "startled",
+                 "frightened"
+             ],
+    "edited_bounds":  [
+                          83,
+                          193,
+                          293,
+                          357
+                      ],
+    "source_sha256":  "73146231f7752f7f4dddf30bf6792386b9d94849fbbc0c1a88bab8576c1321b5",
+    "base_sha256":  "6ba7596e421a37ff926d07dafbeab1ff55294757ab84132c39018b306b25e0a3",
+    "sha256":  "225d993a160f6fc5c319f4076881a6b12877fd2f46f4496ac6147f4b7cb824d6",
+    "body_and_silhouette_preserved":  true,
+    "new_runtime_objects":  6,
+    "lazy_load":  true,
+    "mipmaps":  false
+}

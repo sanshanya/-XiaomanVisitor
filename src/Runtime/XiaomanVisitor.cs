@@ -74,6 +74,7 @@ namespace XiaomanVisitor
 
         public void OnDisable()
         {
+            ShutdownGunReaction();
             enabled = false;
             if (nativeRendering != null) nativeRendering.Shutdown();
             XiaomanLetterInk.ReleaseAll();
@@ -92,6 +93,7 @@ namespace XiaomanVisitor
             if (registeredDictionary != null) registeredDictionary.Remove(SpriteKey);
             DestroySprites();
             ReleasePortraitAssets();
+            ReleaseGunPortraits();
             if (driverObject != null) UnityEngine.Object.Destroy(driverObject);
             if (Instance == this) Instance = null;
         }
@@ -131,6 +133,7 @@ namespace XiaomanVisitor
 
         private void OnGameLoaded()
         {
+            ResetGunReaction();
             Voice?.Stop();
             moodOwner = null;
             EnsurePortraits();
@@ -140,6 +143,7 @@ namespace XiaomanVisitor
 
         private void DestroySprites()
         {
+            DestroyGunSprites();
             for (int row = 0; row < 6; row++)
                 for (int col = 0; col < 3; col++)
                 {
@@ -315,20 +319,20 @@ namespace XiaomanVisitor
             // a fallback when that line has never started a packaged recording.
             Mood expression = Mood.Neutral;
             int mouth = 0;
+            DialogUIManager dialog = DialogUIManager.Instance;
+            Dialogue line = dialog == null ? null : dialog.currentDialog;
+            bool visible = line != null && line.title == client.displayName
+                && dialog.clientBubble != null && dialog.clientBubble.gameObject.activeInHierarchy;
+            bool typing = visible && dialog.clientBubble.typewriter != null && dialog.clientBubble.typewriter.isShowingText;
+            int voiceMouth = 0;
+            bool voiceBusy = mod.Voice != null && mod.Voice.PoseFor(line, out voiceMouth);
+            bool hadVoice = mod.Voice != null && mod.Voice.HasPlayedFor(line);
             if (mod.Animate.Value)
             {
-                DialogUIManager dialog = DialogUIManager.Instance;
-                Dialogue line = dialog == null ? null : dialog.currentDialog;
-                bool visible = line != null && line.title == client.displayName
-                    && dialog.clientBubble != null && dialog.clientBubble.gameObject.activeInHierarchy;
-                bool typing = visible && dialog.clientBubble.typewriter != null && dialog.clientBubble.typewriter.isShowingText;
                 Mood authored;
                 bool canSpeak;
                 if (!mod.TryLinePerformance(line, out authored, out canSpeak))
                 { authored = Mood.Neutral; canSpeak = true; }
-                int voiceMouth = 0;
-                bool voiceBusy = mod.Voice != null && mod.Voice.PoseFor(line, out voiceMouth);
-                bool hadVoice = mod.Voice != null && mod.Voice.HasPlayedFor(line);
                 DialoguePose pose = PortraitTiming.Resolve(visible, canSpeak, authored, hadVoice, voiceBusy, typing, voiceMouth, now);
                 expression = pose.Expression; mouth = pose.Mouth;
                 if (now >= nextBlink)
@@ -340,7 +344,8 @@ namespace XiaomanVisitor
                 if (PortraitTiming.MayBlink(expression) && phase < 0.24f)
                     expression = (phase < 0.06f || phase > 0.18f) ? Mood.Soft : Mood.Closed;
             }
-            Sprite frame = mod.Frame(expression, mouth);
+            Sprite frame = mod.GunPortrait(client, line, visible, typing, hadVoice, voiceBusy, voiceMouth, mouth)
+                ?? mod.Frame(expression, mouth);
             if (frame != null && renderer.sprite != frame) renderer.sprite = frame;
         }
     }

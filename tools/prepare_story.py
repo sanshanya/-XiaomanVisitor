@@ -160,6 +160,11 @@ def main():
     loc["en"]["cfg_shortcut_tip"] = "On an open Monday, queue the pending visit at the end. Keeps every existing customer in order; cannot skip dates or replay a completed visit."
     import apply_item_presentation
     apply_item_presentation.apply_to(loc)
+    gun_reactions = json.loads((ROOT / "story/持枪反应.json").read_text(encoding="utf-8"))["localization"]
+    assert set(gun_reactions) == {"zh", "ja", "en"}
+    for lang, entries in gun_reactions.items():
+        assert set(entries) == set(gun_reactions["zh"]), "Gun reaction keys must cover all three languages"
+        loc[lang].update(entries)
     for lang, rows in loc.items():
         for obsolete in ("cfg_interval", "cfg_interval_tip", "cfg_budget"):
             rows.pop(obsolete, None)
@@ -215,7 +220,9 @@ def main():
     # The first chapter line uses intro_1's existing recording, once, with its own subtitle template.
     lines["xm_01_01"]["voice_alias"] = "intro_1"
     voice_keys = [k for k, row in lines.items() if not row.get("reference") and row["kind"] == "speech" and "voice_alias" not in row]
-    snapshot = dict(schema=1, version="3.4", source=str(args.source), source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+    source_path = args.source.resolve()
+    source_name = source_path.relative_to(ROOT).as_posix() if source_path.is_relative_to(ROOT) else source_path.name
+    snapshot = dict(schema=1, version="3.4", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
                     episodes=episodes, actions=actions, lines=list(lines.values()), voice_keys=voice_keys,
                     sale_rule=dict(first=4, last=13, later_chance_percent=30, count=2, basic_only=True, excluded_visits=[6]),
                     fixed_drink_gift=dict(visit=6, count=1, tier=2, random_once=True, next_day=True, replaces_trade_reward=True),

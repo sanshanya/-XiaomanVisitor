@@ -237,8 +237,7 @@ ui_tavern_ledger,帳面を開く
 ui_tavern_rest,今夜の行動は完了。
 ui_tavern_pickup_ready,受け取り用の場所が整っている。
 ui_tavern_pickup_waiting,持ち帰り用のグラスが、カウンターのグラスと混ざっている。
-ui_tavern_ledger_total,"店長さんの注文：{0} 杯
-受け取り：{1} CR"
+ui_tavern_ledger_total,店長さんの注文：{0} 杯\n受け取り：{1} CR
 ui_tavern_ledger_empty,このページには、まだ何も書いていない。
 ui_tavern_ledger_cup,{0} 日目 · 一杯 · {1} CR
 ui_tavern_ledger_help,{0} 日目 · 受け取り台を片付けた
@@ -246,3 +245,5 @@ ui_tavern_close_ledger,帳面を閉じる
 ui_tavern_pickup_sign,お受け取り
 cfg_experimental_tavern,みちるのバー（実験的）
 cfg_experimental_tavern_tip,初期設定はオフです。有効にすると1日目から試作版のバーで注文、お手伝い、帳面の確認ができます。変更はゲーム再起動後に反映されます。無効にしてもバーの記録は残ります。
+xm_gun_plead,あ、あの……先に銃を下ろしてもらえませんか？
+xm_gun_holstered,……びっくりしました。

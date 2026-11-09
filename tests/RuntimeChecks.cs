@@ -25,10 +25,14 @@ internal static class CheckMod
         var scan = ModScanner.Scan(manifest.Assemblies.Select(a => Path.Combine(package, a)).ToArray(),
             System.IO.Directory.GetFiles(managed, "*.dll").Select(Path.GetFileNameWithoutExtension).ToArray(), package, true);
         Console.WriteLine("Manifest: " + manifest.ID + " v" + manifest.ModVersion + "; methods: " + scan.MethodsScanned);
+        Console.WriteLine("Native scanner: capabilities=" + (scan.Capabilities.Count == 0 ? "none" : string.Join(",", scan.Capabilities))
+            + "; pending=" + scan.Pending.Count + "; refused=" + scan.Refused);
         if (scan.Error != null) Console.Error.WriteLine(scan.Error);
         if (scan.Findings.Count > 0 || scan.HardFlags.Count > 0) Console.WriteLine(scan.FormatFindings(30));
         if (scan.Refused || scan.Capabilities.Except(manifest.Capabilities).Any()) return 2;
-        CheckStory.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait();
+        foreach (var finding in scan.Pending.Take(30)) Console.Error.WriteLine("PENDING: " + finding);
+        if (scan.Pending.Count > 0) return 2;
+        CheckStory.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require);
         Console.WriteLine("PASS: " + assertions + " assertions; native manifest, capability scanner and paper parser accepted.");
         return 0;
     }

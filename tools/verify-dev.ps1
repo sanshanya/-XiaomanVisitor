@@ -12,7 +12,7 @@ Get-XiaomanNet8Runtime | Out-Null
 & $python -m unittest discover -s (Join-Path $projectRoot 'tests') -p 'test_*.py'
 if ($LASTEXITCODE -ne 0) { throw 'Offline authoring and architecture checks failed.' }
 if ($Full) {
-    foreach ($name in @('check_assets.py','check_portrait_detail.py','check_handwriting.py','check_voice_audio.py','prepare_tavern_scene.py')) {
+    foreach ($name in @('check_assets.py','check_portrait_detail.py','check_gun_portraits.py','check_handwriting.py','check_voice_audio.py','prepare_tavern_scene.py')) {
         & $python (Join-Path $PSScriptRoot $name)
         if ($LASTEXITCODE -ne 0) { throw ('Asset validation failed: ' + $name) }
     }
