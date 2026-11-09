@@ -54,17 +54,25 @@ if ($Install) {
     if (Test-Path -LiteralPath (Join-Path $destination 'manifest.xml')) {
         $installed = [xml](Get-Content -LiteralPath (Join-Path $destination 'manifest.xml') -Raw -Encoding UTF8)
         if ($installed.Mod.ID -ne 'sansm.xiaoman.gun_test') { throw 'Refusing to overwrite another mod' }
-        if (Get-Process -Name 'Probably Stolen' -ErrorAction SilentlyContinue) { throw 'Save and exit before replacing an existing test DLL' }
+        if (Get-Process -Name 'Probably Stolen' -ErrorAction SilentlyContinue) {
+            $oldDll = Join-Path $destination 'XiaomanGunTest.dll'
+            $newDll = Join-Path $stage 'XiaomanGunTest.dll'
+            if (-not (Test-Path -LiteralPath $oldDll) -or (Get-FileHash -LiteralPath $oldDll).Hash -ne (Get-FileHash -LiteralPath $newDll).Hash) {
+                throw 'Save and exit before replacing a changed test DLL'
+            }
+        }
     }
     New-Item -ItemType Directory -Path $destination -Force | Out-Null
     foreach ($file in Get-ChildItem -LiteralPath $stage -File -Recurse) {
         $relative = $file.FullName.Substring($stage.Length + 1)
         $target = [IO.Path]::GetFullPath((Join-Path $destination $relative))
         if (-not $target.StartsWith($destination + '\',[StringComparison]::OrdinalIgnoreCase)) { throw 'Invalid test package path' }
+        if ((Test-Path -LiteralPath $target) -and (Get-FileHash -LiteralPath $file.FullName).Hash -eq (Get-FileHash -LiteralPath $target).Hash) { continue }
         New-Item -ItemType Directory -Path ([IO.Path]::GetDirectoryName($target)) -Force | Out-Null
         Copy-Item -LiteralPath $file.FullName -Destination $target -Force
         if ((Get-FileHash -LiteralPath $file.FullName).Hash -ne (Get-FileHash -LiteralPath $target).Hash) { throw 'Installed test file mismatch' }
     }
     Write-Output ('Installed independent test only: ' + $destination)
+    if (Get-Process -Name 'Probably Stolen' -ErrorAction SilentlyContinue) { Write-Output 'Only changed assets were replaced. Restart the game to load them.' }
 }
 Write-Output ('Test ZIP: ' + (Join-Path $output ('XiaomanGunTest-' + $version + '.zip')))
