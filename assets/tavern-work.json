@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "status": "v4.4_playtest_not_final_economy",
+  "source": "dock_shift_overflow_v1",
+  "unlock_day": 15,
+  "daily_overflow_orders": 3,
+  "orders_per_shift": 3,
+  "order_revenue": 65,
+  "order_material": 30,
+  "wage": 60,
+  "duration_seconds": 3,
+  "thanks_percent": 35,
+  "private_purchase_reserve": 100,
+  "daily_overrides": {},
+  "integration": "Standalone finite playtest overflow demand; not baseline NPC traffic or L1. Import order IDs and wages once when integrating the future economy."
+}

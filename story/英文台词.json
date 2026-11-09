@@ -123,5 +123,7 @@
   "xm_act_expose_water_high_01": "This should be high-quality water. The label seems to say otherwise.",
   "xm_act_expose_water_other_01": "The purity of this water doesn't match the label.",
   "xm_act_expose_water_other_02": "The description and the reading don't match. Could it be the wrong label?",
-  "xm_act_expose_water_other_03": "That number on the label... Are you sure it's right?"
+  "xm_act_expose_water_other_03": "That number on the label... Are you sure it's right?",
+  "xm_01_04": "When I moved, I brought quite a few tapes with me.",
+  "xm_01_05": "Not many people still listen to tapes these days, do they?"
 }

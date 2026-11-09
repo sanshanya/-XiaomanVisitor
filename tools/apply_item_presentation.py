@@ -7,6 +7,11 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def apply_to(localizations):
+    for rows in localizations.values():
+        for key in list(rows):
+            if key.startswith(('ui_tavern_ledger','ui_tavern_pickup','ui_tavern_scene_preview','cfg_tavern_scene_preview')) \
+                or key in ('ui_tavern_welcome','ui_tavern_buy','ui_tavern_help','ui_tavern_rest','ui_tavern_close_ledger'):
+                rows.pop(key)
     for filename in ("item-presentation.json", "tavern-map-localization.json"):
         changes = json.loads((ROOT / "assets" / filename).read_text(encoding="utf-8"))
         for language, entries in changes.items():

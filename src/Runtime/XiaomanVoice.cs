@@ -90,7 +90,7 @@ namespace XiaomanVisitor
         internal static bool CurrentClientIsXiaoman()
         {
             return PlayerStore.HasInstance && PlayerStore.Instance.currentClientInstance != null
-                && PlayerStore.Instance.currentClientInstance.GetClientBlueprint().identifier == ClientId;
+                && CustomerQueuePolicy.IsXiaoman(PlayerStore.Instance.currentClientInstance.GetClientBlueprint().identifier);
         }
 
         internal VoiceRecording RecordingFor(Dialogue line)
@@ -246,7 +246,7 @@ namespace XiaomanVisitor
             Dialogue line = owner.currentDialog;
             if (mod == null || !mod.VoiceWait.Value || mod.RecordingFor(line) == null) return;
             Action original = action;
-            // Use the native mod-owned scheduler so pausing and disabling remain scoped.
+            // The loader owns every speech wait and cancels it when this mod stops.
             action = () => ModHelper.StartCoroutine(XiaomanMod.Id, WaitFlow(owner, line, original));
         }
 

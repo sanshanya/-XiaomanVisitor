@@ -80,6 +80,7 @@ namespace XiaomanVisitor
         [JsonProperty] public int GiftMask;
         [JsonProperty] public string[] SaleKeys = new string[0];
         [JsonProperty] public string GiftDrinkKey = "";
+        [JsonProperty] public string NoteVariant = "";
         public bool HasFixedDrink { get { return Index == 6 && StoryRules.FinalDrinks.Contains(GiftDrinkKey); } }
         public int RequiredMask { get { return Index == 14 ? 31 : HasFixedDrink ? 7 : 3; } }
         public bool GiftComplete { get { return GiftMask == RequiredMask; } }
@@ -125,6 +126,14 @@ namespace XiaomanVisitor
             return true;
         }
 
+        public bool FreezeThirdNote(int today,Func<int,bool> paidOnDay)
+        {
+            var visit=Visits.FirstOrDefault(v => v.Index==3);
+            if (visit==null || today<=visit.Day || !string.IsNullOrEmpty(visit.NoteVariant)) return false;
+            visit.NoteVariant=visit.HasPart(0) ? "A" : paidOnDay(visit.Day) ? "B" : "A";
+            return true;
+        }
+
         public string Data { get { return JsonConvert.SerializeObject(this); } }
         public static StoryProgress Restore(string data)
         {
@@ -146,6 +155,10 @@ namespace XiaomanVisitor
                         visit.GiftDrinkKey = (visit.GiftMask & 3) == 3 ? "" : StoryRules.FixedDrink(6, visit.Day);
                 }
                 else visit.GiftDrinkKey = "";
+                if (visit.Index==3) {
+                    if (visit.NoteVariant!="A" && visit.NoteVariant!="B") visit.NoteVariant=visit.HasPart(0)?"A":"";
+                }
+                else visit.NoteVariant="";
                 visit.GiftMask &= visit.RequiredMask;
                 visit.SaleKeys = visit.SaleKeys ?? new string[0];
                 if (visit.SaleKeys.Length != 0 && (visit.SaleKeys.Length != 2 || visit.SaleKeys.Distinct().Count() != 2

@@ -34,7 +34,11 @@ def main():
         raise SystemExit("Run tools/verify-dev.ps1 -Full before packaging.")
     report = pipeline.load(report_path)
     pack = pipeline.load(package / "Voices/index.json")
-    assert pack["pending_lines"] == 0 and len(pack["lines"]) == len(script["lines"]) == report["recorded_lines"]
+    assert len(pack["lines"]) == report["recorded_lines"]
+    assert pack["pending_lines"] == report["pending_lines"] == len(report.get("deferred_keys", []))
+    assert len(script["lines"]) == report["recorded_lines"] + report["pending_lines"]
+    assert not report["pending_lines"] or args.development, "Unvoiced story lines are allowed only in development archives."
+    assert not (report["pending_lines"] and args.with_audio), "Finish the voice script before exporting a complete audio archive."
     assert report["version"] == version and not report["warnings"]
     output = root / "release" / ("dev-" + version if args.development else version)
     page_path = output / "工坊页面.json"
@@ -49,7 +53,7 @@ def main():
         assert digest(package / tape["packaged"].replace("\\", "/")) == tape["sha256"], tape["key"]
     files = sorted(f for f in package.rglob("*") if f.is_file())
     assert len(files) < 50000 and (package / "preview.png").stat().st_size < 1024 * 1024
-    allowed = {".dll", ".xml", ".png", ".csv", ".json", ".wav", ".mp3", ".ogg", ".txt"}
+    allowed = {".dll", ".xml", ".png", ".csv", ".json", ".wav", ".mp3", ".ogg", ".mp4", ".txt"}
     listed_dlls = {e.text for e in manifest.findall("Assemblies/Assembly")}
     checksums = {}
     local_config = root / ".dev/local.json"
@@ -105,7 +109,7 @@ def main():
                    status="published" if uploaded_matches else "prepared_update_not_uploaded" if uploaded_id else "prepared_not_uploaded", title=manifest.findtext("Name"),
                    title_status="confirmed_by_user" if confirmed else "pending_user_choice",
                    description_status="confirmed_by_user" if confirmed else "pending_user_choice",
-                   voice_lines=len(pack["lines"]), voice_speed=1.1, installed_verified=not args.skip_installed_check,
+                   voice_lines=len(pack["lines"]), voice_pending_lines=pack["pending_lines"], voice_speed=1.1, installed_verified=not args.skip_installed_check,
                    text_languages=["zh", "ja", "en"], voice_languages=["ja"],
                    music_seconds=round(sum(t["seconds"] for t in tapes), 3), final_track=tapes[-1]["title"],
                    content_folder=str(package), archives=results, files=checksums)

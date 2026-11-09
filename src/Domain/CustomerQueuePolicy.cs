@@ -2,8 +2,19 @@ using System.Collections.Generic;
 
 namespace XiaomanVisitor
 {
+    public enum XiaomanVisitKind { None, Story, WorkThanks }
     public static class CustomerQueuePolicy
     {
+        public const string WorkThanksId = XiaomanMod.ClientId + ".work_thanks";
+        public static bool IsXiaoman(string id)
+        { return id == XiaomanMod.ClientId || id == WorkThanksId; }
+        public static XiaomanVisitKind Next(int day,StoryProgress story,TavernWorkProgress work,bool tavernEnabled)
+        {
+            if (story.MayVisit(day)) return XiaomanVisitKind.Story;
+            // A Monday with a completed/queued chapter never gets a second Xiaoman.
+            return tavernEnabled && !story.Finished && !StoryRules.IsMonday(day) && work.ThanksDue(day)
+                ? XiaomanVisitKind.WorkThanks : XiaomanVisitKind.None;
+        }
         // Reposition only the mod's own pending visitor. Never insert over an
         // existing slot, remove another customer, or reorder the native clients.
         public static bool MoveToTail<T>(List<T> queue, T visitor) where T : class

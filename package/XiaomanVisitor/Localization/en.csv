@@ -19,7 +19,7 @@ gift_tape_credit,A melody brought from somewhere far away.
 gift_note_name,A note from Xiaoman
 gift_note_desc,A carefully folded note with thoughtful handwriting.
 gift_note_title,"Dear shopkeeper,"
-gift_note_body,"Thank you for yesterday.\n\nI'd always thought the lower district was full of bad people. I'd braced myself for it.\n\nI hadn't expected you to be so kind.\n\nI've been moving things around so much lately that food and drink slipped my mind.\n\nAfter seeing the cassette player on your counter yesterday, I went through my luggage for quite a while and found this tape.\n\nBack home, I would play this when it rained heavily.\n\nI hope you like it."
+gift_note_body,"While unpacking yesterday, I found two copies of the very same tape.\n\nI hadn't expected to meet someone on this station who still keeps a cassette player.\n\nThis might be a little sudden, but I'd like you to have this one.\n\nI used to listen to this song when it rained heavily back home.\n\nI hope you'll like it too."
 gift_note_signature,— Xiaoman
 collection_tape_name,Cassette: Xiaoman's Rainy Night · {0}
 collection_tape_desc,A cassette Xiaoman left for you. The label carefully reads '{0}'.
@@ -63,22 +63,22 @@ xm_01_shop,I'd like some food or drinking water. I've brought 150 credits.
 xm_01_accept,Thank you. That really helps.
 xm_01_bye,I'd better get going. See you next time.
 story_note_01_title,"Dear shopkeeper,"
-story_note_01_body,"Thank you for yesterday.\n\nI'd always thought the lower district was full of bad people. I'd braced myself for it.\n\nI hadn't expected you to be so kind.\n\nI've been moving things around so much lately that food and drink slipped my mind.\n\nAfter seeing the cassette player on your counter yesterday, I went through my luggage for quite a while and found this tape.\n\nBack home, I would play this when it rained heavily.\n\nI hope you like it."
+story_note_01_body,"While unpacking yesterday, I found two copies of the very same tape.\n\nI hadn't expected to meet someone on this station who still keeps a cassette player.\n\nThis might be a little sudden, but I'd like you to have this one.\n\nI used to listen to this song when it rained heavily back home.\n\nI hope you'll like it too."
 story_note_01_signature,— Xiaoman
 story_note_01_name,A note from Xiaoman
 xm_02_01,Good evening. Here I am again.
-xm_02_02,"The machines never stop humming here, even at night. But there's no sound of rain."
-xm_02_03,"When I first got here, I kept feeling as if something was missing."
-xm_02_shop,My place is still being renovated. I'm looking for a few everyday supplies.
-story_note_02_title,"Dear shopkeeper,"
-story_note_02_body,"Today I peeled the protective film off my little shop's glass door. It turns out the blue billboard opposite is reflected in it all the time.\n\nI haven't even switched on the lights inside, but from outside it already looks open.\n\nI wonder if you've listened to the last tape. I hope you like it.\n\nI found this one while I was unpacking.\n\nThe rhythm is gentler than the last one. You can turn the volume up."
+xm_02_02,"Oh, right… I've opened a little tavern on the shopping street. Tonight's finally opening night."
+xm_02_03,I've rewritten the drinks menu so many times. I'm still not sure what people on the station like.
+xm_02_shop,I'd like to buy some household supplies today. I've brought {0} credits.
+story_note_02_title,"Dear shopkeeper senpai,"
+story_note_02_body,"The little tavern is finally open! ٩(ˊᗜˋ*)و\n\nBefore opening, I peeled the last bit of protective film off the glass door. The blue sign across the street reflects in it. It turned out rather pretty.\n\nThen the first person to walk past asked, ‘Are you still renovating?’\n\n…I'd forgotten to take down the ‘Under renovation’ sign. I checked the menu over and over, and somehow missed the most obvious thing. Honestly…\n\nThis is the tape I played when I opened. I'd like you to hear it too. (´,,•ω•,,)♡"
 story_note_02_signature,— Xiaoman
 story_note_02_name,A note from Xiaoman
-xm_03_01,Good evening. I finally made it to the right floor today.
-xm_03_02,I wrote the opening hours on the glass door. Then I went outside and saw they were all backwards.
-xm_03_shop,"I'd like some food. I've been so busy lately, I keep forgetting to eat."
-story_note_03_title,"Dear shopkeeper,"
-story_note_03_body,My little shop is almost ready to open.\n\nI bought so many glasses. Arranging them all on the wall took me a very long time.\n\nThey look wonderful with the lights on.\n\nYou should find a few decorations for your shop too.\n\nI'm going to start a trial opening next week.\n\nToday's tape is what I played while testing the speakers. I'll leave it here for you.\n\nI'm actually quite good at mixing drinks.\n\nI hope you'll come by.
+xm_03_01,"Good evening, senpai. Here I am again."
+xm_03_02,"The tavern has been rather busy. When the dock shifts change, everyone seems to arrive at once."
+xm_03_shop,I'd like to buy some food today. I've brought {0} credits.
+story_note_03_title,"Dear shopkeeper senpai,"
+story_note_03_body,"After asking you to help yesterday, I realized you have your own shop to run during the day.\n\nWould working here in the evenings leave you too tired?\n\nBut when the dock shifts change, so many customers arrive at once. Sometimes I really can't manage them all on my own.\n\nPlease don't feel you have to. You're always welcome to just come for a drink, and if you do help, I'll make sure you're properly paid!\n\nHere's this week's tape."
 story_note_03_signature,— Xiaoman
 story_note_03_name,A note from Xiaoman
 xm_04_01,Good evening. That little place I mentioned is finally open.
@@ -229,21 +229,111 @@ gift_cassette_case_desc,A case for the tapes Xiaoman leaves you. Fits in the cas
 ui_tavern_name,Xiaoman's Tavern
 ui_tavern_renovating,Under renovation
 ui_tavern_closed,Closed
-ui_tavern_welcome,…Shopkeeper? Welcome. Make yourself comfortable.
 ui_tavern_cash,Credits on hand: {0}
-ui_tavern_buy,Order a drink · {0} CR
-ui_tavern_help,Help tidy the pickup counter
-ui_tavern_ledger,Open the ledger
-ui_tavern_rest,Tonight's activity is complete.
-ui_tavern_pickup_ready,The pickup counter is ready.
-ui_tavern_pickup_waiting,Pickup glasses are still mixed in with those at the bar.
-ui_tavern_ledger_total,Your orders: {0} drinks\nReceived: {1} CR
-ui_tavern_ledger_empty,Nothing has been written on this page yet.
-ui_tavern_ledger_cup,Day {0} · One drink · {1} CR
-ui_tavern_ledger_help,Day {0} · Tidied the pickup counter
-ui_tavern_close_ledger,Close the ledger
-ui_tavern_pickup_sign,Pickup
 cfg_experimental_tavern,Xiaoman's Tavern (Experimental)
-cfg_experimental_tavern_tip,"Off by default. Enable to visit the test tavern from day 1 for drinks, a helping activity and the ledger. Restart the game to apply changes. Disabling keeps your tavern progress."
+cfg_experimental_tavern_tip,"Off by default. Enable and restart: renovation appears on days 3–7, and the tavern opens on the night of day 8. Disabling keeps tavern records and does not affect Monday visits."
+xm_01_04,"When I moved, I brought quite a few tapes with me."
+xm_01_05,"Not many people still listen to tapes these days, do they?"
+ui_tavern_preview_name,A Mysterious New Shop
+ui_tavern_map_desc,The shop is still being fitted out and is not open yet.
+xm_w01_news_title,Mysterious New Shop Under Renovation
+xm_w01_news_body,Work has recently begun inside an empty shop on the lower district shopping street. It is not open for business yet.
+xm_02_04,"If you're free tonight, I'd love for you to stop by. You have more experience running a shop… perhaps you could give me a few pointers."
+xm_02_accept,Thank you. Just what I needed.
+xm_02_bye,I'd better go. I hope you'll visit my little tavern.
+xm_02_02_late,"Oh, right… I've opened a little tavern on the shopping street. We finally opened recently."
+xm_tavern_w02_entry_01,"Welcome… Oh, it's you, shopkeeper."
+xm_tavern_w02_entry_02,I've been looking forward to having you here.
+xm_tavern_w02_entry_03,"It still feels a little strange, saying ‘welcome’ in my very own shop."
+xm_tavern_w02_reentry,"Oh, shopkeeper. Here you are again."
+xm_tavern_greeting,"Good evening, senpai. Welcome."
+xm_tavern_greeting_unknown,Welcome. I'm Xiaoman. This little tavern has only just opened.
+xm_tavern_menu_open,What can I get for you?
+xm_tavern_w02_menu,"Here's the menu for now. There aren't many flavors yet, but I'm confident about the taste."
+xm_tavern_order,"Of course. Just a moment, please."
+xm_tavern_serve,Here you go. I hope it's to your taste.
+xm_tavern_no_money,Oh… It looks like you're a little short on credits.
+xm_tavern_no_takeaway,"Oh, sorry… We can't do takeaway drinks just yet."
+xm_tavern_drink_limit,"No more tonight, shopkeeper. You've already had a glass. You're always welcome to stay for the music, though."
+xm_tavern_w02_chat_01,"Before opening, I secretly practiced saying ‘welcome’ a few times. Then someone actually came in, and I got even more nervous."
+xm_tavern_w02_chat_02,A customer told me yesterday that they liked the music. Hehe. I do put a lot of thought into choosing tapes.
+xm_tavern_w02_chat_03,"Some people like their drinks sweeter, others prefer something sour… I suppose there's still work to do on the menu."
+xm_tavern_w02_chat_04,"When I first opened, even saying ‘welcome’ made me nervous. Now… I think I'm getting a little more used to it."
+xm_tavern_w02_help_intro,"Oh, a customer… I'm still making drinks. Senpai, could you take them a menu for me?"
+xm_tavern_w02_help_done,"Thank you, senpai! It's been a little hectic since opening… I'm glad you were here."
+xm_tavern_w02_help_skip,That's all right. I'll take care of it.
+xm_tavern_w02_rain_01,"Looking at the rain on the window, senpai? It's one of my little touches for the tavern."
+xm_tavern_w02_rain_02,It took quite a bit of work to make it look as though it was raining.
+xm_tavern_w02_tape_intro,"I brought this cassette deck from home. If there's something you'd like to hear, shopkeeper, feel free to choose."
+xm_tavern_greeting_plain,Welcome.
+xm_tavern_chat_rest,Make yourself comfortable. Let's listen for a while.
+xm_tavern_w02_entry_01_unknown,"Welcome… Oh, it's you, friend."
+xm_tavern_w02_reentry_unknown,"Oh, friend. Here you are again."
+xm_tavern_drink_limit_unknown,"No more tonight. You've already had a glass. You're always welcome to stay for the music, though."
+xm_tavern_w02_help_intro_unknown,"Oh, a customer… I'm still making drinks. Could you take them a menu for me?"
+xm_tavern_w02_help_done_unknown,Thank you! It's been a little hectic since opening… I'm glad you were here.
+xm_tavern_w02_rain_01_unknown,Looking at the rain on the window? It's one of my little touches for the tavern.
+xm_tavern_w02_tape_intro_unknown,"I brought this cassette deck from home. If there's something you'd like to hear, feel free to choose."
+xm_tavern_chat_rest_unknown,Make yourself comfortable. Let's listen for a while.
+ui_tavern_open_desc,The lights are on. Music drifts from inside.
+ui_tavern_scene_hint,"Select Xiaoman, the window, or the cassette deck."
+ui_tavern_menu,Drinks
+ui_tavern_interaction,Spend some time
+ui_tavern_look,Just looking
+ui_tavern_chat,Chat
+ui_tavern_reception,Help welcome a guest
+ui_tavern_back,Back
+ui_tavern_help_confirm,Hand over the menu
+ui_tavern_help_skip,Not right now
+ui_tavern_drunk_today,You've already had a glass today.
+ui_tavern_one_glass,One glass per day. Enjoy it here.
+ui_tavern_drink_list,{0} · {1} CR\n{2} · {3} · {4}
+ui_tavern_drink_price,Price: {0} CR\nCredits on hand: {1}
+ui_tavern_confirm_drink,Pay and drink here
+ui_tavern_takeaway,Ask about takeaway
+ui_tavern_music,Choose a tape
+ui_tavern_payment_pending,This payment is still being checked.
+xm_03_03,Making drinks and looking after the customers on my own… Sometimes I can hardly keep up.
+xm_03_04,"If you're free tonight, could you give me a hand? I'll pay you, of course! I can't just take up your time for nothing."
+xm_03_accept,Thank you. Just what I needed.
+xm_03_bye,"I'd better go. If you're free tonight, you're always welcome to stop by."
+xm_03_04_already_worked,"I remember all the help you've given me lately. When things quieten down, come over and listen to some music too."
+story_note_03_b_title,"Dear shopkeeper senpai,"
+story_note_03_b_body,"Thank you for all your work yesterday!\n\nI'd thought having another pair of hands would give us a little breathing room.\n\nThen the customers kept coming, one after another. We barely had time for a proper conversation.\n\nBut after closing, I turned around and found the whole counter neatly tidied up.\n\nUsually, I'd still have so much to do on my own.\n\nHehe. I was tired, but it was rather lovely.\n\nHere's this week's tape."
+story_note_03_b_signature,— Xiaoman
+xm_tavern_w03_work_offer_01,"Oh, senpai! The next shift's customers will be here soon. Could you help me look after them?"
+xm_tavern_w03_work_offer_02,"I'll make sure you're paid. This is a proper job, you know."
+xm_tavern_w03_work_w02_callback,"I remember you handing out menus for me. This time, I really must pay you for your help."
+xm_tavern_w03_work_start,"Thank you, senpai! I'll leave these customers with you while I look after the bar."
+xm_tavern_w03_work_done_01,Phew… We've finally caught up. You were a huge help!
+xm_tavern_w03_work_done_02,"Here's your pay. Thanks to you, those customers didn't have a wasted trip."
+xm_tavern_w03_work_decline,That's all right. You have your own shop to look after too.
+xm_tavern_w03_work_done_today,"You've already finished your shift today, senpai. If you stay any longer, I'll start worrying you aren't getting enough rest."
+xm_tavern_w03_work_no_orders,I can manage for now. Just stay and enjoy the music.
+xm_w03_thanks_01,Thank you again for helping me that night. I thought I should come and say it in person.
+xm_w03_thanks_02,I set this glass aside especially for you. Your pay was for the work; this is just a little thank-you from me.
+xm_w03_thanks_shop,"Oh, while I'm here, I'd like to buy some food or drinking water too."
+xm_w03_thanks_bye,I'd better get back to the tavern. Don't wear yourself out either.
+xm_tavern_w03_chat_01,"Have you noticed? It's so lively when the shifts change. After everyone leaves, you can slowly hear the rain again."
+xm_tavern_w03_chat_02,"I can get a bit flustered when it's busy. But when I hear the customers laughing, I'm glad I opened this place."
+xm_tavern_w03_chat_after_work,You worked hard too. Those customers said they'd come again as they were leaving.
+xm_tavern_w03_work_offer_01_unknown,Oh! The next shift's customers will be here soon. Could you help me look after them?
+xm_tavern_w03_work_w02_callback_unknown,"I remember you handing out menus for me. This time, I really must pay you for your help."
+xm_tavern_w03_work_start_unknown,Thank you! I'll leave these customers with you while I look after the bar.
+xm_tavern_w03_work_done_01_unknown,Phew… We've finally caught up. You were a huge help!
+xm_tavern_w03_work_done_02_unknown,"Here's your pay. Thanks to you, those customers didn't have a wasted trip."
+xm_tavern_w03_work_decline_unknown,That's all right. You have things of your own to take care of too.
+xm_tavern_w03_work_done_today_unknown,"You've already finished your shift today. If you stay any longer, I'll start worrying you aren't getting enough rest."
+xm_tavern_w03_work_no_orders_unknown,I can manage for now. Just stay and enjoy the music.
+xm_tavern_w03_chat_01_unknown,"Have you noticed? It's so lively when the shifts change. After everyone leaves, you can slowly hear the rain again."
+xm_tavern_w03_chat_after_work_unknown,You worked hard too. Those customers said they'd come again as they were leaving.
+ui_tavern_paid_work,Help serve guests · {0} CR
+ui_tavern_work_wage,Shift pay: {0} CR
+ui_tavern_work_confirm,Help serve guests
+ui_tavern_work_decline,Not tonight
+ui_tavern_work_phase_1,Welcoming guests
+ui_tavern_work_phase_2,Organizing orders
+ui_tavern_work_phase_3,Tidying up
+ui_tavern_wage_pending,This shift's pay is still being checked.
 xm_gun_plead,U-um… could you put the gun down first?
 xm_gun_holstered,…You startled me.

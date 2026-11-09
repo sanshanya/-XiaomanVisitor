@@ -74,78 +74,6 @@
       "generic": false
     },
     {
-      "line_key": "xm_02_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_02_02_c6a5c9011ce5",
-      "spoken_text": "ここって、夜もずっと機械の音がするんですね。……でも、雨の音はしないんだ。",
-      "subtitle_templates": [
-        "这里晚上也总有机器在响呢。可是听不到雨声。",
-        "ここって、夜もずっと機械の音がするんですね。……でも、雨の音はしないんだ。",
-        "The machines never stop humming here, even at night. But there's no sound of rain."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_02_03",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_02_03_969ec150bde3",
-      "spoken_text": "こっちに来てから、何か足りないなって思ってたんです。",
-      "subtitle_templates": [
-        "刚搬来那会儿，总觉得少了点什么。",
-        "こっちに来てから、何か足りないなって思ってたんです。",
-        "When I first got here, I kept feeling as if something was missing."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_02_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_02_shop_3108182827f1",
-      "spoken_text": "お店がまだ改装中で。今日は日用品を少し探してるんです。",
-      "subtitle_templates": [
-        "最近店里还在装修，想买些日用品。",
-        "お店がまだ改装中で。今日は日用品を少し探してるんです。",
-        "My place is still being renovated. I'm looking for a few everyday supplies."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_03_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_03_01_3d8c24a2ffa5",
-      "spoken_text": "こんばんは。今日はやっと階を間違えずに来られました。",
-      "subtitle_templates": [
-        "晚上好。今天总算没走错楼层。",
-        "こんばんは。今日はやっと階を間違えずに来られました。",
-        "Good evening. I finally made it to the right floor today."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_03_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_03_02_4a481750c21d",
-      "spoken_text": "ガラスのドアに営業時間を書いたら…… 外からは文字が全部反対向きで。",
-      "subtitle_templates": [
-        "在玻璃门上写了营业时间，出去一看，字全是反的。",
-        "ガラスのドアに営業時間を書いたら、外からは文字が全部反対向きで。",
-        "I wrote the opening hours on the glass door. Then I went outside and saw they were all backwards."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_03_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_03_shop_ebf96a7fe033",
-      "spoken_text": "食べるものを少し。最近ばたばたして、つい食事を忘れちゃうんです。",
-      "subtitle_templates": [
-        "想买点吃的。最近忙起来，总是忘记吃饭。",
-        "食べるものを少し。最近ばたばたして、つい食事を忘れちゃうんです。",
-        "I'd like some food. I've been so busy lately, I keep forgetting to eat."
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_04_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_01_b2f4de534a95",
@@ -1286,8 +1214,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 0,
+  "pending_lines": 74,
   "pending_by_language": {
-    "ja": 0
+    "ja": 74
   }
 }

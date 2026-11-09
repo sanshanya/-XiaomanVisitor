@@ -1,0 +1,4 @@
+# Offline environment art only; install into a separate virtual environment.
+numpy==2.3.5
+opencv-python==4.13.0.92
+Pillow==12.3.0

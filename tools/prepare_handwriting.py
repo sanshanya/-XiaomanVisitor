@@ -26,12 +26,12 @@ def main():
         texts = layout.read_texts(language)
         folder = target / language
         folder.mkdir(exist_ok=True)
-        for visit in range(1, 15):
-            key = f"story_note_{visit:02d}"
+        letters=[(visit,f"story_note_{visit:02d}") for visit in range(1,15)]+[(3,'story_note_03_b')]
+        for visit,key in letters:
             required = "".join(texts[key+"_"+part] for part in ("title","body","signature"))
-            missing = {c for c in required if not c.isspace() and ord(c) not in chars}
+            missing = {c for c in required if not c.isspace() and layout.glyph_path(font,c) is None}
             assert not missing, (key, language, missing)
-            row, ink = layout.render_ink_layer("yozai", visit, language, texts)
+            row, ink = layout.render_ink_layer("yozai", visit, language, texts,letter_id=key)
             assert row["fits"], row
             # Match the original paper's native resolution; no repeated paper bitmaps.
             ink = ink.resize((1122, 1402), Image.Resampling.LANCZOS)
@@ -49,6 +49,7 @@ def main():
                              text_sha256=hashlib.sha256(required.encode("utf-8")).hexdigest(),
                              layout=row))
     document = dict(schema=1,font="Yozai Regular",font_sha256=digest(font),
+                    kaomoji_fallbacks=[dict(file=p.name,sha256=digest(p)) for p in layout.FALLBACKS],
                     authoring_font="experiments/handwriting/fonts/Yozai-Regular.ttf",
                     renderer="tools/prepare_handwriting.py",width=1122,height=1402,
                     ink="#28466B",opacity=237/255,body_size_px=18,
@@ -68,6 +69,7 @@ def main():
         "字体作者及原始来源：https://github.com/lxgw/yozai-font\n"
         "许可：SIL Open Font License 1.1，完整授权及版权声明见 Yozai-Regular-OFL.txt。\n"
         "发布包仅含本模组固定信件的文字图层，不包含完整字体文件。\n"
+        "第二封信颜文字的少数字符在制作时使用Windows的Segoe UI和Gadugi字形回退；正文仍为悠哉，不附带这些字体文件。\n"
         "这些文字图层在制作阶段生成；玩家不需要安装字体或联网。\n",encoding="utf-8")
     print(json.dumps(dict(letters=len(rows),bytes=sum(r["bytes"] for r in rows),
                          max_file=max(r["bytes"] for r in rows),font_in_package=False),indent=2))

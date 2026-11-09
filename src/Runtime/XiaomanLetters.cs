@@ -33,7 +33,7 @@ namespace XiaomanVisitor
         private PaperUI paper;
         private Texture2D texture;
         private RawImage image;
-        private string attemptedLanguage;
+        private string attemptedLanguage, attemptedVariant;
         private readonly Dictionary<string, bool> originalVisibility = new Dictionary<string, bool>();
         private readonly Dictionary<string, CustomUIElement> originalElements = new Dictionary<string, CustomUIElement>();
 
@@ -60,6 +60,7 @@ namespace XiaomanVisitor
         {
             if (paper == null || XiaomanMod.Instance == null) return;
             string language = LetterInkRules.Language(LocHelper.GetCurrentLocaleCode());
+            // The choice is frozen before delivery; do not deserialize the story every frame.
             if (language != attemptedLanguage) RefreshInk();
         }
 
@@ -67,15 +68,18 @@ namespace XiaomanVisitor
         {
             if (paper == null || !paper.IsVisible || XiaomanMod.Instance == null) return;
             string language = LetterInkRules.Language(LocHelper.GetCurrentLocaleCode());
-            if (texture != null && image != null && attemptedLanguage == language)
+            string variant=paper.Data.id=="story_note_03" ? XiaomanMod.Instance.ThirdNoteVariant : "A";
+            if (texture != null && image != null && attemptedLanguage == language && attemptedVariant==variant)
             {
                 image.gameObject.SetActive(true);
                 SetOriginalVisible(false);
                 return;
             }
             attemptedLanguage = language;
+            attemptedVariant = variant;
             string path;
             if (!LetterInkRules.TryResolve(paper.ModId, paper.Data.id, language, out path)) return;
+            path=LetterInkRules.VariantPath(path,paper.Data.id,variant);
             Texture2D pending = null;
             try
             {
@@ -152,6 +156,7 @@ namespace XiaomanVisitor
         {
             ReleaseInk();
             attemptedLanguage = null;
+            attemptedVariant = null;
             SetOriginalVisible(true);
         }
 

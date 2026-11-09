@@ -127,7 +127,7 @@ namespace XiaomanVisitor
             if (mod == null || !PlayerStore.HasInstance || StoreClientMono.Instance == null) return;
             StoreClientInstance instance = PlayerStore.Instance.currentClientInstance;
             StoreClient client = instance == null ? null : instance.GetClientBlueprint();
-            if (client == null || client.identifier != XiaomanMod.ClientId)
+            if (client == null || !GunReaction.Protects(true,client.identifier))
             {
                 previousClient = null;
                 return;

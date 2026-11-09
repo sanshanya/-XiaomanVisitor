@@ -1,0 +1,40 @@
+{
+  "lines": {
+    "xm_03_01": "Good evening, senpai. Here I am again.",
+    "xm_03_02": "The tavern has been rather busy. When the dock shifts change, everyone seems to arrive at once.",
+    "xm_03_03": "Making drinks and looking after the customers on my own… Sometimes I can hardly keep up.",
+    "xm_03_04": "If you're free tonight, could you give me a hand? I'll pay you, of course! I can't just take up your time for nothing.",
+    "xm_03_shop": "I'd like to buy some food today. I've brought {0} credits.",
+    "xm_03_accept": "Thank you. Just what I needed.",
+    "xm_03_bye": "I'd better go. If you're free tonight, you're always welcome to stop by.",
+    "xm_03_04_already_worked": "I remember all the help you've given me lately. When things quieten down, come over and listen to some music too.",
+    "xm_tavern_w03_work_offer_01": "Oh, senpai! The next shift's customers will be here soon. Could you help me look after them?",
+    "xm_tavern_w03_work_offer_02": "I'll make sure you're paid. This is a proper job, you know.",
+    "xm_tavern_w03_work_w02_callback": "I remember you handing out menus for me. This time, I really must pay you for your help.",
+    "xm_tavern_w03_work_start": "Thank you, senpai! I'll leave these customers with you while I look after the bar.",
+    "xm_tavern_w03_work_done_01": "Phew… We've finally caught up. You were a huge help!",
+    "xm_tavern_w03_work_done_02": "Here's your pay. Thanks to you, those customers didn't have a wasted trip.",
+    "xm_tavern_w03_work_decline": "That's all right. You have your own shop to look after too.",
+    "xm_tavern_w03_work_done_today": "You've already finished your shift today, senpai. If you stay any longer, I'll start worrying you aren't getting enough rest.",
+    "xm_tavern_w03_work_no_orders": "I can manage for now. Just stay and enjoy the music.",
+    "xm_w03_thanks_01": "Thank you again for helping me that night. I thought I should come and say it in person.",
+    "xm_w03_thanks_02": "I set this glass aside especially for you. Your pay was for the work; this is just a little thank-you from me.",
+    "xm_w03_thanks_shop": "Oh, while I'm here, I'd like to buy some food or drinking water too.",
+    "xm_w03_thanks_bye": "I'd better get back to the tavern. Don't wear yourself out either.",
+    "xm_tavern_w03_chat_01": "Have you noticed? It's so lively when the shifts change. After everyone leaves, you can slowly hear the rain again.",
+    "xm_tavern_w03_chat_02": "I can get a bit flustered when it's busy. But when I hear the customers laughing, I'm glad I opened this place.",
+    "xm_tavern_w03_chat_after_work": "You worked hard too. Those customers said they'd come again as they were leaving."
+  },
+  "letters": {
+    "A": {
+      "title": "Dear shopkeeper senpai,",
+      "body": "After asking you to help yesterday, I realized you have your own shop to run during the day.\n\nWould working here in the evenings leave you too tired?\n\nBut when the dock shifts change, so many customers arrive at once. Sometimes I really can't manage them all on my own.\n\nPlease don't feel you have to. You're always welcome to just come for a drink, and if you do help, I'll make sure you're properly paid!\n\nHere's this week's tape.",
+      "signature": "— Xiaoman"
+    },
+    "B": {
+      "title": "Dear shopkeeper senpai,",
+      "body": "Thank you for all your work yesterday!\n\nI'd thought having another pair of hands would give us a little breathing room.\n\nThen the customers kept coming, one after another. We barely had time for a proper conversation.\n\nBut after closing, I turned around and found the whole counter neatly tidied up.\n\nUsually, I'd still have so much to do on my own.\n\nHehe. I was tired, but it was rather lovely.\n\nHere's this week's tape.",
+      "signature": "— Xiaoman"
+    }
+  }
+}

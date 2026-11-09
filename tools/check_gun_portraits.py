@@ -1,5 +1,6 @@
 """Read-only validation of the optional gun portraits and untouched normal artwork."""
 import hashlib
+import csv
 import json
 from pathlib import Path
 from PIL import Image, ImageChops
@@ -89,6 +90,10 @@ def main():
         assert upper_darkening/upper_pixels >= lower_darkening/lower_pixels + 20, "Shadow must concentrate above the eyebrows"
     text = json.loads((ROOT / "story/持枪反应.json").read_text(encoding="utf-8"))["localization"]
     assert set(text) == {"zh", "ja", "en"} and all(set(rows) == set(text["zh"]) for rows in text.values())
+    for language,entries in text.items():
+        with (package/f'Localization/{language}.csv').open(encoding='utf-8-sig',newline='') as f:
+            localized=dict(csv.reader(f))
+        assert all(localized.get(key)==value for key,value in entries.items()),'Stale gun-reaction subtitles'
     print(f"PASS: original eyes/sweat/mouth and pixels outside the forehead unchanged; {shaded_pixels} shaded pixels, darker roots and earlier lower fade; normal artwork/body/silhouette and three-language dialogue unchanged.")
 
 

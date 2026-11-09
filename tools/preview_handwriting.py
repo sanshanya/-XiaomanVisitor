@@ -12,6 +12,7 @@ import random
 import re
 import struct
 import sys
+from functools import lru_cache
 import xml.etree.ElementTree as ET
 
 from PIL import Image, ImageDraw, ImageFont
@@ -31,12 +32,15 @@ FONTS = {
     "yozai": TRIAL / "fonts/Yozai-Regular.ttf",
     "xiaolai": TRIAL / "fonts/Xiaolai-Regular.ttf",
 }
+KAOMOJI = set('٩(ˊᗜˋ*)و(´,,•ω•,,)♡')
+FALLBACKS = (Path('C:/Windows/Fonts/segoeui.ttf'),Path('C:/Windows/Fonts/gadugi.ttf'))
 LABEL_FONT = "C:/Windows/Fonts/msyh.ttc"  # comparison labels only
 OPENING = set("（《「『【〔〈([{“‘")
 CLOSING = set("，。！？；：、）》」』】〕〉)]}”’….,!?;:%")
 SAMPLES = ((1, "zh"), (6, "ja"), (12, "en"))
 
 
+@lru_cache(maxsize=None)
 def cmap_coverage(path):
     """Read Unicode cmap 4/12 directly, without installing font tools globally."""
     data = path.read_bytes()
@@ -83,11 +87,35 @@ def read_texts(language):
         return {k: v.replace("\\n", "\n") for k, v in csv.reader(handle)}
 
 
+@lru_cache(maxsize=None)
 def font_at(path, size):
     return ImageFont.truetype(str(path), round(size * SCALE))
 
 
+def glyph_path(path, char):
+    if ord(char) in cmap_coverage(path):
+        return path
+    if char in KAOMOJI:
+        for fallback in FALLBACKS:
+            if fallback.exists() and ord(char) in cmap_coverage(fallback):
+                return fallback
+    return None
+
+
 def measured(text, font, size):
+    path=Path(font.path)
+    if any(glyph_path(path,c)!=path for c in text):
+        width=0
+        previous_font=None; previous=''
+        for char in text:
+            selected=glyph_path(path,char)
+            if selected is None: raise ValueError(f'Missing letter glyph U+{ord(char):04X}')
+            current=font_at(selected,size)
+            if current is previous_font:
+                width+=(current.getlength(previous+char)-current.getlength(previous)-current.getlength(char))/SCALE
+            width+=current.getlength(char)/SCALE
+            previous_font,previous=current,char
+        return width+max(0,len(text)-1)*TRACKING*size
     return font.getlength(text)/SCALE + max(0, len(text)-1)*TRACKING*size
 
 
@@ -127,8 +155,12 @@ def write_line(layer, xy, text, path, size, seed, *, slope=0):
     rng = fixed_rng(seed)
     x, y = xy
     origin_x = x
+    previous_font=None
     for index, char in enumerate(text):
-        if index:
+        selected=glyph_path(path,char)
+        if selected is None: raise ValueError(f'Missing letter glyph U+{ord(char):04X}')
+        font=font_at(selected,size)
+        if index and previous_font is font:
             previous = text[index-1]
             kern = (font.getlength(previous+char)-font.getlength(previous)
                     -font.getlength(char))/SCALE
@@ -138,12 +170,13 @@ def write_line(layer, xy, text, path, size, seed, *, slope=0):
         draw.text((round(x*SCALE), round(yy*SCALE)), char,
                   font=font, fill=INK, anchor="ls")
         x += font.getlength(char)/SCALE + TRACKING*size + rng.uniform(-0.006, 0.006)*size
+        previous_font=font
 
 
-def letter_layout(font_key, visit, language, texts):
+def letter_layout(font_key, visit, language, texts, letter_id=None):
     path = FONTS[font_key]
     font = font_at(path, BODY_SIZE)
-    key = f"story_note_{visit:02d}"
+    key = letter_id or f"story_note_{visit:02d}"
     body = texts[key+"_body"]
     lines = wrap(body, font, BODY_SIZE, 500, language)
     step = BODY_SIZE*LINE_HEIGHT
@@ -162,10 +195,10 @@ def letter_layout(font_key, visit, language, texts):
     return row, positions
 
 
-def render_ink_layer(font_key, visit, language, texts):
+def render_ink_layer(font_key, visit, language, texts, letter_id=None):
     path = FONTS[font_key]
-    key = f"story_note_{visit:02d}"
-    row, positions = letter_layout(font_key, visit, language, texts)
+    key = letter_id or f"story_note_{visit:02d}"
+    row, positions = letter_layout(font_key, visit, language, texts, key)
     layer = Image.new("RGBA", (WIDTH*SCALE, HEIGHT*SCALE))
     write_line(layer, (60, 60+21), texts[key+"_title"], path, 21,
                f"{visit}/{language}/title")

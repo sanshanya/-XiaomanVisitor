@@ -1,0 +1,40 @@
+{
+  "lines": {
+    "xm_02_01": "Good evening. Here I am again.",
+    "xm_02_02": "Oh, right… I've opened a little tavern on the shopping street. Tonight's finally opening night.",
+    "xm_02_03": "I've rewritten the drinks menu so many times. I'm still not sure what people on the station like.",
+    "xm_02_04": "If you're free tonight, I'd love for you to stop by. You have more experience running a shop… perhaps you could give me a few pointers.",
+    "xm_02_shop": "I'd like to buy some household supplies today. I've brought {0} credits.",
+    "xm_02_accept": "Thank you. Just what I needed.",
+    "xm_02_bye": "I'd better go. I hope you'll visit my little tavern.",
+    "xm_02_02_late": "Oh, right… I've opened a little tavern on the shopping street. We finally opened recently.",
+    "xm_tavern_w02_entry_01": "Welcome… Oh, it's you, shopkeeper.",
+    "xm_tavern_w02_entry_02": "I've been looking forward to having you here.",
+    "xm_tavern_w02_entry_03": "It still feels a little strange, saying ‘welcome’ in my very own shop.",
+    "xm_tavern_w02_reentry": "Oh, shopkeeper. Here you are again.",
+    "xm_tavern_greeting": "Good evening, senpai. Welcome.",
+    "xm_tavern_greeting_unknown": "Welcome. I'm Xiaoman. This little tavern has only just opened.",
+    "xm_tavern_menu_open": "What can I get for you?",
+    "xm_tavern_w02_menu": "Here's the menu for now. There aren't many flavors yet, but I'm confident about the taste.",
+    "xm_tavern_order": "Of course. Just a moment, please.",
+    "xm_tavern_serve": "Here you go. I hope it's to your taste.",
+    "xm_tavern_no_money": "Oh… It looks like you're a little short on credits.",
+    "xm_tavern_no_takeaway": "Oh, sorry… We can't do takeaway drinks just yet.",
+    "xm_tavern_drink_limit": "No more tonight, shopkeeper. You've already had a glass. You're always welcome to stay for the music, though.",
+    "xm_tavern_w02_chat_01": "Before opening, I secretly practiced saying ‘welcome’ a few times. Then someone actually came in, and I got even more nervous.",
+    "xm_tavern_w02_chat_02": "A customer told me yesterday that they liked the music. Hehe. I do put a lot of thought into choosing tapes.",
+    "xm_tavern_w02_chat_03": "Some people like their drinks sweeter, others prefer something sour… I suppose there's still work to do on the menu.",
+    "xm_tavern_w02_chat_04": "When I first opened, even saying ‘welcome’ made me nervous. Now… I think I'm getting a little more used to it.",
+    "xm_tavern_w02_help_intro": "Oh, a customer… I'm still making drinks. Senpai, could you take them a menu for me?",
+    "xm_tavern_w02_help_done": "Thank you, senpai! It's been a little hectic since opening… I'm glad you were here.",
+    "xm_tavern_w02_help_skip": "That's all right. I'll take care of it.",
+    "xm_tavern_w02_rain_01": "Looking at the rain on the window, senpai? It's one of my little touches for the tavern.",
+    "xm_tavern_w02_rain_02": "It took quite a bit of work to make it look as though it was raining.",
+    "xm_tavern_w02_tape_intro": "I brought this cassette deck from home. If there's something you'd like to hear, shopkeeper, feel free to choose."
+  },
+  "letter": {
+    "title": "Dear shopkeeper senpai,",
+    "body": "The little tavern is finally open! ٩(ˊᗜˋ*)و\n\nBefore opening, I peeled the last bit of protective film off the glass door. The blue sign across the street reflects in it. It turned out rather pretty.\n\nThen the first person to walk past asked, ‘Are you still renovating?’\n\n…I'd forgotten to take down the ‘Under renovation’ sign. I checked the menu over and over, and somehow missed the most obvious thing. Honestly…\n\nThis is the tape I played when I opened. I'd like you to hear it too. (´,,•ω•,,)♡",
+    "signature": "— Xiaoman"
+  }
+}

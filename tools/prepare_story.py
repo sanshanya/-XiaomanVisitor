@@ -7,6 +7,8 @@ import json
 import re
 import sys
 import wave
+import week_two_source
+import week_three_source
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "package/XiaomanVisitor"
@@ -60,8 +62,26 @@ def main():
     parser.add_argument("--source", type=Path, default=SOURCE)
     args = parser.parse_args()
     text = args.source.read_text(encoding="utf-8-sig")
+    week_two = week_two_source.read()
+    week_three = week_three_source.read()
+    week_three_source.generate()
+    week_two_source.generate(dict(week_two,lines=dict(week_two['lines'],**week_three['lines'])))
     english = json.loads((ROOT / "story/英文台词.json").read_text(encoding="utf-8"))
-    translated_notes = {n["visit"]: n for n in json.loads((ROOT / "story/纸条正文.json").read_text(encoding="utf-8"))["notes"]}
+    english.update({key:row['en'] for key,row in week_two['lines'].items()})
+    english.update({key:row['en'] for key,row in week_three['lines'].items()})
+    notes_path=ROOT/'story/纸条正文.json'
+    note_document=json.loads(notes_path.read_text(encoding='utf-8'))
+    note_two=next(n for n in note_document['notes'] if n['visit']==2)
+    for lang,note in week_two['letters'].items():
+        note_two[lang]=note['body']
+        note_two['title_'+lang]=note['title']; note_two['signature_'+lang]=note['signature']
+    note_two['source']=week_two['source']
+    note_three=next(n for n in note_document['notes'] if n['visit']==3)
+    for lang,note in week_three['letters']['A'].items():
+        note_three[lang]=note['body'];note_three['title_'+lang]=note['title'];note_three['signature_'+lang]=note['signature']
+    note_three['source']=week_three['source'];note_three['variants']={'B':week_three['letters']['B']}
+    save(notes_path,note_document)
+    translated_notes = {n['visit']:n for n in note_document['notes']}
     paper_style_path = ROOT / "assets/paper-style.json"
     paper_style = json.loads(paper_style_path.read_text(encoding="utf-8")) if paper_style_path.exists() else None
     loc = {}
@@ -73,7 +93,7 @@ def main():
     def add(key, zh, ja, mood, spoken=None, kind="speech", **extra):
         if key in lines:
             raise ValueError("Duplicate dialogue key: " + key)
-        if mood not in MOODS:
+        if mood not in MOODS and mood not in MOODS.values():
             raise ValueError(mood)
         clean = re.sub(r"\[(?:chuckles|laughs|gasps|sighs|breath|exhale|inhales)\]", "", ja)
         assert clean == ja, (key, "TTS tag leaked into subtitles")
@@ -81,7 +101,7 @@ def main():
         loc["ja"][key] = ja
         loc["en"][key] = english[key]
         generate = ja if spoken in (None, "＝字幕", "=字幕") else spoken
-        lines[key] = dict(key=key, zh=zh, ja=ja, en=english[key], mood=MOODS[mood], kind=kind,
+        lines[key] = dict(key=key, zh=zh, ja=ja, en=english[key], mood=MOODS.get(mood,mood), kind=kind,
                           generate_text="" if kind == "sfx" else generate, **extra)
 
     sections = list(re.finditer(r"(?m)^## 第 (\d{2}) 次｜([^\n]+)\n", text))
@@ -90,14 +110,19 @@ def main():
         n = int(match[1])
         section = text[match.end():sections[i+1].start() if i+1 < len(sections) else text.index("## 尾声")]
         opening, special = [], {}
-        for row in table_lines(section):
+        overlay=week_two if n==2 else week_three
+        chapter_rows = table_lines(section) if n not in (2,3) else [
+            [f'`{key}` · {row["mood"]}',row['zh'],row['ja'],'暂不配音']
+            for key,row in overlay['lines'].items() if key.startswith(f'xm_{n:02d}_')]
+        for row in chapter_rows:
             m = re.fullmatch(r"`(xm_\d{2}_[^`]+)`\s*·\s*(.+)", row[0])
             assert m is not None, row
             key, mood = m.groups()
-            add(key, row[1], row[2], mood)
+            extra = {"defer_voice": True} if len(row) > 3 and row[3] == "暂不配音" else {}
+            add(key, row[1], row[2], mood, **extra)
             if re.search(r"_(?:\d+|shop)$", key):
                 opening.append(key)
-            else:
+            elif not key.endswith(('_late','_already_worked')):
                 special[key.rsplit("_", 1)[1]] = key
         note_start = section.index("**周二｜纸条")
         jp_start = section.index("**日本語｜手紙**", note_start)
@@ -115,9 +140,30 @@ def main():
             loc[lang][f"story_note_{n:02d}_body"] = translated_notes[n][lang]
         loc["en"][f"story_note_{n:02d}_signature"] = "— Xiaoman"
         loc["en"][f"story_note_{n:02d}_name"] = "A note from Xiaoman"
+        for lang in ("zh", "ja", "en"):
+            for field in ("title", "signature"):
+                override = translated_notes[n].get(field + "_" + lang)
+                if override:
+                    loc[lang][f"story_note_{n:02d}_{field}"] = override
         episodes.append(dict(index=n, title=match[2], credits=BUDGETS[i], demand=DEMANDS[i], track=TRACKS[i], opening=opening,
                              accept=special.get("accept", "accept_return"), goodbye=special.get("bye", "goodbye"),
                              cocktail=special.get("cocktail", ""), note_id=f"story_note_{n:02d}"))
+
+    episodes[1]['title']='另一盏灯'
+    episodes[2]['title']='忙碌的夜班'
+    for lang,note in week_two['letters'].items():
+        for field in ('title','body','signature'):
+            loc[lang]['story_note_02_'+field]=note[field]
+    for key,row in week_two['lines'].items():
+        if key.startswith('xm_tavern_'):
+            add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
+    for variant,note in week_three['letters'].items():
+        for lang,fields in note.items():
+            for field,value in fields.items():
+                loc[lang]['story_note_03'+('_b' if variant=='B' else '')+'_'+field]=value
+    for key,row in week_three['lines'].items():
+        if not key.startswith('xm_03_'):
+            add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
 
     generic_section = text[text.index("## 通用交易台词与衔接"):text.index("## 0.7.0 专属动作")]
     for row in table_lines(generic_section):
@@ -142,6 +188,8 @@ def main():
     override_section = text[text.index("### D. 十四周"):text.index("### E. 实现验收")]
     for row in table_lines(override_section):
         key = row[0].strip("`")
+        if key in week_two['lines'] or key in week_three['lines']:
+            continue # An older performance draft cannot override a rewritten week's Japanese.
         lines[key]["generate_text"] = row[2]
         lines[key]["performance_optional"] = True
     # Direct user instructions override the draft's older dynamic-budget discussion.
@@ -222,7 +270,9 @@ def main():
     voice_keys = [k for k, row in lines.items() if not row.get("reference") and row["kind"] == "speech" and "voice_alias" not in row]
     source_path = args.source.resolve()
     source_name = source_path.relative_to(ROOT).as_posix() if source_path.is_relative_to(ROOT) else source_path.name
-    snapshot = dict(schema=1, version="3.4", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+    snapshot = dict(schema=1, version="4.4-W03", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                    week_two_source=week_two['source'],week_two_sha256=week_two['sha256'],
+                    week_three_source=week_three['source'],week_three_sha256=week_three['sha256'],
                     episodes=episodes, actions=actions, lines=list(lines.values()), voice_keys=voice_keys,
                     sale_rule=dict(first=4, last=13, later_chance_percent=30, count=2, basic_only=True, excluded_visits=[6]),
                     fixed_drink_gift=dict(visit=6, count=1, tier=2, random_once=True, next_day=True, replaces_trade_reward=True),
@@ -243,14 +293,22 @@ def main():
                    reviewed=True, audio="", note="用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
                    source_sha256=hashlib.sha256(json.dumps([templates, generate], ensure_ascii=False).encode("utf-8")).hexdigest())
         prior = previous.get(key, {})
-        if (all(prior.get("subtitle_templates", {}).get(lang) == templates[lang] for lang in ("zh", "ja"))
+        if (prior.get("subtitle_templates", {}).get('ja') == templates['ja']
                 and prior.get("generate_text", prior.get("spoken_text")) == generate):
             row["audio"] = prior.get("audio", "")
+            row["reviewed"] = prior.get("reviewed", False)
         if key == "intro_1":
             row.update(audio=previous[key]["audio"], spoken_text=previous[key]["spoken_text"], generate_text=previous[key]["spoken_text"],
                        speed=prior.get("speed", 1.0), text_normalization=prior.get("text_normalization", False))
+        if line.get("defer_voice") and not row['audio']:
+            row.update(reviewed=False, audio="", defer_recording=True,
+                       note="新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。")
         production.append(row)
     save(old_script_path, dict(schema=1, language="ja", voice_id="ayano", model_id="luna-tts-1.5", speed=1.1, text_normalization=True, lines=production))
+    save(ROOT/'story/酒馆配音脚本_ja_待审.json',dict(schema=1,language='ja',voice_id='ayano',speed=1.1,
+        purpose='authoring_reference_not_standalone_pack_script',
+        lines=[row for row in production if row['key'].startswith(('xm_tavern_','xm_w03_thanks_'))],
+        integration_note='完整配音脚本的待录子集，不可单独覆盖现有语音索引；本次不请求TTS。'))
     # A quiet double tap for the non-verbal shutter slot. This is not a voice line.
     import numpy as np
     rate = 48000

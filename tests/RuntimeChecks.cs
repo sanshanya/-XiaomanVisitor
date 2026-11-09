@@ -29,10 +29,11 @@ internal static class CheckMod
             + "; pending=" + scan.Pending.Count + "; refused=" + scan.Refused);
         if (scan.Error != null) Console.Error.WriteLine(scan.Error);
         if (scan.Findings.Count > 0 || scan.HardFlags.Count > 0) Console.WriteLine(scan.FormatFindings(30));
+        foreach (var finding in scan.Pending.Take(30))
+            Console.Error.WriteLine("PENDING (next API enforcement): " + finding);
         if (scan.Refused || scan.Capabilities.Except(manifest.Capabilities).Any()) return 2;
-        foreach (var finding in scan.Pending.Take(30)) Console.Error.WriteLine("PENDING: " + finding);
         if (scan.Pending.Count > 0) return 2;
-        CheckStory.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require);
+        CheckStory.Run(package, Require); WeekOneChecks.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require);
         Console.WriteLine("PASS: " + assertions + " assertions; native manifest, capability scanner and paper parser accepted.");
         return 0;
     }
@@ -420,21 +421,24 @@ internal static class CheckMod
         typeof(XiaomanMod).GetMethod("EnsureTavernMap", flags).Invoke(mod, null);
         Require(!setting.Default && !location.IsDiscovered() && !location.IsAvailable(),
             "active mod keeps the default-off tavern hidden and skips native registration and save initialization");
+        Require(typeof(XiaomanMod).GetField("tavernScenePreview", flags) == null, "the retired preview setting cannot override calendar access");
         setting.Set(true);
         Require(!location.IsDiscovered(), "restart-required opt-in does not change the current travel session");
         capture.Invoke(mod, null);
-        Require(location.IsDiscovered(), "the next enabled session discovers the opted-in tavern");
+        Require((bool)typeof(XiaomanMod).GetProperty("TavernMapEnabled", flags).GetValue(mod)
+            && !location.IsDiscovered(), "opt-in is captured but cannot expose a location before an active run");
         setting.Set(false);
-        Require(location.IsDiscovered(), "pending opt-out does not dismantle an active tavern session");
+        Require((bool)typeof(XiaomanMod).GetProperty("TavernMapEnabled", flags).GetValue(mod),
+            "pending opt-out does not dismantle an active tavern session");
         capture.Invoke(mod, null);
         Require(!location.IsDiscovered() && !location.IsAvailable(), "the next disabled session hides the tavern again");
         Require(location.ImageKey == TavernMapRules.ImageKey && location.title != null,
-            "native card resolves a namespaced local preview and localized title");
+            "renovation card displays the author's approved tavern preview while remaining unavailable");
         Require(location.onArrive != null && location.onLeave != null && location.onTick != null && location.buildPanel != null
             && location.stageObject == null && location.panelObject == null,
             "night callbacks exist; scene and panel are allocated lazily through native travel");
-        Require(!location.UsesAfterhourBag && !location.ShowsStoreCounters && !location.AllowsHazardousWaste && !location.CountsDumpedWaste,
-            "tavern does not expose player inventory, waste or native service counters");
+        Require(location.UsesAfterhourBag && !location.ShowsStoreCounters && !location.AllowsHazardousWaste && !location.CountsDumpedWaste,
+            "tavern shows the native bag while keeping waste and service counters disabled");
         Require(TavernMapRules.UsesRenovationLabel(location.Id, true)
             && !TavernMapRules.UsesRenovationLabel(location.Id, false), "status label only applies while this mod is enabled");
         foreach (string other in new[] { null, "", "dumping_ground", "commissary", "dr_jackson", "night_market",
@@ -445,8 +449,13 @@ internal static class CheckMod
             "extra location uses the native registration and source-scoped removal APIs");
         Require(File.Exists(Path.Combine(package,"Textures","Items",TavernMapRules.PreviewKey + ".png")),
             "preview is in the installed loader's native sprite folder");
-        foreach (string file in new[] { "background.png", "bar-occluder.png" })
+        foreach (string file in new[] { "background.png", "bar-occluder.png", "ambient.mp4" })
             Require(File.Exists(Path.Combine(package,"Scenes","Tavern",file)), "night scene texture is packaged");
+        Type ambient = typeof(XiaomanMod).Assembly.GetType("XiaomanVisitor.XiaomanTavernAmbient");
+        Type player = ambient.GetField("player", flags).FieldType;
+        Require(player.GetMethod("Prepare") != null && player.GetMethod("Stop") != null
+            && player.GetEvent("frameReady") != null && player.GetEvent("errorReceived") != null,
+            "installed Unity video API supports first-frame activation, fallback and explicit shutdown");
         Type typewriter = typeof(TextBubble).GetField("typewriter").FieldType;
         foreach (string callback in new[] { "onTextShowed", "onTypewriterStart", "onTextDisappeared", "onCharacterVisible", "onMessage" })
             Require(typeof(UnityEngine.Events.UnityEventBase).IsAssignableFrom(typewriter.GetField(callback).FieldType),
@@ -460,43 +469,65 @@ internal static class CheckMod
 
     private static void CheckTavernProgress()
     {
-        Require(!TavernRules.IsOpen(true,true,0,false), "tavern is closed before the first game day");
-        Require(TavernRules.IsOpen(true,true,1,false) && TavernRules.IsOpen(true,true,100,false), "day-one test access continues on later days");
-        Require(!TavernRules.IsOpen(false,true,1,false) && !TavernRules.IsOpen(true,false,1,false)
-            && !TavernRules.IsOpen(true,true,1,true), "disabled, no-run and departed states stay closed");
-        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,0,false) == "ui_tavern_renovating", "unstarted run retains renovation status");
-        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,1,false) == null, "day-one card retains native available status");
-        Require(TavernRules.StatusKey(TavernMapRules.LocationId,true,true,99,true) == "ui_tavern_closed", "legacy departure is not reversed");
-        Require(TavernRules.StatusKey("commissary",true,true,1,false) == null, "other locations retain native status");
-        var p = TavernProgress.Restore(null,1);
-        Require(p.OpenedOn == 1 && !p.MayAct(0) && p.MayAct(1), "test run opens at day one");
-        Require(!p.Buy(1,34) && p.Entries.Count == 0 && !p.Buy(0,999), "insufficient funds/early action never records payment");
-        Require(p.Buy(1,35) && p.Cups == 1 && p.Receipts == 35, "exact-price ordinary cup is charged once");
-        Require(!p.Buy(1,999) && !p.Help(1), "double clicks and cross-action repeats are rejected");
-        p = TavernProgress.Restore(p.Data,1);
-        Require(p.Cups == 1 && p.Receipts == 35 && !p.MayAct(1), "reload preserves consumption and the night receipt");
-        Require(p.Help(2) && p.PickupPointReady && p.Receipts == 35 && !p.Buy(2,999), "L1 help persists without inventing cash income");
-        p = TavernProgress.Restore(p.Data,3);
-        Require(p.PickupPointReady && !p.Help(3) && p.Buy(3,100), "completed project cannot be repeated; a later night's drink remains available");
-        var scheduled = TavernProgress.Restore("{\"Schema\":1,\"OpenedOn\":3,\"Entries\":[]}",1);
-        Require(scheduled.OpenedOn == 1 && scheduled.MayBuy(1,35), "an existing day-one test save scheduled for day three opens immediately");
-        Require(p.Receipts == 70 && p.Cups == 2, "ledger sums actual purchases only");
-        var existing = TavernProgress.Restore(null,52);
-        Require(existing.OpenedOn == 52 && !existing.MayAct(51) && existing.MayAct(52) && existing.Receipts == 0,
-            "existing saves open on installation day without retrospective charges");
-        Require(TavernProgress.Restore("not json",9).OpenedOn == 9, "invalid old data has a safe migration");
-        var corrupt = TavernProgress.Restore("{\"Schema\":1,\"OpenedOn\":3,\"Entries\":[{\"Day\":3,\"Action\":\"cup\",\"Paid\":35},{\"Day\":3,\"Action\":\"cup\",\"Paid\":35},{\"Day\":4,\"Action\":\"cup\",\"Paid\":-35},{\"Day\":99,\"Action\":\"cup\",\"Paid\":35}]}",5);
-        Require(corrupt.Cups == 1 && corrupt.Receipts == 35, "duplicate, negative and future ledger entries are rejected");
+        WeekTwoChecks.Run(package,Require);
+        WeekThreeChecks.Run(package,Require);
         foreach (int height in new[] { 540,720,900,1080,1440,2160 }) {
             double width = height * 16.0 / 9;
             double scale = TavernRules.FitScale(width,height);
-            Require(scale > 0 && scale*5016 <= width+1e-8 && scale*2823 <= height+1e-8, "one contain transform fits all room layers");
-            Require(Math.Abs((1644-1004)*scale - 640*scale) < 1e-8, "bar/actor overlap stays aligned at every resolution");
+            Require(scale > 0 && scale*5013 <= width+1e-8 && scale*2823 <= height+1e-8, "one contain transform fits the active room without its codec padding");
+        }
+        Type layout = typeof(XiaomanMod).Assembly.GetType("XiaomanVisitor.TavernSceneLayout");
+        Func<string,int> dimension = key => (int)layout.GetField(key, BindingFlags.Static | BindingFlags.NonPublic).GetRawConstantValue();
+        Require(dimension("ActorWidth")*688 == dimension("ActorHeight")*384
+            && dimension("ActorWidth")==336 && dimension("ActorHeight")==602,
+            "tavern portrait shrinks uniformly by one eighth without changing the shared atlas aspect");
+        Require(dimension("ActorY")+dimension("ActorHeight")==1692
+            && dimension("ActorX")*2+dimension("ActorWidth")==5012
+            && dimension("BarX")==dimension("ActorX") && dimension("BarWidth")==dimension("ActorWidth"),
+            "smaller tavern portrait keeps its waist and center while counter occlusion follows the same layout");
+        Require(TavernRules.IdleLift(0,true)==0 && Math.Abs(TavernRules.IdleLift(4,true))<.0001f
+            && Math.Abs(TavernRules.IdleLift(2,true)-8)<.0001f,
+            "idle breathing starts at rest, rises smoothly and returns over four seconds");
+        Require(TavernRules.IdleLift(2,false)==0 && TavernRules.IdleLift(-1,true)==0
+            && TavernRules.IdleLift(float.NaN,true)==0 && TavernRules.IdleLift(float.PositiveInfinity,true)==0,
+            "disabled or invalid idle clocks keep the actor at rest");
+        Require(TavernRules.IdleLift(2,true)<dimension("ActorY")+dimension("ActorHeight")-dimension("BarY"),
+            "maximum breath lift still keeps the waist behind the fixed counter");
+        var light = TavernActorLight.Parse(File.ReadAllText(Path.Combine(package,"Scenes","Tavern","actor-light.json")));
+        Require(light.Nodes==15 && light.Frames==100 && light.Fps==20 && light.RGB.Length==4500 && light.GainScale==1.75f,
+            "tiny RGB light table matches the twenty-fps room, without portrait copies or alpha data");
+        Require(light.FrameAt(-1)==0 && light.FrameAt(0)==0 && light.FrameAt(100)==0 && light.FrameAt(199)==99,
+            "still fallback and native looped frame indices select the same light phase");
+        int face = 2*light.X.Length+1;
+        bool protectedFace = true;
+        int head = 4*light.X.Length+1, headMin=255, headMax=0;
+        for (int frame=0;frame<light.Frames;frame++) {
+            int offset=(frame*light.Nodes+face)*3;
+            for (int channel=0;channel<3;channel++) {
+                float gain=light.RGB[offset+channel]*light.GainScale/255;
+                protectedFace &= gain>=.9f && gain<=1.15f;
+            }
+            int red=light.RGB[(frame*light.Nodes+head)*3];
+            headMin=Math.Min(headMin,red); headMax=Math.Max(headMax,red);
+        }
+        Require(protectedFace, "face center remains lightly shaded and retains its original palette throughout the loop");
+        Require(headMax*light.GainScale/255>1.25f && (headMax-headMin)*light.GainScale/255>.25f,
+            "warm head lighting can visibly brighten above source colors and varies with the room");
+        bool rejectedLight = false;
+        try { TavernActorLight.Parse("{\"schema\":2,\"gain_scale\":1.75,\"frame_count\":100,\"fps\":20,\"x\":[0,1],\"y\":[0,1],\"rgb\":\"\"}"); }
+        catch (FormatException) { rejectedLight = true; }
+        Require(rejectedLight, "an incomplete light resource is rejected so presentation can fall back to original colors");
+        foreach (var scale in new[] {0f,2.1f,float.NaN}) {
+            bool rejectedScale=false;
+            try { TavernActorLight.Parse(JsonConvert.SerializeObject(new {schema=2,gain_scale=scale,frame_count=1,
+                fps=20,x=new[]{0,1},y=new[]{0,1},rgb=Convert.ToBase64String(new byte[12])})); }
+            catch (FormatException) { rejectedScale=true; }
+            Require(rejectedScale,"invalid tint headroom is rejected before material setup");
         }
         Require(TavernRules.FitScale(0,1080) == 0 && TavernRules.FitScale(double.NaN,1080) == 0, "unready viewports do not generate invalid transforms");
         for (int mood=0;mood<6;mood++) for (int mouth=0;mouth<3;mouth++)
             Require(TavernRules.FrameIndex((Mood)mood,mouth) == mood*3+mouth, "all eighteen night portrait states retain approved mapping");
-        Console.WriteLine("PASS: day-1 test tavern access, migration, 35-CR purchase, one activity/night, persistent L1 pickup point, ledger/reload and resolution-independent layer geometry.");
+        Console.WriteLine("PASS: week-two opening, onsite drink recovery and preserved scene geometry.");
     }
     private static void CheckPortraitDetail()
     {

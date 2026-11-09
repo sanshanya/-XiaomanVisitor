@@ -12,10 +12,12 @@ def main():
     index = json.loads((layout.PACKAGE/"Letters/index.json").read_text(encoding="utf-8"))
     assert index["schema"] == 1 and index["font"] == "Yozai Regular"
     assert index["aliases"] == {"thank_you_note":"story_note_01"}
-    assert len(index["letters"]) == 42
+    assert len(index["letters"]) == 45
+    assert index['kaomoji_fallbacks']==[dict(file=p.name,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in layout.FALLBACKS]
     assert {r["file"] for r in index["letters"]} == {
-        f"Letters/{language}/story_note_{n:02d}.png"
-        for language in ("zh","ja","en") for n in range(1,15)}
+        f"Letters/{language}/{key}.png"
+        for language in ("zh","ja","en") for key in
+        [f'story_note_{n:02d}' for n in range(1,15)]+['story_note_03_b']}
     texts = {lang:layout.read_texts(lang) for lang in ("zh","ja","en")}
     rows = []
     for entry in index["letters"]:
@@ -32,7 +34,8 @@ def main():
         assert alpha.getextrema() == (0,237) and alpha.getbbox()
         assert len(image.getcolors(1122*1402)) <= 238
         assert image.getbbox()[0] > 65 and image.getbbox()[2] < 1050
-        row, _ = layout.letter_layout("yozai", int(key[-2:]),language,texts[language])
+        visit=3 if key=='story_note_03_b' else int(key[-2:])
+        row, _ = layout.letter_layout("yozai",visit,language,texts[language],letter_id=key)
         assert row["fits"]
         rows.append(row)
     assert not list(layout.PACKAGE.rglob("*.ttf")), "Full authoring fonts must stay outside the release"
@@ -46,13 +49,17 @@ def main():
         # Composite the very same transparent bytes that Unity will load.
         Image.alpha_composite(paper,ink).convert("RGB").resize(
             (628,785),Image.Resampling.LANCZOS).save(folder/f"note_{visit:02d}_{language}.png")
+    for language in ('zh','ja','en'):
+        for key in ('story_note_03','story_note_03_b'):
+            ink=Image.open(layout.PACKAGE/f'Letters/{language}/{key}.png').convert('RGBA')
+            Image.alpha_composite(paper,ink).convert('RGB').save(folder/f'{key}_{language}.png')
     report = dict(renderer="Original paper + packaged Yozai ink PNG; not an in-game screenshot",
                   body_blocks=len(rows),overflow=[],rows=rows,
                   total_ink_bytes=sum(r["bytes"] for r in index["letters"]),
                   max_resident_texture_bytes=1122*1402*4,
                   lazy_loaded=True,fonts_in_package=False)
     (folder/"layout-report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("PASS: 42 localized Yozai ink layers match the current letters and hashes; all fit, indexed alpha is intact, and full fonts stay outside the package.")
+    print("PASS: 45 localized Yozai ink layers (14 letters plus W03 B) match text/hashes and fit; indexed alpha intact, no full fonts in package.")
 
 
 if __name__ == "__main__":

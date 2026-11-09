@@ -121,12 +121,18 @@ namespace XiaomanVisitor
             DrinkBuffCollection buffs = ReadDrinkBuffs();
             buffs.Replace(spec, today);
             SaveDrinkBuffs(buffs);
-            if (HealthData.IsAlcoholAddicted()) PlayerStore.Instance.healthData.ConsumeAlcohol(1);
-            if (AudioManager.Instance != null) AudioManager.Instance.Play3("drink");
+            CocktailConsumed(spec);
             if (item.unitCount > 1) item.SetUnitCount(item.unitCount - 1);
             else item.Destroy();
             Log.Log("Consumed one " + spec.Key + ": " + spec.Effect + " +" + spec.EffectAmount
                 + " until day " + (today + spec.DurationDays) + "; other drink categories retained.");
+        }
+
+        private void CocktailConsumed(CocktailSpec spec)
+        {
+            if (spec != null && spec.Tier == 2 && PlayerStore.HasInstance && PlayerStore.Instance.healthData != null && HealthData.IsAlcoholAddicted())
+                PlayerStore.Instance.healthData.ConsumeAlcohol(1);
+            if (AudioManager.Exists) AudioManager.Instance.Play3("drink");
         }
 
         private DrinkBuffCollection ReadDrinkBuffs()

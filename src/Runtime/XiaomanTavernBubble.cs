@@ -126,7 +126,7 @@ namespace XiaomanVisitor
             if (Mathf.Abs(previousScale - scale) > .001f) { previousScale = scale; layoutDirty = true; }
         }
 
-        internal void Tick(RectTransform actor, bool voiceBusy, bool waitForVoice)
+        internal void Tick(RectTransform actor, bool voiceBusy, bool waitForVoice, Vector2 restPosition)
         {
             if (!Visible) return;
             if (completedAt >= 0 && (!waitForVoice || !voiceBusy)
@@ -138,8 +138,9 @@ namespace XiaomanVisitor
                 LayoutRebuilder.ForceRebuildLayoutImmediate(name);
                 layoutDirty = false;
             }
-            float x = actor.anchoredPosition.x + actor.rect.width * .55f;
-            float y = actor.anchoredPosition.y - actor.rect.height * .9f;
+            // Dialogue stays at the waist-level anchor while the portrait breathes.
+            float x = restPosition.x + actor.rect.width * .55f;
+            float y = restPosition.y - actor.rect.height * .9f;
             float actualWidth = body.rect.width * body.localScale.x;
             x = Mathf.Clamp(x, 16f, Mathf.Max(16f, rightEdge - actualWidth));
             root.anchoredPosition = new Vector2(x, y);

@@ -29,9 +29,12 @@ def main():
         assert all(texts[language][key] == value for key, value in entries.items()), "Stale tavern map text"
     for key in texts["zh"]:
         placeholders = re.findall(r"\{\d+\}", texts["zh"][key])
-        assert all(sorted(re.findall(r"\{\d+\}", texts[lang][key])) == sorted(placeholders) for lang in ("en", "ja")), key
+        for lang in ('en','ja'):
+            # Approved shopping subtitles deliberately omit the Japanese spoken budget.
+            expected=[] if key in ('xm_02_shop','xm_03_shop') and lang=='ja' else sorted(placeholders)
+            assert sorted(re.findall(r"\{\d+\}",texts[lang][key]))==expected,key
     assert texts["zh"]["gift_note_body"] == texts["zh"]["story_note_01_body"]
-    assert texts["zh"]["gift_note_title"] == "店长："
+    assert texts["zh"]["gift_note_title"] == "致店长先生："
     for language, rows in texts.items():
         item_texts = [value for key,value in rows.items()
                       if key.startswith(("collection_","gift_note_","gift_tape_"))
@@ -58,7 +61,7 @@ def main():
     assert catalog[0]["key"] == "title" and catalog[0]["storyNode"] == "visit_01"
     assert [t["key"] for t in catalog] == [e["track"] for e in story["episodes"]]
     assert len(story["episodes"]) == 14 and len(story["actions"]) == 49
-    assert len({row["key"] for row in story["lines"]}) == 125
+    assert len({row["key"] for row in story["lines"]}) == len(story['lines']), 'Duplicate authored dialogue key'
     for line in story["lines"]:
         assert not re.search(r"\[(chuckles|laughs|gasps|sighs|breath|exhale|inhales)\]", line["zh"] + line["ja"])
     assert "150" in texts["zh"]["xm_01_shop"] and "{0}" not in texts["zh"]["xm_01_shop"]
@@ -80,7 +83,7 @@ def main():
         assert original.getchannel("A").tobytes() == pink.getchannel("A").tobytes(), "Notebook slot shape changed"
         assert hashlib.sha256((ROOT / icon["source"]).read_bytes()).hexdigest() == icon["source_sha256"]
     assert list(Image.open(PACKAGE / tavern_map["packaged"]).size) == tavern_map["size"] == [592,336]
-    assert tavern_map["phase"] == "tavern_stage_one" and tavern_map["enterable"] and tavern_map["opening_game_day"] == 1
+    assert tavern_map["phase"] == "week_two_opening" and tavern_map["enterable"] and tavern_map["discovery_game_day"] == 3 and tavern_map['opening_game_day']==8
     assert tavern_map["image_key"] == "sansm.xiaoman.visitor:" + Path(tavern_map["packaged"]).stem
     assert current == expected, "Approved texture changed, missing or unexpected"
     detail = json.loads((ROOT / "assets/portrait-detail.json").read_text(encoding="utf-8"))
@@ -88,12 +91,34 @@ def main():
     assert list(Image.open(PACKAGE / detail["packaged"]).size) == detail["size"] == [2304,2064]
     print(f"PASS: original {len(baseline['files'])} PNGs and paper unchanged; tavern preview and two pink notebook states verified.")
     english = json.loads((ROOT / "story/英文台词.json").read_text(encoding="utf-8"))
+    import week_two_source,week_three_source
+    w02=week_two_source.read()
+    w03=week_three_source.read()
+    prices=json.loads((ROOT/'assets/tavern-prices.json').read_text(encoding='utf-8'))
+    generated=(ROOT/'src/Generated/TavernPrices.Generated.cs').read_text(encoding='utf-8')
+    match=re.search(r'Juice = (\d+), Alcohol = (\d+)',generated)
+    assert match and tuple(map(int,match.groups()))==(prices['juice'],prices['alcohol']),'Stale tavern prices; regenerate the authored story'
+    assert story['week_two_sha256']==w02['sha256'] and set(w02['lines']).issubset({row['key'] for row in story['lines']})
+    assert story['week_three_sha256']==w03['sha256'] and set(w03['lines']).issubset({row['key'] for row in story['lines']})
+    english.update({key:row['en'] for key,row in w02['lines'].items()})
+    english.update({key:row['en'] for key,row in w03['lines'].items()})
     notes = json.loads((ROOT / "story/纸条正文.json").read_text(encoding="utf-8"))["notes"]
     assert set(english) == {line["key"] for line in story["lines"]}
     assert all(texts["en"][key].replace("\\n", "\n") == value for key, value in english.items())
     for note in notes:
         for lang in ("zh", "ja", "en"):
             assert texts[lang][f"story_note_{note['visit']:02d}_body"].replace("\\n", "\n") == note[lang]
+    for variant,letters in w03['letters'].items():
+        for lang,fields in letters.items():
+            for field,value in fields.items():
+                assert texts[lang]['story_note_03'+('_b' if variant=='B' else '')+'_'+field]==value
+    assert len(list((PACKAGE/'Books').glob('story_note_*.json')))==14,'A/B must share one paper item ID'
+    work=json.loads((ROOT/'assets/tavern-work.json').read_text(encoding='utf-8'))
+    generated=(ROOT/'src/Generated/TavernWorkConfig.Generated.cs').read_text(encoding='utf-8')
+    for field,key in {'UnlockDay':'unlock_day','DailyOrders':'daily_overflow_orders','OrdersPerShift':'orders_per_shift',
+        'OrderRevenue':'order_revenue','OrderMaterial':'order_material','Wage':'wage','DurationSeconds':'duration_seconds',
+        'ThanksPercent':'thanks_percent','PrivateReserve':'private_purchase_reserve'}.items():
+        assert f'public const int {field} = {work[key]};' in generated,'Stale work config'
     for book_file in (PACKAGE / "Books").glob("*.json"):
         book = json.loads(book_file.read_text(encoding="utf-8"))
         assert book["background"] == style["sprite"]

@@ -1,21 +1,39 @@
 {
-  "schema": 1,
+  "schema": 2,
   "files": [
     {
       "source": "background.png",
       "packaged": "Scenes/Tavern/background.png",
-      "sha256": "4a5a957669ce0aa0dad07e511dc755c99445c4c739cb34b683d80c836134502f",
-      "bytes": 2252046
+      "sha256": "4785258c4cdb32bf51ea3e00574af5bb3ff1f12d393e71f0070d9fc5c30b053d",
+      "bytes": 2513463
     },
     {
       "source": "bar-occluder.png",
       "packaged": "Scenes/Tavern/bar-occluder.png",
-      "sha256": "8b6de91420640b13e920ecfd824f5d5cdd577da5d3f89fdc481c11002c032c59",
-      "bytes": 4667
+      "sha256": "563c743fee20602bfebb61cf9fba168410bb159e181deba5f3f5ecc89c6b77ba",
+      "bytes": 3826
+    },
+    {
+      "source": "ambient.mp4",
+      "packaged": "Scenes/Tavern/ambient.mp4",
+      "sha256": "4370f175c9e9882c3e6021f467861e0b31ef37ebabefa0cd626c02a4fcaccd7b",
+      "bytes": 3003184
+    },
+    {
+      "source": "actor-light.json",
+      "packaged": "Scenes/Tavern/actor-light.json",
+      "sha256": "5e9b7b4cb3389f7242e928d418c58d8b5d0c79f1fd03a7f06f4e8dd1cc666344",
+      "bytes": 6111
     }
   ],
-  "opening_game_day": 1,
-  "texture_memory_bytes": 6367136,
-  "existing_portraits_reused": true,
-  "planned_release_opening_game_day": 3
+  "preview_default": false,
+  "normal_opening_implemented": false,
+  "static_texture_memory_bytes": 6354156,
+  "video_resolution": [
+    1672,
+    942
+  ],
+  "video_fps": 20,
+  "video_decoder_memory": "platform-dependent; not measured by file size",
+  "existing_portraits_reused": true
 }

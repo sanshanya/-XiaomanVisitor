@@ -11,10 +11,15 @@ namespace XiaomanVisitor
 
         // Match the native restart-required option; never tear down travel in progress.
         private void CaptureTavernSetting()
-        { tavernEnabledForSession = experimentalTavern != null && experimentalTavern.Value; }
+        {
+            tavernEnabledForSession = experimentalTavern != null && experimentalTavern.Value;
+        }
 
         private DelegateAfterhourLocation tavernLocation;
         private XiaomanTavernStage tavernStage;
+        private bool TavernStoryFinished { get { return PlayerStore.HasInstance && ReadStory().Finished; } }
+        internal string TavernMapDescription { get { return Text(TavernStoryFinished ? "ui_tavern_closed"
+            : PlayerStore.HasInstance && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay ? "ui_tavern_open_desc" : "ui_tavern_map_desc"); } }
         internal string TavernStatusLabel
         {
             get {
@@ -29,15 +34,17 @@ namespace XiaomanVisitor
             return tavernLocation = new DelegateAfterhourLocation {
                 id = TavernMapRules.LocationId,
                 source = Id,
-                title = () => Text("ui_tavern_name"),
+                title = () => Text(TavernStoryFinished || PlayerStore.HasInstance && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay
+                    ? "ui_tavern_name" : "ui_tavern_preview_name"),
                 imageKey = TavernMapRules.ImageKey,
-                isDiscovered = () => TavernMapEnabled,
+                isDiscovered = () => TavernRules.IsDiscovered(TavernMapEnabled, PlayerStore.HasInstance,
+                    PlayerStore.HasInstance ? StoreStation.Instance.dayCounter : 0),
                 isAvailable = CanEnterTavern,
                 onArrive = ArriveAtTavern,
                 onLeave = LeaveTavern,
                 onTick = TickTavernPanel,
                 buildPanel = BuildTavernPanel,
-                usesAfterhourBag = false,
+                usesAfterhourBag = true,
                 showsStoreCounters = false,
                 allowsHazardousWaste = false,
                 countsDumpedWaste = false
@@ -47,7 +54,6 @@ namespace XiaomanVisitor
         private void EnsureTavernMap()
         {
             if (!TavernMapEnabled) return;
-            if (PlayerStore.HasInstance) InitializeTavernProgress();
             if (ModHelper.GetAfterhourLocation(TavernMapRules.LocationId) != null) return;
             AfterhourLocation.Register(CreateTavernMapLocation());
         }
@@ -76,6 +82,13 @@ namespace XiaomanVisitor
             var status = __result.transform.Find("Status");
             var label = status == null ? null : status.GetComponent<TextMeshProUGUI>();
             if (label != null) label.text = text;
+            var placeholder = __result.transform.Find("Image/Placeholder");
+            var description = placeholder == null ? null : placeholder.GetComponent<TextMeshProUGUI>();
+            if (description != null) {
+                description.text = mod.TavernMapDescription;
+                description.enableWordWrapping = true;
+                description.fontSize = 18f;
+            }
         }
     }
 }

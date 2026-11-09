@@ -59,6 +59,7 @@ namespace XiaomanVisitor
             ModHook.OnShutterOpenedLate += QueueOpeningVisitor;
             EnableGifts();
             EnableCocktails();
+            EnablePaidWork();
             EnsureTavernMap();
             ModHelper.AddDebugFunction(Id, ModHelper.DEBUG_CATEGORY_SPAWN, "Invite Xiaoman", () => Invite());
             driverObject = new GameObject("XiaomanVisitor.Animator");
@@ -86,10 +87,11 @@ namespace XiaomanVisitor
             ModHook.OnShutterOpenedLate -= QueueOpeningVisitor;
             DisableGifts();
             DisableCocktails();
+            DisablePaidWork();
             DisableTavernMap();
             ModHelper.RemoveDebugFunctions(Id);
             if (PlayerStore.HasInstance && PlayerStore.Instance.storeClientManager != null)
-                PlayerStore.Instance.storeClientManager.clientStack.RemoveAll(c => c != null && c.identifier == ClientId);
+                PlayerStore.Instance.storeClientManager.clientStack.RemoveAll(c => c != null && CustomerQueuePolicy.IsXiaoman(c.identifier));
             if (registeredDictionary != null) registeredDictionary.Remove(SpriteKey);
             DestroySprites();
             ReleasePortraitAssets();
@@ -114,6 +116,7 @@ namespace XiaomanVisitor
             EnsurePortraits();
             EnsureCassetteCaseStorage();
             EnsureTavernMap();
+            RecoverTavernDrink();
         }
 
         private void GenerateVisitor(StoreClientManager manager)
@@ -142,8 +145,8 @@ namespace XiaomanVisitor
         {
             if (!PlayerStore.HasInstance || manager == null || manager.clientStack == null || StoreStation.Instance == null || !EnsurePortraits()) return false;
             StoreClient current = PlayerStore.Instance.currentClientInstance == null ? null : PlayerStore.Instance.currentClientInstance.GetClientBlueprint();
-            if (current != null && current.identifier == ClientId) return false;
-            StoreClient queued = manager.clientStack.Find(c => c != null && c.identifier == ClientId);
+            if (current != null && CustomerQueuePolicy.IsXiaoman(current.identifier)) return false;
+            StoreClient queued = manager.clientStack.Find(c => c != null && CustomerQueuePolicy.IsXiaoman(c.identifier));
             if (queued != null)
             {
                 // OnShutterOpenedLate runs after native future clients have also
@@ -154,8 +157,9 @@ namespace XiaomanVisitor
                 return false;
             }
             int today = StoreStation.Instance.dayCounter;
-            if (!ReadStory().MayVisit(today)) return false;
-            StoreClient client = CreateVisitor();
+            var kind=CustomerQueuePolicy.Next(today,ReadStory(),ReadWork(),TavernMapEnabled);
+            if (kind==XiaomanVisitKind.None) return false;
+            StoreClient client = kind==XiaomanVisitKind.Story ? CreateVisitor() : CreateWorkThanksVisitor();
             ModHelper.SetClientSource(client, Id);
             manager.AddClient(client);
             if (!manager.clientStack.Contains(client)) return false;

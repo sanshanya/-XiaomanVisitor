@@ -24,7 +24,9 @@ internal static class GunReactionChecks
         reaction.Raise(2000); reaction.Reset();
         check(!reaction.Active && reaction.Row(2000) == -1, "departure and reload discard all transient gun state");
         check(GunReaction.Protects(true, XiaomanMod.ClientId)
+            && GunReaction.Protects(true, XiaomanMod.ClientId+".work_thanks")
             && !GunReaction.Protects(false, XiaomanMod.ClientId) && !GunReaction.Protects(true, "native_customer")
+            && !GunReaction.Protects(true, XiaomanMod.ClientId+".another_mod")
             && !GunReaction.Protects(true, null), "test shot protection is restricted to an enabled Xiaoman target");
 
         var pulse = new CharacterMouthPulse(); pulse.Begin(20); pulse.Observe('可', 20.1f);

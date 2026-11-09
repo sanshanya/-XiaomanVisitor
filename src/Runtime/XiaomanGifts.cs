@@ -113,6 +113,8 @@ namespace XiaomanVisitor
             try
             {
                 int today = StoreStation.Instance.dayCounter;
+                FreezeThirdWorkLetter();
+                TryDeliverWorkThanksGift();
                 StoryProgress progress = ReadStory();
                 EnsureCassetteCaseStorage();
                 TryDeliverNotebook(today, progress);

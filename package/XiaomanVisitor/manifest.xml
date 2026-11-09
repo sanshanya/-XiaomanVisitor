@@ -3,7 +3,7 @@
   <ID>sansm.xiaoman.visitor</ID>
   <Name>深空小满：可能很迷醉？</Name>
   <Author>sansm</Author>
-  <ModVersion>0.0.3.18</ModVersion>
+  <ModVersion>0.0.5.0</ModVersion>
   <Description>空间站来了一位青涩的酒馆女老板，将你视作朋友。她有什么样的秘密，你和她之间又会发生？
 
 ---
@@ -25,7 +25,7 @@
 1. 添加唱片盒和信纸簿，用来收拢信纸和磁带。
 2. 优化了小满的立绘在高分辨率下的表现。
 
-实验性酒馆默认关闭，可在模组设置中开启，重启后从第1天进入，体验动态场景、普通杯、取餐台协作和来访账本。完整经营与贷款剧情尚未接入。</Description>
+第三周开发测试版：实验性酒馆默认关闭，开启并重启后第3–7天装修、第8天夜间开业，第15天起可接付薪夜班。第三次会面次日按当晚工作选择纸条；首班有一次概率感谢来访。逐周改写及新增台词暂仅字幕，匹配的旧录音继续播放。</Description>
   <GameVersions>
     <Version>0.46D</Version>
   </GameVersions>

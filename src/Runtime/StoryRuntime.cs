@@ -49,10 +49,14 @@ namespace XiaomanVisitor
             Dialogue tail = null;
             foreach (StoryLineSpec spec in episode.Opening)
             {
-                Dialogue next = StoryLine(client, spec.Key, spec.Mood);
+                string key=TavernRules.OpeningLineKey(index,spec.Key,session.Day);
+                if (key=="xm_03_04" && ReadWork().HasWorked) key="xm_03_04_already_worked";
+                Dialogue next = StoryLine(client,key,spec.Mood);
                 if (tail == null) client.mainDialogue = next;
                 else tail.nextDialogue = next;
                 tail = next;
+                if (spec==episode.Opening[0] && TavernMapEnabled && ReadWork().ThanksDue(session.Day))
+                    tail=AppendWorkThanks(tail,client,true);
             }
             if (!string.IsNullOrEmpty(episode.CocktailKey) && session.SaleKeys.Length > 0)
             {

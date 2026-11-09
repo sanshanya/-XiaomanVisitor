@@ -19,11 +19,17 @@ def main():
     pack = pipeline.load(pipeline.PACKAGE / "Voices/index.json")
     spec = pipeline.load(pipeline.ROOT / "assets/story.json")
     records = {r["line_key"]: r for r in pack["lines"] if r["language"] == "ja"}
-    assert set(records) == set(spec["voice_keys"]) == {r["key"] for r in script["lines"]}
-    assert pack["pending_lines"] == 0
+    expected = {r["key"] for r in script["lines"]}
+    deferred = {r["key"] for r in script["lines"] if r.get("defer_recording")}
+    assert set(spec["voice_keys"]) == expected
+    assert set(records) == expected - deferred, "Missing, stale or unexpected recording"
+    assert pack["pending_lines"] == len(deferred)
     rows, warnings = [], []
     for row in script["lines"]:
         key = row["key"]
+        if key in deferred:
+            assert not row["reviewed"] and not row["audio"] and pipeline.audio_status(row, script, texts) == "needs_review", key
+            continue
         assert pipeline.audio_status(row, script, texts) == "ready", key
         file = pipeline.ROOT / row["audio"]
         metadata = pipeline.load(file.with_suffix(".json"))
@@ -54,16 +60,16 @@ def main():
                          clipped_fraction=round(clipping,7), effective_speed=1.1, sha256=metadata["sha256"],
                          source=row["audio"], packaged=str(packaged.relative_to(pipeline.PACKAGE))))
     assert not any("shutter_close_02" in r["key"] for r in rows), "Nonverbal SFX must not enter TTS"
-    result = dict(version=version, language="ja", voice="ayano", recorded_lines=len(rows), pending_lines=0,
+    result = dict(version=version, language="ja", voice="ayano", recorded_lines=len(rows), pending_lines=len(deferred), deferred_keys=sorted(deferred),
                   seconds=round(sum(r["seconds"] for r in rows),3), sample_rate=24000, channels=1, bit_depth=16,
                   speed=1.1, first_performance_preserved=True, warnings=warnings, lines=rows)
     output = pipeline.audio_report_path()
     pipeline.save(output, result)
-    summary = [f"小满 {version} 日语配音文件检查", "", f"录音键：{len(rows)}，待制作：0。", "音色：Ayano；语言：日语；统一实际语速：1.1。",
+    summary = [f"小满 {version} 日语配音文件检查", "", f"录音键：{len(rows)}，明确延后制作：{len(deferred)}。", "音色：Ayano；语言：日语；统一实际语速：1.1。",
                "首句保留已确认原录音，以保持音高的时间伸缩制作1.1倍速副本，原素材未改。",
                "其他录音通过VUI Luna-TTS 1.5离线生成；运行中的模组只读取打包音频。",
                f"总时长：{result['seconds']:.3f}秒。音频均为24000Hz、单声道、16-bit PCM WAV。",
-               "107个在用录音键全部与终版字幕、口播文本、速度及打包音频hash匹配。",
+               f"{len(rows)}个在用录音键全部与现有字幕、口播文本、速度及打包音频hash匹配。新增字幕不借用其他句子的录音。",
                "敲门为单独音效，没有把舞台说明交给TTS。", f"波形异常待复核项：{len(warnings)}。",
                "本检查覆盖文件、格式、完整性、静音、削波、台词绑定；不是逐句真人日语听审。", ""]
     output.with_suffix(".txt").write_text("\n".join(summary),encoding="utf-8-sig")

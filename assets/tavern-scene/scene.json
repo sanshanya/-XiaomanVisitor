@@ -1,9 +1,9 @@
 {
-  "schema": 1,
-  "status": "source_layout_verified",
-  "source_package": "xiaoman-tavern-complete-package-v2/xiaoman-scene-v2",
+  "schema": 2,
+  "status": "experimental_ambient_scene",
+  "source_package": "author-provided Xiaoman Tavern Animation Kit v1.1",
   "reference_canvas": [
-    5016,
+    5013,
     2823
   ],
   "layer_order": [
@@ -12,10 +12,16 @@
     "bar_occluder"
   ],
   "background": {
+    "source": "source.png",
+    "mask": "window-mask.png",
     "file": "background.png",
     "texture_size": [
-      1672,
+      1671,
       941
+    ],
+    "encoded_size": [
+      1672,
+      942
     ],
     "reference_scale": 3,
     "resampling": "nearest",
@@ -24,52 +30,152 @@
   "character": {
     "reference_file": "character-reference.png",
     "position": [
-      2628,
-      1004
+      2338,
+      1090
     ],
     "size": [
-      384,
-      688
+      336,
+      602
     ],
     "atlas": "Portraits/xiaoman_tavern_atlas.png",
     "atlas_grid": [
       6,
       3
     ],
-    "moods": 6,
-    "mouth_states": 3,
-    "use_existing_approved_frames": true
+    "use_existing_approved_frames": true,
+    "idle_motion": {
+      "period_seconds": 4.0,
+      "max_lift": 8.0
+    },
+    "lighting": {
+      "file": "actor-light.json",
+      "x": [
+        0.0,
+        0.5,
+        1.0
+      ],
+      "y": [
+        0.0,
+        0.3,
+        0.6,
+        0.8,
+        1.0
+      ],
+      "ambient_rgb": [
+        0.85,
+        0.86,
+        0.91
+      ],
+      "warm_rgb": [
+        0.58,
+        0.2,
+        0.01
+      ],
+      "cool_rgb": [
+        -0.05,
+        0.035,
+        0.15
+      ],
+      "neon_rgb": [
+        0.26,
+        -0.13,
+        0.2
+      ],
+      "dynamic_strength": 0.45,
+      "face_protection": 0.6,
+      "gain_scale": 1.75
+    }
   },
   "bar_occluder": {
     "file": "bar-occluder.png",
     "position": [
-      2628,
+      2338,
       1644
     ],
     "size": [
-      384,
+      336,
       48
-    ],
-    "covers_current_actor_footprint_only": true
+    ]
   },
   "viewport": {
     "fit": "contain",
     "preserve_aspect": true,
     "shared_transform_for_all_layers": true
   },
-  "integration": {
-    "opening_game_day": 1,
-    "independent_night_actor_required": true,
-    "reuse_voice_envelope": true,
-    "modify_native_customer_queue": false,
-    "planned_release_opening_game_day": 3
+  "animation": {
+    "file": "ambient.mp4",
+    "fps": 20,
+    "seconds": 5,
+    "seed": 20261109,
+    "rain_gain": 1.02,
+    "quality_qp": 10,
+    "audio": false,
+    "cassette_meter_baked": true,
+    "lighting": {
+      "warm_gain": 3.8,
+      "cool_gain": 3.2,
+      "neon_gain": 3.6,
+      "floor_gain": 14.0,
+      "counter_gain": 12.0
+    }
   },
-  "supplied_preview_sha256": "e7b0e93c7fd38a0e5822909120d97667ef0fd577d6a29fa4895e84ecb7485524",
-  "compact_layers_reproduce_supplied_preview_exactly": true,
+  "props": {
+    "pickup_rack": {
+      "bounds": [
+        424,
+        390,
+        650,
+        568
+      ],
+      "space": "source_pixels",
+      "interactive": false
+    },
+    "cassette_player": {
+      "bounds": [
+        925,
+        418,
+        1098,
+        505
+      ],
+      "space": "source_pixels",
+      "interactive": false
+    },
+    "water_sink": {
+      "bounds": [
+        667,
+        432,
+        789,
+        514
+      ],
+      "space": "source_pixels",
+      "interactive": false
+    },
+    "water_pipe": {
+      "bounds": [
+        503,
+        99,
+        675,
+        164
+      ],
+      "space": "source_pixels",
+      "interactive": false
+    }
+  },
+  "integration": {
+    "preview_config": "tavern_scene_preview",
+    "preview_default": false,
+    "preview_from_game_day": 1,
+    "normal_discovery_game_day": 3,
+    "normal_opening_implemented": false,
+    "modify_native_customer_queue": false
+  },
   "files": {
-    "background.png": "4a5a957669ce0aa0dad07e511dc755c99445c4c739cb34b683d80c836134502f",
-    "bar-occluder.png": "8b6de91420640b13e920ecfd824f5d5cdd577da5d3f89fdc481c11002c032c59",
+    "source.png": "5f259c811b7cb4a70c4f05771121f8936d3538d8399ffe7be1c04dee47aec227",
+    "window-mask.png": "b3970b9ef9f200d4959ef9de71b0b5d711fc2c4df2082434a6981ed760582978",
     "character-reference.png": "e0502fd4d7d0f55cde6f6741a9f22b8030890fcc0602e92de7043de456d3708e",
-    "provided-layout.json": "7fbd37792490c76f5e351b667dfd1f807a7f1a3566f8cede9ae249e402cd7f8a"
+    "background.png": "4785258c4cdb32bf51ea3e00574af5bb3ff1f12d393e71f0070d9fc5c30b053d",
+    "bar-occluder.png": "563c743fee20602bfebb61cf9fba168410bb159e181deba5f3f5ecc89c6b77ba",
+    "ambient.mp4": "4370f175c9e9882c3e6021f467861e0b31ef37ebabefa0cd626c02a4fcaccd7b",
+    "actor-light.json": "5e9b7b4cb3389f7242e928d418c58d8b5d0c79f1fd03a7f06f4e8dd1cc666344"
   }
 }
