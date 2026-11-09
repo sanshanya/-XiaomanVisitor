@@ -1,7 +1,26 @@
 {
-    "schema":  1,
-    "source":  "assets/gun-portraits/source.png",
+    "schema":  2,
+    "method":  "original-layer-composition",
+    "sources":  [
+                    {
+                        "path":  "assets/layers/normal_1_1.png",
+                        "sha256":  "5b71ef05cd274547f5e7909b4b9f3dd4f44d0748cd5bd63865edb14aa0e9fbc2"
+                    },
+                    {
+                        "path":  "assets/layers/normal_3_1.png",
+                        "sha256":  "a0fc66928abfe051843c65fca960215ac8b3963a6229ce9de6e5cf891e09e809"
+                    },
+                    {
+                        "path":  "assets/layers/normal_4_2.png",
+                        "sha256":  "7f25f9ff26b3c3c666000b3c400d5fb5cdaa607a5c41cdf0648813cc1de278ad"
+                    }
+                ],
     "base":  "Portraits/xiaoman_tavern_atlas.png",
+    "base_frames":  [
+                        15,
+                        16,
+                        17
+                    ],
     "packaged":  "Portraits/xiaoman_gun_atlas.png",
     "frame":  [
                   384,
@@ -9,19 +28,46 @@
               ],
     "columns":  3,
     "rows":  [
-                 "startled",
-                 "frightened"
+                 "worried",
+                 "worried_soft"
              ],
+    "original_canvas":  [
+                            1024,
+                            576
+                        ],
+    "crop":  [
+                 342,
+                 0,
+                 682,
+                 576
+             ],
+    "padded_frame":  [
+                         340,
+                         608
+                     ],
+    "runtime_rectangle":  [
+                              0,
+                              4,
+                              384,
+                              684
+                          ],
     "edited_bounds":  [
-                          83,
-                          193,
-                          293,
-                          357
+                          69,
+                          174,
+                          305,
+                          334
                       ],
-    "source_sha256":  "73146231f7752f7f4dddf30bf6792386b9d94849fbbc0c1a88bab8576c1321b5",
+    "mouth_bounds":  [
+                         176,
+                         310,
+                         204,
+                         334
+                     ],
     "base_sha256":  "6ba7596e421a37ff926d07dafbeab1ff55294757ab84132c39018b306b25e0a3",
-    "sha256":  "225d993a160f6fc5c319f4076881a6b12877fd2f46f4496ac6147f4b7cb824d6",
+    "sha256":  "3bd38bc249196533585e7337cd847f7f9931a41711984b08003ca9e7d01f3b62",
     "body_and_silhouette_preserved":  true,
+    "generated_face_used":  false,
+    "art_status":  "Original-layer baseline; exaggerated fear and additional forehead shadow await pixel-art review",
     "new_runtime_objects":  6,
     "lazy_load":  true,
     "mipmaps":  false

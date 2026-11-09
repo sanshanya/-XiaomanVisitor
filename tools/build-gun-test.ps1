@@ -5,11 +5,11 @@ $GameRoot = Resolve-XiaomanGameRoot $GameRoot
 $gunRoot = Split-Path -Parent $PSScriptRoot
 $managed = Join-Path $GameRoot 'Probably Stolen_Data\Managed'
 $compiler = Get-XiaomanCompiler
-$version = ([xml](Get-Content -LiteralPath (Join-Path $gunRoot 'package\XiaomanVisitor\manifest.xml') -Raw)).Mod.ModVersion
+$version = ([xml](Get-Content -LiteralPath (Join-Path $gunRoot 'package\XiaomanVisitor\manifest.xml') -Raw -Encoding UTF8)).Mod.ModVersion
 $output = Join-Path $gunRoot ('release\gun-test-' + $version)
 $stage = Join-Path $output 'XiaomanGunTest'
 if (Test-Path -LiteralPath (Join-Path $stage 'manifest.xml')) {
-    $previous = [xml](Get-Content -LiteralPath (Join-Path $stage 'manifest.xml') -Raw)
+    $previous = [xml](Get-Content -LiteralPath (Join-Path $stage 'manifest.xml') -Raw -Encoding UTF8)
     if ($previous.Mod.ID -ne 'sansm.xiaoman.gun_test') { throw 'Unexpected existing test package' }
 }
 New-Item -ItemType Directory -Path $stage -Force | Out-Null
@@ -52,7 +52,7 @@ if ($Install) {
     $mods = [IO.Path]::GetFullPath((Join-Path $GameRoot 'Mods'))
     if ([IO.Path]::GetDirectoryName($destination) -ne $mods -or [IO.Path]::GetFileName($destination) -ne 'XiaomanGunTest') { throw 'Unexpected test install path' }
     if (Test-Path -LiteralPath (Join-Path $destination 'manifest.xml')) {
-        $installed = [xml](Get-Content -LiteralPath (Join-Path $destination 'manifest.xml') -Raw)
+        $installed = [xml](Get-Content -LiteralPath (Join-Path $destination 'manifest.xml') -Raw -Encoding UTF8)
         if ($installed.Mod.ID -ne 'sansm.xiaoman.gun_test') { throw 'Refusing to overwrite another mod' }
         if (Get-Process -Name 'Probably Stolen' -ErrorAction SilentlyContinue) { throw 'Save and exit before replacing an existing test DLL' }
     }

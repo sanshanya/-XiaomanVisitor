@@ -1,5 +1,14 @@
 {
-  "mode": "Built-in image_gen.imagegen",
-  "purpose": "仅生成持枪表情，注册时保留原正常身体和轮廓；原十八帧不变",
-  "prompt": "Use case: identity-preserve. Asset type: six pixel-art game portrait frames for Xiaoman's reaction to the player raising a shotgun, in exactly THREE COLUMNS by TWO ROWS, genuine transparent background. Input 1 is the EDIT TARGET: preserve its exact character identity, blue hair, blue beret and ribbon, clothing, bust pose, original square pixel art and proportions. Input 2 is supporting reference for frightened blue eyes and the three mouth states. Input 3 is supporting reference ONLY for the shallow shadow across the forehead and upper eye area, not for its green-haired character or its angry mood.\nAll six frames show the SAME girl, same scale and alignment. Change only her face. No head or shoulder movement between cells. TOP ROW: sudden fright, raised worried brows, clearly widened eyes and smaller bright BLUE irises, a tiny cold sweat bead at the temple, a SUBTLE cool blue-violet shaded band under the bangs and around the upper eye sockets, fading softly toward the cheekbones. BOTTOM ROW: lingering frightened worry, eyes a little less wide than top row, anxious lifted inner eyebrows, blue irises still visible, same sweat and subtle forehead/eye shadow. This is fear, not anger. Keep her eyes and face readable. Do not shade the lower cheeks, nose or mouth strongly.\nWithin EACH row, left to right the ONLY change is the mouth: CLOSED short worried straight lip line; SMALL OPEN oval for hesitant speech; MEDIUM OPEN oval for a spoken syllable. Similar widths, restrained movement, no scream, no grin. Closed mouth must be unambiguously closed. All pupils, brows, sweat and shadows stay fixed within the row. Preserve the blue eye color, nose highlight and head contour. No tears streaming, no white blank eyes, no red anger marks. Keep original clothing and silhouette unchanged. All cells have equal rectangular dimensions, crowns and waists aligned, full top of beret and waist retained. No text, labels, border, checkerboard, scenery, speech bubbles or weapons. This is a sprite sheet, not a comic. Crisp original pixel edges; no painterly brushwork, no smooth vector redesign."
+  "mode": "Original game layer composition; no image generation",
+  "source_game": "雨音に満ちる夜 -A night filled with the sound of rain-",
+  "source": "Approved worried frames 15–17 plus original normal_1_1, normal_3_1 and normal_4_2 layers",
+  "purpose": "Restore the original character's face proportions and aligned mouth states after the author rejected generated facial patches",
+  "prompt": null,
+  "art_status": "Conservative original-layer baseline; stronger fear and additional forehead shadow remain pending pixel-art review",
+  "reference_only": {
+    "workshop_item": "3835157116",
+    "name": "可能是收书的",
+    "observed": "Separate complete normal/surprised sprites, shared dimensions and native SpriteRenderer switching",
+    "copied_art_or_code": false
+  }
 }
