@@ -5,7 +5,14 @@
   "purpose": "Preserve the selected original expressions; raise the cool forehead shadow into the two upper bang gaps, deepen the roots and fade earlier towards the eyebrows",
   "prompt": null,
   "authoring_file": "tools/prepare_gun_portraits.ps1",
-  "art_status": "Original eyes and expressions preserved; raised shadow with darker roots preview inspected, author gameplay review pending",
+  "art_status": "Forehead appearance approved by the author in 0.0.3.18; gameplay flow acceptance remains separate",
+  "appearance_approval": {
+    "status": "approved_by_author",
+    "version": "0.0.3.18",
+    "date": "2026-11-10",
+    "source_commit": "9c4ad4c051a9282f9ddef8dc70b5433245adbedd",
+    "atlas_sha256": "927801547f1e8596452adf15b67956b1dc43f165cb3546cd6c1f01743e3f59d8"
+  },
   "reference_only": {
     "workshop_item": "3835157116",
     "name": "可能是收书的",
