@@ -117,11 +117,11 @@ story_note_08_title,"Dear senpai,"
 story_note_08_body,"A girl left a glittering hair clip on the counter last night.\n\nI was about to put it away for her when she hurried back.\n\nBut she did not ask about the clip. ""Will you have that drink with the cherry tomorrow?""\n\nI said yes and handed it back.\n\nShe laughed. ""Keep it as a deposit for my next glass.""\n\n...Hey, this is a tavern!\n\nFor a moment, though, I actually wondered how many credits it was worth.\n\nSenpai, this is all your fault. ( ˘•ω•˘ )\n\nOf course I gave it back in the end.\n\nHere is this week's tape."
 story_note_08_signature,— Xiaoman
 story_note_08_name,A note from Xiaoman
-xm_09_01,Good evening. The motion light outside my door came on several times yesterday.
-xm_09_02,I thought I had customers. It was just delivery carts passing by.
-xm_09_shop,I'd like some food today. Just a little will do.
-story_note_09_title,"Dear shopkeeper,"
-story_note_09_body,I was taking stock today and found half a crate of lemons left. I used to worry about running out. Now I'll have to find a way to use them up.\n\nSomething seems to have changed in the shopping passage lately. There aren't as many people passing through.\n\nI stood by the glass door for quite a while.\n\nI haven't had this much time to relax in ages.\n\nWhat do you usually do when you don't have any customers?
+xm_09_01,"Good evening, senpai. Business at the tavern keeps getting better."
+xm_09_02,"I made an extra batch last week, but it still was not enough."
+xm_09_shop,I would like some food today. I brought {0} credits.
+story_note_09_title,"Dear senpai,"
+story_note_09_body,"I have had my eye on a new ice maker lately.\n\nIt holds twice as much as mine and is much quieter. The seller says it is perfect for a little tavern.\n\nI have even worked out where to put it.\n\nThe price is quite something, though.\n\nYesterday, while doing the accounts, I kept looking at its picture.\n\nIn the end, I decided to wait a little longer.\n\nI have only just opened. There are still so many things to spend money on.\n\nSaving up is such a pain~\n\nDo you ever feel that way too, senpai?"
 story_note_09_signature,— Xiaoman
 story_note_09_name,A note from Xiaoman
 xm_10_01,Good evening. Someone who'd visited before came back yesterday.
@@ -482,3 +482,12 @@ xm_tavern_07_chat_01,"Some people sit down and quietly listen to the rain. It is
 xm_tavern_07_chat_02,"Some people stop by for a drink before closing now. We never arrange it, but around that time I can almost tell who will walk through the door."
 xm_tavern_08_chat_01,"The girls who took my photos spent ages choosing one with me. They came for a drink, but it was like I had hired photographers."
 xm_tavern_08_chat_02,"They said they would bring some new colleagues next shift. If they really come, I will have to remember to get a few more ingredients ready."
+xm_09_03,"A few people even came ahead to ask if I could save them some for the weekend. Hehe, I will have to get more ingredients next time."
+xm_09_accept,Thank you. Just what I needed.
+xm_09_bye,I should go. Come sit for a while tonight if you have time.
+xm_09_02_late,"I made an extra batch a little while ago, but it still was not enough."
+xm_tavern_09_chat_01,"Senpai, lately I have been getting the ingredients for the popular drinks ready in advance."
+xm_tavern_09_chat_02,I used to get so flustered when people came in at once. I can finally take it a little more calmly now.
+xm_tavern_09_chat_03,"At this rate, though, I might need another cabinet behind the bar."
+xm_w09_news_title,A new landmark: Polar Day Lounge opens
+xm_w09_news_body,"Polar Day, the new lounge from Tenquin Asset Corporation, opens today on the lower-level shopping street.\n\nThe venue features selected upper-level spirits, advanced bartending equipment and several opening-exclusive packages.\n\nDuring the opening promotion, all items are available at 30% of their usual price. The shopping-street guide terminals now feature the new venue.\n\nNew customers can enjoy drinks worth 500 credits free of charge.\n\nTenquin says it will continue upgrading the lower-level shopping street to offer residents and interstellar travellers a better experience."

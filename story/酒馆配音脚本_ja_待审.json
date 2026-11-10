@@ -1428,6 +1428,54 @@
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
       "source_sha256": "fd1b4b8897c03d2522e94de5d29059ba65cb59487ae7a748d6a90e11ce468137",
       "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_09_chat_01",
+      "subtitle_templates": {
+        "zh": "前辈，最近我在试着把常卖的酒提前备好原料。",
+        "ja": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+        "en": "Senpai, lately I have been getting the ingredients for the popular drinks ready in advance."
+      },
+      "spoken_text": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+      "generate_text": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "8d6aa5df775e819f660905f1a099f0e3aa2391f2a8fe99416055d7e9b411d64a",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_09_chat_02",
+      "subtitle_templates": {
+        "zh": "以前客人一多，我就忙得团团转。现在总算能从容一些了呢。",
+        "ja": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+        "en": "I used to get so flustered when people came in at once. I can finally take it a little more calmly now."
+      },
+      "spoken_text": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+      "generate_text": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "87d67697fb7b0fe3fef3ddc20c87ceeeb594efbf29663bc05db5e1709be652a0",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_09_chat_03",
+      "subtitle_templates": {
+        "zh": "不过看样子，吧台后面可能还得添个柜子才行。",
+        "ja": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+        "en": "At this rate, though, I might need another cabinet behind the bar."
+      },
+      "spoken_text": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+      "generate_text": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "eeb8208505ccaef549e73f6985e2e564df911f7c5ff95beb8439af21304f5821",
+      "defer_recording": true
     }
   ],
   "integration_note": "完整配音脚本的待录子集，不可单独覆盖现有语音索引；本次不请求TTS。"

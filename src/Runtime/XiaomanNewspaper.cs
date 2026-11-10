@@ -7,6 +7,16 @@ namespace XiaomanVisitor
 {
     public sealed partial class XiaomanMod
     {
+        internal StoreEvent LoungeOpeningNews()
+        {
+            if (!enabled || !PlayerStore.HasInstance || StoreStation.Instance==null || !WeekNineRules.HasOpeningNews(StoreStation.Instance.dayCounter)) return null;
+            return new StoreEvent {
+                identifier=WeekNineRules.NewsId,
+                newsName=Text("xm_w09_news_title"), newsDescription=Text("xm_w09_news_body"),
+                eventType=StoreEvent.EventType.COSMETIC, eventArea=StoreEvent.EventArea.LOWER,
+                startDay=WeekNineRules.NewsDay, duration=1, cooldown=0
+            };
+        }
         internal StoreEvent RenovationNews()
         {
             if (!enabled || !PlayerStore.HasInstance || !WeekOneRules.HasRenovationNews(StoreStation.Instance.dayCounter)) return null;
@@ -50,6 +60,8 @@ namespace XiaomanVisitor
         {
             if (!XiaomanNewspaper.Rendering) return;
             __result = XiaomanNewspaper.Append(__result, XiaomanMod.Instance?.RenovationNews());
+            // Date-specific opening news takes this mod's spare slot before its ongoing W04 article.
+            __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.LoungeOpeningNews());
             __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.SupportNews());
         }
     }

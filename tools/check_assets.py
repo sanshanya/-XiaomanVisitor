@@ -31,7 +31,7 @@ def main():
         placeholders = re.findall(r"\{\d+\}", texts["zh"][key])
         for lang in ('en','ja'):
             # Approved shopping subtitles deliberately omit the Japanese spoken budget.
-            expected=[] if key in ('xm_02_shop','xm_03_shop','xm_04_shop','xm_05_shop','xm_06_shop','xm_07_shop','xm_08_shop','xm_w04_audit_shop') and lang=='ja' else sorted(placeholders)
+            expected=[] if key in ('xm_02_shop','xm_03_shop','xm_04_shop','xm_05_shop','xm_06_shop','xm_07_shop','xm_08_shop','xm_09_shop','xm_w04_audit_shop') and lang=='ja' else sorted(placeholders)
             assert sorted(re.findall(r"\{\d+\}",texts[lang][key]))==expected,key
     assert texts["zh"]["gift_note_body"] == texts["zh"]["story_note_01_body"]
     assert texts["zh"]["gift_note_title"] == "致店长先生："
@@ -117,6 +117,9 @@ def main():
         overlay=weekly_story_source.read(visit)
         english.update({key:row['en'] for key,row in overlay['lines'].items()})
         assert story['week_'+name+'_sha256']==overlay['sha256']
+        if 'news' in overlay:
+            for lang in ('zh','ja','en'):
+                for field in ('title','body'):assert texts[lang][f'xm_w{visit:02d}_news_'+field]==overlay['news'][field][lang]
         for lang,fields in overlay['letters'].items():
             for field,value in fields.items():assert texts[lang][f'story_note_{visit:02d}_{field}']==value
     assert set(english) == {line["key"] for line in story["lines"]}

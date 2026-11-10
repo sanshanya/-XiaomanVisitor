@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "4.8-W07-W08",
+  "version": "W09-final",
   "source": "story/小满的十四个星期一_v3.4_专属动作台词_TTS演出整合.md",
   "source_sha256": "fb3c704ad917338d646cc3ee3008dc14ae6da78e31c74d43b4a5202e3741351a",
   "week_two_source": "story/小满酒馆_第二周_v4.1_实施稿.md",
@@ -158,17 +158,18 @@
     },
     {
       "index": 9,
-      "title": "感应灯",
+      "title": "再多进一点吧",
       "credits": 450,
       "demand": "Food",
       "track": "lost",
       "opening": [
         "xm_09_01",
         "xm_09_02",
+        "xm_09_03",
         "xm_09_shop"
       ],
-      "accept": "accept_return",
-      "goodbye": "goodbye",
+      "accept": "xm_09_accept",
+      "goodbye": "xm_09_bye",
       "cocktail": "",
       "note_id": "story_note_09"
     },
@@ -1521,34 +1522,79 @@
     },
     {
       "key": "xm_09_01",
-      "zh": "晚上好。昨天门口的感应灯亮了好几次。",
-      "ja": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
-      "en": "Good evening. The motion light outside my door came on several times yesterday.",
-      "mood": "Neutral",
+      "zh": "晚上好，前辈。最近店里生意越来越好啦。",
+      "ja": "こんばんは、先輩。最近、お店の調子がますますよくなってきたんです。",
+      "en": "Good evening, senpai. Business at the tavern keeps getting better.",
+      "mood": "Smile",
       "kind": "speech",
-      "generate_text": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+      "generate_text": "こんばんは、先輩。最近、お店の調子がますますよくなってきたんです。",
+      "defer_voice": true,
       "reference": false
     },
     {
       "key": "xm_09_02",
-      "zh": "我还以为是客人呢。结果都是运货车从门前经过。",
-      "ja": "お客さんかと思ったら、通りかかるのは運搬カートばっかりで。",
-      "en": "I thought I had customers. It was just delivery carts passing by.",
-      "mood": "Shy",
+      "zh": "上周特意多准备了一批酒，结果还是不够卖呢。",
+      "ja": "先週は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "en": "I made an extra batch last week, but it still was not enough.",
+      "mood": "Smile",
       "kind": "speech",
-      "generate_text": "お客さんかと思ったら……[exhale] 通りかかるのは運搬カートばっかりで。",
-      "performance_optional": true,
+      "generate_text": "先週は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "defer_voice": true,
+      "reference": false
+    },
+    {
+      "key": "xm_09_03",
+      "zh": "有几位客人还提前来问，能不能帮他们留到周末。嘿嘿，看来下次得再多进些原料了。",
+      "ja": "週末まで取っておいてもらえるか、先に聞きに来てくれたお客さんもいて。えへへ、次は材料をもっと仕入れなくちゃ。",
+      "en": "A few people even came ahead to ask if I could save them some for the weekend. Hehe, I will have to get more ingredients next time.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "週末まで取っておいてもらえるか、先に聞きに来てくれたお客さんもいて。えへへ、次は材料をもっと仕入れなくちゃ。",
+      "defer_voice": true,
       "reference": false
     },
     {
       "key": "xm_09_shop",
-      "zh": "今天想买点吃的。少一些就好。",
-      "ja": "今日は食べるものを。少なめでお願いします。",
-      "en": "I'd like some food today. Just a little will do.",
+      "zh": "今天想买点吃的。带了 {0} 信用点。",
+      "ja": "今日は食べるものを少し買いに来ました。",
+      "en": "I would like some food today. I brought {0} credits.",
       "mood": "Neutral",
       "kind": "speech",
-      "generate_text": "今日は食べるものを。少なめでお願いします。",
+      "generate_text": "今日は食べるものを少し買いに来ました。",
+      "defer_voice": true,
       "reference": false
+    },
+    {
+      "key": "xm_09_accept",
+      "zh": "谢谢。正好用得上。",
+      "ja": "ありがとうございます。ちょうど必要だったんです。",
+      "en": "Thank you. Just what I needed.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "ありがとうございます。ちょうど必要だったんです。",
+      "defer_voice": true,
+      "reference": false
+    },
+    {
+      "key": "xm_09_bye",
+      "zh": "那我先走啦。晚上有空的话，来坐坐哦。",
+      "ja": "それじゃ、また。夜、時間があったら、座りに来てくださいね。",
+      "en": "I should go. Come sit for a while tonight if you have time.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "それじゃ、また。夜、時間があったら、座りに来てくださいね。",
+      "defer_voice": true,
+      "reference": false
+    },
+    {
+      "key": "xm_09_02_late",
+      "zh": "前阵子特意多准备了一批酒，结果还是不够卖呢。",
+      "ja": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "en": "I made an extra batch a little while ago, but it still was not enough.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "defer_voice": true
     },
     {
       "key": "xm_10_01",
@@ -2793,6 +2839,36 @@
       "defer_voice": true
     },
     {
+      "key": "xm_tavern_09_chat_01",
+      "zh": "前辈，最近我在试着把常卖的酒提前备好原料。",
+      "ja": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+      "en": "Senpai, lately I have been getting the ingredients for the popular drinks ready in advance.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+      "defer_voice": true
+    },
+    {
+      "key": "xm_tavern_09_chat_02",
+      "zh": "以前客人一多，我就忙得团团转。现在总算能从容一些了呢。",
+      "ja": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+      "en": "I used to get so flustered when people came in at once. I can finally take it a little more calmly now.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+      "defer_voice": true
+    },
+    {
+      "key": "xm_tavern_09_chat_03",
+      "zh": "不过看样子，吧台后面可能还得添个柜子才行。",
+      "ja": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+      "en": "At this rate, though, I might need another cabinet behind the bar.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+      "defer_voice": true
+    },
+    {
       "key": "xm_right_item",
       "zh": "嗯，这种就可以。",
       "ja": "あ、そうそう。こういうのを探してたんです。",
@@ -3622,7 +3698,11 @@
     "xm_08_02_late",
     "xm_09_01",
     "xm_09_02",
+    "xm_09_03",
     "xm_09_shop",
+    "xm_09_accept",
+    "xm_09_bye",
+    "xm_09_02_late",
     "xm_10_01",
     "xm_10_02",
     "xm_10_shop",
@@ -3747,6 +3827,9 @@
     "xm_tavern_07_chat_02",
     "xm_tavern_08_chat_01",
     "xm_tavern_08_chat_02",
+    "xm_tavern_09_chat_01",
+    "xm_tavern_09_chat_02",
+    "xm_tavern_09_chat_03",
     "xm_repeat_first",
     "xm_cocktail_accept",
     "intro_1",
@@ -3840,5 +3923,7 @@
   "week_seven_source": "story/第七周实现.json",
   "week_seven_sha256": "b16dd526fa61d7be77922ad18885739a169ac4c6c6af253ae362f64511bc2162",
   "week_eight_source": "story/第八周实现.json",
-  "week_eight_sha256": "f1235484f37b5b945464a9e5b06c34efeb1f012d3254ed91694be95589fc2d41"
+  "week_eight_sha256": "f1235484f37b5b945464a9e5b06c34efeb1f012d3254ed91694be95589fc2d41",
+  "week_nine_source": "story/第九周实现.json",
+  "week_nine_sha256": "5deef59892bf9be6d5232eba21d5ff60c9d5866809315f028dd96f56157ad496"
 }

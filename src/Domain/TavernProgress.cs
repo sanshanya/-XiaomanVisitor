@@ -31,6 +31,7 @@ namespace XiaomanVisitor
         {
             if (visit==5 && day>29 && new[]{"xm_05_01","xm_05_02","xm_05_03"}.Contains(key)) return key+"_late";
             if (visit==7 && day>43 && key=="xm_07_03" || visit==8 && day>50 && key=="xm_08_02") return key+"_late";
+            if (visit==9 && day>57 && key=="xm_09_02") return key+"_late";
             return visit==2 && key=="xm_02_02" && day>OpeningDay ? "xm_02_02_late" : key;
         }
         public static bool OpeningWeek(int day) { return day >= OpeningDay && day <= 14; }

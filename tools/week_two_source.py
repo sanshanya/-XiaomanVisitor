@@ -66,6 +66,17 @@ def generate(data):
     for pool in data['chat_pools']:
         code.append('private static readonly string[] Chat'+str(pool['visit'])+' = new string[] {'+
                     ','.join(json.dumps(key) for key in pool['keys'])+'};')
+    sequences=[]
+    for pool in data['chat_pools']:
+        for key,sequence in pool.get('sequences',{}).items():
+            name='Sequence'+str(len(sequences))
+            code.append('private static readonly string[] '+name+' = new string[] {'+
+                        ','.join(json.dumps(k) for k in sequence)+'};')
+            sequences.append((key,name))
+    code.append('public static string[] ChatSequence(string key) {')
+    for key,name in sequences:
+        code.append('if (key=='+json.dumps(key)+') return '+name+';')
+    code.append('return new[]{key}; }')
     code.append('public static string[] WeeklyChatPool(int day,int visits) {')
     for pool in reversed(data['chat_pools']):
         code.append(f'if (day>={pool["from_day"]} && visits>={pool["min_visit"]}) return Chat{pool["visit"]};')

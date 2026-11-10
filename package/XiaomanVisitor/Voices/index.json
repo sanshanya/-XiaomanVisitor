@@ -110,42 +110,6 @@
       "generic": true
     },
     {
-      "line_key": "xm_09_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_09_01_b68fa3bed454",
-      "spoken_text": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
-      "subtitle_templates": [
-        "晚上好。昨天门口的感应灯亮了好几次。",
-        "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
-        "Good evening. The motion light outside my door came on several times yesterday."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_09_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_09_02_92262cd8c75a",
-      "spoken_text": "お客さんかと思ったら…… 通りかかるのは運搬カートばっかりで。",
-      "subtitle_templates": [
-        "我还以为是客人呢。结果都是运货车从门前经过。",
-        "お客さんかと思ったら、通りかかるのは運搬カートばっかりで。",
-        "I thought I had customers. It was just delivery carts passing by."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_09_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_09_shop_99ab12ecd5a5",
-      "spoken_text": "今日は食べるものを。少なめでお願いします。",
-      "subtitle_templates": [
-        "今天想买点吃的。少一些就好。",
-        "今日は食べるものを。少なめでお願いします。",
-        "I'd like some food today. Just a little will do."
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_10_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_10_01_9f63e2c0df23",
@@ -1058,8 +1022,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 164,
+  "pending_lines": 174,
   "pending_by_language": {
-    "ja": 164
+    "ja": 174
   }
 }

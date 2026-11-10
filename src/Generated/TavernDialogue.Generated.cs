@@ -87,12 +87,21 @@ new StoryLineSpec("xm_tavern_07_chat_01", Mood.Soft),
 new StoryLineSpec("xm_tavern_07_chat_02", Mood.Smile),
 new StoryLineSpec("xm_tavern_08_chat_01", Mood.Smile),
 new StoryLineSpec("xm_tavern_08_chat_02", Mood.Soft),
+new StoryLineSpec("xm_tavern_09_chat_01", Mood.Smile),
+new StoryLineSpec("xm_tavern_09_chat_02", Mood.Smile),
+new StoryLineSpec("xm_tavern_09_chat_03", Mood.Smile),
 };
 private static readonly string[] Chat5 = new string[] {"xm_tavern_05_daily"};
 private static readonly string[] Chat6 = new string[] {"xm_tavern_06_chat_01","xm_tavern_06_chat_02"};
 private static readonly string[] Chat7 = new string[] {"xm_tavern_07_chat_01","xm_tavern_07_chat_02"};
 private static readonly string[] Chat8 = new string[] {"xm_tavern_08_chat_01","xm_tavern_08_chat_02"};
+private static readonly string[] Chat9 = new string[] {"xm_tavern_09_chat_01"};
+private static readonly string[] Sequence0 = new string[] {"xm_tavern_09_chat_01","xm_tavern_09_chat_02","xm_tavern_09_chat_03"};
+public static string[] ChatSequence(string key) {
+if (key=="xm_tavern_09_chat_01") return Sequence0;
+return new[]{key}; }
 public static string[] WeeklyChatPool(int day,int visits) {
+if (day>=57 && visits>=9) return Chat9;
 if (day>=50 && visits>=8) return Chat8;
 if (day>=43 && visits>=7) return Chat7;
 if (day>=36 && visits>=0) return Chat6;

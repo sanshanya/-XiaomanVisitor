@@ -1056,47 +1056,114 @@
     {
       "key": "xm_09_01",
       "subtitle_templates": {
-        "zh": "晚上好。昨天门口的感应灯亮了好几次。",
-        "ja": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
-        "en": "Good evening. The motion light outside my door came on several times yesterday."
+        "zh": "晚上好，前辈。最近店里生意越来越好啦。",
+        "ja": "こんばんは、先輩。最近、お店の調子がますますよくなってきたんです。",
+        "en": "Good evening, senpai. Business at the tavern keeps getting better."
       },
-      "spoken_text": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
-      "generate_text": "こんばんは。昨日、入口のセンサーライトが何度もついたんです。",
+      "spoken_text": "こんばんは、先輩。最近、お店の調子がますますよくなってきたんです。",
+      "generate_text": "こんばんは、先輩。最近、お店の調子がますますよくなってきたんです。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_09_01.d0923572becba715.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "72bb2529eb28e06faadede98386d4381991c93b44a434df9ba7de4c3b99ef6b1"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "be4e2433b0926eaf12466130e8b5e5c0f3b67da53ba16fbc4e4dfb59b1ff410a",
+      "defer_recording": true
     },
     {
       "key": "xm_09_02",
       "subtitle_templates": {
-        "zh": "我还以为是客人呢。结果都是运货车从门前经过。",
-        "ja": "お客さんかと思ったら、通りかかるのは運搬カートばっかりで。",
-        "en": "I thought I had customers. It was just delivery carts passing by."
+        "zh": "上周特意多准备了一批酒，结果还是不够卖呢。",
+        "ja": "先週は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+        "en": "I made an extra batch last week, but it still was not enough."
       },
-      "spoken_text": "お客さんかと思ったら…… 通りかかるのは運搬カートばっかりで。",
-      "generate_text": "お客さんかと思ったら……[exhale] 通りかかるのは運搬カートばっかりで。",
+      "spoken_text": "先週は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "generate_text": "先週は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_09_02.b769fd9e12ea0ed9.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "0deefa6dbe99fd28a2517e52400724fabc177aaf5e657269398fcb5e1561ae37"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "1dcec6624e3d8586d946e14620cef031fc3d9508368a646ae93f19d1d41a98f1",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_09_03",
+      "subtitle_templates": {
+        "zh": "有几位客人还提前来问，能不能帮他们留到周末。嘿嘿，看来下次得再多进些原料了。",
+        "ja": "週末まで取っておいてもらえるか、先に聞きに来てくれたお客さんもいて。えへへ、次は材料をもっと仕入れなくちゃ。",
+        "en": "A few people even came ahead to ask if I could save them some for the weekend. Hehe, I will have to get more ingredients next time."
+      },
+      "spoken_text": "週末まで取っておいてもらえるか、先に聞きに来てくれたお客さんもいて。えへへ、次は材料をもっと仕入れなくちゃ。",
+      "generate_text": "週末まで取っておいてもらえるか、先に聞きに来てくれたお客さんもいて。えへへ、次は材料をもっと仕入れなくちゃ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "c844cdce73611085eb796d8c0bd7f37d09f73dae895efbe02d4f3c86220c116d",
+      "defer_recording": true
     },
     {
       "key": "xm_09_shop",
       "subtitle_templates": {
-        "zh": "今天想买点吃的。少一些就好。",
-        "ja": "今日は食べるものを。少なめでお願いします。",
-        "en": "I'd like some food today. Just a little will do."
+        "zh": "今天想买点吃的。带了 {0} 信用点。",
+        "ja": "今日は食べるものを少し買いに来ました。",
+        "en": "I would like some food today. I brought {0} credits."
       },
-      "spoken_text": "今日は食べるものを。少なめでお願いします。",
-      "generate_text": "今日は食べるものを。少なめでお願いします。",
+      "spoken_text": "今日は食べるものを少し買いに来ました。",
+      "generate_text": "今日は食べるものを少し買いに来ました。",
+      "generic": true,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "12ead52ea6d0740bf358215973de63e5a5051e84762cd625c46a0278b456f5be",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_09_accept",
+      "subtitle_templates": {
+        "zh": "谢谢。正好用得上。",
+        "ja": "ありがとうございます。ちょうど必要だったんです。",
+        "en": "Thank you. Just what I needed."
+      },
+      "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
+      "generate_text": "ありがとうございます。ちょうど必要だったんです。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_09_shop.4ad7779da26d4fed.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "5ea2d04b88c6aeb91dd2c674c6b5e9082a8bcce85e90d68f23904677ad65cba2"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "59b6c9011d1fa09a92f8297b3061b4e54ad6c91eda3c80733b05095c232351ab",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_09_bye",
+      "subtitle_templates": {
+        "zh": "那我先走啦。晚上有空的话，来坐坐哦。",
+        "ja": "それじゃ、また。夜、時間があったら、座りに来てくださいね。",
+        "en": "I should go. Come sit for a while tonight if you have time."
+      },
+      "spoken_text": "それじゃ、また。夜、時間があったら、座りに来てくださいね。",
+      "generate_text": "それじゃ、また。夜、時間があったら、座りに来てくださいね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "60dfb8d0dc0acb1fb97ea20e434c42a71c595705d7a20d13b50e3b294aeb6023",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_09_02_late",
+      "subtitle_templates": {
+        "zh": "前阵子特意多准备了一批酒，结果还是不够卖呢。",
+        "ja": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+        "en": "I made an extra batch a little while ago, but it still was not enough."
+      },
+      "spoken_text": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "generate_text": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "9636cd92c22aa495fa99cc6507c4f663e8effc6d166534ae1ac0b4faa4e44789",
+      "defer_recording": true
     },
     {
       "key": "xm_10_01",
@@ -3063,6 +3130,54 @@
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
       "source_sha256": "fd1b4b8897c03d2522e94de5d29059ba65cb59487ae7a748d6a90e11ce468137",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_09_chat_01",
+      "subtitle_templates": {
+        "zh": "前辈，最近我在试着把常卖的酒提前备好原料。",
+        "ja": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+        "en": "Senpai, lately I have been getting the ingredients for the popular drinks ready in advance."
+      },
+      "spoken_text": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+      "generate_text": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "8d6aa5df775e819f660905f1a099f0e3aa2391f2a8fe99416055d7e9b411d64a",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_09_chat_02",
+      "subtitle_templates": {
+        "zh": "以前客人一多，我就忙得团团转。现在总算能从容一些了呢。",
+        "ja": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+        "en": "I used to get so flustered when people came in at once. I can finally take it a little more calmly now."
+      },
+      "spoken_text": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+      "generate_text": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "87d67697fb7b0fe3fef3ddc20c87ceeeb594efbf29663bc05db5e1709be652a0",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_09_chat_03",
+      "subtitle_templates": {
+        "zh": "不过看样子，吧台后面可能还得添个柜子才行。",
+        "ja": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+        "en": "At this rate, though, I might need another cabinet behind the bar."
+      },
+      "spoken_text": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+      "generate_text": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "eeb8208505ccaef549e73f6985e2e564df911f7c5ff95beb8439af21304f5821",
       "defer_recording": true
     },
     {

@@ -245,7 +245,7 @@ namespace XiaomanVisitor
                     int day=StoreStation.Instance.dayCounter;
                     string key=ReadTavern().NextChat(day,ReadWork().WorkedOn(day),ReadStory().VisitIndex);
                     string receipt=TavernProgress.ChatReceipt(key,day);
-                    CloseTavernMenu();QueueTavernSpeech(new[]{key},() => UpdateTavern(p => { if (!p.ChatSeen.Contains(receipt)) p.ChatSeen.Add(receipt); }));
+                    CloseTavernMenu();QueueTavernSpeech(TavernDialogue.ChatSequence(key),() => UpdateTavern(p => { if (!p.ChatSeen.Contains(receipt)) p.ChatSeen.Add(receipt); }));
                 });
                 if (ReadTavern().MayHelp(StoreStation.Instance.dayCounter)) choice(Text("ui_tavern_reception"),() => {
                     CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w02_help_intro"},() => ShowTavernMenu("help"));

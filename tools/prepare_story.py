@@ -192,6 +192,9 @@ def main():
         episodes[visit-1]['title']=overlay['title']
         for key,row in overlay['lines'].items():
             if not key.startswith(f'xm_{visit:02d}_'): add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
+        if 'news' in overlay:
+            for lang in ('zh','ja','en'):
+                for field in ('title','body'):loc[lang][f'xm_w{visit:02d}_news_'+field]=overlay['news'][field][lang]
     ui_five=json.loads((ROOT/'assets/week-five-six-localization.json').read_text(encoding='utf-8'))
     for lang,entries in ui_five.items():loc[lang].update(entries)
     ui_four=json.loads((ROOT/'assets/week-four-localization.json').read_text(encoding='utf-8'))
@@ -314,7 +317,7 @@ def main():
     voice_keys = [k for k, row in lines.items() if not row.get("reference") and row["kind"] == "speech" and "voice_alias" not in row]
     source_path = args.source.resolve()
     source_name = source_path.relative_to(ROOT).as_posix() if source_path.is_relative_to(ROOT) else source_path.name
-    snapshot = dict(schema=1, version="4.8-W07-W08", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+    snapshot = dict(schema=1, version="W09-final", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
                     week_two_source=week_two['source'],week_two_sha256=week_two['sha256'],
                     week_three_source=week_three['source'],week_three_sha256=week_three['sha256'],
                     week_four_source=week_four['source'],week_four_sha256=week_four['sha256'],

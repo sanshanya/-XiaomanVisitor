@@ -1,0 +1,123 @@
+{
+  "schema": 1,
+  "visit": 9,
+  "title": "再多进一点吧",
+  "author_source": "story/第九周_作者讨论与最终修订.txt",
+  "status": "采用作者最后修订；不采用前文探店/衰退稿，新日语待审不录音",
+  "night_chat": {
+    "from_day": 57,
+    "min_visit": 9,
+    "keys": [
+      "xm_tavern_09_chat_01"
+    ],
+    "sequences": {
+      "xm_tavern_09_chat_01": [
+        "xm_tavern_09_chat_01",
+        "xm_tavern_09_chat_02",
+        "xm_tavern_09_chat_03"
+      ]
+    }
+  },
+  "lines": {
+    "xm_09_01": {
+      "zh": "晚上好，前辈。最近店里生意越来越好啦。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "こんばんは、先輩。最近、お店の調子がますますよくなってきたんです。",
+      "en": "Good evening, senpai. Business at the tavern keeps getting better."
+    },
+    "xm_09_02": {
+      "zh": "上周特意多准备了一批酒，结果还是不够卖呢。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "先週は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "en": "I made an extra batch last week, but it still was not enough."
+    },
+    "xm_09_03": {
+      "zh": "有几位客人还提前来问，能不能帮他们留到周末。嘿嘿，看来下次得再多进些原料了。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "週末まで取っておいてもらえるか、先に聞きに来てくれたお客さんもいて。えへへ、次は材料をもっと仕入れなくちゃ。",
+      "en": "A few people even came ahead to ask if I could save them some for the weekend. Hehe, I will have to get more ingredients next time."
+    },
+    "xm_09_shop": {
+      "zh": "今天想买点吃的。带了 {0} 信用点。",
+      "mood": "Neutral",
+      "defer_voice": true,
+      "ja": "今日は食べるものを少し買いに来ました。",
+      "en": "I would like some food today. I brought {0} credits."
+    },
+    "xm_09_accept": {
+      "zh": "谢谢。正好用得上。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "ありがとうございます。ちょうど必要だったんです。",
+      "en": "Thank you. Just what I needed."
+    },
+    "xm_09_bye": {
+      "zh": "那我先走啦。晚上有空的话，来坐坐哦。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "それじゃ、また。夜、時間があったら、座りに来てくださいね。",
+      "en": "I should go. Come sit for a while tonight if you have time."
+    },
+    "xm_tavern_09_chat_01": {
+      "zh": "前辈，最近我在试着把常卖的酒提前备好原料。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+      "en": "Senpai, lately I have been getting the ingredients for the popular drinks ready in advance."
+    },
+    "xm_tavern_09_chat_02": {
+      "zh": "以前客人一多，我就忙得团团转。现在总算能从容一些了呢。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+      "en": "I used to get so flustered when people came in at once. I can finally take it a little more calmly now."
+    },
+    "xm_tavern_09_chat_03": {
+      "zh": "不过看样子，吧台后面可能还得添个柜子才行。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+      "en": "At this rate, though, I might need another cabinet behind the bar."
+    },
+    "xm_09_02_late": {
+      "zh": "前阵子特意多准备了一批酒，结果还是不够卖呢。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "en": "I made an extra batch a little while ago, but it still was not enough."
+    }
+  },
+  "letters": {
+    "zh": {
+      "title": "致前辈：",
+      "body": "最近看中了一台新的制冰机。\n\n容量比现在这台大了一倍，声音也小很多。卖家说特别适合小酒馆使用。\n\n我连放在哪里都想好了呢。\n\n不过，价格也相当高就是了。\n\n昨天算账的时候，盯着那台机器的图片看了好久。\n\n最后还是决定再等等。\n\n毕竟刚开店没多久，要花钱的地方还有好多呢。\n\n攒钱真是一个痛苦的过程啊~\n\n前辈也有这样的想法吗？",
+      "signature": "——小满"
+    },
+    "ja": {
+      "title": "先輩へ",
+      "body": "最近、新しい製氷機が気になっています。\n\n容量が今のものの倍で、音もずっと静かなんです。小さな酒場にぴったりだって、お店の人が言っていました。\n\n置く場所まで、もう考えてあるんですよ。\n\nただ、お値段もなかなかで。\n\n昨日、帳簿をつけながら、あの機械の写真をずっと見ていました。\n\n結局、もう少し待つことにしました。\n\nお店を始めてまだそんなに経っていないし、お金のかかるところはほかにもたくさんありますからね。\n\nお金を貯めるのって、ほんと大変ですね～。\n\n先輩も、そんなふうに思うことありますか。",
+      "signature": "みちる"
+    },
+    "en": {
+      "title": "Dear senpai,",
+      "body": "I have had my eye on a new ice maker lately.\n\nIt holds twice as much as mine and is much quieter. The seller says it is perfect for a little tavern.\n\nI have even worked out where to put it.\n\nThe price is quite something, though.\n\nYesterday, while doing the accounts, I kept looking at its picture.\n\nIn the end, I decided to wait a little longer.\n\nI have only just opened. There are still so many things to spend money on.\n\nSaving up is such a pain~\n\nDo you ever feel that way too, senpai?",
+      "signature": "— Xiaoman"
+    }
+  },
+  "news": {
+    "day": 57,
+    "title": {
+      "zh": "商业街新地标——极昼酒廊正式开业",
+      "ja": "商業通路の新名所――ラウンジ「極昼」オープン",
+      "en": "A new landmark: Polar Day Lounge opens"
+    },
+    "body": {
+      "zh": "企鹅资产公司旗下全新酒廊「极昼」今日正式入驻下层商业街。\n\n新店引进上层区精选酒品，配备超科技调酒设备，并推出多款开业限定套餐。\n\n开业期间，全部商品享受三折优惠。商业街导览终端同步上线新店推荐。\n\n新客户可以免费享用500信用点等价酒品。\n\n企鹅资产公司表示，未来将继续推动下层商业街业态升级，为居民与星际旅客提供更加优质的消费体验。",
+      "ja": "ペンギン資産会社の新たな酒場「極昼」が、本日、下層区商業通路に正式オープンしました。\n\n上層区の厳選されたお酒と最先端のカクテル調製設備を備え、開店記念の限定セットを取りそろえています。\n\n開店記念期間中は、全商品が通常価格の30％に。商業通路の案内端末でも、新店舗の紹介が始まっています。\n\n新規のお客様は、500クレジット相当のお酒を無料でお楽しみいただけます。\n\n同社は今後も下層区商業通路の活性化を進め、住民や星間旅行者に、より質の高いサービスを提供するとしています。",
+      "en": "Polar Day, the new lounge from Tenquin Asset Corporation, opens today on the lower-level shopping street.\n\nThe venue features selected upper-level spirits, advanced bartending equipment and several opening-exclusive packages.\n\nDuring the opening promotion, all items are available at 30% of their usual price. The shopping-street guide terminals now feature the new venue.\n\nNew customers can enjoy drinks worth 500 credits free of charge.\n\nTenquin says it will continue upgrading the lower-level shopping street to offer residents and interstellar travellers a better experience."
+    }
+  }
+}

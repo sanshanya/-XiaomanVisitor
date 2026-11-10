@@ -140,11 +140,16 @@
     },
     {
       "visit": 9,
-      "ja": "今日、在庫を数えていたら、レモンが半箱も残っていました。前は足りなくなるのが心配だったのに、今度は使い切る方法を考えないと。\n\n最近、商業通路の様子が少し変わったみたいです。前より、人通りが少なくなりました。\n\nガラス戸の前で、しばらく眺めていました。\n\nこんなにのんびりできるのは、久しぶりです。\n\n店長さんは、お客さんがいないとき、何をしているんですか？",
-      "en": "I was taking stock today and found half a crate of lemons left. I used to worry about running out. Now I'll have to find a way to use them up.\n\nSomething seems to have changed in the shopping passage lately. There aren't as many people passing through.\n\nI stood by the glass door for quite a while.\n\nI haven't had this much time to relax in ages.\n\nWhat do you usually do when you don't have any customers?",
-      "zh": "今天清点东西，发现柠檬还剩了半箱。以前总怕不够用，这回得想办法先用完。\n\n最近商业通道好像有些变化，来往的人比以前少了。\n\n我在玻璃门前看了好会儿。\n\n好久没这么轻松了。\n\n店长，您这儿没客人的时候，通常会做些什么呢？",
-      "title_zh": "店长：",
-      "signature_zh": "——小满"
+      "ja": "最近、新しい製氷機が気になっています。\n\n容量が今のものの倍で、音もずっと静かなんです。小さな酒場にぴったりだって、お店の人が言っていました。\n\n置く場所まで、もう考えてあるんですよ。\n\nただ、お値段もなかなかで。\n\n昨日、帳簿をつけながら、あの機械の写真をずっと見ていました。\n\n結局、もう少し待つことにしました。\n\nお店を始めてまだそんなに経っていないし、お金のかかるところはほかにもたくさんありますからね。\n\nお金を貯めるのって、ほんと大変ですね～。\n\n先輩も、そんなふうに思うことありますか。",
+      "en": "I have had my eye on a new ice maker lately.\n\nIt holds twice as much as mine and is much quieter. The seller says it is perfect for a little tavern.\n\nI have even worked out where to put it.\n\nThe price is quite something, though.\n\nYesterday, while doing the accounts, I kept looking at its picture.\n\nIn the end, I decided to wait a little longer.\n\nI have only just opened. There are still so many things to spend money on.\n\nSaving up is such a pain~\n\nDo you ever feel that way too, senpai?",
+      "zh": "最近看中了一台新的制冰机。\n\n容量比现在这台大了一倍，声音也小很多。卖家说特别适合小酒馆使用。\n\n我连放在哪里都想好了呢。\n\n不过，价格也相当高就是了。\n\n昨天算账的时候，盯着那台机器的图片看了好久。\n\n最后还是决定再等等。\n\n毕竟刚开店没多久，要花钱的地方还有好多呢。\n\n攒钱真是一个痛苦的过程啊~\n\n前辈也有这样的想法吗？",
+      "title_zh": "致前辈：",
+      "signature_zh": "——小满",
+      "title_ja": "先輩へ",
+      "signature_ja": "みちる",
+      "title_en": "Dear senpai,",
+      "signature_en": "— Xiaoman",
+      "source": "story/第九周实现.json"
     },
     {
       "visit": 10,
