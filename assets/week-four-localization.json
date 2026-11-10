@@ -44,7 +44,8 @@
     "xm_w04_news_body": "企鹅资产公司今日宣布，将对下层商业街的烟酒类经营商户开展新一轮招商扶持。\n\n经审核符合条件的店铺，可申请阶段性租金减免、商业通道客流推荐，以及定向供货优惠。\n\n本期计划同时开放已经营烟酒商品的综合商户预评估。申请者可拨打公告所列招商电话预约专员到店。\n\n具体考核项目、优惠期限及结算办法，以正式商户协议为准。\n\n本期预约登记截至周三。",
     "support_notice_body": "企鹅资产公司｜商户发展部\n烟酒商户专项扶持资格评估通知\n\n尊敬的商户：\n\n经综合审核，贵店未达到本期专项扶持计划的准入要求。\n\n本次申请未予通过，相关优惠与后续签约安排不予启动。\n\n感谢您对下层商业街建设的关注。\n\n——企鹅资产公司商户发展部",
     "group_contract_body": "企鹅资产公司｜烟酒业态联合试营协议（摘要）\n\n甲方向乙方提供阶段性实缴租金优惠、商业区导流资源及指定供应商报价。\n\n实缴租金与票面租金之差额，按正式融资附表列入商户阶段性扶持账户；符合经核验的营业考核条件时，可申请部分减记。\n\n未取得减记资格的余额按到期清算表处理。商业通道导流资源依区内统一推广计划调整，不构成固定客流保证。\n\n乙方同意提供按营业时段与品类汇总的经营记录，用于商业区业态评估与资源配置。甲方及其关联企业保留在商业区开展其他经营业务的权利。",
-    "ui_w04_deck": "小满的磁带播放器"
+    "ui_w04_deck": "小满的磁带播放器",
+    "ui_w04_phone_name": "企鹅资产公司商户发展部"
   },
   "ja": {
     "ui_w04_supply": "仕入れ・卸売",
@@ -91,7 +92,8 @@
     "xm_w04_news_body": "ペンギン資産会社は本日、下層区商業通路の酒類・たばこ取扱店を対象とした新たな出店支援制度を発表した。\n\n審査を通過した店舗には、一定期間の賃料優遇、通路内での集客案内、指定仕入れ先での優待が提供される。\n\n酒類・たばこを扱う一般商店も、事前審査を申請できる。希望者は記事記載の窓口番号から訪問審査を予約する。\n\n条件・期間・精算方法は正式な契約書による。今期の受付は水曜日まで。",
     "support_notice_body": "ペンギン資産会社｜商店振興部\n支援制度・事前審査結果のお知らせ\n\nお申し込みいただいた店舗につきまして、総合審査の結果、今期制度の適用基準を満たしていないと判定されました。\n\n今回のお申し込みは不承認となり、優遇措置および契約手続きは開始されません。\n\n下層区商業通路へのご関心に感謝いたします。",
     "group_contract_body": "ペンギン資産会社｜酒類店舗共同試営契約（要約）\n\n甲は乙に対し、一定期間の実払賃料の優遇、通路内の集客案内、指定仕入れ先の見積りを提供する。\n\n実払賃料と額面賃料の差額は、正式な融資附表に従い支援勘定へ計上する。確認済みの営業条件を満たした場合、一部減額を申請できる。\n\n減額対象外の残高は満期精算表に従う。集客資源は区域の統一計画により調整され、固定客数を保証しない。\n\n乙は時間帯・品目別の営業記録を提供する。甲および関連企業は区域内で他の事業を行う権利を留保する。",
-    "ui_w04_deck": "みちるのカセットプレイヤー"
+    "ui_w04_deck": "みちるのカセットプレイヤー",
+    "ui_w04_phone_name": "ペンギン資産会社・商店振興部"
   },
   "en": {
     "ui_w04_supply": "Trade supplies",
@@ -138,6 +140,7 @@
     "xm_w04_news_body": "Tenquin Asset Corporation has announced support for alcohol and tobacco retailers in the lower commercial street.\n\nEligible shops may receive temporary rent concessions, traffic referrals and supplier discounts. General stores carrying these goods may also apply for pre-assessment. Call the registered number for a visit.\n\nTerms, duration and settlement follow the formal agreement. Registration closes on Wednesday.",
     "support_notice_body": "Tenquin Asset Corporation | Merchant Development\nAssessment Result\n\nDear merchant,\n\nFollowing our assessment, your shop does not meet the admission requirements for this round of support.\n\nYour application has not been approved. No concessions or contract procedures will be initiated.\n\nThank you for your interest in the lower commercial street.\n\n— Merchant Development",
     "group_contract_body": "TENQUIN Assets | Joint Trial Operation Agreement (Summary)\n\nThe company provides temporary reductions in rent paid, traffic referrals and designated supplier quotes.\n\nThe difference between rent paid and face rent is recorded in the merchant support account under the formal financing schedule. Verified performance may qualify for partial write-downs.\n\nBalances not qualifying for write-downs follow the maturity schedule. Traffic referrals follow the district promotion plan and do not guarantee customer numbers.\n\nThe merchant supplies business records by trading period and product category. The company and its affiliates retain the right to operate other businesses in the district.",
-    "ui_w04_deck": "Xiaoman's cassette player"
+    "ui_w04_deck": "Xiaoman's cassette player",
+    "ui_w04_phone_name": "Tenquin Merchant Development"
   }
 }

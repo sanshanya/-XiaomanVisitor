@@ -2239,6 +2239,16 @@
       "defer_voice": true
     },
     {
+      "key": "xm_w04_audit_01_late",
+      "zh": "您好，企鹅资产公司商户评估部。我们之前约过。",
+      "ja": "こんにちは。ペンギン資産会社の店舗審査担当です。先日ご予約いただきました。",
+      "en": "Hello. Tenquin Asset Corporation, Merchant Assessment. We arranged this visit earlier.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "こんにちは。ペンギン資産会社の店舗審査担当です。先日ご予約いただきました。",
+      "defer_voice": true
+    },
+    {
       "key": "xm_tavern_w04_supply_existing",
       "zh": "前辈，货单在这里。今天想给店里送点什么，还是从我这里进货？",
       "ja": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
@@ -3231,6 +3241,7 @@
     "xm_w04_wang_03",
     "xm_w04_wang_04",
     "xm_w04_wang_bye",
+    "xm_w04_audit_01_late",
     "xm_tavern_w04_supply_existing",
     "xm_tavern_w04_supply_early",
     "xm_tavern_w04_supply_01_unknown",

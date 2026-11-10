@@ -50,7 +50,7 @@ namespace XiaomanVisitor
                         while (dict.ContainsKey(n)) n++;
                         p.PhoneNumber=n;
                         dict.Add(n,new StorePhoneClient { dialogFuncId=SupportPhoneId,locID=SupportPhoneId,
-                            displayName=Text("xm_w04_news_title"),phoneState=StorePhoneClient.PhoneState.Regular,dialedBefore=true });
+                            displayName=Text("ui_w04_phone_name"),phoneState=StorePhoneClient.PhoneState.Regular,dialedBefore=true });
                     }
                 }
                 p.Advance(day);SaveSupport(p);
@@ -82,7 +82,7 @@ namespace XiaomanVisitor
         private Dialogue SupportCall()
         {
             var p=ReadSupport();int day=StoreStation.Instance.dayCounter;
-            string speaker=Text("ui_w04_assessor");
+            string speaker=Text("ui_w04_phone_name");
             Func<string,Dialogue> line=key => new Dialogue().SetText(speaker,Text(key));
             Action end=() => PhoneUIManager.Instance.OnPhoneDialogEnd();
             if (!enabled || !SupportProgress.RegistrationOpen(day)) return line("xm_w04_phone_closed").SetEndAction(end);
@@ -98,8 +98,8 @@ namespace XiaomanVisitor
         }
         private Dialogue SupportCallChoices()
         {
-            var choice=new Dialogue().SetText(Text("ui_w04_assessor"),Text("xm_w04_phone_02"));
-            choice.AddChoice(null,Text("ui_w04_apply"),"",new Dialogue().SetText(Text("ui_w04_assessor"),Text("xm_w04_phone_confirm")).SetStartAction(() => {
+            var choice=new Dialogue().SetText(Text("ui_w04_phone_name"),Text("xm_w04_phone_02"));
+            choice.AddChoice(null,Text("ui_w04_apply"),"",new Dialogue().SetText(Text("ui_w04_phone_name"),Text("xm_w04_phone_confirm")).SetStartAction(() => {
                 var p=ReadSupport();if (p.Apply(StoreStation.Instance.dayCounter,WorkRunIdentity)) SaveSupport(p);
             }).SetEndAction(() => PhoneUIManager.Instance.OnPhoneDialogEnd()));
             choice.AddChoice(null,Text("ui_w04_cancel"),"",new Dialogue().SetText("","").SetEndAction(() => PhoneUIManager.Instance.OnPhoneDialogEnd()));
@@ -131,7 +131,8 @@ namespace XiaomanVisitor
                 :new[]{"xm_w04_audit_01","xm_w04_audit_02","xm_w04_audit_shop"};
             Dialogue tail=null;
             foreach (string key in keys) {
-                var d=new Dialogue().SetText(c.displayName,Text(key,SupplyConfig.AuditorBudget));
+                string lineKey=key=="xm_w04_audit_01" && StoreStation.Instance.dayCounter>ReadSupport().AuditorDay ? "xm_w04_audit_01_late" : key;
+                var d=new Dialogue().SetText(c.displayName,Text(lineKey,SupplyConfig.AuditorBudget));
                 if (tail==null) c.mainDialogue=d;else tail.nextDialogue=d;tail=d;
             }
             c.mainDialogue.startAction+=() => { var p=ReadSupport();if (wang) p.WangSeen=true;else p.AuditorSeen=true;SaveSupport(p); };
@@ -172,7 +173,7 @@ namespace XiaomanVisitor
         private static bool Prefix(StorePhoneClient __instance,ref string __result)
         {
             if (__instance.dialogFuncId!=XiaomanMod.SupportPhoneId || XiaomanMod.Instance==null) return true;
-            __result=ModHelper.GetLocalized(XiaomanMod.Id,"ui_w04_assessor");return false;
+            __result=ModHelper.GetLocalized(XiaomanMod.Id,"ui_w04_phone_name");return false;
         }
     }
     [HarmonyPatch(typeof(PaperUI),nameof(PaperUI.ResolveText),new[]{typeof(PaperElementData),typeof(PaperPageData)})]

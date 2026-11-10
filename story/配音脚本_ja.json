@@ -2225,6 +2225,22 @@
       "defer_recording": true
     },
     {
+      "key": "xm_w04_audit_01_late",
+      "subtitle_templates": {
+        "zh": "您好，企鹅资产公司商户评估部。我们之前约过。",
+        "ja": "こんにちは。ペンギン資産会社の店舗審査担当です。先日ご予約いただきました。",
+        "en": "Hello. Tenquin Asset Corporation, Merchant Assessment. We arranged this visit earlier."
+      },
+      "spoken_text": "こんにちは。ペンギン資産会社の店舗審査担当です。先日ご予約いただきました。",
+      "generate_text": "こんにちは。ペンギン資産会社の店舗審査担当です。先日ご予約いただきました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "8fceb2a75792ad60874b488fc16e1ced5e87a26b762f711da7a7a66fc56ede48",
+      "defer_recording": true
+    },
+    {
       "key": "xm_tavern_w04_supply_existing",
       "subtitle_templates": {
         "zh": "前辈，货单在这里。今天想给店里送点什么，还是从我这里进货？",

@@ -20,6 +20,7 @@ def read():
         key,mood=match.groups()
         lines[key]=dict(key=key,zh=cells[1],ja=cells[2],en=english['lines'][key],mood=moods.get(mood,'Neutral'),defer_voice=True)
     extras={
+        'xm_w04_audit_01_late':('您好，企鹅资产公司商户评估部。我们之前约过。','こんにちは。ペンギン資産会社の店舗審査担当です。先日ご予約いただきました。'),
         'xm_04_03_existing':('前辈，上次谈好的货单我已经留着啦。有什么合适的东西，我们照单子慢慢来就好。','先輩、この前の取引リストは取ってあります。品物があったら、リストに沿って少しずつで大丈夫ですよ。'),
         'xm_tavern_w04_supply_existing':('前辈，货单在这里。今天想给店里送点什么，还是从我这里进货？','先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？'),
         'xm_tavern_w04_supply_early':('前辈来啦。我把店里需要的东西列了一张清单，想跟您商量一下。','先輩、いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？')}
