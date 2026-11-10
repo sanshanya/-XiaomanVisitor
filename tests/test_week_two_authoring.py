@@ -13,7 +13,7 @@ import preview_handwriting as lettering
 class WeekTwoAuthoringTests(unittest.TestCase):
     def test_unknown_self_introduction_is_not_replaced_by_a_greeting_variant(self):
         lines=week_two_source.read()['lines']
-        self.assertEqual(lines['xm_tavern_greeting_unknown']['zh'],'欢迎光临。我叫小满，这间店刚开门不久。')
+        self.assertEqual(lines['xm_tavern_greeting_unknown']['zh'],'欢迎光临。我叫小满，这间店刚开业不久。')
         self.assertIn('みちる',lines['xm_tavern_greeting_unknown']['ja'])
         for key in ('xm_tavern_w02_help_intro','xm_tavern_w02_rain_01','xm_tavern_drink_limit'):
             self.assertNotIn('前辈',lines[key+'_unknown']['zh'])

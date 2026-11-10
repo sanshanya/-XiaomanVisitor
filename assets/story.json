@@ -4,7 +4,7 @@
   "source": "story/小满的十四个星期一_v3.4_专属动作台词_TTS演出整合.md",
   "source_sha256": "fb3c704ad917338d646cc3ee3008dc14ae6da78e31c74d43b4a5202e3741351a",
   "week_two_source": "story/小满酒馆_第二周_v4.1_实施稿.md",
-  "week_two_sha256": "83b3138662171fceb2146fc745daf2b89ad3b50e3847bd662e4fdd1d17575af7",
+  "week_two_sha256": "4a7e37acf688f2512016b48818f8bdb84108bf8a5ddcd96a533ee49aa207d14f",
   "week_three_source": "story/小满酒馆_第三周_v4.4_剧情与打工实施稿.md",
   "week_three_sha256": "09f82bd204b939aa8069a4ab9b4aa915f05e550e22df822e0a11dde3c1bc0519",
   "week_four_source": "story/小满酒馆_第四周_v4.6_剧情与扶持支线修订稿.md",
@@ -897,7 +897,7 @@
     },
     {
       "key": "xm_02_02",
-      "zh": "对了……我在商业街开了间小酒馆。今晚终于要开门啦。",
+      "zh": "对了……我在商业街开了间小酒馆。今晚终于要开业啦。",
       "ja": "あ、そうだ……商業通路に小さなバーを開いたんです。今夜、いよいよオープンなんですよ。",
       "en": "Oh, right… I've opened a little tavern on the shopping street. Tonight's finally opening night.",
       "mood": "Smile",
@@ -963,7 +963,7 @@
     },
     {
       "key": "xm_02_02_late",
-      "zh": "对了……我在商业街开了间小酒馆。最近终于开门啦。",
+      "zh": "对了……我在商业街开了间小酒馆。最近终于开业啦。",
       "ja": "あ、そうだ……商業通路に小さなバーを開いたんです。最近、ようやくオープンしたんですよ。",
       "en": "Oh, right… I've opened a little tavern on the shopping street. We finally opened recently.",
       "mood": "Smile",
@@ -1939,7 +1939,7 @@
     },
     {
       "key": "xm_tavern_greeting_unknown",
-      "zh": "欢迎光临。我叫小满，这间店刚开门不久。",
+      "zh": "欢迎光临。我叫小满，这间店刚开业不久。",
       "ja": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
       "en": "Welcome. I'm Xiaoman. This little tavern has only just opened.",
       "mood": "Soft",
@@ -2019,7 +2019,7 @@
     },
     {
       "key": "xm_tavern_w02_chat_01",
-      "zh": "其实开门之前，我还偷偷练过几遍“欢迎光临”呢。真正有人进来，反而更紧张了。",
+      "zh": "其实开业之前，我还偷偷练过几遍“欢迎光临”呢。真正有人进来，反而更紧张了。",
       "ja": "実は開店前、「いらっしゃいませ」ってこっそり何度も練習したんです。本当にお客さんが来ると、かえって緊張しちゃって。",
       "en": "Before opening, I secretly practiced saying ‘welcome’ a few times. Then someone actually came in, and I got even more nervous.",
       "mood": "Shy",
@@ -2049,7 +2049,7 @@
     },
     {
       "key": "xm_tavern_w02_chat_04",
-      "zh": "刚开门的时候，连说“欢迎光临”都会紧张。现在好像……稍微习惯一点了。",
+      "zh": "刚开业的时候，连说“欢迎光临”都会紧张。现在好像……稍微习惯一点了。",
       "ja": "開店したばかりのころは、「いらっしゃいませ」って言うだけでも緊張してたのに。今は……少し慣れてきたかもしれません。",
       "en": "When I first opened, even saying ‘welcome’ made me nervous. Now… I think I'm getting a little more used to it.",
       "mood": "Smile",

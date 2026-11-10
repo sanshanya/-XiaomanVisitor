@@ -88,7 +88,7 @@
     {
       "key": "xm_tavern_greeting_unknown",
       "subtitle_templates": {
-        "zh": "欢迎光临。我叫小满，这间店刚开门不久。",
+        "zh": "欢迎光临。我叫小满，这间店刚开业不久。",
         "ja": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
         "en": "Welcome. I'm Xiaoman. This little tavern has only just opened."
       },
@@ -98,7 +98,7 @@
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "b46a495bb8ddb208b29af6c597e0cca5c5978d4a05d01a5e89d36cc82873b379",
+      "source_sha256": "ab503340835860092237693eae5789e0cb4131b1f43e2fc9ecc10f82ef01884e",
       "defer_recording": true
     },
     {
@@ -216,7 +216,7 @@
     {
       "key": "xm_tavern_w02_chat_01",
       "subtitle_templates": {
-        "zh": "其实开门之前，我还偷偷练过几遍“欢迎光临”呢。真正有人进来，反而更紧张了。",
+        "zh": "其实开业之前，我还偷偷练过几遍“欢迎光临”呢。真正有人进来，反而更紧张了。",
         "ja": "実は開店前、「いらっしゃいませ」ってこっそり何度も練習したんです。本当にお客さんが来ると、かえって緊張しちゃって。",
         "en": "Before opening, I secretly practiced saying ‘welcome’ a few times. Then someone actually came in, and I got even more nervous."
       },
@@ -226,7 +226,7 @@
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "bfaa8b4853005383c4ecf5f5f5f66a2c62775c973f7ee03da0663a163ca48b26",
+      "source_sha256": "bba6c67ea581c35266a5ab4cc5399790d81b2799b50548c5e7643ceeb0c01e18",
       "defer_recording": true
     },
     {
@@ -264,7 +264,7 @@
     {
       "key": "xm_tavern_w02_chat_04",
       "subtitle_templates": {
-        "zh": "刚开门的时候，连说“欢迎光临”都会紧张。现在好像……稍微习惯一点了。",
+        "zh": "刚开业的时候，连说“欢迎光临”都会紧张。现在好像……稍微习惯一点了。",
         "ja": "開店したばかりのころは、「いらっしゃいませ」って言うだけでも緊張してたのに。今は……少し慣れてきたかもしれません。",
         "en": "When I first opened, even saying ‘welcome’ made me nervous. Now… I think I'm getting a little more used to it."
       },
@@ -274,7 +274,7 @@
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "504305c2d11f51dc7b82cda7c25bc65eb0e59f9192aa0a5f4f1e7b30ae849f0d",
+      "source_sha256": "8cd9f77835c2a0f4d3adfba6e5612f6048d1c3d436efba249ca536aece120aca",
       "defer_recording": true
     },
     {
