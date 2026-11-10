@@ -4,16 +4,21 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+SOURCES = {5: '第五周实现.json', 6: '第六周实现.json', 7: '第七周实现.json', 8: '第八周实现.json'}
+WEEK_NAMES = {5: 'five', 6: 'six', 7: 'seven', 8: 'eight'}
 
 
 def read(visit):
-    path = ROOT / ('story/第五周实现.json' if visit == 5 else 'story/第六周实现.json')
+    path = ROOT / 'story' / SOURCES[visit]
     text = path.read_text(encoding='utf-8')
     data = json.loads(text)
     assert data['schema'] == 1 and data['visit'] == visit
+    chat = data['night_chat']
+    assert chat['from_day'] > 0 and 0 <= chat['min_visit'] <= visit
+    assert chat['keys'] and all(k.startswith('xm_tavern_') and k in data['lines'] for k in chat['keys'])
     for key, row in list(data['lines'].items()):
         row['key'] = key
-        if key.startswith('xm_tavern_'):
+        if key.startswith('xm_tavern_') and chat['min_visit'] == 0:
             variant = dict(row)
             variant['key'] = key + '_unknown'
             variant['zh'] = row['zh'].replace('前辈，', '').replace('前辈', '您')

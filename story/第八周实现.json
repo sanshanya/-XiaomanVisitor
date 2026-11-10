@@ -1,0 +1,106 @@
+{
+  "schema": 1,
+  "visit": 8,
+  "title": "照片里的雨",
+  "author_source": "story/小满酒馆_第七至八周_v4.8_剧情规划评审稿.md",
+  "status": "按作者本次指令接入；日语口头稿待审，不生成TTS",
+  "night_chat": {
+    "from_day": 50,
+    "min_visit": 8,
+    "keys": [
+      "xm_tavern_08_chat_01",
+      "xm_tavern_08_chat_02"
+    ]
+  },
+  "lines": {
+    "xm_08_01": {
+      "zh": "晚上好，前辈。前阵子故乡的朋友一直催我，叫我发张自己的照片回去。",
+      "mood": "Soft",
+      "defer_voice": true,
+      "ja": "こんばんは、先輩。この前から故郷の友達に、自分の写真も送ってって、ずっと言われていたんです。",
+      "en": "Good evening, senpai. My friends back home kept asking me to send a photo of myself."
+    },
+    "xm_08_02": {
+      "zh": "昨晚我请几位常来的夜班姑娘帮忙，她们还抢着说要给我拍呢。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "昨夜、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
+      "en": "Last night I asked a few of the night-shift girls who come in regularly to help. They all wanted to take it."
+    },
+    "xm_08_03": {
+      "zh": "她们说：“老板，当然要站在吧台后面呀！”……我就乖乖站回去了。",
+      "mood": "Shy",
+      "defer_voice": true,
+      "ja": "「店主なんだから、カウンターの中に立たなくちゃ！」って。……それで、言われた通りに戻っちゃいました。",
+      "en": "They said, \"You are the owner! You have to stand behind the bar!\" ...So I went back where they told me to."
+    },
+    "xm_08_04": {
+      "zh": "最后挑了一张窗上有雨的，已经发给朋友们啦。嘿嘿，拍得还挺不错呢。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "最後に、窓の雨が写っている一枚を選んで、もう友達に送りました。えへへ、なかなかよく撮れているんですよ。",
+      "en": "I picked one with rain on the window and sent it to my friends. Hehe, it came out quite nicely."
+    },
+    "xm_08_shop": {
+      "zh": "今天想买点日用品。带了 {0} 信用点。",
+      "mood": "Neutral",
+      "defer_voice": true,
+      "ja": "今日は日用品を少し買いに来ました。",
+      "en": "I need some household supplies today. I brought {0} credits."
+    },
+    "xm_08_accept": {
+      "zh": "谢谢。正好用得上。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "ありがとうございます。ちょうど必要だったんです。",
+      "en": "Thank you. Just what I needed."
+    },
+    "xm_08_bye": {
+      "zh": "那我先走啦。前辈有空再来坐坐哦。",
+      "mood": "Soft",
+      "defer_voice": true,
+      "ja": "それじゃ、また。先輩、時間があったら、また寄ってくださいね。",
+      "en": "I should go. Come sit for a while again when you have time, senpai."
+    },
+    "xm_tavern_08_chat_01": {
+      "zh": "帮我拍照的那几位姑娘，后来还认真帮我挑了半天。明明她们是来喝酒的，倒像我请了摄影师呢。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
+      "en": "The girls who took my photos spent ages choosing one with me. They came for a drink, but it was like I had hired photographers."
+    },
+    "xm_tavern_08_chat_02": {
+      "zh": "她们说下次换班，还要带新同事来。要是真来了，我得记着多准备一点原料才行。",
+      "mood": "Soft",
+      "defer_voice": true,
+      "ja": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
+      "en": "They said they would bring some new colleagues next shift. If they really come, I will have to remember to get a few more ingredients ready."
+    },
+    "xm_08_02_late": {
+      "zh": "前阵子我请几位常来的夜班姑娘帮忙，她们还抢着说要给我拍呢。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "この前、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
+      "en": "The other day I asked a few of the night-shift girls who come in regularly to help. They all wanted to take my photo."
+    }
+  },
+  "letters": {
+    "zh": {
+      "title": "致前辈：",
+      "body": "昨晚有个姑娘，把一枚亮晶晶的发夹落在了吧台上。\n\n我正要收起来等人来找，她就匆匆跑回来了。\n\n结果一开口问的不是发夹，而是：“那杯带樱桃的酒，明天还有吗？”\n\n我说有呀，顺手把发夹递过去。\n\n她却笑着说：“先押给你吧，就当下一杯的定金。”\n\n……喂喂，我这里可是酒馆呀。\n\n不过那一瞬间，我居然真的在想，这枚发夹能抵多少信用点。\n\n前辈，都怪你啦。( ˘•ω•˘ )\n\n最后当然还是把发夹还给她了。\n\n这是这周的磁带。",
+      "signature": "——小满"
+    },
+    "ja": {
+      "title": "先輩へ",
+      "body": "昨夜、女の子がキラキラした髪留めを一つ、カウンターに置き忘れていったんです。\n\n取りに来るまでしまっておこうと思ったら、本人が慌てて戻ってきました。\n\nところが、最初に聞いたのは髪留めのことじゃなくて、「あのチェリーのお酒、明日もある？」って。\n\nありますよって答えて、髪留めを返そうとしたんです。\n\nそしたら笑って、「預けておくね。次の一杯の手付け金にして」って。\n\n……ちょっと、うちは酒場なんですけど。\n\nでもその瞬間、本当に、この髪留めなら何クレジットになるかな、なんて考えちゃいました。\n\n先輩のせいですからね。( ˘•ω•˘ )\n\n最後はもちろん、ちゃんと髪留めを返しました。\n\n今週のカセットです。",
+      "signature": "みちる"
+    },
+    "en": {
+      "title": "Dear senpai,",
+      "body": "A girl left a glittering hair clip on the counter last night.\n\nI was about to put it away for her when she hurried back.\n\nBut she did not ask about the clip. \"Will you have that drink with the cherry tomorrow?\"\n\nI said yes and handed it back.\n\nShe laughed. \"Keep it as a deposit for my next glass.\"\n\n...Hey, this is a tavern!\n\nFor a moment, though, I actually wondered how many credits it was worth.\n\nSenpai, this is all your fault. ( ˘•ω•˘ )\n\nOf course I gave it back in the end.\n\nHere is this week's tape.",
+      "signature": "— Xiaoman"
+    }
+  },
+  "letter_source": "story/第八周纸条_作者修订.txt",
+  "confirmed_letter": "作者在聊天中以发夹趣事覆盖附件旧纸条；不采用朋友问雨版"
+}

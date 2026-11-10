@@ -31,7 +31,7 @@ def main():
         placeholders = re.findall(r"\{\d+\}", texts["zh"][key])
         for lang in ('en','ja'):
             # Approved shopping subtitles deliberately omit the Japanese spoken budget.
-            expected=[] if key in ('xm_02_shop','xm_03_shop','xm_04_shop','xm_05_shop','xm_06_shop','xm_w04_audit_shop') and lang=='ja' else sorted(placeholders)
+            expected=[] if key in ('xm_02_shop','xm_03_shop','xm_04_shop','xm_05_shop','xm_06_shop','xm_07_shop','xm_08_shop','xm_w04_audit_shop') and lang=='ja' else sorted(placeholders)
             assert sorted(re.findall(r"\{\d+\}",texts[lang][key]))==expected,key
     assert texts["zh"]["gift_note_body"] == texts["zh"]["story_note_01_body"]
     assert texts["zh"]["gift_note_title"] == "致店长先生："
@@ -110,11 +110,11 @@ def main():
     english.update({key:row['en'] for key,row in w04['lines'].items()})
     assert story['week_four_sha256']==w04['sha256']
     notes = json.loads((ROOT / "story/纸条正文.json").read_text(encoding="utf-8"))["notes"]
-    import week_five_six_source
+    import weekly_story_source
     # Rewritten chapters replace their old voice/script slots, without keeping abandoned rows active.
-    english={k:v for k,v in english.items() if not k.startswith(('xm_05_','xm_06_'))}
-    for visit,name in ((5,'five'),(6,'six')):
-        overlay=week_five_six_source.read(visit)
+    english={k:v for k,v in english.items() if not k.startswith(tuple(f'xm_{n:02d}_' for n in weekly_story_source.SOURCES))}
+    for visit,name in weekly_story_source.WEEK_NAMES.items():
+        overlay=weekly_story_source.read(visit)
         english.update({key:row['en'] for key,row in overlay['lines'].items()})
         assert story['week_'+name+'_sha256']==overlay['sha256']
         for lang,fields in overlay['letters'].items():

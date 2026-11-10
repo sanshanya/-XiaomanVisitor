@@ -243,7 +243,7 @@ namespace XiaomanVisitor
             else if (page=="interaction") {
                 choice(Text("ui_tavern_chat"),() => {
                     int day=StoreStation.Instance.dayCounter;
-                    string key=ReadTavern().NextChat(day,ReadWork().WorkedOn(day));
+                    string key=ReadTavern().NextChat(day,ReadWork().WorkedOn(day),ReadStory().VisitIndex);
                     string receipt=TavernProgress.ChatReceipt(key,day);
                     CloseTavernMenu();QueueTavernSpeech(new[]{key},() => UpdateTavern(p => { if (!p.ChatSeen.Contains(receipt)) p.ChatSeen.Add(receipt); }));
                 });

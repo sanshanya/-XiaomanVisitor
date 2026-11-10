@@ -28,6 +28,8 @@ BODY_SIZE = 18.0
 TRACKING = 0.02
 LINE_HEIGHT = 1.58
 PARAGRAPH_GAP = 0.68  # additional line fractions between paragraphs
+PARAGRAPH_GAPS = {(5, 'ja'): 0.36, (5, 'en'): 0.36, (6, 'ja'): 0.66,
+                  (8, 'ja'): 0.36, (8, 'en'): 0.56}
 FONTS = {
     "yozai": TRIAL / "fonts/Yozai-Regular.ttf",
     "xiaolai": TRIAL / "fonts/Xiaolai-Regular.ttf",
@@ -180,7 +182,7 @@ def letter_layout(font_key, visit, language, texts, letter_id=None):
     body = texts[key+"_body"]
     lines = wrap(body, font, BODY_SIZE, 500, language)
     step = BODY_SIZE*(1.565 if key=="story_note_04_b" else LINE_HEIGHT)
-    gap = 0.36 if visit==5 and language in ("ja","en") else 0.66 if visit==6 and language=="ja" else PARAGRAPH_GAP
+    gap = PARAGRAPH_GAPS.get((visit, language), PARAGRAPH_GAP)
     y = 140 + BODY_SIZE  # first baseline; same region as the current letter
     positions = []
     for index, (line, paragraph_end) in enumerate(lines):

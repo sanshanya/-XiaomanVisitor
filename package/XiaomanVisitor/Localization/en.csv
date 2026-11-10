@@ -103,18 +103,18 @@ story_note_06_title,"Dear senpai,"
 story_note_06_body,"Yesterday I mentioned sending a traveller your way. Back at the tavern, I suddenly remembered the first time I walked into your shop.\n\nI still did not know my way around. I only came in because the lights were on.\n\nIt was a pawnshop, but there was a cassette deck on the counter.\n\nEven then, your shop felt a little mysterious.\n\nI wonder if that traveller ever found it.\n\nIf he really came by, I hope he found something interesting too.\n\nMay your business keep getting better, senpai~\n\nHere is this week's tape."
 story_note_06_signature,— Xiaoman
 story_note_06_name,A note from Xiaoman
-xm_07_01,Good evening. My friends sent me a photo of their get-together yesterday.
-xm_07_02,They left an empty seat for me and even drew me into it. It doesn't look like me at all.
-xm_07_shop,I'd like some food today.
-story_note_07_title,"Dear shopkeeper,"
-story_note_07_body,"About that group photo...\n\nI spent ages looking at an enlarged version.\n\nThe girl sitting next to me has cut her hair short. We used to talk about going for a haircut together, but we never got around to it.\n\nShe asked how things were going here. I wanted to send her a photo of myself, but when I looked through my pictures, all the recent ones were glasses and bottles.\n\nI'll have to get someone to take a photo of me next time."
+xm_07_01,"Good evening, senpai. There is someone from the docks who comes to sit at the tavern almost every day."
+xm_07_02,Always a seat by the window and a slightly sour drink. Even the seat hardly ever changes.
+xm_07_shop,I would like some food today. I brought {0} credits.
+story_note_07_title,"Dear senpai,"
+story_note_07_body,"A group photo arrived from my friends back home today.\n\nThey left a space for me and even drew me into it. It looks nothing like me!\n\nThey asked me to send a photo from the station, too.\n\nI looked through my album. Almost every recent photo was of bottles, glasses, or the rain on the window.\n\nIn the end, I just sent them one of the bar.\n\nThey replied, ""The tavern alone does not count! We want you in the next one!""\n\nHonestly, I only wanted to show them my little tavern.\n\nHere is this week's tape."
 story_note_07_signature,— Xiaoman
 story_note_07_name,A note from Xiaoman
-xm_08_01,Good evening. A few girls came in after their night shift yesterday. They were quite a lively bunch.
-xm_08_02,They kept telling jokes about work. I didn't understand a single one.
-xm_08_shop,I'm looking for some everyday supplies today.
-story_note_08_title,"Dear shopkeeper,"
-story_note_08_body,"Last night someone left a sparkly hair clip on the bar. I put it away, thinking they'd probably come back for it.\n\nSure enough, a girl came running back today. But the first thing she said was, 'Do you still have that drink with the cherry from yesterday?'\n\nWhen I tried to give her the clip back, she told me to keep it as a deposit on her next drink.\n\n...Can you really use something like that as a deposit?"
+xm_08_01,"Good evening, senpai. My friends back home kept asking me to send a photo of myself."
+xm_08_02,Last night I asked a few of the night-shift girls who come in regularly to help. They all wanted to take it.
+xm_08_shop,I need some household supplies today. I brought {0} credits.
+story_note_08_title,"Dear senpai,"
+story_note_08_body,"A girl left a glittering hair clip on the counter last night.\n\nI was about to put it away for her when she hurried back.\n\nBut she did not ask about the clip. ""Will you have that drink with the cherry tomorrow?""\n\nI said yes and handed it back.\n\nShe laughed. ""Keep it as a deposit for my next glass.""\n\n...Hey, this is a tavern!\n\nFor a moment, though, I actually wondered how many credits it was worth.\n\nSenpai, this is all your fault. ( ˘•ω•˘ )\n\nOf course I gave it back in the end.\n\nHere is this week's tape."
 story_note_08_signature,— Xiaoman
 story_note_08_name,A note from Xiaoman
 xm_09_01,Good evening. The motion light outside my door came on several times yesterday.
@@ -468,3 +468,17 @@ ui_w05_gift,Xiaoman left a glass of Wonderland · Improvisation.
 ui_w05_recipe,"Fine drinks: {0} glasses per batch; rare kit {1} CR, preparation {2} CR, one water and one juice. Missing common ingredients are purchased at listed prices. Wholesale {3} CR/glass, onsite {4} CR/glass. One batch per recipe per week, using the agreed split."
 ui_w05_company_total,Supplier materials paid: {0} CR
 ui_w05_lot,"Day {0} · {1} · materials paid {2} CR\nUsed from your deliveries: {3} water, {4} juice"
+xm_07_03,"Yesterday he walked in and said, ""The usual."" I knew straight away what to make."
+xm_07_04,"Hehe. My tavern has someone who can order ""the usual"" now."
+xm_07_accept,Thank you. Just what I needed.
+xm_07_bye,"I should go. Come sit for a while tonight if you have time, senpai."
+xm_07_03_late,"The other day he walked in and said, ""The usual."" I knew straight away what to make."
+xm_08_03,"They said, ""You are the owner! You have to stand behind the bar!"" ...So I went back where they told me to."
+xm_08_04,"I picked one with rain on the window and sent it to my friends. Hehe, it came out quite nicely."
+xm_08_accept,Thank you. Just what I needed.
+xm_08_bye,"I should go. Come sit for a while again when you have time, senpai."
+xm_08_02_late,The other day I asked a few of the night-shift girls who come in regularly to help. They all wanted to take my photo.
+xm_tavern_07_chat_01,"Some people sit down and quietly listen to the rain. It is not really raining outside, but they seem to like it."
+xm_tavern_07_chat_02,"Some people stop by for a drink before closing now. We never arrange it, but around that time I can almost tell who will walk through the door."
+xm_tavern_08_chat_01,"The girls who took my photos spent ages choosing one with me. They came for a drink, but it was like I had hired photographers."
+xm_tavern_08_chat_02,"They said they would bring some new colleagues next shift. If they really come, I will have to remember to get a few more ingredients ready."

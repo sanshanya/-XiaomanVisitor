@@ -108,5 +108,13 @@
       "body": "Yesterday I mentioned sending a traveller your way. Back at the tavern, I suddenly remembered the first time I walked into your shop.\n\nI still did not know my way around. I only came in because the lights were on.\n\nIt was a pawnshop, but there was a cassette deck on the counter.\n\nEven then, your shop felt a little mysterious.\n\nI wonder if that traveller ever found it.\n\nIf he really came by, I hope he found something interesting too.\n\nMay your business keep getting better, senpai~\n\nHere is this week's tape.",
       "signature": "— Xiaoman"
     }
+  },
+  "night_chat": {
+    "from_day": 36,
+    "min_visit": 0,
+    "keys": [
+      "xm_tavern_06_chat_01",
+      "xm_tavern_06_chat_02"
+    ]
   }
 }

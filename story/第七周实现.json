@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "visit": 7,
+  "title": "老样子",
+  "author_source": "story/小满酒馆_第七至八周_v4.8_剧情规划评审稿.md",
+  "status": "按作者本次指令接入；日语口头稿待审，不生成TTS",
+  "night_chat": {
+    "from_day": 43,
+    "min_visit": 7,
+    "keys": [
+      "xm_tavern_07_chat_01",
+      "xm_tavern_07_chat_02"
+    ]
+  },
+  "lines": {
+    "xm_07_01": {
+      "zh": "晚上好，前辈。最近有位船坞的客人，几乎每天都会来店里坐一会儿。",
+      "mood": "Soft",
+      "defer_voice": true,
+      "ja": "こんばんは、先輩。最近、ドックのお客さんが、ほとんど毎日お店で少し過ごしていくんです。",
+      "en": "Good evening, senpai. There is someone from the docks who comes to sit at the tavern almost every day."
+    },
+    "xm_07_02": {
+      "zh": "每次都坐在窗边，点一杯偏酸的酒，连位置都不怎么换呢。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "いつも窓際で、少し酸っぱいお酒を一杯。座る場所まで、ほとんど変わらないんですよ。",
+      "en": "Always a seat by the window and a slightly sour drink. Even the seat hardly ever changes."
+    },
+    "xm_07_03": {
+      "zh": "昨天他一进门就说了句“老样子”，我一下就知道该调哪杯了。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "昨日、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
+      "en": "Yesterday he walked in and said, \"The usual.\" I knew straight away what to make."
+    },
+    "xm_07_04": {
+      "zh": "嘿嘿，原来我的店里，也有会说“老样子”的客人啦。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "えへへ、私のお店にも「いつもの」って言ってくれるお客さんができたんですね。",
+      "en": "Hehe. My tavern has someone who can order \"the usual\" now."
+    },
+    "xm_07_shop": {
+      "zh": "今天想买点吃的。带了 {0} 信用点。",
+      "mood": "Neutral",
+      "defer_voice": true,
+      "ja": "今日は食べるものを少し。",
+      "en": "I would like some food today. I brought {0} credits."
+    },
+    "xm_07_accept": {
+      "zh": "谢谢。正好用得上。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "ありがとうございます。ちょうど必要だったんです。",
+      "en": "Thank you. Just what I needed."
+    },
+    "xm_07_bye": {
+      "zh": "那我先走啦。前辈晚上有空，再来坐坐哦。",
+      "mood": "Soft",
+      "defer_voice": true,
+      "ja": "それじゃ、また。先輩、夜に時間があったら、また寄ってくださいね。",
+      "en": "I should go. Come sit for a while tonight if you have time, senpai."
+    },
+    "xm_tavern_07_chat_01": {
+      "zh": "有的客人坐下以后就安安静静听雨声。明明外面不是真的在下雨，他们却挺喜欢。",
+      "mood": "Soft",
+      "defer_voice": true,
+      "ja": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
+      "en": "Some people sit down and quietly listen to the rain. It is not really raining outside, but they seem to like it."
+    },
+    "xm_tavern_07_chat_02": {
+      "zh": "最近有人会在收店前顺路来喝一杯。也不用特地约好，到了那个时间，我大概就知道谁会推门了。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
+      "en": "Some people stop by for a drink before closing now. We never arrange it, but around that time I can almost tell who will walk through the door."
+    },
+    "xm_07_03_late": {
+      "zh": "前阵子他一进门就说了句“老样子”，我一下就知道该调哪杯了。",
+      "mood": "Smile",
+      "defer_voice": true,
+      "ja": "この前、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
+      "en": "The other day he walked in and said, \"The usual.\" I knew straight away what to make."
+    }
+  },
+  "letters": {
+    "zh": {
+      "title": "致前辈：",
+      "body": "今天收到了故乡朋友们的合照。\n\n她们居然特地留了一个空位，还在上面画了个我。画得一点也不像嘛。\n\n她们问我，能不能也发张在空间站的照片回去。\n\n翻了翻相册，最近拍的几乎全是酒瓶、杯子，还有窗上的雨。\n\n最后只好挑了一张吧台给她们。\n\n结果她们回我：“光拍店不行，下次要有你本人哦！”\n\n真是的，我明明是想让她们看看我的小酒馆呀。\n\n这是这周的磁带。",
+      "signature": "——小满"
+    },
+    "ja": {
+      "title": "先輩へ",
+      "body": "今日、故郷の友達から、みんなで撮った写真が届きました。\n\nわざわざ一人分の場所を空けて、そこに私の絵まで描いてあったんです。全然似てないのに。\n\n今度は、私も宇宙ステーションで撮った写真を送ってって。\n\nアルバムを見返してみたら、最近撮ったのはお酒の瓶とグラス、それから窓の雨ばかり。\n\n仕方がないので、カウンターの写真を一枚選んで送りました。\n\nそしたら、「お店だけじゃだめ！ 次はちゃんと自分も写ってね！」って返ってきて。\n\nもう、私の小さな酒場を見てもらいたかっただけなのにな。\n\n今週のカセットです。",
+      "signature": "みちる"
+    },
+    "en": {
+      "title": "Dear senpai,",
+      "body": "A group photo arrived from my friends back home today.\n\nThey left a space for me and even drew me into it. It looks nothing like me!\n\nThey asked me to send a photo from the station, too.\n\nI looked through my album. Almost every recent photo was of bottles, glasses, or the rain on the window.\n\nIn the end, I just sent them one of the bar.\n\nThey replied, \"The tavern alone does not count! We want you in the next one!\"\n\nHonestly, I only wanted to show them my little tavern.\n\nHere is this week's tape.",
+      "signature": "— Xiaoman"
+    }
+  }
+}

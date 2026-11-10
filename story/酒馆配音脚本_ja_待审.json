@@ -1364,6 +1364,70 @@
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
       "source_sha256": "5e5abff355645d1861652f9be7fc24c8b8f48a1633c727e13757254139a20dc5",
       "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_07_chat_01",
+      "subtitle_templates": {
+        "zh": "有的客人坐下以后就安安静静听雨声。明明外面不是真的在下雨，他们却挺喜欢。",
+        "ja": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
+        "en": "Some people sit down and quietly listen to the rain. It is not really raining outside, but they seem to like it."
+      },
+      "spoken_text": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
+      "generate_text": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "7e862fd06b1bb6fafc18450dde2cf0f8abfae3026d1b5358d4c626845bc83082",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_07_chat_02",
+      "subtitle_templates": {
+        "zh": "最近有人会在收店前顺路来喝一杯。也不用特地约好，到了那个时间，我大概就知道谁会推门了。",
+        "ja": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
+        "en": "Some people stop by for a drink before closing now. We never arrange it, but around that time I can almost tell who will walk through the door."
+      },
+      "spoken_text": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
+      "generate_text": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "2f1e0ea0b8bbca61f389040f3b291aa9ff456a4e1062cd61bccfc82ed49e6b13",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_08_chat_01",
+      "subtitle_templates": {
+        "zh": "帮我拍照的那几位姑娘，后来还认真帮我挑了半天。明明她们是来喝酒的，倒像我请了摄影师呢。",
+        "ja": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
+        "en": "The girls who took my photos spent ages choosing one with me. They came for a drink, but it was like I had hired photographers."
+      },
+      "spoken_text": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
+      "generate_text": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "c2e86216b449b6c35792f3e62afbeb8b1525ce755ed214f58ea8a75f57ee2a37",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_08_chat_02",
+      "subtitle_templates": {
+        "zh": "她们说下次换班，还要带新同事来。要是真来了，我得记着多准备一点原料才行。",
+        "ja": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
+        "en": "They said they would bring some new colleagues next shift. If they really come, I will have to remember to get a few more ingredients ready."
+      },
+      "spoken_text": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
+      "generate_text": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "fd1b4b8897c03d2522e94de5d29059ba65cb59487ae7a748d6a90e11ce468137",
+      "defer_recording": true
     }
   ],
   "integration_note": "完整配音脚本的待录子集，不可单独覆盖现有语音索引；本次不请求TTS。"

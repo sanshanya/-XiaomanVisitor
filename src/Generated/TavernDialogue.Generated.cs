@@ -83,7 +83,21 @@ new StoryLineSpec("xm_tavern_06_chat_01", Mood.Smile),
 new StoryLineSpec("xm_tavern_06_chat_02", Mood.Soft),
 new StoryLineSpec("xm_tavern_06_chat_01_unknown", Mood.Smile),
 new StoryLineSpec("xm_tavern_06_chat_02_unknown", Mood.Soft),
+new StoryLineSpec("xm_tavern_07_chat_01", Mood.Soft),
+new StoryLineSpec("xm_tavern_07_chat_02", Mood.Smile),
+new StoryLineSpec("xm_tavern_08_chat_01", Mood.Smile),
+new StoryLineSpec("xm_tavern_08_chat_02", Mood.Soft),
 };
+private static readonly string[] Chat5 = new string[] {"xm_tavern_05_daily"};
+private static readonly string[] Chat6 = new string[] {"xm_tavern_06_chat_01","xm_tavern_06_chat_02"};
+private static readonly string[] Chat7 = new string[] {"xm_tavern_07_chat_01","xm_tavern_07_chat_02"};
+private static readonly string[] Chat8 = new string[] {"xm_tavern_08_chat_01","xm_tavern_08_chat_02"};
+public static string[] WeeklyChatPool(int day,int visits) {
+if (day>=50 && visits>=8) return Chat8;
+if (day>=43 && visits>=7) return Chat7;
+if (day>=36 && visits>=0) return Chat6;
+if (day>=29 && visits>=0) return Chat5;
+return null; }
 public static Mood MoodFor(string key) { return Lines.FirstOrDefault(l => l.Key == key)?.Mood ?? Mood.Neutral; }
 public static string KeyFor(string key, bool known) { return !known && Lines.Any(l => l.Key == key+"_unknown") ? key+"_unknown" : key; }
 } }

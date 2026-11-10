@@ -133,5 +133,12 @@
       "body": "The new drinks are finally on the menu!\n\nThe ingredients are rare stock from the new supplier.\n\nI tried several times, but something was always missing. Yesterday I mixed them again and could not help thinking: yes, this is it!\n\nThey are quite a bit dearer than the old drinks, though.\n\nBut everyone at the tavern has loved them.\n\nMaybe I have found my way into the upper-level market~\n\nHehe, I am feeling a little proud. (๑•́ ₃ •̀๑)\n\nThe supplier sent a huge sign, too. They said it would stand out by the entrance.\n\nI held it up to try it, and it covered the rain on the window perfectly.\n\n...In the end, I put it away in the cupboard.",
       "signature": "— Xiaoman"
     }
+  },
+  "night_chat": {
+    "from_day": 29,
+    "min_visit": 0,
+    "keys": [
+      "xm_tavern_05_daily"
+    ]
   }
 }

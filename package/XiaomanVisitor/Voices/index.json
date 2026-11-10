@@ -86,64 +86,16 @@
       "generic": true
     },
     {
-      "line_key": "xm_07_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_07_01_d3cbd8c55b00",
-      "spoken_text": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
-      "subtitle_templates": [
-        "晚上好。昨天收到朋友们聚餐的合照。",
-        "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
-        "Good evening. My friends sent me a photo of their get-together yesterday."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_07_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_07_02_1a7f1ea8fede",
-      "spoken_text": "写真の空いた席に、わたしの絵まで描き足してくれて。 全然似てないんですけどね。",
-      "subtitle_templates": [
-        "她们给我留了个空位，还在上面画了个我。画得一点都不像。",
-        "写真の空いた席に、わたしの絵まで描き足してくれて。全然似てないんですけどね。",
-        "They left an empty seat for me and even drew me into it. It doesn't look like me at all."
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_07_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_shop_0b14845883f1",
       "spoken_text": "今日は食べるものを少し。",
       "subtitle_templates": [
-        "今天买点吃的。",
+        "今天想买点吃的。带了 {0} 信用点。",
         "今日は食べるものを少し。",
-        "I'd like some food today."
+        "I would like some food today. I brought {0} credits."
       ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_08_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_08_01_e4f8e456dc84",
-      "spoken_text": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。 すごくにぎやかだったんです。",
-      "subtitle_templates": [
-        "晚上好。昨晚来了几个刚下夜班的姑娘，吵吵闹闹的。",
-        "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。すごくにぎやかだったんです。",
-        "Good evening. A few girls came in after their night shift yesterday. They were quite a lively bunch."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_08_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_08_02_b592ba78b7bf",
-      "spoken_text": "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
-      "subtitle_templates": [
-        "她们讲的工作笑话，我一句都没听懂。",
-        "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
-        "They kept telling jokes about work. I didn't understand a single one."
-      ],
-      "generic": false
+      "generic": true
     },
     {
       "line_key": "xm_08_shop",
@@ -151,11 +103,11 @@
       "sound_key": "xm_voice_ja_xm_08_shop_e490d9d29329",
       "spoken_text": "今日は日用品を少し買いに来ました。",
       "subtitle_templates": [
-        "今天想买些日用品。",
+        "今天想买点日用品。带了 {0} 信用点。",
         "今日は日用品を少し買いに来ました。",
-        "I'm looking for some everyday supplies today."
+        "I need some household supplies today. I brought {0} credits."
       ],
-      "generic": false
+      "generic": true
     },
     {
       "line_key": "xm_09_01",
@@ -1106,8 +1058,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 146,
+  "pending_lines": 164,
   "pending_by_language": {
-    "ja": 146
+    "ja": 164
   }
 }

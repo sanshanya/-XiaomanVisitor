@@ -62,7 +62,14 @@ def generate(data):
     for line in data['lines'].values():
         if line['key'].startswith('xm_tavern_'):
             code.append('new StoryLineSpec('+json.dumps(line['key'])+', Mood.'+line['mood']+'),')
-    code+=['};','public static Mood MoodFor(string key) { return Lines.FirstOrDefault(l => l.Key == key)?.Mood ?? Mood.Neutral; }',
+    code+=['};']
+    for pool in data['chat_pools']:
+        code.append('private static readonly string[] Chat'+str(pool['visit'])+' = new string[] {'+
+                    ','.join(json.dumps(key) for key in pool['keys'])+'};')
+    code.append('public static string[] WeeklyChatPool(int day,int visits) {')
+    for pool in reversed(data['chat_pools']):
+        code.append(f'if (day>={pool["from_day"]} && visits>={pool["min_visit"]}) return Chat{pool["visit"]};')
+    code+=['return null; }','public static Mood MoodFor(string key) { return Lines.FirstOrDefault(l => l.Key == key)?.Mood ?? Mood.Neutral; }',
            'public static string KeyFor(string key, bool known) { return !known && Lines.Any(l => l.Key == key+"_unknown") ? key+"_unknown" : key; }','} }','']
     path.write_text('\n'.join(code),encoding='utf-8')
     price=json.loads((ROOT/'assets/tavern-prices.json').read_text(encoding='utf-8'))

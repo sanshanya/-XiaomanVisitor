@@ -29,11 +29,11 @@
     "key": "xm_07_shop",
     "language": "ja",
     "subtitle_templates": {
-      "zh": "今天买点吃的。",
+      "zh": "今天想买点吃的。带了 {0} 信用点。",
       "ja": "今日は食べるものを少し。",
-      "en": "I'd like some food today."
+      "en": "I would like some food today. I brought {0} credits."
     },
-    "generic": false
+    "generic": true
   },
   "binding_history": [
     {

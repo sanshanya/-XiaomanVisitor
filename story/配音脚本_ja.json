@@ -802,92 +802,256 @@
     {
       "key": "xm_07_01",
       "subtitle_templates": {
-        "zh": "晚上好。昨天收到朋友们聚餐的合照。",
-        "ja": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
-        "en": "Good evening. My friends sent me a photo of their get-together yesterday."
+        "zh": "晚上好，前辈。最近有位船坞的客人，几乎每天都会来店里坐一会儿。",
+        "ja": "こんばんは、先輩。最近、ドックのお客さんが、ほとんど毎日お店で少し過ごしていくんです。",
+        "en": "Good evening, senpai. There is someone from the docks who comes to sit at the tavern almost every day."
       },
-      "spoken_text": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
-      "generate_text": "こんばんは。昨日、地元の友達から、みんなで食事したときの写真が届いたんです。",
+      "spoken_text": "こんばんは、先輩。最近、ドックのお客さんが、ほとんど毎日お店で少し過ごしていくんです。",
+      "generate_text": "こんばんは、先輩。最近、ドックのお客さんが、ほとんど毎日お店で少し過ごしていくんです。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_07_01.0059a289a7d452c1.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "c0f1d09f8a3eb736831d0947ce620ea1f38534623db4b0a97cbca2660681fd4d"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "5cd000ed88ed6ad42d81c88b7c61adb93aa5471fa3b45c63bc9e810b5994c460",
+      "defer_recording": true
     },
     {
       "key": "xm_07_02",
       "subtitle_templates": {
-        "zh": "她们给我留了个空位，还在上面画了个我。画得一点都不像。",
-        "ja": "写真の空いた席に、わたしの絵まで描き足してくれて。全然似てないんですけどね。",
-        "en": "They left an empty seat for me and even drew me into it. It doesn't look like me at all."
+        "zh": "每次都坐在窗边，点一杯偏酸的酒，连位置都不怎么换呢。",
+        "ja": "いつも窓際で、少し酸っぱいお酒を一杯。座る場所まで、ほとんど変わらないんですよ。",
+        "en": "Always a seat by the window and a slightly sour drink. Even the seat hardly ever changes."
       },
-      "spoken_text": "写真の空いた席に、わたしの絵まで描き足してくれて。 全然似てないんですけどね。",
-      "generate_text": "写真の空いた席に、わたしの絵まで描き足してくれて。[chuckles] 全然似てないんですけどね。",
+      "spoken_text": "いつも窓際で、少し酸っぱいお酒を一杯。座る場所まで、ほとんど変わらないんですよ。",
+      "generate_text": "いつも窓際で、少し酸っぱいお酒を一杯。座る場所まで、ほとんど変わらないんですよ。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_07_02.4a5fa5667867379b.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "6aed96bf019bc52bf6029cdb830c536c62aceb44c284099eaaad1f4ac43a85fe"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "97d9dd0a8f6b7344dc2e2142c362d987d580b6c22899a41ec3b5fb92dd26b9ae",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_07_03",
+      "subtitle_templates": {
+        "zh": "昨天他一进门就说了句“老样子”，我一下就知道该调哪杯了。",
+        "ja": "昨日、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
+        "en": "Yesterday he walked in and said, \"The usual.\" I knew straight away what to make."
+      },
+      "spoken_text": "昨日、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
+      "generate_text": "昨日、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "d09dbe8a7212991c7c2e86bf3efb16de714ffc7f65bea34935215169a10f1f26",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_07_04",
+      "subtitle_templates": {
+        "zh": "嘿嘿，原来我的店里，也有会说“老样子”的客人啦。",
+        "ja": "えへへ、私のお店にも「いつもの」って言ってくれるお客さんができたんですね。",
+        "en": "Hehe. My tavern has someone who can order \"the usual\" now."
+      },
+      "spoken_text": "えへへ、私のお店にも「いつもの」って言ってくれるお客さんができたんですね。",
+      "generate_text": "えへへ、私のお店にも「いつもの」って言ってくれるお客さんができたんですね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "2aac111b6ac903d80ff8e178a8bc81b1bda5a28cf950e840a2b032da7c895759",
+      "defer_recording": true
     },
     {
       "key": "xm_07_shop",
       "subtitle_templates": {
-        "zh": "今天买点吃的。",
+        "zh": "今天想买点吃的。带了 {0} 信用点。",
         "ja": "今日は食べるものを少し。",
-        "en": "I'd like some food today."
+        "en": "I would like some food today. I brought {0} credits."
       },
       "spoken_text": "今日は食べるものを少し。",
       "generate_text": "今日は食べるものを少し。",
-      "generic": false,
+      "generic": true,
       "reviewed": true,
       "audio": "assets/audio/voice/ja/xm_07_shop.9c4f6492a80ccb3d.wav",
       "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "ea5c6807a70df97268095c95306befb46c4ad630caf1b898968675c970f5f886"
+      "source_sha256": "d504d9f6b3e9fabc4b7f5897059791e82bc42a9a7fbf2caab3ed91a990d9ee30"
+    },
+    {
+      "key": "xm_07_accept",
+      "subtitle_templates": {
+        "zh": "谢谢。正好用得上。",
+        "ja": "ありがとうございます。ちょうど必要だったんです。",
+        "en": "Thank you. Just what I needed."
+      },
+      "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
+      "generate_text": "ありがとうございます。ちょうど必要だったんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "59b6c9011d1fa09a92f8297b3061b4e54ad6c91eda3c80733b05095c232351ab",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_07_bye",
+      "subtitle_templates": {
+        "zh": "那我先走啦。前辈晚上有空，再来坐坐哦。",
+        "ja": "それじゃ、また。先輩、夜に時間があったら、また寄ってくださいね。",
+        "en": "I should go. Come sit for a while tonight if you have time, senpai."
+      },
+      "spoken_text": "それじゃ、また。先輩、夜に時間があったら、また寄ってくださいね。",
+      "generate_text": "それじゃ、また。先輩、夜に時間があったら、また寄ってくださいね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "5bf5e2a41d7e1ae6632c0a83d426ec0833553a9ca3999d56fc1f0dd6b2a6b8c7",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_07_03_late",
+      "subtitle_templates": {
+        "zh": "前阵子他一进门就说了句“老样子”，我一下就知道该调哪杯了。",
+        "ja": "この前、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
+        "en": "The other day he walked in and said, \"The usual.\" I knew straight away what to make."
+      },
+      "spoken_text": "この前、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
+      "generate_text": "この前、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "a6f9a4bd6ce2e9c96bbcddb1d089822a787f7e8223c35ff1e3e96d37c75c100b",
+      "defer_recording": true
     },
     {
       "key": "xm_08_01",
       "subtitle_templates": {
-        "zh": "晚上好。昨晚来了几个刚下夜班的姑娘，吵吵闹闹的。",
-        "ja": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。すごくにぎやかだったんです。",
-        "en": "Good evening. A few girls came in after their night shift yesterday. They were quite a lively bunch."
+        "zh": "晚上好，前辈。前阵子故乡的朋友一直催我，叫我发张自己的照片回去。",
+        "ja": "こんばんは、先輩。この前から故郷の友達に、自分の写真も送ってって、ずっと言われていたんです。",
+        "en": "Good evening, senpai. My friends back home kept asking me to send a photo of myself."
       },
-      "spoken_text": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。 すごくにぎやかだったんです。",
-      "generate_text": "こんばんは。昨日、夜勤明けの女の子たちが何人か来て。[laughs] すごくにぎやかだったんです。",
+      "spoken_text": "こんばんは、先輩。この前から故郷の友達に、自分の写真も送ってって、ずっと言われていたんです。",
+      "generate_text": "こんばんは、先輩。この前から故郷の友達に、自分の写真も送ってって、ずっと言われていたんです。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_08_01.7cae149554e66d2b.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "d0840e3f6195c29a6428ec39c688d4db95c984e422c2741c385cd35dbf92a6fd"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "38d231c109fd8c1e53f7ec2af47038ecf04f2c77af9888d7fcd75ba02dd145e7",
+      "defer_recording": true
     },
     {
       "key": "xm_08_02",
       "subtitle_templates": {
-        "zh": "她们讲的工作笑话，我一句都没听懂。",
-        "ja": "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
-        "en": "They kept telling jokes about work. I didn't understand a single one."
+        "zh": "昨晚我请几位常来的夜班姑娘帮忙，她们还抢着说要给我拍呢。",
+        "ja": "昨夜、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
+        "en": "Last night I asked a few of the night-shift girls who come in regularly to help. They all wanted to take it."
       },
-      "spoken_text": "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
-      "generate_text": "仕事の冗談で盛り上がってたんですけど、わたしにはさっぱりで。",
+      "spoken_text": "昨夜、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
+      "generate_text": "昨夜、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_08_02.18a717607cf18f6a.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "6361a78d3c20ff9653abf2df3a4e3fd2ea4494f9ba7822ded029dc03eb8ad4b4"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "9bfead92d95d145a82c8b9056515718c002cfc3f6bef8fbc7a55119d2f36cfd1",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_08_03",
+      "subtitle_templates": {
+        "zh": "她们说：“老板，当然要站在吧台后面呀！”……我就乖乖站回去了。",
+        "ja": "「店主なんだから、カウンターの中に立たなくちゃ！」って。……それで、言われた通りに戻っちゃいました。",
+        "en": "They said, \"You are the owner! You have to stand behind the bar!\" ...So I went back where they told me to."
+      },
+      "spoken_text": "「店主なんだから、カウンターの中に立たなくちゃ！」って。……それで、言われた通りに戻っちゃいました。",
+      "generate_text": "「店主なんだから、カウンターの中に立たなくちゃ！」って。……それで、言われた通りに戻っちゃいました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "0f590d193a55a0b34f9c07da077f0a6a23d2d37f9893ff0cfef2c7b95aed1283",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_08_04",
+      "subtitle_templates": {
+        "zh": "最后挑了一张窗上有雨的，已经发给朋友们啦。嘿嘿，拍得还挺不错呢。",
+        "ja": "最後に、窓の雨が写っている一枚を選んで、もう友達に送りました。えへへ、なかなかよく撮れているんですよ。",
+        "en": "I picked one with rain on the window and sent it to my friends. Hehe, it came out quite nicely."
+      },
+      "spoken_text": "最後に、窓の雨が写っている一枚を選んで、もう友達に送りました。えへへ、なかなかよく撮れているんですよ。",
+      "generate_text": "最後に、窓の雨が写っている一枚を選んで、もう友達に送りました。えへへ、なかなかよく撮れているんですよ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "4ee805067caf0d8994b722a17aa9dcf9783b31f151a12c6021b087ed9c863a3d",
+      "defer_recording": true
     },
     {
       "key": "xm_08_shop",
       "subtitle_templates": {
-        "zh": "今天想买些日用品。",
+        "zh": "今天想买点日用品。带了 {0} 信用点。",
         "ja": "今日は日用品を少し買いに来ました。",
-        "en": "I'm looking for some everyday supplies today."
+        "en": "I need some household supplies today. I brought {0} credits."
       },
       "spoken_text": "今日は日用品を少し買いに来ました。",
       "generate_text": "今日は日用品を少し買いに来ました。",
-      "generic": false,
+      "generic": true,
       "reviewed": true,
       "audio": "assets/audio/voice/ja/xm_08_shop.08fcbc7bbc21d47f.wav",
       "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "d333d853a2b620534496ec4b2c15575e0e59d954e947601c8cb63d9473e9dffa"
+      "source_sha256": "6aa658078c7e235f51eb3fd498d470e0d53ac8d41af1417fdcfd0635a3d0b9b3"
+    },
+    {
+      "key": "xm_08_accept",
+      "subtitle_templates": {
+        "zh": "谢谢。正好用得上。",
+        "ja": "ありがとうございます。ちょうど必要だったんです。",
+        "en": "Thank you. Just what I needed."
+      },
+      "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
+      "generate_text": "ありがとうございます。ちょうど必要だったんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "59b6c9011d1fa09a92f8297b3061b4e54ad6c91eda3c80733b05095c232351ab",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_08_bye",
+      "subtitle_templates": {
+        "zh": "那我先走啦。前辈有空再来坐坐哦。",
+        "ja": "それじゃ、また。先輩、時間があったら、また寄ってくださいね。",
+        "en": "I should go. Come sit for a while again when you have time, senpai."
+      },
+      "spoken_text": "それじゃ、また。先輩、時間があったら、また寄ってくださいね。",
+      "generate_text": "それじゃ、また。先輩、時間があったら、また寄ってくださいね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "a2c056ff4cd99dbf0f6580cfdcca0047aff1dba604ac54494623e047906264fb",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_08_02_late",
+      "subtitle_templates": {
+        "zh": "前阵子我请几位常来的夜班姑娘帮忙，她们还抢着说要给我拍呢。",
+        "ja": "この前、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
+        "en": "The other day I asked a few of the night-shift girls who come in regularly to help. They all wanted to take my photo."
+      },
+      "spoken_text": "この前、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
+      "generate_text": "この前、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "2d7af60fb6a3c5e87e6a90d53629c53b017bf9b107cc30b5495f0a78b1806c9a",
+      "defer_recording": true
     },
     {
       "key": "xm_09_01",
@@ -2835,6 +2999,70 @@
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
       "source_sha256": "5e5abff355645d1861652f9be7fc24c8b8f48a1633c727e13757254139a20dc5",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_07_chat_01",
+      "subtitle_templates": {
+        "zh": "有的客人坐下以后就安安静静听雨声。明明外面不是真的在下雨，他们却挺喜欢。",
+        "ja": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
+        "en": "Some people sit down and quietly listen to the rain. It is not really raining outside, but they seem to like it."
+      },
+      "spoken_text": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
+      "generate_text": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "7e862fd06b1bb6fafc18450dde2cf0f8abfae3026d1b5358d4c626845bc83082",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_07_chat_02",
+      "subtitle_templates": {
+        "zh": "最近有人会在收店前顺路来喝一杯。也不用特地约好，到了那个时间，我大概就知道谁会推门了。",
+        "ja": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
+        "en": "Some people stop by for a drink before closing now. We never arrange it, but around that time I can almost tell who will walk through the door."
+      },
+      "spoken_text": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
+      "generate_text": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "2f1e0ea0b8bbca61f389040f3b291aa9ff456a4e1062cd61bccfc82ed49e6b13",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_08_chat_01",
+      "subtitle_templates": {
+        "zh": "帮我拍照的那几位姑娘，后来还认真帮我挑了半天。明明她们是来喝酒的，倒像我请了摄影师呢。",
+        "ja": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
+        "en": "The girls who took my photos spent ages choosing one with me. They came for a drink, but it was like I had hired photographers."
+      },
+      "spoken_text": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
+      "generate_text": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "c2e86216b449b6c35792f3e62afbeb8b1525ce755ed214f58ea8a75f57ee2a37",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_08_chat_02",
+      "subtitle_templates": {
+        "zh": "她们说下次换班，还要带新同事来。要是真来了，我得记着多准备一点原料才行。",
+        "ja": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
+        "en": "They said they would bring some new colleagues next shift. If they really come, I will have to remember to get a few more ingredients ready."
+      },
+      "spoken_text": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
+      "generate_text": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "fd1b4b8897c03d2522e94de5d29059ba65cb59487ae7a748d6a90e11ce468137",
       "defer_recording": true
     },
     {

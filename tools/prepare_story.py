@@ -10,7 +10,7 @@ import wave
 import week_two_source
 import week_three_source
 import week_four_source
-import week_five_six_source
+import weekly_story_source
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "package/XiaomanVisitor"
@@ -67,19 +67,16 @@ def main():
     week_two = week_two_source.read()
     week_three = week_three_source.read()
     week_four = week_four_source.read()
-    week_five = week_five_six_source.read(5)
-    week_six = week_five_six_source.read(6)
-    overlays={2:week_two,3:week_three,4:week_four,5:week_five,6:week_six}
-    week_five_six_source.generate()
+    extra_weeks={n:weekly_story_source.read(n) for n in weekly_story_source.SOURCES}
+    overlays={2:week_two,3:week_three,4:week_four,**extra_weeks}
+    weekly_story_source.generate()
     week_four_source.generate()
     week_three_source.generate()
-    week_two_source.generate(dict(week_two,lines=dict(week_two['lines'],**week_three['lines'],**week_four['lines'],**week_five['lines'],**week_six['lines'])))
+    all_lines={key:row for overlay in overlays.values() for key,row in overlay['lines'].items()}
+    week_two_source.generate(dict(week_two,lines=all_lines,
+        chat_pools=[dict(overlay['night_chat'],visit=visit) for visit,overlay in extra_weeks.items()]))
     english = json.loads((ROOT / "story/英文台词.json").read_text(encoding="utf-8"))
-    english.update({key:row['en'] for key,row in week_two['lines'].items()})
-    english.update({key:row['en'] for key,row in week_three['lines'].items()})
-    english.update({key:row['en'] for key,row in week_four['lines'].items()})
-    for overlay in (week_five,week_six):
-        english.update({key:row['en'] for key,row in overlay['lines'].items()})
+    english.update({key:row['en'] for key,row in all_lines.items()})
     notes_path=ROOT/'story/纸条正文.json'
     note_document=json.loads(notes_path.read_text(encoding='utf-8'))
     note_two=next(n for n in note_document['notes'] if n['visit']==2)
@@ -95,8 +92,8 @@ def main():
     for lang,note in week_four['letters']['A'].items():
         note_four[lang]=note['body'];note_four['title_'+lang]=note['title'];note_four['signature_'+lang]=note['signature']
     note_four['source']=week_four['source'];note_four['variants']={'B':week_four['letters']['B']}
-    for visit in (5,6):
-        overlay=overlays[visit]; note=next(n for n in note_document['notes'] if n['visit']==visit)
+    for visit,overlay in extra_weeks.items():
+        note=next(n for n in note_document['notes'] if n['visit']==visit)
         for lang,fields in overlay['letters'].items():
             note[lang]=fields['body'];note['title_'+lang]=fields['title'];note['signature_'+lang]=fields['signature']
         note['source']=overlay['source'];note.pop('variants',None)
@@ -191,8 +188,8 @@ def main():
             for field,value in fields.items(): loc[lang]['story_note_04'+('_b' if variant=='B' else '')+'_'+field]=value
     for key,row in week_four['lines'].items():
         if not key.startswith('xm_04_'): add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
-    for visit in (5,6):
-        overlay=overlays[visit];episodes[visit-1]['title']=overlay['title']
+    for visit,overlay in extra_weeks.items():
+        episodes[visit-1]['title']=overlay['title']
         for key,row in overlay['lines'].items():
             if not key.startswith(f'xm_{visit:02d}_'): add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
     ui_five=json.loads((ROOT/'assets/week-five-six-localization.json').read_text(encoding='utf-8'))
@@ -317,16 +314,17 @@ def main():
     voice_keys = [k for k, row in lines.items() if not row.get("reference") and row["kind"] == "speech" and "voice_alias" not in row]
     source_path = args.source.resolve()
     source_name = source_path.relative_to(ROOT).as_posix() if source_path.is_relative_to(ROOT) else source_path.name
-    snapshot = dict(schema=1, version="4.7-W05-W06", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+    snapshot = dict(schema=1, version="4.8-W07-W08", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
                     week_two_source=week_two['source'],week_two_sha256=week_two['sha256'],
                     week_three_source=week_three['source'],week_three_sha256=week_three['sha256'],
                     week_four_source=week_four['source'],week_four_sha256=week_four['sha256'],
-                    week_five_source=week_five['source'],week_five_sha256=week_five['sha256'],
-                    week_six_source=week_six['source'],week_six_sha256=week_six['sha256'],
                     episodes=episodes, actions=actions, lines=list(lines.values()), voice_keys=voice_keys,
                     sale_rule=dict(first=4, last=13, later_chance_percent=30, count=2, basic_only=True, excluded_visits=[6]),
                     fixed_drink_gift=dict(visit=6, count=1, tier=2, random_once=True, next_day=True, replaces_trade_reward=True),
                     tts=dict(language="ja", voice_id="ayano", model_id="luna-tts-1.5", speed=1.1, audio_format="wav", text_normalization=True))
+    for visit,overlay in extra_weeks.items():
+        name=weekly_story_source.WEEK_NAMES[visit]
+        snapshot['week_'+name+'_source']=overlay['source'];snapshot['week_'+name+'_sha256']=overlay['sha256']
     save(ROOT / "assets/story.json", snapshot)
     # Ready-to-edit offline script: no external generation here. Preserve the approved first WAV.
     old_script_path = ROOT / "story/配音脚本_ja.json"
