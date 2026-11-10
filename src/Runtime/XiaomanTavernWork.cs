@@ -47,14 +47,14 @@ namespace XiaomanVisitor
         }
         private void GenerateNightDemand()
         {
-            if (!TavernMapEnabled || !PlayerStore.HasInstance || ReadStory().Finished
+            if (!TavernMapEnabled || !PlayerStore.HasInstance || !TavernTrading
                 || StoreStation.Instance.dayCounter<TavernWorkConfig.UnlockDay) return;
             var p=ReadWork(); int day=StoreStation.Instance.dayCounter;
             if (p.EnsureDemand(day,TavernWorkConfig.DemandCount(day))) SaveWork(p);
         }
         private void RequestTavernWork()
         {
-            if (!TavernMayAct || TavernDialogueBusy || wageBusy) return;
+            if (!TavernMayAct || !TavernTrading || TavernDialogueBusy || wageBusy) return;
             var p=ReadWork(); int day=StoreStation.Instance.dayCounter;
             CloseTavernMenu();
             if (p.RecoveryBlocked || p.Pending!=null) { TavernNotice("ui_tavern_wage_pending"); return; }
@@ -73,13 +73,13 @@ namespace XiaomanVisitor
         }
         private void StartTavernWork()
         {
-            if (!TavernMayAct || TavernDialogueBusy || wageBusy) return;
+            if (!TavernMayAct || !TavernTrading || TavernDialogueBusy || wageBusy) return;
             var p=ReadWork(); workDay=StoreStation.Instance.dayCounter;
             if (!p.MayWork(workDay)) { RequestTavernWork(); return; }
             workOrderIds=p.WaitingIds(workDay); workElapsed=0;workSounds=0;
             CloseTavernMenu();
             QueueTavernSpeech(new[]{"xm_tavern_w03_work_start"},() => {
-                if (!TavernMayAct || StoreStation.Instance.dayCounter!=workDay || !ReadWork().MayWork(workDay)) return;
+                if (!TavernMayAct || !TavernTrading || StoreStation.Instance.dayCounter!=workDay || !ReadWork().MayWork(workDay)) return;
                 workRunning=true; tavernStage.SetWorkProgress(0,Text("ui_tavern_work_phase_1"));
             });
         }
@@ -110,7 +110,7 @@ namespace XiaomanVisitor
         }
         private void CommitTavernWork()
         {
-            if (!TavernMayAct || wageBusy) return;
+            if (!TavernMayAct || !TavernTrading || wageBusy) return;
             wageBusy=true;
             try {
                 var p=ReadWork(); bool first=!p.HasWorked;

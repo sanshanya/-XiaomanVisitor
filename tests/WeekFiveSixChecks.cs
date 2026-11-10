@@ -6,7 +6,7 @@ internal static class WeekFiveSixChecks
 {
     public static void Run(Action<bool,string> check)
     {
-        check(CocktailCatalog.Drinks.Length==6 && CocktailCatalog.All.Length==9
+        check(CocktailCatalog.Drinks.Length==6 && CocktailCatalog.All.Length==10
             && StoryRules.BasicDrinks.All(k => !LuxuryDrinkCatalog.IsLuxury(k)),"W05 original reward pool stays at six; luxury has separate identities");
         var e5=StoryRules.Episode(5);var e6=StoryRules.Episode(6);
         check(e5.Credits==350 && e5.Demand==XiaomanDemand.Household && e5.TrackKey=="midnight"

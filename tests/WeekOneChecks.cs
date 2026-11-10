@@ -19,14 +19,14 @@ internal static class WeekOneChecks
         check(!WeekOneRules.HasRenovationNews(2) && WeekOneRules.HasRenovationNews(3)
             && WeekOneRules.HasRenovationNews(7) && !WeekOneRules.HasRenovationNews(8), "anonymous renovation news has a calendar-only first-week window");
         check(StoryRules.Episode(1).Opening.Select(l => l.Key).SequenceEqual(new[] {
-            "xm_01_01", "xm_01_02", "xm_01_03", "xm_01_04", "xm_01_05", "xm_01_shop" }),
-            "new cassette remarks follow the original voiced discovery before shopping");
+            "xm_01_01", "xm_01_02", "xm_01_03", "xm_01_04", "xm_01_shop" }),
+            "master merges cassette discovery and moving tapes before the shopping line");
         var pack = JsonConvert.DeserializeObject<VoicePackDocument>(File.ReadAllText(Path.Combine(package, "Voices/index.json")));
         var voices = new VoiceCatalog(pack.lines);
-        check(pack.pending_lines >= 2 && voices.Preview("xm_01_04", "ja") == null && voices.Preview("xm_01_05", "ja") == null,
-            "the two first-week additions remain explicitly deferred");
-        check(new[] { "intro_1", "xm_01_02", "xm_01_03", "xm_01_shop", "xm_01_accept", "xm_01_bye" }
-            .All(k => voices.Preview(k, "ja") != null), "all six unchanged first-visit recordings remain available");
+        check(pack.pending_lines >= 2 && voices.Preview("xm_01_03", "ja") == null && voices.Preview("xm_01_04", "ja") == null,
+            "rewritten discovery and follow-up never play mismatched older recordings");
+        check(new[] { "intro_1", "xm_01_accept", "xm_01_bye" }
+            .All(k => voices.Preview(k, "ja") != null), "unchanged first-visit recordings remain available");
         var reward = new VisitTradeSummary(); reward.Record(1, 100, 100, 100, false);
         check(StoryRules.AllowsTradeDrink(1) && DrinkRewardRules.Select(reward) == "sunset_blue", "first-week qualifying trades still earn a drink");
 

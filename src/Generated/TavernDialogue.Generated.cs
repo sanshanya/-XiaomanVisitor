@@ -106,6 +106,18 @@ new StoryLineSpec("xm_tavern_10_regular_04", Mood.Smile),
 new StoryLineSpec("xm_tavern_11_chat_01", Mood.Soft),
 new StoryLineSpec("xm_tavern_11_chat_02", Mood.Neutral),
 new StoryLineSpec("xm_tavern_11_chat_03", Mood.Soft),
+new StoryLineSpec("xm_tavern_12_roka_01", Mood.Smile),
+new StoryLineSpec("xm_tavern_12_roka_02", Mood.Soft),
+new StoryLineSpec("xm_tavern_12_roka_03", Mood.Smile),
+new StoryLineSpec("xm_tavern_12_roka_04", Mood.Soft),
+new StoryLineSpec("xm_tavern_12_business_01", Mood.Neutral),
+new StoryLineSpec("xm_tavern_12_business_02", Mood.Soft),
+new StoryLineSpec("xm_tavern_12_business_03", Mood.Neutral),
+new StoryLineSpec("xm_tavern_12_business_04", Mood.Worried),
+new StoryLineSpec("xm_tavern_12_business_05", Mood.Soft),
+new StoryLineSpec("xm_tavern_13_entry", Mood.Soft),
+new StoryLineSpec("xm_tavern_13_tape", Mood.Smile),
+new StoryLineSpec("xm_tavern_13_chat", Mood.Soft),
 };
 private static readonly string[] Chat5 = new string[] {"xm_tavern_05_daily"};
 private static readonly string[] Chat6 = new string[] {"xm_tavern_06_chat_01","xm_tavern_06_chat_02"};
@@ -114,12 +126,17 @@ private static readonly string[] Chat8 = new string[] {"xm_tavern_08_chat_01","x
 private static readonly string[] Chat9 = new string[] {"xm_tavern_09_chat_01"};
 private static readonly string[] Chat10 = new string[] {"xm_tavern_10_chat_01","xm_tavern_10_regular_01"};
 private static readonly string[] Chat11 = new string[] {"xm_tavern_11_chat_01"};
+private static readonly string[] Chat12 = new string[] {"xm_tavern_12_business_01"};
+private static readonly string[] Chat13 = new string[] {"xm_tavern_13_chat"};
+private static readonly string[] Chat14 = new string[] {};
 private static readonly string[] Sequence0 = new string[] {"xm_tavern_09_chat_01","xm_tavern_09_chat_02","xm_tavern_09_chat_03"};
 private static readonly string[] Sequence1 = new string[] {"xm_tavern_10_chat_01","xm_tavern_10_chat_02","xm_tavern_10_chat_03"};
 private static readonly string[] Sequence2 = new string[] {"xm_tavern_10_chat_supported_01","xm_tavern_10_chat_supported_02","xm_tavern_10_chat_supported_03"};
 private static readonly string[] Sequence3 = new string[] {"xm_tavern_10_chat_neutral_01","xm_tavern_10_chat_neutral_02","xm_tavern_10_chat_neutral_03"};
 private static readonly string[] Sequence4 = new string[] {"xm_tavern_10_regular_01","xm_tavern_10_regular_02","xm_tavern_10_regular_03","xm_tavern_10_regular_04"};
 private static readonly string[] Sequence5 = new string[] {"xm_tavern_11_chat_01","xm_tavern_11_chat_02","xm_tavern_11_chat_03"};
+private static readonly string[] Sequence6 = new string[] {"xm_tavern_12_business_01","xm_tavern_12_business_02","xm_tavern_12_business_03","xm_tavern_12_business_04","xm_tavern_12_business_05"};
+private static readonly string[] Sequence7 = new string[] {"xm_tavern_12_roka_01","xm_tavern_12_roka_02","xm_tavern_12_roka_03","xm_tavern_12_roka_04"};
 public static string[] ChatSequence(string key) {
 if (key=="xm_tavern_09_chat_01") return Sequence0;
 if (key=="xm_tavern_10_chat_01") return Sequence1;
@@ -127,11 +144,16 @@ if (key=="xm_tavern_10_chat_supported_01") return Sequence2;
 if (key=="xm_tavern_10_chat_neutral_01") return Sequence3;
 if (key=="xm_tavern_10_regular_01") return Sequence4;
 if (key=="xm_tavern_11_chat_01") return Sequence5;
+if (key=="xm_tavern_12_business_01") return Sequence6;
+if (key=="xm_tavern_12_roka_01") return Sequence7;
 return new[]{key}; }
 public static bool ChatReady(string key,int day,int encounterDay) {
 if (key=="xm_tavern_10_regular_01") return encounterDay>0 && day>=System.Math.Max(66L,(long)encounterDay+2);
 return true; }
 public static int WeeklyChatVisit(int day,int visits) {
+if (day>=92 && visits>=14) return 14;
+if (day>=85 && visits>=13) return 13;
+if (day>=78 && visits>=12) return 12;
 if (day>=71 && visits>=11) return 11;
 if (day>=64 && visits>=10) return 10;
 if (day>=57 && visits>=9) return 9;
@@ -148,6 +170,9 @@ case 8: return Chat8;
 case 9: return Chat9;
 case 10: return Chat10;
 case 11: return Chat11;
+case 12: return Chat12;
+case 13: return Chat13;
+case 14: return Chat14;
 default: return null; } }
 public static Mood MoodFor(string key) { return Lines.FirstOrDefault(l => l.Key == key)?.Mood ?? Mood.Neutral; }
 public static string KeyFor(string key, bool known) { return !known && Lines.Any(l => l.Key == key+"_unknown") ? key+"_unknown" : key; }

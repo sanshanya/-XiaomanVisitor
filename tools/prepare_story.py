@@ -11,6 +11,7 @@ import week_two_source
 import week_three_source
 import week_four_source
 import weekly_story_source
+import story_master_source
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "package/XiaomanVisitor"
@@ -68,7 +69,7 @@ def main():
     week_three = week_three_source.read()
     week_four = week_four_source.read()
     extra_weeks={n:weekly_story_source.read(n) for n in weekly_story_source.SOURCES}
-    overlays={2:week_two,3:week_three,4:week_four,**extra_weeks}
+    overlays={1:story_master_source.chapter(1),2:week_two,3:week_three,4:week_four,**extra_weeks}
     weekly_story_source.generate()
     week_four_source.generate()
     week_three_source.generate()
@@ -79,6 +80,10 @@ def main():
     english.update({key:row['en'] for key,row in all_lines.items()})
     notes_path=ROOT/'story/纸条正文.json'
     note_document=json.loads(notes_path.read_text(encoding='utf-8'))
+    note_one=next(n for n in note_document['notes'] if n['visit']==1)
+    for lang,note in overlays[1]['letters'].items():
+        note_one[lang]=note['body'];note_one['title_'+lang]=note['title'];note_one['signature_'+lang]=note['signature']
+    note_one['source']=overlays[1]['source']
     note_two=next(n for n in note_document['notes'] if n['visit']==2)
     for lang,note in week_two['letters'].items():
         note_two[lang]=note['body']
@@ -97,6 +102,8 @@ def main():
         for lang,fields in overlay['letters'].items():
             note[lang]=fields['body'];note['title_'+lang]=fields['title'];note['signature_'+lang]=fields['signature']
         note['source']=overlay['source'];note.pop('variants',None)
+    for note in note_document['notes']:
+        note['source']=story_master_source.SOURCE.relative_to(ROOT).as_posix()
     save(notes_path,note_document)
     translated_notes = {n['visit']:n for n in note_document['notes']}
     paper_style_path = ROOT / "assets/paper-style.json"
@@ -162,7 +169,7 @@ def main():
                 override = translated_notes[n].get(field + "_" + lang)
                 if override:
                     loc[lang][f"story_note_{n:02d}_{field}"] = override
-        episodes.append(dict(index=n, title=match[2], credits=BUDGETS[i], demand=DEMANDS[i], track=TRACKS[i], opening=opening,
+        episodes.append(dict(index=n, title=overlay.get('title',match[2]) if overlay else match[2], credits=BUDGETS[i], demand=DEMANDS[i], track=TRACKS[i], opening=opening,
                              accept=special.get("accept", "accept_return"), goodbye=special.get("bye", "goodbye"),
                              cocktail=special.get("cocktail", ""), note_id=f"story_note_{n:02d}"))
 
@@ -199,6 +206,8 @@ def main():
     for lang,entries in ui_five.items():loc[lang].update(entries)
     ui_four=json.loads((ROOT/'assets/week-four-localization.json').read_text(encoding='utf-8'))
     for lang,entries in ui_four.items(): loc[lang].update(entries)
+    ending=json.loads((ROOT/'assets/ending-localization.json').read_text(encoding='utf-8'))
+    for lang,entries in ending.items(): loc[lang].update(entries)
 
     generic_section = text[text.index("## 通用交易台词与衔接"):text.index("## 0.7.0 专属动作")]
     for row in table_lines(generic_section):
@@ -283,6 +292,12 @@ def main():
     book['pages'].append(dict(id='supply_list',elements=[dict(type='text',id='supply_snapshot',x=28,y=32,w=260,h=340,fontSize=11,loc='ui_w04_supply_list',color='#28466B',wrap=True)]))
     save(book_path,book)
 
+    # A separate attachment, never inserted into Xiaoman's personal prose or TTS.
+    book_path=PACKAGE/'Books/story_note_12.json'
+    book=json.loads(book_path.read_text(encoding='utf-8'))
+    book['pages'].append(dict(id='settlement_notice',elements=[dict(type='text',id='notice',x=28,y=32,w=260,h=340,fontSize=11,loc='ui_w12_notice',color='#28466B',wrap=True)]))
+    save(book_path,book)
+
     catalog = json.loads((ROOT / "assets/cassettes.json").read_text(encoding="utf-8"))
     catalog = [next(c for c in catalog if c["key"] == key) for key in TRACKS]
     for n, track in enumerate(catalog, 1):
@@ -310,19 +325,20 @@ def main():
     for e in episodes:
         for key in e["opening"] + [e["accept"], e["goodbye"]] + ([e["cocktail"]] if e["cocktail"] else []):
             lines[key]["reference"] = False
-    for key in ("intro_1", "right_item", "wrong_item", "repeat", "repeat_food", "repeat_household", "goodbye_discount", "xm_repeat_first", "xm_cocktail_accept"):
+    for key in ("intro_1", "accept_return", "goodbye", "right_item", "wrong_item", "repeat", "repeat_food", "repeat_household", "goodbye_discount", "xm_repeat_first", "xm_cocktail_accept"):
         lines[key]["reference"] = False
     # The first chapter line uses intro_1's existing recording, once, with its own subtitle template.
     lines["xm_01_01"]["voice_alias"] = "intro_1"
     voice_keys = [k for k, row in lines.items() if not row.get("reference") and row["kind"] == "speech" and "voice_alias" not in row]
     source_path = args.source.resolve()
     source_name = source_path.relative_to(ROOT).as_posix() if source_path.is_relative_to(ROOT) else source_path.name
-    snapshot = dict(schema=1, version="W11-final", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+    snapshot = dict(schema=1, version="v5.4-fourteen-weeks", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+                    master_source=story_master_source.SOURCE.relative_to(ROOT).as_posix(),master_sha256=hashlib.sha256(story_master_source.SOURCE.read_bytes()).hexdigest(),
                     week_two_source=week_two['source'],week_two_sha256=week_two['sha256'],
                     week_three_source=week_three['source'],week_three_sha256=week_three['sha256'],
                     week_four_source=week_four['source'],week_four_sha256=week_four['sha256'],
                     episodes=episodes, actions=actions, lines=list(lines.values()), voice_keys=voice_keys,
-                    sale_rule=dict(first=4, last=13, later_chance_percent=30, count=2, basic_only=True, excluded_visits=[6]),
+                    sale_rule=dict(first=4, last=12, later_chance_percent=30, count=2, basic_only=True, excluded_visits=[6]),
                     fixed_drink_gift=dict(visit=6, count=1, tier=2, random_once=True, next_day=True, replaces_trade_reward=True),
                     tts=dict(language="ja", voice_id="ayano", model_id="luna-tts-1.5", speed=1.1, audio_format="wav", text_normalization=True))
     for visit,overlay in extra_weeks.items():

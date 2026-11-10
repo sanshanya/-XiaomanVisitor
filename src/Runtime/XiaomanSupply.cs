@@ -35,6 +35,7 @@ namespace XiaomanVisitor
         private void RequestSupply()
         {
             if (!TavernMayAct || TavernDialogueBusy || StoreStation.Instance.dayCounter<22) return;
+            if (!TavernTrading) { ShowTavernMenu("supply_ledger");return; }
             CloseTavernMenu();var p=ReadSupply();
             if (p.Signed) { QueueTavernSpeech(new[]{"xm_tavern_w04_supply_existing"},() => ShowTavernMenu("supply"));return; }
             if (p.IntroSeen) { ShowTavernMenu("supply");return; }
@@ -104,7 +105,7 @@ namespace XiaomanVisitor
                     b.AddLabel(Text("ui_w04_receipt",t.Day,Text(t.Direction=="in"?"ui_w04_deliver":"ui_w04_buy"),t.Count,t.Price));
             }
             b.End();
-            button(Text("ui_tavern_back"),() => ShowTavernMenu(page=="supply"?"interaction":"supply"));
+            button(Text("ui_tavern_back"),() => ShowTavernMenu(!TavernTrading || page=="supply"?"interaction":"supply"));
         }
         private void ConfirmSupplyInput(int itemId,int count,int quote)
         {
@@ -114,7 +115,7 @@ namespace XiaomanVisitor
         }
         private void TradeSupplyInput(int id,int count,int quote)
         {
-            if (!TavernMayAct || supplyBusy || TavernDialogueBusy) return;
+            if (!TavernMayAct || !TavernTrading || supplyBusy || TavernDialogueBusy) return;
             supplyBusy=true;
             try {
                 var item=CarriedSupplyItems().FirstOrDefault(i => i.uniqueId==id);
@@ -137,7 +138,7 @@ namespace XiaomanVisitor
         }
         private void TradeSupplyOutput(string batch)
         {
-            if (!TavernMayAct || supplyBusy || TavernDialogueBusy) return;
+            if (!TavernMayAct || !TavernTrading || supplyBusy || TavernDialogueBusy) return;
             supplyBusy=true;
             try {
                 var p=ReadSupply();var stock=p.Batches.FirstOrDefault(b => b.Id==batch);
@@ -178,7 +179,7 @@ namespace XiaomanVisitor
             int cash=PlayerStore.Instance.GetCash(),after=t.Direction=="in"?t.BeforeCash+t.Price:t.BeforeCash-t.Price;
             if (t.Status=="prepared" && cash==t.BeforeCash && (t.Direction=="in"?owned:!owned)) t.Status="cancelled";
             else if (cash==after && (t.Direction=="in"?!owned:owned)) {
-                if (!p.Complete(t)) t.Status="uncertain";else { p.ProduceLuxury(StoreStation.Instance.dayCounter,ReadSupport().LuxuryChannelAvailable(StoreStation.Instance.dayCounter));p.Produce(StoreStation.Instance.dayCounter); }
+                if (!p.Complete(t)) t.Status="uncertain";else if (TavernTrading) { p.ProduceLuxury(StoreStation.Instance.dayCounter,ReadSupport().LuxuryChannelAvailable(StoreStation.Instance.dayCounter));p.Produce(StoreStation.Instance.dayCounter); }
             } else t.Status="uncertain";
             SaveSupply(p);
         }

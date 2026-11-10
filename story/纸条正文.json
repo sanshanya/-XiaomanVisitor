@@ -3,11 +3,16 @@
   "notes": [
     {
       "visit": 1,
-      "ja": "昨日、帰ってから箱を片づけていたら、まったく同じテープが二本出てきました。\n\n宇宙ステーションで、カセットデッキを持っている人に会えるなんて、思ってもみませんでした。\n\nちょっと突然かもしれませんが、この一本をもらっていただけたら。\n\n故郷で大雨が降ると、よく聴いていた曲です。\n\n店長さんにも気に入ってもらえたら、うれしいです。",
+      "ja": "昨日、帰って荷物を片づけていたら、まったく同じカセットが二本出てきたんです。\n\nこのステーションで、まだカセットデッキを大事にしている人に会えるなんて、思ってもみませんでした。\n\n少し厚かましいかなとも思ったんですけど、一本お贈りしたくなって。\n\n故郷で大雨が降る日は、よくこの曲を聴いていました。\n\n店長さんにも気に入ってもらえたら、うれしいな。",
       "en": "While unpacking yesterday, I found two copies of the very same tape.\n\nI hadn't expected to meet someone on this station who still keeps a cassette player.\n\nThis might be a little sudden, but I'd like you to have this one.\n\nI used to listen to this song when it rained heavily back home.\n\nI hope you'll like it too.",
       "zh": "昨天回去整理箱子的时候，发现了两盘一模一样的磁带呢。\n\n没想到在空间站里，还能遇见留着磁带机的人。\n\n所以，虽然有点冒昧，还是想把这一盘送给您。\n\n这首歌，是我在故乡下大雨的时候常听的。\n\n要是店长先生也能喜欢就好了呀。",
       "title_zh": "致店长先生：",
-      "signature_zh": "——小满"
+      "signature_zh": "——小满",
+      "title_ja": "店長さんへ",
+      "signature_ja": "みちる",
+      "title_en": "Dear shopkeeper,",
+      "signature_en": "— Xiaoman",
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 2,
@@ -16,11 +21,11 @@
       "zh": "小店终于开业啦。٩(ˊᗜˋ*)و\n\n开店前，我把玻璃门上最后一点保护膜撕下来了哦。对面的蓝色广告牌映在玻璃上，意外地还挺好看呢。\n\n结果，第一个路过的人就问我：“这里还在装修吗？”\n\n……我这才发现，门上的“装修中”忘记摘下来了。明明酒单都检查了好几遍，偏偏把最显眼的那个忘掉了，真是的……\n\n开业时放的就是这盘磁带。也想让前辈听听呀。(´,,•ω•,,)♡",
       "title_zh": "致店长前辈：",
       "signature_zh": "——小满",
-      "title_ja": "店長先輩へ",
+      "title_ja": "先輩へ",
       "signature_ja": "みちる",
       "title_en": "Dear shopkeeper senpai,",
       "signature_en": "— Xiaoman",
-      "source": "story/小满酒馆_第二周_v4.1_实施稿.md"
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 3,
@@ -33,7 +38,7 @@
       "signature_ja": "みちる",
       "title_en": "Dear shopkeeper senpai,",
       "signature_en": "— Xiaoman",
-      "source": "story/小满酒馆_第三周_v4.4_剧情与打工实施稿.md",
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md",
       "variants": {
         "B": {
           "zh": {
@@ -61,11 +66,11 @@
       "zh": "昨天和前辈提起供货的事，回店以后，我又把需要的东西列了一遍。\n\n原本只记着“今天还缺什么”，最近已经开始写持续经营的材料计划啦。\n\n虽然很累，但是很开心。\n\n关于经营店铺的事情，还有许多地方需要前辈的指教。\n\n前辈不用急着答应我哦。您也有自己的生意，合适的时候再慢慢谈就好。\n\n这是这周的磁带。(´,,•ω•,,)♡\n\n另外附上这周需要的物品品类清单，如果前辈有意向可以去找我。",
       "title_zh": "致店长前辈：",
       "signature_zh": "——小满",
-      "title_ja": "店長先輩へ",
+      "title_ja": "先輩へ",
       "signature_ja": "みちる",
       "title_en": "Dear shopkeeper,",
       "signature_en": "— Xiaoman",
-      "source": "story/小满酒馆_第四周_v4.6_剧情与扶持支线修订稿.md",
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md",
       "variants": {
         "B": {
           "zh": {
@@ -74,7 +79,7 @@
             "signature": "——小满"
           },
           "ja": {
-            "title": "店長先輩へ",
+            "title": "先輩へ",
             "body": "昨夜、お店を閉めてから、うちと先輩のお店の取引内容を帳簿に書き込みました。\n\nこれで、わたしたちも正式な商売のパートナーですね。\n\n経営については、まだまだ先輩に教えていただきたいことがいっぱいあります。\n\nもちろん、先輩のお店で困ったことがあったら、いつでも相談してくださいね。わたしも精いっぱい力になります！\n\nこの前までは、先輩のお店で水を少し買って、小さな袋を提げて帰っていたのに。\n\nいつか箱ごとの取引になったら、先輩のカウンターに置ききれるかな……？\n\nでもその前に、注文をしっかり計算しておかないと。お互い、いい商売にしましょうね。\n\nこれは今週のテープです。(´,,•ω•,,)♡",
             "signature": "みちる"
           },
@@ -93,15 +98,15 @@
       "zh": "新酒终于写上酒单啦！\n\n原料是新供应商提供的紧俏货，\n\n之前试调好几次，总觉得味道还差那么一点点。昨天重新调过以后，才忍不住想：嗯，就是这个！\n\n不过价格比以前的酒贵了不少呢。\n\n不过店里的反馈非常好呢。\n\n我算是打通了上层区的销路了吧～\n\n嘿嘿，稍微有点得意呢。(๑•́ ₃ •̀๑)\n\n供货商还送了一块很大的宣传牌，说挂在门口比较显眼。\n\n我拿着试了一下，发现刚好会挡住窗户上的雨。\n\n……最后还是收进柜子里了。",
       "title_zh": "致店长前辈：",
       "signature_zh": "——小满",
-      "title_ja": "店長の先輩へ",
+      "title_ja": "先輩へ",
       "signature_ja": "みちる",
       "title_en": "Dear senpai,",
       "signature_en": "— Xiaoman",
-      "source": "story/第五周实现.json"
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 6,
-      "ja": "昨日、先輩のお店を旅人さんに紹介したとお話ししましたよね。お店に戻ってから、初めて先輩のお店に入ったときのことを、ふと思い出したんです。\n\nあの頃はまだ道もよく分からなくて。ただ、明かりがついていたから入ったんでした。\n\n質屋さんなのに、カウンターにはカセットデッキが置いてあって。\n\nあのときから、先輩のお店は少し不思議だなって思っていました。\n\nあの旅人さん、無事にたどり着けたのかな。\n\n本当に来てくれたら、面白いものを見つけてもらえますように。\n\n先輩のお店も、ますます賑わいますように～。\n\n今週のカセットです。",
+      "ja": "昨日、旅の人に先輩のお店を紹介したって話しましたよね。お店に戻ってから、初めて先輩のところへ行った日のことを思い出したんです。\n\nあの頃は道もよく分からなくて、明かりがついていたから、ふらっと入ったんですよね。\n\n質屋さんなのに、カウンターにはカセットデッキがあって。\n\nなんだか不思議なお店だなって思いました。\n\nあの旅の人、ちゃんとたどり着けたかな。\n\nもし来ていたら、面白いものを見つけてもらえたらいいな。\n\n先輩のお店も、もっと繁盛しますように～。\n\nこれは今週のテープです。",
       "en": "Yesterday I mentioned sending a traveller your way. Back at the tavern, I suddenly remembered the first time I walked into your shop.\n\nI still did not know my way around. I only came in because the lights were on.\n\nIt was a pawnshop, but there was a cassette deck on the counter.\n\nEven then, your shop felt a little mysterious.\n\nI wonder if that traveller ever found it.\n\nIf he really came by, I hope he found something interesting too.\n\nMay your business keep getting better, senpai~\n\nHere is this week's tape.",
       "zh": "昨天说给前辈介绍了位旅客，回店以后，忽然想起第一次走进前辈店里的时候。\n\n那时候还不太认得路，只是看见那边亮着灯，就进来了。\n\n明明是间当铺，柜台上却放着一台磁带机。\n\n那时候就觉得，前辈的店有点神秘呢。\n\n不知道那位旅客最后有没有找到这里。\n\n要是他真的来了，希望也能淘到些有意思的东西呀。\n\n希望前辈的生意也越来越好～\n\n这是这周的磁带。",
       "title_zh": "致前辈：",
@@ -110,11 +115,11 @@
       "signature_ja": "みちる",
       "title_en": "Dear senpai,",
       "signature_en": "— Xiaoman",
-      "source": "story/第六周实现.json"
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 7,
-      "ja": "今日、故郷の友達から、みんなで撮った写真が届きました。\n\nわざわざ一人分の場所を空けて、そこに私の絵まで描いてあったんです。全然似てないのに。\n\n今度は、私も宇宙ステーションで撮った写真を送ってって。\n\nアルバムを見返してみたら、最近撮ったのはお酒の瓶とグラス、それから窓の雨ばかり。\n\n仕方がないので、カウンターの写真を一枚選んで送りました。\n\nそしたら、「お店だけじゃだめ！ 次はちゃんと自分も写ってね！」って返ってきて。\n\nもう、私の小さな酒場を見てもらいたかっただけなのにな。\n\n今週のカセットです。",
+      "ja": "今日、故郷の友達から集合写真が届いたんです。\n\nわざわざ一席空けて、そこにわたしの絵まで描いてあって。全然似てないんですけど！\n\nみんなが「そっちで撮った写真も送って」って言うので、アルバムを見返してみたら、最近の写真ってお酒の瓶とグラスと、窓の雨ばかりで。\n\nしかたなくカウンターの写真を送ったんです。\n\nそしたら「お店だけじゃだめ。次は本人も写ってね！」って。\n\nもう。せっかく、わたしのお店を見てもらおうと思ったのに。\n\nこれは今週のテープです。",
       "en": "A group photo arrived from my friends back home today.\n\nThey left a space for me and even drew me into it. It looks nothing like me!\n\nThey asked me to send a photo from the station, too.\n\nI looked through my album. Almost every recent photo was of bottles, glasses, or the rain on the window.\n\nIn the end, I just sent them one of the bar.\n\nThey replied, \"The tavern alone does not count! We want you in the next one!\"\n\nHonestly, I only wanted to show them my little tavern.\n\nHere is this week's tape.",
       "zh": "今天收到了故乡朋友们的合照。\n\n她们居然特地留了一个空位，还在上面画了个我。画得一点也不像嘛。\n\n她们问我，能不能也发张在空间站的照片回去。\n\n翻了翻相册，最近拍的几乎全是酒瓶、杯子，还有窗上的雨。\n\n最后只好挑了一张吧台给她们。\n\n结果她们回我：“光拍店不行，下次要有你本人哦！”\n\n真是的，我明明是想让她们看看我的小酒馆呀。\n\n这是这周的磁带。",
       "title_zh": "致前辈：",
@@ -123,11 +128,11 @@
       "signature_ja": "みちる",
       "title_en": "Dear senpai,",
       "signature_en": "— Xiaoman",
-      "source": "story/第七周实现.json"
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 8,
-      "ja": "昨夜、女の子がキラキラした髪留めを一つ、カウンターに置き忘れていったんです。\n\n取りに来るまでしまっておこうと思ったら、本人が慌てて戻ってきました。\n\nところが、最初に聞いたのは髪留めのことじゃなくて、「あのチェリーのお酒、明日もある？」って。\n\nありますよって答えて、髪留めを返そうとしたんです。\n\nそしたら笑って、「預けておくね。次の一杯の手付け金にして」って。\n\n……ちょっと、うちは酒場なんですけど。\n\nでもその瞬間、本当に、この髪留めなら何クレジットになるかな、なんて考えちゃいました。\n\n先輩のせいですからね。( ˘•ω•˘ )\n\n最後はもちろん、ちゃんと髪留めを返しました。\n\n今週のカセットです。",
+      "ja": "昨日の夜、女の子のお客さんが、きらきらした髪留めをカウンターに忘れていったんです。\n\n預かっておこうとしたら、慌てて戻ってきて。\n\nところが最初に聞かれたのは髪留めじゃなくて、「昨日のチェリーのカクテル、明日もありますか？」だったんですよ。\n\nありますよって答えて、髪留めを渡したら、\n\n「次の一杯の手付金にしといて」って笑うんです。\n\n……ちょっと、ここはバーなんですけど！\n\nでも一瞬、これって何クレジットくらいになるんだろう、って本気で考えちゃいました。\n\n先輩のせいですよ、もう。( ˘•ω•˘ )\n\nもちろん、髪留めはちゃんと返しました。\n\nこれは今週のテープです。",
       "en": "A girl left a glittering hair clip on the counter last night.\n\nI was about to put it away for her when she hurried back.\n\nBut she did not ask about the clip. \"Will you have that drink with the cherry tomorrow?\"\n\nI said yes and handed it back.\n\nShe laughed. \"Keep it as a deposit for my next glass.\"\n\n...Hey, this is a tavern!\n\nFor a moment, though, I actually wondered how many credits it was worth.\n\nSenpai, this is all your fault. ( ˘•ω•˘ )\n\nOf course I gave it back in the end.\n\nHere is this week's tape.",
       "zh": "昨晚有个姑娘，把一枚亮晶晶的发夹落在了吧台上。\n\n我正要收起来等人来找，她就匆匆跑回来了。\n\n结果一开口问的不是发夹，而是：“那杯带樱桃的酒，明天还有吗？”\n\n我说有呀，顺手把发夹递过去。\n\n她却笑着说：“先押给你吧，就当下一杯的定金。”\n\n……喂喂，我这里可是酒馆呀。\n\n不过那一瞬间，我居然真的在想，这枚发夹能抵多少信用点。\n\n前辈，都怪你啦。( ˘•ω•˘ )\n\n最后当然还是把发夹还给她了。\n\n这是这周的磁带。",
       "title_zh": "致前辈：",
@@ -136,11 +141,11 @@
       "signature_ja": "みちる",
       "title_en": "Dear senpai,",
       "signature_en": "— Xiaoman",
-      "source": "story/第八周实现.json"
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 9,
-      "ja": "最近、新しい製氷機が気になっています。\n\n容量が今のものの倍で、音もずっと静かなんです。小さな酒場にぴったりだって、お店の人が言っていました。\n\n置く場所まで、もう考えてあるんですよ。\n\nただ、お値段もなかなかで。\n\n昨日、帳簿をつけながら、あの機械の写真をずっと見ていました。\n\n結局、もう少し待つことにしました。\n\nお店を始めてまだそんなに経っていないし、お金のかかるところはほかにもたくさんありますからね。\n\nお金を貯めるのって、ほんと大変ですね～。\n\n先輩も、そんなふうに思うことありますか。",
+      "ja": "最近、新しい製氷機が気になってるんです。\n\n今のより容量が倍もあって、音もずっと静かなんですって。小さなバーにぴったりですよって、売り手の人が言うんです。\n\n置く場所まで、もう決めてるんですよ。\n\nただ、お値段もかなり立派で……。\n\n昨日、帳簿をつけながら、機械の写真をずいぶん眺めてしまいました。\n\n結局、もう少し待つことにしました。\n\nまだ開店して間もないし、ほかにもお金がかかりますから。\n\nお金を貯めるって、どうしてこんなに大変なんでしょうね～。\n\n先輩にも、こういうことありますか？",
       "en": "I have had my eye on a new ice maker lately.\n\nIt holds twice as much as mine and is much quieter. The seller says it is perfect for a little tavern.\n\nI have even worked out where to put it.\n\nThe price is quite something, though.\n\nYesterday, while doing the accounts, I kept looking at its picture.\n\nIn the end, I decided to wait a little longer.\n\nI have only just opened. There are still so many things to spend money on.\n\nSaving up is such a pain~\n\nDo you ever feel that way too, senpai?",
       "zh": "最近看中了一台新的制冰机。\n\n容量比现在这台大了一倍，声音也小很多。卖家说特别适合小酒馆使用。\n\n我连放在哪里都想好了呢。\n\n不过，价格也相当高就是了。\n\n昨天算账的时候，盯着那台机器的图片看了好久。\n\n最后还是决定再等等。\n\n毕竟刚开店没多久，要花钱的地方还有好多呢。\n\n攒钱真是一个痛苦的过程啊~\n\n前辈也有这样的想法吗？",
       "title_zh": "致前辈：",
@@ -149,11 +154,11 @@
       "signature_ja": "みちる",
       "title_en": "Dear senpai,",
       "signature_en": "— Xiaoman",
-      "source": "story/第九周实现.json"
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 10,
-      "ja": "先週話した、あの製氷機のこと、覚えていますか。\n\n今日、また売り手の方から連絡が来ました。\n\n今、手付金を払えば、配送も設置も無料にしてくれるそうです。\n\n支払いの画面まで開いたんですよ。\n\nでも、ずいぶん考えて、結局閉じてしまいました。\n\n今の機械は少しうるさいけど、できる氷は悪くないですし。\n\nしばらくは、もう少し働いてもらいましょう。\n\nいつになったら、クレジットを気にせず暮らせるのかな。",
+      "ja": "先週話した製氷機、覚えてますか？\n\n今日、売り手からまた連絡が来たんです。\n\n今なら予約金を払えば、配達も設置も無料にしてくれるそうで。\n\n支払い画面まで開いたんですよ。\n\nでも、ずいぶん迷って、結局閉じちゃいました。\n\n今の機械はちょっとうるさいけど、氷はちゃんとできてますし。\n\nしばらくは、この子に頑張ってもらおうかな。\n\nいつになったら、クレジットを気にせず買い物できるんだろう。",
       "en": "Remember the ice maker I mentioned last week?\n\nThe seller messaged me again today.\n\nApparently, if I pay the deposit now, delivery and installation are free.\n\nI even opened the payment screen.\n\nBut after thinking about it for ages, I closed it again.\n\nMy current machine is a bit noisy, but the ice it makes is still quite good.\n\nI will let it carry on working for now.\n\nWhen will I ever be able to stop worrying about credits?",
       "zh": "还记得上周说的那台制冰机吗？\n\n今天卖家又给我发消息了。\n\n说如果现在付定金，还可以免费送货和安装。\n\n我连付款的界面都打开了呢。\n\n结果想了半天，最后还是关掉了。\n\n现在这台机器虽然吵了点，不过做出来的冰倒还不错。\n\n暂时就让它继续工作吧。\n\n什么时候能够信用点自由呢。",
       "title_zh": "致前辈：",
@@ -162,11 +167,11 @@
       "signature_ja": "みちる",
       "title_en": "Dear senpai,",
       "signature_en": "— Xiaoman",
-      "source": "story/第十周实现.json"
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 11,
-      "ja": "最近、閉店後によくカウンターの奥で、メニューと仕入れ票を並べて眺めています。\n\nお酒は変わりません。味には自信があります。\n\nでも帳簿を眺めても、何がいけないのか分からないことがあります。\n\nおいしいお酒を作り、お客さんを大切にすれば、店は少しずつよくなると思っていました。\n\n店を営むのは、思ったほど簡単ではないんですね。\n\n先輩も開業した頃、どうすればいいか迷う日がありましたか。\n\n開店した頃、張り切って先輩をお店にお誘いしましたね。\n\nあの時は、一生懸命に整えた酒場を見てもらいたくて。\n\n今は、本当に教わりたいことがたくさんあります。\n\nいつか先輩のように、自分のお店をきちんと続けていきたいです。\n\n……面と向かっては照れくさいので、手紙に書きますね。",
+      "ja": "最近、閉店してからカウンターの奥に座って、メニューと仕入れのリストを広げて眺めることが増えました。\n\nお酒は変わってないし、味には自信があるんです。\n\nでも、帳簿を見ていても、何がいけなかったのか分からなくなることがあって。\n\n前は、おいしいお酒を作って、一人ひとりのお客さんを大事にしていれば、お店は少しずつよくなると思ってました。\n\n自分でお店を続けるって、思っていたよりずっと難しいんですね。\n\n先輩も質屋さんを始めた頃、どうしたらいいか分からなくなる日がありましたか？\n\n開店したばかりの頃は、張り切って先輩をお店に呼んだっけ。\n\nあのときは、自分で一生懸命つくったお店を見てほしかったんです。\n\n今は、本当に教えてほしいことがたくさんあります。\n\nいつか先輩みたいに、自分のお店をちゃんと続けられる人になりたいです。\n\n……こんなこと、面と向かってはちょっと恥ずかしいので、お手紙にしますね。",
       "en": "Lately, after closing, I often sit behind the bar with the menu and supply invoices spread out together.\n\nThe drinks are the same, and I know they taste good.\n\nBut I can stare at the books for ages and still not see what went wrong.\n\nI used to think good drinks and caring for every customer would slowly make the shop better.\n\nRunning a shop is much harder than I imagined.\n\nWhen you first opened the pawnshop, did you have days when you did not know what to do?\n\nI remember eagerly inviting you over when I opened.\n\nThen, I just wanted you to see the tavern I had worked so hard to put together.\n\nNow, there is so much I really want to learn from you.\n\nI hope one day I can run my own little shop properly, like you.\n\n... It feels embarrassing to say this in person, so I will write it instead.",
       "zh": "最近打烊以后，我常常坐在吧台后面，把酒单和进货单摊在一起看。\n\n酒还是那些酒，味道我很有信心。\n\n可有时候看了半天账，还是想不明白，究竟是哪里出了问题。\n\n以前总觉得，只要把酒调好，认真招呼每位客人，小店就会慢慢好起来。\n\n现在才发现，经营一家店远没有想象中那么简单呢。\n\n前辈刚开始经营当铺的时候，有过不知道该怎么办的日子吗？\n\n想起刚开业时，我还兴冲冲地邀请前辈来小店指导。\n\n那时候只是想让前辈看看我花了好多心思才布置好的酒馆。\n\n现在是真的有很多事情想向前辈请教了。\n\n我希望有一天，能像前辈一样，把属于自己的小店好好经营下去。\n\n……这些话当面说有点不好意思，还是写在信里吧。",
       "title_zh": "致前辈：",
@@ -175,31 +180,46 @@
       "signature_ja": "みちる",
       "title_en": "Dear senpai,",
       "signature_en": "— Xiaoman",
-      "source": "story/第十一周实现.json"
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 12,
-      "ja": "今日、古いメニューを折って、帳簿に挟みました。\n\n一枚目は、ここに来たばかりのころに書いたものです。あのころは、まだ友達もいませんでした。\n\n昨夜、自分に少しだけお酒を注いで、ガラス戸のそばで休みました。\n\nずいぶん待ったけれど、お客さんは来なくて。\n\n向かいの広告がちょうどオレンジ色に変わって、カウンターの青い明かりが重なったら、グラスの中が二色になったみたいでした。\n\nしばらく眺めていたら、新しいカクテルのひらめきが浮かんだんです。\n\n新作を、ぜひ飲みに来てください。",
-      "en": "Today I folded up the old drinks menu and tucked it into the account book.\n\nI wrote the first page just after I arrived, when I didn't know anyone here.\n\nLast night I poured myself a little drink and sat down by the glass door for a rest.\n\nI waited a long time, but no customers came.\n\nThe billboard opposite happened to turn orange. With the blue light from the bar shining through, there seemed to be two colours in my glass.\n\nI sat looking at it for a while. Then an idea for a new cocktail came to me.\n\nPlease come and try my new creation.",
-      "zh": "我今天把旧酒单折起来，夹进账本里了。\n\n第一页是我刚来时写的，那时候刚来到这里，没有任何朋友。\n\n昨晚给自己倒了小半杯酒，坐在玻璃门边休息。\n\n等了很久都没来客人。\n\n对面的广告刚好换成了橙色，吧台上的蓝灯一照，杯子里居然像有两种颜色。\n\n我坐着看了好一会儿。突然有了新酒的灵感。\n\n请务必来品尝我的新作。",
-      "title_zh": "店长：",
-      "signature_zh": "——小满"
+      "ja": "最近はお店を早めに閉めるから、帰りに商業通路を少し歩くことが増えました。\n\n引っ越してきた頃は、どの通路も同じように見えて、住んでるところへの帰り道さえよく分からなかったのに。\n\n今はどの看板が何時に消えるか、どこの自販機が遅くまで明るいか、ちゃんと覚えてます。\n\n気づけば、ここに来てずいぶん経ったんですね。\n\n初めて先輩のお店に行ったときも、道が分からないって話しましたっけ。\n\n今なら、目をつぶってても帰れそうです。",
+      "en": "Lately I have been closing earlier, so I often go for a walk along the shopping street.\n\nWhen I first moved here, all the corridors looked the same. I could barely find my way back to where I lived.\n\nNow I know when every sign goes dark, and which vending machines stay lit.\n\nI have been here quite a while without even noticing, haven't I?\n\nI remember telling you I was still getting lost the first time I came into your shop.\n\nNow I could find my way with my eyes closed.",
+      "zh": "最近收店早了，我总会在商业街走走。\n\n刚搬来的时候，商业街的通道看起来都差不多，连回住处的路都记不清。\n\n现在哪块广告牌几点熄灯，哪个路口的自动贩卖机还亮着，我都记住了。\n\n不知不觉，已经在这里待了这么久呀。\n\n想想第一次去前辈店里的时候，我还说自己认不清路呢。\n\n现在闭着眼睛都知道怎么走啦。",
+      "title_zh": "致前辈：",
+      "signature_zh": "——小满",
+      "title_ja": "先輩へ",
+      "signature_ja": "みちる",
+      "title_en": "Dear senpai,",
+      "signature_en": "— Xiaoman",
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 13,
-      "en": "The man from the repair shop next door came to help move a cabinet. He asked if I still wanted the blue light.\n\nI told him he could have it. He said his daughter loved that colour.\n\nIt turned out he didn't mean just the light. He meant the whole frame, sign and all.\n\n...He certainly knows what to ask for.\n\nStill, that's fine. At least I won't have to find a box big enough for it.",
-      "zh": "隔壁修理店的大叔来帮我抬柜子，问我那盏蓝灯还要不要。\n\n我说可以给他。他说他女儿很喜欢那个颜色。\n\n结果他指的不是灯，是连着招牌的整套架子。\n\n……真是会挑东西的人。\n\n不过也好。至少不用再找一个那么大的箱子了。",
-      "ja": "隣の修理屋のおじさんが棚を運ぶのを手伝ってくれて、あの青いライトはもういらないのかって聞いてきたんです。\n\nあげてもいいですよ、って言ったら、娘さんがあの色を気に入ってるんですって。\n\nでも、指さしてたのはライトじゃなくて、看板ごとの大きな枠で。\n\n……なかなか目のつけどころがいい人ですね。\n\nまあ、あんな大きな箱を探さなくて済むから、よかったかな。",
-      "title_zh": "店长：",
-      "signature_zh": "——小满"
+      "en": "I booked my ticket home today.\n\nWhile I was packing, the man from the repair shop next door came to help move a cabinet. He asked if I still needed that blue lamp.\nI said he could have it. He said his daughter really liked the color.\nThen it turned out he meant the whole frame attached to the sign, not just the lamp.\n...He certainly knows what to pick.\nStill, at least I won't have to find a box that big.",
+      "zh": "今天把回程的船票订好了。\n\n在整理的时候，隔壁修理店的大叔来帮我抬柜子，问我那盏蓝灯还要不要。\n我说可以给他。他说他女儿很喜欢那个颜色。\n结果他指的不是灯，是连着招牌的整套架子。\n……真是会挑东西的人。\n不过也好。至少不用再找一个那么大的箱子了。",
+      "ja": "今日、帰りの船の切符を取りました。\n\n荷物を片づけていたら、隣の修理屋のおじさんが棚を運ぶのを手伝いに来てくれて、あの青いライトはもういらないのかって聞かれたんです。\nいいですよって答えたら、娘さんがあの色を気に入ってるそうで。\nでも、指さしていたのはライトじゃなくて、看板につながった枠ごと全部で。\n……なかなか目のつけどころがいい人ですね。\nまあ、あんな大きな箱を探さずに済むから、よかったかな。",
+      "title_zh": "致前辈：",
+      "signature_zh": "——小满",
+      "title_ja": "先輩へ",
+      "signature_ja": "みちる",
+      "title_en": "Dear senpai,",
+      "signature_en": "— Xiaoman",
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     },
     {
       "visit": 14,
-      "en": "I've returned the keys to the landlord. My lovely glasses have gone ahead on the cargo ship. All I have left is a backpack.\n\nI told my mum I was coming home. She laughed and laughed on the other end of the call.\n\nI made three cocktails with the ingredients I had left, and left them here with the tape.\n\nThank you for everything, my friend.",
-      "zh": "钥匙已经还给房东了。我可爱的杯子们先一步坐上了货船，剩下的东西只有一个背包。\n\n我给我妈说我要回家了，她在电话那头笑了好久。\n\n我拿剩下的材料做了三杯鸡尾酒，和磁带一起留给你。\n\n这些日子，谢谢你了，我的朋友。",
-      "ja": "鍵はもう大家さんに返しました。わたしのかわいいグラスたちは一足先に貨物船に乗って、手元に残った荷物はリュックひとつだけです。\n\n母に帰るよって伝えたら、電話の向こうでずっと笑っていました。\n\n残った材料でカクテルを三杯作って、テープと一緒に置いていきます。\n\n今までありがとう。わたしの大切な友達へ。",
-      "title_zh": "店长：",
-      "signature_zh": "——小满"
+      "en": "When I checked the shelves for the last time, there were still enough ingredients for three drinks.\n\nI picked my three favorites, sealed them up, and left them with the tape.\n\nMom says the cherry blossoms back home are almost gone.\n\nI probably won't get there in time, but that is all right.\n\nThere will still be plenty of rainy days.\n\nBefore coming to this station, I never thought I would meet another person who listened to tapes in a pawnshop.\n\nSenpai, thank you for all this time.",
+      "zh": "最后清点酒架的时候，原料居然还够调三杯酒。\n\n我挑了自己最喜欢的三种，封好跟磁带放在一起了。\n\n妈妈说，故乡的樱花快谢了。\n\n这趟回去大概赶不上，不过也没关系。\n\n下雨的日子总还有很多。\n\n来空间站之前，我没想过会在一间当铺里遇见另一个听磁带的人。\n\n前辈，这些日子谢谢啦。",
+      "ja": "最後にお酒の棚を確かめていたら、材料がまだ三杯分だけ残っていたんです。\n\nわたしの好きな三種類を選んで作って、瓶に詰めてテープと一緒に置いておきました。\n\n母が、故郷の桜はもうすぐ散りそうだって。\n\n帰る頃には間に合わないかもしれないけど、それでもいいかな。\n\n雨の日なら、これからもたくさんあるでしょうし。\n\nこのステーションに来る前は、質屋さんで同じようにカセットを聴く人と出会うなんて、思ってもいませんでした。\n\n先輩、今までありがとう。",
+      "title_zh": "致前辈：",
+      "signature_zh": "——小满",
+      "title_ja": "先輩へ",
+      "signature_ja": "みちる",
+      "title_en": "Dear senpai,",
+      "signature_en": "— Xiaoman",
+      "source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md"
     }
   ],
   "source_sha256": "c6ddd57c2d0111288f16a3f68d503df860550ccdd70f759a00d7f6e37b31f190",

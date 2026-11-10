@@ -29,11 +29,11 @@
     "key": "xm_13_shop",
     "language": "ja",
     "subtitle_templates": {
-      "zh": "今天想买些日用品。",
+      "zh": "今天想买点日用品。带了 {0} 信用点。",
       "ja": "今日は日用品を少し買いたくて。",
-      "en": "I'd like some everyday supplies today."
+      "en": "I would like some everyday supplies today. I brought {0} credits."
     },
-    "generic": false
+    "generic": true
   },
   "binding_history": [
     {

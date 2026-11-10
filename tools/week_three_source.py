@@ -49,7 +49,8 @@ def read():
             paragraphs=quoted.split('\n\n')
             note[lang]=dict(title=paragraphs[0],body='\n\n'.join(paragraphs[1:-1]),signature=paragraphs[-1])
         note['en']=english['letters'][variant];letters[variant]=note
-    return dict(lines=lines,letters=letters,source=SOURCE.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(SOURCE.read_bytes()).hexdigest())
+    import story_master_source
+    return story_master_source.apply(dict(lines=lines,letters=letters,source=SOURCE.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(SOURCE.read_bytes()).hexdigest()),3)
 
 
 def generate():

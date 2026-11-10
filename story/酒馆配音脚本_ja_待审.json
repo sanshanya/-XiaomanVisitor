@@ -90,7 +90,7 @@
       "subtitle_templates": {
         "zh": "欢迎光临。我叫小满，这间店刚开业不久。",
         "ja": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
-        "en": "Welcome. I'm Xiaoman. This little tavern has only just opened."
+        "en": "Welcome. My name is Xiaoman. I just opened this little place."
       },
       "spoken_text": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
       "generate_text": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
@@ -98,7 +98,7 @@
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "ab503340835860092237693eae5789e0cb4131b1f43e2fc9ecc10f82ef01884e",
+      "source_sha256": "6c3515f3cf0cf2478a59a008215c4f950e0aff51e7e1c54c164c55b3d22ebdc9",
       "defer_recording": true
     },
     {
@@ -426,7 +426,7 @@
       "subtitle_templates": {
         "zh": "啊，有客人来啦……我这边还忙着调酒。可以帮我把酒单递过去吗？",
         "ja": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
-        "en": "Oh, a customer… I'm still making drinks. Could you take them a menu for me?"
+        "en": "Oh, a customer… I'm still making drinks. could you take them a menu for me?"
       },
       "spoken_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
       "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
@@ -434,13 +434,13 @@
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "1ae673c4618b069d59b6baf585774b1e6992b2b637ab202358940c6bafad00f2",
+      "source_sha256": "30bde05c469441faffd8696d9e6793396e4ec0c6a837c05e3644e0b2f76b27f2",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_w02_help_done_unknown",
       "subtitle_templates": {
-        "zh": "谢谢您！刚开店就有点手忙脚乱的……还好有您在。",
+        "zh": "谢谢刚开店就有点手忙脚乱的……还好有您在。",
         "ja": "ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
         "en": "Thank you! It's been a little hectic since opening… I'm glad you were here."
       },
@@ -450,7 +450,7 @@
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "d78d0051d8cb3c13691ea2962f9b6b7915b36184d93881e2f0205c1b244e908f",
+      "source_sha256": "e1d457339b17530eebba422d2227b1e26e35f2bbaa1a2186fea423175a008e05",
       "defer_recording": true
     },
     {
@@ -1369,160 +1369,160 @@
       "key": "xm_tavern_07_chat_01",
       "subtitle_templates": {
         "zh": "有的客人坐下以后就安安静静听雨声。明明外面不是真的在下雨，他们却挺喜欢。",
-        "ja": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
+        "ja": "座ったら、ずっと雨の音を聴いてるお客さんもいるんです。本物の雨じゃないのに、気に入ってくれて。",
         "en": "Some people sit down and quietly listen to the rain. It is not really raining outside, but they seem to like it."
       },
-      "spoken_text": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
-      "generate_text": "座ったら、静かに雨の音を聴いているお客さんもいるんです。外で本当に雨が降っているわけじゃないのに、気に入ってくれているみたいで。",
+      "spoken_text": "座ったら、ずっと雨の音を聴いてるお客さんもいるんです。本物の雨じゃないのに、気に入ってくれて。",
+      "generate_text": "座ったら、ずっと雨の音を聴いてるお客さんもいるんです。本物の雨じゃないのに、気に入ってくれて。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "7e862fd06b1bb6fafc18450dde2cf0f8abfae3026d1b5358d4c626845bc83082",
+      "source_sha256": "01c65c505f5ce73ea5f0122a8071dec84988b480dab6e6e0627ddaaa861a8b1c",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_07_chat_02",
       "subtitle_templates": {
         "zh": "最近有人会在收店前顺路来喝一杯。也不用特地约好，到了那个时间，我大概就知道谁会推门了。",
-        "ja": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
+        "ja": "最近は閉店前にふらっと一杯飲みに来る人もいて。約束なんてしてないのに、その時間になると、誰が来るかなんとなく分かるんです。",
         "en": "Some people stop by for a drink before closing now. We never arrange it, but around that time I can almost tell who will walk through the door."
       },
-      "spoken_text": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
-      "generate_text": "最近は、閉店前に寄って一杯飲んでいく人もいて。約束していなくても、その時間になると、誰が扉を開けるか、なんとなく分かるんです。",
+      "spoken_text": "最近は閉店前にふらっと一杯飲みに来る人もいて。約束なんてしてないのに、その時間になると、誰が来るかなんとなく分かるんです。",
+      "generate_text": "最近は閉店前にふらっと一杯飲みに来る人もいて。約束なんてしてないのに、その時間になると、誰が来るかなんとなく分かるんです。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "2f1e0ea0b8bbca61f389040f3b291aa9ff456a4e1062cd61bccfc82ed49e6b13",
+      "source_sha256": "1b90cb3bbaef042f8200a1e55934f6b467595552c631448aefd95bf16760ff0f",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_08_chat_01",
       "subtitle_templates": {
         "zh": "帮我拍照的那几位姑娘，后来还认真帮我挑了半天。明明她们是来喝酒的，倒像我请了摄影师呢。",
-        "ja": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
+        "ja": "写真を撮ってくれた子たち、どれにするかまで一緒に悩んでくれて。お酒を飲みに来たのに、まるで撮影会でした。",
         "en": "The girls who took my photos spent ages choosing one with me. They came for a drink, but it was like I had hired photographers."
       },
-      "spoken_text": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
-      "generate_text": "写真を撮ってくれた女の子たち、そのあとも、どれがいいか真剣に選んでくれたんです。お酒を飲みに来たはずなのに、写真家さんをお願いしたみたいでした。",
+      "spoken_text": "写真を撮ってくれた子たち、どれにするかまで一緒に悩んでくれて。お酒を飲みに来たのに、まるで撮影会でした。",
+      "generate_text": "写真を撮ってくれた子たち、どれにするかまで一緒に悩んでくれて。お酒を飲みに来たのに、まるで撮影会でした。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "c2e86216b449b6c35792f3e62afbeb8b1525ce755ed214f58ea8a75f57ee2a37",
+      "source_sha256": "c67348158be0b0ba301e36efa0ade76b0983f1592c355ba371c86e36b0c42188",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_08_chat_02",
       "subtitle_templates": {
         "zh": "她们说下次换班，还要带新同事来。要是真来了，我得记着多准备一点原料才行。",
-        "ja": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
+        "ja": "次の交代のときは新人も連れてくるって。来てくれたら、材料をもう少し用意しておかないと。",
         "en": "They said they would bring some new colleagues next shift. If they really come, I will have to remember to get a few more ingredients ready."
       },
-      "spoken_text": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
-      "generate_text": "次の交代のときは、新しい同僚も連れてくるって。本当に来てくれたら、材料を少し多めに用意しておかなくちゃ。",
+      "spoken_text": "次の交代のときは新人も連れてくるって。来てくれたら、材料をもう少し用意しておかないと。",
+      "generate_text": "次の交代のときは新人も連れてくるって。来てくれたら、材料をもう少し用意しておかないと。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "fd1b4b8897c03d2522e94de5d29059ba65cb59487ae7a748d6a90e11ce468137",
+      "source_sha256": "46d1057d9f2e1a8155dcf9324b0314c57321888299308484b100c9dc8b6e0de8",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_09_chat_01",
       "subtitle_templates": {
         "zh": "前辈，最近我在试着把常卖的酒提前备好原料。",
-        "ja": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+        "ja": "先輩、最近はよく出るお酒の材料を先に用意するようにしてるんです。",
         "en": "Senpai, lately I have been getting the ingredients for the popular drinks ready in advance."
       },
-      "spoken_text": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
-      "generate_text": "先輩、最近はよく出るお酒の材料を、先に用意しておくようにしているんです。",
+      "spoken_text": "先輩、最近はよく出るお酒の材料を先に用意するようにしてるんです。",
+      "generate_text": "先輩、最近はよく出るお酒の材料を先に用意するようにしてるんです。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "8d6aa5df775e819f660905f1a099f0e3aa2391f2a8fe99416055d7e9b411d64a",
+      "source_sha256": "22a8a8b24f7cdf99bbb8b89b990f65ee9059c69ef181af217aee45a8357bbb69",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_09_chat_02",
       "subtitle_templates": {
         "zh": "以前客人一多，我就忙得团团转。现在总算能从容一些了呢。",
-        "ja": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+        "ja": "前はお客さんが増えると大慌てだったけど、今は少し落ち着いて対応できるようになりました。",
         "en": "I used to get so flustered when people came in at once. I can finally take it a little more calmly now."
       },
-      "spoken_text": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
-      "generate_text": "前はお客さんが増えると目が回るほどだったけど、やっと少し余裕ができてきました。",
+      "spoken_text": "前はお客さんが増えると大慌てだったけど、今は少し落ち着いて対応できるようになりました。",
+      "generate_text": "前はお客さんが増えると大慌てだったけど、今は少し落ち着いて対応できるようになりました。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "87d67697fb7b0fe3fef3ddc20c87ceeeb594efbf29663bc05db5e1709be652a0",
+      "source_sha256": "0a870fa3fa8015ab87136e9c4bd455af3047c5315f8c8ba5bb357073b95f89ef",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_09_chat_03",
       "subtitle_templates": {
         "zh": "不过看样子，吧台后面可能还得添个柜子才行。",
-        "ja": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+        "ja": "でも、カウンターの奥には、もうひとつ棚が必要かもしれませんね。",
         "en": "At this rate, though, I might need another cabinet behind the bar."
       },
-      "spoken_text": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
-      "generate_text": "でも、この分だと、カウンターの奥にもう一つ棚が必要かもしれませんね。",
+      "spoken_text": "でも、カウンターの奥には、もうひとつ棚が必要かもしれませんね。",
+      "generate_text": "でも、カウンターの奥には、もうひとつ棚が必要かもしれませんね。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "eeb8208505ccaef549e73f6985e2e564df911f7c5ff95beb8439af21304f5821",
+      "source_sha256": "9b6f227a5a0a2f77b915de360b7fa4446fe908de0b24649aeb86446523ee02f9",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_10_chat_01",
       "subtitle_templates": {
         "zh": "前辈，最近新酒的原料倒是不怎么缺了呢。",
-        "ja": "先輩、最近は新しいお酒の材料、あまり足りなくならなくなりました。",
+        "ja": "先輩、最近は新しいお酒の材料があまり減らなくなって。",
         "en": "Senpai, I have not been running short of ingredients for the new drinks lately."
       },
-      "spoken_text": "先輩、最近は新しいお酒の材料、あまり足りなくならなくなりました。",
-      "generate_text": "先輩、最近は新しいお酒の材料、あまり足りなくならなくなりました。",
+      "spoken_text": "先輩、最近は新しいお酒の材料があまり減らなくなって。",
+      "generate_text": "先輩、最近は新しいお酒の材料があまり減らなくなって。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "a9f00e873a59c8e0002bf24878ec9d25daff0ec04d8c86ba3c6c6e1800fa83d1",
+      "source_sha256": "b64b832dd80902c399d3bf433de282a6da337bca89bdaa7be69ad0a9b99e674a",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_10_chat_02",
       "subtitle_templates": {
         "zh": "上周还担心不够用，特地多准备了一些。结果这几天，剩下的比想象中多。",
-        "ja": "先週は足りるか心配で、多めに用意したんです。でも、この何日かは思ったより余っていて。",
+        "ja": "先週は足りないかもって多めに用意したのに、今週は思ったより残っちゃって。",
         "en": "Last week I was worried about running out, so I prepared extra. These past few days, more has been left over than I expected."
       },
-      "spoken_text": "先週は足りるか心配で、多めに用意したんです。でも、この何日かは思ったより余っていて。",
-      "generate_text": "先週は足りるか心配で、多めに用意したんです。でも、この何日かは思ったより余っていて。",
+      "spoken_text": "先週は足りないかもって多めに用意したのに、今週は思ったより残っちゃって。",
+      "generate_text": "先週は足りないかもって多めに用意したのに、今週は思ったより残っちゃって。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "783d2766d7a1465b69b9c5e77b63870e54af4f6537cdf5b63a976d78cca98104",
+      "source_sha256": "b0b7b0f7414a4cedc38db6bfedd77ceed0eacb3a93c0c455e700b21b66ec4fdb",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_10_chat_03",
       "subtitle_templates": {
         "zh": "还好有些东西能放很久。不然真有点浪费呢。",
-        "ja": "長く置いておけるものもあってよかったです。そうじゃなかったら、ちょっともったいないですもんね。",
+        "ja": "長く保存できる材料もあるから、助かってます。そうじゃなかったら、もったいないですもんね。",
         "en": "Luckily, some things keep for a long time. Otherwise it would be a bit of a waste."
       },
-      "spoken_text": "長く置いておけるものもあってよかったです。そうじゃなかったら、ちょっともったいないですもんね。",
-      "generate_text": "長く置いておけるものもあってよかったです。そうじゃなかったら、ちょっともったいないですもんね。",
+      "spoken_text": "長く保存できる材料もあるから、助かってます。そうじゃなかったら、もったいないですもんね。",
+      "generate_text": "長く保存できる材料もあるから、助かってます。そうじゃなかったら、もったいないですもんね。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "b4e4b2dec84708debf8bdcc65aebee244b1c6a3fa0fccd5447154e1530c447e0",
+      "source_sha256": "167982327d0e9359c28822ab4ace9121164a0c295197888d8831659125685d3e",
       "defer_recording": true
     },
     {
@@ -1625,112 +1625,304 @@
       "key": "xm_tavern_10_regular_01",
       "subtitle_templates": {
         "zh": "前辈，今天有位以前来过的客人又来了，还带了朋友呢。",
-        "ja": "先輩、今日は前に来てくれたお客さんが、また来てくれたんです。お友達も連れて。",
+        "ja": "先輩、前に来たお客さんが、今日はお友達と一緒に来てくれたんです。",
         "en": "Senpai, someone who had been here before came back today, and brought a friend."
       },
-      "spoken_text": "先輩、今日は前に来てくれたお客さんが、また来てくれたんです。お友達も連れて。",
-      "generate_text": "先輩、今日は前に来てくれたお客さんが、また来てくれたんです。お友達も連れて。",
+      "spoken_text": "先輩、前に来たお客さんが、今日はお友達と一緒に来てくれたんです。",
+      "generate_text": "先輩、前に来たお客さんが、今日はお友達と一緒に来てくれたんです。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "06b97192f69a32629a593707699f77d7f83c21734019603581b63ab08dcdd840",
+      "source_sha256": "f222ecebda93e5d85ec74ef125f4a92ea56767b08dc80f8c964a971edbbc1ecb",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_10_regular_02",
       "subtitle_templates": {
         "zh": "她说本来直接坐电梯就能回宿舍的，不过还是想绕过来喝一杯。",
-        "ja": "そのままエレベーターに乗れば寮に帰れるけど、やっぱり一杯飲みたくて、寄り道してくれたんですって。",
+        "ja": "寮に帰るなら直通のエレベーターでいいのに、わざわざ寄ってくれたそうで。",
         "en": "She said she could have taken the lift straight back to her dorm, but wanted to make a detour for a drink."
       },
-      "spoken_text": "そのままエレベーターに乗れば寮に帰れるけど、やっぱり一杯飲みたくて、寄り道してくれたんですって。",
-      "generate_text": "そのままエレベーターに乗れば寮に帰れるけど、やっぱり一杯飲みたくて、寄り道してくれたんですって。",
+      "spoken_text": "寮に帰るなら直通のエレベーターでいいのに、わざわざ寄ってくれたそうで。",
+      "generate_text": "寮に帰るなら直通のエレベーターでいいのに、わざわざ寄ってくれたそうで。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "e406a4c3bf4bb1156a40366409ed4986305165c8364798399ed0d635bc0aa89b",
+      "source_sha256": "b96e4e17361689a8ae09655d2f610ff5ff6794e26ca6d1a426fcce31895c952f",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_10_regular_03",
       "subtitle_templates": {
         "zh": "一个人要甜的，一个人要酸的。结果酒端上去以后，她们又交换着喝起来了。",
-        "ja": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら二人で交換して飲んでいました。",
+        "ja": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら交換して飲み始めたんですよ。",
         "en": "One wanted something sweet, the other something sour. Then once I served them, they started swapping drinks."
       },
-      "spoken_text": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら二人で交換して飲んでいました。",
-      "generate_text": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら二人で交換して飲んでいました。",
+      "spoken_text": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら交換して飲み始めたんですよ。",
+      "generate_text": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら交換して飲み始めたんですよ。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "066b0d2614316214c4ded8d598786e25c7fbd8b6fc147eeb989d6e89c5e88f69",
+      "source_sha256": "0a22e481c82ca6821190e3ef849c7ee6870a561ba0f1d2b1df40bb0790dbb7ad",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_10_regular_04",
       "subtitle_templates": {
         "zh": "嘿嘿，还是挺开心的。",
-        "ja": "えへへ、やっぱりうれしいですね。",
+        "ja": "えへへ、うれしかったな。",
         "en": "Hehe. It really did make me happy."
       },
-      "spoken_text": "えへへ、やっぱりうれしいですね。",
-      "generate_text": "えへへ、やっぱりうれしいですね。",
+      "spoken_text": "えへへ、うれしかったな。",
+      "generate_text": "えへへ、うれしかったな。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "89799b451017b84e4d7412580ca1e79542001fb8ace14e00afac149f62b4dc57",
+      "source_sha256": "fc21e2b8c2492aebf1bc31c7199a531b17b2b702e555c9bf0827db7a1c3ac0a1",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_11_chat_01",
       "subtitle_templates": {
         "zh": "前辈，我今天去问了商户发展部，酒馆的导览推荐什么时候能排上。",
-        "ja": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+        "ja": "先輩、今日、商店振興部にうちの案内表示はいつになるのか聞いてきたんです。",
         "en": "Senpai, I asked Merchant Development today when the tavern would get its turn on the guide terminals."
       },
-      "spoken_text": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
-      "generate_text": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+      "spoken_text": "先輩、今日、商店振興部にうちの案内表示はいつになるのか聞いてきたんです。",
+      "generate_text": "先輩、今日、商店振興部にうちの案内表示はいつになるのか聞いてきたんです。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "e2b7e5f361c464524f99e459b86347a7e8ca83cbc9551f9fca9c8511b09413db",
+      "source_sha256": "3c460fc210cf8c67a0b8948a2d9d4a7df999bc2717d5634edc15d149f59fa33c",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_11_chat_02",
       "subtitle_templates": {
         "zh": "他们说，推广位置要按照商业街的最新安排调整，让我再等等。",
-        "ja": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+        "ja": "今の通路の計画に合わせて枠を調整してるから、もう少し待ってほしいって。",
         "en": "They said the promotional slots had to follow the shopping street's latest arrangements, and asked me to wait a little longer."
       },
-      "spoken_text": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
-      "generate_text": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+      "spoken_text": "今の通路の計画に合わせて枠を調整してるから、もう少し待ってほしいって。",
+      "generate_text": "今の通路の計画に合わせて枠を調整してるから、もう少し待ってほしいって。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "ad4a4d97e4cad77fd523ae5daccb2dc5b7cd955bdba401fa0160113b0c8db0d5",
+      "source_sha256": "ddab53c471f6327a9bfbd71b9ca1bc0b154322924bfde68208492f430981017e",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_11_chat_03",
       "subtitle_templates": {
         "zh": "可之前申请扶持的时候，明明说好会帮新店吸引客人的呀……",
-        "ja": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+        "ja": "でも、支援制度に申し込んだとき、新しいお店の集客も手伝うって言ってくれたのに……。",
         "en": "But when I applied for the support, they said they would help new shops bring people in..."
       },
-      "spoken_text": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
-      "generate_text": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+      "spoken_text": "でも、支援制度に申し込んだとき、新しいお店の集客も手伝うって言ってくれたのに……。",
+      "generate_text": "でも、支援制度に申し込んだとき、新しいお店の集客も手伝うって言ってくれたのに……。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "62fdae3d741d3ef6ebc341df50bacc1b0ced07b40e7b98f2330c8a92d5c3d7cd",
+      "source_sha256": "2b56b61127f2a8d9631b93dcd556c12e49d60e54d7f07805b3e0460642dfdc10",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_12_roka_01",
+      "subtitle_templates": {
+        "zh": "前辈来啦。白天说的那杯酒，我已经调好了呢。",
+        "ja": "先輩、いらっしゃい。昼間に話したお酒、できましたよ。",
+        "en": "Welcome, senpai. The drink I told you about earlier is ready."
+      },
+      "spoken_text": "先輩、いらっしゃい。昼間に話したお酒、できましたよ。",
+      "generate_text": "先輩、いらっしゃい。昼間に話したお酒、できましたよ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "4d2677bb7524286c5e2a01e8a5e716b21bc32f39cdc8963350397f7630f6f363",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_12_roka_02",
+      "subtitle_templates": {
+        "zh": "用了盐渍樱花和一点清酒。后面还添了些抹茶，喝起来会有一点点苦。",
+        "ja": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
+        "en": "I used salted cherry blossoms and a little sake, then added a touch of matcha. There is a little bitterness at the end."
+      },
+      "spoken_text": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
+      "generate_text": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "edb3b7160b478857d6caf22192d077f9390054a35c2f0737423364a910a22139",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_12_roka_03",
+      "subtitle_templates": {
+        "zh": "我给它取名叫《露华》。嘿嘿，前辈觉得怎么样？",
+        "ja": "名前は「露華」にしました。えへへ、先輩、どうでしょう？",
+        "en": "I named it Dew Blossom. Hehe, what do you think, senpai?"
+      },
+      "spoken_text": "名前は「露華」にしました。えへへ、先輩、どうでしょう？",
+      "generate_text": "名前は「露華」にしました。えへへ、先輩、どうでしょう？",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "8e8f9d14a0118c677a8d3398dc9b082cc0642ac1807b48e9f3afee95a9e818e4",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_12_roka_04",
+      "subtitle_templates": {
+        "zh": "这一杯不打算放进普通酒单。留给前辈吧。",
+        "ja": "これは普通のメニューには入れないつもりです。先輩の分にしておきますね。",
+        "en": "This one will not be on the regular menu. It is for you."
+      },
+      "spoken_text": "これは普通のメニューには入れないつもりです。先輩の分にしておきますね。",
+      "generate_text": "これは普通のメニューには入れないつもりです。先輩の分にしておきますね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "2e53e3aa26f2d65d4ed9ee393acc5857b3c29a0274f2a34ab01f0328b45e7973",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_12_business_01",
+      "subtitle_templates": {
+        "zh": "前辈，最近收到一份企鹅资产公司的结算通知。",
+        "ja": "先輩、最近、ペンギン資産会社から精算の通知が届いたんです。",
+        "en": "Senpai, a settlement notice arrived from Tenquin Asset Corporation recently."
+      },
+      "spoken_text": "先輩、最近、ペンギン資産会社から精算の通知が届いたんです。",
+      "generate_text": "先輩、最近、ペンギン資産会社から精算の通知が届いたんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "811280ac1854e3cb0803499cc7ee3b07a5608676a00ad0526b6b690e94417ae4",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_12_business_02",
+      "subtitle_templates": {
+        "zh": "之前的租金扶持，原来还有业绩考核。没有达到要求的部分，要按照合同补回来。",
+        "ja": "前の家賃の支援には、売上の条件があったみたいで。届かなかった分は契約どおり返さないといけないそうです。",
+        "en": "It turns out the rent support had sales targets attached. Any shortfall has to be paid back under the contract."
+      },
+      "spoken_text": "前の家賃の支援には、売上の条件があったみたいで。届かなかった分は契約どおり返さないといけないそうです。",
+      "generate_text": "前の家賃の支援には、売上の条件があったみたいで。届かなかった分は契約どおり返さないといけないそうです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "cc40f7bcbeeaa45ae31fff13e32be76dc557996f85880180edc7cbf7d77a3cb8",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_12_business_03",
+      "subtitle_templates": {
+        "zh": "我把营业记录整理了一下。前几周生意明明还不错，可最近的客流实在少了很多。",
+        "ja": "売上の記録をまとめてみました。前はあんなにお客さんが来てくれたのに、最近はすっかり減ってしまって。",
+        "en": "I put the sales records together. Business was so good a few weeks ago, but hardly anyone has been coming lately."
+      },
+      "spoken_text": "売上の記録をまとめてみました。前はあんなにお客さんが来てくれたのに、最近はすっかり減ってしまって。",
+      "generate_text": "売上の記録をまとめてみました。前はあんなにお客さんが来てくれたのに、最近はすっかり減ってしまって。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "7f05aac78c08818e40238b48db56e00dbf9432d3f74e48225b7baad68d7b92d5",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_12_business_04",
+      "subtitle_templates": {
+        "zh": "现在连下个月的进货，都得重新算一遍了。",
+        "ja": "来月の仕入れも、最初から考え直さないと。",
+        "en": "Now I even have to work out next month's supplies all over again."
+      },
+      "spoken_text": "来月の仕入れも、最初から考え直さないと。",
+      "generate_text": "来月の仕入れも、最初から考え直さないと。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "f0eaab0253729ac7828dacc2f1b1754ba2e2d14df7ac289f66deb7b12ae53315",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_12_business_05",
+      "subtitle_templates": {
+        "zh": "我想先去申请复核。毕竟当初承诺的推广，后来一直没有排上。",
+        "ja": "まずは審査のやり直しを頼んでみます。約束された宣伝も、結局うちには回ってこなかったので。",
+        "en": "I want to ask for a review first. After all, the promotion they promised never came through."
+      },
+      "spoken_text": "まずは審査のやり直しを頼んでみます。約束された宣伝も、結局うちには回ってこなかったので。",
+      "generate_text": "まずは審査のやり直しを頼んでみます。約束された宣伝も、結局うちには回ってこなかったので。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "c534adc5dbc4dd5a075668489f1bbc1c950ebb10e84af3055873ac014fba7eb1",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_13_entry",
+      "subtitle_templates": {
+        "zh": "啊，前辈。进来坐坐吧。今天不接客了。",
+        "ja": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
+        "en": "Oh, senpai. Come in and sit for a while. I am not serving customers today."
+      },
+      "spoken_text": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
+      "generate_text": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "a170942b40fa663703373d09f25db1c1ab594f0057563965856cbdfd26dc6cc5",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_13_tape",
+      "subtitle_templates": {
+        "zh": "磁带机还没收起来。想听哪首，就自己挑吧。",
+        "ja": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
+        "en": "I have not packed the cassette player yet. Pick something you would like to hear."
+      },
+      "spoken_text": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
+      "generate_text": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "6ee373a632f3023167f3e00a11aa40276ee5edee660b75db49c200b81f54aa0b",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_13_chat",
+      "subtitle_templates": {
+        "zh": "有几只杯子我准备留着。以后看到它们，应该还会想起这里吧。",
+        "ja": "グラスを何個か、手元に残すことにしました。見るたびに、ここを思い出すのかな。",
+        "en": "I am keeping a few of the glasses. I suppose they will remind me of this place whenever I see them."
+      },
+      "spoken_text": "グラスを何個か、手元に残すことにしました。見るたびに、ここを思い出すのかな。",
+      "generate_text": "グラスを何個か、手元に残すことにしました。見るたびに、ここを思い出すのかな。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "a374a93e41e72f0cc98ad79c29d92aebbda2a8d21da605dc0aced635bbd87033",
       "defer_recording": true
     }
   ],

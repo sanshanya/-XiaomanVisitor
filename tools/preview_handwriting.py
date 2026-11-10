@@ -25,6 +25,7 @@ SCALE = 3
 WIDTH, HEIGHT = 628, 785
 INK = (40, 70, 107, 237)  # #28466B at 93%
 BODY_SIZE = 18.0
+BODY_SIZES = {(11, 'ja'): 16.5}
 TRACKING = 0.02
 LINE_HEIGHT = 1.58
 PARAGRAPH_GAP = 0.68  # additional line fractions between paragraphs
@@ -32,7 +33,7 @@ PARAGRAPH_GAPS = {(5, 'ja'): 0.36, (5, 'en'): 0.36, (6, 'ja'): 0.66,
                   (8, 'ja'): 0.36, (8, 'en'): 0.56,
                   (11, 'zh'): 0.40, (11, 'ja'): 0.24, (11, 'en'): 0.13}
 # This longer letter uses the empty space below the salutation, not smaller type.
-BODY_BASELINES = {(11, 'en'): 130}
+BODY_BASELINES = {(11, 'en'): 130, (11, 'ja'): 122}
 FONTS = {
     "yozai": TRIAL / "fonts/Yozai-Regular.ttf",
     "xiaolai": TRIAL / "fonts/Xiaolai-Regular.ttf",
@@ -180,11 +181,12 @@ def write_line(layer, xy, text, path, size, seed, *, slope=0):
 
 def letter_layout(font_key, visit, language, texts, letter_id=None):
     path = FONTS[font_key]
-    font = font_at(path, BODY_SIZE)
+    size = BODY_SIZES.get((visit, language), BODY_SIZE)
+    font = font_at(path, size)
     key = letter_id or f"story_note_{visit:02d}"
     body = texts[key+"_body"]
-    lines = wrap(body, font, BODY_SIZE, 500, language)
-    step = BODY_SIZE*(1.565 if key=="story_note_04_b" else LINE_HEIGHT)
+    lines = wrap(body, font, size, 500, language)
+    step = size*(1.565 if key=="story_note_04_b" else LINE_HEIGHT)
     gap = PARAGRAPH_GAPS.get((visit, language), PARAGRAPH_GAP)
     y = BODY_BASELINES.get((visit, language), 140 + BODY_SIZE)
     positions = []
@@ -193,10 +195,10 @@ def letter_layout(font_key, visit, language, texts, letter_id=None):
         positions.append((60+drift, y, line))
         y += step * (1+gap if paragraph_end else 1)
     body_bottom = positions[-1][1] + font.getmetrics()[1]/SCALE if positions else 140
-    row = dict(font=font_key, visit=visit, language=language, lines=len(lines),
+    row = dict(font=font_key, visit=visit, language=language, body_size=size, lines=len(lines),
                body_bottom=round(body_bottom, 2), available_bottom=665,
                fits=body_bottom <= 665,
-               longest_line=round(max((measured(x[2],font,BODY_SIZE)
+               longest_line=round(max((measured(x[2],font,size)
                                        for x in positions),default=0),2))
     return row, positions
 
@@ -209,7 +211,7 @@ def render_ink_layer(font_key, visit, language, texts, letter_id=None):
     write_line(layer, (60, 60+21), texts[key+"_title"], path, 21,
                f"{visit}/{language}/title")
     for index, (x, y, line) in enumerate(positions):
-        write_line(layer, (x,y), line, path, BODY_SIZE, f"{visit}/{language}/body/{index}")
+        write_line(layer, (x,y), line, path, row['body_size'], f"{visit}/{language}/body/{index}")
     signature_size = BODY_SIZE*1.14
     signature = texts[key+"_signature"]
     signature_width = measured(signature, font_at(path, signature_size), signature_size)

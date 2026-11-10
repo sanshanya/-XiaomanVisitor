@@ -92,7 +92,7 @@ namespace XiaomanVisitor
             ApplyCocktailFootprint(item, spec);
             item.name = Text("cocktail_" + spec.Key + "_name");
             item.shortDescription = Text("cocktail_" + spec.Key + "_desc");
-            item.flavorText = ItemPresentation.DrinkFlavor(Text("cocktail_origin"), Text("drink_tier_" + spec.Tier),
+            item.flavorText = ItemPresentation.DrinkFlavor(Text("cocktail_origin"), Text(spec.Key=="roka" ? "drink_unique" : "drink_tier_" + spec.Tier),
                 Text("drink_buff_" + spec.Effect.ToString().ToLowerInvariant(), spec.EffectAmount), Text(spec.DurationDays==1 ? "drink_buff_today" : "drink_buff_duration"));
             item.RemoveGameItemType("FOOD");
             item.RemoveGameItemType("BREVAGE");

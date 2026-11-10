@@ -12,7 +12,11 @@
     "collection_tape_desc": "小满留下的磁带，标签上认真写着“{0}”。",
     "collection_tape_flavor": "一段留在磁带里的雨夜。",
     "collection_title_flavor": "序章",
-    "gift_tape_credit": "一段从远方带来的旋律。"
+    "gift_tape_credit": "一段从远方带来的旋律。",
+    "cocktail_roka_name": "露华",
+    "cocktail_roka_desc": "盐渍樱花与清酒的米香轻轻浮起，像天亮前最后一缕春夜；樱饼红豆的柔甜只铺薄薄一层，柚子皮把香气提亮，抹茶在中段落下一点干净微苦。",
+    "drink_unique": "唯一酒品",
+    "drink_buff_saleincome": "卖货信用点收入 +{0}%"
   },
   "ja": {
     "gift_cassette_case_name": "みちるのカセットケース",
@@ -28,7 +32,11 @@
     "collection_tape_flavor": "テープに残された、ある雨の夜。",
     "collection_title_flavor": "序章",
     "gift_tape_desc": "みちるが置いていった古いカセット。ラベルは丁寧に書かれている。",
-    "gift_tape_credit": "遠い場所から持ってきたメロディー。"
+    "gift_tape_credit": "遠い場所から持ってきたメロディー。",
+    "cocktail_roka_name": "露華",
+    "cocktail_roka_desc": "塩漬けの桜と清酒の米の香りが、夜明け前の春の夜のようにふわりと立ちのぼる。桜餅と小豆の柔らかな甘みはごく薄く、柚子の皮が香りを明るくする。途中に抹茶の澄んだほろ苦さが残る。",
+    "drink_unique": "特別な一杯",
+    "drink_buff_saleincome": "品物の売却収入 +{0}%"
   },
   "en": {
     "gift_cassette_case_name": "Xiaoman's Cassette Case",
@@ -43,6 +51,10 @@
     "collection_tape_desc": "A cassette Xiaoman left for you. The label carefully reads '{0}'.",
     "collection_tape_flavor": "A rainy night held on tape.",
     "collection_title_flavor": "Prologue",
-    "gift_tape_credit": "A melody brought from somewhere far away."
+    "gift_tape_credit": "A melody brought from somewhere far away.",
+    "cocktail_roka_name": "Dew Blossom",
+    "cocktail_roka_desc": "Salted cherry blossom and the rice aroma of sake rise like the last breath of a spring night before dawn. Sakura mochi and red bean lend a thin layer of gentle sweetness; yuzu peel brightens the aroma, followed by a clean hint of bitter matcha.",
+    "drink_unique": "One of a kind",
+    "drink_buff_saleincome": "Credits earned from selling goods +{0}%"
   }
 }

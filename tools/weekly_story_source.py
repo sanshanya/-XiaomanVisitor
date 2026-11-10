@@ -2,15 +2,26 @@
 import hashlib
 import json
 from pathlib import Path
+import story_master_source
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = {5: '第五周实现.json', 6: '第六周实现.json', 7: '第七周实现.json', 8: '第八周实现.json', 9: '第九周实现.json', 10: '第十周实现.json', 11: '第十一周实现.json'}
-WEEK_NAMES = {5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven'}
+SOURCES.update({n:story_master_source.SOURCE.name for n in (12,13,14)})
+WEEK_NAMES = {5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven',12:'twelve',13:'thirteen',14:'fourteen'}
 NEWS_RULES = {9: ('WeekNineRules', 'HasOpeningNews', 'jizhou_opening_news'),
               11: ('WeekElevenRules', 'HasExtensionNews', 'jizhou_extension_news')}
 
 
 def read(visit):
+    if visit>=12:
+        data=story_master_source.chapter(visit)
+        keys={12:['xm_tavern_12_business_01'],13:['xm_tavern_13_chat'],14:[]}[visit]
+        sequences={}
+        if visit==12:
+            sequences={f'xm_tavern_12_{topic}_01':[f'xm_tavern_12_{topic}_{i:02d}' for i in range(1,count+1)]
+                       for topic,count in (('business',5),('roka',4))}
+        data['night_chat']=dict(from_day=1+(visit-1)*7,min_visit=visit,keys=keys,sequences=sequences)
+        return data
     path = ROOT / 'story' / SOURCES[visit]
     text = path.read_text(encoding='utf-8')
     data = json.loads(text)
@@ -40,7 +51,7 @@ def read(visit):
             data['lines'][key + '_unknown'] = variant
     data['source'] = path.relative_to(ROOT).as_posix()
     data['sha256'] = hashlib.sha256(text.encode('utf-8')).hexdigest()
-    return data
+    return story_master_source.apply(data,visit)
 
 
 def generate():

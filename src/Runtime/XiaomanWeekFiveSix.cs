@@ -32,7 +32,7 @@ namespace XiaomanVisitor
             weekFiveSixBusy=true;
             try {
                 var supply=ReadSupply();if (supply.RecordPreview(StoreStation.Instance.dayCounter)) SaveSupply(supply);
-                if (!ReadStory().Finished) {
+                if (TavernTrading) {
                     var p=ReadReferrals();if (p.Draw(StoreStation.Instance.dayCounter)) SaveReferrals(p);
                     if (PlayerStore.Instance.storeState==PlayerStore.StoreState.OPEN) QueueReferralVisitor(PlayerStore.Instance.storeClientManager);
                 }
@@ -40,7 +40,7 @@ namespace XiaomanVisitor
         }
         private void PrepareLuxuryStock()
         {
-            if (!TavernMapEnabled || !PlayerStore.HasInstance) return;
+            if (!TavernMapEnabled || !PlayerStore.HasInstance || !TavernTrading) return;
             int day=StoreStation.Instance.dayCounter;
             if (day<LuxuryConfig.UnlockDay) return;
             var support=ReadSupport();if (support.Advance(day)) SaveSupport(support);
@@ -52,7 +52,7 @@ namespace XiaomanVisitor
         {
             if (!enabled || !TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null || manager?.clientStack==null || ReadStory().Finished) return;
             int day=StoreStation.Instance.dayCounter;
-            var p=ReadReferrals();if (p.Draw(day)) SaveReferrals(p);
+            var p=ReadReferrals();if (TavernTrading && p.Draw(day)) SaveReferrals(p);
             var due=p.Due(day);
             // A loaded queue may still contain yesterday's generated blueprint.
             // Withdraw only our stale entries; the saved event remains pending.

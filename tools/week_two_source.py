@@ -50,8 +50,9 @@ def read():
         parts=note.split('\n\n')
         letters[lang]=dict(title=parts[0],body='\n\n'.join(parts[1:-1]),signature=parts[-1])
     letters['en']=translated['letter']
-    return dict(lines=lines,letters=letters,source=SOURCE.relative_to(ROOT).as_posix(),
-                sha256=hashlib.sha256(SOURCE.read_bytes()).hexdigest())
+    import story_master_source
+    return story_master_source.apply(dict(lines=lines,letters=letters,source=SOURCE.relative_to(ROOT).as_posix(),
+                sha256=hashlib.sha256(SOURCE.read_bytes()).hexdigest()),2)
 
 
 def generate(data):

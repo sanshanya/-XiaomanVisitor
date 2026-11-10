@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 import weekly_story_source as source
+import story_master_source as master
 
 
 def quoted(text):
@@ -28,15 +29,10 @@ class WeekFiveSixSourceTests(unittest.TestCase):
                 checked += 1
         self.assertGreaterEqual(checked, 13)
 
-    def test_fifth_week_letter_preserves_original_in_both_languages(self):
+    def test_fifth_week_letter_uses_latest_master_in_both_languages(self):
         overlay = source.read(5)
-        text = (ROOT / overlay['author_source']).read_text(encoding='utf-8-sig')
-        for lang, start, end in (
-            ('zh', '### 中文｜纸条', '### 日本語｜手紙'),
-            ('ja', '### 日本語｜手紙', '**写信动机：**')):
-            authored = quoted(text.split(start, 1)[1].split(end, 1)[0])
-            fields = overlay['letters'][lang]
-            self.assertEqual(authored, '\n\n'.join(fields[k] for k in ('title', 'body', 'signature')))
+        for lang in ('zh','ja'):
+            self.assertEqual(overlay['letters'][lang],master.read()[5]['letters']['A'][lang])
 
     def test_sixth_letter_uses_confirmed_recollection_version(self):
         overlay = source.read(6)

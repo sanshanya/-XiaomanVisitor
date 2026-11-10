@@ -2,42 +2,6 @@
   "schema": 1,
   "lines": [
     {
-      "line_key": "xm_01_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_01_02_864e18653ae3",
-      "spoken_text": "わたし、みちるっていいます。最近この近くに引っ越してきたばかりで、まだ道がよく分からなくて。",
-      "subtitle_templates": [
-        "我叫小满。刚搬到附近，还有点认不清路。",
-        "わたし、みちるっていいます。最近この近くに引っ越してきたばかりで、まだ道がよく分からなくて。",
-        "I'm Xiaoman. I just moved nearby, and I'm still finding my way around."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_01_03",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_01_03_f5c415100564",
-      "spoken_text": "あ……ここ、カセットデッキがあるんですね。",
-      "subtitle_templates": [
-        "咦……你这里还有磁带机。",
-        "あ……ここ、カセットデッキがあるんですね。",
-        "Oh... you have a cassette player here."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_01_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_01_shop_8bd89396312a",
-      "spoken_text": "食べるものか、飲み水を少し買いたくて。今日は百五十クレジット持ってきました。",
-      "subtitle_templates": [
-        "想买点吃的或者饮用水。带了 150 信用点。",
-        "食べるものか、飲み水を少し買いたくて。今日は150クレジット持ってきました。",
-        "I'd like some food or drinking water. I've brought 150 credits."
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_01_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_01_accept_6ae21ff734e1",
@@ -74,172 +38,16 @@
       "generic": false
     },
     {
-      "line_key": "xm_06_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_06_shop_da764496eae1",
-      "spoken_text": "今日は飲み水を少し買いに来ました。",
-      "subtitle_templates": [
-        "今天想买点饮用水。带了 {0} 信用点。",
-        "今日は飲み水を少し買いに来ました。",
-        "I need some drinking water today. I brought {0} credits."
-      ],
-      "generic": true
-    },
-    {
-      "line_key": "xm_07_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_07_shop_0b14845883f1",
-      "spoken_text": "今日は食べるものを少し。",
-      "subtitle_templates": [
-        "今天想买点吃的。带了 {0} 信用点。",
-        "今日は食べるものを少し。",
-        "I would like some food today. I brought {0} credits."
-      ],
-      "generic": true
-    },
-    {
-      "line_key": "xm_08_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_08_shop_e490d9d29329",
-      "spoken_text": "今日は日用品を少し買いに来ました。",
-      "subtitle_templates": [
-        "今天想买点日用品。带了 {0} 信用点。",
-        "今日は日用品を少し買いに来ました。",
-        "I need some household supplies today. I brought {0} credits."
-      ],
-      "generic": true
-    },
-    {
-      "line_key": "xm_12_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_12_01_b98478ac5b2c",
-      "spoken_text": "こんばんは。最近、メニューを書き直したんです。",
-      "subtitle_templates": [
-        "晚上好。最近重新写了酒单。",
-        "こんばんは。最近、メニューを書き直したんです。",
-        "Good evening. I've been rewriting the drinks menu."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_12_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_12_02_f8c865f5f63c",
-      "spoken_text": "前のはぎっしり書いてたのに、新しいのは、まだ余白がたくさんあって。",
-      "subtitle_templates": [
-        "原来那张塞得满满的，新的一张倒还剩好多空白。",
-        "前のはぎっしり書いてたのに、新しいのは、まだ余白がたくさんあって。",
-        "The old one was crammed full. There's still plenty of blank space on the new one."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_12_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_12_shop_0b14845883f1",
-      "spoken_text": "今日は食べるものを少し。",
-      "subtitle_templates": [
-        "今天想买点吃的。",
-        "今日は食べるものを少し。",
-        "I'd like some food today."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_13_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_13_01_48d575411747",
-      "spoken_text": "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
-      "subtitle_templates": [
-        "晚上好。最近在找结实一点的箱子。准备搬家了。",
-        "こんばんは。最近、丈夫な段ボール箱を探してて。引っ越すことにしたんです。",
-        "Good evening. I've been looking for some sturdy boxes. I'm getting ready to move."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_13_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_13_02_17f4cf8a5d6a",
-      "spoken_text": "グラスって、服よりずっと荷造りが大変で。 こんなに買わなきゃよかったかな。",
-      "subtitle_templates": [
-        "酒杯比衣服难装多了。早知道就不买那么多了。",
-        "グラスって、服よりずっと荷造りが大変で。……こんなに買わなきゃよかったかな。",
-        "Glasses are much harder to pack than clothes. I wish I hadn't bought quite so many."
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_13_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_shop_e7f07c13214a",
       "spoken_text": "今日は日用品を少し買いたくて。",
       "subtitle_templates": [
-        "今天想买些日用品。",
+        "今天想买点日用品。带了 {0} 信用点。",
         "今日は日用品を少し買いたくて。",
-        "I'd like some everyday supplies today."
+        "I would like some everyday supplies today. I brought {0} credits."
       ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_14_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_14_01_08ee65b30bd9",
-      "spoken_text": "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
-      "subtitle_templates": [
-        "……晚上好。明天就坐船了，要回老家去。",
-        "……こんばんは。明日、船に乗るんです。故郷に帰ることにしました。",
-        "...Good evening. I'm taking the ship tomorrow. I've decided to go home."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_14_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_14_02_483392339f86",
-      "spoken_text": "荷物は先に送っちゃって、今はリュック一つだけ。……なんだか、来たばかりの頃みたいですね。",
-      "subtitle_templates": [
-        "东西都寄走了，剩我一个人带着背包。倒像刚搬来的时候。",
-        "荷物は先に送っちゃって、今はリュック一つだけ。……なんだか、来たばかりの頃みたいですね。",
-        "I've sent everything ahead. It's just me and a backpack now. A bit like when I first arrived."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_14_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_14_shop_2e6b4512b197",
-      "spoken_text": "船で飲む水を、少し買いたくて。",
-      "subtitle_templates": [
-        "想买点路上喝的水。",
-        "船で飲む水を、少し買いたくて。",
-        "I'd like some water for the journey."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_14_accept",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_14_accept_29ac3708c54d",
-      "spoken_text": "うん、ちょうどよかった。ありがとうございます。",
-      "subtitle_templates": [
-        "嗯，谢谢。正好。",
-        "うん、ちょうどよかった。ありがとうございます。",
-        "Yes, thank you. Just right."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_14_bye",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_14_bye_d57e876964b6",
-      "spoken_text": "それじゃ……行きますね。",
-      "subtitle_templates": [
-        "那……我走啦。",
-        "それじゃ……行きますね。",
-        "Well... I'd better go."
-      ],
-      "generic": false
+      "generic": true
     },
     {
       "line_key": "xm_repeat_first",
@@ -950,8 +758,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 206,
+  "pending_lines": 242,
   "pending_by_language": {
-    "ja": 206
+    "ja": 242
   }
 }

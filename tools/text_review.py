@@ -18,7 +18,8 @@ def instruction_outputs(root):
     sfx = sum(a['kind'] == 'sfx' for a in actions)
     values = dict(mod_name=manifest.findtext('Name'), version=manifest.findtext('ModVersion'),
                   revised_through=through,
-                  legacy_chapters='、'.join(str(e['index']) for e in snapshot['episodes'] if e['index'] > through),
+                  story_status=('十四章白天台词与纸条已按v5.4母稿接入；日语口头稿仍待审校。' if through==14 else
+                    '第'+ '、'.join(str(e['index']) for e in snapshot['episodes'] if e['index'] > through)+'章仍为旧稿，等待后续重构。'),
                   voice_bound=bound, voice_deferred=len(script['lines'])-bound,
                   action_slots=len(actions), spoken_actions=len(actions)-sfx, sfx_slots=sfx)
     templates = json.loads((root / 'assets/package-instructions.json').read_text(encoding='utf-8'))

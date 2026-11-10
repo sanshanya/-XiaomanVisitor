@@ -38,6 +38,8 @@ namespace XiaomanVisitor
 
     public static class StoryRules
     {
+        // The current story has a fixed ending. This is encounter progress, not day / 7.
+        public static bool BusinessOpen(int visits) { return visits<13; }
         public static readonly string[] BasicDrinks = { "whale_dream", "sunset_blue", "rainy_blue" };
         public static readonly string[] FinalDrinks = { "bluebird", "cosmo_zone", "sky_after_rain" };
         public static bool IsMonday(int day) { return day >= 1 && day % 7 == 1; }
@@ -45,7 +47,7 @@ namespace XiaomanVisitor
         { return index >= 1 && index <= 14 ? StoryCatalog.Episodes[index - 1] : null; }
         public static string[] SaleOffer(int index, int chanceRoll, int pairRoll)
         {
-            if (index < 4 || index == 6 || index >= 14 || (index != 4 && (uint)chanceRoll % 100 >= 30)) return new string[0];
+            if (index < 4 || index == 6 || index >= 13 || (index != 4 && (uint)chanceRoll % 100 >= 30)) return new string[0];
             int excluded = (int)((uint)pairRoll % 3);
             return BasicDrinks.Where((key, i) => i != excluded).ToArray();
         }
@@ -55,8 +57,8 @@ namespace XiaomanVisitor
             return StoryCatalog.Actions.FirstOrDefault(a => a.OriginalTexts.Contains(text, StringComparer.Ordinal));
         }
         public static string GoodbyeKey(int index, bool actualDiscount)
-        { return index == 14 ? "xm_14_bye" : actualDiscount ? "goodbye_discount" : Episode(index).GoodbyeKey; }
-        public static bool AllowsTradeDrink(int index) { return index != 6 && index != 14; }
+        { return index >= 13 ? Episode(index).GoodbyeKey : actualDiscount ? "goodbye_discount" : Episode(index).GoodbyeKey; }
+        public static bool AllowsTradeDrink(int index) { return index != 6 && index < 13; }
         public static string FixedDrink(int index, int roll)
         { return index == 6 ? FinalDrinks[(int)((uint)roll % (uint)FinalDrinks.Length)] : ""; }
     }
@@ -171,7 +173,7 @@ namespace XiaomanVisitor
                 visit.SaleKeys = visit.SaleKeys ?? new string[0];
                 if (visit.SaleKeys.Length != 0 && (visit.SaleKeys.Length != 2 || visit.SaleKeys.Distinct().Count() != 2
                     || visit.SaleKeys.Any(key => !StoryRules.BasicDrinks.Contains(key)))) visit.SaleKeys = new string[0];
-                if (visit.Index < 4 || visit.Index == 6 || visit.Index == 14) visit.SaleKeys = new string[0];
+                if (visit.Index < 4 || visit.Index == 6 || visit.Index >= 13) visit.SaleKeys = new string[0];
                 result.Visits.Add(visit);
             }
             result.LastCompletedGiftDay = loaded.LastCompletedGiftDay;

@@ -23,7 +23,7 @@ class WeekTenSourceTests(unittest.TestCase):
         self.assertTrue(all(row['defer_voice'] for row in self.data['lines'].values()))
         self.assertNotIn('应该不能长久', self.data['lines']['xm_10_05']['zh'])
         self.assertIn('等那家店的折扣期过去', self.data['lines']['xm_10_05']['zh'])
-        self.assertIn('三割', self.data['lines']['xm_10_03']['ja'])
+        self.assertIn('七割引き', self.data['lines']['xm_10_03']['ja'])
         self.assertIn('thirty percent of the usual price', self.data['lines']['xm_10_03']['en'])
 
     def test_final_ice_maker_letter_has_no_old_explanation_or_tape_sentence(self):

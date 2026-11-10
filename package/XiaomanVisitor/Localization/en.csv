@@ -58,8 +58,8 @@ cfg_voice_language,Xiaoman voice language
 cfg_voice_language_tip,"Japanese by default, independently of subtitles. Follow UI plays only matching-language recordings; missing recordings keep normal subtitles."
 xm_01_01,"...Hello. I saw the light was still on, so I came in."
 xm_01_02,"I'm Xiaoman. I just moved nearby, and I'm still finding my way around."
-xm_01_03,Oh... you have a cassette player here.
-xm_01_shop,I'd like some food or drinking water. I've brought 150 credits.
+xm_01_03,"Oh... you have a cassette player here. I brought quite a few tapes when I moved, too."
+xm_01_shop,I would like some food or drinking water. I brought 150 credits.
 xm_01_accept,Thank you. That really helps.
 xm_01_bye,I'd better get going. See you next time.
 story_note_01_title,"Dear shopkeeper,"
@@ -67,7 +67,7 @@ story_note_01_body,"While unpacking yesterday, I found two copies of the very sa
 story_note_01_signature,— Xiaoman
 story_note_01_name,A note from Xiaoman
 xm_02_01,Good evening. Here I am again.
-xm_02_02,"Oh, right… I've opened a little tavern on the shopping street. Tonight's finally opening night."
+xm_02_02,"Oh, by the way... I opened a little tavern on the shopping street. Tonight is finally opening night!"
 xm_02_03,I've rewritten the drinks menu so many times. I'm still not sure what people on the station like.
 xm_02_shop,I'd like to buy some household supplies today. I've brought {0} credits.
 story_note_02_title,"Dear shopkeeper senpai,"
@@ -138,27 +138,27 @@ story_note_11_title,"Dear senpai,"
 story_note_11_body,"Lately, after closing, I often sit behind the bar with the menu and supply invoices spread out together.\n\nThe drinks are the same, and I know they taste good.\n\nBut I can stare at the books for ages and still not see what went wrong.\n\nI used to think good drinks and caring for every customer would slowly make the shop better.\n\nRunning a shop is much harder than I imagined.\n\nWhen you first opened the pawnshop, did you have days when you did not know what to do?\n\nI remember eagerly inviting you over when I opened.\n\nThen, I just wanted you to see the tavern I had worked so hard to put together.\n\nNow, there is so much I really want to learn from you.\n\nI hope one day I can run my own little shop properly, like you.\n\n... It feels embarrassing to say this in person, so I will write it instead."
 story_note_11_signature,— Xiaoman
 story_note_11_name,A note from Xiaoman
-xm_12_01,Good evening. I've been rewriting the drinks menu.
-xm_12_02,The old one was crammed full. There's still plenty of blank space on the new one.
-xm_12_shop,I'd like some food today.
-story_note_12_title,"Dear shopkeeper,"
-story_note_12_body,"Today I folded up the old drinks menu and tucked it into the account book.\n\nI wrote the first page just after I arrived, when I didn't know anyone here.\n\nLast night I poured myself a little drink and sat down by the glass door for a rest.\n\nI waited a long time, but no customers came.\n\nThe billboard opposite happened to turn orange. With the blue light from the bar shining through, there seemed to be two colours in my glass.\n\nI sat looking at it for a while. Then an idea for a new cocktail came to me.\n\nPlease come and try my new creation."
+xm_12_01,"Good evening, senpai. My mom called me yesterday."
+xm_12_02,"She said the cherry blossoms are out back home, and sent me lots of photos."
+xm_12_shop,I would like some food today. I brought {0} credits.
+story_note_12_title,"Dear senpai,"
+story_note_12_body,"Lately I have been closing earlier, so I often go for a walk along the shopping street.\n\nWhen I first moved here, all the corridors looked the same. I could barely find my way back to where I lived.\n\nNow I know when every sign goes dark, and which vending machines stay lit.\n\nI have been here quite a while without even noticing, haven't I?\n\nI remember telling you I was still getting lost the first time I came into your shop.\n\nNow I could find my way with my eyes closed."
 story_note_12_signature,— Xiaoman
 story_note_12_name,A note from Xiaoman
-xm_13_01,Good evening. I've been looking for some sturdy boxes. I'm getting ready to move.
-xm_13_02,Glasses are much harder to pack than clothes. I wish I hadn't bought quite so many.
-xm_13_shop,I'd like some everyday supplies today.
-story_note_13_title,"Dear shopkeeper,"
-story_note_13_body,"The man from the repair shop next door came to help move a cabinet. He asked if I still wanted the blue light.\n\nI told him he could have it. He said his daughter loved that colour.\n\nIt turned out he didn't mean just the light. He meant the whole frame, sign and all.\n\n...He certainly knows what to ask for.\n\nStill, that's fine. At least I won't have to find a box big enough for it."
+xm_13_01,"Good evening, senpai. The contract review came back."
+xm_13_02,"They say the promotion schedule can change, but the difference in rent still has to be repaid as agreed."
+xm_13_shop,I would like some everyday supplies today. I brought {0} credits.
+story_note_13_title,"Dear senpai,"
+story_note_13_body,"I booked my ticket home today.\n\nWhile I was packing, the man from the repair shop next door came to help move a cabinet. He asked if I still needed that blue lamp.\nI said he could have it. He said his daughter really liked the color.\nThen it turned out he meant the whole frame attached to the sign, not just the lamp.\n...He certainly knows what to pick.\nStill, at least I won't have to find a box that big."
 story_note_13_signature,— Xiaoman
 story_note_13_name,A note from Xiaoman
-xm_14_01,...Good evening. I'm taking the ship tomorrow. I've decided to go home.
-xm_14_02,I've sent everything ahead. It's just me and a backpack now. A bit like when I first arrived.
-xm_14_shop,I'd like some water for the journey.
+xm_14_01,"...Good evening, senpai. I am taking the ship home tomorrow."
+xm_14_02,The glasses have all been shipped. All I have left is one backpack. Just like when I first moved here.
+xm_14_shop,I would like some water for the journey. I brought {0} credits.
 xm_14_accept,"Yes, thank you. Just right."
-xm_14_bye,Well... I'd better go.
-story_note_14_title,"Dear shopkeeper,"
-story_note_14_body,"I've returned the keys to the landlord. My lovely glasses have gone ahead on the cargo ship. All I have left is a backpack.\n\nI told my mum I was coming home. She laughed and laughed on the other end of the call.\n\nI made three cocktails with the ingredients I had left, and left them here with the tape.\n\nThank you for everything, my friend."
+xm_14_bye,"Well... I should go. Take care, senpai."
+story_note_14_title,"Dear senpai,"
+story_note_14_body,"When I checked the shelves for the last time, there were still enough ingredients for three drinks.\n\nI picked my three favorites, sealed them up, and left them with the tape.\n\nMom says the cherry blossoms back home are almost gone.\n\nI probably won't get there in time, but that is all right.\n\nThere will still be plenty of rainy days.\n\nBefore coming to this station, I never thought I would meet another person who listened to tapes in a pawnshop.\n\nSenpai, thank you for all this time."
 story_note_14_signature,— Xiaoman
 story_note_14_name,A note from Xiaoman
 xm_right_item,"Yes, this will do."
@@ -232,7 +232,7 @@ ui_tavern_closed,Closed
 ui_tavern_cash,Credits on hand: {0}
 cfg_experimental_tavern,Xiaoman's Tavern (Experimental)
 cfg_experimental_tavern_tip,"Off by default. Enable and restart: renovation appears on days 3–7, and the tavern opens on the night of day 8. Disabling keeps tavern records and does not affect Monday visits."
-xm_01_04,"When I moved, I brought quite a few tapes with me."
+xm_01_04,"Not many people still listen to tapes these days, do they?"
 xm_01_05,"Not many people still listen to tapes these days, do they?"
 ui_tavern_preview_name,A Mysterious New Shop
 ui_tavern_map_desc,The shop is still being fitted out and is not open yet.
@@ -247,7 +247,7 @@ xm_tavern_w02_entry_02,I've been looking forward to having you here.
 xm_tavern_w02_entry_03,"It still feels a little strange, saying ‘welcome’ in my very own shop."
 xm_tavern_w02_reentry,"Oh, shopkeeper. Here you are again."
 xm_tavern_greeting,"Good evening, senpai. Welcome."
-xm_tavern_greeting_unknown,Welcome. I'm Xiaoman. This little tavern has only just opened.
+xm_tavern_greeting_unknown,Welcome. My name is Xiaoman. I just opened this little place.
 xm_tavern_menu_open,What can I get for you?
 xm_tavern_w02_menu,"Here's the menu for now. There aren't many flavors yet, but I'm confident about the taste."
 xm_tavern_order,"Of course. Just a moment, please."
@@ -270,7 +270,7 @@ xm_tavern_chat_rest,Make yourself comfortable. Let's listen for a while.
 xm_tavern_w02_entry_01_unknown,"Welcome… Oh, it's you, friend."
 xm_tavern_w02_reentry_unknown,"Oh, friend. Here you are again."
 xm_tavern_drink_limit_unknown,"No more tonight. You've already had a glass. You're always welcome to stay for the music, though."
-xm_tavern_w02_help_intro_unknown,"Oh, a customer… I'm still making drinks. Could you take them a menu for me?"
+xm_tavern_w02_help_intro_unknown,"Oh, a customer… I'm still making drinks. could you take them a menu for me?"
 xm_tavern_w02_help_done_unknown,Thank you! It's been a little hectic since opening… I'm glad you were here.
 xm_tavern_w02_rain_01_unknown,Looking at the rain on the window? It's one of my little touches for the tavern.
 xm_tavern_w02_tape_intro_unknown,"I brought this cassette deck from home. If there's something you'd like to hear, feel free to choose."
@@ -513,3 +513,35 @@ xm_tavern_11_chat_02,"They said the promotional slots had to follow the shopping
 xm_tavern_11_chat_03,"But when I applied for the support, they said they would help new shops bring people in..."
 xm_w11_news_title,Polar Day Lounge extends its opening promotion
 xm_w11_news_body,"Tenquin Asset Corporation announced today that the opening promotion at its Polar Day Lounge will be extended again.\n\nAll items remain available at 30% of their usual price, and new customers can still enjoy free drinks worth 500 credits.\n\nThe company says residents and interstellar travellers have warmly welcomed the offers. An end date will be announced separately.\n\nShopping-street guide terminals will continue giving priority to Polar Day Lounge and its promotional information."
+xm_12_03,"It has been so long since I saw cherry blossoms. Looking at those photos, I suddenly wanted to make a drink that tastes like spring."
+xm_12_04,"I tried making one last night, and it turned out surprisingly well. Come and try it tonight if you have time."
+xm_12_accept,Thank you. Just what I needed.
+xm_12_bye,"I should go. See you tonight, senpai."
+xm_13_03,I worked through the rest of the accounts. Borrowing more to keep the place open would only leave me owing more.
+xm_13_04,So... I have decided to close. I will start packing things over the next few days.
+xm_13_05,"I am looking for some sturdy boxes. Glasses are much harder to pack than clothes, you know."
+xm_13_accept,Thank you. Just what I needed.
+xm_13_bye,I should get back to packing. You can still drop by if you have time.
+xm_tavern_12_roka_01,"Welcome, senpai. The drink I told you about earlier is ready."
+xm_tavern_12_roka_02,"I used salted cherry blossoms and a little sake, then added a touch of matcha. There is a little bitterness at the end."
+xm_tavern_12_roka_03,"I named it Dew Blossom. Hehe, what do you think, senpai?"
+xm_tavern_12_roka_04,This one will not be on the regular menu. It is for you.
+xm_tavern_12_business_01,"Senpai, a settlement notice arrived from Tenquin Asset Corporation recently."
+xm_tavern_12_business_02,It turns out the rent support had sales targets attached. Any shortfall has to be paid back under the contract.
+xm_tavern_12_business_03,"I put the sales records together. Business was so good a few weeks ago, but hardly anyone has been coming lately."
+xm_tavern_12_business_04,Now I even have to work out next month's supplies all over again.
+xm_tavern_12_business_05,"I want to ask for a review first. After all, the promotion they promised never came through."
+xm_tavern_13_entry,"Oh, senpai. Come in and sit for a while. I am not serving customers today."
+xm_tavern_13_tape,I have not packed the cassette player yet. Pick something you would like to hear.
+xm_tavern_13_chat,I am keeping a few of the glasses. I suppose they will remind me of this place whenever I see them.
+ui_w12_roka,The drink you mentioned
+ui_w12_business,How business is going
+ui_w12_notice_name,Settlement notice
+ui_w12_gift,Xiaoman left you Dew Blossom.
+ui_w13_records,Supply records
+ui_w12_notice,Tenquin Asset Corporation · Merchant Settlement Notice\n\nTemporary rent support is subject to sales performance requirements. Any rent difference not waived must be settled under the signed agreement.\n\nMerchants may request a review by submitting their sales records and promotion schedules.\n\nXiaoman is gathering her records to request a review.
+ui_w13_notice,Tenquin Asset Corporation · Review Result\n\nPromotion schedules may be adjusted. The rent difference must still be settled under the original agreement.\n\nXiaoman has checked the remaining accounts and decided to stop trading and pack up the tavern.
+cocktail_roka_name,Dew Blossom
+cocktail_roka_desc,"Salted cherry blossom and the rice aroma of sake rise like the last breath of a spring night before dawn. Sakura mochi and red bean lend a thin layer of gentle sweetness; yuzu peel brightens the aroma, followed by a clean hint of bitter matcha."
+drink_unique,One of a kind
+drink_buff_saleincome,Credits earned from selling goods +{0}%

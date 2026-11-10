@@ -1,0 +1,278 @@
+{
+  "schema": 1,
+  "purpose": "v5.4 三语文本；纸条无配音，日语口头稿待审",
+  "lines": {
+    "xm_01_01": "...Hello. I saw the light was still on, so I came in.",
+    "xm_01_02": "I'm Xiaoman. I just moved nearby, and I'm still finding my way around.",
+    "xm_01_03": "Oh... you have a cassette player here. I brought quite a few tapes when I moved, too.",
+    "xm_01_04": "Not many people still listen to tapes these days, do they?",
+    "xm_01_shop": "I would like some food or drinking water. I brought {0} credits.",
+    "xm_01_accept": "Thank you. That really helps.",
+    "xm_01_bye": "I'd better get going. See you next time.",
+    "xm_02_01": "Good evening. Here I am again.",
+    "xm_02_02": "Oh, by the way... I opened a little tavern on the shopping street. Tonight is finally opening night!",
+    "xm_02_03": "I've rewritten the drinks menu so many times. I'm still not sure what people on the station like.",
+    "xm_02_04": "If you're free tonight, I'd love for you to stop by. You have more experience running a shop… perhaps you could give me a few pointers.",
+    "xm_02_shop": "I'd like to buy some household supplies today. I've brought {0} credits.",
+    "xm_02_accept": "Thank you. Just what I needed.",
+    "xm_02_bye": "I'd better go. I hope you'll visit my little tavern.",
+    "xm_tavern_w02_entry_01": "Welcome… Oh, it's you, shopkeeper.",
+    "xm_tavern_w02_entry_02": "I've been looking forward to having you here.",
+    "xm_tavern_w02_entry_03": "It still feels a little strange, saying ‘welcome’ in my very own shop.",
+    "xm_tavern_w02_reentry": "Oh, shopkeeper. Here you are again.",
+    "xm_tavern_greeting": "Good evening, senpai. Welcome.",
+    "xm_tavern_greeting_unknown": "Welcome. My name is Xiaoman. I just opened this little place.",
+    "xm_tavern_w02_rain_01": "Looking at the rain on the window, senpai? It's one of my little touches for the tavern.",
+    "xm_tavern_w02_rain_02": "It took quite a bit of work to make it look as though it was raining.",
+    "xm_tavern_w02_tape_intro": "I brought this cassette deck from home. If there's something you'd like to hear, shopkeeper, feel free to choose.",
+    "xm_tavern_w02_help_intro": "Oh, a customer… I'm still making drinks. Senpai, could you take them a menu for me?",
+    "xm_tavern_w02_help_done": "Thank you, senpai! It's been a little hectic since opening… I'm glad you were here.",
+    "xm_tavern_w02_help_skip": "That's all right. I'll take care of it.",
+    "xm_03_01": "Good evening, senpai. Here I am again.",
+    "xm_03_02": "The tavern has been rather busy. When the dock shifts change, everyone seems to arrive at once.",
+    "xm_03_03": "Making drinks and looking after the customers on my own… Sometimes I can hardly keep up.",
+    "xm_03_04": "If you're free tonight, could you give me a hand? I'll pay you, of course! I can't just take up your time for nothing.",
+    "xm_03_shop": "I'd like to buy some food today. I've brought {0} credits.",
+    "xm_03_accept": "Thank you. Just what I needed.",
+    "xm_03_bye": "I'd better go. If you're free tonight, you're always welcome to stop by.",
+    "xm_tavern_w03_work_offer_01": "Oh, senpai! The next shift's customers will be here soon. Could you help me look after them?",
+    "xm_tavern_w03_work_offer_02": "I'll make sure you're paid. This is a proper job, you know.",
+    "xm_tavern_w03_work_start": "Thank you, senpai! I'll leave these customers with you while I look after the bar.",
+    "xm_tavern_w03_work_done_01": "Phew… We've finally caught up. You were a huge help!",
+    "xm_tavern_w03_work_done_02": "Here's your pay. Thanks to you, those customers didn't have a wasted trip.",
+    "xm_tavern_w03_work_decline": "That's all right. You have your own shop to look after too.",
+    "xm_tavern_w03_work_done_today": "You've already finished your shift today, senpai. If you stay any longer, I'll start worrying you aren't getting enough rest.",
+    "xm_tavern_w03_work_no_orders": "I can manage for now. Just stay and enjoy the music.",
+    "xm_04_01": "Good evening, senpai. There is something I would like to discuss today.",
+    "xm_04_02": "We are using more and more water and ingredients. I can hardly keep up with the orders.",
+    "xm_04_03": "If you have suitable supplies, could I buy from you regularly, from a list?",
+    "xm_04_04": "You could stock the drinks I make, too. Hehe, we would be proper business partners!",
+    "xm_04_shop": "I would like some drinking water today. I have {0} credits.",
+    "xm_04_cocktail": "I also brought two bottled juice drinks from the bar. Would you like a look?",
+    "xm_04_accept": "Thank you. Just what I needed.",
+    "xm_04_bye": "I should go. We can talk about supplies at my place tonight, if you like.",
+    "xm_tavern_w04_supply_01": "Welcome, senpai. I made that list we discussed during the day.",
+    "xm_tavern_w04_supply_02": "I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop.",
+    "xm_tavern_w04_supply_03": "The quantities and prices are all written down. I want this to be a fair deal for you.",
+    "xm_tavern_w04_supply_yes": "Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now.",
+    "xm_tavern_w04_supply_later": "Of course. No hurry. You have your own shop to look after.",
+    "xm_w04_wang_01": "Hey. Heard you applied for that commercial street support scheme.",
+    "xm_w04_wang_02": "You are under my wing. I asked someone to stop that paperwork for you.",
+    "xm_w04_wang_03": "Do not feel bad about it. They call it support, but once you sign, it is a different story.",
+    "xm_w04_wang_04": "If it is such a good deal, why do they not run the business themselves?",
+    "xm_w04_wang_bye": "Anyway, look after your shop. Think things through next time.",
+    "xm_05_01": "Good evening, senpai. The new supplier sent some fine spirits last week. I have been trying them out.",
+    "xm_05_02": "There was one base spirit I had always wanted to use. Yesterday I finally got the taste right.",
+    "xm_05_03": "They sold out as soon as I put them out yesterday. People asked if there would be more next time. Hehe... of course!",
+    "xm_05_04": "But I quietly saved enough ingredients for one glass, so you could try it too.",
+    "xm_05_gift": "This one is for you. No charge today.",
+    "xm_05_shop": "I need some household supplies today. I brought {0} credits.",
+    "xm_05_accept": "Thank you. Just what I needed.",
+    "xm_05_bye": "I should go. If you have time tonight, come try the new drinks.",
+    "xm_tavern_05_new_01": "Senpai, have you seen the new menu? There are two new drinks.",
+    "xm_tavern_05_new_02": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher.",
+    "xm_tavern_05_new_03": "These ingredients are hard to come by, so I can only make a few for now. If people like them, I will order more.",
+    "xm_tavern_05_soldout": "Ah, sorry... that one is sold out. Come back when the next batch arrives.",
+    "xm_06_01": "Good evening, senpai. There have been so many new faces at the tavern lately.",
+    "xm_06_02": "Yesterday an interstellar traveller asked if there was anywhere nearby worth visiting after his drink.",
+    "xm_06_03": "So I told him there was a lovely pawnshop down the shopping street. He might find something interesting there.",
+    "xm_06_04": "Hehe, I wonder if he will actually come by. If he does, remember my reward, senpai~",
+    "xm_06_shop": "I need some drinking water today. I brought {0} credits.",
+    "xm_06_accept": "Thank you. Just what I needed.",
+    "xm_06_bye": "I should go. There are still a few things to get ready for tonight.",
+    "xm_07_01": "Good evening, senpai. There is someone from the docks who comes to sit at the tavern almost every day.",
+    "xm_07_02": "Always a seat by the window and a slightly sour drink. Even the seat hardly ever changes.",
+    "xm_07_03": "Yesterday he walked in and said, \"The usual.\" I knew straight away what to make.",
+    "xm_07_04": "Hehe. My tavern has someone who can order \"the usual\" now.",
+    "xm_07_shop": "I would like some food today. I brought {0} credits.",
+    "xm_07_accept": "Thank you. Just what I needed.",
+    "xm_07_bye": "I should go. Come sit for a while tonight if you have time, senpai.",
+    "xm_tavern_07_chat_01": "Some people sit down and quietly listen to the rain. It is not really raining outside, but they seem to like it.",
+    "xm_tavern_07_chat_02": "Some people stop by for a drink before closing now. We never arrange it, but around that time I can almost tell who will walk through the door.",
+    "xm_08_01": "Good evening, senpai. My friends back home kept asking me to send a photo of myself.",
+    "xm_08_02": "Last night I asked a few of the night-shift girls who come in regularly to help. They all wanted to take it.",
+    "xm_08_03": "They said, \"You are the owner! You have to stand behind the bar!\" ...So I went back where they told me to.",
+    "xm_08_04": "I picked one with rain on the window and sent it to my friends. Hehe, it came out quite nicely.",
+    "xm_08_shop": "I need some household supplies today. I brought {0} credits.",
+    "xm_08_accept": "Thank you. Just what I needed.",
+    "xm_08_bye": "I should go. Come sit for a while again when you have time, senpai.",
+    "xm_tavern_08_chat_01": "The girls who took my photos spent ages choosing one with me. They came for a drink, but it was like I had hired photographers.",
+    "xm_tavern_08_chat_02": "They said they would bring some new colleagues next shift. If they really come, I will have to remember to get a few more ingredients ready.",
+    "xm_09_01": "Good evening, senpai. Business at the tavern keeps getting better.",
+    "xm_09_02": "I made an extra batch last week, but it still was not enough.",
+    "xm_09_03": "A few people even came ahead to ask if I could save them some for the weekend. Hehe, I will have to get more ingredients next time.",
+    "xm_09_shop": "I would like some food today. I brought {0} credits.",
+    "xm_09_accept": "Thank you. Just what I needed.",
+    "xm_09_bye": "I should go. Come sit for a while tonight if you have time.",
+    "xm_tavern_09_chat_01": "Senpai, lately I have been getting the ingredients for the popular drinks ready in advance.",
+    "xm_tavern_09_chat_02": "I used to get so flustered when people came in at once. I can finally take it a little more calmly now.",
+    "xm_tavern_09_chat_03": "At this rate, though, I might need another cabinet behind the bar.",
+    "xm_10_01": "Good evening, senpai. Have you heard of Polar Day, the lounge that opened last week? I went to have a look yesterday.",
+    "xm_10_02": "Their bartending equipment is incredible, and the drinks are good too. No wonder so many people are lining up.",
+    "xm_10_03": "Ingredients that good, and everything at thirty percent of the usual price... Surely they cannot keep that up for long.",
+    "xm_10_04": "I ran into a few people who used to come to my tavern. They seemed quite happy to see me and said hello.",
+    "xm_10_05": "Bookings seem a little quieter lately. I want to watch for a few more days and wait for their promotion to end.",
+    "xm_10_shop": "I would like some drinking water today. I brought {0} credits.",
+    "xm_10_accept": "Thank you. Just what I needed.",
+    "xm_10_bye": "I should go. You are always welcome to come sit for a while tonight, senpai, if you have time.",
+    "xm_tavern_10_chat_01": "Senpai, I have not been running short of ingredients for the new drinks lately.",
+    "xm_tavern_10_chat_02": "Last week I was worried about running out, so I prepared extra. These past few days, more has been left over than I expected.",
+    "xm_tavern_10_chat_03": "Luckily, some things keep for a long time. Otherwise it would be a bit of a waste.",
+    "xm_tavern_10_regular_01": "Senpai, someone who had been here before came back today, and brought a friend.",
+    "xm_tavern_10_regular_02": "She said she could have taken the lift straight back to her dorm, but wanted to make a detour for a drink.",
+    "xm_tavern_10_regular_03": "One wanted something sweet, the other something sour. Then once I served them, they started swapping drinks.",
+    "xm_tavern_10_regular_04": "Hehe. It really did make me happy.",
+    "xm_11_01": "Good evening, senpai. It looks like Polar Day's discount is going to continue.",
+    "xm_11_02": "I worked it out carefully. At their prices, I would not even cover the ingredients.",
+    "xm_11_03": "Fewer people have been coming lately, so I changed the opening hours. It used to say two in the morning; now it says midnight.",
+    "xm_11_04": "When I opened, I used to think everyone stayed too late. At least I can close up earlier now.",
+    "xm_11_shop": "I would like some everyday supplies today. I brought {0} credits.",
+    "xm_11_accept": "Thank you. Just what I needed.",
+    "xm_11_bye": "I should head back. If you come by tonight, senpai, remember to come early.",
+    "xm_tavern_11_chat_01": "Senpai, I asked Merchant Development today when the tavern would get its turn on the guide terminals.",
+    "xm_tavern_11_chat_02": "They said the promotional slots had to follow the shopping street's latest arrangements, and asked me to wait a little longer.",
+    "xm_tavern_11_chat_03": "But when I applied for the support, they said they would help new shops bring people in...",
+    "xm_12_01": "Good evening, senpai. My mom called me yesterday.",
+    "xm_12_02": "She said the cherry blossoms are out back home, and sent me lots of photos.",
+    "xm_12_03": "It has been so long since I saw cherry blossoms. Looking at those photos, I suddenly wanted to make a drink that tastes like spring.",
+    "xm_12_04": "I tried making one last night, and it turned out surprisingly well. Come and try it tonight if you have time.",
+    "xm_12_shop": "I would like some food today. I brought {0} credits.",
+    "xm_12_accept": "Thank you. Just what I needed.",
+    "xm_12_bye": "I should go. See you tonight, senpai.",
+    "xm_tavern_12_roka_01": "Welcome, senpai. The drink I told you about earlier is ready.",
+    "xm_tavern_12_roka_02": "I used salted cherry blossoms and a little sake, then added a touch of matcha. There is a little bitterness at the end.",
+    "xm_tavern_12_roka_03": "I named it Dew Blossom. Hehe, what do you think, senpai?",
+    "xm_tavern_12_roka_04": "This one will not be on the regular menu. It is for you.",
+    "xm_tavern_12_business_01": "Senpai, a settlement notice arrived from Tenquin Asset Corporation recently.",
+    "xm_tavern_12_business_02": "It turns out the rent support had sales targets attached. Any shortfall has to be paid back under the contract.",
+    "xm_tavern_12_business_03": "I put the sales records together. Business was so good a few weeks ago, but hardly anyone has been coming lately.",
+    "xm_tavern_12_business_04": "Now I even have to work out next month's supplies all over again.",
+    "xm_tavern_12_business_05": "I want to ask for a review first. After all, the promotion they promised never came through.",
+    "xm_13_01": "Good evening, senpai. The contract review came back.",
+    "xm_13_02": "They say the promotion schedule can change, but the difference in rent still has to be repaid as agreed.",
+    "xm_13_03": "I worked through the rest of the accounts. Borrowing more to keep the place open would only leave me owing more.",
+    "xm_13_04": "So... I have decided to close. I will start packing things over the next few days.",
+    "xm_13_05": "I am looking for some sturdy boxes. Glasses are much harder to pack than clothes, you know.",
+    "xm_13_shop": "I would like some everyday supplies today. I brought {0} credits.",
+    "xm_13_accept": "Thank you. Just what I needed.",
+    "xm_13_bye": "I should get back to packing. You can still drop by if you have time.",
+    "xm_tavern_13_entry": "Oh, senpai. Come in and sit for a while. I am not serving customers today.",
+    "xm_tavern_13_tape": "I have not packed the cassette player yet. Pick something you would like to hear.",
+    "xm_tavern_13_chat": "I am keeping a few of the glasses. I suppose they will remind me of this place whenever I see them.",
+    "xm_14_01": "...Good evening, senpai. I am taking the ship home tomorrow.",
+    "xm_14_02": "The glasses have all been shipped. All I have left is one backpack. Just like when I first moved here.",
+    "xm_14_shop": "I would like some water for the journey. I brought {0} credits.",
+    "xm_14_accept": "Yes, thank you. Just right.",
+    "xm_14_bye": "Well... I should go. Take care, senpai."
+  },
+  "letters": {
+    "1": {
+      "A": {
+        "title": "Dear shopkeeper,",
+        "body": "While unpacking yesterday, I found two copies of the very same tape.\n\nI hadn't expected to meet someone on this station who still keeps a cassette player.\n\nThis might be a little sudden, but I'd like you to have this one.\n\nI used to listen to this song when it rained heavily back home.\n\nI hope you'll like it too.",
+        "signature": "— Xiaoman"
+      }
+    },
+    "2": {
+      "A": {
+        "title": "Dear shopkeeper senpai,",
+        "body": "The little tavern is finally open! ٩(ˊᗜˋ*)و\n\nBefore opening, I peeled the last bit of protective film off the glass door. The blue sign across the street reflects in it. It turned out rather pretty.\n\nThen the first person to walk past asked, ‘Are you still renovating?’\n\n…I'd forgotten to take down the ‘Under renovation’ sign. I checked the menu over and over, and somehow missed the most obvious thing. Honestly…\n\nThis is the tape I played when I opened. I'd like you to hear it too. (´,,•ω•,,)♡",
+        "signature": "— Xiaoman"
+      }
+    },
+    "3": {
+      "A": {
+        "title": "Dear shopkeeper senpai,",
+        "body": "After asking you to help yesterday, I realized you have your own shop to run during the day.\n\nWould working here in the evenings leave you too tired?\n\nBut when the dock shifts change, so many customers arrive at once. Sometimes I really can't manage them all on my own.\n\nPlease don't feel you have to. You're always welcome to just come for a drink, and if you do help, I'll make sure you're properly paid!\n\nHere's this week's tape.",
+        "signature": "— Xiaoman"
+      },
+      "B": {
+        "title": "Dear shopkeeper senpai,",
+        "body": "Thank you for all your work yesterday!\n\nI'd thought having another pair of hands would give us a little breathing room.\n\nThen the customers kept coming, one after another. We barely had time for a proper conversation.\n\nBut after closing, I turned around and found the whole counter neatly tidied up.\n\nUsually, I'd still have so much to do on my own.\n\nHehe. I was tired, but it was rather lovely.\n\nHere's this week's tape.",
+        "signature": "— Xiaoman"
+      }
+    },
+    "4": {
+      "A": {
+        "title": "Dear shopkeeper,",
+        "body": "After mentioning supplies yesterday, I went back and made another list of what the bar needs.\n\nI used to write down only what was missing that day. Now I am planning ingredients for the weeks ahead.\n\nIt is tiring, but I am happy.\n\nThere is still so much you can teach me about running a shop.\n\nPlease do not feel you have to agree right away. You have your own business. We can talk when it suits you.\n\nHere is this week's tape. (´,,•ω•,,)♡\n\nI have enclosed this week's supply categories. Come and see me if you are interested.",
+        "signature": "— Xiaoman"
+      },
+      "B": {
+        "title": "Dear shopkeeper,",
+        "body": "After closing last night, I wrote our two shops' supply arrangement into my ledger.\n\nNow we are officially business partners.\n\nThere is still so much you can teach me about running a shop.\n\nAnd if anything comes up at your shop, come to me too! I will help however I can.\n\nNot long ago I only bought a little water from you and carried it home in one small bag.\n\nIf it turns into crates and crates one day, will your counter have room for them all...?\n\nBefore that, though, I need to work out the orders properly. We both have a good business to run.\n\nHere is this week's tape. (´,,•ω•,,)♡",
+        "signature": "— Xiaoman"
+      }
+    },
+    "5": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "The new drinks are finally on the menu!\n\nThe ingredients are rare stock from the new supplier.\n\nI tried several times, but something was always missing. Yesterday I mixed them again and could not help thinking: yes, this is it!\n\nThey are quite a bit dearer than the old drinks, though.\n\nBut everyone at the tavern has loved them.\n\nMaybe I have found my way into the upper-level market~\n\nHehe, I am feeling a little proud. (๑•́ ₃ •̀๑)\n\nThe supplier sent a huge sign, too. They said it would stand out by the entrance.\n\nI held it up to try it, and it covered the rain on the window perfectly.\n\n...In the end, I put it away in the cupboard.",
+        "signature": "— Xiaoman"
+      }
+    },
+    "6": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "Yesterday I mentioned sending a traveller your way. Back at the tavern, I suddenly remembered the first time I walked into your shop.\n\nI still did not know my way around. I only came in because the lights were on.\n\nIt was a pawnshop, but there was a cassette deck on the counter.\n\nEven then, your shop felt a little mysterious.\n\nI wonder if that traveller ever found it.\n\nIf he really came by, I hope he found something interesting too.\n\nMay your business keep getting better, senpai~\n\nHere is this week's tape.",
+        "signature": "— Xiaoman"
+      }
+    },
+    "7": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "A group photo arrived from my friends back home today.\n\nThey left a space for me and even drew me into it. It looks nothing like me!\n\nThey asked me to send a photo from the station, too.\n\nI looked through my album. Almost every recent photo was of bottles, glasses, or the rain on the window.\n\nIn the end, I just sent them one of the bar.\n\nThey replied, \"The tavern alone does not count! We want you in the next one!\"\n\nHonestly, I only wanted to show them my little tavern.\n\nHere is this week's tape.",
+        "signature": "— Xiaoman"
+      }
+    },
+    "8": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "A girl left a glittering hair clip on the counter last night.\n\nI was about to put it away for her when she hurried back.\n\nBut she did not ask about the clip. \"Will you have that drink with the cherry tomorrow?\"\n\nI said yes and handed it back.\n\nShe laughed. \"Keep it as a deposit for my next glass.\"\n\n...Hey, this is a tavern!\n\nFor a moment, though, I actually wondered how many credits it was worth.\n\nSenpai, this is all your fault. ( ˘•ω•˘ )\n\nOf course I gave it back in the end.\n\nHere is this week's tape.",
+        "signature": "— Xiaoman"
+      }
+    },
+    "9": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "I have had my eye on a new ice maker lately.\n\nIt holds twice as much as mine and is much quieter. The seller says it is perfect for a little tavern.\n\nI have even worked out where to put it.\n\nThe price is quite something, though.\n\nYesterday, while doing the accounts, I kept looking at its picture.\n\nIn the end, I decided to wait a little longer.\n\nI have only just opened. There are still so many things to spend money on.\n\nSaving up is such a pain~\n\nDo you ever feel that way too, senpai?",
+        "signature": "— Xiaoman"
+      }
+    },
+    "10": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "Remember the ice maker I mentioned last week?\n\nThe seller messaged me again today.\n\nApparently, if I pay the deposit now, delivery and installation are free.\n\nI even opened the payment screen.\n\nBut after thinking about it for ages, I closed it again.\n\nMy current machine is a bit noisy, but the ice it makes is still quite good.\n\nI will let it carry on working for now.\n\nWhen will I ever be able to stop worrying about credits?",
+        "signature": "— Xiaoman"
+      }
+    },
+    "11": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "Lately, after closing, I often sit behind the bar with the menu and supply invoices spread out together.\n\nThe drinks are the same, and I know they taste good.\n\nBut I can stare at the books for ages and still not see what went wrong.\n\nI used to think good drinks and caring for every customer would slowly make the shop better.\n\nRunning a shop is much harder than I imagined.\n\nWhen you first opened the pawnshop, did you have days when you did not know what to do?\n\nI remember eagerly inviting you over when I opened.\n\nThen, I just wanted you to see the tavern I had worked so hard to put together.\n\nNow, there is so much I really want to learn from you.\n\nI hope one day I can run my own little shop properly, like you.\n\n... It feels embarrassing to say this in person, so I will write it instead.",
+        "signature": "— Xiaoman"
+      }
+    },
+    "12": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "Lately I have been closing earlier, so I often go for a walk along the shopping street.\n\nWhen I first moved here, all the corridors looked the same. I could barely find my way back to where I lived.\n\nNow I know when every sign goes dark, and which vending machines stay lit.\n\nI have been here quite a while without even noticing, haven't I?\n\nI remember telling you I was still getting lost the first time I came into your shop.\n\nNow I could find my way with my eyes closed.",
+        "signature": "— Xiaoman"
+      }
+    },
+    "13": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "I booked my ticket home today.\n\nWhile I was packing, the man from the repair shop next door came to help move a cabinet. He asked if I still needed that blue lamp.\nI said he could have it. He said his daughter really liked the color.\nThen it turned out he meant the whole frame attached to the sign, not just the lamp.\n...He certainly knows what to pick.\nStill, at least I won't have to find a box that big.",
+        "signature": "— Xiaoman"
+      }
+    },
+    "14": {
+      "A": {
+        "title": "Dear senpai,",
+        "body": "When I checked the shelves for the last time, there were still enough ingredients for three drinks.\n\nI picked my three favorites, sealed them up, and left them with the tape.\n\nMom says the cherry blossoms back home are almost gone.\n\nI probably won't get there in time, but that is all right.\n\nThere will still be plenty of rainy days.\n\nBefore coming to this station, I never thought I would meet another person who listened to tapes in a pawnshop.\n\nSenpai, thank you for all this time.",
+        "signature": "— Xiaoman"
+      }
+    }
+  }
+}

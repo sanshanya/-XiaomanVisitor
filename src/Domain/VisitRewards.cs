@@ -206,7 +206,7 @@ namespace XiaomanVisitor
         }
         public static DrinkEffect ValidEffect(int value)
         {
-            return value >= (int)DrinkEffect.Luck && value <= (int)DrinkEffect.Scavenging ? (DrinkEffect)value : DrinkEffect.None;
+            return value >= (int)DrinkEffect.Luck && value <= (int)DrinkEffect.SaleIncome ? (DrinkEffect)value : DrinkEffect.None;
         }
     }
 

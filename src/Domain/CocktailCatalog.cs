@@ -2,7 +2,7 @@ using System.Linq;
 
 namespace XiaomanVisitor
 {
-    public enum DrinkEffect { None, Luck, TradeReputation, Scavenging }
+    public enum DrinkEffect { None, Luck, TradeReputation, Scavenging, SaleIncome }
 
     public sealed class CocktailSpec
     {
@@ -30,7 +30,8 @@ namespace XiaomanVisitor
         }
 
         public string ItemId { get { return XiaomanMod.Id + ".cocktail." + Key; } }
-        public string SpriteKey { get { return "xiaoman_cocktail_" + Key; } }
+        // The first-test unique drink reuses an approved glass; no fabricated new original artwork.
+        public string SpriteKey { get { return "xiaoman_cocktail_" + (Key=="roka" ? "spring_sway" : Key); } }
     }
 
     public static class CocktailCatalog
@@ -44,7 +45,7 @@ namespace XiaomanVisitor
             new CocktailSpec("sky_after_rain", DrinkEffect.TradeReputation, 2, 20, 25),
             new CocktailSpec("rainy_blue", DrinkEffect.TradeReputation, 1, 10, 10)
         };
-        public static readonly CocktailSpec[] All = Drinks.Concat(LuxuryDrinkCatalog.Standard).Concat(new[]{LuxuryDrinkCatalog.Improv}).ToArray();
+        public static readonly CocktailSpec[] All = Drinks.Concat(LuxuryDrinkCatalog.Standard).Concat(new[]{LuxuryDrinkCatalog.Improv,LuxuryDrinkCatalog.Roka}).ToArray();
         public static CocktailSpec Find(string key) { return All.FirstOrDefault(d => d.Key == key); }
     }
 
@@ -55,8 +56,9 @@ namespace XiaomanVisitor
             new CocktailSpec("spring_sway",DrinkEffect.TradeReputation,2,20,0,3,300)
         };
         public static readonly CocktailSpec Improv=new CocktailSpec("wonderland_improv",DrinkEffect.Luck,2,37,0,1,0);
+        public static readonly CocktailSpec Roka=new CocktailSpec("roka",DrinkEffect.SaleIncome,2,15,0,1,0);
         public static bool IsStandard(string key) { return Standard.Any(s => s.Key==key); }
-        public static bool IsLuxury(string key) { return IsStandard(key) || key==Improv.Key; }
+        public static bool IsLuxury(string key) { return IsStandard(key) || key==Improv.Key || key==Roka.Key; }
         public static bool OnMenu(string key,int day)
         { return CocktailCatalog.Drinks.Any(d => d.Key==key) || day>=LuxuryConfig.UnlockDay && IsStandard(key); }
     }

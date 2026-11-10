@@ -43,7 +43,8 @@ def read():
         for lang,value in [('zh',cn),('ja',jp)]:
             parts=value.split('\n\n');note[lang]=dict(title=parts[0],body='\n\n'.join(parts[1:-1]),signature=parts[-1])
         note['en']=english['letters'][variant];letters[variant]=note
-    return dict(lines=lines,letters=letters,source=SOURCE.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(text.encode('utf-8')).hexdigest())
+    import story_master_source
+    return story_master_source.apply(dict(lines=lines,letters=letters,source=SOURCE.relative_to(ROOT).as_posix(),sha256=hashlib.sha256(text.encode('utf-8')).hexdigest()),4)
 
 
 def generate():

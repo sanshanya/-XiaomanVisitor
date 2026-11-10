@@ -64,6 +64,23 @@
           "color": "#1B304A"
         }
       ]
+    },
+    {
+      "id": "settlement_notice",
+      "elements": [
+        {
+          "type": "text",
+          "id": "notice",
+          "x": 28,
+          "y": 32,
+          "w": 260,
+          "h": 340,
+          "fontSize": 11,
+          "loc": "ui_w12_notice",
+          "color": "#28466B",
+          "wrap": true
+        }
+      ]
     }
   ],
   "item": {

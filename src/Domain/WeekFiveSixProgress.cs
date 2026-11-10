@@ -17,12 +17,12 @@ namespace XiaomanVisitor
         public void Placed(bool placed) { if (Phase=="placing") { Phase=placed?"complete":"waiting";if (!placed) ItemId=0; } }
         public void Recover(bool found) { if (Phase=="placing") Phase=found?"complete":"uncertain"; }
         [JsonIgnore] public string Data { get { return JsonConvert.SerializeObject(this); } }
-        public static ImprovGiftProgress Restore(string raw)
+        public static ImprovGiftProgress Restore(string raw,string source="private_improv_visit_5")
         {
-            if (string.IsNullOrEmpty(raw)) return new ImprovGiftProgress();
+            if (string.IsNullOrEmpty(raw)) return new ImprovGiftProgress { Source=source };
             try {
                 var p=JsonConvert.DeserializeObject<ImprovGiftProgress>(raw);
-                if (p!=null && p.Schema==1 && (p.VisitDay==-1 || p.VisitDay>=1) && p.ItemId>=0 && p.Source=="private_improv_visit_5"
+                if (p!=null && p.Schema==1 && (p.VisitDay==-1 || p.VisitDay>=1) && p.ItemId>=0 && p.Source==source
                     && new[]{"waiting","placing","complete","uncertain"}.Contains(p.Phase)
                     && (p.Phase=="waiting" || p.ItemId>0 && p.VisitDay>0)) return p;
             } catch (JsonException) { }

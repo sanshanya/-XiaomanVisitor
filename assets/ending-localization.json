@@ -1,0 +1,29 @@
+{
+  "zh": {
+    "ui_w12_roka": "白天说的那杯酒",
+    "ui_w12_business": "最近的经营",
+    "ui_w12_notice_name": "结算通知",
+    "ui_w12_gift": "小满把《露华》留给了你。",
+    "ui_w13_records": "供销记录",
+    "ui_w12_notice": "企鹅资产公司 · 商户结算通知\n\n阶段性租金扶持附带营业业绩考核。未获减免的租金差额，按正式商户协议补缴。\n\n商户可提交营业记录及推广排期记录申请复核。\n\n小满已在整理材料，准备提出复核申请。",
+    "ui_w13_notice": "企鹅资产公司 · 商户复核结果\n\n推广排期可以调整；租金差额仍须按原约定结算。\n\n小满已核对剩余账目，决定停止营业，整理店内物品。"
+  },
+  "ja": {
+    "ui_w12_roka": "昼間に話したお酒",
+    "ui_w12_business": "最近のお店のこと",
+    "ui_w12_notice_name": "精算通知",
+    "ui_w12_gift": "みちるから「露華」を受け取りました。",
+    "ui_w13_records": "取引の記録",
+    "ui_w12_notice": "ペンギン資産会社 · 商店精算通知\n\n段階的な家賃支援には売上の審査条件があります。免除されなかった家賃の差額は、正式な契約に従い精算してください。\n\n売上と宣伝予定の記録を添えて、再審査を申請できます。\n\nみちるは記録を整理し、再審査の申請を準備しています。",
+    "ui_w13_notice": "ペンギン資産会社 · 再審査結果\n\n宣伝予定は変更できますが、家賃の差額は元の契約に従い精算してください。\n\nみちるは残りの帳簿を確かめ、営業をやめて荷物を整理することにしました。"
+  },
+  "en": {
+    "ui_w12_roka": "The drink you mentioned",
+    "ui_w12_business": "How business is going",
+    "ui_w12_notice_name": "Settlement notice",
+    "ui_w12_gift": "Xiaoman left you Dew Blossom.",
+    "ui_w13_records": "Supply records",
+    "ui_w12_notice": "Tenquin Asset Corporation · Merchant Settlement Notice\n\nTemporary rent support is subject to sales performance requirements. Any rent difference not waived must be settled under the signed agreement.\n\nMerchants may request a review by submitting their sales records and promotion schedules.\n\nXiaoman is gathering her records to request a review.",
+    "ui_w13_notice": "Tenquin Asset Corporation · Review Result\n\nPromotion schedules may be adjusted. The rent difference must still be settled under the original agreement.\n\nXiaoman has checked the remaining accounts and decided to stop trading and pack up the tavern."
+  }
+}

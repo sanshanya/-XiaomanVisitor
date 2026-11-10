@@ -51,7 +51,7 @@ namespace XiaomanVisitor
 
         private void BuyTavernDrink(string key)
         {
-            if (!TavernMayAct || tavernActionBusy || TavernDialogueBusy) return;
+            if (!TavernMayAct || !TavernTrading || tavernActionBusy || TavernDialogueBusy) return;
             var progress=ReadTavern();
             int day=StoreStation.Instance.dayCounter;
             var spec=CocktailCatalog.Find(key);

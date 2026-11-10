@@ -34,6 +34,7 @@ internal static class CheckMod
         if (scan.Refused || scan.Capabilities.Except(manifest.Capabilities).Any()) return 2;
         if (scan.Pending.Count > 0) return 2;
         CheckStory.Run(package, Require); WeekOneChecks.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require); WeekFourChecks.Run(package,Require); WeekFiveSixChecks.Run(Require); WeekSevenEightChecks.Run(Require); WeekNineChecks.Run(Require); WeekTenChecks.Run(Require); WeekElevenChecks.Run(Require);
+        EndingChecks.Run(Require);
         Console.WriteLine("PASS: " + assertions + " assertions; native manifest, capability scanner and paper parser accepted.");
         return 0;
     }
@@ -624,7 +625,7 @@ internal static class CheckMod
         foreach (StoryEpisode episode in StoryCatalog.Episodes)
         {
             var letter = ModHelper.ParsePaperBook(File.ReadAllText(Path.Combine(package, "Books", episode.NoteId + ".json")));
-            Require(letter != null && letter.pages.Count == (episode.Index==4?2:1) && letter.id == episode.NoteId
+            Require(letter != null && letter.pages.Count == (episode.Index==4 || episode.Index==12?2:1) && letter.id == episode.NoteId
                 && letter.item.id == XiaomanMod.Id + "." + episode.NoteId, "native story letter/item binding");
         }
     }

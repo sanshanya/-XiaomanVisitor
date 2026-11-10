@@ -56,7 +56,7 @@ namespace XiaomanVisitor
                 && (long)l.WaterFromPlayer+l.WaterPurchased==l.WaterUsed && (long)l.JuiceFromPlayer+l.JuicePurchased==l.JuiceUsed
                 && l.CommonPaid==(long)l.WaterPurchased*l.WaterUnitCost+(long)l.JuicePurchased*l.JuiceUnitCost && l.RarePaid>0)
                 && CompanyLots.GroupBy(l => l.Id).All(g => g.Count()==1)
-                && Batches.All(b => b!=null && b.WholesalePrice>0 && CocktailCatalog.Find(b.Key)!=null && b.Key!=LuxuryDrinkCatalog.Improv.Key
+                && Batches.All(b => b!=null && b.WholesalePrice>0 && (CocktailCatalog.Drinks.Any(d => d.Key==b.Key) || LuxuryDrinkCatalog.IsStandard(b.Key))
                     && (!LuxuryDrinkCatalog.IsStandard(b.Key) || CompanyLots.Count(l => l.Id==b.CompanyLot && l.Id==b.Id && l.Key==b.Key)==1))
                 && CompanyLots.All(l => Batches.Count(b => b.Id==l.Id && b.CompanyLot==l.Id)==1);
         }
