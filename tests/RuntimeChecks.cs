@@ -469,6 +469,7 @@ internal static class CheckMod
 
     private static void CheckTavernProgress()
     {
+        TavernMenuChecks.Run(Require);
         WeekTwoChecks.Run(package,Require);
         WeekThreeChecks.Run(package,Require);
         foreach (int height in new[] { 540,720,900,1080,1440,2160 }) {

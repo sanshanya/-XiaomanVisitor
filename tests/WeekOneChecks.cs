@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using HarmonyLib;
 using Newtonsoft.Json;
 using XiaomanVisitor;
 
@@ -37,13 +38,22 @@ internal static class WeekOneChecks
         var full = Enumerable.Range(0, 4).Select(i => new StoreEvent { identifier = "native_" + i }).ToList();
         check(ReferenceEquals(full, XiaomanNewspaper.Append(full, article)), "full native newspaper never loses an existing article");
 
-        var flags = BindingFlags.Static | BindingFlags.NonPublic;
-        var rendering = typeof(XiaomanNewspaper).GetField("Rendering", flags);
-        object[] before = { false };
-        typeof(XiaomanNewspaperScopePatch).GetMethod("Prefix", flags).Invoke(null, before);
-        var error = new InvalidOperationException("simulated newspaper failure");
-        object result = typeof(XiaomanNewspaperScopePatch).GetMethod("Finalizer", flags).Invoke(null, new[] { (object)error, before[0] });
-        check(!(bool)rendering.GetValue(null) && ReferenceEquals(result, error), "failed newspaper rendering clears its scope without swallowing the native error");
-        Console.WriteLine("PASS: W01 cassette dialogue, reused voice, deferred subtitles, retained drink rewards, day-three renovation and non-destructive newspaper scope.");
+        Exception failure=null;
+        check(ReferenceEquals(original,XiaomanNewspaper.DisplayEvents(original,() => { throw new InvalidOperationException("article unavailable"); },e => failure=e))
+            && failure!=null && original.Count==1,"mod article failures preserve the complete native newspaper input");
+        var quiet=new List<StoreEvent>();
+        check(ReferenceEquals(quiet,XiaomanNewspaper.DisplayEvents(quiet,() => new StoreEvent[]{null})),
+            "expired mod news leaves an empty native input intact for the game's AllQuiet fallback");
+        var read=typeof(StoreEventManager).GetMethod(nameof(StoreEventManager.GetActiveEvents));
+        var display=typeof(XiaomanNewspaper).GetMethod("GetDisplayEvents",BindingFlags.NonPublic|BindingFlags.Static);
+        var instructions=PatchProcessor.GetOriginalInstructions(typeof(NewsUIManager).GetMethod(nameof(NewsUIManager.PopulateUI))).ToArray();
+        var patched=XiaomanNewspaperPopulatePatch.Transpiler(instructions).ToArray();
+        check(instructions.Count(i => i.Calls(read))==1 && patched.Count(i => i.Calls(display))==1 && !patched.Any(i => i.Calls(read))
+            && patched.Length==instructions.Length,"installed native PopulateUI changes exactly its own event read, retaining its click, layout and AllQuiet flow");
+        check(!typeof(XiaomanMod).Assembly.GetTypes().Where(t => t.IsDefined(typeof(HarmonyPatch),false))
+            .Select(t => ((HarmonyPatch)t.GetCustomAttributes(typeof(HarmonyPatch),false).Single()).info)
+            .Any(p => p.declaringType==typeof(StoreEventManager) && p.methodName==nameof(StoreEventManager.GetActiveEvents)),
+            "newspaper has no process-wide GetActiveEvents hook or leaked rendering flag");
+        Console.WriteLine("PASS: W01 dialogue, native newspaper read isolation, exception fallback, expiration and vanilla click/layout preservation.");
     }
 }

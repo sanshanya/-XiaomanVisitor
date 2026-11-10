@@ -1,12 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using HarmonyLib;
 
 namespace XiaomanVisitor
 {
     public sealed partial class XiaomanMod
     {
+        internal void NewspaperTrace(string state)
+        {
+            if (enabled && PlayerStore.HasInstance && StoreStation.Instance!=null)
+                Log.Log("Newspaper "+state+" on day "+StoreStation.Instance.dayCounter+".");
+        }
         internal StoreEvent LoungeExtensionNews()
         {
             if (!enabled || !PlayerStore.HasInstance || StoreStation.Instance==null || !WeekElevenRules.HasExtensionNews(StoreStation.Instance.dayCounter)) return null;
@@ -27,8 +33,6 @@ namespace XiaomanVisitor
 
     public static class XiaomanNewspaper
     {
-        internal static bool Rendering;
-
         internal static StoreEvent Article(string id,string title,string body,int first,int duration)
         {
             return new StoreEvent { identifier=id,newsName=title,newsDescription=body,
@@ -51,34 +55,56 @@ namespace XiaomanVisitor
         // Only a newspaper-view copy is changed, never the world's active events.
         public static List<StoreEvent> Append(List<StoreEvent> events, StoreEvent article)
         {
-            if (events == null || article == null || events.Any(e => e.identifier == article.identifier)
-                || events.Count(e => !e.isHiddenFromNewsPaper) >= 4) return events;
+            if (events == null || article == null || events.Any(e => e!=null && e.identifier == article.identifier)
+                || events.Count(e => e!=null && !e.isHiddenFromNewsPaper) >= 4) return events;
             var copy = new List<StoreEvent>(events);
             copy.Add(article);
             return copy;
         }
+        public static List<StoreEvent> DisplayEvents(List<StoreEvent> native,Func<IEnumerable<StoreEvent>> articles,Action<Exception> failed=null)
+        {
+            try {
+                var display=native;
+                foreach (var article in articles()) display=Append(display,article);
+                return display;
+            }
+            catch (Exception error) { failed?.Invoke(error);return native; }
+        }
+        internal static List<StoreEvent> GetDisplayEvents(StoreEventManager manager)
+        {
+            // Called only at PopulateUI's own read. All other event consumers
+            // and the native newspaper click/toggle/fallback retain vanilla data.
+            return DisplayEvents(manager.GetActiveEvents(),() => new[] {
+                XiaomanMod.Instance?.RenovationNews(),XiaomanMod.Instance?.LoungeExtensionNews(),
+                XiaomanMod.Instance?.LoungeOpeningNews(),XiaomanMod.Instance?.SupportNews()
+            },error => XiaomanMod.Instance?.Log.Warning("Newspaper uses native articles: "+error));
+        }
     }
 
     [HarmonyPatch(typeof(NewsUIManager), nameof(NewsUIManager.PopulateUI))]
-    public static class XiaomanNewspaperScopePatch
+    public static class XiaomanNewspaperPopulatePatch
     {
-        private static void Prefix(out bool __state)
-        { __state = XiaomanNewspaper.Rendering; XiaomanNewspaper.Rendering = true; }
-        private static Exception Finalizer(Exception __exception, bool __state)
-        { XiaomanNewspaper.Rendering = __state; return __exception; }
+        public static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        {
+            var code=instructions.Select(i => new CodeInstruction(i)).ToList();
+            var read=AccessTools.Method(typeof(StoreEventManager),nameof(StoreEventManager.GetActiveEvents));
+            var matches=code.Where(i => i.Calls(read)).ToArray();
+            if (matches.Length!=1) return code;
+            matches[0].opcode=OpCodes.Call;
+            matches[0].operand=AccessTools.Method(typeof(XiaomanNewspaper),nameof(XiaomanNewspaper.GetDisplayEvents));
+            return code;
+        }
+        private static void Postfix() { XiaomanMod.Instance?.NewspaperTrace("rendered"); }
+        private static Exception Finalizer(Exception __exception)
+        {
+            if (__exception!=null) XiaomanMod.Instance?.Log.Warning("Native newspaper rendering failed: "+__exception);
+            return __exception;
+        }
     }
 
-    [HarmonyPatch(typeof(StoreEventManager), nameof(StoreEventManager.GetActiveEvents))]
-    public static class XiaomanNewspaperEventsPatch
+    [HarmonyPatch(typeof(NewsPaper),nameof(NewsPaper.OnClick))]
+    public static class XiaomanNewspaperClickPatch
     {
-        private static void Postfix(ref List<StoreEvent> __result)
-        {
-            if (!XiaomanNewspaper.Rendering) return;
-            __result = XiaomanNewspaper.Append(__result, XiaomanMod.Instance?.RenovationNews());
-            // Every article enforces its own calendar window before being appended.
-            __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.LoungeExtensionNews());
-            __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.LoungeOpeningNews());
-            __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.SupportNews());
-        }
+        private static void Prefix() { XiaomanMod.Instance?.NewspaperTrace("click received"); }
     }
 }

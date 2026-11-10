@@ -286,7 +286,7 @@ ui_tavern_help_confirm,Hand over the menu
 ui_tavern_help_skip,Not right now
 ui_tavern_drunk_today,You've already had a glass today.
 ui_tavern_one_glass,One glass per day. Enjoy it here.
-ui_tavern_confirm_drink,Buy and drink
+ui_tavern_confirm_drink,Pay
 ui_tavern_payment_pending,This payment is still being checked.
 xm_03_03,Making drinks and looking after the customers on my own… Sometimes I can hardly keep up.
 xm_03_04,"If you're free tonight, could you give me a hand? I'll pay you, of course! I can't just take up your time for nothing."

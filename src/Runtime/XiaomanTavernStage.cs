@@ -264,8 +264,7 @@ namespace XiaomanVisitor
             if (mod == null || actor == null) return;
             Layout();
             conversationBottom=ConversationBottom();
-            choices.Tick(actor.rectTransform,actorRest,conversationBottom);
-            speech.PrepareLayout(choices.Visible ? choices.Root : actionPanel,choices.Visible);
+            speech.PrepareLayout(actionPanel==ControlRoot?null:actionPanel);
         }
 
         private void LateUpdate()
@@ -278,6 +277,7 @@ namespace XiaomanVisitor
             if (music!=null)
                 music.volume=Mathf.Clamp01(EmporiumOption.Instance.musicVolume)*(busy ? .4f : 1f);
             speech.Tick(actor.rectTransform, busy, mod.VoiceWait.Value, actorRest,conversationBottom);
+            choices.Tick(actor.rectTransform,actorRest,conversationBottom,speech.OccupiedBounds);
             int mouth = 0;
             if (busy) {
                 ApplyVoiceVolume();

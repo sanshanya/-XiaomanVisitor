@@ -173,6 +173,7 @@ namespace XiaomanVisitor
             bool drinks=page=="drinks" || page=="luxury";
             bool supply=page.StartsWith("supply") || page=="support_news";
             if (!drinks && !supply) return;
+            bool fresh=tavernMenu==null || !tavernMenu.IsAlive;
             CustomUIBuilder builder;
             if (tavernMenu!=null && tavernMenu.IsAlive) {
                 CustomUIBuilder.ClearContainer(tavernMenu.ContentRoot);
@@ -181,43 +182,54 @@ namespace XiaomanVisitor
             else {
                 builder=CustomUIManager.Window(TavernMenuId,Text("ui_tavern_name"),"meta");
                 tavernMenu=builder.Handle;
-                builder.SetDraggable(false).OnClose(() => { tavernMenuPage=null; tavernStage?.AttachPanel(tavernPanel?.Rect); });
+                builder.SetDraggable(true).OnClose(() => { tavernMenuPage=null; tavernStage?.AttachPanel(tavernPanel?.Rect); });
             }
             tavernMenu.SetTitle(Text(drinks?"ui_tavern_menu":"ui_tavern_name"));
             if (supply) { builder.SetSize(420,620);BuildSupplyMenu(builder,page); }
             else BuildTavernDrinkMenu(builder,page=="luxury");
             builder.Show();tavernMenuPage=page;
             var rect=tavernMenu.Rect;
-            rect.anchorMin=rect.anchorMax=rect.pivot=drinks?new Vector2(.5f,.5f):new Vector2(1,.5f);
-            rect.anchoredPosition=drinks?Vector2.zero:new Vector2(-24,0);
+            if (fresh) {
+                rect.anchorMin=rect.anchorMax=rect.pivot=drinks?new Vector2(.5f,.5f):new Vector2(1,.5f);
+                rect.anchoredPosition=drinks?Vector2.zero:new Vector2(-24,0);
+            }
             // Every tool window participates in speech avoidance, including supply.
             tavernStage.AttachPanel(rect);
         }
         private void BuildTavernDrinkMenu(CustomUIBuilder builder,bool luxury)
         {
             var progress=ReadTavern();
-            Action<string,Action> button=(key,click) => { builder.AddButton(Text(key),() => { if (!TavernDialogueBusy && !tavernActionBusy) click(); }); builder.Last.SetPreferredSize(334,48); };
+            var skin=XiaomanTavernMenuSkin.Read();skin?.Window(tavernMenu);
+            Action<string,Action> button=(key,click) => { builder.AddButton(Text(key),() => { if (!TavernDialogueBusy && !tavernActionBusy) click(); }); builder.Last.SetPreferredSize(334,48);skin?.Button(builder.Last); };
             builder.AddLabel(Text("ui_tavern_cash",PlayerStore.Instance.GetCash()));
+            skin?.Label(builder.Last);
             builder.AddLabel(Text(progress.Drank(StoreStation.Instance.dayCounter)?"ui_tavern_drunk_today":"ui_tavern_one_glass"));
+            skin?.Label(builder.Last);
             float available=((RectTransform)tavernMenu.Rect.parent).rect.width;
             int columns=luxury?2:available<900?3:6;
             float menuWidth=Mathf.Min(luxury?560:1140,available*.94f),cardWidth=(menuWidth-60-(columns-1)*10)/columns;
             bool hasLuxury=StoreStation.Instance.dayCounter>=LuxuryConfig.UnlockDay;
-            builder.SetSize(menuWidth,luxury?510:columns==6?(hasLuxury?510:440):(hasLuxury?800:740));
-            builder.BeginGrid(columns,cardWidth,luxury?320:292,10);
+            builder.SetSize(menuWidth,luxury?560:columns==6?(hasLuxury?550:490):(hasLuxury?870:810));
+            float cardHeight=luxury?310:286;
+            builder.BeginGrid(columns,cardWidth,cardHeight+46,10);
             var supply=ReadSupply();
             foreach (var spec in (luxury?LuxuryDrinkCatalog.Standard:CocktailCatalog.Drinks).OrderBy(d => d.Tier)) {
                 string key=spec.Key;
-                builder.BeginPanel(cardWidth,luxury?320:292,padding:8,spacing:5);
+                builder.BeginColumn(6);
+                builder.BeginPanel(cardWidth,cardHeight,alignment:TextAnchor.UpperCenter,padding:8,spacing:5);
+                skin?.Card(builder.Last);
                 builder.AddLabel(Text("cocktail_"+key+"_name"));builder.Last.SetPreferredSize(cardWidth-16,32);
+                skin?.Label(builder.Last,true);
                 builder.AddImage(Id+":"+spec.SpriteKey,36,72).WithTooltip(Text("cocktail_"+key+"_desc"));
-                builder.AddLabel(TavernPrices.For(spec)+" CR");
-                if (luxury) builder.AddLabel(Text("ui_w05_stock",supply.Batches.Where(b => b.Key==key).Sum(b => b.StoreRemaining)));
-                builder.AddLabel(Text("drink_tier_"+spec.Tier));
+                builder.AddLabel(TavernPrices.For(spec)+" CR");builder.Last.SetPreferredSize(cardWidth-16,24);skin?.Label(builder.Last);
+                if (luxury) { builder.AddLabel(Text("ui_w05_stock",supply.Batches.Where(b => b.Key==key).Sum(b => b.StoreRemaining)));builder.Last.SetPreferredSize(cardWidth-16,24);skin?.Label(builder.Last); }
+                builder.AddLabel(Text("drink_tier_"+spec.Tier));builder.Last.SetPreferredSize(cardWidth-16,24);skin?.Label(builder.Last);
                 builder.AddLabel(Text("drink_buff_"+spec.Effect.ToString().ToLowerInvariant(),spec.EffectAmount)+"\n"+Text("drink_buff_duration"));
-                builder.Last.SetPreferredSize(cardWidth-16,46);
+                builder.Last.SetPreferredSize(cardWidth-16,78);skin?.Label(builder.Last);
+                builder.End();
                 builder.AddButton(Text("ui_tavern_confirm_drink"),() => BuyTavernDrink(key));
-                builder.Last.SetPreferredSize(cardWidth-16,40).SetInteractable(!progress.Drank(StoreStation.Instance.dayCounter) && PlayerStore.Instance.GetCash()>=TavernPrices.For(spec) && (!luxury || supply.Batches.Any(b => b.Key==key && b.StoreRemaining>0)));
+                skin?.Button(builder.Last);
+                builder.Last.SetPreferredSize(cardWidth,40).SetInteractable(!progress.Drank(StoreStation.Instance.dayCounter) && PlayerStore.Instance.GetCash()>=TavernPrices.For(spec) && (!luxury || supply.Batches.Any(b => b.Key==key && b.StoreRemaining>0)));
                 builder.End();
             }
             builder.End();
@@ -279,6 +291,8 @@ namespace XiaomanVisitor
             CancelTavernWork();CloseTavernCassettePlayer();
             tavernLines.Clear(); tavernSequence=false; tavernInputBlocked=false; tavernDialogueDone=null;
             CloseTavernMenu(); tavernStage?.EndSession();
+            // Disable every owned hotspot even if a native travel callback is interrupted.
+            if (tavernStage!=null) tavernStage.gameObject.SetActive(false);
             tavernLocale=null;tavernActionBusy=false;
         }
     }

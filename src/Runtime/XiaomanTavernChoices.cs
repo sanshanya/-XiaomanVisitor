@@ -26,6 +26,7 @@ namespace XiaomanVisitor
         private bool dirty=true;
         private Vector2 previousSize,previousActor;
         private float previousBottom,previousScale;
+        private Rect? previousSpeech;
         internal bool Visible { get { return Root.gameObject.activeSelf; } }
         internal XiaomanTavernChoices(RectTransform room)
         {
@@ -69,7 +70,7 @@ namespace XiaomanVisitor
             if (choices==null || choices.Length==0 || choices.Length>4) throw new ArgumentException("One to four choices required");
             options=choices;
             dismiss=onDismiss;shownFrame=Time.frameCount;
-            dirty=true;
+            dirty=true;previousSpeech=null;
             for (int i=0;i<views.Length;i++) {
                 views[i].gameObject.SetActive(i<choices.Length);
                 if (i>=choices.Length) continue;
@@ -79,7 +80,7 @@ namespace XiaomanVisitor
             }
             Root.gameObject.SetActive(true);
         }
-        internal void Tick(RectTransform actor,Vector2 actorRest,float bottom)
+        internal void Tick(RectTransform actor,Vector2 actorRest,float bottom,Rect? speech)
         {
             if (!Visible) return;
             // Check only on release; a click which opens a new submenu must not
@@ -91,10 +92,15 @@ namespace XiaomanVisitor
                 if (!inside) { dismiss?.Invoke();return; }
             }
             Rect room=((RectTransform)Root.parent).rect;
+            // Keep the reserved column after the greeting fades; choices must
+            // not jump under the pointer just as the player is about to click.
+            if (!speech.HasValue && previousSize==room.size) speech=previousSpeech;
             float factor=EmporiumOption.DialogBubbleScale;
             if (!dirty && previousSize==room.size && previousActor==actor.rect.size
-                && Mathf.Approximately(previousBottom,bottom) && Mathf.Approximately(previousScale,factor)) return;
+                && Mathf.Approximately(previousBottom,bottom) && Mathf.Approximately(previousScale,factor)
+                && previousSpeech==speech) return;
             dirty=false;previousSize=room.size;previousActor=actor.rect.size;previousBottom=bottom;previousScale=factor;
+            previousSpeech=speech;
             float unit=room.height/1080f;
             scaler.Apply(unit*factor);
             float y=0,w=0;
@@ -109,10 +115,28 @@ namespace XiaomanVisitor
             }
             float heightTotal=Mathf.Max(0,y-6*unit);
             Root.sizeDelta=new Vector2(w,heightTotal);
-            float x=Mathf.Min(actorRest.x+actor.rect.width+12,room.width-w-12);
-            float top=Mathf.Min(-actorRest.y+actor.rect.height*.6f,bottom-heightTotal-8);
-            Root.anchoredPosition=new Vector2(Mathf.Max(8,x),-Mathf.Max(8,top));
+            Vector2 position=Place(room.size,new Vector2(actorRest.x+actor.rect.width,
+                -actorRest.y+actor.rect.height*.6f),new Vector2(w,heightTotal),speech,bottom,12*unit);
+            Root.anchoredPosition=new Vector2(position.x,-position.y);
         }
-        internal void Hide() { Root.gameObject.SetActive(false);options=new TavernChoice[0];dismiss=null; }
+        // The menu yields to the actual speech bounds; the speech never moves for it.
+        internal static Vector2 Place(Vector2 room,Vector2 preferred,Vector2 size,Rect? speech,float bottom,float gap)
+        {
+            float maxX=Mathf.Max(gap,room.x-size.x-gap),maxTop=Mathf.Max(gap,bottom-size.y-gap);
+            float x=Mathf.Clamp(preferred.x+gap,gap,maxX),top=Mathf.Clamp(preferred.y,gap,maxTop);
+            if (speech.HasValue) {
+                Rect line=speech.Value;
+                if (top<line.yMax+gap && top+size.y>line.yMin-gap) {
+                    if (line.xMax+gap<=maxX) x=Mathf.Max(x,line.xMax+gap);
+                    else {
+                        x=maxX;
+                        top=line.yMax+gap<=maxTop ? Mathf.Max(top,line.yMax+gap)
+                            : Mathf.Clamp(line.yMin-size.y-gap,gap,maxTop);
+                    }
+                }
+            }
+            return new Vector2(x,top);
+        }
+        internal void Hide() { Root.gameObject.SetActive(false);options=new TavernChoice[0];dismiss=null;previousSpeech=null; }
     }
 }
