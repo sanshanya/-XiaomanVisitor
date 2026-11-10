@@ -73,11 +73,11 @@ namespace XiaomanVisitor
         }
         internal StoreEvent SupportNews()
         {
-            if (!enabled || !PlayerStore.HasInstance || StoreStation.Instance.dayCounter<22) return null;
+            if (!enabled || !PlayerStore.HasInstance || StoreStation.Instance==null
+                || !SupportProgress.RegistrationOpen(StoreStation.Instance.dayCounter)) return null;
             var p=ReadSupport();
-            return new StoreEvent { identifier=Id+".w04.news",newsName=Text("xm_w04_news_title"),
-                newsDescription=Text("xm_w04_news_body")+"\n\n"+Text("ui_w04_phone",p.PhoneNumber>0?p.PhoneNumber:SupplyConfig.PhoneNumber),
-                eventType=StoreEvent.EventType.COSMETIC,eventArea=StoreEvent.EventArea.LOWER,startDay=22,duration=1,cooldown=0 };
+            return XiaomanNewspaper.SupportArticle(StoreStation.Instance.dayCounter,Text("xm_w04_news_title"),
+                Text("xm_w04_news_body")+"\n\n"+Text("ui_w04_phone",p.PhoneNumber>0?p.PhoneNumber:SupplyConfig.PhoneNumber));
         }
         private Dialogue SupportCall()
         {
@@ -87,23 +87,10 @@ namespace XiaomanVisitor
             Action end=() => PhoneUIManager.Instance.OnPhoneDialogEnd();
             if (!enabled || !SupportProgress.RegistrationOpen(day)) return line("xm_w04_phone_closed").SetEndAction(end);
             if (p.AppliedDay>=22) return line("ui_w04_registered").SetEndAction(end);
-            var first=line("xm_w04_phone_01");var second=line("xm_w04_phone_02");first.nextDialogue=second;
-            var yes=line("xm_w04_phone_confirm").SetStartAction(() => {
+            return line("xm_w04_phone_01").SetNextDialogue(SupportPhoneDialog.Choices((title,key) => new Dialogue().SetText(title??speaker,Text(key)),() => DirectoryMaster.Item("$"),() => {
+                if (!enabled) return;
                 var state=ReadSupport();if (state.Apply(StoreStation.Instance.dayCounter,WorkRunIdentity)) SaveSupport(state);
-            }).SetEndAction(end);
-            second.AddChoice(null,Text("ui_w04_apply"),"",yes);
-            second.AddChoice(null,Text("ui_w04_news"),"",new Dialogue().SetText(speaker,Text("xm_w04_news_body")).SetNextDialogue(SupportCallChoices()));
-            second.AddChoice(null,Text("ui_w04_cancel"),"",new Dialogue().SetText("","").SetEndAction(end));
-            return first;
-        }
-        private Dialogue SupportCallChoices()
-        {
-            var choice=new Dialogue().SetText(Text("ui_w04_phone_name"),Text("xm_w04_phone_02"));
-            choice.AddChoice(null,Text("ui_w04_apply"),"",new Dialogue().SetText(Text("ui_w04_phone_name"),Text("xm_w04_phone_confirm")).SetStartAction(() => {
-                var p=ReadSupport();if (p.Apply(StoreStation.Instance.dayCounter,WorkRunIdentity)) SaveSupport(p);
-            }).SetEndAction(() => PhoneUIManager.Instance.OnPhoneDialogEnd()));
-            choice.AddChoice(null,Text("ui_w04_cancel"),"",new Dialogue().SetText("","").SetEndAction(() => PhoneUIManager.Instance.OnPhoneDialogEnd()));
-            return choice;
+            },end));
         }
         private void QueueSupportVisitors(StoreClientManager manager)
         {

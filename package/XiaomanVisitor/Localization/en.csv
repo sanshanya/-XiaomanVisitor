@@ -124,11 +124,11 @@ story_note_09_title,"Dear senpai,"
 story_note_09_body,"I have had my eye on a new ice maker lately.\n\nIt holds twice as much as mine and is much quieter. The seller says it is perfect for a little tavern.\n\nI have even worked out where to put it.\n\nThe price is quite something, though.\n\nYesterday, while doing the accounts, I kept looking at its picture.\n\nIn the end, I decided to wait a little longer.\n\nI have only just opened. There are still so many things to spend money on.\n\nSaving up is such a pain~\n\nDo you ever feel that way too, senpai?"
 story_note_09_signature,— Xiaoman
 story_note_09_name,A note from Xiaoman
-xm_10_01,Good evening. Someone who'd visited before came back yesterday.
-xm_10_02,She brought a friend along. Both of them even remembered my name.
-xm_10_shop,I'd like some drinking water.
-story_note_10_title,"Dear shopkeeper,"
-story_note_10_body,"About the customers who came yesterday.\n\nThey said they could have taken the direct lift back to their dorm, but they made a detour to see me.\n\nOne wanted something sweet. The other insisted on something sour. Once I set both glasses down, they started swapping them.\n\nThey laughed so loudly and kept telling terrible jokes.\n\nI wish I could meet such friendly customers every day."
+xm_10_01,"Good evening, senpai. Have you heard of Polar Day, the lounge that opened last week? I went to have a look yesterday."
+xm_10_02,"Their bartending equipment is incredible, and the drinks are good too. No wonder so many people are lining up."
+xm_10_shop,I would like some drinking water today. I brought {0} credits.
+story_note_10_title,"Dear senpai,"
+story_note_10_body,"Remember the ice maker I mentioned last week?\n\nThe seller messaged me again today.\n\nApparently, if I pay the deposit now, delivery and installation are free.\n\nI even opened the payment screen.\n\nBut after thinking about it for ages, I closed it again.\n\nMy current machine is a bit noisy, but the ice it makes is still quite good.\n\nI will let it carry on working for now.\n\nWhen will I ever be able to stop worrying about credits?"
 story_note_10_signature,— Xiaoman
 story_note_10_name,A note from Xiaoman
 xm_11_01,Good evening. I've changed the opening hours on my door.
@@ -357,7 +357,7 @@ xm_tavern_w04_supply_yes,"Wonderful! We will follow the list, then. Hehe, I feel
 xm_tavern_w04_supply_later,Of course. No hurry. You have your own shop to look after.
 xm_w04_phone_01,"Hello. Tenquin Asset Corporation, Merchant Development."
 xm_w04_phone_02,Pre-assessment applications are open for our alcohol and tobacco retailer support programme. A representative can visit your shop.
-xm_w04_phone_confirm,Your application is registered. An assessor will visit tomorrow. The result will be sent this Friday.
+xm_w04_phone_confirm,Your application is registered. We will send an assessor to your shop tomorrow to review your eligibility. You will be notified of the final result this Friday.
 xm_w04_phone_closed,We are sorry. Registration for this round has closed.
 xm_w04_audit_01,"Hello. Tenquin Asset Corporation, Merchant Assessment. We arranged this visit yesterday."
 xm_w04_audit_02,I would like to see your alcohol and tobacco business. I can also buy suitable goods at normal prices.
@@ -491,3 +491,24 @@ xm_tavern_09_chat_02,I used to get so flustered when people came in at once. I c
 xm_tavern_09_chat_03,"At this rate, though, I might need another cabinet behind the bar."
 xm_w09_news_title,A new landmark: Polar Day Lounge opens
 xm_w09_news_body,"Polar Day, the new lounge from Tenquin Asset Corporation, opens today on the lower-level shopping street.\n\nThe venue features selected upper-level spirits, advanced bartending equipment and several opening-exclusive packages.\n\nDuring the opening promotion, all items are available at 30% of their usual price. The shopping-street guide terminals now feature the new venue.\n\nNew customers can enjoy drinks worth 500 credits free of charge.\n\nTenquin says it will continue upgrading the lower-level shopping street to offer residents and interstellar travellers a better experience."
+xm_10_03,"Ingredients that good, and everything at thirty percent of the usual price... Surely they cannot keep that up for long."
+xm_10_04,I ran into a few people who used to come to my tavern. They seemed quite happy to see me and said hello.
+xm_10_05,Bookings seem a little quieter lately. I want to watch for a few more days and wait for their promotion to end.
+xm_10_accept,Thank you. Just what I needed.
+xm_10_bye,"I should go. You are always welcome to come sit for a while tonight, senpai, if you have time."
+xm_10_01_late,"Good evening, senpai. Have you heard of Polar Day, the lounge that opened a little while ago? I went to have a look the other day."
+xm_tavern_10_chat_01,"Senpai, I have not been running short of ingredients for the new drinks lately."
+xm_tavern_10_chat_02,"Last week I was worried about running out, so I prepared extra. These past few days, more has been left over than I expected."
+xm_tavern_10_chat_03,"Luckily, some things keep for a long time. Otherwise it would be a bit of a waste."
+xm_tavern_10_chat_supported_01,"Senpai, lately I have been working out how much to order for the next batch again."
+xm_tavern_10_chat_supported_02,At least the business in hand is carrying on as usual. What I prepared is being used up little by little too.
+xm_tavern_10_chat_supported_03,I want to keep this pace for now and watch for a few more days.
+xm_tavern_10_chat_neutral_01,"Senpai, I want to think the next order through a little more carefully."
+xm_tavern_10_chat_neutral_02,"Some ingredients keep well; others need to be used while they are fresh. I will get things ready a little at a time, as needed."
+xm_tavern_10_chat_neutral_03,I will leave the menu as it is for now. I want to see how things go.
+xm_tavern_10_regular_01,"Senpai, someone who had been here before came back today, and brought a friend."
+xm_tavern_10_regular_02,"She said she could have taken the lift straight back to her dorm, but wanted to make a detour for a drink."
+xm_tavern_10_regular_03,"One wanted something sweet, the other something sour. Then once I served them, they started swapping drinks."
+xm_tavern_10_regular_04,Hehe. It really did make me happy.
+ui_w04_phone_agree,Agree
+ui_w04_phone_later,Another time

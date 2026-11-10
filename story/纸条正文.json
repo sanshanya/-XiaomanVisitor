@@ -153,11 +153,16 @@
     },
     {
       "visit": 10,
-      "ja": "昨日来てくれた、あの人たちのことです。\n\n直通のエレベーターなら寮まで帰れるのに、わざわざ寄り道してくれたんだそうです。\n\n一人は甘いのを、もう一人はどうしても酸っぱいのをって。二杯を置いたら、今度は交換して飲み始めました。\n\n大きな声で笑いながら、ずっとくだらない冗談を言っていました。\n\n毎日、あんな優しいお客さんに会えたらいいのに。",
-      "en": "About the customers who came yesterday.\n\nThey said they could have taken the direct lift back to their dorm, but they made a detour to see me.\n\nOne wanted something sweet. The other insisted on something sour. Once I set both glasses down, they started swapping them.\n\nThey laughed so loudly and kept telling terrible jokes.\n\nI wish I could meet such friendly customers every day.",
-      "zh": "昨天来的那几位客人。\n\n她们说，明明走直达梯就能回宿舍，那天还是特地绕了过来。\n\n一个人要喝甜的，一个人偏要酸的。等我把两杯都放下，她们又交换着喝。\n\n她们笑得太大声，一直在说冷笑话。\n\n要是每天都能遇到这样友好的客人就好了。",
-      "title_zh": "店长：",
-      "signature_zh": "——小满"
+      "ja": "先週話した、あの製氷機のこと、覚えていますか。\n\n今日、また売り手の方から連絡が来ました。\n\n今、手付金を払えば、配送も設置も無料にしてくれるそうです。\n\n支払いの画面まで開いたんですよ。\n\nでも、ずいぶん考えて、結局閉じてしまいました。\n\n今の機械は少しうるさいけど、できる氷は悪くないですし。\n\nしばらくは、もう少し働いてもらいましょう。\n\nいつになったら、クレジットを気にせず暮らせるのかな。",
+      "en": "Remember the ice maker I mentioned last week?\n\nThe seller messaged me again today.\n\nApparently, if I pay the deposit now, delivery and installation are free.\n\nI even opened the payment screen.\n\nBut after thinking about it for ages, I closed it again.\n\nMy current machine is a bit noisy, but the ice it makes is still quite good.\n\nI will let it carry on working for now.\n\nWhen will I ever be able to stop worrying about credits?",
+      "zh": "还记得上周说的那台制冰机吗？\n\n今天卖家又给我发消息了。\n\n说如果现在付定金，还可以免费送货和安装。\n\n我连付款的界面都打开了呢。\n\n结果想了半天，最后还是关掉了。\n\n现在这台机器虽然吵了点，不过做出来的冰倒还不错。\n\n暂时就让它继续工作吧。\n\n什么时候能够信用点自由呢。",
+      "title_zh": "致前辈：",
+      "signature_zh": "——小满",
+      "title_ja": "先輩へ",
+      "signature_ja": "みちる",
+      "title_en": "Dear senpai,",
+      "signature_en": "— Xiaoman",
+      "source": "story/第十周实现.json"
     },
     {
       "visit": 11,

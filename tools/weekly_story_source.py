@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCES = {5: '第五周实现.json', 6: '第六周实现.json', 7: '第七周实现.json', 8: '第八周实现.json', 9: '第九周实现.json'}
-WEEK_NAMES = {5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine'}
+SOURCES = {5: '第五周实现.json', 6: '第六周实现.json', 7: '第七周实现.json', 8: '第八周实现.json', 9: '第九周实现.json', 10: '第十周实现.json'}
+WEEK_NAMES = {5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten'}
 
 
 def read(visit):
@@ -17,8 +17,12 @@ def read(visit):
     assert chat['from_day'] > 0 and 0 <= chat['min_visit'] <= visit
     assert chat['keys'] and all(k.startswith('xm_tavern_') and k in data['lines'] for k in chat['keys'])
     for key, sequence in chat.get('sequences', {}).items():
-        assert key in chat['keys'] and sequence and sequence[0] == key
+        # Alternate sequences share a logical pool entry/receipt; they are not
+        # independently offered as extra conversations.
+        assert key in data['lines'] and sequence and sequence[0] == key
         assert len(set(sequence)) == len(sequence) and all(k in data['lines'] for k in sequence)
+    for key, delay in chat.get('encounter_delays', {}).items():
+        assert key in chat['keys'] and isinstance(delay, int) and 0 <= delay <= 6
     for key, row in list(data['lines'].items()):
         row['key'] = key
         if key.startswith('xm_tavern_') and chat['min_visit'] == 0:

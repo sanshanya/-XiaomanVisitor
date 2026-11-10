@@ -20,6 +20,9 @@ namespace XiaomanVisitor
         private readonly RectTransform[] rects=new RectTransform[4];
         private readonly DialogBubbleScaler scaler=new DialogBubbleScaler();
         private TavernChoice[] options=new TavernChoice[0];
+        private Action dismiss;
+        private int shownFrame;
+        private readonly Camera eventCamera;
         private bool dirty=true;
         private Vector2 previousSize,previousActor;
         private float previousBottom,previousScale;
@@ -31,6 +34,7 @@ namespace XiaomanVisitor
                 throw new InvalidOperationException("Native dialogue choices are not ready");
             Root=new GameObject("Xiaoman.NativeChoices",typeof(RectTransform)).GetComponent<RectTransform>();
             Root.SetParent(room,false);Root.anchorMin=Root.anchorMax=Root.pivot=new Vector2(0,1);
+            eventCamera=room.GetComponentInParent<Canvas>().worldCamera;
             Root.gameObject.SetActive(false);
             for (int i=0;i<views.Length;i++) {
                 var view=UnityEngine.Object.Instantiate(templates[0],Root,false);
@@ -60,10 +64,11 @@ namespace XiaomanVisitor
                 select.onClick.AddListener(() => { if (slot<options.Length) options[slot].Select?.Invoke(); });
             }
         }
-        internal void Show(TavernChoice[] choices)
+        internal void Show(TavernChoice[] choices,Action onDismiss)
         {
             if (choices==null || choices.Length==0 || choices.Length>4) throw new ArgumentException("One to four choices required");
             options=choices;
+            dismiss=onDismiss;shownFrame=Time.frameCount;
             dirty=true;
             for (int i=0;i<views.Length;i++) {
                 views[i].gameObject.SetActive(i<choices.Length);
@@ -77,6 +82,14 @@ namespace XiaomanVisitor
         internal void Tick(RectTransform actor,Vector2 actorRest,float bottom)
         {
             if (!Visible) return;
+            // Check only on release; a click which opens a new submenu must not
+            // immediately dismiss that submenu. Native backpack clicks still pass through.
+            if (Time.frameCount!=shownFrame && Input.GetMouseButtonUp(0)) {
+                bool inside=false;
+                for (int i=0;i<options.Length;i++)
+                    if (RectTransformUtility.RectangleContainsScreenPoint(rects[i],Input.mousePosition,eventCamera)) { inside=true;break; }
+                if (!inside) { dismiss?.Invoke();return; }
+            }
             Rect room=((RectTransform)Root.parent).rect;
             float factor=EmporiumOption.DialogBubbleScale;
             if (!dirty && previousSize==room.size && previousActor==actor.rect.size
@@ -100,6 +113,6 @@ namespace XiaomanVisitor
             float top=Mathf.Min(-actorRest.y+actor.rect.height*.6f,bottom-heightTotal-8);
             Root.anchoredPosition=new Vector2(Mathf.Max(8,x),-Mathf.Max(8,top));
         }
-        internal void Hide() { Root.gameObject.SetActive(false);options=new TavernChoice[0]; }
+        internal void Hide() { Root.gameObject.SetActive(false);options=new TavernChoice[0];dismiss=null; }
     }
 }

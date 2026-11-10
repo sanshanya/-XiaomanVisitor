@@ -132,6 +132,8 @@ namespace XiaomanVisitor
         internal void ClickTavernSpot(string spot)
         {
             if (!TavernMayAct || tavernActionBusy) return;
+            // A scene click outside the choice bubbles dismisses them only.
+            if (tavernStage!=null && tavernStage.ChoicesVisible) { CloseTavernMenu();return; }
             if (TavernDialogueBusy) { if (spot=="actor") AdvanceTavernSpeech(); return; }
             if (spot=="actor") {
                 CloseTavernMenu();
@@ -243,9 +245,14 @@ namespace XiaomanVisitor
             else if (page=="interaction") {
                 choice(Text("ui_tavern_chat"),() => {
                     int day=StoreStation.Instance.dayCounter;
-                    string key=ReadTavern().NextChat(day,ReadWork().WorkedOn(day),ReadStory().VisitIndex);
+                    var story=ReadStory();var progress=ReadTavern();var work=ReadWork();
+                    int encounterDay=story.Visits.FirstOrDefault(v => v.Index==10)?.Day ?? -1;
+                    string key=progress.NextChat(day,work.WorkedOn(day),story.VisitIndex,encounterDay);
                     string receipt=TavernProgress.ChatReceipt(key,day);
-                    CloseTavernMenu();QueueTavernSpeech(TavernDialogue.ChatSequence(key),() => UpdateTavern(p => { if (!p.ChatSeen.Contains(receipt)) p.ChatSeen.Add(receipt); }));
+                    string sequence=key==WeekTenDialogue.InventoryEntry ? WeekTenDialogue.InventorySequence(day,ReadSupply(),work,progress) : key;
+                    // Snapshot the chosen sequence now; all variants consume the
+                    // same logical entry, and only after the full speech finishes.
+                    CloseTavernMenu();QueueTavernSpeech(TavernDialogue.ChatSequence(sequence),() => UpdateTavern(p => { if (!p.ChatSeen.Contains(receipt)) p.ChatSeen.Add(receipt); }));
                 });
                 if (ReadTavern().MayHelp(StoreStation.Instance.dayCounter)) choice(Text("ui_tavern_reception"),() => {
                     CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w02_help_intro"},() => ShowTavernMenu("help"));
@@ -267,7 +274,7 @@ namespace XiaomanVisitor
                 choice(Text("ui_tavern_work_decline"),() => { CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w03_work_decline"}); });
             }
             tavernMenuPage=page;
-            tavernStage.ShowChoices(options.ToArray());
+            tavernStage.ShowChoices(options.ToArray(),CloseTavernMenu);
         }
         private void LeaveTavern()
         {

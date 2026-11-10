@@ -31,7 +31,7 @@ def main():
         placeholders = re.findall(r"\{\d+\}", texts["zh"][key])
         for lang in ('en','ja'):
             # Approved shopping subtitles deliberately omit the Japanese spoken budget.
-            expected=[] if key in ('xm_02_shop','xm_03_shop','xm_04_shop','xm_05_shop','xm_06_shop','xm_07_shop','xm_08_shop','xm_09_shop','xm_w04_audit_shop') and lang=='ja' else sorted(placeholders)
+            expected=[] if key in ('xm_02_shop','xm_03_shop','xm_04_shop','xm_05_shop','xm_06_shop','xm_07_shop','xm_08_shop','xm_09_shop','xm_10_shop','xm_w04_audit_shop') and lang=='ja' else sorted(placeholders)
             assert sorted(re.findall(r"\{\d+\}",texts[lang][key]))==expected,key
     assert texts["zh"]["gift_note_body"] == texts["zh"]["story_note_01_body"]
     assert texts["zh"]["gift_note_title"] == "致店长先生："

@@ -32,6 +32,7 @@ namespace XiaomanVisitor
             if (visit==5 && day>29 && new[]{"xm_05_01","xm_05_02","xm_05_03"}.Contains(key)) return key+"_late";
             if (visit==7 && day>43 && key=="xm_07_03" || visit==8 && day>50 && key=="xm_08_02") return key+"_late";
             if (visit==9 && day>57 && key=="xm_09_02") return key+"_late";
+            if (visit==10 && day>64 && key=="xm_10_01") return key+"_late";
             return visit==2 && key=="xm_02_02" && day>OpeningDay ? "xm_02_02_late" : key;
         }
         public static bool OpeningWeek(int day) { return day >= OpeningDay && day <= 14; }
@@ -110,10 +111,11 @@ namespace XiaomanVisitor
         }
         public static string ChatReceipt(string key,int day)
         { return key=="xm_tavern_w03_chat_after_work" ? key+"@"+day : key; }
-        public string NextChat(int day,bool workedToday=false,int visits=0)
+        public string NextChat(int day,bool workedToday=false,int visits=0,int encounterDay=-1)
         {
             var weeklyPool=TavernDialogue.WeeklyChatPool(day,visits);
-            if (weeklyPool!=null) return weeklyPool.FirstOrDefault(k => !ChatSeen.Contains(k)) ?? "xm_tavern_chat_rest";
+            if (weeklyPool!=null) return weeklyPool.FirstOrDefault(k => !ChatSeen.Contains(k)
+                && TavernDialogue.ChatReady(k,day,encounterDay)) ?? "xm_tavern_chat_rest";
             if (day>=15) {
                 string after="xm_tavern_w03_chat_after_work";
                 if (workedToday && !ChatSeen.Contains(ChatReceipt(after,day))) return after;

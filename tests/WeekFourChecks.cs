@@ -5,8 +5,39 @@ using XiaomanVisitor;
 
 internal static class WeekFourChecks
 {
+    private sealed class ChoiceItem : GameItem
+    {
+        public ChoiceItem() : base("phone_choice_test") { }
+        public override void Destroy() { }
+        public override void Validate() { }
+    }
     public static void Run(string package,Action<bool,string> check)
     {
+        check(XiaomanNewspaper.SupportArticle(21,"title","body")==null
+            && XiaomanNewspaper.SupportArticle(25,"title","body")==null
+            && XiaomanNewspaper.SupportArticle(31,"title","body")==null,
+            "W04 recruitment newspaper is absent before Monday and from Thursday onward, including next week");
+        foreach (int day in new[]{22,23,24}) {
+            var article=XiaomanNewspaper.SupportArticle(day,"title","body");
+            check(article!=null && article.startDay==22 && article.duration==3 && article.eventType==StoreEvent.EventType.COSMETIC,
+                "W04 recruitment newspaper shares the Monday-Wednesday application window");
+        }
+        var application=new SupportProgress();int ended=0;
+        // RichTextBuilder.SetText invokes Unity engine colour formatting. This
+        // checker has the real assemblies but no engine; supply plain line data.
+        Func<Dialogue> call=() => SupportPhoneDialog.Choices((title,key) => new Dialogue { title=title??"support",plainText=key },() => new ChoiceItem(),
+            () => application.Apply(22,"run"),() => ended++);
+        var phone=call();
+        check(phone.choices.Count==2 && phone.choices.All(c => c.Item1!=null && c.Item2.title=="PLAYER")
+            && phone.choices[0].Item2.plainText=="ui_w04_phone_agree" && phone.choices[1].Item2.plainText=="ui_w04_phone_later"
+            && application.AppliedDay==-1,"W04 native phone has two actual, correctly labelled PLAYER choices; opening never applies");
+        phone.choices[1].Item2.ExecuteEndAction();
+        check(application.AppliedDay==-1 && ended==1 && call().choices.Count==2,
+            "W04 later ends the call without applying, and a new call can still show the choices");
+        phone.choices[0].Item3();phone.choices[0].Item3();
+        phone.choices[0].Item2.nextDialogue.ExecuteEndAction();
+        check(application.AppliedDay==22 && application.AuditorDay==23 && ended==2,
+            "W04 only selecting agree immediately applies once and confirmation ends the phone conversation");
         foreach (int day in new[]{22,23,24}) {
             var p=new SupportProgress();check(p.Apply(day,"run") && !p.Apply(day,"run"),"W04 telephone confirmation is unique");
             p=SupportProgress.Restore(p.Data);

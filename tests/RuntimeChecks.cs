@@ -33,7 +33,7 @@ internal static class CheckMod
             Console.Error.WriteLine("PENDING (next API enforcement): " + finding);
         if (scan.Refused || scan.Capabilities.Except(manifest.Capabilities).Any()) return 2;
         if (scan.Pending.Count > 0) return 2;
-        CheckStory.Run(package, Require); WeekOneChecks.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require); WeekFourChecks.Run(package,Require); WeekFiveSixChecks.Run(Require); WeekSevenEightChecks.Run(Require); WeekNineChecks.Run(Require);
+        CheckStory.Run(package, Require); WeekOneChecks.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require); WeekFourChecks.Run(package,Require); WeekFiveSixChecks.Run(Require); WeekSevenEightChecks.Run(Require); WeekNineChecks.Run(Require); WeekTenChecks.Run(Require);
         Console.WriteLine("PASS: " + assertions + " assertions; native manifest, capability scanner and paper parser accepted.");
         return 0;
     }

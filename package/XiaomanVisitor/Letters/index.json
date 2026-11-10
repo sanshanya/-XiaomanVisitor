@@ -207,18 +207,18 @@
       "id": "story_note_10",
       "language": "zh",
       "file": "Letters/zh/story_note_10.png",
-      "sha256": "5332a7a1fbeb977a4810b152375f10adb583c21e9df2663305cee27bed17eb55",
-      "bytes": 59667,
-      "text_sha256": "cce58921e051d3afd56a505a353a608abc05402ae22bd861c7f644eae1006812",
+      "sha256": "98ac025dab04ecbdfeafcdc5169182848a138cd66cd2c9776ae6f8652f2e18f0",
+      "bytes": 71132,
+      "text_sha256": "960826371a5452e6843f0961d1602640ceb595f62bcda3c095d85c7e6871e3b5",
       "layout": {
         "font": "yozai",
         "visit": 10,
         "language": "zh",
-        "lines": 6,
-        "body_bottom": 382.22,
+        "lines": 8,
+        "body_bottom": 497.12,
         "available_bottom": 665,
         "fits": true,
-        "longest_line": 495.36
+        "longest_line": 440.28
       }
     },
     {
@@ -495,15 +495,15 @@
       "id": "story_note_10",
       "language": "ja",
       "file": "Letters/ja/story_note_10.png",
-      "sha256": "246cae3d36c4733bcfb01526e62fe52112a8efa3f6429bb4bc8a4c754178eedf",
-      "bytes": 72046,
-      "text_sha256": "aa106603063bfd56e68fb3ed95fa3e2b937cc3f79c41695cb1b42cab1181cd36",
+      "sha256": "1c3788b48ff8dd7dc54972d1a00ef0ec0e60c18b6ec176a73be0297d10ccac2c",
+      "bytes": 82997,
+      "text_sha256": "0c41ab4bd3e8b4c3201150e3fde609893e761e73877f6e0aed927899c2180e1f",
       "layout": {
         "font": "yozai",
         "visit": 10,
         "language": "ja",
-        "lines": 8,
-        "body_bottom": 439.1,
+        "lines": 9,
+        "body_bottom": 525.56,
         "available_bottom": 665,
         "fits": true,
         "longest_line": 495.36
@@ -783,18 +783,18 @@
       "id": "story_note_10",
       "language": "en",
       "file": "Letters/en/story_note_10.png",
-      "sha256": "f2ef4733457fa5e5174c4ab2b8a28d2abd76a66f955ac3d24bcb56cd90f8f4a9",
-      "bytes": 70852,
-      "text_sha256": "efe9a5541f513d1367b4c5f4e7d3520aff802e18b4b695af8e942912a2394233",
+      "sha256": "0def228ca7e54cd4e2191dedb8d831dfe7eda8f77bd6f6dffd2a9bd17cc99375",
+      "bytes": 73866,
+      "text_sha256": "915792ab3c2314bc21cba1c93513f2cefe12f2f2972d874e53fab435667d8834",
       "layout": {
         "font": "yozai",
         "visit": 10,
         "language": "en",
-        "lines": 8,
-        "body_bottom": 439.1,
+        "lines": 10,
+        "body_bottom": 554.0,
         "available_bottom": 665,
         "fits": true,
-        "longest_line": 465.75
+        "longest_line": 481.13
       }
     },
     {

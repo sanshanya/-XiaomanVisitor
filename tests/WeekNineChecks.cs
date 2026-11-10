@@ -20,10 +20,10 @@ internal static class WeekNineChecks
         var native=new List<StoreEvent> { new StoreEvent { identifier="native_story" },new StoreEvent { identifier="native_economy" },new StoreEvent { identifier="native_special" } };
         var opening=new StoreEvent { identifier=WeekNineRules.NewsId,eventType=StoreEvent.EventType.COSMETIC };
         var shown=XiaomanNewspaper.Append(native,opening);
-        var withOldSupport=XiaomanNewspaper.Append(shown,new StoreEvent { identifier=XiaomanMod.Id+".w04.news" });
+        var withOldSupport=XiaomanNewspaper.Append(shown,XiaomanNewspaper.SupportArticle(57,"expired","expired"));
         check(native.Count==3 && shown.Count==4 && ReferenceEquals(shown,withOldSupport)
             && shown.Take(3).SequenceEqual(native) && shown[3].identifier==WeekNineRules.NewsId,
-            "W09 takes this mod's spare news slot before ongoing support news and never changes native articles");
+            "W09 preserves native articles and expired W04 news cannot reappear alongside the new opening");
         check(ReferenceEquals(shown,XiaomanNewspaper.Append(shown,opening)),"W09 repeated paper refresh never duplicates the opening article");
 
         var tavern=new TavernProgress();string first="xm_tavern_09_chat_01";

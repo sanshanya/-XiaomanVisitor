@@ -35,6 +35,7 @@ namespace XiaomanVisitor
         private float idleStarted, roomScale;
         private float conversationBottom;
         internal bool Speaking { get { return speech!=null && speech.Visible; } }
+        internal bool ChoicesVisible { get { return choices!=null && choices.Visible; } }
 
         internal void Configure(XiaomanMod owner, RectTransform parent)
         {
@@ -70,7 +71,7 @@ namespace XiaomanVisitor
             choices = new XiaomanTavernChoices(room);
             nextBlink = Time.unscaledTime + 3f;
             ControlRoot=new GameObject("Xiaoman.TavernControls",typeof(RectTransform)).GetComponent<RectTransform>();
-            ControlRoot.SetParent(room,false);ControlRoot.anchorMin=ControlRoot.anchorMax=ControlRoot.pivot=new Vector2(0,0);
+            ControlRoot.SetParent(room,false);ControlRoot.anchorMin=ControlRoot.anchorMax=ControlRoot.pivot=new Vector2(1,0);
             Layout();
             Pose(Mood.Neutral, 0);
         }
@@ -122,7 +123,7 @@ namespace XiaomanVisitor
             PlaceHit(tapeHit,TavernSceneLayout.TapeX,TavernSceneLayout.TapeY,TavernSceneLayout.TapeWidth,TavernSceneLayout.TapeHeight,scale);
             if (ControlRoot!=null) {
                 float unit=room.rect.height/1080f;ControlRoot.localScale=Vector3.one*unit;
-                ControlRoot.sizeDelta=new Vector2(270,40);ControlRoot.anchoredPosition=new Vector2(18*unit,18*unit);
+                ControlRoot.sizeDelta=new Vector2(270,40);ControlRoot.anchoredPosition=new Vector2(-18*unit,18*unit);
             }
             LayoutWorkBar();
         }
@@ -181,7 +182,7 @@ namespace XiaomanVisitor
         internal void HideWorkProgress() { if (workBar!=null) workBar.gameObject.SetActive(false); }
 
         internal void AttachPanel(RectTransform panel) { actionPanel = panel; }
-        internal void ShowChoices(TavernChoice[] options) { choices.Show(options); }
+        internal void ShowChoices(TavernChoice[] options,Action onDismiss) { choices.Show(options,onDismiss); }
         internal void HideChoices() { choices?.Hide(); }
         private float ConversationBottom()
         {
@@ -264,7 +265,7 @@ namespace XiaomanVisitor
             Layout();
             conversationBottom=ConversationBottom();
             choices.Tick(actor.rectTransform,actorRest,conversationBottom);
-            speech.PrepareLayout(choices.Visible ? choices.Root : actionPanel);
+            speech.PrepareLayout(choices.Visible ? choices.Root : actionPanel,choices.Visible);
         }
 
         private void LateUpdate()

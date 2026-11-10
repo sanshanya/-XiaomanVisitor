@@ -33,6 +33,13 @@ namespace XiaomanVisitor
     {
         internal static bool Rendering;
 
+        public static StoreEvent SupportArticle(int day,string title,string body)
+        {
+            if (!SupportProgress.RegistrationOpen(day)) return null;
+            return new StoreEvent { identifier=XiaomanMod.Id+".w04.news",newsName=title,newsDescription=body,
+                eventType=StoreEvent.EventType.COSMETIC,eventArea=StoreEvent.EventArea.LOWER,startDay=22,duration=3,cooldown=0 };
+        }
+
         // Only a newspaper-view copy is changed, never the world's active events.
         public static List<StoreEvent> Append(List<StoreEvent> events, StoreEvent article)
         {
@@ -60,7 +67,7 @@ namespace XiaomanVisitor
         {
             if (!XiaomanNewspaper.Rendering) return;
             __result = XiaomanNewspaper.Append(__result, XiaomanMod.Instance?.RenovationNews());
-            // Date-specific opening news takes this mod's spare slot before its ongoing W04 article.
+            // Every article enforces its own calendar window before being appended.
             __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.LoungeOpeningNews());
             __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.SupportNews());
         }

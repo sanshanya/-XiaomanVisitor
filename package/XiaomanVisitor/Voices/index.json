@@ -110,42 +110,6 @@
       "generic": true
     },
     {
-      "line_key": "xm_10_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_10_01_9f63e2c0df23",
-      "spoken_text": "こんばんは。前に来たお客さんが、昨日また顔を出してくれたんです。",
-      "subtitle_templates": [
-        "晚上好。上次来过的一个客人，昨天又来了。",
-        "こんばんは。前に来たお客さんが、昨日また顔を出してくれたんです。",
-        "Good evening. Someone who'd visited before came back yesterday."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_10_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_10_02_c1102b3d5cae",
-      "spoken_text": "今度は友達も一緒で。 二人とも、わたしの名前を覚えてたんですよ。",
-      "subtitle_templates": [
-        "她还带了朋友。两个人居然都记得我的名字。",
-        "今度は友達も一緒で。二人とも、わたしの名前を覚えてたんですよ。",
-        "She brought a friend along. Both of them even remembered my name."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_10_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_10_shop_11ee1447f45c",
-      "spoken_text": "飲み水を少しお願いします。",
-      "subtitle_templates": [
-        "想买些饮用水。",
-        "飲み水を少しお願いします。",
-        "I'd like some drinking water."
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_11_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_11_01_11a85f0f60e1",
@@ -1022,8 +986,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 174,
+  "pending_lines": 196,
   "pending_by_language": {
-    "ja": 174
+    "ja": 196
   }
 }

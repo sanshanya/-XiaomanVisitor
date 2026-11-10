@@ -77,6 +77,11 @@ def generate(data):
     for key,name in sequences:
         code.append('if (key=='+json.dumps(key)+') return '+name+';')
     code.append('return new[]{key}; }')
+    code.append('public static bool ChatReady(string key,int day,int encounterDay) {')
+    for pool in data['chat_pools']:
+        for key,delay in pool.get('encounter_delays',{}).items():
+            code.append('if (key=='+json.dumps(key)+f') return encounterDay>0 && day>=System.Math.Max({pool["from_day"]+delay}L,(long)encounterDay+{delay});')
+    code.append('return true; }')
     code.append('public static string[] WeeklyChatPool(int day,int visits) {')
     for pool in reversed(data['chat_pools']):
         code.append(f'if (day>={pool["from_day"]} && visits>={pool["min_visit"]}) return Chat{pool["visit"]};')

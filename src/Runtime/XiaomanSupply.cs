@@ -110,7 +110,7 @@ namespace XiaomanVisitor
         {
             CloseTavernMenu();
             tavernStage.ShowChoices(new[]{new TavernChoice(Text("ui_w04_confirm")+" · "+quote+" CR",() => TradeSupplyInput(itemId,count,quote)),
-                new TavernChoice(Text("ui_w04_cancel"),() => ShowTavernMenu("supply_in"))});
+                new TavernChoice(Text("ui_w04_cancel"),() => ShowTavernMenu("supply_in"))},CloseTavernMenu);
         }
         private void TradeSupplyInput(int id,int count,int quote)
         {
@@ -133,7 +133,7 @@ namespace XiaomanVisitor
         private void ConfirmSupplyOutput(string batch)
         {
             CloseTavernMenu();tavernStage.ShowChoices(new[]{new TavernChoice(Text("ui_w04_confirm")+" · "+(ReadSupply().Batches.FirstOrDefault(v => v.Id==batch)?.WholesalePrice??0)+" CR",() => TradeSupplyOutput(batch)),
-                new TavernChoice(Text("ui_w04_cancel"),() => ShowTavernMenu("supply_out"))});
+                new TavernChoice(Text("ui_w04_cancel"),() => ShowTavernMenu("supply_out"))},CloseTavernMenu);
         }
         private void TradeSupplyOutput(string batch)
         {

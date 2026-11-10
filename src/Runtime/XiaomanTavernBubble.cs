@@ -109,7 +109,7 @@ namespace XiaomanVisitor
         }
 
         // Before the native width component's LateUpdate, so it lays out this frame.
-        internal void PrepareLayout(RectTransform panel)
+        internal void PrepareLayout(RectTransform panel,bool choiceMenu=false)
         {
             if (!Visible) return;
             RectTransform room = (RectTransform)root.parent;
@@ -119,7 +119,7 @@ namespace XiaomanVisitor
             float right = room.rect.width - 16f*unit;
             if (panel != null && panel.gameObject.activeInHierarchy) {
                 float edge = room.InverseTransformPoint(panel.TransformPoint(new Vector3(panel.rect.xMin, 0))).x + room.rect.width / 2;
-                if (edge>room.rect.width*.65f) right = Mathf.Min(right, edge - 16f*unit);
+                if (choiceMenu || edge>room.rect.width*.65f) right = Mathf.Min(right, edge - 16f*unit);
             }
             float available = Mathf.Max(120f*unit, right - 16f*unit);
             float maxWidth = Mathf.Min(430f*unit*EmporiumOption.DialogBubbleScale, available);
