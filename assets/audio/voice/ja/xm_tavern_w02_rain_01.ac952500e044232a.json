@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "65",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.981,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 383122
+  },
+  "sha256": "d05ef8602d370da2962a328232c9f1a48d5efff4a214f674058daed02696493c",
+  "binding": {
+    "key": "xm_tavern_w02_rain_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈在看窗户上的雨幕吗？这可是本店的独特设计哦。",
+      "ja": "先輩、窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
+      "en": "Looking at the rain on the window, senpai? It's one of my little touches for the tavern."
+    },
+    "generic": false
+  }
+}

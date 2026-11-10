@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "メニューはまだ変えずに、もう少し様子を見たいです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "48",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.035,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 241734
+  },
+  "sha256": "4e4e713f12e23bd14299e9f8d8923e57d767a66e6ec513bec5dfe957f29ef4c3",
+  "binding": {
+    "key": "xm_tavern_10_chat_neutral_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "酒单先不改，我还想再看看呢。",
+      "ja": "メニューはまだ変えずに、もう少し様子を見たいです。",
+      "en": "I will leave the menu as it is for now. I want to see how things go."
+    },
+    "generic": false
+  }
+}

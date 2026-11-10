@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩のお店にちょうどいい品物があったら、リストを作って定期的に仕入れさせてもらえませんか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "88",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.963,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 430252
+  },
+  "sha256": "8f4d7bab21dfc6c964645a20537c4225dfc9f90faf36f50bdecff0150e77596f",
+  "binding": {
+    "key": "xm_04_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈这里要是有合适的货，能不能按清单定期卖给我呢？",
+      "ja": "先輩のお店にちょうどいい品物があったら、リストを作って定期的に仕入れさせてもらえませんか？",
+      "en": "If you have suitable supplies, could I buy from you regularly, from a list?"
+    },
+    "generic": false
+  }
+}

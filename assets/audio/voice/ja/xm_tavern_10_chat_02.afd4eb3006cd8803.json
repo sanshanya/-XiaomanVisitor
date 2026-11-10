@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先週は足りないかもって多めに用意したのに、今週は思ったより残っちゃって。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "70",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.581,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 363948
+  },
+  "sha256": "9ffe91df2e413267fd0f669b84be35233abcc4800595ed75a95f2ca106402e9a",
+  "binding": {
+    "key": "xm_tavern_10_chat_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "上周还担心不够用，特地多准备了一些。结果这几天，剩下的比想象中多。",
+      "ja": "先週は足りないかもって多めに用意したのに、今週は思ったより残っちゃって。",
+      "en": "Last week I was worried about running out, so I prepared extra. These past few days, more has been left over than I expected."
+    },
+    "generic": false
+  }
+}

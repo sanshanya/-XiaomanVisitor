@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "桜を見るの、久しぶりだなあって。写真を見てたら、春みたいなお酒を作りたくなって。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "76",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.217,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 442462
+  },
+  "sha256": "d9ab938fbbc10d212b0881c74310c7eee9d2aeeddd02d85d2f681d74156ea0e2",
+  "binding": {
+    "key": "xm_12_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "好久没见到樱花了呀。看着那些照片，突然很想调一杯带着春天气息的酒。",
+      "ja": "桜を見るの、久しぶりだなあって。写真を見てたら、春みたいなお酒を作りたくなって。",
+      "en": "It has been so long since I saw cherry blossoms. Looking at those photos, I suddenly wanted to make a drink that tastes like spring."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "うちで作った飲み物も、先輩のお店に卸せますよ。えへへ、そうしたら、ちゃんとした商売仲間ですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "89",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.781,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 517548
+  },
+  "sha256": "89fa61eb0a5e380d458f6d905bbcc3c647d53bf36218823e228082c559f553b5",
+  "binding": {
+    "key": "xm_04_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我这边调好的饮品，也可以给前辈进货。嘿嘿，这样我们就算正式的生意伙伴啦。",
+      "ja": "うちで作った飲み物も、先輩のお店に卸せますよ。えへへ、そうしたら、ちゃんとした商売仲間ですね。",
+      "en": "You could stock the drinks I make, too. Hehe, we would be proper business partners!"
+    },
+    "generic": false
+  }
+}

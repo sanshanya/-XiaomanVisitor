@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、前に来たお客さんが、今日はお友達と一緒に来てくれたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "61",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.363,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 353452
+  },
+  "sha256": "1bc16639104c12d7db6f4d422588a171d7d6cb03b252b38ea65741fb135d6061",
+  "binding": {
+    "key": "xm_tavern_10_regular_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，今天有位以前来过的客人又来了，还带了朋友呢。",
+      "ja": "先輩、前に来たお客さんが、今日はお友達と一緒に来てくれたんです。",
+      "en": "Senpai, someone who had been here before came back today, and brought a friend."
+    },
+    "generic": false
+  }
+}

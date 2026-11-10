@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今夜はまだ一人で大丈夫そうです。先輩は、のんびり音楽でも聴いていってくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "77",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.001,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 432068
+  },
+  "sha256": "b1b8397062aded1ddbf3396c8210ff913a2d908e14337557a6f6a548ff3783de",
+  "binding": {
+    "key": "xm_tavern_w03_work_no_orders",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "今天暂时忙得过来。前辈来听听歌就好啦。",
+      "ja": "今夜はまだ一人で大丈夫そうです。先輩は、のんびり音楽でも聴いていってくださいね。",
+      "en": "I can manage for now. Just stay and enjoy the music."
+    },
+    "generic": false
+  }
+}

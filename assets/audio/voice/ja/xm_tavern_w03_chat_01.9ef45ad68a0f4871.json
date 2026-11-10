@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "110",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 12.526,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 601310
+  },
+  "sha256": "568307116da150d320b7a3ce258d8899dac557f0d5d426fea9c4c3f2668c5822",
+  "binding": {
+    "key": "xm_tavern_w03_chat_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈有没有发现？换班的时候，客人说话的声音特别热闹。等他们走了，雨幕的声音又会慢慢听清楚。",
+      "ja": "先輩、気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
+      "en": "Have you noticed? It's so lively when the shifts change. After everyone leaves, you can slowly hear the rain again."
+    },
+    "generic": false
+  }
+}

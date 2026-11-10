@@ -81,7 +81,7 @@ def main():
         audio_manifest = dict(version=version, voice="Ayano", language="ja", speed=1.1,
                               seconds=report["seconds"], alias={"xm_01_01": "intro_1"}, lines=[], sfx=["SFX/xm_shutter_knock.wav"])
         by_key = {row["key"]: row for row in report["lines"]}
-        index = [f"小满 v3.4 终版日语配音 / {version}", "", "Ayano；有效语速1.1倍。", ""]
+        index = [f"小满 v5.4 演出台本日语配音 / {version}", "", "Ayano；有效语速1.1倍；口头台词，不含纸条或其他人物。", ""]
         with zipfile.ZipFile(audio_archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
             for row in script["lines"]:
                 key = row["key"]
@@ -131,6 +131,8 @@ def main():
     if args.development:
         instructions = root / "docs/实机验收.md"
         if instructions.exists(): shutil.copyfile(instructions, output / "实机验收.md")
+        catalog=root/'.dev/reports/配音台词清单.csv'
+        if catalog.exists(): shutil.copyfile(catalog,output/catalog.name)
         print(json.dumps({k:v for k,v in release.items() if k != "files"}, ensure_ascii=False, indent=2))
         return
     vdf = output / "workshop-item.vdf.draft"

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "うん、ありがとう。ちょうどよかった。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "33",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.331,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 207952
+  },
+  "sha256": "fb7d612a740c89808f5e29d97abbe0d2fd874cb0a2d111da7ab792d2845976ae",
+  "binding": {
+    "key": "xm_14_accept",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "嗯，谢谢。正好。",
+      "ja": "うん、ありがとう。ちょうどよかった。",
+      "en": "Yes, thank you. Just right."
+    },
+    "generic": false
+  }
+}

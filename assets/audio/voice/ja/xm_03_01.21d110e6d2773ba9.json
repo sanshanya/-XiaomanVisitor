@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは、店長さん。またお邪魔しちゃいました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "45",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.534,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 265674
+  },
+  "sha256": "2893cdad66ba8209c5c7d69813667ac4149e888a49a841c21cd85fbc64e57b2b",
+  "binding": {
+    "key": "xm_03_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好，店长前辈。又来打扰啦。",
+      "ja": "こんばんは、店長さん。またお邪魔しちゃいました。",
+      "en": "Good evening, senpai. Here I am again."
+    },
+    "generic": false
+  }
+}

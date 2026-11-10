@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは、先輩。この前オープンした「きょくちゅう」っていうラウンジ、知っていますか？ 先日、見に行ってきたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "107",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 12.163,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 583852
+  },
+  "sha256": "a968e92bfbf0a8d8260519dd04dcfe4f9286918d3ab69a4f79db00c564a6a893",
+  "binding": {
+    "key": "xm_10_01_late",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好，前辈。你知道前阵子新开的那家叫「极昼」的酒廊吗？前些天我去看了看。",
+      "ja": "こんばんは、先輩。この前オープンした「極昼」っていうラウンジ、知っていますか？ 先日、見に行ってきたんです。",
+      "en": "Good evening, senpai. Have you heard of Polar Day, the lounge that opened a little while ago? I went to have a look the other day."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "まずは審査のやり直しを頼んでみます。約束された宣伝も、結局うちには回ってこなかったので。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "85",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.909,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 475666
+  },
+  "sha256": "880aee934e7449b33b683e0a2a5b9fb1f30d7f432ae5a6ce3eb5fd7b50e9a719",
+  "binding": {
+    "key": "xm_tavern_12_business_05",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我想先去申请复核。毕竟当初承诺的推广，后来一直没有排上。",
+      "ja": "まずは審査のやり直しを頼んでみます。約束された宣伝も、結局うちには回ってこなかったので。",
+      "en": "I want to ask for a review first. After all, the promotion they promised never came through."
+    },
+    "generic": false
+  }
+}

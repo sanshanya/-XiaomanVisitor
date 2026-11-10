@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "長く保存できる材料もあるから、助かってます。そうじゃなかったら、もったいないですもんね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "84",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.364,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 449528
+  },
+  "sha256": "ea8bef86ed0f2f7cc3e47ed1695245f725885153ed863d3725f77b9fdfcbbbb1",
+  "binding": {
+    "key": "xm_tavern_10_chat_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "还好有些东西能放很久。不然真有点浪费呢。",
+      "ja": "長く保存できる材料もあるから、助かってます。そうじゃなかったら、もったいないですもんね。",
+      "en": "Luckily, some things keep for a long time. Otherwise it would be a bit of a waste."
+    },
+    "generic": false
+  }
+}

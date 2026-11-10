@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "131",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 14.673,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 704350
+  },
+  "sha256": "1959154f3dfb937b183c0e1084a4058202967ec11ca60735abd5a3ea81fa7b14",
+  "binding": {
+    "key": "xm_tavern_05_daily",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "最近一直有人问那两款新酒呢。不过我还是想把原来的几款留在酒单上。毕竟不是每个人都喜欢喝贵的嘛。",
+      "ja": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+      "en": "People keep asking about the two new drinks. I still want to keep the old ones on the menu, though. Not everyone wants something expensive."
+    },
+    "generic": false
+  }
+}

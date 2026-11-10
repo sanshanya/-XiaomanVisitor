@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それじゃ……行きますね。先輩、元気で。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "33",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.508,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 264440
+  },
+  "sha256": "4a205706e197cb07cd8238859ba3d99b147d6579616168110cfa2cd1091a794b",
+  "binding": {
+    "key": "xm_14_bye",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那……我走啦。前辈，保重。",
+      "ja": "それじゃ……行きますね。先輩、元気で。",
+      "en": "Well... I should go. Take care, senpai."
+    },
+    "generic": false
+  }
+}

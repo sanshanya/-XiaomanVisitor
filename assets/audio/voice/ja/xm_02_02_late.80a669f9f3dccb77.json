@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ、そうだ……商業通路に小さなバーを開いたんです。最近、ようやくオープンしたんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "80",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.237,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 491410
+  },
+  "sha256": "8fd3cebf70b2ce2746f0d136175867093ef550d3e5d69afe25736d09a92216f2",
+  "binding": {
+    "key": "xm_02_02_late",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "对了……我在商业街开了间小酒馆。最近终于开业啦。",
+      "ja": "あ、そうだ……商業通路に小さなバーを開いたんです。最近、ようやくオープンしたんですよ。",
+      "en": "Oh, right… I've opened a little tavern on the shopping street. We finally opened recently."
+    },
+    "generic": false
+  }
+}

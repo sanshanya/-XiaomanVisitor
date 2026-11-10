@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "116",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 12.671,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 608274
+  },
+  "sha256": "48878f2117279ae272997498a73b20d371c5d347306fd8476776605989d8a31e",
+  "binding": {
+    "key": "xm_tavern_06_chat_01_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "最近来了不少从外面经过的旅客呢。有人只是等船，也有人专程绕过来喝一杯。",
+      "ja": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+      "en": "Quite a few passing travellers have come in lately. Some are waiting for their ships. Others make a special detour for a drink."
+    },
+    "generic": false
+  }
+}

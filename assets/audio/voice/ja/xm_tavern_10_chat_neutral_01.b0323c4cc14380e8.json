@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、次の仕入れは、もう少し丁寧に考えてみようと思っているんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "63",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.786,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 373768
+  },
+  "sha256": "8ee0e9e483c256f5f4c3ff21bf261c6b7637969068932497cbb2d83e0c76ec8e",
+  "binding": {
+    "key": "xm_tavern_10_chat_neutral_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，最近我想把下一批采购再算仔细一点。",
+      "ja": "先輩、次の仕入れは、もう少し丁寧に考えてみようと思っているんです。",
+      "en": "Senpai, I want to think the next order through a little more carefully."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、いらっしゃい。昼間に話したお酒、できましたよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "48",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.673,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 320350
+  },
+  "sha256": "1d41b687a152bae456b8140151edcf3ce2a5af9926d3bb57dc827ef650b44d30",
+  "binding": {
+    "key": "xm_tavern_12_roka_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈来啦。白天说的那杯酒，我已经调好了呢。",
+      "ja": "先輩、いらっしゃい。昼間に話したお酒、できましたよ。",
+      "en": "Welcome, senpai. The drink I told you about earlier is ready."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "63",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.79,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 373940
+  },
+  "sha256": "b3941718f438a38e313b996f41ecfadd8a5dc44158dc79f2182388ad33e04c11",
+  "binding": {
+    "key": "xm_tavern_w04_supply_later",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "好呀，不着急。前辈也有自己的店要忙嘛。",
+      "ja": "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
+      "en": "Of course. No hurry. You have your own shop to look after."
+    },
+    "generic": false
+  }
+}

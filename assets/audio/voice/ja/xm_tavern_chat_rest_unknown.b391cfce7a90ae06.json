@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "どうぞゆっくり。少し音楽でも聴きましょう。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "40",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.89,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 234770
+  },
+  "sha256": "cb09113c9a99f3ae90d3482fb13ee6ab02e908e1a7d95503871cd51ea32026e7",
+  "binding": {
+    "key": "xm_tavern_chat_rest_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "慢慢坐吧。一起听会儿音乐。",
+      "ja": "どうぞゆっくり。少し音楽でも聴きましょう。",
+      "en": "Make yourself comfortable. Let's listen for a while."
+    },
+    "generic": false
+  }
+}

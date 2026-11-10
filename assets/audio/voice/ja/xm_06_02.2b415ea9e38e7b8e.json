@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "昨日、星間旅行中のお客さんに、お酒を飲んだあと「この辺りでほかに寄るところは？」って聞かれて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "88",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.223,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 490732
+  },
+  "sha256": "a5bc9b8dd9582e5dcdde57cf7e49eaab037de3a6c2dbdf629c9b91b28feb5066",
+  "binding": {
+    "key": "xm_06_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "昨天有位星际旅客，喝完酒还问我，这附近有没有什么值得逛的地方。",
+      "ja": "昨日、星間旅行中のお客さんに、お酒を飲んだあと「この辺りでほかに寄るところは？」って聞かれて。",
+      "en": "Yesterday an interstellar traveller asked if there was anywhere nearby worth visiting after his drink."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ……クレジットが少し足りないみたいですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "41",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.781,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 229522
+  },
+  "sha256": "d375822a6a92565a4815a7b989c95461f03ed7425b013da407b42280b996831c",
+  "binding": {
+    "key": "xm_tavern_no_money",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "啊……信用点好像不太够呢。",
+      "ja": "あ……クレジットが少し足りないみたいですね。",
+      "en": "Oh… It looks like you're a little short on credits."
+    },
+    "generic": false
+  }
+}

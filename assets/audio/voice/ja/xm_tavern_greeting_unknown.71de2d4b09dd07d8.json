@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "72",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.599,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 412792
+  },
+  "sha256": "2d6c16dca2b6ef3b1c10cdc2a9be68077f0cb2f4c76ecc1d57eef010efb22a63",
+  "binding": {
+    "key": "xm_tavern_greeting_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "欢迎光临。我叫小满，这间店刚开业不久。",
+      "ja": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
+      "en": "Welcome. My name is Xiaoman. I just opened this little place."
+    },
+    "generic": false
+  }
+}

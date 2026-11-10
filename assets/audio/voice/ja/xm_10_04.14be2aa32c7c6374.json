@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "うちに来てくれたことのあるお客さんにも会いました。向こうから笑って声をかけてくれて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "82",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.199,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 393618
+  },
+  "sha256": "a0345d0d48f8ff60fe64e2d5a4e5986a045cc5de4ae1185743cd27101de6147a",
+  "binding": {
+    "key": "xm_10_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "还碰见了几个以前来我店里的客人。他们看见我，还挺高兴地打招呼呢。",
+      "ja": "うちに来てくれたことのあるお客さんにも会いました。向こうから笑って声をかけてくれて。",
+      "en": "I ran into a few people who used to come to my tavern. They seemed quite happy to see me and said hello."
+    },
+    "generic": false
+  }
+}

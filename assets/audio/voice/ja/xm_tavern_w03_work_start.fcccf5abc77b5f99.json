@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "じゃあ、先輩にお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "89",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.291,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 445996
+  },
+  "sha256": "df67fd2a0a2478d8465cf50fef52672cc7a44521142f861aa5a2fbbc8437d0b9",
+  "binding": {
+    "key": "xm_tavern_w03_work_start",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那就拜托前辈啦！这边的客人交给您，我去照看吧台。",
+      "ja": "じゃあ、先輩にお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
+      "en": "Thank you, senpai! I'll leave these customers with you while I look after the bar."
+    },
+    "generic": false
+  }
+}

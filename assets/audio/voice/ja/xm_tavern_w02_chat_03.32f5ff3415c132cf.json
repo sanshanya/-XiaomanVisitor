@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "甘いのが好きな人もいれば、酸っぱいのが好きな人もいて……メニューはまだまだ考えないとですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "88",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.217,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 442462
+  },
+  "sha256": "a93e17318a97e9414d7e7348f705bca13225212d22d35df3fde79ff377e194f5",
+  "binding": {
+    "key": "xm_tavern_w02_chat_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "有人喜欢甜一点的，也有人喜欢酸一点的……看来酒单还有得改呢。",
+      "ja": "甘いのが好きな人もいれば、酸っぱいのが好きな人もいて……メニューはまだまだ考えないとですね。",
+      "en": "Some people like their drinks sweeter, others prefer something sour… I suppose there's still work to do on the menu."
+    },
+    "generic": false
+  }
+}

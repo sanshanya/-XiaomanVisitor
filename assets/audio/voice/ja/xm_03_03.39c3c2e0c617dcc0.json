@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "一人でお酒を作って、お客さんの相手もしてると……ときどき手が回らなくて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "68",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.008,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 384410
+  },
+  "sha256": "20d5213e98788bd2a7e3240f64632accf2b9931697f463720ab55fc3b04c9922",
+  "binding": {
+    "key": "xm_03_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我一个人又要调酒，又要招呼客人……常常有点忙不过来。",
+      "ja": "一人でお酒を作って、お客さんの相手もしてると……ときどき手が回らなくて。",
+      "en": "Making drinks and looking after the customers on my own… Sometimes I can hardly keep up."
+    },
+    "generic": false
+  }
+}

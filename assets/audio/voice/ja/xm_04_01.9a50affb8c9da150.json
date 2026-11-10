@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは、店長さん。今日は、ちょっと相談したいことがあるんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "62",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.546,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 362232
+  },
+  "sha256": "32ebf10ed44c959f3739260b84a132a5b81bf4f6fbff3493f52089b9d22981a7",
+  "binding": {
+    "key": "xm_04_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好，店长前辈。今天还想跟您商量件事呢。",
+      "ja": "こんばんは、店長さん。今日は、ちょっと相談したいことがあるんです。",
+      "en": "Good evening, senpai. There is something I would like to discuss today."
+    },
+    "generic": false
+  }
+}

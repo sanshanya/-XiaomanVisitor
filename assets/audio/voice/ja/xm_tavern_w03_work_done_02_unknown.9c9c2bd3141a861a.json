@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "98",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.418,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 500088
+  },
+  "sha256": "6afd6aca26a0c7b5822aa24831ff7b614f7fdfa273e0822db90e914272a6c830",
+  "binding": {
+    "key": "xm_tavern_w03_work_done_02_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "今天的工资，请收好。多亏刚才那几位客人总算没白跑一趟呢。",
+      "ja": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
+      "en": "Here's your pay. Thanks to you, those customers didn't have a wasted trip."
+    },
+    "generic": false
+  }
+}

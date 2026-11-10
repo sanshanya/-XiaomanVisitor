@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "74",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.912,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 427828
+  },
+  "sha256": "f5caffb4f7ce3954012e7f26dcdd73a32402eec5a4757a7ac82bc29c18ad4b44",
+  "binding": {
+    "key": "xm_tavern_w04_supply_existing",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，货单在这里。今天想给店里送点什么，还是从我这里进货？",
+      "ja": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+      "en": "The list is here, senpai. Are you delivering supplies today, or buying from me?"
+    },
+    "generic": false
+  }
+}

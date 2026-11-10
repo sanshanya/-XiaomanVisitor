@@ -18,9 +18,10 @@ def instruction_outputs(root):
     sfx = sum(a['kind'] == 'sfx' for a in actions)
     values = dict(mod_name=manifest.findtext('Name'), version=manifest.findtext('ModVersion'),
                   revised_through=through,
-                  story_status=('十四章白天台词与纸条已按v5.4母稿接入；日语口头稿仍待审校。' if through==14 else
+                  story_status=('十四章白天台词与纸条已按v5.4母稿接入。' if through==14 else
                     '第'+ '、'.join(str(e['index']) for e in snapshot['episodes'] if e['index'] > through)+'章仍为旧稿，等待后续重构。'),
                   voice_bound=bound, voice_deferred=len(script['lines'])-bound,
+                  voice_status=(f'{len(script["lines"])-bound}条新增口头稿仍待录音。' if len(script['lines'])>bound else '当前小满口头台词均已配音；纸条不配音，其他人物沿用原生/当前处理。'),
                   action_slots=len(actions), spoken_actions=len(actions)-sfx, sfx_slots=sfx)
     templates = json.loads((root / 'assets/package-instructions.json').read_text(encoding='utf-8'))
     rendered = {}
@@ -54,7 +55,7 @@ def write(root, texts, story, notes):
         row = lines[key]
         voice = voices.get(row.get('voice_alias', key), {})
         return dict(key=key, mood=row['mood'], text={lang: texts[lang][key] for lang in languages},
-                    voice='recording_bound' if voice.get('audio') else 'deferred',
+                    voice='native_other_character' if row.get('speaker')=='native_other' else 'recording_bound' if voice.get('audio') else 'deferred',
                     voice_alias=row.get('voice_alias'))
 
     speeches = {key: speech(key) for key, row in lines.items()

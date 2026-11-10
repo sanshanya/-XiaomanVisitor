@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩がお店を手伝ってくれたこと、ちゃんと覚えています。忙しい時期が落ち着いたら、また音楽でも聴きに来てくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "110",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 11.908,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 571640
+  },
+  "sha256": "a6ee524245b112762470d681f2afbc283ddb665bd343f47319890d5095a458fd",
+  "binding": {
+    "key": "xm_03_04_already_worked",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈最近来店里帮忙的事，我都记着呢。等忙过这阵子，也请来听听歌呀。",
+      "ja": "先輩がお店を手伝ってくれたこと、ちゃんと覚えています。忙しい時期が落ち着いたら、また音楽でも聴きに来てくださいね。",
+      "en": "I remember all the help you've given me lately. When things quieten down, come over and listen to some music too."
+    },
+    "generic": false
+  }
+}

@@ -64,6 +64,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", type=Path, default=SOURCE)
     args = parser.parse_args()
+    performance_path=ROOT/'story/配音演出_ja.json'
+    performance=json.loads(performance_path.read_text(encoding='utf-8')) if performance_path.exists() else {'lines':{}}
     text = args.source.read_text(encoding="utf-8-sig")
     week_two = week_two_source.read()
     week_three = week_three_source.read()
@@ -125,8 +127,15 @@ def main():
         loc["ja"][key] = ja
         loc["en"][key] = english[key]
         generate = ja if spoken in (None, "＝字幕", "=字幕") else spoken
+        direction=performance['lines'].get(key)
+        if direction:
+            assert direction['subtitle_ja']==ja, ('Recheck voice direction after subtitle edit',key)
+            generate=direction['generate_text']
         lines[key] = dict(key=key, zh=zh, ja=ja, en=english[key], mood=MOODS.get(mood,mood), kind=kind,
                           generate_text="" if kind == "sfx" else generate, **extra)
+        if direction:
+            lines[key]['delivery']=direction['delivery']
+            lines[key]['recording_reviewed']=direction['reviewed']
 
     sections = list(re.finditer(r"(?m)^## 第 (\d{2}) 次｜([^\n]+)\n", text))
     assert len(sections) == 14
@@ -257,6 +266,9 @@ def main():
     for lang, entries in gun_reactions.items():
         assert set(entries) == set(gun_reactions["zh"]), "Gun reaction keys must cover all three languages"
         loc[lang].update(entries)
+    for key in gun_reactions['zh']:
+        english[key]=gun_reactions['en'][key]
+        add(key,gun_reactions['zh'][key],gun_reactions['ja'][key],'Worried',defer_voice=True)
     for lang, rows in loc.items():
         for obsolete in ("cfg_interval", "cfg_interval_tip", "cfg_budget"):
             rows.pop(obsolete, None)
@@ -329,11 +341,15 @@ def main():
         lines[key]["reference"] = False
     # The first chapter line uses intro_1's existing recording, once, with its own subtitle template.
     lines["xm_01_01"]["voice_alias"] = "intro_1"
-    voice_keys = [k for k, row in lines.items() if not row.get("reference") and row["kind"] == "speech" and "voice_alias" not in row]
+    for key,row in lines.items():
+        row['speaker']='native_other' if key.startswith(('xm_w04_','xm_w06_referral_')) else 'xiaoman'
+    voice_keys = [k for k, row in lines.items() if not row.get("reference") and row["kind"] == "speech" and "voice_alias" not in row and row['speaker']=='xiaoman']
     source_path = args.source.resolve()
     source_name = source_path.relative_to(ROOT).as_posix() if source_path.is_relative_to(ROOT) else source_path.name
     snapshot = dict(schema=1, version="v5.4-fourteen-weeks", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
                     master_source=story_master_source.SOURCE.relative_to(ROOT).as_posix(),master_sha256=hashlib.sha256(story_master_source.SOURCE.read_bytes()).hexdigest(),
+                    performance_source='story/配音演出_ja.json' if performance_path.exists() else None,
+                    performance_sha256=hashlib.sha256(performance_path.read_bytes()).hexdigest() if performance_path.exists() else None,
                     week_two_source=week_two['source'],week_two_sha256=week_two['sha256'],
                     week_three_source=week_three['source'],week_three_sha256=week_three['sha256'],
                     week_four_source=week_four['source'],week_four_sha256=week_four['sha256'],
@@ -359,6 +375,9 @@ def main():
         row = dict(key=key, subtitle_templates=templates, spoken_text=spoken, generate_text=generate, generic=generic,
                    reviewed=True, audio="", note="用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
                    source_sha256=hashlib.sha256(json.dumps([templates, generate], ensure_ascii=False).encode("utf-8")).hexdigest())
+        if line.get('delivery'):
+            row['delivery']=line['delivery']
+            row['note']='v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。'
         prior = previous.get(key, {})
         if (prior.get("subtitle_templates", {}).get('ja') == templates['ja']
                 and prior.get("generate_text", prior.get("spoken_text")) == generate):
@@ -367,7 +386,8 @@ def main():
         if key == "intro_1":
             row.update(audio=previous[key]["audio"], spoken_text=previous[key]["spoken_text"], generate_text=previous[key]["spoken_text"],
                        speed=prior.get("speed", 1.0), text_normalization=prior.get("text_normalization", False))
-        if line.get("defer_voice") and not row['audio']:
+        if line.get('recording_reviewed'): row['reviewed']=True
+        if line.get("defer_voice") and not row['audio'] and not line.get('recording_reviewed'):
             row.update(reviewed=False, audio="", defer_recording=True,
                        note="新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。")
         production.append(row)

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは、先輩。最近、ドックのお客さんがほとんど毎日、少しだけ寄ってくれるんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "79",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.009,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 480478
+  },
+  "sha256": "b4ce47a1c1cf529b98f50220592e7bfd5ff55c55f02b3e581c48c6f510e33874",
+  "binding": {
+    "key": "xm_07_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好，前辈。最近有位船坞的客人，几乎每天都会来店里坐一会儿。",
+      "ja": "こんばんは、先輩。最近、ドックのお客さんがほとんど毎日、少しだけ寄ってくれるんです。",
+      "en": "Good evening, senpai. There is someone from the docks who comes to sit at the tavern almost every day."
+    },
+    "generic": false
+  }
+}

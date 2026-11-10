@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それじゃ、お店に戻りますね。先輩も、無理しすぎないでくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "60",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.388,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 354658
+  },
+  "sha256": "bbf4385ac34ad0ee4a715eef8e6ac527a7a99a0f6e94bc4d75613c9ee66f57c6",
+  "binding": {
+    "key": "xm_w03_thanks_bye",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那我回店里去啦。前辈也不要太累哦。",
+      "ja": "それじゃ、お店に戻りますね。先輩も、無理しすぎないでくださいね。",
+      "en": "I'd better get back to the tavern. Don't wear yourself out either."
+    },
+    "generic": false
+  }
+}

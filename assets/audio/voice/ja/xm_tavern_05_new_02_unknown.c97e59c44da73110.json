@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "「むゆうせんきょう」は何度も試して、やっと納得できた味で。「けいようしゅんしょく」は、もう少しすっきりした感じにしたかったんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "122",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 12.236,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 587384
+  },
+  "sha256": "aa9909317ed7bece958981591d843de35b020351ac116c9c88e806da88c04d73",
+  "binding": {
+    "key": "xm_tavern_05_new_02_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "梦游仙境是我试了好几次才调好的，轻摇春色则想做得清爽一点。",
+      "ja": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+      "en": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher."
+    },
+    "generic": false
+  }
+}

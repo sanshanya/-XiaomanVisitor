@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "開店したばかりのころは、「いらっしゃいませ」って言うだけでも緊張してたのに。今は……少し慣れてきたかもしれません。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "107",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 11.496,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 551838
+  },
+  "sha256": "1cd81b4528d3ab4b9a964c7ac2ee2fc7841405241567ceea731da5682a117b92",
+  "binding": {
+    "key": "xm_tavern_w02_chat_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "刚开业的时候，连说“欢迎光临”都会紧张。现在好像……稍微习惯一点了。",
+      "ja": "開店したばかりのころは、「いらっしゃいませ」って言うだけでも緊張してたのに。今は……少し慣れてきたかもしれません。",
+      "en": "When I first opened, even saying ‘welcome’ made me nervous. Now… I think I'm getting a little more used to it."
+    },
+    "generic": false
+  }
+}

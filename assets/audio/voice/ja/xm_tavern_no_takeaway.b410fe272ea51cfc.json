@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ、ごめんなさい……うちのお酒は、今はまだお持ち帰りできないんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "63",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.617,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 365662
+  },
+  "sha256": "5196a85df00226f368cea2d3300d4100e726aa31b86e52298c6fb02d06202bed",
+  "binding": {
+    "key": "xm_tavern_no_takeaway",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "啊，抱歉……店里的酒暂时还不能外带呢。",
+      "ja": "あ、ごめんなさい……うちのお酒は、今はまだお持ち帰りできないんです。",
+      "en": "Oh, sorry… We can't do takeaway drinks just yet."
+    },
+    "generic": false
+  }
+}

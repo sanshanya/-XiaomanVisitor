@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "52",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.271,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 301074
+  },
+  "sha256": "bb46657e550e0ddaa2c6677fd284df879d7bdb3b0802b6a479b5456689ea1a0e",
+  "binding": {
+    "key": "xm_tavern_05_new_01_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "看到新酒单了吗？新添了两款酒哦。",
+      "ja": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+      "en": "have you seen the new menu? There are two new drinks."
+    },
+    "generic": false
+  }
+}

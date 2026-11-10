@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "だめですよ、店長さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "88",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.891,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 522796
+  },
+  "sha256": "3d1062022146a3d29ce4ed4eff43c43b43f13516f86f6787766fdb66446df940",
+  "binding": {
+    "key": "xm_tavern_drink_limit",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "不可以哦，店长先生。今晚已经喝过一杯啦。想听歌的话，倒是随时欢迎。",
+      "ja": "だめですよ、店長さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
+      "en": "No more tonight, shopkeeper. You've already had a glass. You're always welcome to stay for the music, though."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "どうぞ。お口に合うといいんですけど。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "34",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.308,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 206814
+  },
+  "sha256": "18e5f4bcf08268e173cda1cc11acc863176b676e46551ab5c744807530411145",
+  "binding": {
+    "key": "xm_tavern_serve",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "请慢用。希望合您的口味。",
+      "ja": "どうぞ。お口に合うといいんですけど。",
+      "en": "Here you go. I hope it's to your taste."
+    },
+    "generic": false
+  }
+}

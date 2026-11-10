@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "85",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.545,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 458206
+  },
+  "sha256": "e885d39d93836f4684446942dd21e8fef39ef19705304bc61076967d4adb5694",
+  "binding": {
+    "key": "xm_tavern_w02_help_done",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "谢谢前辈！刚开店就有点手忙脚乱的……还好有您在。",
+      "ja": "先輩、ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
+      "en": "Thank you, senpai! It's been a little hectic since opening… I'm glad you were here."
+    },
+    "generic": false
+  }
+}

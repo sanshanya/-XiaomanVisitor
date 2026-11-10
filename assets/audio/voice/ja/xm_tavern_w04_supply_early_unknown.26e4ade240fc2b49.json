@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "69",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.8,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 374444
+  },
+  "sha256": "68b8ea1e7cbced0434b0af507b7d3e6d1b085c35b2ffba0246b7037e01eb4d27",
+  "binding": {
+    "key": "xm_tavern_w04_supply_early_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "欢迎。我把店里需要的东西列了一张清单，想跟您商量一下。",
+      "ja": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
+      "en": "Welcome. I made a list of supplies for the bar. May I discuss it with you?"
+    },
+    "generic": false
+  }
+}

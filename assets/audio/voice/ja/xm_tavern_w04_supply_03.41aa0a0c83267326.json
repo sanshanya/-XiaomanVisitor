@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "62",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.134,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 342480
+  },
+  "sha256": "a850db4c17f1ec0e4c74e2a1e78a06e0983fe222f7e397eb17495e86fd4c01df",
+  "binding": {
+    "key": "xm_tavern_w04_supply_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "数量和价钱都写清楚了，保证前辈不会吃亏。",
+      "ja": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
+      "en": "The quantities and prices are all written down. I want this to be a fair deal for you."
+    },
+    "generic": false
+  }
+}

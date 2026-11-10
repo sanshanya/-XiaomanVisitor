@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "これは、先輩のために取っておいた一杯です。お給料はお給料、こっちはわたしの気持ちですから。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "86",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.119,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 485736
+  },
+  "sha256": "82b20fc24dd492ec2f6e2e9796c4e4c1b5e0bbcc0247097f6dc96536ab4fa3e1",
+  "binding": {
+    "key": "xm_w03_thanks_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这杯是我特地留给前辈的。工资是工资，这个是我的一点心意哦。",
+      "ja": "これは、先輩のために取っておいた一杯です。お給料はお給料、こっちはわたしの気持ちですから。",
+      "en": "I set this glass aside especially for you. Your pay was for the work; this is just a little thank-you from me."
+    },
+    "generic": false
+  }
+}

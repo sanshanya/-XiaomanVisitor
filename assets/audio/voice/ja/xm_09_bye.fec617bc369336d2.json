@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それじゃ、また。夜、お時間があったら寄ってくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "50",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.345,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 304606
+  },
+  "sha256": "80755cbf6ed686dc763d42e33f51dcd31a24ce1662a74b05224c76905d15ba2e",
+  "binding": {
+    "key": "xm_09_bye",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那我先走啦。晚上有空的话，来坐坐哦。",
+      "ja": "それじゃ、また。夜、お時間があったら寄ってくださいね。",
+      "en": "I should go. Come sit for a while tonight if you have time."
+    },
+    "generic": false
+  }
+}

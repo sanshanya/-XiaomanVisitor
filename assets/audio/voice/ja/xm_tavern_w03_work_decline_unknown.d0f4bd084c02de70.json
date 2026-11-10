@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "うん、大丈夫です。ご用事もあるでしょうし。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "39",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.254,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 252230
+  },
+  "sha256": "25ba8a2073de5638e946d7e42aace934cd1da6e2c4d18e01527ef8828351f9f2",
+  "binding": {
+    "key": "xm_tavern_w03_work_decline_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "嗯，没关系。您也有自己的事情要忙嘛。",
+      "ja": "うん、大丈夫です。ご用事もあるでしょうし。",
+      "en": "That's all right. You have things of your own to take care of too."
+    },
+    "generic": false
+  }
+}

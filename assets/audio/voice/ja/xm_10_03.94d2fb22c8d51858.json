@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あんなにいい材料で全品七割引きなんて、ずっとは続けられないですよね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "66",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.279,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 349444
+  },
+  "sha256": "a41ddda84ac836f35a9d2cdecaa2267c3a06dbd0c3fb03ec0c4fca666be2f1e4",
+  "binding": {
+    "key": "xm_10_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那么好的原料还能做到全场三折，应该不能长久吧。",
+      "ja": "あんなにいい材料で全品七割引きなんて、ずっとは続けられないですよね。",
+      "en": "Ingredients that good, and everything at thirty percent of the usual price... Surely they cannot keep that up for long."
+    },
+    "generic": false
+  }
+}

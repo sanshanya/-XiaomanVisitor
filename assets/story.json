@@ -5,6 +5,8 @@
   "source_sha256": "fb3c704ad917338d646cc3ee3008dc14ae6da78e31c74d43b4a5202e3741351a",
   "master_source": "story/小满酒馆_十四周剧情台词整合母稿_v5.4.md",
   "master_sha256": "16147c6817c4dd566005c99a9b3b4b83fe3575105bad3d7dc23eb3cf2524d289",
+  "performance_source": "story/配音演出_ja.json",
+  "performance_sha256": "7287e556b4bdff7d3e2f9af189dc5d260160ee79f84e7148abe08d1192456c4f",
   "week_two_source": "story/小满酒馆_第二周_v4.1_实施稿.md",
   "week_two_sha256": "43badb6703b971ca90b68cce1dcabdf9abc76e19e4034536b0e975d198affd7b",
   "week_three_source": "story/小满酒馆_第三周_v4.4_剧情与打工实施稿.md",
@@ -817,7 +819,8 @@
       "generate_text": "……こんばんは。まだ明かりがついていたので、入ってきました。",
       "defer_voice": true,
       "reference": false,
-      "voice_alias": "intro_1"
+      "voice_alias": "intro_1",
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_01_02",
@@ -828,7 +831,10 @@
       "kind": "speech",
       "generate_text": "わたし、みちるっていいます。この近くに越してきたばかりで、まだ道をよく覚えてなくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "拘谨、有礼貌，稍带好奇；惊喜保持自然",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_01_03",
@@ -839,7 +845,10 @@
       "kind": "speech",
       "generate_text": "あ……ここ、カセットデッキがあるんですね。わたしも引っ越すとき、テープをけっこう持ってきたんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "拘谨、有礼貌，稍带好奇；惊喜保持自然",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_01_04",
@@ -850,7 +859,10 @@
       "kind": "speech",
       "generate_text": "今どき、カセットを聴く人って、もうあまりいませんよね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "拘谨、有礼貌，稍带好奇；惊喜保持自然",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_01_shop",
@@ -861,7 +873,10 @@
       "kind": "speech",
       "generate_text": "食べ物か飲み水を、少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "拘谨、有礼貌，稍带好奇；惊喜保持自然",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_01_accept",
@@ -872,7 +887,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。助かりました。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "拘谨、有礼貌，稍带好奇；惊喜保持自然",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_01_bye",
@@ -883,7 +901,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、また来ますね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "拘谨、有礼貌，稍带好奇；惊喜保持自然",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_02_01",
@@ -894,7 +915,10 @@
       "kind": "speech",
       "generate_text": "こんばんは。またお邪魔しちゃいました。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_02_02",
@@ -905,7 +929,10 @@
       "kind": "speech",
       "generate_text": "あ、そうだ……商業通路に小さなバーを開いたんです。今夜、いよいよオープンなんですよ。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_02_03",
@@ -916,7 +943,10 @@
       "kind": "speech",
       "generate_text": "メニューは何度も書き直したんですけど、このステーションの人たちはどんなお酒が好きなのかなって。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_02_04",
@@ -927,7 +957,10 @@
       "kind": "speech",
       "generate_text": "店長さん、夜お時間があったら、お店に来ていただけませんか。先輩として、いろいろ教えてもらえたらうれしいです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_02_shop",
@@ -938,7 +971,10 @@
       "kind": "speech",
       "generate_text": "今日は日用品を少し買いに来ました。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_02_accept",
@@ -949,7 +985,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど必要だったんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_02_bye",
@@ -960,7 +999,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、また。お店に来てくださるのを楽しみにしてますね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_02_02_late",
@@ -970,7 +1012,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "あ、そうだ……商業通路に小さなバーを開いたんです。最近、ようやくオープンしたんですよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_03_01",
@@ -981,7 +1026,10 @@
       "kind": "speech",
       "generate_text": "こんばんは、店長さん。またお邪魔しちゃいました。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_03_02",
@@ -992,7 +1040,10 @@
       "kind": "speech",
       "generate_text": "最近、お店がちょっと忙しくて。ドックの交代時間になると、お客さんが一度に来るんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_03_03",
@@ -1003,7 +1054,10 @@
       "kind": "speech",
       "generate_text": "一人でお酒を作って、お客さんの相手もしてると……ときどき手が回らなくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_03_04",
@@ -1014,7 +1068,10 @@
       "kind": "speech",
       "generate_text": "先輩、夜に時間があったら、少し手伝ってもらえませんか？ もちろん、お給料はお支払いします！ 先輩の時間を、ただでもらうわけにはいきませんから。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_03_shop",
@@ -1025,7 +1082,10 @@
       "kind": "speech",
       "generate_text": "今日は食べるものを少し買いに来ました。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_03_accept",
@@ -1036,7 +1096,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど助かります。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_03_bye",
@@ -1047,7 +1110,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、また。夜、お時間があったら、遊びに来てくださいね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_03_04_already_worked",
@@ -1057,7 +1123,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩がお店を手伝ってくれたこと、ちゃんと覚えています。忙しい時期が落ち着いたら、また音楽でも聴きに来てくださいね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_04_01",
@@ -1068,7 +1137,10 @@
       "kind": "speech",
       "generate_text": "こんばんは、店長さん。今日は、ちょっと相談したいことがあるんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_04_02",
@@ -1079,7 +1151,10 @@
       "kind": "speech",
       "generate_text": "最近、お店で使う水も材料もどんどん増えてきて、仕入れが追いつかなくなりそうで。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_04_03",
@@ -1090,7 +1165,10 @@
       "kind": "speech",
       "generate_text": "先輩のお店にちょうどいい品物があったら、リストを作って定期的に仕入れさせてもらえませんか？",
       "defer_voice": true,
-      "reference": false
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_04_04",
@@ -1101,7 +1179,10 @@
       "kind": "speech",
       "generate_text": "うちで作った飲み物も、先輩のお店に卸せますよ。えへへ、そうしたら、ちゃんとした商売仲間ですね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_04_shop",
@@ -1112,7 +1193,10 @@
       "kind": "speech",
       "generate_text": "今日は飲み水を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_04_cocktail",
@@ -1123,7 +1207,10 @@
       "kind": "speech",
       "generate_text": "あ、そうだ。お店で作ったジュースも二本持ってきたんです。よかったら見てみますか？",
       "defer_voice": true,
-      "reference": false
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_04_accept",
@@ -1134,7 +1221,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど助かります。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_04_bye",
@@ -1145,7 +1235,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、また。仕入れの話は、夜にお店でゆっくりでも大丈夫ですから。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_04_03_existing",
@@ -1155,7 +1248,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩、この前の取引リストは取ってあります。品物があったら、リストに沿って少しずつで大丈夫ですよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_01",
@@ -1166,7 +1262,10 @@
       "kind": "speech",
       "generate_text": "こんばんは、先輩。先週、新しい仕入れ先からいいお酒が何本か届いて。ここ数日、ずっと試していたんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_02",
@@ -1177,7 +1276,10 @@
       "kind": "speech",
       "generate_text": "ずっと使ってみたかったベースのお酒があって。昨日、やっと納得できる味になったんですよ。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_03",
@@ -1186,9 +1288,12 @@
       "en": "They sold out as soon as I put them out yesterday. People asked if there would be more next time. Hehe... of course!",
       "mood": "Smile",
       "kind": "speech",
-      "generate_text": "昨日出したら、あっという間に売り切れちゃって。帰り際に「次もある？」って聞かれたんです。えへへ……もちろん、ありますよ。",
+      "generate_text": "昨日出したら、あっという間に売り切れちゃって。帰り際に「次もある？」って聞かれたんです。[chuckles]……もちろん、ありますよ。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_04",
@@ -1199,7 +1304,10 @@
       "kind": "speech",
       "generate_text": "でも、先輩にも飲んでもらいたくて、一杯分の材料だけ、こっそり取っておいたんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_gift",
@@ -1210,7 +1318,10 @@
       "kind": "speech",
       "generate_text": "これは先輩の分です。今日は、お代はいりませんからね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_shop",
@@ -1221,7 +1332,10 @@
       "kind": "speech",
       "generate_text": "今日は日用品を少し買いに来ました。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_accept",
@@ -1232,7 +1346,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど必要だったんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_bye",
@@ -1243,7 +1360,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、また。夜、時間があったら、新しいお酒も飲みに来てくださいね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_01_late",
@@ -1253,7 +1373,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "こんばんは、先輩。新しい仕入れ先からいいお酒が届いて、しばらく試していたんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_02_late",
@@ -1263,7 +1386,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "ずっと使ってみたかったベースのお酒で、やっと納得できる味になったんですよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_05_03_late",
@@ -1272,8 +1398,11 @@
       "en": "The first batch sold out right away. People asked if there would be more. Hehe... of course!",
       "mood": "Smile",
       "kind": "speech",
-      "generate_text": "初めて出した日に、あっという間に売り切れちゃって。「次もある？」って聞かれたんです。えへへ……もちろん、ありますよ。",
-      "defer_voice": true
+      "generate_text": "初めて出した日に、あっという間に売り切れちゃって。「次もある？」って聞かれたんです。[chuckles]……もちろん、ありますよ。",
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_06_01",
@@ -1284,7 +1413,10 @@
       "kind": "speech",
       "generate_text": "こんばんは、先輩。最近、お店に初めて来るお客さんが増えたんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_06_02",
@@ -1295,7 +1427,10 @@
       "kind": "speech",
       "generate_text": "昨日、星間旅行中のお客さんに、お酒を飲んだあと「この辺りでほかに寄るところは？」って聞かれて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_06_03",
@@ -1306,7 +1441,10 @@
       "kind": "speech",
       "generate_text": "商業通路の向こうに、面白いものが見つかる質屋さんがあるって教えたんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_06_04",
@@ -1317,7 +1455,10 @@
       "kind": "speech",
       "generate_text": "えへへ、本当に来てくれるかな。もし来たら、先輩、ごほうびくださいね～。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_06_shop",
@@ -1328,7 +1469,10 @@
       "kind": "speech",
       "generate_text": "今日は飲み水を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_06_accept",
@@ -1339,7 +1483,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど助かります。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_06_bye",
@@ -1350,7 +1497,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、そろそろ。今夜のお店の準備が、まだ残ってるので。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_07_01",
@@ -1361,7 +1511,10 @@
       "kind": "speech",
       "generate_text": "こんばんは、先輩。最近、ドックのお客さんがほとんど毎日、少しだけ寄ってくれるんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_07_02",
@@ -1372,7 +1525,10 @@
       "kind": "speech",
       "generate_text": "いつも窓際の同じ席で、少し酸っぱいお酒を頼むんですよ。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_07_03",
@@ -1383,7 +1539,10 @@
       "kind": "speech",
       "generate_text": "昨日なんて、入ってすぐ「いつもの」って。もう、何を作ればいいかすぐ分かっちゃいました。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_07_04",
@@ -1394,7 +1553,10 @@
       "kind": "speech",
       "generate_text": "えへへ、うちにも「いつもの」で通じるお客さんができたんですね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_07_shop",
@@ -1405,7 +1567,10 @@
       "kind": "speech",
       "generate_text": "今日は食べ物を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_07_accept",
@@ -1416,7 +1581,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど必要だったんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_07_bye",
@@ -1427,7 +1595,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、また。先輩も夜、お時間があったら寄ってくださいね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_07_03_late",
@@ -1437,7 +1608,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "この前、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_08_01",
@@ -1448,7 +1622,10 @@
       "kind": "speech",
       "generate_text": "こんばんは、先輩。この前から故郷の友達に、自分が写った写真を送ってって言われてて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_08_02",
@@ -1459,7 +1636,10 @@
       "kind": "speech",
       "generate_text": "昨日、いつも来てくれる夜勤の女の子たちに頼んだら、みんな撮りたいって言ってくれたんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_08_03",
@@ -1470,7 +1650,10 @@
       "kind": "speech",
       "generate_text": "「店長、もちろんカウンターの中に立って！」って言われて……おとなしく戻りました。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_08_04",
@@ -1479,9 +1662,12 @@
       "en": "I picked one with rain on the window and sent it to my friends. Hehe, it came out quite nicely.",
       "mood": "Smile",
       "kind": "speech",
-      "generate_text": "窓の雨が写ってる一枚を選んで、もう友達に送りました。えへへ、けっこういい感じなんですよ。",
+      "generate_text": "窓の雨が写ってる一枚を選んで、もう友達に送りました。[chuckles] けっこういい感じなんですよ。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_08_shop",
@@ -1492,7 +1678,10 @@
       "kind": "speech",
       "generate_text": "今日は日用品を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_08_accept",
@@ -1503,7 +1692,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど必要だったんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_08_bye",
@@ -1514,7 +1706,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、また。時間があったら、顔を出してくださいね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_08_02_late",
@@ -1524,7 +1719,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "この前、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_09_01",
@@ -1535,7 +1733,10 @@
       "kind": "speech",
       "generate_text": "こんばんは、先輩。最近、お店の調子がどんどんよくなってきて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_09_02",
@@ -1546,7 +1747,10 @@
       "kind": "speech",
       "generate_text": "先週はいつもより多めに用意したのに、それでも足りなかったんですよ。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_09_03",
@@ -1555,9 +1759,12 @@
       "en": "A few people even came ahead to ask if I could save them some for the weekend. Hehe, I will have to get more ingredients next time.",
       "mood": "Smile",
       "kind": "speech",
-      "generate_text": "週末の分を取り置きできるか、聞いてくれたお客さんまでいて。えへへ、次は材料をもう少し増やさないと。",
+      "generate_text": "週末の分を取り置きできるか、聞いてくれたお客さんまでいて。[chuckles] 次は材料をもう少し増やさないと。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_09_shop",
@@ -1568,7 +1775,10 @@
       "kind": "speech",
       "generate_text": "今日は食べ物を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_09_accept",
@@ -1579,7 +1789,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど必要だったんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_09_bye",
@@ -1590,7 +1803,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、また。夜、お時間があったら寄ってくださいね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_09_02_late",
@@ -1600,7 +1816,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_10_01",
@@ -1609,9 +1828,12 @@
       "en": "Good evening, senpai. Have you heard of Polar Day, the lounge that opened last week? I went to have a look yesterday.",
       "mood": "Soft",
       "kind": "speech",
-      "generate_text": "こんばんは、先輩。先週オープンした「極昼」っていうバー、知ってますか？ 昨日、ちょっと見に行ってきたんです。",
+      "generate_text": "こんばんは、先輩。先週オープンした「きょくちゅう」っていうバー、知ってますか？ 昨日、ちょっと見に行ってきたんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_10_02",
@@ -1622,7 +1844,10 @@
       "kind": "speech",
       "generate_text": "あそこの機械、すごかったです。お酒もちゃんとおいしくて。行列ができるのも分かるなあって。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_10_03",
@@ -1633,7 +1858,10 @@
       "kind": "speech",
       "generate_text": "あんなにいい材料で全品七割引きなんて、ずっとは続けられないですよね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_10_04",
@@ -1644,7 +1872,10 @@
       "kind": "speech",
       "generate_text": "うちに来てくれたことのあるお客さんにも会いました。向こうから笑って声をかけてくれて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_10_05",
@@ -1655,7 +1886,10 @@
       "kind": "speech",
       "generate_text": "最近、予約が少し減ったみたいです。もう少し様子を見て、あそこの割引が終わるのを待とうかなって。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_10_shop",
@@ -1666,7 +1900,10 @@
       "kind": "speech",
       "generate_text": "今日は飲み水を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_10_accept",
@@ -1677,7 +1914,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。助かります。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_10_bye",
@@ -1688,7 +1928,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、また。先輩も、夜に時間があったら寄ってくださいね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_10_01_late",
@@ -1697,8 +1940,11 @@
       "en": "Good evening, senpai. Have you heard of Polar Day, the lounge that opened a little while ago? I went to have a look the other day.",
       "mood": "Soft",
       "kind": "speech",
-      "generate_text": "こんばんは、先輩。この前オープンした「極昼」っていうラウンジ、知っていますか？ 先日、見に行ってきたんです。",
-      "defer_voice": true
+      "generate_text": "こんばんは、先輩。この前オープンした「きょくちゅう」っていうラウンジ、知っていますか？ 先日、見に行ってきたんです。",
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_11_01",
@@ -1707,9 +1953,12 @@
       "en": "Good evening, senpai. It looks like Polar Day's discount is going to continue.",
       "mood": "Soft",
       "kind": "speech",
-      "generate_text": "こんばんは、先輩。「極昼」の割引、まだ続くらしいんです。",
+      "generate_text": "こんばんは、先輩。「きょくちゅう」の割引、まだ続くらしいんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_11_02",
@@ -1720,7 +1969,10 @@
       "kind": "speech",
       "generate_text": "自分でも計算したんですけど、あの値段に合わせたら材料代さえ出なくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_11_03",
@@ -1731,7 +1983,10 @@
       "kind": "speech",
       "generate_text": "最近、お客さんが少なくなったので、営業時間を変えたんです。前は午前二時までだったけど、今は夜の十二時までに。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_11_04",
@@ -1742,7 +1997,10 @@
       "kind": "speech",
       "generate_text": "開店した頃は、みんな遅くまでいてくれて大変だったのに。今は早く閉められますね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_11_shop",
@@ -1753,7 +2011,10 @@
       "kind": "speech",
       "generate_text": "今日は日用品を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_11_accept",
@@ -1764,7 +2025,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど必要だったんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_11_bye",
@@ -1775,7 +2039,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、帰りますね。先輩、夜に来るなら少し早めにお願いします。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_12_01",
@@ -1786,7 +2053,10 @@
       "kind": "speech",
       "generate_text": "こんばんは、先輩。昨日、母から電話が来たんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "妈妈与樱花温暖、介绍新酒开心；谈经营才收敛",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_12_02",
@@ -1797,7 +2067,10 @@
       "kind": "speech",
       "generate_text": "故郷の桜が咲いたって、写真をいっぱい送ってくれました。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "妈妈与樱花温暖、介绍新酒开心；谈经营才收敛",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_12_03",
@@ -1808,7 +2081,10 @@
       "kind": "speech",
       "generate_text": "桜を見るの、久しぶりだなあって。写真を見てたら、春みたいなお酒を作りたくなって。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "妈妈与樱花温暖、介绍新酒开心；谈经营才收敛",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_12_04",
@@ -1819,7 +2095,10 @@
       "kind": "speech",
       "generate_text": "昨夜、一杯試してみたら、思ったよりいい感じにできたんです。先輩、夜に時間があったら飲みに来てくださいね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "妈妈与樱花温暖、介绍新酒开心；谈经营才收敛",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_12_shop",
@@ -1830,7 +2109,10 @@
       "kind": "speech",
       "generate_text": "今日は食べ物を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "妈妈与樱花温暖、介绍新酒开心；谈经营才收敛",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_12_accept",
@@ -1841,7 +2123,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど助かります。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "妈妈与樱花温暖、介绍新酒开心；谈经营才收敛",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_12_bye",
@@ -1852,7 +2137,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、そろそろ。また夜に、先輩。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "妈妈与樱花温暖、介绍新酒开心；谈经营才收敛",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_13_01",
@@ -1863,7 +2151,10 @@
       "kind": "speech",
       "generate_text": "こんばんは、先輩。契約の再審査の結果が届いたんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_13_02",
@@ -1874,7 +2165,10 @@
       "kind": "speech",
       "generate_text": "宣伝の予定は変更できても、家賃の差額は契約どおり返さないといけないそうです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_13_03",
@@ -1885,7 +2179,10 @@
       "kind": "speech",
       "generate_text": "残りの帳簿も計算してみました。借り入れを増やして営業を続けても、借金が増えるだけで。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_13_04",
@@ -1896,7 +2193,10 @@
       "kind": "speech",
       "generate_text": "だから……お店を閉めることにしました。まずは荷物を片づけようと思います。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_13_05",
@@ -1907,7 +2207,10 @@
       "kind": "speech",
       "generate_text": "最近、丈夫な箱を探してるんです。グラスって、服よりずっと荷造りが大変なんですね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_13_shop",
@@ -1918,7 +2221,10 @@
       "kind": "speech",
       "generate_text": "今日は日用品を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_13_accept",
@@ -1929,7 +2235,10 @@
       "kind": "speech",
       "generate_text": "ありがとうございます。ちょうど必要だったんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_13_bye",
@@ -1940,7 +2249,10 @@
       "kind": "speech",
       "generate_text": "それじゃ、片づけに戻りますね。時間があったら、また少し寄ってください。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_14_01",
@@ -1951,7 +2263,10 @@
       "kind": "speech",
       "generate_text": "……こんばんは、先輩。明日、船で実家に帰るんです。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "简短、温柔、克制告别；不哭、不追加叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_14_02",
@@ -1962,7 +2277,10 @@
       "kind": "speech",
       "generate_text": "グラスは全部送って、残った荷物はリュックひとつだけ。引っ越してきた頃みたいですね。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "简短、温柔、克制告别；不哭、不追加叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_14_shop",
@@ -1973,7 +2291,10 @@
       "kind": "speech",
       "generate_text": "船で飲む水を少し買いたくて。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "简短、温柔、克制告别；不哭、不追加叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_14_accept",
@@ -1984,7 +2305,10 @@
       "kind": "speech",
       "generate_text": "うん、ありがとう。ちょうどよかった。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "简短、温柔、克制告别；不哭、不追加叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_14_bye",
@@ -1995,7 +2319,10 @@
       "kind": "speech",
       "generate_text": "それじゃ……行きますね。先輩、元気で。",
       "defer_voice": true,
-      "reference": false
+      "delivery": "简短、温柔、克制告别；不哭、不追加叹气",
+      "recording_reviewed": true,
+      "reference": false,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_entry_01",
@@ -2005,7 +2332,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "いらっしゃいませ……あっ、店長さん。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_entry_02",
@@ -2015,7 +2345,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "ずっと、来てくださるのを楽しみにしてたんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_entry_03",
@@ -2025,7 +2358,10 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "自分のお店で「いらっしゃいませ」って言うの、まだちょっと慣れなくて。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_reentry",
@@ -2035,7 +2371,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "あ、店長さん。また会いましたね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_greeting",
@@ -2045,7 +2384,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "こんばんは、先輩。いらっしゃいませ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_greeting_unknown",
@@ -2055,7 +2397,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_menu_open",
@@ -2065,7 +2410,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "何になさいますか？",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_menu",
@@ -2075,7 +2423,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "こちらが今のメニューです。まだこのくらいの種類しかないんですけど、味には自信があります。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_order",
@@ -2085,7 +2436,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "はい、少々お待ちください。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_serve",
@@ -2095,7 +2449,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "どうぞ。お口に合うといいんですけど。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_no_money",
@@ -2105,7 +2462,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "あ……クレジットが少し足りないみたいですね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_no_takeaway",
@@ -2115,7 +2475,10 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "あ、ごめんなさい……うちのお酒は、今はまだお持ち帰りできないんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_drink_limit",
@@ -2125,7 +2488,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "だめですよ、店長さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_chat_01",
@@ -2135,7 +2501,10 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "実は開店前、「いらっしゃいませ」ってこっそり何度も練習したんです。本当にお客さんが来ると、かえって緊張しちゃって。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_chat_02",
@@ -2145,7 +2514,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "昨日、お客さんに「ここの音楽、いいですね」って言われたんです。えへへ、テープ選びには、けっこうこだわってるんですよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_chat_03",
@@ -2155,7 +2527,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "甘いのが好きな人もいれば、酸っぱいのが好きな人もいて……メニューはまだまだ考えないとですね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_chat_04",
@@ -2165,7 +2540,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "開店したばかりのころは、「いらっしゃいませ」って言うだけでも緊張してたのに。今は……少し慣れてきたかもしれません。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_help_intro",
@@ -2175,7 +2553,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_help_done",
@@ -2185,7 +2566,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩、ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_help_skip",
@@ -2195,7 +2579,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "うん、大丈夫です。わたしがやりますね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_rain_01",
@@ -2205,7 +2592,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩、窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_rain_02",
@@ -2215,7 +2605,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "雨が降っているように見せたくて、けっこう頑張ったんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_tape_intro",
@@ -2225,7 +2618,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、店長さんも自由に選んで聴いてくださいね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_greeting_plain",
@@ -2235,7 +2631,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "いらっしゃいませ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_chat_rest",
@@ -2245,7 +2644,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩、どうぞゆっくり。少し音楽でも聴きましょう。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_drink_limit_unknown",
@@ -2255,7 +2657,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "だめですよ、お客さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_help_intro_unknown",
@@ -2265,7 +2670,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_help_done_unknown",
@@ -2275,7 +2683,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_rain_01_unknown",
@@ -2285,7 +2696,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w02_tape_intro_unknown",
@@ -2295,7 +2709,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "开业期待，邀请时略害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_chat_rest_unknown",
@@ -2305,7 +2722,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "どうぞゆっくり。少し音楽でも聴きましょう。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_offer_01",
@@ -2315,7 +2735,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_offer_02",
@@ -2325,7 +2748,10 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "お給料はちゃんとお支払いします。これでも、立派なお仕事ですからね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_w02_callback",
@@ -2335,7 +2761,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_start",
@@ -2345,7 +2774,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "じゃあ、先輩にお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_done_01",
@@ -2355,7 +2787,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "ふう……やっとひと段落ですね。先輩、すごく助かりました！",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_done_02",
@@ -2365,7 +2800,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "今日のお給料、受け取ってください。先輩のおかげで、さっきのお客さんたちをお待たせせずに済みました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_decline",
@@ -2375,7 +2813,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "うん、大丈夫です。先輩もご自分のお店で忙しいですもんね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_done_today",
@@ -2385,7 +2826,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩、今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_no_orders",
@@ -2395,7 +2839,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "今夜はまだ一人で大丈夫そうです。先輩は、のんびり音楽でも聴いていってくださいね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_w03_thanks_01",
@@ -2405,7 +2852,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩、この前はお店を手伝ってくれて、ありがとうございました。やっぱり、直接お礼を言いたくて。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_w03_thanks_02",
@@ -2415,7 +2865,10 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "これは、先輩のために取っておいた一杯です。お給料はお給料、こっちはわたしの気持ちですから。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_w03_thanks_shop",
@@ -2425,7 +2878,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "あ、そうだ。せっかく来たので、食べるものか飲み水も少し買いたくて。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_w03_thanks_bye",
@@ -2435,7 +2891,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "それじゃ、お店に戻りますね。先輩も、無理しすぎないでくださいね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_chat_01",
@@ -2445,7 +2904,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩、気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_chat_02",
@@ -2455,7 +2917,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "忙しいとあたふたしちゃうんですけど、お客さんの笑い声が聞こえると、お店を開いてよかったなって思うんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_chat_after_work",
@@ -2465,7 +2930,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩もお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_offer_01_unknown",
@@ -2475,7 +2943,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "あ、お客さん！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_w02_callback_unknown",
@@ -2485,7 +2956,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_start_unknown",
@@ -2495,7 +2969,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "じゃあ、お客さんにお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_done_01_unknown",
@@ -2505,7 +2982,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "ふう……やっとひと段落ですね。すごく助かりました！",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_done_02_unknown",
@@ -2515,7 +2995,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_decline_unknown",
@@ -2525,7 +3008,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "うん、大丈夫です。ご用事もあるでしょうし。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_done_today_unknown",
@@ -2535,7 +3021,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_work_no_orders_unknown",
@@ -2545,7 +3034,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "今夜はまだ一人で大丈夫そうです。お客さんは、のんびり音楽でも聴いていってくださいね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_chat_01_unknown",
@@ -2555,7 +3047,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w03_chat_after_work_unknown",
@@ -2565,7 +3060,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "お客さんもお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_01",
@@ -2575,7 +3073,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩、いらっしゃい。昼間に話したこと、リストにまとめておきました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_02",
@@ -2585,7 +3086,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_03",
@@ -2595,7 +3099,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_yes",
@@ -2605,7 +3112,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_later",
@@ -2615,7 +3125,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_w04_phone_01",
@@ -2625,7 +3138,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "お電話ありがとうございます。ペンギン資産会社、商店振興部でございます。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_phone_02",
@@ -2635,7 +3149,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "酒類・たばこ取扱店向け支援制度の事前審査を受け付けております。担当者が店舗の営業状況を確認に伺います。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_phone_confirm",
@@ -2645,7 +3160,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "お申し込みを承りました。明日、担当者が店舗に伺い、支援の対象となる条件を確認いたします。結果は今週金曜日にお知らせいたします。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_phone_closed",
@@ -2655,7 +3171,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "申し訳ございません。今期の受付は終了いたしました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_audit_01",
@@ -2665,7 +3182,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "こんにちは。ペンギン資産会社の店舗審査担当です。昨日ご予約いただきました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_audit_02",
@@ -2675,7 +3193,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "酒類・たばこのお取り扱い状況を確認させてください。適当な商品があれば、通常の価格で買い取ります。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_audit_shop",
@@ -2685,7 +3204,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "本日は酒類・たばこの商品を少し購入したいと思います。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_audit_accept",
@@ -2695,7 +3215,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "ありがとうございます。今回の確認記録に残しておきます。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_audit_no_trade",
@@ -2705,7 +3226,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "承知しました。今回は取引がなくても、審査は通常どおり進みます。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_audit_bye",
@@ -2715,7 +3237,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "ご協力ありがとうございました。結果は今週金曜日にお知らせいたします。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_wang_01",
@@ -2725,7 +3248,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "よう。この前、商業通路の支援制度に申し込んだんだって？",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_wang_02",
@@ -2735,7 +3259,8 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "お前は俺が面倒見てるんだ。あっちの手続きは、知り合いに頼んで止めてもらった。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_wang_03",
@@ -2745,7 +3270,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "残念がるなよ。あいつらは「支援」なんて言うけど、契約したらそう簡単な話じゃ済まねえぞ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_wang_04",
@@ -2755,7 +3281,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "そんなにうまい商売なら、どうして自分たちでやらないんだろうな？",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_wang_bye",
@@ -2765,7 +3292,8 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "いいから、お前は店をしっかりやれ。次からはもうちょっと頭を使えよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w04_audit_01_late",
@@ -2775,7 +3303,8 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "こんにちは。ペンギン資産会社の店舗審査担当です。先日ご予約いただきました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_tavern_w04_supply_existing",
@@ -2785,7 +3314,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_early",
@@ -2795,7 +3327,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩、いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_01_unknown",
@@ -2805,7 +3340,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "いらっしゃい。昼間に話したこと、リストにまとめておきました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_02_unknown",
@@ -2815,7 +3353,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_03_unknown",
@@ -2825,7 +3366,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_yes_unknown",
@@ -2835,7 +3379,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_later_unknown",
@@ -2845,7 +3392,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_existing_unknown",
@@ -2855,7 +3405,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_w04_supply_early_unknown",
@@ -2865,7 +3418,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "谈生意认真，成为伙伴时高兴",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_new_01",
@@ -2875,7 +3431,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩、新しいメニュー、見ました？ お酒を二種類増やしたんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_new_02",
@@ -2884,8 +3443,11 @@
       "en": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher.",
       "mood": "Smile",
       "kind": "speech",
-      "generate_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
-      "defer_voice": true
+      "generate_text": "「むゆうせんきょう」は何度も試して、やっと納得できた味で。「けいようしゅんしょく」は、もう少しすっきりした感じにしたかったんです。",
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_new_03",
@@ -2895,7 +3457,10 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_soldout",
@@ -2905,7 +3470,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_daily",
@@ -2915,7 +3483,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_new_01_unknown",
@@ -2925,7 +3496,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_new_02_unknown",
@@ -2934,8 +3508,11 @@
       "en": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher.",
       "mood": "Smile",
       "kind": "speech",
-      "generate_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
-      "defer_voice": true
+      "generate_text": "「むゆうせんきょう」は何度も試して、やっと納得できた味で。「けいようしゅんしょく」は、もう少しすっきりした感じにしたかったんです。",
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_new_03_unknown",
@@ -2945,7 +3522,10 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_soldout_unknown",
@@ -2955,7 +3535,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_05_daily_unknown",
@@ -2965,7 +3548,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "职业成就感、轻快自信",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_06_chat_01",
@@ -2975,7 +3561,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_06_chat_02",
@@ -2985,7 +3574,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_w06_referral_tourist",
@@ -2995,7 +3587,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "こんにちは。みちるの酒場でこちらを教えてもらいました。面白い品物がいろいろあるそうですね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_w06_referral_upper",
@@ -3005,7 +3598,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "こんにちは。みちるの酒場の店主からこちらを勧められました。時々、いい掘り出し物が見つかるそうですね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "speaker": "native_other"
     },
     {
       "key": "xm_tavern_06_chat_01_unknown",
@@ -3015,7 +3609,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_06_chat_02_unknown",
@@ -3025,7 +3622,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "亲近、俏皮，分享旅客趣事",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_07_chat_01",
@@ -3035,7 +3635,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "座ったら、ずっと雨の音を聴いてるお客さんもいるんです。本物の雨じゃないのに、気に入ってくれて。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_07_chat_02",
@@ -3045,7 +3648,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "最近は閉店前にふらっと一杯飲みに来る人もいて。約束なんてしてないのに、その時間になると、誰が来るかなんとなく分かるんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "有熟客的小小得意",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_08_chat_01",
@@ -3055,7 +3661,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "写真を撮ってくれた子たち、どれにするかまで一緒に悩んでくれて。お酒を飲みに来たのに、まるで撮影会でした。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_08_chat_02",
@@ -3065,7 +3674,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "次の交代のときは新人も連れてくるって。来てくれたら、材料をもう少し用意しておかないと。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "自然开心，谈照片时害羞",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_09_chat_01",
@@ -3075,7 +3687,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩、最近はよく出るお酒の材料を先に用意するようにしてるんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_09_chat_02",
@@ -3085,7 +3700,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "前はお客さんが増えると大慌てだったけど、今は少し落ち着いて対応できるようになりました。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_09_chat_03",
@@ -3095,7 +3713,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "でも、カウンターの奥には、もうひとつ棚が必要かもしれませんね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "繁忙、自信；还未察觉竞争压力",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_chat_01",
@@ -3105,7 +3726,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩、最近は新しいお酒の材料があまり減らなくなって。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_chat_02",
@@ -3115,7 +3739,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "先週は足りないかもって多めに用意したのに、今週は思ったより残っちゃって。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_chat_03",
@@ -3125,7 +3752,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "長く保存できる材料もあるから、助かってます。そうじゃなかったら、もったいないですもんね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_chat_supported_01",
@@ -3135,7 +3765,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩、最近、次にどれくらい材料を仕入れるか、もう一度考えているんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_chat_supported_02",
@@ -3145,7 +3778,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "でも、今ある仕事はいつもどおりできています。用意したものも、少しずつ使えていますし。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_chat_supported_03",
@@ -3155,7 +3791,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "今のペースを続けながら、もう何日か様子を見てみようと思います。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_chat_neutral_01",
@@ -3165,7 +3804,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩、次の仕入れは、もう少し丁寧に考えてみようと思っているんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_chat_neutral_02",
@@ -3175,7 +3817,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "長く置ける材料もあれば、新鮮なうちに使いたいものもありますから。必要な分を、少しずつ用意しようかな。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_chat_neutral_03",
@@ -3185,7 +3830,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "メニューはまだ変えずに、もう少し様子を見たいです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_regular_01",
@@ -3195,7 +3843,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩、前に来たお客さんが、今日はお友達と一緒に来てくれたんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_regular_02",
@@ -3205,7 +3856,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "寮に帰るなら直通のエレベーターでいいのに、わざわざ寄ってくれたそうで。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_regular_03",
@@ -3215,7 +3869,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら交換して飲み始めたんですよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_10_regular_04",
@@ -3225,7 +3882,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "えへへ、うれしかったな。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认可同行、理性观察；没有被背叛的怨气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_11_chat_01",
@@ -3235,7 +3895,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "先輩、今日、商店振興部にうちの案内表示はいつになるのか聞いてきたんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_11_chat_02",
@@ -3245,7 +3908,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "今の通路の計画に合わせて枠を調整してるから、もう少し待ってほしいって。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_11_chat_03",
@@ -3255,7 +3921,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "でも、支援制度に申し込んだとき、新しいお店の集客も手伝うって言ってくれたのに……。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_12_roka_01",
@@ -3265,7 +3934,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "先輩、いらっしゃい。昼間に話したお酒、できましたよ。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_12_roka_02",
@@ -3275,7 +3947,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_12_roka_03",
@@ -3284,8 +3959,11 @@
       "en": "I named it Dew Blossom. Hehe, what do you think, senpai?",
       "mood": "Smile",
       "kind": "speech",
-      "generate_text": "名前は「露華」にしました。えへへ、先輩、どうでしょう？",
-      "defer_voice": true
+      "generate_text": "名前は「ろか」にしました。[chuckles] 先輩、どうでしょう？",
+      "defer_voice": true,
+      "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_12_roka_04",
@@ -3295,7 +3973,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "これは普通のメニューには入れないつもりです。先輩の分にしておきますね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_12_business_01",
@@ -3305,7 +3986,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "先輩、最近、ペンギン資産会社から精算の通知が届いたんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_12_business_02",
@@ -3315,7 +3999,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "前の家賃の支援には、売上の条件があったみたいで。届かなかった分は契約どおり返さないといけないそうです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_12_business_03",
@@ -3325,7 +4012,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "売上の記録をまとめてみました。前はあんなにお客さんが来てくれたのに、最近はすっかり減ってしまって。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_12_business_04",
@@ -3335,7 +4025,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "来月の仕入れも、最初から考え直さないと。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_12_business_05",
@@ -3345,7 +4038,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "まずは審査のやり直しを頼んでみます。約束された宣伝も、結局うちには回ってこなかったので。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_13_entry",
@@ -3355,7 +4051,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_13_tape",
@@ -3365,7 +4064,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_tavern_13_chat",
@@ -3375,7 +4077,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "グラスを何個か、手元に残すことにしました。見るたびに、ここを思い出すのかな。",
-      "defer_voice": true
+      "defer_voice": true,
+      "delivery": "处理实际事务，平静中带不舍；不崩溃",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_right_item",
@@ -3385,7 +4090,8 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "あ、そうそう。こういうのを探してたんです。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_wrong_item",
@@ -3395,7 +4101,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "あ、すみません。今日はそれじゃなくて。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_repeat_first",
@@ -3405,7 +4112,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "食べるものでも、飲み水でも大丈夫です。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_repeat_water",
@@ -3415,7 +4125,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "今日は飲み水を。普通ので大丈夫です。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_repeat_food",
@@ -3425,7 +4136,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "今日は食べるものを少し。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_repeat_goods",
@@ -3435,7 +4147,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "今日は日用品を探してるんです。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_accept",
@@ -3445,7 +4158,8 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "ありがとうございます。助かりました。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_accept_more",
@@ -3455,7 +4169,8 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "あ、これもお願いします。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_goodbye",
@@ -3465,7 +4180,8 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "それじゃ、そろそろ帰りますね。また来ます。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_retry",
@@ -3475,7 +4191,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "こんばんは。今日も少し見せてもらいに来ました。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_cocktail_accept",
@@ -3485,7 +4202,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "ありがとうございます。お口に合うといいんですけど。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "intro_1",
@@ -3495,7 +4215,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "……こんばんは。まだ明かりがついていたので、入ってきました。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "intro_2",
@@ -3505,7 +4228,8 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "わたし、みちるっていいます。近くに越してきたばかりで、まだ階を間違えることがあるんです。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "intro_3",
@@ -3515,7 +4239,8 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "あれ……ここ、カセットデッキもあるんですね。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "return_1",
@@ -3525,7 +4250,8 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "こんばんは。またお邪魔しちゃいました。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "shopping",
@@ -3535,7 +4261,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "今日は飲み水を買いたくて。普通ので大丈夫です。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "accept",
@@ -3545,7 +4272,8 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "ありがとう。間に合ってよかった。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "goodbye",
@@ -3555,7 +4283,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "それじゃ、そろそろ行きますね。また。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "wrong_item",
@@ -3565,7 +4296,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "これは……今日は使わないかな。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "right_item",
@@ -3575,7 +4309,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "うん、これです。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "repeat",
@@ -3585,7 +4322,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "shopping_food",
@@ -3595,7 +4335,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "今日は食べるものを少し買いに来ました。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "shopping_household",
@@ -3605,7 +4346,8 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "今日は日用品を少し買い足したくて。",
-      "reference": true
+      "reference": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "accept_return",
@@ -3615,7 +4357,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "うん、ありがとう。今日も助かりました。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "goodbye_discount",
@@ -3625,7 +4370,10 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "お安くしてくれたんですね……ありがとうございます。[chuckles] ちょっと助かっちゃいました。それじゃ、また。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "repeat_food",
@@ -3635,7 +4383,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "食べ物だけで大丈夫です。他のものは、また今度。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "repeat_household",
@@ -3645,7 +4396,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "普段使うものを。今日はそれを揃えたくて。",
-      "reference": false
+      "reference": false,
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_discount_accept_01",
@@ -3655,7 +4409,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "あ、少し安くなるんですね。ありがとうございます。",
-      "native_key": "dialog_bargain_accept_grateful_1"
+      "native_key": "dialog_bargain_accept_grateful_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_discount_accept_02",
@@ -3665,7 +4422,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "いいんですか？ じゃあ、お願いします。",
-      "native_key": "dialog_bargain_accept_grateful_2"
+      "native_key": "dialog_bargain_accept_grateful_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_discount_accept_03",
@@ -3675,7 +4435,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "助かります。それじゃ、このお値段でお願いします。",
-      "native_key": "dialog_bargain_accept_grateful_3"
+      "native_key": "dialog_bargain_accept_grateful_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_discount_accept_high_01",
@@ -3685,7 +4448,10 @@
       "mood": "Shy",
       "kind": "speech",
       "generate_text": "えっ、[gasps] そんなに安くしてくれるんですか？ 本当にいいんですか？",
-      "native_key": "dialog_bargain_accept_very_grateful_1"
+      "native_key": "dialog_bargain_accept_very_grateful_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_discount_accept_high_02",
@@ -3695,7 +4461,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "そこまでしてもらって……本当にありがとうございます。",
-      "native_key": "dialog_bargain_accept_very_grateful_2"
+      "native_key": "dialog_bargain_accept_very_grateful_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_discount_accept_high_03",
@@ -3705,7 +4474,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "びっくりしました。[chuckles] じゃあ、お言葉に甘えちゃおうかな。",
-      "native_key": "dialog_bargain_accept_very_grateful_3"
+      "native_key": "dialog_bargain_accept_very_grateful_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_budget_increase_01",
@@ -3715,7 +4487,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "これなら、もう少し買い物できそうですね。",
-      "native_key": "dialog_bargain_budget_increase_1"
+      "native_key": "dialog_bargain_budget_increase_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_budget_increase_02",
@@ -3725,7 +4500,10 @@
       "mood": "Smile",
       "kind": "speech",
       "generate_text": "浮いた分で、もう一つ見てみようかな。",
-      "native_key": "dialog_bargain_budget_increase_2"
+      "native_key": "dialog_bargain_budget_increase_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_budget_increase_03",
@@ -3735,7 +4513,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
-      "native_key": "dialog_bargain_budget_increase_3"
+      "native_key": "dialog_bargain_budget_increase_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_accept_01",
@@ -3745,7 +4526,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "……分かりました。それでお願いします。",
-      "native_key": "dialog_bargain_accept_reluctant_1"
+      "native_key": "dialog_bargain_accept_reluctant_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_accept_02",
@@ -3755,7 +4539,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "さっきより高いけど……今日は必要なので。",
-      "native_key": "dialog_bargain_accept_reluctant_2"
+      "native_key": "dialog_bargain_accept_reluctant_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_accept_03",
@@ -3765,7 +4552,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "うーん……今回は、そのお値段で。",
-      "native_key": "dialog_bargain_accept_reluctant_3"
+      "native_key": "dialog_bargain_accept_reluctant_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_accept_high_01",
@@ -3775,7 +4565,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "こんなに上がるんですか……。でも、今回はお願いします。",
-      "native_key": "dialog_bargain_accept_very_reluctant_1"
+      "native_key": "dialog_bargain_accept_very_reluctant_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_accept_high_02",
@@ -3785,7 +4578,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "高いですね……。[sighs] これだけは必要なので。",
-      "native_key": "dialog_bargain_accept_very_reluctant_2"
+      "native_key": "dialog_bargain_accept_very_reluctant_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_accept_high_03",
@@ -3795,7 +4591,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "……本当にこのお値段なんですね。分かりました。",
-      "native_key": "dialog_bargain_accept_very_reluctant_3"
+      "native_key": "dialog_bargain_accept_very_reluctant_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_budget_decrease_01",
@@ -3805,7 +4604,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "あ……残りの予算、少なくなっちゃいました。",
-      "native_key": "dialog_bargain_budget_decrease_1"
+      "native_key": "dialog_bargain_budget_decrease_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_budget_decrease_02",
@@ -3815,7 +4617,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "これだと、今日はあまり買えませんね。",
-      "native_key": "dialog_bargain_budget_decrease_2"
+      "native_key": "dialog_bargain_budget_decrease_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_budget_decrease_03",
@@ -3825,7 +4630,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "もう一つ買うつもりだったんですけど……また今度にします。",
-      "native_key": "dialog_bargain_budget_decrease_3"
+      "native_key": "dialog_bargain_budget_decrease_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_reject_01",
@@ -3835,7 +4643,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "すみません。そのお値段なら、今回はやめておきます。",
-      "native_key": "dialog_bargain_reject_1"
+      "native_key": "dialog_bargain_reject_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_reject_02",
@@ -3845,7 +4656,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "うーん……ちょっと予算が足りなくて。",
-      "native_key": "dialog_bargain_reject_2"
+      "native_key": "dialog_bargain_reject_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_reject_03",
@@ -3855,7 +4669,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "その金額だと、ちょっと難しいです。",
-      "native_key": "dialog_bargain_reject_3"
+      "native_key": "dialog_bargain_reject_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_reject_high_01",
@@ -3865,7 +4682,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "……えっ、[gasps] さすがに高すぎませんか。",
-      "native_key": "dialog_bargain_hard_reject_1"
+      "native_key": "dialog_bargain_hard_reject_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_reject_high_02",
@@ -3875,7 +4695,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "ごめんなさい。そのお値段では買えません。",
-      "native_key": "dialog_bargain_hard_reject_2"
+      "native_key": "dialog_bargain_hard_reject_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_markup_reject_high_03",
@@ -3885,7 +4708,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "それなら、今日はやめておきます。",
-      "native_key": "dialog_bargain_hard_reject_3"
+      "native_key": "dialog_bargain_hard_reject_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_angry_leave_01",
@@ -3895,7 +4721,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "……もう結構です。今日は帰ります。",
-      "native_key": "dialog_bargain_leave_1"
+      "native_key": "dialog_bargain_leave_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_angry_leave_02",
@@ -3905,7 +4734,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "これ以上お話ししても仕方なさそうなので。失礼します。",
-      "native_key": "dialog_bargain_leave_2"
+      "native_key": "dialog_bargain_leave_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_angry_leave_03",
@@ -3915,7 +4747,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "すみません。もうここでは買い物できません。",
-      "native_key": "dialog_bargain_leave_3"
+      "native_key": "dialog_bargain_leave_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_bad_word_01",
@@ -3925,7 +4760,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
-      "native_key": "dialog_bargain_talk_bad_1"
+      "native_key": "dialog_bargain_talk_bad_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_bad_word_02",
@@ -3935,7 +4773,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
-      "native_key": "dialog_bargain_talk_bad_2"
+      "native_key": "dialog_bargain_talk_bad_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_bad_word_03",
@@ -3945,7 +4786,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
-      "native_key": "dialog_bargain_talk_bad_3"
+      "native_key": "dialog_bargain_talk_bad_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_blackmail_innocent_01",
@@ -3955,7 +4799,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "……犯罪者って、わたしのことですか？ [inhales] 違います。そんなふうに決めつけないでください。",
-      "native_key": "dialog_bargain_innocent_blackmail_1"
+      "native_key": "dialog_bargain_innocent_blackmail_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_blackmail_innocent_02",
@@ -3965,7 +4812,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "そういう冗談、笑えません。わたし、何もしてませんよ。",
-      "native_key": "dialog_bargain_innocent_blackmail_2"
+      "native_key": "dialog_bargain_innocent_blackmail_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_blackmail_innocent_03",
@@ -3975,7 +4825,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
-      "native_key": "dialog_bargain_innocent_blackmail_3"
+      "native_key": "dialog_bargain_innocent_blackmail_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_threaten_false_aug_01",
@@ -3985,7 +4838,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "……AI人間？ わたし、違いますよ。",
-      "native_key": "dialog_bargain_false_threaten_1"
+      "native_key": "dialog_bargain_false_threaten_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_threaten_false_aug_02",
@@ -3995,7 +4851,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
-      "native_key": "dialog_bargain_false_threaten_2"
+      "native_key": "dialog_bargain_false_threaten_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_threaten_false_aug_03",
@@ -4005,7 +4864,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "そんなことで脅かさないでください……本当に違うんです。",
-      "native_key": "dialog_bargain_false_threaten_3"
+      "native_key": "dialog_bargain_false_threaten_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_after_sale_continue_01",
@@ -4015,7 +4877,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "ほかにもありますか？ もう少し見てみたいです。",
-      "native_key": "dialog_util_after_sell"
+      "native_key": "dialog_util_after_sell",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_after_sale_low_budget_01",
@@ -4025,7 +4890,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
-      "native_key": "dialog_util_after_sell_done"
+      "native_key": "dialog_util_after_sell_done",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_reject_contraband_01",
@@ -4035,7 +4903,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "すみません。こういうものは、買えないんです。",
-      "native_key": "dialog_util_no_contraband"
+      "native_key": "dialog_util_no_contraband",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_remove_filter_01",
@@ -4045,7 +4916,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
-      "native_key": "dialog_water_buyer_filter_inside"
+      "native_key": "dialog_water_buyer_filter_inside",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_shutter_close_01",
@@ -4055,7 +4929,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "えっ、[gasps] ちょっと待ってください！ まだ買い物の途中で……！",
-      "native_key": "dialog_util_shutter_1"
+      "native_key": "dialog_util_shutter_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_shutter_close_02",
@@ -4065,7 +4942,8 @@
       "mood": "Neutral",
       "kind": "sfx",
       "generate_text": "",
-      "native_key": "dialog_util_shutter_2"
+      "native_key": "dialog_util_shutter_2",
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_shutter_close_03",
@@ -4075,7 +4953,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "……それは、ちょっとひどくないですか。",
-      "native_key": "dialog_util_shutter_3"
+      "native_key": "dialog_util_shutter_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_shutter_close_04",
@@ -4085,7 +4966,10 @@
       "mood": "Worried",
       "kind": "speech",
       "generate_text": "えっ、もう閉めちゃうんですか？",
-      "native_key": "dialog_util_shutter_4"
+      "native_key": "dialog_util_shutter_4",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_expose_water_base_01",
@@ -4095,7 +4979,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "あれ……これ、普通のお水ですよね。ラベルとちょっと違うみたいです。",
-      "native_key": "dialog_expose_water_basewater"
+      "native_key": "dialog_expose_water_basewater",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_expose_water_high_01",
@@ -4105,7 +4992,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
-      "native_key": "dialog_expose_water_highquality"
+      "native_key": "dialog_expose_water_highquality",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_expose_water_other_01",
@@ -4115,7 +5005,10 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "この水、純度がラベルの表示と違うみたいです。",
-      "native_key": "dialog_expose_water_scam_1"
+      "native_key": "dialog_expose_water_scam_1",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_expose_water_other_02",
@@ -4125,7 +5018,10 @@
       "mood": "Soft",
       "kind": "speech",
       "generate_text": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
-      "native_key": "dialog_expose_water_scam_2"
+      "native_key": "dialog_expose_water_scam_2",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     },
     {
       "key": "xm_act_expose_water_other_03",
@@ -4135,7 +5031,36 @@
       "mood": "Neutral",
       "kind": "speech",
       "generate_text": "このラベルの数字……間違ってませんか？",
-      "native_key": "dialog_expose_water_scam_3"
+      "native_key": "dialog_expose_water_scam_3",
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
+    },
+    {
+      "key": "xm_gun_plead",
+      "zh": "那、那个……可以先把枪放下吗？",
+      "ja": "あ、あの……先に銃を下ろしてもらえませんか？",
+      "en": "U-um… could you put the gun down first?",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "あ、[gasps] あの……先に銃を下ろしてもらえませんか？",
+      "defer_voice": true,
+      "delivery": "突然受惊、声音收紧和结巴，低声请求放下枪",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
+    },
+    {
+      "key": "xm_gun_holstered",
+      "zh": "……吓了我一跳。",
+      "ja": "……びっくりしました。",
+      "en": "…You startled me.",
+      "mood": "Worried",
+      "kind": "speech",
+      "generate_text": "……びっくりしました。[exhale]",
+      "defer_voice": true,
+      "delivery": "受惊后的余悸，收枪后松一口气，尚未完全镇定",
+      "recording_reviewed": true,
+      "speaker": "xiaoman"
     }
   ],
   "voice_keys": [
@@ -4309,22 +5234,6 @@
     "xm_tavern_w04_supply_03",
     "xm_tavern_w04_supply_yes",
     "xm_tavern_w04_supply_later",
-    "xm_w04_phone_01",
-    "xm_w04_phone_02",
-    "xm_w04_phone_confirm",
-    "xm_w04_phone_closed",
-    "xm_w04_audit_01",
-    "xm_w04_audit_02",
-    "xm_w04_audit_shop",
-    "xm_w04_audit_accept",
-    "xm_w04_audit_no_trade",
-    "xm_w04_audit_bye",
-    "xm_w04_wang_01",
-    "xm_w04_wang_02",
-    "xm_w04_wang_03",
-    "xm_w04_wang_04",
-    "xm_w04_wang_bye",
-    "xm_w04_audit_01_late",
     "xm_tavern_w04_supply_existing",
     "xm_tavern_w04_supply_early",
     "xm_tavern_w04_supply_01_unknown",
@@ -4346,8 +5255,6 @@
     "xm_tavern_05_daily_unknown",
     "xm_tavern_06_chat_01",
     "xm_tavern_06_chat_02",
-    "xm_w06_referral_tourist",
-    "xm_w06_referral_upper",
     "xm_tavern_06_chat_01_unknown",
     "xm_tavern_06_chat_02_unknown",
     "xm_tavern_07_chat_01",
@@ -4443,7 +5350,9 @@
     "xm_act_expose_water_high_01",
     "xm_act_expose_water_other_01",
     "xm_act_expose_water_other_02",
-    "xm_act_expose_water_other_03"
+    "xm_act_expose_water_other_03",
+    "xm_gun_plead",
+    "xm_gun_holstered"
   ],
   "sale_rule": {
     "first": 4,

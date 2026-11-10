@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "週末の分を取り置きできるか、聞いてくれたお客さんまでいて。[chuckles] 次は材料をもう少し増やさないと。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "98",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.672,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 512300
+  },
+  "sha256": "80ba8ea13ff22c5dfb29e85a9303a6f826cd9db48c877da8d377fe8498676d71",
+  "binding": {
+    "key": "xm_09_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "有几位客人还提前来问，能不能帮他们留到周末。嘿嘿，看来下次得再多进些原料了。",
+      "ja": "週末の分を取り置きできるか、聞いてくれたお客さんまでいて。えへへ、次は材料をもう少し増やさないと。",
+      "en": "A few people even came ahead to ask if I could save them some for the weekend. Hehe, I will have to get more ingredients next time."
+    },
+    "generic": false
+  }
+}

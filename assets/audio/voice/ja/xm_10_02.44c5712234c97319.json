@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あそこの機械、すごかったです。お酒もちゃんとおいしくて。行列ができるのも分かるなあって。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "84",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.509,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 456492
+  },
+  "sha256": "5eee7cce8103dc46e8e41bfc6cd247e3239723814b020edefc6d407f212129b5",
+  "binding": {
+    "key": "xm_10_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那里的调酒设备真的很厉害，酒的味道也不错。难怪那么多人排队呢。",
+      "ja": "あそこの機械、すごかったです。お酒もちゃんとおいしくて。行列ができるのも分かるなあって。",
+      "en": "Their bartending equipment is incredible, and the drinks are good too. No wonder so many people are lining up."
+    },
+    "generic": false
+  }
+}

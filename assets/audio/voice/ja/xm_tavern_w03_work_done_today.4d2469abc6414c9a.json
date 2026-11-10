@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "90",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.258,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 492430
+  },
+  "sha256": "024fd8ca640229dbd0b21e13e14fdcb809b018d21f902e80da598339569c5b1d",
+  "binding": {
+    "key": "xm_tavern_w03_work_done_today",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，今天已经下过班啦。再留下来，我可要担心您休息不够了。",
+      "ja": "先輩、今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
+      "en": "You've already finished your shift today, senpai. If you stay any longer, I'll start worrying you aren't getting enough rest."
+    },
+    "generic": false
+  }
+}

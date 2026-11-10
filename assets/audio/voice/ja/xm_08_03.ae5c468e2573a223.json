@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "「店長、もちろんカウンターの中に立って！」って言われて……おとなしく戻りました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "73",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.309,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 398866
+  },
+  "sha256": "a185920b738b63d5041e55dd7cf38b3fd8bcc726c33dc60adbcf378044d08cee",
+  "binding": {
+    "key": "xm_08_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "她们说：“老板，当然要站在吧台后面呀！”……我就乖乖站回去了。",
+      "ja": "「店長、もちろんカウンターの中に立って！」って言われて……おとなしく戻りました。",
+      "en": "They said, \"You are the owner! You have to stand behind the bar!\" ...So I went back where they told me to."
+    },
+    "generic": false
+  }
+}

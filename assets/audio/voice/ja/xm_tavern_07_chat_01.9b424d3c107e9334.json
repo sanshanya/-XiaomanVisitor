@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "座ったら、ずっと雨の音を聴いてるお客さんもいるんです。本物の雨じゃないのに、気に入ってくれて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "90",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.273,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 493126
+  },
+  "sha256": "40a3cf7ddf9212382f64527c39ef6ba8690d9d1068112c3f4da5ee00d312f82b",
+  "binding": {
+    "key": "xm_tavern_07_chat_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "有的客人坐下以后就安安静静听雨声。明明外面不是真的在下雨，他们却挺喜欢。",
+      "ja": "座ったら、ずっと雨の音を聴いてるお客さんもいるんです。本物の雨じゃないのに、気に入ってくれて。",
+      "en": "Some people sit down and quietly listen to the rain. It is not really raining outside, but they seem to like it."
+    },
+    "generic": false
+  }
+}

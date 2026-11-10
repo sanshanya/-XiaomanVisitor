@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "昨日、いつも来てくれる夜勤の女の子たちに頼んだら、みんな撮りたいって言ってくれたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "85",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.853,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 425004
+  },
+  "sha256": "edc83868d0fd3de009f357f185e94475b9114c19e765c03cde0059ff10aa903e",
+  "binding": {
+    "key": "xm_08_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "昨晚我请几位常来的夜班姑娘帮忙，她们还抢着说要给我拍呢。",
+      "ja": "昨日、いつも来てくれる夜勤の女の子たちに頼んだら、みんな撮りたいって言ってくれたんです。",
+      "en": "Last night I asked a few of the night-shift girls who come in regularly to help. They all wanted to take it."
+    },
+    "generic": false
+  }
+}

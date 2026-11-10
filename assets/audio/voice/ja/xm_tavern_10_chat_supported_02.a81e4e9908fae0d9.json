@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "でも、今ある仕事はいつもどおりできています。用意したものも、少しずつ使えていますし。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "80",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.217,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 442462
+  },
+  "sha256": "a4cecfba2bfb66ced3849dae77d5dcc6b215d5163bee5013bb1a76931ebf0da3",
+  "binding": {
+    "key": "xm_tavern_10_chat_supported_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "还好，手边的生意还在照常做。备下的东西，也在慢慢用掉呢。",
+      "ja": "でも、今ある仕事はいつもどおりできています。用意したものも、少しずつ使えていますし。",
+      "en": "At least the business in hand is carrying on as usual. What I prepared is being used up little by little too."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "窓の雨が写ってる一枚を選んで、もう友達に送りました。[chuckles] けっこういい感じなんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "88",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.199,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 489592
+  },
+  "sha256": "a6e4adc07f8fa2e9b48d7543db0fceb134dbab279577897a564d01a479ff513d",
+  "binding": {
+    "key": "xm_08_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "最后挑了一张窗上有雨的，已经发给朋友们啦。嘿嘿，拍得还挺不错呢。",
+      "ja": "窓の雨が写ってる一枚を選んで、もう友達に送りました。えへへ、けっこういい感じなんですよ。",
+      "en": "I picked one with rain on the window and sent it to my friends. Hehe, it came out quite nicely."
+    },
+    "generic": false
+  }
+}

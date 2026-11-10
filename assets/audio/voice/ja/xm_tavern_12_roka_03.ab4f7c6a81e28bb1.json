@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "名前は「ろか」にしました。[chuckles] 先輩、どうでしょう？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "52",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.49,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 311570
+  },
+  "sha256": "82460d31f0260c634256ef17106df496bc874189b181fe7bf23bfc7572acf10e",
+  "binding": {
+    "key": "xm_tavern_12_roka_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我给它取名叫《露华》。嘿嘿，前辈觉得怎么样？",
+      "ja": "名前は「露華」にしました。えへへ、先輩、どうでしょう？",
+      "en": "I named it Dew Blossom. Hehe, what do you think, senpai?"
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今の通路の計画に合わせて枠を調整してるから、もう少し待ってほしいって。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "68",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.581,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 363948
+  },
+  "sha256": "e475f1d96a71c6dc0832550710766a144e632653012b4d13d4b74eaa87aeb748",
+  "binding": {
+    "key": "xm_tavern_11_chat_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "他们说，推广位置要按照商业街的最新安排调整，让我再等等。",
+      "ja": "今の通路の計画に合わせて枠を調整してるから、もう少し待ってほしいって。",
+      "en": "They said the promotional slots had to follow the shopping street's latest arrangements, and asked me to wait a little longer."
+    },
+    "generic": false
+  }
+}

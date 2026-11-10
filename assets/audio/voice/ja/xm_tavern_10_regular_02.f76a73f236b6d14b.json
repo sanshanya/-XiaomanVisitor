@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "寮に帰るなら直通のエレベーターでいいのに、わざわざ寄ってくれたそうで。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "68",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.999,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 335992
+  },
+  "sha256": "654d884f00f981e5f687f0b83b52c58d2bf7b29f4b2ebd6665b01bc8cb5f0a2f",
+  "binding": {
+    "key": "xm_tavern_10_regular_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "她说本来直接坐电梯就能回宿舍的，不过还是想绕过来喝一杯。",
+      "ja": "寮に帰るなら直通のエレベーターでいいのに、わざわざ寄ってくれたそうで。",
+      "en": "She said she could have taken the lift straight back to her dorm, but wanted to make a detour for a drink."
+    },
+    "generic": false
+  }
+}

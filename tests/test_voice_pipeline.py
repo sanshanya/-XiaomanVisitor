@@ -59,6 +59,20 @@ class VoicePipelineTests(unittest.TestCase):
         self.assertTrue((self.root / self.row["audio"]).exists())
         self.assertEqual(list((self.package / "Sounds").glob("xm_voice_*.wav")), [])
 
+    def test_identical_pcm_keeps_separate_dialogue_bindings_with_one_clip(self):
+        self.texts['ja']['second_line']=self.texts['ja']['intro_1']
+        self.texts['zh']['second_line']='又见面了。'
+        self.texts['en']['second_line']='Hello again.'
+        second=dict(self.row,key='second_line',subtitle_templates=pipeline.templates_for('second_line',self.texts),audio='')
+        self.script['lines'].append(second)
+        pipeline.save(self.script_path,self.script)
+        with mock.patch.object(pipeline.subprocess,'run',side_effect=AssertionError('Unexpected paid request')):
+            pipeline.generate(self.script_path,['second_line'])
+        result=pipeline.pack(self.script_path)
+        self.assertEqual(len(result['lines']),2)
+        self.assertEqual(len({r['sound_key'] for r in result['lines']}),1)
+        self.assertEqual(len(list((self.package/'Sounds').glob('xm_voice_*.wav'))),1)
+
     def test_refresh_keeps_manual_text_until_subtitles_change(self):
         before = pipeline.export_script(self.script_path, refresh=True)
         self.assertTrue(before["lines"][0]["reviewed"])

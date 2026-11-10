@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "最近、お店で使う水も材料もどんどん増えてきて、仕入れが追いつかなくなりそうで。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "75",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.371,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 401870
+  },
+  "sha256": "4b4a0cb0f986d8d0005e19ff8c9ec2933c1d54ead1654a5eeaba987ec3bb3889",
+  "binding": {
+    "key": "xm_04_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "最近店里用的水和原材料越来越多了，都快供不应求了。",
+      "ja": "最近、お店で使う水も材料もどんどん増えてきて、仕入れが追いつかなくなりそうで。",
+      "en": "We are using more and more water and ingredients. I can hardly keep up with the orders."
+    },
+    "generic": false
+  }
+}

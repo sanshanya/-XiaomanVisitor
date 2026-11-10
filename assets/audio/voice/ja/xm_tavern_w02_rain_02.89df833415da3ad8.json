@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "雨が降っているように見せたくて、けっこう頑張ったんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "54",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.653,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 271404
+  },
+  "sha256": "b1b3e77ba591cb846562ed37789f2b1d173f8dcaabb3f5fcd75edccae781ca8e",
+  "binding": {
+    "key": "xm_tavern_w02_rain_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "为了呈现下雨的效果，我可是花了好一番功夫呢。",
+      "ja": "雨が降っているように見せたくて、けっこう頑張ったんです。",
+      "en": "It took quite a bit of work to make it look as though it was raining."
+    },
+    "generic": false
+  }
+}

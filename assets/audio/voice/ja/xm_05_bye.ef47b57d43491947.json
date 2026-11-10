@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それじゃ、また。夜、時間があったら、新しいお酒も飲みに来てくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "65",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.345,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 400580
+  },
+  "sha256": "b0b998a793e6b4edacb3ff19ebbef8ac28e6c3f72c69fbd5fd242f1a1cac00e3",
+  "binding": {
+    "key": "xm_05_bye",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那我先走啦。晚上有空的话，欢迎来尝尝新酒。",
+      "ja": "それじゃ、また。夜、時間があったら、新しいお酒も飲みに来てくださいね。",
+      "en": "I should go. If you have time tonight, come try the new drinks."
+    },
+    "generic": false
+  }
+}

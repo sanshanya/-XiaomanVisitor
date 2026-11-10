@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ、そうだ……商業通路に小さなバーを開いたんです。今夜、いよいよオープンなんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "78",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.895,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 474990
+  },
+  "sha256": "ed781ad0f6a040630ddc2e6afba7a545a86e26c008cd561889596dcfbf7a994a",
+  "binding": {
+    "key": "xm_02_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "对了……我在商业街开了间小酒馆。今晚终于要开业啦。",
+      "ja": "あ、そうだ……商業通路に小さなバーを開いたんです。今夜、いよいよオープンなんですよ。",
+      "en": "Oh, by the way... I opened a little tavern on the shopping street. Tonight is finally opening night!"
+    },
+    "generic": false
+  }
+}

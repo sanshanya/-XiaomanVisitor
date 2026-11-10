@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ、店長さん。また会いましたね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "29",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.491,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 215596
+  },
+  "sha256": "22f0b66c0e87299501baade25a36468c3fa3ddf9820d762183b6df456ec6b5b5",
+  "binding": {
+    "key": "xm_tavern_w02_reentry",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "啊，店长先生。又见面啦。",
+      "ja": "あ、店長さん。また会いましたね。",
+      "en": "Oh, shopkeeper. Here you are again."
+    },
+    "generic": false
+  }
+}

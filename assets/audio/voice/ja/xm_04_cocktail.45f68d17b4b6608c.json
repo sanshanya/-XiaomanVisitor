@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ、そうだ。お店で作ったジュースも二本持ってきたんです。よかったら見てみますか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "76",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.782,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 421572
+  },
+  "sha256": "9cf5c766afa572186a5b7ede8c1402f94b9ccd3df4c26a626ca803467e42cc58",
+  "binding": {
+    "key": "xm_04_cocktail",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "对了，还带了两瓶店里调好的果汁版饮品。前辈要看看吗？",
+      "ja": "あ、そうだ。お店で作ったジュースも二本持ってきたんです。よかったら見てみますか？",
+      "en": "I also brought two bottled juice drinks from the bar. Would you like a look?"
+    },
+    "generic": false
+  }
+}

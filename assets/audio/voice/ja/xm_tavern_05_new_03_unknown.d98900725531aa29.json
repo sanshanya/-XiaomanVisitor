@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "126",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 13.109,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 629266
+  },
+  "sha256": "ffbdc542e607dc7403fafc697b9749391685b318ddde89529fae7ede1ebe71ef",
+  "binding": {
+    "key": "xm_tavern_05_new_03_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这批原料有点紧俏，暂时只能做这么多。喜欢的话，以后再多进一点吧。",
+      "ja": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+      "en": "These ingredients are hard to come by, so I can only make a few for now. If people like them, I will order more."
+    },
+    "generic": false
+  }
+}

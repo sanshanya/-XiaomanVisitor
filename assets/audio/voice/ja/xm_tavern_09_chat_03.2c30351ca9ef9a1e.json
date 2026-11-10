@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "でも、カウンターの奥には、もうひとつ棚が必要かもしれませんね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "59",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.745,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 323782
+  },
+  "sha256": "9144117fe2738fa6944268b8ac0ceae875a428c56f6d76901a74f4c8c9ec4f59",
+  "binding": {
+    "key": "xm_tavern_09_chat_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "不过看样子，吧台后面可能还得添个柜子才行。",
+      "ja": "でも、カウンターの奥には、もうひとつ棚が必要かもしれませんね。",
+      "en": "At this rate, though, I might need another cabinet behind the bar."
+    },
+    "generic": false
+  }
+}

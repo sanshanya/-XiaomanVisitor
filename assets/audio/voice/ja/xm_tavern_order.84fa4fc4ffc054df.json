@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "はい、少々お待ちください。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "23",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.399,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 163218
+  },
+  "sha256": "3d97eebd61d9cb8264ffa7355a0d5bb7e7501211cf234177b7e5349e084d89db",
+  "binding": {
+    "key": "xm_tavern_order",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "好，请稍等一下。",
+      "ja": "はい、少々お待ちください。",
+      "en": "Of course. Just a moment, please."
+    },
+    "generic": false
+  }
+}

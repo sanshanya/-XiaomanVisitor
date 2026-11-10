@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こちらが今のメニューです。まだこのくらいの種類しかないんですけど、味には自信があります。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "85",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.853,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 425004
+  },
+  "sha256": "a7a90f018e20a450ba347c4e1b66eef8d8ca0f57a5c2fa8e895ebe45d2463675",
+  "binding": {
+    "key": "xm_tavern_w02_menu",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这是现在的酒单。暂时只有这些口味，不过味道我有信心。",
+      "ja": "こちらが今のメニューです。まだこのくらいの種類しかないんですけど、味には自信があります。",
+      "en": "Here's the menu for now. There aren't many flavors yet, but I'm confident about the taste."
+    },
+    "generic": false
+  }
+}

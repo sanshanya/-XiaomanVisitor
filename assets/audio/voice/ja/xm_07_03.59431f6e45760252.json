@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "昨日なんて、入ってすぐ「いつもの」って。もう、何を作ればいいかすぐ分かっちゃいました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "80",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.072,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 435500
+  },
+  "sha256": "290416b77d103f5121beadc6d2e4336ccd2fec051e5f1a139f367fa89e69bb9c",
+  "binding": {
+    "key": "xm_07_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "昨天他一进门就说了句“老样子”，我一下就知道该调哪杯了。",
+      "ja": "昨日なんて、入ってすぐ「いつもの」って。もう、何を作ればいいかすぐ分かっちゃいました。",
+      "en": "Yesterday he walked in and said, \"The usual.\" I knew straight away what to make."
+    },
+    "generic": false
+  }
+}

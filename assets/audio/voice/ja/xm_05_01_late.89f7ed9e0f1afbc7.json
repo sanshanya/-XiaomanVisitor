@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは、先輩。新しい仕入れ先からいいお酒が届いて、しばらく試していたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "76",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.364,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 449528
+  },
+  "sha256": "ed76daa5acaafb9183079952cb1f78dae8af5eee9387de7535324aa2e54dc2b1",
+  "binding": {
+    "key": "xm_05_01_late",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好，前辈。新供货商送来了一批好酒，我试了好一阵子呢。",
+      "ja": "こんばんは、先輩。新しい仕入れ先からいいお酒が届いて、しばらく試していたんです。",
+      "en": "Good evening, senpai. I spent a while trying out some fine spirits from the new supplier."
+    },
+    "generic": false
+  }
+}

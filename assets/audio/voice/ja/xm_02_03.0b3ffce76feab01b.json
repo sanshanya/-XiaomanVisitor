@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "メニューは何度も書き直したんですけど、このステーションの人たちはどんなお酒が好きなのかなって。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "92",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.49,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 407544
+  },
+  "sha256": "d136e30337a10ba5df232957c4c0496767eec8150d4b8663bb7724b46c59e2d9",
+  "binding": {
+    "key": "xm_02_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "酒单改了好几遍，不知道空间站的人喜欢喝什么。",
+      "ja": "メニューは何度も書き直したんですけど、このステーションの人たちはどんなお酒が好きなのかなって。",
+      "en": "I've rewritten the drinks menu so many times. I'm still not sure what people on the station like."
+    },
+    "generic": false
+  }
+}

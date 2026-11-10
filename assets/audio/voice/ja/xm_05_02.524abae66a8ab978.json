@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ずっと使ってみたかったベースのお酒があって。昨日、やっと納得できる味になったんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "83",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.146,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 439032
+  },
+  "sha256": "0fc93435501fa1344120dc615d5138b349137e58f3d08fe8c217efa02fba6ef4",
+  "binding": {
+    "key": "xm_05_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "有一种基酒我以前就很想用，昨天终于调出满意的口味啦。",
+      "ja": "ずっと使ってみたかったベースのお酒があって。昨日、やっと納得できる味になったんですよ。",
+      "en": "There was one base spirit I had always wanted to use. Yesterday I finally got the taste right."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ふう……やっとひと段落ですね。先輩、すごく助かりました！",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "51",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.327,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 351736
+  },
+  "sha256": "e033b59a58a63ef200783f5a9f558e06537c3b7eba5d9856bb3ec0162937ad23",
+  "binding": {
+    "key": "xm_tavern_w03_work_done_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "呼……总算忙过这一阵啦。前辈，帮大忙了！",
+      "ja": "ふう……やっとひと段落ですね。先輩、すごく助かりました！",
+      "en": "Phew… We've finally caught up. You were a huge help!"
+    },
+    "generic": false
+  }
+}

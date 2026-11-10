@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "えへへ、うれしかったな。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "22",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.926,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 140510
+  },
+  "sha256": "bd37a7534105c64622dc402a14534459405168e1d70e1a237e3c8b77cd766793",
+  "binding": {
+    "key": "xm_tavern_10_regular_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "嘿嘿，还是挺开心的。",
+      "ja": "えへへ、うれしかったな。",
+      "en": "Hehe. It really did make me happy."
+    },
+    "generic": false
+  }
+}

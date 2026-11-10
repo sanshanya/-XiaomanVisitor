@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "昨日出したら、あっという間に売り切れちゃって。帰り際に「次もある？」って聞かれたんです。[chuckles]……もちろん、ありますよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "114",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 12.964,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 622302
+  },
+  "sha256": "074fe25c9f79549e4db0218c6af788f70b7099bf09534a784079113b992f2e29",
+  "binding": {
+    "key": "xm_05_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "昨天一推出就直接售罄了，客人们走的时候问我下次还有没有。嘿嘿……当然有啦。",
+      "ja": "昨日出したら、あっという間に売り切れちゃって。帰り際に「次もある？」って聞かれたんです。えへへ……もちろん、ありますよ。",
+      "en": "They sold out as soon as I put them out yesterday. People asked if there would be more next time. Hehe... of course!"
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "えへへ、うちにも「いつもの」で通じるお客さんができたんですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "58",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.091,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 292396
+  },
+  "sha256": "4776a5542a9be3625ea3d8fe6479ee61a1206a3a98652d6501a76ba024b153a9",
+  "binding": {
+    "key": "xm_07_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "嘿嘿，原来我的店里，也有会说“老样子”的客人啦。",
+      "ja": "えへへ、うちにも「いつもの」で通じるお客さんができたんですね。",
+      "en": "Hehe. My tavern has someone who can order \"the usual\" now."
+    },
+    "generic": false
+  }
+}

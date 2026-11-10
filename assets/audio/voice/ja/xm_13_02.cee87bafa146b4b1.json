@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "宣伝の予定は変更できても、家賃の差額は契約どおり返さないといけないそうです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "74",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.345,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 400580
+  },
+  "sha256": "2ae51fce33e64947c4a63aed4c373be11abe12e980a6beef0c4d781aa1b78a0f",
+  "binding": {
+    "key": "xm_13_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "他们说，推广安排可以调整，租金的差额却得按约定还。",
+      "ja": "宣伝の予定は変更できても、家賃の差額は契約どおり返さないといけないそうです。",
+      "en": "They say the promotion schedule can change, but the difference in rent still has to be repaid as agreed."
+    },
+    "generic": false
+  }
+}

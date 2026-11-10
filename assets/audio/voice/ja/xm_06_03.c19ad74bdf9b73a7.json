@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "商業通路の向こうに、面白いものが見つかる質屋さんがあるって教えたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "70",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.581,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 363948
+  },
+  "sha256": "3c7217106a1cbe200dd4dac06c0f4d2c1a050c467c49fe43694b61eff95d2d04",
+  "binding": {
+    "key": "xm_06_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我就告诉他，商业街那头有一家很不错的当铺，说不定能淘到些有意思的东西。",
+      "ja": "商業通路の向こうに、面白いものが見つかる質屋さんがあるって教えたんです。",
+      "en": "So I told him there was a lovely pawnshop down the shopping street. He might find something interesting there."
+    },
+    "generic": false
+  }
+}

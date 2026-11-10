@@ -1,0 +1,50 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今日は日用品を少し買いたくて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "29",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.618,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 173714
+  },
+  "sha256": "e7f07c13214a0fc2aa66fa76d4c0c344e2699dfb867a6cd58b3e8497222d2c73",
+  "binding": {
+    "key": "xm_08_shop",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "今天想买点日用品。带了 {0} 信用点。",
+      "ja": "今日は日用品を少し買いたくて。",
+      "en": "I need some household supplies today. I brought {0} credits."
+    },
+    "generic": true
+  },
+  "binding_history": [
+    {
+      "key": "xm_13_shop",
+      "language": "ja",
+      "subtitle_templates": {
+        "zh": "今天想买些日用品。",
+        "ja": "今日は日用品を少し買いたくて。",
+        "en": "今天想买些日用品。"
+      },
+      "generic": false
+    }
+  ]
+}

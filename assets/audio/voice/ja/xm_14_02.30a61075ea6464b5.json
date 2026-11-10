@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "グラスは全部送って、残った荷物はリュックひとつだけ。引っ越してきた頃みたいですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "79",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.563,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 411076
+  },
+  "sha256": "e5b18a2b20a8df6ae6353b0fb04f8bfbad94c6dbd34a05f7a5f26fb1f430e841",
+  "binding": {
+    "key": "xm_14_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "杯子都寄走啦，剩下的东西只有一个背包。倒像刚搬来那会儿呢。",
+      "ja": "グラスは全部送って、残った荷物はリュックひとつだけ。引っ越してきた頃みたいですね。",
+      "en": "The glasses have all been shipped. All I have left is one backpack. Just like when I first moved here."
+    },
+    "generic": false
+  }
+}

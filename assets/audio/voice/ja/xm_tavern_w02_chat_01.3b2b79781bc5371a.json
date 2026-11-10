@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "実は開店前、「いらっしゃいませ」ってこっそり何度も練習したんです。本当にお客さんが来ると、かえって緊張しちゃって。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "108",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 12.053,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 578604
+  },
+  "sha256": "a8ac23609a45b26e35548a4ac5ec719788bcd4ffdb7b7f9b911d505c5b6e5657",
+  "binding": {
+    "key": "xm_tavern_w02_chat_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "其实开业之前，我还偷偷练过几遍“欢迎光临”呢。真正有人进来，反而更紧张了。",
+      "ja": "実は開店前、「いらっしゃいませ」ってこっそり何度も練習したんです。本当にお客さんが来ると、かえって緊張しちゃって。",
+      "en": "Before opening, I secretly practiced saying ‘welcome’ a few times. Then someone actually came in, and I got even more nervous."
+    },
+    "generic": false
+  }
+}

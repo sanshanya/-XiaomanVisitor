@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "来月の仕入れも、最初から考え直さないと。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "38",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.035,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 241734
+  },
+  "sha256": "35da2b69f21855b94ce41bbc7789dee8cc2ab1cdce9c6b13bd8d54b293d45e44",
+  "binding": {
+    "key": "xm_tavern_12_business_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "现在连下个月的进货，都得重新算一遍了。",
+      "ja": "来月の仕入れも、最初から考え直さないと。",
+      "en": "Now I even have to work out next month's supplies all over again."
+    },
+    "generic": false
+  }
+}

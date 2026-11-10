@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ずっと、来てくださるのを楽しみにしてたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "44",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.745,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 227806
+  },
+  "sha256": "3a21ad8f60a4dc9b4154e90dbf99e84afb153aee061c16cfe3838d117cd2a287",
+  "binding": {
+    "key": "xm_tavern_w02_entry_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我一直期待您的到来。",
+      "ja": "ずっと、来てくださるのを楽しみにしてたんです。",
+      "en": "I've been looking forward to having you here."
+    },
+    "generic": false
+  }
+}

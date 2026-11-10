@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "いらっしゃいませ……あっ、店長さん。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "32",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.526,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 217310
+  },
+  "sha256": "b5ff815e744a37fcc432ca60deafdecccb11acfdc0d3dbab32f13cccc7d3fb70",
+  "binding": {
+    "key": "xm_tavern_w02_entry_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "欢迎光临……啊，是店长先生。",
+      "ja": "いらっしゃいませ……あっ、店長さん。",
+      "en": "Welcome… Oh, it's you, shopkeeper."
+    },
+    "generic": false
+  }
+}

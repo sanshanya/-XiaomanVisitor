@@ -236,6 +236,13 @@ def pack(path):
     records = [r for r in previous.get("lines", []) if r["language"] != script["language"]]
     pending = dict(previous.get("pending_by_language", {}))
     report, kept = [], {r["sound_key"] + ".wav" for r in records}
+    # Identical takes can serve different dialogue keys without storing the same
+    # PCM repeatedly. Keep existing sound IDs where possible; faces stay per line.
+    clips={}
+    for record in previous.get('lines',[]):
+        file=sounds/(record['sound_key']+'.wav')
+        if record['language']==script['language'] and file.is_file():
+            clips.setdefault(hashlib.sha256(file.read_bytes()).hexdigest(),record['sound_key'])
     ready = 0
     for row in script["lines"]:
         state = audio_status(row, script, texts)
@@ -244,7 +251,7 @@ def pack(path):
             continue
         audio = ROOT / row["audio"]
         digest = hashlib.sha256(audio.read_bytes()).hexdigest()
-        sound = "xm_voice_" + script["language"] + "_" + re.sub("[^a-z0-9_]", "_", row["key"].lower()) + "_" + digest[:12]
+        sound = clips.setdefault(digest,"xm_voice_" + script["language"] + "_" + re.sub("[^a-z0-9_]", "_", row["key"].lower()) + "_" + digest[:12])
         target = sounds / (sound + ".wav")
         if not target.exists() or hashlib.sha256(target.read_bytes()).hexdigest() != digest:
             shutil.copyfile(audio, target)
@@ -263,10 +270,28 @@ def pack(path):
     return result
 
 
+def catalog(path):
+    """Writer-readable current recording list; an offline report, not another input."""
+    script=load(path)
+    spec=load(ROOT/'assets/story.json')
+    expressions={r['key']:r['mood'] for r in spec['lines']}
+    target=ROOT/'.dev/reports/配音台词清单.csv'
+    target.parent.mkdir(parents=True,exist_ok=True)
+    with target.open('w',encoding='utf-8-sig',newline='') as handle:
+        writer=csv.writer(handle)
+        writer.writerow(['台词键','表情','演出指导','中文字幕','日语字幕','日语录制稿','状态','秒数','音频文件'])
+        for row in script['lines']:
+            state=audio_status(row,script)
+            seconds=load((ROOT/row['audio']).with_suffix('.json'))['audio']['seconds'] if state=='ready' else ''
+            writer.writerow([row['key'],expressions[row['key']],row.get('delivery',''),row['subtitle_templates']['zh'],
+                             row['subtitle_templates']['ja'],row.get('generate_text',row['spoken_text']),state,seconds,row.get('audio','')])
+    print(f'Exported {len(script["lines"])} dialogue rows: {target}; no API requests.')
+
+
 def main():
     sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=["export", "adopt", "generate", "pack", "status"])
+    parser.add_argument("command", choices=["export", "adopt", "generate", "pack", "catalog", "status"])
     parser.add_argument("--script", type=Path, default=DEFAULT_SCRIPT)
     parser.add_argument("--refresh", action="store_true")
     parser.add_argument("--keys", nargs="*")
@@ -288,6 +313,8 @@ def main():
         elif args.command == "pack":
             data = pack(args.script)
             print(f"Packaged {len(data['lines'])} recording(s); {data['pending_lines']} pending; no API requests.")
+        elif args.command == 'catalog':
+            catalog(args.script)
         else:
             script, texts = load(args.script), localized()
             print(json.dumps([{ "key": r["key"], "status": audio_status(r, script, texts)} for r in script["lines"]], ensure_ascii=False, indent=2))

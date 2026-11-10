@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "最近は閉店前にふらっと一杯飲みに来る人もいて。約束なんてしてないのに、その時間になると、誰が来るかなんとなく分かるんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "118",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 13.109,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 629266
+  },
+  "sha256": "005f6cf31f57a08c5cd671f36177192c3f203144577fec950174c430ef0f17b0",
+  "binding": {
+    "key": "xm_tavern_07_chat_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "最近有人会在收店前顺路来喝一杯。也不用特地约好，到了那个时间，我大概就知道谁会推门了。",
+      "ja": "最近は閉店前にふらっと一杯飲みに来る人もいて。約束なんてしてないのに、その時間になると、誰が来るかなんとなく分かるんです。",
+      "en": "Some people stop by for a drink before closing now. We never arrange it, but around that time I can almost tell who will walk through the door."
+    },
+    "generic": false
+  }
+}

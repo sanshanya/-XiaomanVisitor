@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "写真を撮ってくれた子たち、どれにするかまで一緒に悩んでくれて。お酒を飲みに来たのに、まるで撮影会でした。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "100",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 11.0,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 528044
+  },
+  "sha256": "4cafdfd034b7ecc76f581e78a4c4d0935bc1d76c2169a09d5ae65ceee08fc9cf",
+  "binding": {
+    "key": "xm_tavern_08_chat_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "帮我拍照的那几位姑娘，后来还认真帮我挑了半天。明明她们是来喝酒的，倒像我请了摄影师呢。",
+      "ja": "写真を撮ってくれた子たち、どれにするかまで一緒に悩んでくれて。お酒を飲みに来たのに、まるで撮影会でした。",
+      "en": "The girls who took my photos spent ages choosing one with me. They came for a drink, but it was like I had hired photographers."
+    },
+    "generic": false
+  }
+}

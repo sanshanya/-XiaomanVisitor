@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、最近はよく出るお酒の材料を先に用意するようにしてるんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "62",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.291,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 350020
+  },
+  "sha256": "e2754f203044ab3390573a373ec0eebb5cfcfb886ad8ccf9ba8dd957d7af4d85",
+  "binding": {
+    "key": "xm_tavern_09_chat_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，最近我在试着把常卖的酒提前备好原料。",
+      "ja": "先輩、最近はよく出るお酒の材料を先に用意するようにしてるんです。",
+      "en": "Senpai, lately I have been getting the ingredients for the popular drinks ready in advance."
+    },
+    "generic": false
+  }
+}

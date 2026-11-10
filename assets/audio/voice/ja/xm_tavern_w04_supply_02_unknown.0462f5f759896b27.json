@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "139",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 14.709,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 706066
+  },
+  "sha256": "1b71e9041f72c46537b5d12df8026ddbcc9b5f9901ad16faa2e0433aaf4407b6",
+  "binding": {
+    "key": "xm_tavern_w04_supply_02_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我想从您这儿定期买水和原材料。制成成品后，按约定比例，一部分留在店里销售，另一部分供给您销售。",
+      "ja": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
+      "en": "I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop."
+    },
+    "generic": false
+  }
+}

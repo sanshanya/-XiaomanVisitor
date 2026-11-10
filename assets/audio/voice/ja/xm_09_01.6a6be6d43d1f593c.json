@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは、先輩。最近、お店の調子がどんどんよくなってきて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "56",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.546,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 362232
+  },
+  "sha256": "769fa9a9f69c7345f518bd693b4de0c956abf533524cf2623179eab560f4c6f7",
+  "binding": {
+    "key": "xm_09_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好，前辈。最近店里生意越来越好啦。",
+      "ja": "こんばんは、先輩。最近、お店の調子がどんどんよくなってきて。",
+      "en": "Good evening, senpai. Business at the tavern keeps getting better."
+    },
+    "generic": false
+  }
+}

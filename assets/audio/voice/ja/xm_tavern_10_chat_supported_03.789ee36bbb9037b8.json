@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今のペースを続けながら、もう何日か様子を見てみようと思います。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "60",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.709,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 322066
+  },
+  "sha256": "f84f5ae1289b006ab128b57bad9ac630739c78e33bacfa996329230962e2afaa",
+  "binding": {
+    "key": "xm_tavern_10_chat_supported_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我想先保持现在的节奏，再观察几天。",
+      "ja": "今のペースを続けながら、もう何日か様子を見てみようと思います。",
+      "en": "I want to keep this pace for now and watch for a few more days."
+    },
+    "generic": false
+  }
+}

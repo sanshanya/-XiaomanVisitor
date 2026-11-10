@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今どき、カセットを聴く人って、もうあまりいませんよね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "51",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.822,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 279520
+  },
+  "sha256": "48e6d0a5e1fc4ba9b982ed85d36eba710a91fb2ac13dc6deee454ce68038939e",
+  "binding": {
+    "key": "xm_01_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "现在还听磁带的人，已经很少了吧。",
+      "ja": "今どき、カセットを聴く人って、もうあまりいませんよね。",
+      "en": "Not many people still listen to tapes these days, do they?"
+    },
+    "generic": false
+  }
+}

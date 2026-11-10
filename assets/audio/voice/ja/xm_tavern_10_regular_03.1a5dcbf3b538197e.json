@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら交換して飲み始めたんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "81",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.853,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 425004
+  },
+  "sha256": "e52ca0934812518ee0c158c04e9abff3b317cf627f52aca564832b2419c32e75",
+  "binding": {
+    "key": "xm_tavern_10_regular_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "一个人要甜的，一个人要酸的。结果酒端上去以后，她们又交换着喝起来了。",
+      "ja": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら交換して飲み始めたんですよ。",
+      "en": "One wanted something sweet, the other something sour. Then once I served them, they started swapping drinks."
+    },
+    "generic": false
+  }
+}

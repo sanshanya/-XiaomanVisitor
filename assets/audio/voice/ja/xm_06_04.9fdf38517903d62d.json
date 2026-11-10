@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "えへへ、本当に来てくれるかな。もし来たら、先輩、ごほうびくださいね～。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "64",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.199,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 393618
+  },
+  "sha256": "117a0c87a12d811fad20dbe8b74a68edc5e767346c694ea1b849f2e2619e73a5",
+  "binding": {
+    "key": "xm_06_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "嘿嘿，也不知道他会不会真的来这里看看。如果来了，前辈记得给我奖励吖～",
+      "ja": "えへへ、本当に来てくれるかな。もし来たら、先輩、ごほうびくださいね～。",
+      "en": "Hehe, I wonder if he will actually come by. If he does, remember my reward, senpai~"
+    },
+    "generic": false
+  }
+}

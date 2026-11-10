@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それじゃ、また。夜、お時間があったら、遊びに来てくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "55",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.312,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 351020
+  },
+  "sha256": "e35fae7ca1cbadb56ee6f66742516e46514ada5637c2e4d34cece7e7140e9951",
+  "binding": {
+    "key": "xm_03_bye",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那我先走啦。晚上有空的话，来坐坐也好哦。",
+      "ja": "それじゃ、また。夜、お時間があったら、遊びに来てくださいね。",
+      "en": "I'd better go. If you're free tonight, you're always welcome to stop by."
+    },
+    "generic": false
+  }
+}

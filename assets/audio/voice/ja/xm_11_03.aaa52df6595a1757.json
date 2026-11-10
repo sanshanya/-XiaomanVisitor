@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "最近、お客さんが少なくなったので、営業時間を変えたんです。前は午前二時までだったけど、今は夜の十二時までに。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "103",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 12.417,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 596062
+  },
+  "sha256": "06fb988983c8aa47f3802278ba5d29290597105314cb9bcf9374702f5f3244b2",
+  "binding": {
+    "key": "xm_11_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "最近来的客人比较少，我把营业时间改了一下。原来写到凌晨两点，现在改成十二点了。",
+      "ja": "最近、お客さんが少なくなったので、営業時間を変えたんです。前は午前二時までだったけど、今は夜の十二時までに。",
+      "en": "Fewer people have been coming lately, so I changed the opening hours. It used to say two in the morning; now it says midnight."
+    },
+    "generic": false
+  }
+}

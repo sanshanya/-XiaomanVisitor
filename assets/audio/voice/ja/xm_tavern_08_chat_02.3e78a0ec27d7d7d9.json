@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "次の交代のときは新人も連れてくるって。来てくれたら、材料をもう少し用意しておかないと。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "83",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.611,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 461394
+  },
+  "sha256": "01dc022bb3bfb2a7f65abdae57a78e2df5dcfa81808c3ea0991b18c709a8fcc0",
+  "binding": {
+    "key": "xm_tavern_08_chat_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "她们说下次换班，还要带新同事来。要是真来了，我得记着多准备一点原料才行。",
+      "ja": "次の交代のときは新人も連れてくるって。来てくれたら、材料をもう少し用意しておかないと。",
+      "en": "They said they would bring some new colleagues next shift. If they really come, I will have to remember to get a few more ingredients ready."
+    },
+    "generic": false
+  }
+}

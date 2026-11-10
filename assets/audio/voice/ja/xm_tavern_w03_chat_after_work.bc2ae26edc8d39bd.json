@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩もお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "81",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.036,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 433784
+  },
+  "sha256": "c1533c8da6f7fee635dfec2294c5f58a154061783c5f6b374c595a9cee87a5c8",
+  "binding": {
+    "key": "xm_tavern_w03_chat_after_work",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈也辛苦啦。刚才那几位客人走的时候，还说下次要再来呢。",
+      "ja": "先輩もお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
+      "en": "You worked hard too. Those customers said they'd come again as they were leaving."
+    },
+    "generic": false
+  }
+}

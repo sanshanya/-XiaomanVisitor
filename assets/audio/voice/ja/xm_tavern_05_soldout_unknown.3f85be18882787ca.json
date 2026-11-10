@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "91",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.873,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 473950
+  },
+  "sha256": "1a67762f023d67fce744b41f891e04ea3aee3951de820e823a7774a50daf2b19",
+  "binding": {
+    "key": "xm_tavern_05_soldout_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "啊，抱歉……这款今天已经卖完啦。下批到了再来看看吧。",
+      "ja": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+      "en": "Ah, sorry... that one is sold out. Come back when the next batch arrives."
+    },
+    "generic": false
+  }
+}

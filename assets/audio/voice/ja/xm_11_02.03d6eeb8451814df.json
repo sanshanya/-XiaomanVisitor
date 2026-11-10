@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "自分でも計算したんですけど、あの値段に合わせたら材料代さえ出なくて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "66",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.291,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 350020
+  },
+  "sha256": "c3b9ffc862d6ab4b24a3ea6ecb66652a0bf94892d41a921a393a22feb733bdca",
+  "binding": {
+    "key": "xm_11_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我仔细算过了。要是照他们的价格卖，连原料钱都不够呢。",
+      "ja": "自分でも計算したんですけど、あの値段に合わせたら材料代さえ出なくて。",
+      "en": "I worked it out carefully. At their prices, I would not even cover the ingredients."
+    },
+    "generic": false
+  }
+}

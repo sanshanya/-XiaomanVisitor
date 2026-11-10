@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "だから……お店を閉めることにしました。まずは荷物を片づけようと思います。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "68",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.019,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 384940
+  },
+  "sha256": "c059187fe631f0efaf781c7001d53d5a17e375ff80b8bad0434ffa968d20c840",
+  "binding": {
+    "key": "xm_13_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "所以……我决定关店了。这几天先把东西整理好。",
+      "ja": "だから……お店を閉めることにしました。まずは荷物を片づけようと思います。",
+      "en": "So... I have decided to close. I will start packing things over the next few days."
+    },
+    "generic": false
+  }
+}

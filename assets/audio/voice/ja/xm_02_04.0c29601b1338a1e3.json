@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "店長さん、夜お時間があったら、お店に来ていただけませんか。先輩として、いろいろ教えてもらえたらうれしいです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "103",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 11.799,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 566392
+  },
+  "sha256": "f3c3d8b966f65e193c886d75f51c47de3d57aef2fd1689b1578310873589e810",
+  "binding": {
+    "key": "xm_02_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "店长先生晚上要是有空，希望能作为前辈来小店指导一下。",
+      "ja": "店長さん、夜お時間があったら、お店に来ていただけませんか。先輩として、いろいろ教えてもらえたらうれしいです。",
+      "en": "If you're free tonight, I'd love for you to stop by. You have more experience running a shop… perhaps you could give me a few pointers."
+    },
+    "generic": false
+  }
+}

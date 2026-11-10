@@ -23,7 +23,10 @@ class WeekFourAuthoringTests(unittest.TestCase):
                 loc={k:v.replace('\\n','\n') for k,v in csv.reader(f)}
             for key,row in authored['lines'].items():
                 self.assertEqual(loc[key],row[lang])
-                self.assertTrue(script[key]['audio'] or script[key]['defer_recording'])
+                if key.startswith('xm_w04_'):
+                    self.assertNotIn(key,script,'other characters must not accidentally use Xiaoman\'s Ayano voice')
+                else:
+                    self.assertTrue(script[key]['audio'] or script[key].get('defer_recording'))
             for variant,note in authored['letters'].items():
                 for field,value in note[lang].items():
                     self.assertEqual(loc['story_note_04'+('_b' if variant=='B' else '')+'_'+field],value)

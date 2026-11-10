@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "売上の記録をまとめてみました。前はあんなにお客さんが来てくれたのに、最近はすっかり減ってしまって。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "95",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.199,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 489592
+  },
+  "sha256": "debc326160d7f199811d15a5a2fea50c0b633235d5877d1eec4fbcf75b553a61",
+  "binding": {
+    "key": "xm_tavern_12_business_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我把营业记录整理了一下。前几周生意明明还不错，可最近的客流实在少了很多。",
+      "ja": "売上の記録をまとめてみました。前はあんなにお客さんが来てくれたのに、最近はすっかり減ってしまって。",
+      "en": "I put the sales records together. Business was so good a few weeks ago, but hardly anyone has been coming lately."
+    },
+    "generic": false
+  }
+}

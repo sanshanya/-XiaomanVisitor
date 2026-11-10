@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "103",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.515,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 504750
+  },
+  "sha256": "4082c7b9a14e3e34086dbd9225c8d15947c67bb3307d8d4b119cf3d604e57a2a",
+  "binding": {
+    "key": "xm_tavern_w02_tape_intro_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这台磁带机是我从故乡带来的，如果您有喜欢的曲目，可以自己选着听。",
+      "ja": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
+      "en": "I brought this cassette deck from home. If there's something you'd like to hear, feel free to choose."
+    },
+    "generic": false
+  }
+}

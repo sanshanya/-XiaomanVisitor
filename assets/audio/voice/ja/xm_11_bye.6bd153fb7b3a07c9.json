@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それじゃ、帰りますね。先輩、夜に来るなら少し早めにお願いします。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "60",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.871,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 377874
+  },
+  "sha256": "fbef509d94637cc4ba3d08c89e9b687e9e704f9d5549995bcf264e6f210bcb8e",
+  "binding": {
+    "key": "xm_11_bye",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那我先回去啦。前辈晚上要来的话，记得早点哦。",
+      "ja": "それじゃ、帰りますね。先輩、夜に来るなら少し早めにお願いします。",
+      "en": "I should head back. If you come by tonight, senpai, remember to come early."
+    },
+    "generic": false
+  }
+}

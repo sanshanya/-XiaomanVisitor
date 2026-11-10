@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、最近、ペンギン資産会社から精算の通知が届いたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "55",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.363,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 353452
+  },
+  "sha256": "ffc1d3e58c6ec9933a629685f6af6e651dd800c3a943d6481a7ed6fde2162ec4",
+  "binding": {
+    "key": "xm_tavern_12_business_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，最近收到一份企鹅资产公司的结算通知。",
+      "ja": "先輩、最近、ペンギン資産会社から精算の通知が届いたんです。",
+      "en": "Senpai, a settlement notice arrived from Tenquin Asset Corporation recently."
+    },
+    "generic": false
+  }
+}

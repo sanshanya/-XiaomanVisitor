@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "いつも窓際の同じ席で、少し酸っぱいお酒を頼むんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "52",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.236,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 299358
+  },
+  "sha256": "5507ea57eaa3a655f0f09cda161a5a3e9c03df09fb358b348cfe174da8cac6d0",
+  "binding": {
+    "key": "xm_07_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "每次都坐在窗边，点一杯偏酸的酒，连位置都不怎么换呢。",
+      "ja": "いつも窓際の同じ席で、少し酸っぱいお酒を頼むんですよ。",
+      "en": "Always a seat by the window and a slightly sour drink. Even the seat hardly ever changes."
+    },
+    "generic": false
+  }
+}

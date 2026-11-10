@@ -108,6 +108,8 @@ def main():
     english.update({key:row['en'] for key,row in w02['lines'].items()})
     english.update({key:row['en'] for key,row in w03['lines'].items()})
     english.update({key:row['en'] for key,row in w04['lines'].items()})
+    gun=json.loads((ROOT/'story/持枪反应.json').read_text(encoding='utf-8'))
+    english.update(gun['localization']['en'])
     assert story['week_four_sha256']==w04['sha256']
     notes = json.loads((ROOT / "story/纸条正文.json").read_text(encoding="utf-8"))["notes"]
     import weekly_story_source

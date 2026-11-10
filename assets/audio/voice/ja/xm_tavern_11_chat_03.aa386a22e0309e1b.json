@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "でも、支援制度に申し込んだとき、新しいお店の集客も手伝うって言ってくれたのに……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "77",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.708,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 418040
+  },
+  "sha256": "fc817287a4bee4477bd47cbb1dea933587b79fe4e70d651394a257f27bfef39a",
+  "binding": {
+    "key": "xm_tavern_11_chat_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "可之前申请扶持的时候，明明说好会帮新店吸引客人的呀……",
+      "ja": "でも、支援制度に申し込んだとき、新しいお店の集客も手伝うって言ってくれたのに……。",
+      "en": "But when I applied for the support, they said they would help new shops bring people in..."
+    },
+    "generic": false
+  }
+}

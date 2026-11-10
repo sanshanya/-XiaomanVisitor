@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "長く置ける材料もあれば、新鮮なうちに使いたいものもありますから。必要な分を、少しずつ用意しようかな。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "96",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 11.326,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 543686
+  },
+  "sha256": "8116026d6739c820cbfdb0a1af9115fc9dcadaf2aeb1c480c9ad64c2f296960e",
+  "binding": {
+    "key": "xm_tavern_10_chat_neutral_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "有些原料能放得久，有些得趁新鲜用掉。还是按需要慢慢准备吧。",
+      "ja": "長く置ける材料もあれば、新鮮なうちに使いたいものもありますから。必要な分を、少しずつ用意しようかな。",
+      "en": "Some ingredients keep well; others need to be used while they are fresh. I will get things ready a little at a time, as needed."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "前の家賃の支援には、売上の条件があったみたいで。届かなかった分は契約どおり返さないといけないそうです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "99",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 11.254,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 540254
+  },
+  "sha256": "32249654501dee00b407ce047ae518638e22cbd92905fab70a65c75024cf0472",
+  "binding": {
+    "key": "xm_tavern_12_business_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "之前的租金扶持，原来还有业绩考核。没有达到要求的部分，要按照合同补回来。",
+      "ja": "前の家賃の支援には、売上の条件があったみたいで。届かなかった分は契約どおり返さないといけないそうです。",
+      "en": "It turns out the rent support had sales targets attached. Any shortfall has to be paid back under the contract."
+    },
+    "generic": false
+  }
+}

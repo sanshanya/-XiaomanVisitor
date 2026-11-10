@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは、先輩。昨日、母から電話が来たんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "44",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.49,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 311570
+  },
+  "sha256": "10232063ec06c6219e22ed02b74c28c51722dad6b4fefc69f0b3f349cf74a1b8",
+  "binding": {
+    "key": "xm_12_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好，前辈。昨天妈妈给我打电话了呢。",
+      "ja": "こんばんは、先輩。昨日、母から電話が来たんです。",
+      "en": "Good evening, senpai. My mom called me yesterday."
+    },
+    "generic": false
+  }
+}

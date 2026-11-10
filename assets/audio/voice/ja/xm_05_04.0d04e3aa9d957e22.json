@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "でも、先輩にも飲んでもらいたくて、一杯分の材料だけ、こっそり取っておいたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "76",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.891,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 426820
+  },
+  "sha256": "291b7e897c570a91f8e3a7b6a93f396553b7f3acaad34412b3c9949c78f9db82",
+  "binding": {
+    "key": "xm_05_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "不过我偷偷留了一杯的原料，想要带给前辈尝尝。",
+      "ja": "でも、先輩にも飲んでもらいたくて、一杯分の材料だけ、こっそり取っておいたんです。",
+      "en": "But I quietly saved enough ingredients for one glass, so you could try it too."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ……ここ、カセットデッキがあるんですね。わたしも引っ越すとき、テープをけっこう持ってきたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "92",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.054,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 482630
+  },
+  "sha256": "1eff7aca9242122b8f732f6e2cefd8ede69364f46051f540eb4c09c3abc37784",
+  "binding": {
+    "key": "xm_01_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "咦……你这里还有磁带机。我搬家的时候，也带来了不少磁带呢。",
+      "ja": "あ……ここ、カセットデッキがあるんですね。わたしも引っ越すとき、テープをけっこう持ってきたんです。",
+      "en": "Oh... you have a cassette player here. I brought quite a few tapes when I moved, too."
+    },
+    "generic": false
+  }
+}

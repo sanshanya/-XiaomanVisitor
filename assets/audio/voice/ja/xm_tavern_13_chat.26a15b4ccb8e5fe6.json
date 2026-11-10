@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "グラスを何個か、手元に残すことにしました。見るたびに、ここを思い出すのかな。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "72",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.454,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 405828
+  },
+  "sha256": "b019299e11663c6473dc49a954c0d838e72fd264874fd2c2ac26527d4378c620",
+  "binding": {
+    "key": "xm_tavern_13_chat",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "有几只杯子我准备留着。以后看到它们，应该还会想起这里吧。",
+      "ja": "グラスを何個か、手元に残すことにしました。見るたびに、ここを思い出すのかな。",
+      "en": "I am keeping a few of the glasses. I suppose they will remind me of this place whenever I see them."
+    },
+    "generic": false
+  }
+}

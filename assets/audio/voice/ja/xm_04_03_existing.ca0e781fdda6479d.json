@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、この前の取引リストは取ってあります。品物があったら、リストに沿って少しずつで大丈夫ですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "92",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.849,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 520798
+  },
+  "sha256": "fc875223f8b88b1f2be2f777f29b4831dad3f900dd98d823db53f421f363d2ef",
+  "binding": {
+    "key": "xm_04_03_existing",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，上次谈好的货单我已经留着啦。有什么合适的东西，我们照单子慢慢来就好。",
+      "ja": "先輩、この前の取引リストは取ってあります。品物があったら、リストに沿って少しずつで大丈夫ですよ。",
+      "en": "Senpai, I kept the supply list we agreed on. If you find something suitable, we can work through it at our own pace."
+    },
+    "generic": false
+  }
+}

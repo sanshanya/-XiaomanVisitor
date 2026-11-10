@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それじゃ、そろそろ。今夜のお店の準備が、まだ残ってるので。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "54",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.963,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 334276
+  },
+  "sha256": "47a2fb4fce6b7f4c3cf579281f01a204ee4e1dc7dd7e1a76c0be4219c8d85413",
+  "binding": {
+    "key": "xm_06_bye",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那我先走啦。今晚店里还有些事要准备呢。",
+      "ja": "それじゃ、そろそろ。今夜のお店の準備が、まだ残ってるので。",
+      "en": "I should go. There are still a few things to get ready for tonight."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "最近、丈夫な箱を探してるんです。グラスって、服よりずっと荷造りが大変なんですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "76",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.509,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 456492
+  },
+  "sha256": "a1cc4e582caad2aa436eac145d8736508dfdc564a927b67191dfdc76cfa7d4e1",
+  "binding": {
+    "key": "xm_13_05",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "最近在找结实一点的箱子。那些酒杯呀，比衣服难装多了呢。",
+      "ja": "最近、丈夫な箱を探してるんです。グラスって、服よりずっと荷造りが大変なんですね。",
+      "en": "I am looking for some sturdy boxes. Glasses are much harder to pack than clothes, you know."
+    },
+    "generic": false
+  }
+}

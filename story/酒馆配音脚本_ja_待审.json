@@ -15,11 +15,11 @@
       "spoken_text": "いらっしゃいませ……あっ、店長さん。",
       "generate_text": "いらっしゃいませ……あっ、店長さん。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_entry_01.c74ccdffe3a0c3e3.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "43ad752c1952e5e6b20838ba1a2882778a7126541156d8ef681d83d55a549f35",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_entry_02",
@@ -31,11 +31,11 @@
       "spoken_text": "ずっと、来てくださるのを楽しみにしてたんです。",
       "generate_text": "ずっと、来てくださるのを楽しみにしてたんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_entry_02.c3a04c21e3cb39b3.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "997eb686e815b8118823c9e99c9296654610462f6798f697e2f043b751d93c1c",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_entry_03",
@@ -47,11 +47,11 @@
       "spoken_text": "自分のお店で「いらっしゃいませ」って言うの、まだちょっと慣れなくて。",
       "generate_text": "自分のお店で「いらっしゃいませ」って言うの、まだちょっと慣れなくて。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_entry_03.18fac5b3c85b4d41.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "ce3bbf093f606da1990dc86931ae0cff6fd9a5209f4a6acbbcb3f25be1394023",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_reentry",
@@ -63,11 +63,11 @@
       "spoken_text": "あ、店長さん。また会いましたね。",
       "generate_text": "あ、店長さん。また会いましたね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_reentry.242b73694f5d9e70.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "8e2f95b884e708063285680b59b044ae1adcf6d0b798feb4a44bbb2aa6ec1437",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_greeting",
@@ -79,11 +79,11 @@
       "spoken_text": "こんばんは、先輩。いらっしゃいませ。",
       "generate_text": "こんばんは、先輩。いらっしゃいませ。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_greeting.2cff1889b24ba829.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "80f6e9385e3b84522d59b9ac987b243250c796ee69d5f68046dd62f27348c79e",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_greeting_unknown",
@@ -95,11 +95,11 @@
       "spoken_text": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
       "generate_text": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_greeting_unknown.71de2d4b09dd07d8.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "6c3515f3cf0cf2478a59a008215c4f950e0aff51e7e1c54c164c55b3d22ebdc9",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_menu_open",
@@ -111,11 +111,11 @@
       "spoken_text": "何になさいますか？",
       "generate_text": "何になさいますか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_menu_open.50c39b4a449215f2.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "c7b3fa98f13c7447c7e5ec2213e8d3484c4023bb9d90a94a9dc87b03535fbf16",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_w02_menu",
@@ -127,11 +127,11 @@
       "spoken_text": "こちらが今のメニューです。まだこのくらいの種類しかないんですけど、味には自信があります。",
       "generate_text": "こちらが今のメニューです。まだこのくらいの種類しかないんですけど、味には自信があります。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_menu.a371b396b049dd61.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "ce4e228841fc9aa4ebe5586fc039d2c5c77b6c5cb4943d5c90bc69b5e2efd459",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_order",
@@ -143,11 +143,11 @@
       "spoken_text": "はい、少々お待ちください。",
       "generate_text": "はい、少々お待ちください。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_order.84fa4fc4ffc054df.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "57a27b4a327fe8bd3be2b0a8bc9e11864e9f6fa260e3108eb05f8c01a96759f4",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_serve",
@@ -159,11 +159,11 @@
       "spoken_text": "どうぞ。お口に合うといいんですけど。",
       "generate_text": "どうぞ。お口に合うといいんですけど。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_serve.5e95395429e796ac.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "832c55578af8ac954286daa57ccd2b493e802d82223b951c9efc8934f39fa6c1",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_no_money",
@@ -175,11 +175,11 @@
       "spoken_text": "あ……クレジットが少し足りないみたいですね。",
       "generate_text": "あ……クレジットが少し足りないみたいですね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_no_money.7363f861c916e0be.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "b80624b141c8d2a32b717f9167397e9ded2f87d195daa6d0a8a7a9263a8e9d15",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_no_takeaway",
@@ -191,11 +191,11 @@
       "spoken_text": "あ、ごめんなさい……うちのお酒は、今はまだお持ち帰りできないんです。",
       "generate_text": "あ、ごめんなさい……うちのお酒は、今はまだお持ち帰りできないんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_no_takeaway.b410fe272ea51cfc.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "e81148dde22a92abe801731aa55f52fe6047bd5df2874f4e6a9fd6ebfc9753e1",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_drink_limit",
@@ -207,11 +207,11 @@
       "spoken_text": "だめですよ、店長さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
       "generate_text": "だめですよ、店長さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_drink_limit.4db24669c518625e.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "5a952b9e2bbbc14de2882d4217fd2d742f89a09410c6bc122b116ca5c05ee02c",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_w02_chat_01",
@@ -223,11 +223,11 @@
       "spoken_text": "実は開店前、「いらっしゃいませ」ってこっそり何度も練習したんです。本当にお客さんが来ると、かえって緊張しちゃって。",
       "generate_text": "実は開店前、「いらっしゃいませ」ってこっそり何度も練習したんです。本当にお客さんが来ると、かえって緊張しちゃって。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_chat_01.3b2b79781bc5371a.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "bba6c67ea581c35266a5ab4cc5399790d81b2799b50548c5e7643ceeb0c01e18",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_chat_02",
@@ -239,11 +239,11 @@
       "spoken_text": "昨日、お客さんに「ここの音楽、いいですね」って言われたんです。えへへ、テープ選びには、けっこうこだわってるんですよ。",
       "generate_text": "昨日、お客さんに「ここの音楽、いいですね」って言われたんです。えへへ、テープ選びには、けっこうこだわってるんですよ。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_chat_02.3d90ae6087217e17.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "4d31d5a16dc447efea51f92ae8b259d1f2c8231b7f7d4b102eada99228676b39",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_chat_03",
@@ -255,11 +255,11 @@
       "spoken_text": "甘いのが好きな人もいれば、酸っぱいのが好きな人もいて……メニューはまだまだ考えないとですね。",
       "generate_text": "甘いのが好きな人もいれば、酸っぱいのが好きな人もいて……メニューはまだまだ考えないとですね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_chat_03.32f5ff3415c132cf.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "1b615d397b3c7b4464461b7a972a1aa501cc1ff02543f43cb2077eb54b596168",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_chat_04",
@@ -271,11 +271,11 @@
       "spoken_text": "開店したばかりのころは、「いらっしゃいませ」って言うだけでも緊張してたのに。今は……少し慣れてきたかもしれません。",
       "generate_text": "開店したばかりのころは、「いらっしゃいませ」って言うだけでも緊張してたのに。今は……少し慣れてきたかもしれません。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_chat_04.300b2c3ff36c81a8.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "8cd9f77835c2a0f4d3adfba6e5612f6048d1c3d436efba249ca536aece120aca",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_help_intro",
@@ -287,11 +287,11 @@
       "spoken_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
       "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_help_intro.628cd181c8465cbe.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "caabeb9c9f54dfbabb91cfaa24260ffc2ab45e924ef1455adf6aeb2eabed39ca",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_help_done",
@@ -303,11 +303,11 @@
       "spoken_text": "先輩、ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
       "generate_text": "先輩、ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_help_done.b8b29e49a9014905.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "7bd09f8558e0d7cd19be1febda38ef2a2d0beb297f74e685b1a3199b7a4e3d7a",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_help_skip",
@@ -319,11 +319,11 @@
       "spoken_text": "うん、大丈夫です。わたしがやりますね。",
       "generate_text": "うん、大丈夫です。わたしがやりますね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_help_skip.070e4caf5a4db2d6.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "36345e3895567532abc15a1616c0261c90b877dde34226608ab15a68ba589ab0",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_rain_01",
@@ -335,11 +335,11 @@
       "spoken_text": "先輩、窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
       "generate_text": "先輩、窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_rain_01.ac952500e044232a.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "fab1ac1f81966b443f6b03d243968f5e2035bb50698759a68b16a594de811240",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_rain_02",
@@ -351,11 +351,11 @@
       "spoken_text": "雨が降っているように見せたくて、けっこう頑張ったんです。",
       "generate_text": "雨が降っているように見せたくて、けっこう頑張ったんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_rain_02.89df833415da3ad8.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "ca8d7cc40b1cc6f47f6558f86d299ead37d246d568a63f2b0208bfa80d3158ee",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_tape_intro",
@@ -367,11 +367,11 @@
       "spoken_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、店長さんも自由に選んで聴いてくださいね。",
       "generate_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、店長さんも自由に選んで聴いてくださいね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_tape_intro.0e3ffa93ada53829.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "fc506ffaa770fafd3812518bd83e0e3278c19e18eb1e2ef90805a5e62ae27e74",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_greeting_plain",
@@ -383,11 +383,11 @@
       "spoken_text": "いらっしゃいませ。",
       "generate_text": "いらっしゃいませ。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_greeting_plain.4727594978dc7d88.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "13c860f20347105a0e9db5122bd16fa673b25e1f9b99ee3bed6b7ad4d3afa8f4",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_chat_rest",
@@ -399,11 +399,11 @@
       "spoken_text": "先輩、どうぞゆっくり。少し音楽でも聴きましょう。",
       "generate_text": "先輩、どうぞゆっくり。少し音楽でも聴きましょう。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_chat_rest.67eb1c9c1d3b0cbb.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "e13a6fe094bdda499fdf2f4655cb3bb6510b344c16ebb3bf5a52de7d37caf03c",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_drink_limit_unknown",
@@ -415,11 +415,11 @@
       "spoken_text": "だめですよ、お客さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
       "generate_text": "だめですよ、お客さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_drink_limit_unknown.4cf64f887207d85e.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "51aaebe7621e51b73929ab452b1a70fea9cbb86e25b9436212dfafdc747f22b2",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_w02_help_intro_unknown",
@@ -431,11 +431,11 @@
       "spoken_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
       "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_help_intro_unknown.e14b93d24a568763.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "30bde05c469441faffd8696d9e6793396e4ec0c6a837c05e3644e0b2f76b27f2",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_help_done_unknown",
@@ -447,11 +447,11 @@
       "spoken_text": "ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
       "generate_text": "ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_help_done_unknown.2d9321b2678cae9d.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "e1d457339b17530eebba422d2227b1e26e35f2bbaa1a2186fea423175a008e05",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_rain_01_unknown",
@@ -463,11 +463,11 @@
       "spoken_text": "窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
       "generate_text": "窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_rain_01_unknown.4fa3a9f103a83816.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "519b4952c544d4c183debeecf54281bb89f6ff08e5084509a37aad34bac64b3c",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_tape_intro_unknown",
@@ -479,11 +479,11 @@
       "spoken_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
       "generate_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_tape_intro_unknown.50b9288cfda9a46d.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "ab733b9cde508c28d4f265a6a4eff1a486e2be568f7f5f6873579ea9770f6dab",
-      "defer_recording": true
+      "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_chat_rest_unknown",
@@ -495,11 +495,11 @@
       "spoken_text": "どうぞゆっくり。少し音楽でも聴きましょう。",
       "generate_text": "どうぞゆっくり。少し音楽でも聴きましょう。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_chat_rest_unknown.b391cfce7a90ae06.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "f70df6ed033e9828514e02931d950027b535d380f0745a7b8587aa5cdf121475",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_w03_work_offer_01",
@@ -511,11 +511,11 @@
       "spoken_text": "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
       "generate_text": "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_01.89174649e2d26758.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "d59a7fecac3955bf6586db2ea072db2a4d3b4640695b41476f30321574913572",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_offer_02",
@@ -527,11 +527,11 @@
       "spoken_text": "お給料はちゃんとお支払いします。これでも、立派なお仕事ですからね。",
       "generate_text": "お給料はちゃんとお支払いします。これでも、立派なお仕事ですからね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_02.eddadac7cde93465.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "292996734284ae426d2b522232a2f11a2478249a3524ea2447c8ad5b4cab8c70",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_w02_callback",
@@ -543,11 +543,11 @@
       "spoken_text": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
       "generate_text": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_w02_callback.ac0b1223292da195.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "fc16b70f5ba2464f5936a65cd5d119279f673958dbd18d81a2f6aacc07e938ac",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_start",
@@ -559,11 +559,11 @@
       "spoken_text": "じゃあ、先輩にお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
       "generate_text": "じゃあ、先輩にお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_start.fcccf5abc77b5f99.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "4c971f37ad763f3a786a8f6216b620873b70f59bfe9a644455a98064c00b9ec5",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_done_01",
@@ -575,11 +575,11 @@
       "spoken_text": "ふう……やっとひと段落ですね。先輩、すごく助かりました！",
       "generate_text": "ふう……やっとひと段落ですね。先輩、すごく助かりました！",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_done_01.8678d75d42261ca4.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "261b7748a3ea8e3f08307a374f13fb5f32e6a94e2d9acaef9dd8d98d1ec90437",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_done_02",
@@ -591,11 +591,11 @@
       "spoken_text": "今日のお給料、受け取ってください。先輩のおかげで、さっきのお客さんたちをお待たせせずに済みました。",
       "generate_text": "今日のお給料、受け取ってください。先輩のおかげで、さっきのお客さんたちをお待たせせずに済みました。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_done_02.3886984d52e13d0f.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "f1c6144b29541a02b5636f569f70aadaed3a6e04d8fa006f59596811e92505ce",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_decline",
@@ -607,11 +607,11 @@
       "spoken_text": "うん、大丈夫です。先輩もご自分のお店で忙しいですもんね。",
       "generate_text": "うん、大丈夫です。先輩もご自分のお店で忙しいですもんね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_decline.8259818e31bb3b95.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "f0c1833203cf9bb028200b98fc8fbe2a3e7e5a06d25d388b0350dcd86c88a4a2",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_done_today",
@@ -623,11 +623,11 @@
       "spoken_text": "先輩、今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
       "generate_text": "先輩、今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_done_today.4d2469abc6414c9a.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "591396bffe9bf7226b65661f4ca7d873346e738a49b31a1994344d83ff86318c",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_no_orders",
@@ -639,11 +639,11 @@
       "spoken_text": "今夜はまだ一人で大丈夫そうです。先輩は、のんびり音楽でも聴いていってくださいね。",
       "generate_text": "今夜はまだ一人で大丈夫そうです。先輩は、のんびり音楽でも聴いていってくださいね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_no_orders.da6150f1fd065b70.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "c64f512bc29d0445ebd4df4ecc97505ca0882e723b3512b571df33c031bc2070",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_w03_thanks_01",
@@ -655,11 +655,11 @@
       "spoken_text": "先輩、この前はお店を手伝ってくれて、ありがとうございました。やっぱり、直接お礼を言いたくて。",
       "generate_text": "先輩、この前はお店を手伝ってくれて、ありがとうございました。やっぱり、直接お礼を言いたくて。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_w03_thanks_01.4f8d680e80397dcd.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "362a45dba82a290f1677d0f44e58aee6c237b4751e5813bcdd57269b760bfebb",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_w03_thanks_02",
@@ -671,11 +671,11 @@
       "spoken_text": "これは、先輩のために取っておいた一杯です。お給料はお給料、こっちはわたしの気持ちですから。",
       "generate_text": "これは、先輩のために取っておいた一杯です。お給料はお給料、こっちはわたしの気持ちですから。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_w03_thanks_02.46059a75bd0bca78.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "4913f25c00a570071568bfad31f733a7c9ddcd86a4557b01b3b7e802980d35b2",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_w03_thanks_shop",
@@ -687,11 +687,11 @@
       "spoken_text": "あ、そうだ。せっかく来たので、食べるものか飲み水も少し買いたくて。",
       "generate_text": "あ、そうだ。せっかく来たので、食べるものか飲み水も少し買いたくて。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_w03_thanks_shop.7aab824c5e0f3fde.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "3e646e926ad92d142f3d57391c44e5c5f7b3e50ac4ed99243feae0a2da4803ba",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_w03_thanks_bye",
@@ -703,11 +703,11 @@
       "spoken_text": "それじゃ、お店に戻りますね。先輩も、無理しすぎないでくださいね。",
       "generate_text": "それじゃ、お店に戻りますね。先輩も、無理しすぎないでくださいね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_w03_thanks_bye.6f383431874e32a7.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "15c8568f1ba840f81525200d90c3725fe86e7edb03df0a7de7f92de7c617f834",
-      "defer_recording": true
+      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声"
     },
     {
       "key": "xm_tavern_w03_chat_01",
@@ -719,11 +719,11 @@
       "spoken_text": "先輩、気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
       "generate_text": "先輩、気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_chat_01.9ef45ad68a0f4871.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "0733d4ff5cf179726c8f097dac3e832d60e1a3e4cc2674af2f7a1167937644b9",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_chat_02",
@@ -735,11 +735,11 @@
       "spoken_text": "忙しいとあたふたしちゃうんですけど、お客さんの笑い声が聞こえると、お店を開いてよかったなって思うんです。",
       "generate_text": "忙しいとあたふたしちゃうんですけど、お客さんの笑い声が聞こえると、お店を開いてよかったなって思うんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_chat_02.c01c52f24fc59ccc.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "7587e89cfe285d48650d539c33d733a32abddca24559f131586a66e4bc1eff86",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_chat_after_work",
@@ -751,11 +751,11 @@
       "spoken_text": "先輩もお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
       "generate_text": "先輩もお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_chat_after_work.bc2ae26edc8d39bd.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "af606c0b5aa3b6566599a82f7c0ce59ba1049b174f772bca70722ac88f036042",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_offer_01_unknown",
@@ -767,11 +767,11 @@
       "spoken_text": "あ、お客さん！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
       "generate_text": "あ、お客さん！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_01_unknown.0172a6b1fabb15b6.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "4cb13dce52bcb5f64879b43a6214c672e3caf56cb38ca6fdde222dcf81ea42fe",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_w02_callback_unknown",
@@ -783,11 +783,11 @@
       "spoken_text": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
       "generate_text": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_w02_callback_unknown.ac0b1223292da195.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "e0f8399f99fdc67c22f6088411aa40f077fb85c8c3fc07a8d7c1153e87fc21b5",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_start_unknown",
@@ -799,11 +799,11 @@
       "spoken_text": "じゃあ、お客さんにお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
       "generate_text": "じゃあ、お客さんにお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_start_unknown.7a587ea9e9dd7cfa.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "9025f3bb21e4a396d3f1de3b1a54713f8166224a34b177dcda4026023846d603",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_done_01_unknown",
@@ -815,11 +815,11 @@
       "spoken_text": "ふう……やっとひと段落ですね。すごく助かりました！",
       "generate_text": "ふう……やっとひと段落ですね。すごく助かりました！",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_done_01_unknown.d4ad85ba375e3dcf.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "aa24c10027e588fe9698152c17df9fd89bdb6fa925abdcbc2550ee62117d03c2",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_done_02_unknown",
@@ -831,11 +831,11 @@
       "spoken_text": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
       "generate_text": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_done_02_unknown.9c9c2bd3141a861a.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "451e7fa8e79455d4a463eef146ab7353c099675e43f913c525b522e1926d6afa",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_decline_unknown",
@@ -847,11 +847,11 @@
       "spoken_text": "うん、大丈夫です。ご用事もあるでしょうし。",
       "generate_text": "うん、大丈夫です。ご用事もあるでしょうし。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_decline_unknown.d0f4bd084c02de70.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "154a35c9790b41c2e32e92522aee0667a3cd8d6b4cbd1661282af3639b0dae7b",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_done_today_unknown",
@@ -863,11 +863,11 @@
       "spoken_text": "今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
       "generate_text": "今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_done_today_unknown.ee748024f4d1a0fa.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "b2847b95176a38929eb8b8e2029593d278907caadf471409e90daee6afead49e",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_work_no_orders_unknown",
@@ -879,11 +879,11 @@
       "spoken_text": "今夜はまだ一人で大丈夫そうです。お客さんは、のんびり音楽でも聴いていってくださいね。",
       "generate_text": "今夜はまだ一人で大丈夫そうです。お客さんは、のんびり音楽でも聴いていってくださいね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_no_orders_unknown.c094ae6c4d175939.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "c68c48d999d251d1d95850014e5029dd6e5902d1360de541a77c46011f7c6457",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_chat_01_unknown",
@@ -895,11 +895,11 @@
       "spoken_text": "気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
       "generate_text": "気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_chat_01_unknown.96d3336a2edd863d.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "d0b7f5aaf901d05df16649e13d19b18ca345d86e52f37afa96d8286a3e2a3466",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w03_chat_after_work_unknown",
@@ -911,11 +911,11 @@
       "spoken_text": "お客さんもお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
       "generate_text": "お客さんもお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_chat_after_work_unknown.d6998a13bed4ad71.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "3b470eed2c96e4f0e3294bb3c625bbf3a65600a570783a468afb1bd69901dec4",
-      "defer_recording": true
+      "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
       "key": "xm_tavern_w04_supply_01",
@@ -927,11 +927,11 @@
       "spoken_text": "先輩、いらっしゃい。昼間に話したこと、リストにまとめておきました。",
       "generate_text": "先輩、いらっしゃい。昼間に話したこと、リストにまとめておきました。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_01.6afdbc2c881cdca7.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "3fcc951a0428aef8fde3ca2f863ac865d704480408663cebccd45a2efb1119b0",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_02",
@@ -943,11 +943,11 @@
       "spoken_text": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
       "generate_text": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_02.392c583ea54a5456.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "14ba2515801fc988242eb2e06b6ba1883c94ef424d9c13296c07448d40f71f02",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_03",
@@ -959,11 +959,11 @@
       "spoken_text": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
       "generate_text": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_03.41aa0a0c83267326.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "8ff67c6e486879d704e4ef47641c6a5dabcb4fbacc710450d0370631a3e54984",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_yes",
@@ -975,11 +975,11 @@
       "spoken_text": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
       "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_yes.1fb3adc01f9168ac.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "d52def807fecae3ca20ca3909af474792ff88e00ca5c542e9ce6121fb2e220e5",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_later",
@@ -991,11 +991,11 @@
       "spoken_text": "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
       "generate_text": "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_later.c3007fe182481c7c.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "5630a34e396ea0ff3928cd3fe4b8b16180928fb6a038a2176ae7f9cbaba4396a",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_existing",
@@ -1007,11 +1007,11 @@
       "spoken_text": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
       "generate_text": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_existing.d4a689c0384f2922.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "3edbb52d5f5907396d1d986baad03ec61ef8a59648c4a5ded57c9b39d4f0890b",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_early",
@@ -1023,11 +1023,11 @@
       "spoken_text": "先輩、いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
       "generate_text": "先輩、いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_early.b41c3caf26d47ba2.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "f396624c36e85c04648bd1a1a145367ed368ec51695c276e91aea179445b7364",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_01_unknown",
@@ -1039,11 +1039,11 @@
       "spoken_text": "いらっしゃい。昼間に話したこと、リストにまとめておきました。",
       "generate_text": "いらっしゃい。昼間に話したこと、リストにまとめておきました。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_01_unknown.be87bb5f336c5685.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "d7a464500d44f0596e03a85a5f0941362a18eab9c9c80e3f50e1557564f89388",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_02_unknown",
@@ -1055,11 +1055,11 @@
       "spoken_text": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
       "generate_text": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_02_unknown.0462f5f759896b27.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "04b1f06609ffbee1ed868b17ddead5b8e6cc3318c07f50a561cc1fe51b95ba3f",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_03_unknown",
@@ -1071,11 +1071,11 @@
       "spoken_text": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
       "generate_text": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_03_unknown.49b2c839182b6633.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "77415dc20ed5870f9caa151e7077e6b9c09ee4c806f8dc1ac183b1237a11eab5",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_yes_unknown",
@@ -1087,11 +1087,11 @@
       "spoken_text": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
       "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_yes_unknown.d99db1cd87830be7.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "de60681724da22f44b187c99e72e636f4d6bed6c6abfbf785f8cce5800f90928",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_later_unknown",
@@ -1103,11 +1103,11 @@
       "spoken_text": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
       "generate_text": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_later_unknown.2a62bba0fadc6215.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "bd9fd89780608d758bace10b206a55f13fdf8880186aa0be6bc51d283a874cc6",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_existing_unknown",
@@ -1119,11 +1119,11 @@
       "spoken_text": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
       "generate_text": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_existing_unknown.7dc76e26eb6f0227.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "cdcbf4e18f179b93d556656db94e42f3c91373140d5bb9243c14835ec68dae77",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_early_unknown",
@@ -1135,11 +1135,11 @@
       "spoken_text": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
       "generate_text": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_early_unknown.26e4ade240fc2b49.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "dc29c069e250de6d8c5efca37a89c6d282e4b8527ec6e7b62514fc280875f9e7",
-      "defer_recording": true
+      "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_05_new_01",
@@ -1151,11 +1151,11 @@
       "spoken_text": "先輩、新しいメニュー、見ました？ お酒を二種類増やしたんです。",
       "generate_text": "先輩、新しいメニュー、見ました？ お酒を二種類増やしたんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_new_01.795c49526c916947.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "616911acf37552c053dd508fd1733289660f44c495e272be92b39f1191983a41",
-      "defer_recording": true
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_05_new_02",
@@ -1164,14 +1164,14 @@
         "ja": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
         "en": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher."
       },
-      "spoken_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
-      "generate_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+      "spoken_text": "「むゆうせんきょう」は何度も試して、やっと納得できた味で。「けいようしゅんしょく」は、もう少しすっきりした感じにしたかったんです。",
+      "generate_text": "「むゆうせんきょう」は何度も試して、やっと納得できた味で。「けいようしゅんしょく」は、もう少しすっきりした感じにしたかったんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "3214a1890d4b397561c742e3f4f4280ff79cbf7ddd5d2d1d32f5dd2777f9487f",
-      "defer_recording": true
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_new_02.c97e59c44da73110.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
+      "source_sha256": "d63d1802912417df5524da366916da65de5d52186e8eec11a743ba7ade2063c0",
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_05_new_03",
@@ -1183,11 +1183,11 @@
       "spoken_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
       "generate_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_new_03.d98900725531aa29.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "d56beffcf266b3a6a42905bdc339341e9aa98c0545cd096ba0b9362b60a5c25d",
-      "defer_recording": true
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_05_soldout",
@@ -1199,11 +1199,11 @@
       "spoken_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
       "generate_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_soldout.3f85be18882787ca.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "e28ea988a7ebc8a456e834899cfb4abf8bf59ac2289b0bc92faba20063744abe",
-      "defer_recording": true
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_05_daily",
@@ -1215,11 +1215,11 @@
       "spoken_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
       "generate_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_daily.497c916ac2c4fbb2.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "b72e7c7bb2888a73d06574dfee5394d85f2a3d7103630c40d34ced4b40c69593",
-      "defer_recording": true
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_05_new_01_unknown",
@@ -1231,11 +1231,11 @@
       "spoken_text": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
       "generate_text": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_new_01_unknown.7853c9e1f9bdf57a.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "4809e3f3a6ddbb6e1b1114bda2e2f8dbd12579cf5c01d4e40332679cf2698ed9",
-      "defer_recording": true
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_05_new_02_unknown",
@@ -1244,14 +1244,14 @@
         "ja": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
         "en": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher."
       },
-      "spoken_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
-      "generate_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+      "spoken_text": "「むゆうせんきょう」は何度も試して、やっと納得できた味で。「けいようしゅんしょく」は、もう少しすっきりした感じにしたかったんです。",
+      "generate_text": "「むゆうせんきょう」は何度も試して、やっと納得できた味で。「けいようしゅんしょく」は、もう少しすっきりした感じにしたかったんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "3214a1890d4b397561c742e3f4f4280ff79cbf7ddd5d2d1d32f5dd2777f9487f",
-      "defer_recording": true
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_new_02_unknown.c97e59c44da73110.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
+      "source_sha256": "d63d1802912417df5524da366916da65de5d52186e8eec11a743ba7ade2063c0",
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_05_new_03_unknown",
@@ -1263,11 +1263,11 @@
       "spoken_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
       "generate_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_new_03_unknown.d98900725531aa29.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "d56beffcf266b3a6a42905bdc339341e9aa98c0545cd096ba0b9362b60a5c25d",
-      "defer_recording": true
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_05_soldout_unknown",
@@ -1279,11 +1279,11 @@
       "spoken_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
       "generate_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_soldout_unknown.3f85be18882787ca.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "e28ea988a7ebc8a456e834899cfb4abf8bf59ac2289b0bc92faba20063744abe",
-      "defer_recording": true
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_05_daily_unknown",
@@ -1295,11 +1295,11 @@
       "spoken_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
       "generate_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_05_daily_unknown.497c916ac2c4fbb2.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "b72e7c7bb2888a73d06574dfee5394d85f2a3d7103630c40d34ced4b40c69593",
-      "defer_recording": true
+      "delivery": "职业成就感、轻快自信"
     },
     {
       "key": "xm_tavern_06_chat_01",
@@ -1311,11 +1311,11 @@
       "spoken_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
       "generate_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_06_chat_01.a771b56b17ee8680.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "e54815654afcb514e659751ec46c9f85897c70cf4a12da2332b8fdf655de4ca1",
-      "defer_recording": true
+      "delivery": "亲近、俏皮，分享旅客趣事"
     },
     {
       "key": "xm_tavern_06_chat_02",
@@ -1327,11 +1327,11 @@
       "spoken_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
       "generate_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_06_chat_02.eed2487fbbe7b2a4.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "5e5abff355645d1861652f9be7fc24c8b8f48a1633c727e13757254139a20dc5",
-      "defer_recording": true
+      "delivery": "亲近、俏皮，分享旅客趣事"
     },
     {
       "key": "xm_tavern_06_chat_01_unknown",
@@ -1343,11 +1343,11 @@
       "spoken_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
       "generate_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_06_chat_01_unknown.a771b56b17ee8680.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "e54815654afcb514e659751ec46c9f85897c70cf4a12da2332b8fdf655de4ca1",
-      "defer_recording": true
+      "delivery": "亲近、俏皮，分享旅客趣事"
     },
     {
       "key": "xm_tavern_06_chat_02_unknown",
@@ -1359,11 +1359,11 @@
       "spoken_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
       "generate_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_06_chat_02_unknown.eed2487fbbe7b2a4.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "5e5abff355645d1861652f9be7fc24c8b8f48a1633c727e13757254139a20dc5",
-      "defer_recording": true
+      "delivery": "亲近、俏皮，分享旅客趣事"
     },
     {
       "key": "xm_tavern_07_chat_01",
@@ -1375,11 +1375,11 @@
       "spoken_text": "座ったら、ずっと雨の音を聴いてるお客さんもいるんです。本物の雨じゃないのに、気に入ってくれて。",
       "generate_text": "座ったら、ずっと雨の音を聴いてるお客さんもいるんです。本物の雨じゃないのに、気に入ってくれて。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_07_chat_01.9b424d3c107e9334.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "01c65c505f5ce73ea5f0122a8071dec84988b480dab6e6e0627ddaaa861a8b1c",
-      "defer_recording": true
+      "delivery": "有熟客的小小得意"
     },
     {
       "key": "xm_tavern_07_chat_02",
@@ -1391,11 +1391,11 @@
       "spoken_text": "最近は閉店前にふらっと一杯飲みに来る人もいて。約束なんてしてないのに、その時間になると、誰が来るかなんとなく分かるんです。",
       "generate_text": "最近は閉店前にふらっと一杯飲みに来る人もいて。約束なんてしてないのに、その時間になると、誰が来るかなんとなく分かるんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_07_chat_02.eae13105bce313c8.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "1b90cb3bbaef042f8200a1e55934f6b467595552c631448aefd95bf16760ff0f",
-      "defer_recording": true
+      "delivery": "有熟客的小小得意"
     },
     {
       "key": "xm_tavern_08_chat_01",
@@ -1407,11 +1407,11 @@
       "spoken_text": "写真を撮ってくれた子たち、どれにするかまで一緒に悩んでくれて。お酒を飲みに来たのに、まるで撮影会でした。",
       "generate_text": "写真を撮ってくれた子たち、どれにするかまで一緒に悩んでくれて。お酒を飲みに来たのに、まるで撮影会でした。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_08_chat_01.43200b1706218beb.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "c67348158be0b0ba301e36efa0ade76b0983f1592c355ba371c86e36b0c42188",
-      "defer_recording": true
+      "delivery": "自然开心，谈照片时害羞"
     },
     {
       "key": "xm_tavern_08_chat_02",
@@ -1423,11 +1423,11 @@
       "spoken_text": "次の交代のときは新人も連れてくるって。来てくれたら、材料をもう少し用意しておかないと。",
       "generate_text": "次の交代のときは新人も連れてくるって。来てくれたら、材料をもう少し用意しておかないと。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_08_chat_02.3e78a0ec27d7d7d9.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "46d1057d9f2e1a8155dcf9324b0314c57321888299308484b100c9dc8b6e0de8",
-      "defer_recording": true
+      "delivery": "自然开心，谈照片时害羞"
     },
     {
       "key": "xm_tavern_09_chat_01",
@@ -1439,11 +1439,11 @@
       "spoken_text": "先輩、最近はよく出るお酒の材料を先に用意するようにしてるんです。",
       "generate_text": "先輩、最近はよく出るお酒の材料を先に用意するようにしてるんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_09_chat_01.6ec82796e7cb62be.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "22a8a8b24f7cdf99bbb8b89b990f65ee9059c69ef181af217aee45a8357bbb69",
-      "defer_recording": true
+      "delivery": "繁忙、自信；还未察觉竞争压力"
     },
     {
       "key": "xm_tavern_09_chat_02",
@@ -1455,11 +1455,11 @@
       "spoken_text": "前はお客さんが増えると大慌てだったけど、今は少し落ち着いて対応できるようになりました。",
       "generate_text": "前はお客さんが増えると大慌てだったけど、今は少し落ち着いて対応できるようになりました。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_09_chat_02.5898fa5d9a34261f.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "0a870fa3fa8015ab87136e9c4bd455af3047c5315f8c8ba5bb357073b95f89ef",
-      "defer_recording": true
+      "delivery": "繁忙、自信；还未察觉竞争压力"
     },
     {
       "key": "xm_tavern_09_chat_03",
@@ -1471,11 +1471,11 @@
       "spoken_text": "でも、カウンターの奥には、もうひとつ棚が必要かもしれませんね。",
       "generate_text": "でも、カウンターの奥には、もうひとつ棚が必要かもしれませんね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_09_chat_03.2c30351ca9ef9a1e.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "9b6f227a5a0a2f77b915de360b7fa4446fe908de0b24649aeb86446523ee02f9",
-      "defer_recording": true
+      "delivery": "繁忙、自信；还未察觉竞争压力"
     },
     {
       "key": "xm_tavern_10_chat_01",
@@ -1487,11 +1487,11 @@
       "spoken_text": "先輩、最近は新しいお酒の材料があまり減らなくなって。",
       "generate_text": "先輩、最近は新しいお酒の材料があまり減らなくなって。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_chat_01.a70d76859b5d693f.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "b64b832dd80902c399d3bf433de282a6da337bca89bdaa7be69ad0a9b99e674a",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_chat_02",
@@ -1503,11 +1503,11 @@
       "spoken_text": "先週は足りないかもって多めに用意したのに、今週は思ったより残っちゃって。",
       "generate_text": "先週は足りないかもって多めに用意したのに、今週は思ったより残っちゃって。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_chat_02.afd4eb3006cd8803.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "b0b7b0f7414a4cedc38db6bfedd77ceed0eacb3a93c0c455e700b21b66ec4fdb",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_chat_03",
@@ -1519,11 +1519,11 @@
       "spoken_text": "長く保存できる材料もあるから、助かってます。そうじゃなかったら、もったいないですもんね。",
       "generate_text": "長く保存できる材料もあるから、助かってます。そうじゃなかったら、もったいないですもんね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_chat_03.632810640c2dd010.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "167982327d0e9359c28822ab4ace9121164a0c295197888d8831659125685d3e",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_chat_supported_01",
@@ -1535,11 +1535,11 @@
       "spoken_text": "先輩、最近、次にどれくらい材料を仕入れるか、もう一度考えているんです。",
       "generate_text": "先輩、最近、次にどれくらい材料を仕入れるか、もう一度考えているんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_chat_supported_01.40a1010073299dcf.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "7ab148906d361eb3af3d398a2a20a560ad60bc10a16cab20746a3d49f8824c55",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_chat_supported_02",
@@ -1551,11 +1551,11 @@
       "spoken_text": "でも、今ある仕事はいつもどおりできています。用意したものも、少しずつ使えていますし。",
       "generate_text": "でも、今ある仕事はいつもどおりできています。用意したものも、少しずつ使えていますし。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_chat_supported_02.a81e4e9908fae0d9.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "c1b66c95fa9ea46dfadf9af510c6f79c9579b9edf49c64fbe6974b5f7e4f138d",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_chat_supported_03",
@@ -1567,11 +1567,11 @@
       "spoken_text": "今のペースを続けながら、もう何日か様子を見てみようと思います。",
       "generate_text": "今のペースを続けながら、もう何日か様子を見てみようと思います。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_chat_supported_03.789ee36bbb9037b8.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "86128f7786989397b3b1103127a38b0128f16967bd41333929f8420a648eb9f9",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_chat_neutral_01",
@@ -1583,11 +1583,11 @@
       "spoken_text": "先輩、次の仕入れは、もう少し丁寧に考えてみようと思っているんです。",
       "generate_text": "先輩、次の仕入れは、もう少し丁寧に考えてみようと思っているんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_chat_neutral_01.b0323c4cc14380e8.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "27159ccf38f0ed2bb87160b93a61cf9ddf82a90002aebd84ece6b1a128077765",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_chat_neutral_02",
@@ -1599,11 +1599,11 @@
       "spoken_text": "長く置ける材料もあれば、新鮮なうちに使いたいものもありますから。必要な分を、少しずつ用意しようかな。",
       "generate_text": "長く置ける材料もあれば、新鮮なうちに使いたいものもありますから。必要な分を、少しずつ用意しようかな。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_chat_neutral_02.ad006729ee918279.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "420749d50d4074286c564c8d0f0608f7c6c5ae0b893fe3662554e76b49b5dc10",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_chat_neutral_03",
@@ -1615,11 +1615,11 @@
       "spoken_text": "メニューはまだ変えずに、もう少し様子を見たいです。",
       "generate_text": "メニューはまだ変えずに、もう少し様子を見たいです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_chat_neutral_03.995112de0b4b5054.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "163df0b7a9355b7419f132dadf4f459931277d8ac56ae4777be7358ee16a41ca",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_regular_01",
@@ -1631,11 +1631,11 @@
       "spoken_text": "先輩、前に来たお客さんが、今日はお友達と一緒に来てくれたんです。",
       "generate_text": "先輩、前に来たお客さんが、今日はお友達と一緒に来てくれたんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_regular_01.b25dd7c394a7622b.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "f222ecebda93e5d85ec74ef125f4a92ea56767b08dc80f8c964a971edbbc1ecb",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_regular_02",
@@ -1647,11 +1647,11 @@
       "spoken_text": "寮に帰るなら直通のエレベーターでいいのに、わざわざ寄ってくれたそうで。",
       "generate_text": "寮に帰るなら直通のエレベーターでいいのに、わざわざ寄ってくれたそうで。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_regular_02.f76a73f236b6d14b.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "b96e4e17361689a8ae09655d2f610ff5ff6794e26ca6d1a426fcce31895c952f",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_regular_03",
@@ -1663,11 +1663,11 @@
       "spoken_text": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら交換して飲み始めたんですよ。",
       "generate_text": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら交換して飲み始めたんですよ。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_regular_03.1a5dcbf3b538197e.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "0a22e481c82ca6821190e3ef849c7ee6870a561ba0f1d2b1df40bb0790dbb7ad",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_10_regular_04",
@@ -1679,11 +1679,11 @@
       "spoken_text": "えへへ、うれしかったな。",
       "generate_text": "えへへ、うれしかったな。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_10_regular_04.b2dcb0d0d76e2918.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "fc21e2b8c2492aebf1bc31c7199a531b17b2b702e555c9bf0827db7a1c3ac0a1",
-      "defer_recording": true
+      "delivery": "认可同行、理性观察；没有被背叛的怨气"
     },
     {
       "key": "xm_tavern_11_chat_01",
@@ -1695,11 +1695,11 @@
       "spoken_text": "先輩、今日、商店振興部にうちの案内表示はいつになるのか聞いてきたんです。",
       "generate_text": "先輩、今日、商店振興部にうちの案内表示はいつになるのか聞いてきたんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_11_chat_01.a9453bd666ce6b1d.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "3c460fc210cf8c67a0b8948a2d9d4a7df999bc2717d5634edc15d149f59fa33c",
-      "defer_recording": true
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气"
     },
     {
       "key": "xm_tavern_11_chat_02",
@@ -1711,11 +1711,11 @@
       "spoken_text": "今の通路の計画に合わせて枠を調整してるから、もう少し待ってほしいって。",
       "generate_text": "今の通路の計画に合わせて枠を調整してるから、もう少し待ってほしいって。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_11_chat_02.aa16bed875bca46a.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "ddab53c471f6327a9bfbd71b9ca1bc0b154322924bfde68208492f430981017e",
-      "defer_recording": true
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气"
     },
     {
       "key": "xm_tavern_11_chat_03",
@@ -1727,11 +1727,11 @@
       "spoken_text": "でも、支援制度に申し込んだとき、新しいお店の集客も手伝うって言ってくれたのに……。",
       "generate_text": "でも、支援制度に申し込んだとき、新しいお店の集客も手伝うって言ってくれたのに……。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_11_chat_03.aa386a22e0309e1b.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "2b56b61127f2a8d9631b93dcd556c12e49d60e54d7f07805b3e0460642dfdc10",
-      "defer_recording": true
+      "delivery": "认真克制、略迟疑；不用哭腔或固定叹气"
     },
     {
       "key": "xm_tavern_12_roka_01",
@@ -1743,11 +1743,11 @@
       "spoken_text": "先輩、いらっしゃい。昼間に話したお酒、できましたよ。",
       "generate_text": "先輩、いらっしゃい。昼間に話したお酒、できましたよ。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_12_roka_01.824bffb44277bbc5.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "4d2677bb7524286c5e2a01e8a5e716b21bc32f39cdc8963350397f7630f6f363",
-      "defer_recording": true
+      "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低"
     },
     {
       "key": "xm_tavern_12_roka_02",
@@ -1759,11 +1759,11 @@
       "spoken_text": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
       "generate_text": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_12_roka_02.63dc07c142d79eda.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "edb3b7160b478857d6caf22192d077f9390054a35c2f0737423364a910a22139",
-      "defer_recording": true
+      "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低"
     },
     {
       "key": "xm_tavern_12_roka_03",
@@ -1772,14 +1772,14 @@
         "ja": "名前は「露華」にしました。えへへ、先輩、どうでしょう？",
         "en": "I named it Dew Blossom. Hehe, what do you think, senpai?"
       },
-      "spoken_text": "名前は「露華」にしました。えへへ、先輩、どうでしょう？",
-      "generate_text": "名前は「露華」にしました。えへへ、先輩、どうでしょう？",
+      "spoken_text": "名前は「ろか」にしました。 先輩、どうでしょう？",
+      "generate_text": "名前は「ろか」にしました。[chuckles] 先輩、どうでしょう？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "8e8f9d14a0118c677a8d3398dc9b082cc0642ac1807b48e9f3afee95a9e818e4",
-      "defer_recording": true
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_12_roka_03.ab4f7c6a81e28bb1.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
+      "source_sha256": "dcea91b017930f639eeb40f1e5e5140fd1ffc8ae84a3234956a0fe3032fdaead",
+      "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低"
     },
     {
       "key": "xm_tavern_12_roka_04",
@@ -1791,11 +1791,11 @@
       "spoken_text": "これは普通のメニューには入れないつもりです。先輩の分にしておきますね。",
       "generate_text": "これは普通のメニューには入れないつもりです。先輩の分にしておきますね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_12_roka_04.6d585b0ddb2b89c9.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "2e53e3aa26f2d65d4ed9ee393acc5857b3c29a0274f2a34ab01f0328b45e7973",
-      "defer_recording": true
+      "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低"
     },
     {
       "key": "xm_tavern_12_business_01",
@@ -1807,11 +1807,11 @@
       "spoken_text": "先輩、最近、ペンギン資産会社から精算の通知が届いたんです。",
       "generate_text": "先輩、最近、ペンギン資産会社から精算の通知が届いたんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_12_business_01.f97118647491a304.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "811280ac1854e3cb0803499cc7ee3b07a5608676a00ad0526b6b690e94417ae4",
-      "defer_recording": true
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔"
     },
     {
       "key": "xm_tavern_12_business_02",
@@ -1823,11 +1823,11 @@
       "spoken_text": "前の家賃の支援には、売上の条件があったみたいで。届かなかった分は契約どおり返さないといけないそうです。",
       "generate_text": "前の家賃の支援には、売上の条件があったみたいで。届かなかった分は契約どおり返さないといけないそうです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_12_business_02.6360302ead8f556d.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "cc40f7bcbeeaa45ae31fff13e32be76dc557996f85880180edc7cbf7d77a3cb8",
-      "defer_recording": true
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔"
     },
     {
       "key": "xm_tavern_12_business_03",
@@ -1839,11 +1839,11 @@
       "spoken_text": "売上の記録をまとめてみました。前はあんなにお客さんが来てくれたのに、最近はすっかり減ってしまって。",
       "generate_text": "売上の記録をまとめてみました。前はあんなにお客さんが来てくれたのに、最近はすっかり減ってしまって。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_12_business_03.0c98cab73954f64f.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "7f05aac78c08818e40238b48db56e00dbf9432d3f74e48225b7baad68d7b92d5",
-      "defer_recording": true
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔"
     },
     {
       "key": "xm_tavern_12_business_04",
@@ -1855,11 +1855,11 @@
       "spoken_text": "来月の仕入れも、最初から考え直さないと。",
       "generate_text": "来月の仕入れも、最初から考え直さないと。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_12_business_04.9e4da8da2175e56e.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "f0eaab0253729ac7828dacc2f1b1754ba2e2d14df7ac289f66deb7b12ae53315",
-      "defer_recording": true
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔"
     },
     {
       "key": "xm_tavern_12_business_05",
@@ -1871,11 +1871,11 @@
       "spoken_text": "まずは審査のやり直しを頼んでみます。約束された宣伝も、結局うちには回ってこなかったので。",
       "generate_text": "まずは審査のやり直しを頼んでみます。約束された宣伝も、結局うちには回ってこなかったので。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_12_business_05.883632c884f7044a.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "c534adc5dbc4dd5a075668489f1bbc1c950ebb10e84af3055873ac014fba7eb1",
-      "defer_recording": true
+      "delivery": "认真、安静地解释现状，轻微担忧但仍在主动处理；不哭腔"
     },
     {
       "key": "xm_tavern_13_entry",
@@ -1887,11 +1887,11 @@
       "spoken_text": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
       "generate_text": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_13_entry.bdbc67c46490e2e5.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "a170942b40fa663703373d09f25db1c1ab594f0057563965856cbdfd26dc6cc5",
-      "defer_recording": true
+      "delivery": "处理实际事务，平静中带不舍；不崩溃"
     },
     {
       "key": "xm_tavern_13_tape",
@@ -1903,11 +1903,11 @@
       "spoken_text": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
       "generate_text": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_13_tape.eee429d6ecd00586.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "6ee373a632f3023167f3e00a11aa40276ee5edee660b75db49c200b81f54aa0b",
-      "defer_recording": true
+      "delivery": "处理实际事务，平静中带不舍；不崩溃"
     },
     {
       "key": "xm_tavern_13_chat",
@@ -1919,11 +1919,11 @@
       "spoken_text": "グラスを何個か、手元に残すことにしました。見るたびに、ここを思い出すのかな。",
       "generate_text": "グラスを何個か、手元に残すことにしました。見るたびに、ここを思い出すのかな。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_13_chat.26a15b4ccb8e5fe6.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "a374a93e41e72f0cc98ad79c29d92aebbda2a8d21da605dc0aced635bbd87033",
-      "defer_recording": true
+      "delivery": "处理实际事务，平静中带不舍；不崩溃"
     }
   ],
   "integration_note": "完整配音脚本的待录子集，不可单独覆盖现有语音索引；本次不请求TTS。"

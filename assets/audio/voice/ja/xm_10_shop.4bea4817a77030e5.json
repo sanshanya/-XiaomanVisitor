@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今日は飲み水を少し買いたくて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "29",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.326,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 159686
+  },
+  "sha256": "f29e2cd5861fad4d2779dfe9016102606cba3e20c953b2e3e829b53a8760cbb5",
+  "binding": {
+    "key": "xm_10_shop",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "今天想买点饮用水。带了 {0} 信用点。",
+      "ja": "今日は飲み水を少し買いたくて。",
+      "en": "I would like some drinking water today. I brought {0} credits."
+    },
+    "generic": true
+  }
+}

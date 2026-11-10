@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "これは先輩の分です。今日は、お代はいりませんからね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "49",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.309,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 302892
+  },
+  "sha256": "22735d79be55c6d588bbf0348db208e588994240ac7086427b05bb99431f718e",
+  "binding": {
+    "key": "xm_05_gift",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这个是留给前辈的。今天可不收钱哦。",
+      "ja": "これは先輩の分です。今日は、お代はいりませんからね。",
+      "en": "This one is for you. No charge today."
+    },
+    "generic": false
+  }
+}

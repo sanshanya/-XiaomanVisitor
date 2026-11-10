@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "自分のお店で「いらっしゃいませ」って言うの、まだちょっと慣れなくて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "64",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.271,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 301074
+  },
+  "sha256": "80fd42247991897b0e802c4293654d3b37358668960177f679fc26c1976d4e42",
+  "binding": {
+    "key": "xm_tavern_w02_entry_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我好像还不太习惯，在自己的店里说“欢迎光临”呢。",
+      "ja": "自分のお店で「いらっしゃいませ」って言うの、まだちょっと慣れなくて。",
+      "en": "It still feels a little strange, saying ‘welcome’ in my very own shop."
+    },
+    "generic": false
+  }
+}

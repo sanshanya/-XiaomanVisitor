@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "73",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.787,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 373796
+  },
+  "sha256": "35b537f5c384f4d2539050aff5162f5f544a6328090987059942dd9f0d371b15",
+  "binding": {
+    "key": "xm_09_02_late",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前阵子特意多准备了一批酒，结果还是不够卖呢。",
+      "ja": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
+      "en": "I made an extra batch a little while ago, but it still was not enough."
+    },
+    "generic": false
+  }
+}

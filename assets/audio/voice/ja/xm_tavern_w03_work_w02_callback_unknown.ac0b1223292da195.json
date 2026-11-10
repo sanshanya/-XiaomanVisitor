@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "91",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.764,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 468702
+  },
+  "sha256": "701a7046da4c67a531877357cff51de20e75b15066281ffc3e047ee570a925a9",
+  "binding": {
+    "key": "xm_tavern_w03_work_w02_callback_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "上次您帮忙递酒单，我还记得呢。这次可不能再让您白帮忙啦。",
+      "ja": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
+      "en": "I remember you handing out menus for me. This time, I really must pay you for your help."
+    },
+    "generic": false
+  }
+}

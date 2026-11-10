@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、いらっしゃい。昼間に話したこと、リストにまとめておきました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "62",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.533,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 361650
+  },
+  "sha256": "6cd8a671fa380417b09eafe494c3ebac474fb08a49bb165d818d60fdfee28242",
+  "binding": {
+    "key": "xm_tavern_w04_supply_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈来啦。白天说的那件事，我把清单准备好了。",
+      "ja": "先輩、いらっしゃい。昼間に話したこと、リストにまとめておきました。",
+      "en": "Welcome, senpai. I made that list we discussed during the day."
+    },
+    "generic": false
+  }
+}

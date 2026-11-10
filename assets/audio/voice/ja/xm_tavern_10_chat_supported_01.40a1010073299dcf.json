@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、最近、次にどれくらい材料を仕入れるか、もう一度考えているんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "66",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.599,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 412792
+  },
+  "sha256": "5b8579b329d400f6180612bbfd56973218c37772c27bf9e338307be67010783f",
+  "binding": {
+    "key": "xm_tavern_10_chat_supported_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，最近我在重新算下一批要进多少原料。",
+      "ja": "先輩、最近、次にどれくらい材料を仕入れるか、もう一度考えているんです。",
+      "en": "Senpai, lately I have been working out how much to order for the next batch again."
+    },
+    "generic": false
+  }
+}

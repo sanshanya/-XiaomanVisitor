@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "最近、お店がちょっと忙しくて。ドックの交代時間になると、お客さんが一度に来るんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "80",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.799,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 470418
+  },
+  "sha256": "46b27916305a344d3c9b65f1ea30cd7ad1861b6db9f4f6ace154f6d961fdbe55",
+  "binding": {
+    "key": "xm_03_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "最近店里有点忙呢。船坞换班的时候，客人一下子就都来了。",
+      "ja": "最近、お店がちょっと忙しくて。ドックの交代時間になると、お客さんが一度に来るんです。",
+      "en": "The tavern has been rather busy. When the dock shifts change, everyone seems to arrive at once."
+    },
+    "generic": false
+  }
+}

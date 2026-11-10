@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "91",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.018,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 480914
+  },
+  "sha256": "17628dae82570c82021eff6419d4806d201e2b84757c29ff53f8da7cfaa00862",
+  "binding": {
+    "key": "xm_tavern_w02_help_intro_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "啊，有客人来啦……我这边还忙着调酒。可以帮我把酒单递过去吗？",
+      "ja": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
+      "en": "Oh, a customer… I'm still making drinks. could you take them a menu for me?"
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、この前はお店を手伝ってくれて、ありがとうございました。やっぱり、直接お礼を言いたくて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "87",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.593,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 508510
+  },
+  "sha256": "aa9f83880286db2d28bd167a3cefe3e30b8cf5ceb2e45ae5f79209ce03b58399",
+  "binding": {
+    "key": "xm_w03_thanks_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，晚上帮忙的事，真的谢谢啦。我想着还是该来当面说一声。",
+      "ja": "先輩、この前はお店を手伝ってくれて、ありがとうございました。やっぱり、直接お礼を言いたくて。",
+      "en": "Thank you again for helping me that night. I thought I should come and say it in person."
+    },
+    "generic": false
+  }
+}

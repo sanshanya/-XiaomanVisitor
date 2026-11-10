@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "忙しいとあたふたしちゃうんですけど、お客さんの笑い声が聞こえると、お店を開いてよかったなって思うんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "101",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.346,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 496658
+  },
+  "sha256": "ed240d42c275e716d52f2e569918c8b9452bc9e8912269e46ea9498db73e6661",
+  "binding": {
+    "key": "xm_tavern_w03_chat_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "虽然忙起来会手忙脚乱，可听见客人在那边笑，我就觉得开这家店真好。",
+      "ja": "忙しいとあたふたしちゃうんですけど、お客さんの笑い声が聞こえると、お店を開いてよかったなって思うんです。",
+      "en": "I can get a bit flustered when it's busy. But when I hear the customers laughing, I'm glad I opened this place."
+    },
+    "generic": false
+  }
+}

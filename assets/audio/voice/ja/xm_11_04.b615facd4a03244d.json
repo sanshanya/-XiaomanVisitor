@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "開店した頃は、みんな遅くまでいてくれて大変だったのに。今は早く閉められますね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "75",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.853,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 425004
+  },
+  "sha256": "7208891ee321a11bc7f723d5dac8574a769f8112e095d6403bc36deb164076e2",
+  "binding": {
+    "key": "xm_11_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "开店的时候，总嫌客人待到太晚。现在倒是能早点收店啦。",
+      "ja": "開店した頃は、みんな遅くまでいてくれて大変だったのに。今は早く閉められますね。",
+      "en": "When I opened, I used to think everyone stayed too late. At least I can close up earlier now."
+    },
+    "generic": false
+  }
+}

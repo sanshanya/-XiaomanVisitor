@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "うん、大丈夫です。わたしがやりますね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "35",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.964,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 238302
+  },
+  "sha256": "026eb3fa87e8cbcb04cc2e7c354a4bfe71f3cf0d2de3aa56f954a3aa4fe71128",
+  "binding": {
+    "key": "xm_tavern_w02_help_skip",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "嗯，没关系。我自己来就好啦。",
+      "ja": "うん、大丈夫です。わたしがやりますね。",
+      "en": "That's all right. I'll take care of it."
+    },
+    "generic": false
+  }
+}
