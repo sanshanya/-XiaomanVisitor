@@ -25,17 +25,13 @@ namespace XiaomanVisitor
                 bay.mayInventoryAddItemFunc=(i,_) => i.IsTag("XIAOMAN_TAVERN_TAPE");
                 boxInv.mayInventoryAddItemFunc=(i,_) => i.IsTag("XIAOMAN_TAVERN_TAPE");
                 ModHelper.SetItemOwnerShip(box,true);GraphUtils.TryAcceptAll(storage,box);
-                string selected=ReadTavern().SelectedTrack;
-                foreach (string key in TavernRules.MusicKeys(ReadStory().VisitIndex)) {
-                    var tape=CreateCollectionCassette(CassetteCollection.Find(key));ModHelper.SetItemOwnerShip(tape,true);
-                    tape.EnableTag("XIAOMAN_TAVERN_TAPE");tape.mayInventoryAddItemFunc=(i,dest) => tavernTapeInventories.Contains(dest);
-                    GraphUtils.TryAcceptAll(key==selected?bay:boxInv,tape);
-                    if (tape.parentInventory==null) { tape.Destroy();throw new InvalidOperationException("Tavern tape storage is full"); }
-                }
-                if (bay.childItems.Count>0) {
-                    tavernDeck.ModifyTag(MachineCassettePlayer.CASETTE_PLAYER_STATE_INT,t => t.Enable().SetInt(1));
-                    tavernDeck.ModifyTag(MachineCassettePlayer.CURRENT_PLAYING_TRACK_ID_TAG,t => t.Enable().SetString(ModHelper.GetSoundIdentifier(Id,CassetteCollection.Find(selected).SoundKey)));
-                }
+                // One physical tape per visit to the room, shared by the case and
+                // playback bay. Reopening this window never creates another copy.
+                var track=CassetteCollection.Find(TavernRules.MusicKey(ReadStory().VisitIndex));
+                var tape=CreateCollectionCassette(track);ModHelper.SetItemOwnerShip(tape,true);
+                tape.EnableTag("XIAOMAN_TAVERN_TAPE");tape.mayInventoryAddItemFunc=(i,dest) => tavernTapeInventories.Contains(dest);
+                GraphUtils.TryAcceptAll(boxInv,tape);
+                if (tape.parentInventory==null) { tape.Destroy();throw new InvalidOperationException("Tavern tape storage is full"); }
             }
             tavernDeck.contentWindow.SetTitle(Text("ui_w04_deck"));tavernDeck.contentWindow.Show();
         }

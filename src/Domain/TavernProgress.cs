@@ -36,8 +36,8 @@ namespace XiaomanVisitor
             return visit==2 && key=="xm_02_02" && day>OpeningDay ? "xm_02_02_late" : key;
         }
         public static bool OpeningWeek(int day) { return day >= OpeningDay && day <= 14; }
-        public static string[] MusicKeys(int visits)
-        { return StoryCatalog.Episodes.Take(Math.Max(2,Math.Min(14,visits))).Select(e => e.TrackKey).ToArray(); }
+        public static string MusicKey(int visits)
+        { return StoryCatalog.Episodes[Math.Max(1,Math.Min(StoryCatalog.Episodes.Length,visits))-1].TrackKey; }
         public static string StatusKey(string id, bool enabled, bool hasRun, int day, bool departed)
         {
             if (!enabled || id != TavernMapRules.LocationId) return null;
@@ -89,7 +89,7 @@ namespace XiaomanVisitor
         [JsonProperty] public readonly List<string> ChatSeen = new List<string>();
         [JsonProperty] public bool IntroSeen, UnknownIntroSeen, RainIntroSeen, TapeIntroSeen, OpeningReceptionHelped, RecoveryBlocked;
         [JsonProperty] public int LastEntryDay = -1, EntriesToday;
-        [JsonProperty] public string SelectedTrack = "intro", LegacyData;
+        [JsonProperty] public string SelectedTrack = "title", LegacyData;
         public TavernDrinkRecord Pending { get { return Drinks.FirstOrDefault(d => d.Status != "complete" && d.Status != "cancelled"); } }
         public bool Drank(int day) { return Drinks.Any(d => d.Day == day && d.Status != "cancelled"); }
         public bool MayDrink(int day) { return day >= TavernRules.OpeningDay && !RecoveryBlocked && Pending == null && !Drank(day); }
@@ -173,7 +173,7 @@ namespace XiaomanVisitor
                 if (expected.Data != record.AfterBuffs) return Blocked(data);
             }
             loaded.OpenedOn = TavernRules.OpeningDay;
-            if (CassetteCollection.Find(loaded.SelectedTrack) == null) loaded.SelectedTrack = "intro";
+            if (CassetteCollection.Find(loaded.SelectedTrack) == null) loaded.SelectedTrack = "title";
             return loaded;
         }
         private static TavernProgress Blocked(string data)

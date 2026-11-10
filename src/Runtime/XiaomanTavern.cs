@@ -58,9 +58,9 @@ namespace XiaomanVisitor
             var progress=ReadTavern();
             bool known=TavernKnown;
             string[] greeting=progress.Enter(StoreStation.Instance.dayCounter,known);
+            progress.SelectedTrack=TavernRules.MusicKey(ReadStory().VisitIndex);
             SaveTavern(progress);
-            string[] tracks=TavernRules.MusicKeys(ReadStory().VisitIndex);
-            tavernStage.PlayMusic(tracks.Contains(progress.SelectedTrack)?progress.SelectedTrack:"intro");
+            tavernStage.PlayMusic(progress.SelectedTrack);
             QueueTavernSpeech(greeting,() => UpdateTavern(p => { if (known) p.IntroSeen=true; else p.UnknownIntroSeen=true; }));
         }
         private void UpdateTavern(Action<TavernProgress> update)

@@ -35,8 +35,12 @@ internal static class WeekTwoChecks
         unknown.UnknownIntroSeen=true;
         check(unknown.Enter(8,false).Single()=="xm_tavern_greeting_plain"
             && TavernDialogue.KeyFor("xm_tavern_w02_help_intro",false).EndsWith("_unknown"),"unknown visitors never acquire senpai merely by entering");
-        check(TavernRules.MusicKeys(0).SequenceEqual(new[]{"title","intro"}) && TavernRules.MusicKeys(3).Length==3,
-            "W02-A06: room playback permission includes two tapes independently of inventory ownership");
+        check(Enumerable.Range(1,14).All(visit => TavernRules.MusicKey(visit)==StoryRules.Episode(visit).TrackKey),
+            "W02-A06: the room provides only the current encounter's gift track, never an accumulated playlist");
+        check(TavernRules.MusicKey(0)=="title" && TavernRules.MusicKey(int.MinValue)=="title"
+            && TavernRules.MusicKey(2)=="intro" && TavernRules.MusicKey(3)=="nightfall"
+            && TavernRules.MusicKey(int.MaxValue)==StoryRules.Episode(14).TrackKey,
+            "unmet/late story progress and stale out-of-range counts cannot reveal another chapter's track");
         p.RainIntroSeen=true; p.TapeIntroSeen=true;
         p=TavernProgress.Restore(p.Data,9);
         check(p.RainIntroSeen && p.TapeIntroSeen,"W02-A07: discovery introductions persist separately from the gift clock");
