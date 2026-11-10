@@ -377,6 +377,8 @@ def main():
     if (PACKAGE / "Letters/index.json").exists():
         import prepare_handwriting
         prepare_handwriting.main()
+    import text_review
+    text_review.prepare_instructions(ROOT)
     print(json.dumps(dict(episodes=len(episodes), action_slots=len(actions), sfx=sum(a["kind"]=="sfx" for a in actions),
                           source_rows=len(lines), active_voice_lines=len(voice_keys), new_tts_requests=0, tape_order=TRACKS), ensure_ascii=False))
 

@@ -131,15 +131,24 @@ return new[]{key}; }
 public static bool ChatReady(string key,int day,int encounterDay) {
 if (key=="xm_tavern_10_regular_01") return encounterDay>0 && day>=System.Math.Max(66L,(long)encounterDay+2);
 return true; }
-public static string[] WeeklyChatPool(int day,int visits) {
-if (day>=71 && visits>=11) return Chat11;
-if (day>=64 && visits>=10) return Chat10;
-if (day>=57 && visits>=9) return Chat9;
-if (day>=50 && visits>=8) return Chat8;
-if (day>=43 && visits>=7) return Chat7;
-if (day>=36 && visits>=0) return Chat6;
-if (day>=29 && visits>=0) return Chat5;
-return null; }
+public static int WeeklyChatVisit(int day,int visits) {
+if (day>=71 && visits>=11) return 11;
+if (day>=64 && visits>=10) return 10;
+if (day>=57 && visits>=9) return 9;
+if (day>=50 && visits>=8) return 8;
+if (day>=43 && visits>=7) return 7;
+if (day>=36 && visits>=0) return 6;
+if (day>=29 && visits>=0) return 5;
+return 0; }
+public static string[] WeeklyChatPool(int day,int visits) { switch (WeeklyChatVisit(day,visits)) {
+case 5: return Chat5;
+case 6: return Chat6;
+case 7: return Chat7;
+case 8: return Chat8;
+case 9: return Chat9;
+case 10: return Chat10;
+case 11: return Chat11;
+default: return null; } }
 public static Mood MoodFor(string key) { return Lines.FirstOrDefault(l => l.Key == key)?.Mood ?? Mood.Neutral; }
 public static string KeyFor(string key, bool known) { return !known && Lines.Any(l => l.Key == key+"_unknown") ? key+"_unknown" : key; }
 } }

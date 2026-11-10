@@ -18,3 +18,5 @@ git show 'baseline/pre-architecture-0.0.3.4:tools/prepare_release_002.py'
 ```
 
 被移除的历次配音检查报告都是可再生成产物，Git 历史与本机整理前 ZIP 中仍有备份。当前报告归 `.dev/reports`，每次发布单独归档，不再复制进剧情输入。
+
+旧 `export_story_reference.py` 固定导出0.4.2的小满与埃莉诺参考，依赖的旧路径已迁移，也没有当前调用者，故从工作树移除。旧参考文档保留，脚本可从上述基线查阅。原作只读研究仍可使用 `read_narrative_refs.py`；当前小满文本审校统一使用完整校验生成的报告。

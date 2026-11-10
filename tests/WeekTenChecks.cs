@@ -19,6 +19,9 @@ internal static class WeekTenChecks
         check(TavernRules.OpeningLineKey(10,"xm_10_01",64)=="xm_10_01"
             && TavernRules.OpeningLineKey(10,"xm_10_01",78)=="xm_10_01_late", "W10 delayed opening uses neutral relative dates");
         var tavern=new TavernProgress();string inventory=WeekTenDialogue.InventoryEntry,regular="xm_tavern_10_regular_01";
+        check(TavernDialogue.WeeklyChatVisit(71,10)==10 && TavernDialogue.WeeklyChatVisit(71,11)==11
+            && TavernDialogue.WeeklyChatVisit(29,0)==5,
+            "Chat encounter lookup follows the selected source pool rather than a hard-coded chapter ten");
         check(tavern.NextChat(64,false,9,57)=="xm_tavern_09_chat_01"
             && tavern.NextChat(64,false,10,64)==inventory, "W10 night story waits for the actual tenth meeting");
         tavern.ChatSeen.Add(inventory);tavern=TavernProgress.Restore(tavern.Data,64);

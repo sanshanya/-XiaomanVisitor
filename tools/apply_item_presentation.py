@@ -10,7 +10,9 @@ def apply_to(localizations):
     for rows in localizations.values():
         for key in list(rows):
             if key.startswith(('ui_tavern_ledger','ui_tavern_pickup','ui_tavern_scene_preview','cfg_tavern_scene_preview')) \
-                or key in ('ui_tavern_welcome','ui_tavern_buy','ui_tavern_help','ui_tavern_rest','ui_tavern_close_ledger'):
+                or key in ('ui_tavern_welcome','ui_tavern_buy','ui_tavern_help','ui_tavern_rest','ui_tavern_close_ledger',
+                    'ui_tavern_scene_hint','ui_tavern_drink_list','ui_tavern_drink_price','ui_tavern_takeaway',
+                    'ui_tavern_work_wage','ui_tavern_work_confirm','ui_tavern_music','ui_w04_apply'):
                 rows.pop(key)
     for filename in ("item-presentation.json", "tavern-map-localization.json"):
         changes = json.loads((ROOT / "assets" / filename).read_text(encoding="utf-8"))

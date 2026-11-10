@@ -82,10 +82,14 @@ def generate(data):
         for key,delay in pool.get('encounter_delays',{}).items():
             code.append('if (key=='+json.dumps(key)+f') return encounterDay>0 && day>=System.Math.Max({pool["from_day"]+delay}L,(long)encounterDay+{delay});')
     code.append('return true; }')
-    code.append('public static string[] WeeklyChatPool(int day,int visits) {')
+    code.append('public static int WeeklyChatVisit(int day,int visits) {')
     for pool in reversed(data['chat_pools']):
-        code.append(f'if (day>={pool["from_day"]} && visits>={pool["min_visit"]}) return Chat{pool["visit"]};')
-    code+=['return null; }','public static Mood MoodFor(string key) { return Lines.FirstOrDefault(l => l.Key == key)?.Mood ?? Mood.Neutral; }',
+        code.append(f'if (day>={pool["from_day"]} && visits>={pool["min_visit"]}) return {pool["visit"]};')
+    code.append('return 0; }')
+    code.append('public static string[] WeeklyChatPool(int day,int visits) { switch (WeeklyChatVisit(day,visits)) {')
+    for pool in data['chat_pools']:
+        code.append(f'case {pool["visit"]}: return Chat{pool["visit"]};')
+    code+=['default: return null; } }','public static Mood MoodFor(string key) { return Lines.FirstOrDefault(l => l.Key == key)?.Mood ?? Mood.Neutral; }',
            'public static string KeyFor(string key, bool known) { return !known && Lines.Any(l => l.Key == key+"_unknown") ? key+"_unknown" : key; }','} }','']
     path.write_text('\n'.join(code),encoding='utf-8')
     price=json.loads((ROOT/'assets/tavern-prices.json').read_text(encoding='utf-8'))

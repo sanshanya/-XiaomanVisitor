@@ -276,7 +276,6 @@ xm_tavern_w02_rain_01_unknown,窓の雨を見てるんですか？ これ、う�
 xm_tavern_w02_tape_intro_unknown,このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。
 xm_tavern_chat_rest_unknown,どうぞゆっくり。少し音楽でも聴きましょう。
 ui_tavern_open_desc,明かりが灯り、中から音楽が聞こえる。
-ui_tavern_scene_hint,みちる、窓、カセットデッキを選べます。
 ui_tavern_menu,ドリンクメニュー
 ui_tavern_interaction,話しかける
 ui_tavern_look,眺めている
@@ -287,11 +286,7 @@ ui_tavern_help_confirm,メニューを渡す
 ui_tavern_help_skip,今はやめておく
 ui_tavern_drunk_today,今日はもう一杯いただきました。
 ui_tavern_one_glass,一日一杯、店内でお召し上がりください。
-ui_tavern_drink_list,{0} · {1} CR\n{2} · {3} · {4}
-ui_tavern_drink_price,価格：{0} CR\n所持クレジット：{1}
 ui_tavern_confirm_drink,購入して飲む
-ui_tavern_takeaway,持ち帰りについて聞く
-ui_tavern_music,テープを選ぶ
 ui_tavern_payment_pending,このお会計は、まだ確認中です。
 xm_03_03,一人でお酒を作って、お客さんの相手もしてると……ときどき手が回らなくて。
 xm_03_04,先輩、夜に時間があったら、少し手伝ってもらえませんか？ もちろん、お給料はお支払いします！ 先輩の時間を、ただでもらうわけにはいきませんから。
@@ -328,8 +323,6 @@ xm_tavern_w03_work_no_orders_unknown,今夜はまだ一人で大丈夫そうで�
 xm_tavern_w03_chat_01_unknown,気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。
 xm_tavern_w03_chat_after_work_unknown,お客さんもお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。
 ui_tavern_paid_work,接客を手伝う · {0} CR
-ui_tavern_work_wage,今回のお給料：{0} CR
-ui_tavern_work_confirm,接客を手伝う
 ui_tavern_work_decline,今日はやめておく
 ui_tavern_work_phase_1,お客さんをご案内
 ui_tavern_work_phase_2,ご注文を整理
@@ -389,7 +382,6 @@ ui_w04_ledger,取引記録
 ui_w04_group,支援契約の要約
 ui_w04_news,商業通路の告知
 ui_w04_phone,申込窓口：{0}
-ui_w04_apply,申し込む
 ui_w04_cancel,やめる
 ui_w04_registered,お申し込みは登録済みです。
 ui_w04_assessor,ペンギン資産会社・審査担当

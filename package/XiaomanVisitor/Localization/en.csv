@@ -276,7 +276,6 @@ xm_tavern_w02_rain_01_unknown,Looking at the rain on the window? It's one of my 
 xm_tavern_w02_tape_intro_unknown,"I brought this cassette deck from home. If there's something you'd like to hear, feel free to choose."
 xm_tavern_chat_rest_unknown,Make yourself comfortable. Let's listen for a while.
 ui_tavern_open_desc,The lights are on. Music drifts from inside.
-ui_tavern_scene_hint,"Select Xiaoman, the window, or the cassette deck."
 ui_tavern_menu,Drinks
 ui_tavern_interaction,Spend some time
 ui_tavern_look,Just looking
@@ -287,11 +286,7 @@ ui_tavern_help_confirm,Hand over the menu
 ui_tavern_help_skip,Not right now
 ui_tavern_drunk_today,You've already had a glass today.
 ui_tavern_one_glass,One glass per day. Enjoy it here.
-ui_tavern_drink_list,{0} · {1} CR\n{2} · {3} · {4}
-ui_tavern_drink_price,Price: {0} CR\nCredits on hand: {1}
 ui_tavern_confirm_drink,Buy and drink
-ui_tavern_takeaway,Ask about takeaway
-ui_tavern_music,Choose a tape
 ui_tavern_payment_pending,This payment is still being checked.
 xm_03_03,Making drinks and looking after the customers on my own… Sometimes I can hardly keep up.
 xm_03_04,"If you're free tonight, could you give me a hand? I'll pay you, of course! I can't just take up your time for nothing."
@@ -328,8 +323,6 @@ xm_tavern_w03_work_no_orders_unknown,I can manage for now. Just stay and enjoy t
 xm_tavern_w03_chat_01_unknown,"Have you noticed? It's so lively when the shifts change. After everyone leaves, you can slowly hear the rain again."
 xm_tavern_w03_chat_after_work_unknown,You worked hard too. Those customers said they'd come again as they were leaving.
 ui_tavern_paid_work,Help serve guests · {0} CR
-ui_tavern_work_wage,Shift pay: {0} CR
-ui_tavern_work_confirm,Help serve guests
 ui_tavern_work_decline,Not tonight
 ui_tavern_work_phase_1,Welcoming guests
 ui_tavern_work_phase_2,Organizing orders
@@ -389,7 +382,6 @@ ui_w04_ledger,Orders and receipts
 ui_w04_group,Support agreement summary
 ui_w04_news,Commercial street notice
 ui_w04_phone,Application number: {0}
-ui_w04_apply,Confirm application
 ui_w04_cancel,Cancel
 ui_w04_registered,Your application is already registered.
 ui_w04_assessor,Tenquin assessor

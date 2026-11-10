@@ -1,4 +1,4 @@
-"""Asset/script contracts important to the first-week change; no game writes."""
+"""Validate current story, localization and asset contracts; no game writes."""
 import csv
 import hashlib
 import json
@@ -146,6 +146,8 @@ def main():
     for path in (PACKAGE / "Textures/Items").glob("xiaoman_cocktail_*.png"):
         assert Image.open(path).size == (16, 32)
     assert not list((PACKAGE / "Books").glob("feeling_*.json"))
+    import text_review
+    text_review.write(ROOT, texts, story, notes)
     print("PASS: consistent localization, 14 story letters, exact final script rows, fixed music order, static opening budget, isolated TTS tags and native paper geometry.")
 
 

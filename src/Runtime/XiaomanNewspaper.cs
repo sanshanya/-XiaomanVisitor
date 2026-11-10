@@ -16,22 +16,12 @@ namespace XiaomanVisitor
         internal StoreEvent LoungeOpeningNews()
         {
             if (!enabled || !PlayerStore.HasInstance || StoreStation.Instance==null || !WeekNineRules.HasOpeningNews(StoreStation.Instance.dayCounter)) return null;
-            return new StoreEvent {
-                identifier=WeekNineRules.NewsId,
-                newsName=Text("xm_w09_news_title"), newsDescription=Text("xm_w09_news_body"),
-                eventType=StoreEvent.EventType.COSMETIC, eventArea=StoreEvent.EventArea.LOWER,
-                startDay=WeekNineRules.NewsDay, duration=1, cooldown=0
-            };
+            return XiaomanNewspaper.Article(WeekNineRules.NewsId,Text("xm_w09_news_title"),Text("xm_w09_news_body"),WeekNineRules.NewsDay,1);
         }
         internal StoreEvent RenovationNews()
         {
-            if (!enabled || !PlayerStore.HasInstance || !WeekOneRules.HasRenovationNews(StoreStation.Instance.dayCounter)) return null;
-            return new StoreEvent {
-                identifier = WeekOneRules.NewsId,
-                newsName = Text("xm_w01_news_title"), newsDescription = Text("xm_w01_news_body"),
-                eventType = StoreEvent.EventType.COSMETIC, eventArea = StoreEvent.EventArea.LOWER,
-                startDay = 3, duration = 1, cooldown = 0
-            };
+            if (!enabled || !PlayerStore.HasInstance || StoreStation.Instance==null || !WeekOneRules.HasRenovationNews(StoreStation.Instance.dayCounter)) return null;
+            return XiaomanNewspaper.Article(WeekOneRules.NewsId,Text("xm_w01_news_title"),Text("xm_w01_news_body"),3,1);
         }
     }
 
@@ -39,19 +29,23 @@ namespace XiaomanVisitor
     {
         internal static bool Rendering;
 
+        internal static StoreEvent Article(string id,string title,string body,int first,int duration)
+        {
+            return new StoreEvent { identifier=id,newsName=title,newsDescription=body,
+                eventType=StoreEvent.EventType.COSMETIC,eventArea=StoreEvent.EventArea.LOWER,
+                startDay=first,duration=duration,cooldown=0 };
+        }
+
         public static StoreEvent LoungeExtensionArticle(int day,string title,string body)
         {
             if (!WeekElevenRules.HasExtensionNews(day)) return null;
-            return new StoreEvent { identifier=WeekElevenRules.NewsId,newsName=title,newsDescription=body,
-                eventType=StoreEvent.EventType.COSMETIC,eventArea=StoreEvent.EventArea.LOWER,
-                startDay=WeekElevenRules.NewsDay,duration=WeekElevenRules.LastNewsDay-WeekElevenRules.NewsDay+1,cooldown=0 };
+            return Article(WeekElevenRules.NewsId,title,body,WeekElevenRules.NewsDay,WeekElevenRules.LastNewsDay-WeekElevenRules.NewsDay+1);
         }
 
         public static StoreEvent SupportArticle(int day,string title,string body)
         {
             if (!SupportProgress.RegistrationOpen(day)) return null;
-            return new StoreEvent { identifier=XiaomanMod.Id+".w04.news",newsName=title,newsDescription=body,
-                eventType=StoreEvent.EventType.COSMETIC,eventArea=StoreEvent.EventArea.LOWER,startDay=22,duration=3,cooldown=0 };
+            return Article(XiaomanMod.Id+".w04.news",title,body,22,3);
         }
 
         // Only a newspaper-view copy is changed, never the world's active events.

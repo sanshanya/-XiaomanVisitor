@@ -6,6 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = {5: '第五周实现.json', 6: '第六周实现.json', 7: '第七周实现.json', 8: '第八周实现.json', 9: '第九周实现.json', 10: '第十周实现.json', 11: '第十一周实现.json'}
 WEEK_NAMES = {5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven'}
+NEWS_RULES = {9: ('WeekNineRules', 'HasOpeningNews', 'jizhou_opening_news'),
+              11: ('WeekElevenRules', 'HasExtensionNews', 'jizhou_extension_news')}
 
 
 def read(visit):
@@ -13,6 +15,10 @@ def read(visit):
     text = path.read_text(encoding='utf-8')
     data = json.loads(text)
     assert data['schema'] == 1 and data['visit'] == visit
+    for key, row in data['lines'].items():
+        assert row['mood'] in ('Neutral', 'Soft', 'Shy', 'Smile', 'Closed', 'Worried'), key
+        assert all(isinstance(row.get(lang), str) and row[lang].strip() and '\ufffd' not in row[lang]
+                   for lang in ('zh', 'ja', 'en')), key
     chat = data['night_chat']
     assert chat['from_day'] > 0 and 0 <= chat['min_visit'] <= visit
     assert chat['keys'] and all(k.startswith('xm_tavern_') and k in data['lines'] for k in chat['keys'])
@@ -55,19 +61,14 @@ def generate():
     (ROOT / 'src/Generated/ReferralConfig.Generated.cs').write_text(
         '// Generated from story/第六周实现.json.\nnamespace XiaomanVisitor { public static class ReferralConfig {\n'
         f'public const int UnlockDay={c["unlock_day"]}, DailyPercent={c["daily_percent"]};\n' + '} }\n', encoding='utf-8')
-    news = read(9)['news']
-    assert news['day'] == 57 and set(news['title']) == set(news['body']) == {'zh', 'ja', 'en'}
-    (ROOT / 'src/Generated/WeekNineRules.Generated.cs').write_text(
-        '// Generated from story/第九周实现.json; newspaper display only.\n'
-        'namespace XiaomanVisitor { public static class WeekNineRules {\n'
-        f'public const int NewsDay={news["day"]};\n'
-        'public const string NewsId=XiaomanMod.Id+".jizhou_opening_news";\n'
-        'public static bool HasOpeningNews(int day) { return day==NewsDay; }\n} }\n', encoding='utf-8')
-    news = read(11)['news']
-    assert news['day'] == 71 and news['last_day'] == 73 and set(news['title']) == set(news['body']) == {'zh', 'ja', 'en'}
-    (ROOT / 'src/Generated/WeekElevenRules.Generated.cs').write_text(
-        '// Generated from story/第十一周实现.json; cosmetic newspaper, not an economic event.\n'
-        'namespace XiaomanVisitor { public static class WeekElevenRules {\n'
-        f'public const int NewsDay={news["day"]}, LastNewsDay={news["last_day"]};\n'
-        'public const string NewsId=XiaomanMod.Id+".jizhou_extension_news";\n'
-        'public static bool HasExtensionNews(int day) { return day>=NewsDay && day<=LastNewsDay; }\n} }\n', encoding='utf-8')
+    for visit, (name, method, identifier) in NEWS_RULES.items():
+        news = read(visit)['news']
+        first, last = news['day'], news.get('last_day', news['day'])
+        assert isinstance(first, int) and isinstance(last, int) and 0 < first <= last <= first + 2
+        assert set(news['title']) == set(news['body']) == {'zh', 'ja', 'en'}
+        (ROOT / f'src/Generated/{name}.Generated.cs').write_text(
+            f'// Generated from story/{SOURCES[visit]}; newspaper display only.\n'
+            f'namespace XiaomanVisitor {{ public static class {name} {{\n'
+            f'public const int NewsDay={first}, LastNewsDay={last};\n'
+            f'public const string NewsId=XiaomanMod.Id+".{identifier}";\n'
+            f'public static bool {method}(int day) {{ return day>=NewsDay && day<=LastNewsDay; }}\n}} }}\n', encoding='utf-8')
