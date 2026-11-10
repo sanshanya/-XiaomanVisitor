@@ -1684,6 +1684,54 @@
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
       "source_sha256": "89799b451017b84e4d7412580ca1e79542001fb8ace14e00afac149f62b4dc57",
       "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_11_chat_01",
+      "subtitle_templates": {
+        "zh": "前辈，我今天去问了商户发展部，酒馆的导览推荐什么时候能排上。",
+        "ja": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+        "en": "Senpai, I asked Merchant Development today when the tavern would get its turn on the guide terminals."
+      },
+      "spoken_text": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+      "generate_text": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "e2b7e5f361c464524f99e459b86347a7e8ca83cbc9551f9fca9c8511b09413db",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_11_chat_02",
+      "subtitle_templates": {
+        "zh": "他们说，推广位置要按照商业街的最新安排调整，让我再等等。",
+        "ja": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+        "en": "They said the promotional slots had to follow the shopping street's latest arrangements, and asked me to wait a little longer."
+      },
+      "spoken_text": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+      "generate_text": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "ad4a4d97e4cad77fd523ae5daccb2dc5b7cd955bdba401fa0160113b0c8db0d5",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_11_chat_03",
+      "subtitle_templates": {
+        "zh": "可之前申请扶持的时候，明明说好会帮新店吸引客人的呀……",
+        "ja": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+        "en": "But when I applied for the support, they said they would help new shops bring people in..."
+      },
+      "spoken_text": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+      "generate_text": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "62fdae3d741d3ef6ebc341df50bacc1b0ced07b40e7b98f2330c8a92d5c3d7cd",
+      "defer_recording": true
     }
   ],
   "integration_note": "完整配音脚本的待录子集，不可单独覆盖现有语音索引；本次不请求TTS。"

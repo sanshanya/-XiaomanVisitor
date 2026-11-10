@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "W10-final",
+  "version": "W11-final",
   "source": "story/小满的十四个星期一_v3.4_专属动作台词_TTS演出整合.md",
   "source_sha256": "fb3c704ad917338d646cc3ee3008dc14ae6da78e31c74d43b4a5202e3741351a",
   "week_two_source": "story/小满酒馆_第二周_v4.1_实施稿.md",
@@ -201,10 +201,12 @@
       "opening": [
         "xm_11_01",
         "xm_11_02",
+        "xm_11_03",
+        "xm_11_04",
         "xm_11_shop"
       ],
-      "accept": "accept_return",
-      "goodbye": "goodbye",
+      "accept": "xm_11_accept",
+      "goodbye": "xm_11_bye",
       "cocktail": "",
       "note_id": "story_note_11"
     },
@@ -1699,32 +1701,79 @@
     },
     {
       "key": "xm_11_01",
-      "zh": "晚上好。我把店门上的营业时间改了。",
-      "ja": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
-      "en": "Good evening. I've changed the opening hours on my door.",
-      "mood": "Neutral",
+      "zh": "晚上好，前辈。极昼那边的折扣，好像还要继续呢。",
+      "ja": "こんばんは、先輩。「極昼」の割引、まだ続くみたいですね。",
+      "en": "Good evening, senpai. It looks like Polar Day's discount is going to continue.",
+      "mood": "Soft",
       "kind": "speech",
-      "generate_text": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
+      "generate_text": "こんばんは、先輩。「極昼」の割引、まだ続くみたいですね。",
+      "defer_voice": true,
       "reference": false
     },
     {
       "key": "xm_11_02",
-      "zh": "原来写到凌晨两点，现在改成十二点。这样也能早点回去吃点东西。",
-      "ja": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
-      "en": "It used to say two in the morning. Now it says midnight. That gives me time to get home and eat something.",
+      "zh": "我仔细算过了。要是照他们的价格卖，连原料钱都不够呢。",
+      "ja": "きちんと計算してみました。同じ値段で売ったら、材料代にもならないんです。",
+      "en": "I worked it out carefully. At their prices, I would not even cover the ingredients.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "きちんと計算してみました。同じ値段で売ったら、材料代にもならないんです。",
+      "defer_voice": true,
+      "reference": false
+    },
+    {
+      "key": "xm_11_03",
+      "zh": "最近来的客人比较少，我把营业时间改了一下。原来写到凌晨两点，现在改成十二点了。",
+      "ja": "最近はお客さんが少なめなので、営業時間を変えました。前は夜中の二時までだったけど、今は十二時までです。",
+      "en": "Fewer people have been coming lately, so I changed the opening hours. It used to say two in the morning; now it says midnight.",
       "mood": "Soft",
       "kind": "speech",
-      "generate_text": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+      "generate_text": "最近はお客さんが少なめなので、営業時間を変えました。前は夜中の二時までだったけど、今は十二時までです。",
+      "defer_voice": true,
+      "reference": false
+    },
+    {
+      "key": "xm_11_04",
+      "zh": "开店的时候，总嫌客人待到太晚。现在倒是能早点收店啦。",
+      "ja": "開店した頃は、お客さんがいつも遅くまでいるなあって思っていたのに。今は早く店じまいできますね。",
+      "en": "When I opened, I used to think everyone stayed too late. At least I can close up earlier now.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "開店した頃は、お客さんがいつも遅くまでいるなあって思っていたのに。今は早く店じまいできますね。",
+      "defer_voice": true,
       "reference": false
     },
     {
       "key": "xm_11_shop",
-      "zh": "今天买些日用品。",
-      "ja": "今日は日用品を少し。",
-      "en": "I'd like some everyday supplies today.",
+      "zh": "今天想买些日用品。带了 {0} 信用点。",
+      "ja": "今日は日用品を少し買いに来ました。",
+      "en": "I would like some everyday supplies today. I brought {0} credits.",
       "mood": "Neutral",
       "kind": "speech",
-      "generate_text": "今日は日用品を少し。",
+      "generate_text": "今日は日用品を少し買いに来ました。",
+      "defer_voice": true,
+      "reference": false
+    },
+    {
+      "key": "xm_11_accept",
+      "zh": "谢谢。正好用得上。",
+      "ja": "ありがとうございます。ちょうど必要だったんです。",
+      "en": "Thank you. Just what I needed.",
+      "mood": "Smile",
+      "kind": "speech",
+      "generate_text": "ありがとうございます。ちょうど必要だったんです。",
+      "defer_voice": true,
+      "reference": false
+    },
+    {
+      "key": "xm_11_bye",
+      "zh": "那我先回去啦。前辈晚上要来的话，记得早点哦。",
+      "ja": "それじゃ、戻りますね。先輩、今夜来てくれるなら、早めにお願いしますね。",
+      "en": "I should head back. If you come by tonight, senpai, remember to come early.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "それじゃ、戻りますね。先輩、今夜来てくれるなら、早めにお願いしますね。",
+      "defer_voice": true,
       "reference": false
     },
     {
@@ -3069,6 +3118,36 @@
       "defer_voice": true
     },
     {
+      "key": "xm_tavern_11_chat_01",
+      "zh": "前辈，我今天去问了商户发展部，酒馆的导览推荐什么时候能排上。",
+      "ja": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+      "en": "Senpai, I asked Merchant Development today when the tavern would get its turn on the guide terminals.",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+      "defer_voice": true
+    },
+    {
+      "key": "xm_tavern_11_chat_02",
+      "zh": "他们说，推广位置要按照商业街的最新安排调整，让我再等等。",
+      "ja": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+      "en": "They said the promotional slots had to follow the shopping street's latest arrangements, and asked me to wait a little longer.",
+      "mood": "Neutral",
+      "kind": "speech",
+      "generate_text": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+      "defer_voice": true
+    },
+    {
+      "key": "xm_tavern_11_chat_03",
+      "zh": "可之前申请扶持的时候，明明说好会帮新店吸引客人的呀……",
+      "ja": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+      "en": "But when I applied for the support, they said they would help new shops bring people in...",
+      "mood": "Soft",
+      "kind": "speech",
+      "generate_text": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+      "defer_voice": true
+    },
+    {
       "key": "xm_right_item",
       "zh": "嗯，这种就可以。",
       "ja": "あ、そうそう。こういうのを探してたんです。",
@@ -3914,7 +3993,11 @@
     "xm_10_01_late",
     "xm_11_01",
     "xm_11_02",
+    "xm_11_03",
+    "xm_11_04",
     "xm_11_shop",
+    "xm_11_accept",
+    "xm_11_bye",
     "xm_12_01",
     "xm_12_02",
     "xm_12_shop",
@@ -4049,6 +4132,9 @@
     "xm_tavern_10_regular_02",
     "xm_tavern_10_regular_03",
     "xm_tavern_10_regular_04",
+    "xm_tavern_11_chat_01",
+    "xm_tavern_11_chat_02",
+    "xm_tavern_11_chat_03",
     "xm_repeat_first",
     "xm_cocktail_accept",
     "intro_1",
@@ -4146,5 +4232,7 @@
   "week_nine_source": "story/第九周实现.json",
   "week_nine_sha256": "5deef59892bf9be6d5232eba21d5ff60c9d5866809315f028dd96f56157ad496",
   "week_ten_source": "story/第十周实现.json",
-  "week_ten_sha256": "8fad4faf82293e0543939c72c778f7b5fa7229627b1b7e9bb5bba6e748f7dee3"
+  "week_ten_sha256": "8fad4faf82293e0543939c72c778f7b5fa7229627b1b7e9bb5bba6e748f7dee3",
+  "week_eleven_source": "story/第十一周实现.json",
+  "week_eleven_sha256": "cb2b774ba886da311ff810d194d4e8bafae959cc8f3a0a2f34c5ac40607118e7"
 }

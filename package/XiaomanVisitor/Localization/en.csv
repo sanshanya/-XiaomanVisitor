@@ -131,11 +131,11 @@ story_note_10_title,"Dear senpai,"
 story_note_10_body,"Remember the ice maker I mentioned last week?\n\nThe seller messaged me again today.\n\nApparently, if I pay the deposit now, delivery and installation are free.\n\nI even opened the payment screen.\n\nBut after thinking about it for ages, I closed it again.\n\nMy current machine is a bit noisy, but the ice it makes is still quite good.\n\nI will let it carry on working for now.\n\nWhen will I ever be able to stop worrying about credits?"
 story_note_10_signature,— Xiaoman
 story_note_10_name,A note from Xiaoman
-xm_11_01,Good evening. I've changed the opening hours on my door.
-xm_11_02,It used to say two in the morning. Now it says midnight. That gives me time to get home and eat something.
-xm_11_shop,I'd like some everyday supplies today.
-story_note_11_title,"Dear shopkeeper,"
-story_note_11_body,"I closed up early yesterday, just in time for a call from my mum.\n\nShe sent me a photo of the cherry tree at home in full bloom.\n\nDo you know cherry blossoms?\n\nTonight I'm going to try a new range of cherry blossom drinks.\n\nPlease come and try them."
+xm_11_01,"Good evening, senpai. It looks like Polar Day's discount is going to continue."
+xm_11_02,"I worked it out carefully. At their prices, I would not even cover the ingredients."
+xm_11_shop,I would like some everyday supplies today. I brought {0} credits.
+story_note_11_title,"Dear senpai,"
+story_note_11_body,"Lately, after closing, I often sit behind the bar with the menu and supply invoices spread out together.\n\nThe drinks are the same, and I know they taste good.\n\nBut I can stare at the books for ages and still not see what went wrong.\n\nI used to think good drinks and caring for every customer would slowly make the shop better.\n\nRunning a shop is much harder than I imagined.\n\nWhen you first opened the pawnshop, did you have days when you did not know what to do?\n\nI remember eagerly inviting you over when I opened.\n\nThen, I just wanted you to see the tavern I had worked so hard to put together.\n\nNow, there is so much I really want to learn from you.\n\nI hope one day I can run my own little shop properly, like you.\n\n... It feels embarrassing to say this in person, so I will write it instead."
 story_note_11_signature,— Xiaoman
 story_note_11_name,A note from Xiaoman
 xm_12_01,Good evening. I've been rewriting the drinks menu.
@@ -512,3 +512,12 @@ xm_tavern_10_regular_03,"One wanted something sweet, the other something sour. T
 xm_tavern_10_regular_04,Hehe. It really did make me happy.
 ui_w04_phone_agree,Agree
 ui_w04_phone_later,Another time
+xm_11_03,"Fewer people have been coming lately, so I changed the opening hours. It used to say two in the morning; now it says midnight."
+xm_11_04,"When I opened, I used to think everyone stayed too late. At least I can close up earlier now."
+xm_11_accept,Thank you. Just what I needed.
+xm_11_bye,"I should head back. If you come by tonight, senpai, remember to come early."
+xm_tavern_11_chat_01,"Senpai, I asked Merchant Development today when the tavern would get its turn on the guide terminals."
+xm_tavern_11_chat_02,"They said the promotional slots had to follow the shopping street's latest arrangements, and asked me to wait a little longer."
+xm_tavern_11_chat_03,"But when I applied for the support, they said they would help new shops bring people in..."
+xm_w11_news_title,Polar Day Lounge extends its opening promotion
+xm_w11_news_body,"Tenquin Asset Corporation announced today that the opening promotion at its Polar Day Lounge will be extended again.\n\nAll items remain available at 30% of their usual price, and new customers can still enjoy free drinks worth 500 credits.\n\nThe company says residents and interstellar travellers have warmly welcomed the offers. An end date will be announced separately.\n\nShopping-street guide terminals will continue giving priority to Polar Day Lounge and its promotional information."

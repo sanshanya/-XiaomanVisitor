@@ -29,7 +29,10 @@ TRACKING = 0.02
 LINE_HEIGHT = 1.58
 PARAGRAPH_GAP = 0.68  # additional line fractions between paragraphs
 PARAGRAPH_GAPS = {(5, 'ja'): 0.36, (5, 'en'): 0.36, (6, 'ja'): 0.66,
-                  (8, 'ja'): 0.36, (8, 'en'): 0.56}
+                  (8, 'ja'): 0.36, (8, 'en'): 0.56,
+                  (11, 'zh'): 0.40, (11, 'ja'): 0.24, (11, 'en'): 0.13}
+# This longer letter uses the empty space below the salutation, not smaller type.
+BODY_BASELINES = {(11, 'en'): 130}
 FONTS = {
     "yozai": TRIAL / "fonts/Yozai-Regular.ttf",
     "xiaolai": TRIAL / "fonts/Xiaolai-Regular.ttf",
@@ -183,7 +186,7 @@ def letter_layout(font_key, visit, language, texts, letter_id=None):
     lines = wrap(body, font, BODY_SIZE, 500, language)
     step = BODY_SIZE*(1.565 if key=="story_note_04_b" else LINE_HEIGHT)
     gap = PARAGRAPH_GAPS.get((visit, language), PARAGRAPH_GAP)
-    y = 140 + BODY_SIZE  # first baseline; same region as the current letter
+    y = BODY_BASELINES.get((visit, language), 140 + BODY_SIZE)
     positions = []
     for index, (line, paragraph_end) in enumerate(lines):
         drift = fixed_rng(f"{visit}/{language}/line/{index}").uniform(-0.7, 0.7)

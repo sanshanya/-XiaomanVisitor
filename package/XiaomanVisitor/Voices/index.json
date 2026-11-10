@@ -110,42 +110,6 @@
       "generic": true
     },
     {
-      "line_key": "xm_11_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_11_01_11a85f0f60e1",
-      "spoken_text": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
-      "subtitle_templates": [
-        "晚上好。我把店门上的营业时间改了。",
-        "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
-        "Good evening. I've changed the opening hours on my door."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_11_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_11_02_73cb807683b3",
-      "spoken_text": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
-      "subtitle_templates": [
-        "原来写到凌晨两点，现在改成十二点。这样也能早点回去吃点东西。",
-        "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
-        "It used to say two in the morning. Now it says midnight. That gives me time to get home and eat something."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_11_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_11_shop_5f1b33650d52",
-      "spoken_text": "今日は日用品を少し。",
-      "subtitle_templates": [
-        "今天买些日用品。",
-        "今日は日用品を少し。",
-        "I'd like some everyday supplies today."
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_12_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_12_01_b98478ac5b2c",
@@ -986,8 +950,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 196,
+  "pending_lines": 206,
   "pending_by_language": {
-    "ja": 196
+    "ja": 206
   }
 }

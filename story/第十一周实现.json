@@ -1,0 +1,108 @@
+{
+  "schema": 1,
+  "visit": 11,
+  "title": "十二点",
+  "author_source": "story/第十一周_作者讨论与最终修订.txt",
+  "status": "采用末尾第二次修订；作者补充确认十二点仅为剧情，不改营业或夜访规则；新日语待审不录音",
+  "night_chat": {
+    "from_day": 71,
+    "min_visit": 11,
+    "keys": ["xm_tavern_11_chat_01"],
+    "sequences": {
+      "xm_tavern_11_chat_01": ["xm_tavern_11_chat_01", "xm_tavern_11_chat_02", "xm_tavern_11_chat_03"]
+    }
+  },
+  "lines": {
+    "xm_11_01": {
+      "zh": "晚上好，前辈。极昼那边的折扣，好像还要继续呢。",
+      "ja": "こんばんは、先輩。「極昼」の割引、まだ続くみたいですね。",
+      "en": "Good evening, senpai. It looks like Polar Day's discount is going to continue.",
+      "mood": "Soft", "defer_voice": true
+    },
+    "xm_11_02": {
+      "zh": "我仔细算过了。要是照他们的价格卖，连原料钱都不够呢。",
+      "ja": "きちんと計算してみました。同じ値段で売ったら、材料代にもならないんです。",
+      "en": "I worked it out carefully. At their prices, I would not even cover the ingredients.",
+      "mood": "Neutral", "defer_voice": true
+    },
+    "xm_11_03": {
+      "zh": "最近来的客人比较少，我把营业时间改了一下。原来写到凌晨两点，现在改成十二点了。",
+      "ja": "最近はお客さんが少なめなので、営業時間を変えました。前は夜中の二時までだったけど、今は十二時までです。",
+      "en": "Fewer people have been coming lately, so I changed the opening hours. It used to say two in the morning; now it says midnight.",
+      "mood": "Soft", "defer_voice": true
+    },
+    "xm_11_04": {
+      "zh": "开店的时候，总嫌客人待到太晚。现在倒是能早点收店啦。",
+      "ja": "開店した頃は、お客さんがいつも遅くまでいるなあって思っていたのに。今は早く店じまいできますね。",
+      "en": "When I opened, I used to think everyone stayed too late. At least I can close up earlier now.",
+      "mood": "Smile", "defer_voice": true
+    },
+    "xm_11_shop": {
+      "zh": "今天想买些日用品。带了 {0} 信用点。",
+      "ja": "今日は日用品を少し買いに来ました。",
+      "en": "I would like some everyday supplies today. I brought {0} credits.",
+      "mood": "Neutral", "defer_voice": true
+    },
+    "xm_11_accept": {
+      "zh": "谢谢。正好用得上。",
+      "ja": "ありがとうございます。ちょうど必要だったんです。",
+      "en": "Thank you. Just what I needed.",
+      "mood": "Smile", "defer_voice": true
+    },
+    "xm_11_bye": {
+      "zh": "那我先回去啦。前辈晚上要来的话，记得早点哦。",
+      "ja": "それじゃ、戻りますね。先輩、今夜来てくれるなら、早めにお願いしますね。",
+      "en": "I should head back. If you come by tonight, senpai, remember to come early.",
+      "mood": "Soft", "defer_voice": true
+    },
+    "xm_tavern_11_chat_01": {
+      "zh": "前辈，我今天去问了商户发展部，酒馆的导览推荐什么时候能排上。",
+      "ja": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+      "en": "Senpai, I asked Merchant Development today when the tavern would get its turn on the guide terminals.",
+      "mood": "Soft", "defer_voice": true
+    },
+    "xm_tavern_11_chat_02": {
+      "zh": "他们说，推广位置要按照商业街的最新安排调整，让我再等等。",
+      "ja": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+      "en": "They said the promotional slots had to follow the shopping street's latest arrangements, and asked me to wait a little longer.",
+      "mood": "Neutral", "defer_voice": true
+    },
+    "xm_tavern_11_chat_03": {
+      "zh": "可之前申请扶持的时候，明明说好会帮新店吸引客人的呀……",
+      "ja": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+      "en": "But when I applied for the support, they said they would help new shops bring people in...",
+      "mood": "Soft", "defer_voice": true
+    }
+  },
+  "letters": {
+    "zh": {
+      "title": "致前辈：",
+      "body": "最近打烊以后，我常常坐在吧台后面，把酒单和进货单摊在一起看。\n\n酒还是那些酒，味道我很有信心。\n\n可有时候看了半天账，还是想不明白，究竟是哪里出了问题。\n\n以前总觉得，只要把酒调好，认真招呼每位客人，小店就会慢慢好起来。\n\n现在才发现，经营一家店远没有想象中那么简单呢。\n\n前辈刚开始经营当铺的时候，有过不知道该怎么办的日子吗？\n\n想起刚开业时，我还兴冲冲地邀请前辈来小店指导。\n\n那时候只是想让前辈看看我花了好多心思才布置好的酒馆。\n\n现在是真的有很多事情想向前辈请教了。\n\n我希望有一天，能像前辈一样，把属于自己的小店好好经营下去。\n\n……这些话当面说有点不好意思，还是写在信里吧。",
+      "signature": "——小满"
+    },
+    "ja": {
+      "title": "先輩へ",
+      "body": "最近、閉店後によくカウンターの奥で、メニューと仕入れ票を並べて眺めています。\n\nお酒は変わりません。味には自信があります。\n\nでも帳簿を眺めても、何がいけないのか分からないことがあります。\n\nおいしいお酒を作り、お客さんを大切にすれば、店は少しずつよくなると思っていました。\n\n店を営むのは、思ったほど簡単ではないんですね。\n\n先輩も開業した頃、どうすればいいか迷う日がありましたか。\n\n開店した頃、張り切って先輩をお店にお誘いしましたね。\n\nあの時は、一生懸命に整えた酒場を見てもらいたくて。\n\n今は、本当に教わりたいことがたくさんあります。\n\nいつか先輩のように、自分のお店をきちんと続けていきたいです。\n\n……面と向かっては照れくさいので、手紙に書きますね。",
+      "signature": "みちる"
+    },
+    "en": {
+      "title": "Dear senpai,",
+      "body": "Lately, after closing, I often sit behind the bar with the menu and supply invoices spread out together.\n\nThe drinks are the same, and I know they taste good.\n\nBut I can stare at the books for ages and still not see what went wrong.\n\nI used to think good drinks and caring for every customer would slowly make the shop better.\n\nRunning a shop is much harder than I imagined.\n\nWhen you first opened the pawnshop, did you have days when you did not know what to do?\n\nI remember eagerly inviting you over when I opened.\n\nThen, I just wanted you to see the tavern I had worked so hard to put together.\n\nNow, there is so much I really want to learn from you.\n\nI hope one day I can run my own little shop properly, like you.\n\n... It feels embarrassing to say this in person, so I will write it instead.",
+      "signature": "— Xiaoman"
+    }
+  },
+  "news": {
+    "day": 71,
+    "last_day": 73,
+    "title": {
+      "zh": "极昼酒廊延长开业优惠",
+      "ja": "ラウンジ「極昼」、開店記念キャンペーンを延長",
+      "en": "Polar Day Lounge extends its opening promotion"
+    },
+    "body": {
+      "zh": "企鹅资产公司今日宣布，旗下「极昼」酒廊的开业回馈活动将继续延长。\n\n全场商品三折优惠及新顾客价值 500 信用点的免费酒品体验活动维持不变。\n\n公司表示，相关优惠受到居民及星际旅客的热烈欢迎，具体结束日期将另行公布。\n\n商业街导览终端将继续优先展示极昼酒廊及相关活动信息。",
+      "ja": "ペンギン資産会社は本日、傘下のラウンジ「極昼」の開店記念キャンペーンをさらに延長すると発表しました。\n\n全商品を通常価格の30％で提供する割引と、新規のお客様向けの500クレジット相当のお酒の無料体験は、引き続き実施されます。\n\n同社によると、住民や星間旅行者から好評を得ており、具体的な終了日は追って発表するとのことです。\n\n商業通路の案内端末では、今後も「極昼」と関連キャンペーンの情報を優先して掲載します。",
+      "en": "Tenquin Asset Corporation announced today that the opening promotion at its Polar Day Lounge will be extended again.\n\nAll items remain available at 30% of their usual price, and new customers can still enjoy free drinks worth 500 credits.\n\nThe company says residents and interstellar travellers have warmly welcomed the offers. An end date will be announced separately.\n\nShopping-street guide terminals will continue giving priority to Polar Day Lounge and its promotional information."
+    }
+  }
+}

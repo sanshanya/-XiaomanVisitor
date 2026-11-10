@@ -4,8 +4,8 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCES = {5: '第五周实现.json', 6: '第六周实现.json', 7: '第七周实现.json', 8: '第八周实现.json', 9: '第九周实现.json', 10: '第十周实现.json'}
-WEEK_NAMES = {5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten'}
+SOURCES = {5: '第五周实现.json', 6: '第六周实现.json', 7: '第七周实现.json', 8: '第八周实现.json', 9: '第九周实现.json', 10: '第十周实现.json', 11: '第十一周实现.json'}
+WEEK_NAMES = {5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine', 10: 'ten', 11: 'eleven'}
 
 
 def read(visit):
@@ -63,3 +63,11 @@ def generate():
         f'public const int NewsDay={news["day"]};\n'
         'public const string NewsId=XiaomanMod.Id+".jizhou_opening_news";\n'
         'public static bool HasOpeningNews(int day) { return day==NewsDay; }\n} }\n', encoding='utf-8')
+    news = read(11)['news']
+    assert news['day'] == 71 and news['last_day'] == 73 and set(news['title']) == set(news['body']) == {'zh', 'ja', 'en'}
+    (ROOT / 'src/Generated/WeekElevenRules.Generated.cs').write_text(
+        '// Generated from story/第十一周实现.json; cosmetic newspaper, not an economic event.\n'
+        'namespace XiaomanVisitor { public static class WeekElevenRules {\n'
+        f'public const int NewsDay={news["day"]}, LastNewsDay={news["last_day"]};\n'
+        'public const string NewsId=XiaomanMod.Id+".jizhou_extension_news";\n'
+        'public static bool HasExtensionNews(int day) { return day>=NewsDay && day<=LastNewsDay; }\n} }\n', encoding='utf-8')

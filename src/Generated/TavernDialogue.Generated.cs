@@ -103,6 +103,9 @@ new StoryLineSpec("xm_tavern_10_regular_01", Mood.Smile),
 new StoryLineSpec("xm_tavern_10_regular_02", Mood.Soft),
 new StoryLineSpec("xm_tavern_10_regular_03", Mood.Smile),
 new StoryLineSpec("xm_tavern_10_regular_04", Mood.Smile),
+new StoryLineSpec("xm_tavern_11_chat_01", Mood.Soft),
+new StoryLineSpec("xm_tavern_11_chat_02", Mood.Neutral),
+new StoryLineSpec("xm_tavern_11_chat_03", Mood.Soft),
 };
 private static readonly string[] Chat5 = new string[] {"xm_tavern_05_daily"};
 private static readonly string[] Chat6 = new string[] {"xm_tavern_06_chat_01","xm_tavern_06_chat_02"};
@@ -110,22 +113,26 @@ private static readonly string[] Chat7 = new string[] {"xm_tavern_07_chat_01","x
 private static readonly string[] Chat8 = new string[] {"xm_tavern_08_chat_01","xm_tavern_08_chat_02"};
 private static readonly string[] Chat9 = new string[] {"xm_tavern_09_chat_01"};
 private static readonly string[] Chat10 = new string[] {"xm_tavern_10_chat_01","xm_tavern_10_regular_01"};
+private static readonly string[] Chat11 = new string[] {"xm_tavern_11_chat_01"};
 private static readonly string[] Sequence0 = new string[] {"xm_tavern_09_chat_01","xm_tavern_09_chat_02","xm_tavern_09_chat_03"};
 private static readonly string[] Sequence1 = new string[] {"xm_tavern_10_chat_01","xm_tavern_10_chat_02","xm_tavern_10_chat_03"};
 private static readonly string[] Sequence2 = new string[] {"xm_tavern_10_chat_supported_01","xm_tavern_10_chat_supported_02","xm_tavern_10_chat_supported_03"};
 private static readonly string[] Sequence3 = new string[] {"xm_tavern_10_chat_neutral_01","xm_tavern_10_chat_neutral_02","xm_tavern_10_chat_neutral_03"};
 private static readonly string[] Sequence4 = new string[] {"xm_tavern_10_regular_01","xm_tavern_10_regular_02","xm_tavern_10_regular_03","xm_tavern_10_regular_04"};
+private static readonly string[] Sequence5 = new string[] {"xm_tavern_11_chat_01","xm_tavern_11_chat_02","xm_tavern_11_chat_03"};
 public static string[] ChatSequence(string key) {
 if (key=="xm_tavern_09_chat_01") return Sequence0;
 if (key=="xm_tavern_10_chat_01") return Sequence1;
 if (key=="xm_tavern_10_chat_supported_01") return Sequence2;
 if (key=="xm_tavern_10_chat_neutral_01") return Sequence3;
 if (key=="xm_tavern_10_regular_01") return Sequence4;
+if (key=="xm_tavern_11_chat_01") return Sequence5;
 return new[]{key}; }
 public static bool ChatReady(string key,int day,int encounterDay) {
 if (key=="xm_tavern_10_regular_01") return encounterDay>0 && day>=System.Math.Max(66L,(long)encounterDay+2);
 return true; }
 public static string[] WeeklyChatPool(int day,int visits) {
+if (day>=71 && visits>=11) return Chat11;
 if (day>=64 && visits>=10) return Chat10;
 if (day>=57 && visits>=9) return Chat9;
 if (day>=50 && visits>=8) return Chat8;

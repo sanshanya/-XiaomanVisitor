@@ -7,6 +7,12 @@ namespace XiaomanVisitor
 {
     public sealed partial class XiaomanMod
     {
+        internal StoreEvent LoungeExtensionNews()
+        {
+            if (!enabled || !PlayerStore.HasInstance || StoreStation.Instance==null || !WeekElevenRules.HasExtensionNews(StoreStation.Instance.dayCounter)) return null;
+            return XiaomanNewspaper.LoungeExtensionArticle(StoreStation.Instance.dayCounter,
+                Text("xm_w11_news_title"),Text("xm_w11_news_body"));
+        }
         internal StoreEvent LoungeOpeningNews()
         {
             if (!enabled || !PlayerStore.HasInstance || StoreStation.Instance==null || !WeekNineRules.HasOpeningNews(StoreStation.Instance.dayCounter)) return null;
@@ -32,6 +38,14 @@ namespace XiaomanVisitor
     public static class XiaomanNewspaper
     {
         internal static bool Rendering;
+
+        public static StoreEvent LoungeExtensionArticle(int day,string title,string body)
+        {
+            if (!WeekElevenRules.HasExtensionNews(day)) return null;
+            return new StoreEvent { identifier=WeekElevenRules.NewsId,newsName=title,newsDescription=body,
+                eventType=StoreEvent.EventType.COSMETIC,eventArea=StoreEvent.EventArea.LOWER,
+                startDay=WeekElevenRules.NewsDay,duration=WeekElevenRules.LastNewsDay-WeekElevenRules.NewsDay+1,cooldown=0 };
+        }
 
         public static StoreEvent SupportArticle(int day,string title,string body)
         {
@@ -68,6 +82,7 @@ namespace XiaomanVisitor
             if (!XiaomanNewspaper.Rendering) return;
             __result = XiaomanNewspaper.Append(__result, XiaomanMod.Instance?.RenovationNews());
             // Every article enforces its own calendar window before being appended.
+            __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.LoungeExtensionNews());
             __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.LoungeOpeningNews());
             __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.SupportNews());
         }

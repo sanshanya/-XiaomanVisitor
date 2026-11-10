@@ -166,11 +166,16 @@
     },
     {
       "visit": 11,
-      "ja": "昨日は早めにお店を閉めたので、ちょうど母からの電話に出られました。\n\n実家の桜が満開だって、写真を送ってくれました。\n\n店長さんは、桜を知っていますか？\n\n今夜は、桜をイメージした新しいカクテルを出してみようと思います。\n\nぜひ、飲みに来てください。",
-      "en": "I closed up early yesterday, just in time for a call from my mum.\n\nShe sent me a photo of the cherry tree at home in full bloom.\n\nDo you know cherry blossoms?\n\nTonight I'm going to try a new range of cherry blossom drinks.\n\nPlease come and try them.",
-      "zh": "昨天早点收了店，刚好接到我妈的电话。\n\n她给我拍了家里盛开的樱花树。\n\n您知道樱花吗？\n\n今晚我想要推出樱花系列的新品，\n\n请务必来尝尝。",
-      "title_zh": "店长：",
-      "signature_zh": "——小满"
+      "ja": "最近、閉店後によくカウンターの奥で、メニューと仕入れ票を並べて眺めています。\n\nお酒は変わりません。味には自信があります。\n\nでも帳簿を眺めても、何がいけないのか分からないことがあります。\n\nおいしいお酒を作り、お客さんを大切にすれば、店は少しずつよくなると思っていました。\n\n店を営むのは、思ったほど簡単ではないんですね。\n\n先輩も開業した頃、どうすればいいか迷う日がありましたか。\n\n開店した頃、張り切って先輩をお店にお誘いしましたね。\n\nあの時は、一生懸命に整えた酒場を見てもらいたくて。\n\n今は、本当に教わりたいことがたくさんあります。\n\nいつか先輩のように、自分のお店をきちんと続けていきたいです。\n\n……面と向かっては照れくさいので、手紙に書きますね。",
+      "en": "Lately, after closing, I often sit behind the bar with the menu and supply invoices spread out together.\n\nThe drinks are the same, and I know they taste good.\n\nBut I can stare at the books for ages and still not see what went wrong.\n\nI used to think good drinks and caring for every customer would slowly make the shop better.\n\nRunning a shop is much harder than I imagined.\n\nWhen you first opened the pawnshop, did you have days when you did not know what to do?\n\nI remember eagerly inviting you over when I opened.\n\nThen, I just wanted you to see the tavern I had worked so hard to put together.\n\nNow, there is so much I really want to learn from you.\n\nI hope one day I can run my own little shop properly, like you.\n\n... It feels embarrassing to say this in person, so I will write it instead.",
+      "zh": "最近打烊以后，我常常坐在吧台后面，把酒单和进货单摊在一起看。\n\n酒还是那些酒，味道我很有信心。\n\n可有时候看了半天账，还是想不明白，究竟是哪里出了问题。\n\n以前总觉得，只要把酒调好，认真招呼每位客人，小店就会慢慢好起来。\n\n现在才发现，经营一家店远没有想象中那么简单呢。\n\n前辈刚开始经营当铺的时候，有过不知道该怎么办的日子吗？\n\n想起刚开业时，我还兴冲冲地邀请前辈来小店指导。\n\n那时候只是想让前辈看看我花了好多心思才布置好的酒馆。\n\n现在是真的有很多事情想向前辈请教了。\n\n我希望有一天，能像前辈一样，把属于自己的小店好好经营下去。\n\n……这些话当面说有点不好意思，还是写在信里吧。",
+      "title_zh": "致前辈：",
+      "signature_zh": "——小满",
+      "title_ja": "先輩へ",
+      "signature_ja": "みちる",
+      "title_en": "Dear senpai,",
+      "signature_en": "— Xiaoman",
+      "source": "story/第十一周实现.json"
     },
     {
       "visit": 12,

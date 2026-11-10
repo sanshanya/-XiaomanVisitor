@@ -1312,47 +1312,114 @@
     {
       "key": "xm_11_01",
       "subtitle_templates": {
-        "zh": "晚上好。我把店门上的营业时间改了。",
-        "ja": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
-        "en": "Good evening. I've changed the opening hours on my door."
+        "zh": "晚上好，前辈。极昼那边的折扣，好像还要继续呢。",
+        "ja": "こんばんは、先輩。「極昼」の割引、まだ続くみたいですね。",
+        "en": "Good evening, senpai. It looks like Polar Day's discount is going to continue."
       },
-      "spoken_text": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
-      "generate_text": "こんばんは。ドアに書いてある営業時間、少し変えたんです。",
+      "spoken_text": "こんばんは、先輩。「極昼」の割引、まだ続くみたいですね。",
+      "generate_text": "こんばんは、先輩。「極昼」の割引、まだ続くみたいですね。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_11_01.872b71e151f81e38.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "b1ab86806e19d6eefe283faf3ece559a8989e12c77694e2d952b6138dbc6add8"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "cfbd36f32014b27c683e02fd796573f3887e153fb613c0a86cd39419c28c8f5d",
+      "defer_recording": true
     },
     {
       "key": "xm_11_02",
       "subtitle_templates": {
-        "zh": "原来写到凌晨两点，现在改成十二点。这样也能早点回去吃点东西。",
-        "ja": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
-        "en": "It used to say two in the morning. Now it says midnight. That gives me time to get home and eat something."
+        "zh": "我仔细算过了。要是照他们的价格卖，连原料钱都不够呢。",
+        "ja": "きちんと計算してみました。同じ値段で売ったら、材料代にもならないんです。",
+        "en": "I worked it out carefully. At their prices, I would not even cover the ingredients."
       },
-      "spoken_text": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
-      "generate_text": "前は午前二時までだったんですけど、今は夜の十二時まで。これなら帰ってから、ちゃんとご飯も食べられますし。",
+      "spoken_text": "きちんと計算してみました。同じ値段で売ったら、材料代にもならないんです。",
+      "generate_text": "きちんと計算してみました。同じ値段で売ったら、材料代にもならないんです。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_11_02.83b74ff92fa54798.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "467bbb8d156054392723f250bd866aa708356609505f879e77e7dc96a40ece72"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "5af9bd7708cffaa078615645ad4da1e170817afe9e255aad779c2d444456bb11",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_11_03",
+      "subtitle_templates": {
+        "zh": "最近来的客人比较少，我把营业时间改了一下。原来写到凌晨两点，现在改成十二点了。",
+        "ja": "最近はお客さんが少なめなので、営業時間を変えました。前は夜中の二時までだったけど、今は十二時までです。",
+        "en": "Fewer people have been coming lately, so I changed the opening hours. It used to say two in the morning; now it says midnight."
+      },
+      "spoken_text": "最近はお客さんが少なめなので、営業時間を変えました。前は夜中の二時までだったけど、今は十二時までです。",
+      "generate_text": "最近はお客さんが少なめなので、営業時間を変えました。前は夜中の二時までだったけど、今は十二時までです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "5de38ba7260b5cb973bee7130c6e816a59f355b4e0ac7555b1113e64af98e378",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_11_04",
+      "subtitle_templates": {
+        "zh": "开店的时候，总嫌客人待到太晚。现在倒是能早点收店啦。",
+        "ja": "開店した頃は、お客さんがいつも遅くまでいるなあって思っていたのに。今は早く店じまいできますね。",
+        "en": "When I opened, I used to think everyone stayed too late. At least I can close up earlier now."
+      },
+      "spoken_text": "開店した頃は、お客さんがいつも遅くまでいるなあって思っていたのに。今は早く店じまいできますね。",
+      "generate_text": "開店した頃は、お客さんがいつも遅くまでいるなあって思っていたのに。今は早く店じまいできますね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "36393b40731c87a5d2469b6df40678407e1c023a5ca8c5d64e3c6862f67ab025",
+      "defer_recording": true
     },
     {
       "key": "xm_11_shop",
       "subtitle_templates": {
-        "zh": "今天买些日用品。",
-        "ja": "今日は日用品を少し。",
-        "en": "I'd like some everyday supplies today."
+        "zh": "今天想买些日用品。带了 {0} 信用点。",
+        "ja": "今日は日用品を少し買いに来ました。",
+        "en": "I would like some everyday supplies today. I brought {0} credits."
       },
-      "spoken_text": "今日は日用品を少し。",
-      "generate_text": "今日は日用品を少し。",
+      "spoken_text": "今日は日用品を少し買いに来ました。",
+      "generate_text": "今日は日用品を少し買いに来ました。",
+      "generic": true,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "4ec33040f7404d30d962ea7666f4203a1906fc65b056a19bd0893cabaede4724",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_11_accept",
+      "subtitle_templates": {
+        "zh": "谢谢。正好用得上。",
+        "ja": "ありがとうございます。ちょうど必要だったんです。",
+        "en": "Thank you. Just what I needed."
+      },
+      "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
+      "generate_text": "ありがとうございます。ちょうど必要だったんです。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_11_shop.1d08549c65cd8748.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "5eed348488b05f9c8106a5cda0051321f189118f114055dc022fb31b70bc7c6c"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "59b6c9011d1fa09a92f8297b3061b4e54ad6c91eda3c80733b05095c232351ab",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_11_bye",
+      "subtitle_templates": {
+        "zh": "那我先回去啦。前辈晚上要来的话，记得早点哦。",
+        "ja": "それじゃ、戻りますね。先輩、今夜来てくれるなら、早めにお願いしますね。",
+        "en": "I should head back. If you come by tonight, senpai, remember to come early."
+      },
+      "spoken_text": "それじゃ、戻りますね。先輩、今夜来てくれるなら、早めにお願いしますね。",
+      "generate_text": "それじゃ、戻りますね。先輩、今夜来てくれるなら、早めにお願いしますね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "6502ecd48914308430eff7ccb90a13fa67dc05a1af8b7e782558fac8e1f9cbf6",
+      "defer_recording": true
     },
     {
       "key": "xm_12_01",
@@ -3485,6 +3552,54 @@
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
       "source_sha256": "89799b451017b84e4d7412580ca1e79542001fb8ace14e00afac149f62b4dc57",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_11_chat_01",
+      "subtitle_templates": {
+        "zh": "前辈，我今天去问了商户发展部，酒馆的导览推荐什么时候能排上。",
+        "ja": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+        "en": "Senpai, I asked Merchant Development today when the tavern would get its turn on the guide terminals."
+      },
+      "spoken_text": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+      "generate_text": "先輩、今日は店舗開発部に聞いてきたんです。案内端末でうちの酒場を紹介してもらえるのは、いつになるのかって。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "e2b7e5f361c464524f99e459b86347a7e8ca83cbc9551f9fca9c8511b09413db",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_11_chat_02",
+      "subtitle_templates": {
+        "zh": "他们说，推广位置要按照商业街的最新安排调整，让我再等等。",
+        "ja": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+        "en": "They said the promotional slots had to follow the shopping street's latest arrangements, and asked me to wait a little longer."
+      },
+      "spoken_text": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+      "generate_text": "商業通路の新しい方針に合わせて紹介枠を調整するので、もう少し待ってほしいそうです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "ad4a4d97e4cad77fd523ae5daccb2dc5b7cd955bdba401fa0160113b0c8db0d5",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_11_chat_03",
+      "subtitle_templates": {
+        "zh": "可之前申请扶持的时候，明明说好会帮新店吸引客人的呀……",
+        "ja": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+        "en": "But when I applied for the support, they said they would help new shops bring people in..."
+      },
+      "spoken_text": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+      "generate_text": "でも、支援を申し込んだ時は、新しいお店の集客を手伝ってくれるって、言っていたのに……。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "62fdae3d741d3ef6ebc341df50bacc1b0ced07b40e7b98f2330c8a92d5c3d7cd",
       "defer_recording": true
     },
     {
