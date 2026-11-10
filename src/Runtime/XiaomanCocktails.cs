@@ -26,7 +26,7 @@ namespace XiaomanVisitor
 
         private void RegisterCocktailItems(ModItemDirectory directory)
         {
-            foreach (CocktailSpec spec in CocktailCatalog.Drinks)
+            foreach (CocktailSpec spec in CocktailCatalog.All)
             {
                 CocktailSpec captured = spec;
                 if (!directory.Has(captured.ItemId))
@@ -37,7 +37,7 @@ namespace XiaomanVisitor
         private void ValidateCocktailAssets(LoadedMod mod)
         {
             int ready = 0;
-            foreach (CocktailSpec spec in CocktailCatalog.Drinks)
+            foreach (CocktailSpec spec in CocktailCatalog.All)
             {
                 Sprite sprite;
                 if (!mod.Sprites.TryGetValue(spec.SpriteKey, out sprite) || sprite == null)
@@ -52,8 +52,8 @@ namespace XiaomanVisitor
                 }
                 ready++;
             }
-            Log.Log("Cocktail sprites ready: " + ready + "/" + CocktailCatalog.Drinks.Length
-                + "; native palette, binary alpha, all six at 16x32 / 1x2 cells.");
+            Log.Log("Cocktail sprites ready: " + ready + "/" + CocktailCatalog.All.Length
+                + "; native palette, binary alpha, all at 16x32 / 1x2 cells.");
         }
 
         private GameItem CreateCocktail(CocktailSpec spec)
@@ -71,7 +71,7 @@ namespace XiaomanVisitor
             ConfigureCocktail(item, spec);
             // Fix saved test-version FOOD/BREVAGE/TREAT tags as well as their shapes.
             item.onLoaded += loaded => ConfigureCocktail(loaded, spec);
-            item.unitValue = CocktailSpec.Price;
+            item.unitValue = spec.MarketValue;
             AudioHelper.InitGlass(item);
             ModHelper.SetSource(item, Id, ModName);
             return item;
@@ -93,12 +93,13 @@ namespace XiaomanVisitor
             item.name = Text("cocktail_" + spec.Key + "_name");
             item.shortDescription = Text("cocktail_" + spec.Key + "_desc");
             item.flavorText = ItemPresentation.DrinkFlavor(Text("cocktail_origin"), Text("drink_tier_" + spec.Tier),
-                Text("drink_buff_" + spec.Effect.ToString().ToLowerInvariant(), spec.EffectAmount), Text("drink_buff_duration"));
+                Text("drink_buff_" + spec.Effect.ToString().ToLowerInvariant(), spec.EffectAmount), Text(spec.DurationDays==1 ? "drink_buff_today" : "drink_buff_duration"));
             item.RemoveGameItemType("FOOD");
             item.RemoveGameItemType("BREVAGE");
             item.RemoveGameItemType("TREAT");
             item.SetGameItemType("SUBSTANCE");
             item.SetGameItemType("ALCOHOL");
+            if (LuxuryDrinkCatalog.IsLuxury(spec.Key)) item.SetGameItemType("LUXURY_ITEM");
             ConsumableHelper.InitAlcohol(item, 1);
             // Native alcohol is restricted to an addicted character. These gifts
             // are usable by any owner, while retaining native addiction relief.

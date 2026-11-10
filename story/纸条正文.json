@@ -88,19 +88,29 @@
     },
     {
       "visit": 5,
-      "ja": "昨日はありがとうございました。\n\n故郷の友達に、新しいお店はどうって聞かれました。写真をずいぶん選んで、結局、明かりをつけたばかりのカウンターを送りました。\n\n「すごくいい感じだね」って。\n\n自分のお店なのに、そう言われると、かえって緊張してしまいました。\n\n店長さんも、もっと遊びに来てください。お店に飾りをいろいろ増やしたんです。\n\n先輩として、いろいろ教えてもらえたらうれしいです。",
-      "en": "Thank you for yesterday.\n\nA friend back home asked how the new place was going. I spent ages choosing a photo and finally sent one of the bar just after I'd switched on the lights.\n\nShe said, 'It looks wonderful.'\n\nIt's my own place, but hearing someone say that somehow made me more nervous.\n\nPlease come by more often. I've put up lots of new decorations.\n\nI'd love a few pointers from someone with more experience.",
-      "zh": "昨天谢谢啦。\n\n家乡的朋友问我，新店怎么样了。我挑了半天照片，最后发了张刚开灯的吧台给她。\n\n她说：「看着非常棒。」\n\n明明是自己开的店，被人这么一说，反而更紧张了。\n\n店长请你多来我的店里看看，店里新增了很多装饰。\n\n请作为前辈，指教一下。",
-      "title_zh": "店长：",
-      "signature_zh": "——小满"
+      "ja": "新しいお酒、ついにメニューに載せました！\n\n材料は、新しい仕入れ先から届いた、ちょっと貴重なものなんです。\n\n何度か試していたんですけど、どうしてもあと少しだけ納得できなくて。昨日もう一度作り直したら、思わず「うん、これ！」って。\n\n前のお酒より、ずいぶん高くなっちゃったんですけどね。\n\nでも、お店での評判はとってもよかったんです。\n\nこれで上層区のお客さんにも、少しは知ってもらえたのかな～。\n\nえへへ、ちょっとだけ得意になっちゃいました。(๑•́ ₃ •̀๑)\n\n仕入れ先が、大きな宣伝用の看板も送ってくれたんです。入口に置くと目立つんですって。\n\n試しに置いてみたら、窓の雨がちょうど隠れちゃって。\n\n……結局、しまっておくことにしました。",
+      "en": "The new drinks are finally on the menu!\n\nThe ingredients are rare stock from the new supplier.\n\nI tried several times, but something was always missing. Yesterday I mixed them again and could not help thinking: yes, this is it!\n\nThey are quite a bit dearer than the old drinks, though.\n\nBut everyone at the tavern has loved them.\n\nMaybe I have found my way into the upper-level market~\n\nHehe, I am feeling a little proud. (๑•́ ₃ •̀๑)\n\nThe supplier sent a huge sign, too. They said it would stand out by the entrance.\n\nI held it up to try it, and it covered the rain on the window perfectly.\n\n...In the end, I put it away in the cupboard.",
+      "zh": "新酒终于写上酒单啦！\n\n原料是新供应商提供的紧俏货，\n\n之前试调好几次，总觉得味道还差那么一点点。昨天重新调过以后，才忍不住想：嗯，就是这个！\n\n不过价格比以前的酒贵了不少呢。\n\n不过店里的反馈非常好呢。\n\n我算是打通了上层区的销路了吧～\n\n嘿嘿，稍微有点得意呢。(๑•́ ₃ •̀๑)\n\n供货商还送了一块很大的宣传牌，说挂在门口比较显眼。\n\n我拿着试了一下，发现刚好会挡住窗户上的雨。\n\n……最后还是收进柜子里了。",
+      "title_zh": "致店长前辈：",
+      "signature_zh": "——小满",
+      "title_ja": "店長の先輩へ",
+      "signature_ja": "みちる",
+      "title_en": "Dear senpai,",
+      "signature_en": "— Xiaoman",
+      "source": "story/第五周实现.json"
     },
     {
       "visit": 6,
-      "ja": "昨夜、上層区のお金持ちのお客さんに、わたしのカクテルは甘すぎるって言われました。\n\n今日は、その甘すぎると言われた一杯を、何度も作り直してみました。\n\n砂糖を少し減らして、一口。……やっぱり、戻しました。\n\n考えてみたら、あの人は「少し甘い」と言っただけで、おいしくないとは言っていないんですよね。どうして二日も気にしてしまったんだろう。\n\n今日は、メニューは変えないことにします。\n\n店長さんの感想が聞きたいです。",
-      "en": "A wealthy customer from the upper district said my cocktails were too sweet last night.\n\nToday I kept adjusting the drink they said was too sweet.\n\nA little less sugar, a sip. Then I put it back.\n\nAll they really said was 'a little sweet,' not that it tasted bad. Why have I been thinking about it for two days?\n\nI'm leaving the menu alone today.\n\nI'd like to know what you think.",
-      "zh": "昨晚有个上城区的富人说我的酒太甜了。\n\n那杯被说太甜的酒，我今天反复进行了调整。\n\n少放了一点糖，尝了一口。又加回去了。\n\n说到底，那个人也只是说了句「有点甜」，又没说不好喝。我怎么就惦记了两天呢。\n\n今天先不改菜单了。\n\n我想听听店长的意见。",
-      "title_zh": "店长：",
-      "signature_zh": "——小满"
+      "ja": "昨日、先輩のお店を旅人さんに紹介したとお話ししましたよね。お店に戻ってから、初めて先輩のお店に入ったときのことを、ふと思い出したんです。\n\nあの頃はまだ道もよく分からなくて。ただ、明かりがついていたから入ったんでした。\n\n質屋さんなのに、カウンターにはカセットデッキが置いてあって。\n\nあのときから、先輩のお店は少し不思議だなって思っていました。\n\nあの旅人さん、無事にたどり着けたのかな。\n\n本当に来てくれたら、面白いものを見つけてもらえますように。\n\n先輩のお店も、ますます賑わいますように～。\n\n今週のカセットです。",
+      "en": "Yesterday I mentioned sending a traveller your way. Back at the tavern, I suddenly remembered the first time I walked into your shop.\n\nI still did not know my way around. I only came in because the lights were on.\n\nIt was a pawnshop, but there was a cassette deck on the counter.\n\nEven then, your shop felt a little mysterious.\n\nI wonder if that traveller ever found it.\n\nIf he really came by, I hope he found something interesting too.\n\nMay your business keep getting better, senpai~\n\nHere is this week's tape.",
+      "zh": "昨天说给前辈介绍了位旅客，回店以后，忽然想起第一次走进前辈店里的时候。\n\n那时候还不太认得路，只是看见那边亮着灯，就进来了。\n\n明明是间当铺，柜台上却放着一台磁带机。\n\n那时候就觉得，前辈的店有点神秘呢。\n\n不知道那位旅客最后有没有找到这里。\n\n要是他真的来了，希望也能淘到些有意思的东西呀。\n\n希望前辈的生意也越来越好～\n\n这是这周的磁带。",
+      "title_zh": "致前辈：",
+      "signature_zh": "——小满",
+      "title_ja": "先輩へ",
+      "signature_ja": "みちる",
+      "title_en": "Dear senpai,",
+      "signature_en": "— Xiaoman",
+      "source": "story/第六周实现.json"
     },
     {
       "visit": 7,

@@ -116,6 +116,7 @@ namespace XiaomanVisitor
                 FreezeThirdWorkLetter();
                 FreezeFourthLetter();
                 TryDeliverWorkThanksGift();
+                TryDeliverImprovGift();
                 StoryProgress progress = ReadStory();
                 EnsureCassetteCaseStorage();
                 TryDeliverNotebook(today, progress);

@@ -53,6 +53,7 @@ namespace XiaomanVisitor
                 if (key=="xm_04_03" && ReadSupply().Signed) key="xm_04_03_existing";
                 if (key=="xm_03_04" && ReadWork().HasWorked) key="xm_03_04_already_worked";
                 Dialogue next = StoryLine(client,key,spec.Mood,episode.Credits);
+                if (key=="xm_05_gift") next.startAction+=TryDeliverImprovGift;
                 if (tail == null) client.mainDialogue = next;
                 else tail.nextDialogue = next;
                 tail = next;

@@ -71,4 +71,4 @@ def generate(data):
         '// Generated from assets/tavern-prices.json; independent of inventory resale value.\n'
         'namespace XiaomanVisitor { public static class TavernPrices {\n'
         f'public const int Juice = {price["juice"]}, Alcohol = {price["alcohol"]};\n'
-        'public static int For(CocktailSpec spec) { return spec.Tier == 1 ? Juice : Alcohol; }\n} }\n',encoding='utf-8')
+        'public static int For(CocktailSpec spec) { return LuxuryDrinkCatalog.IsStandard(spec.Key) ? LuxuryConfig.Onsite : spec.Tier == 1 ? Juice : Alcohol; }\n} }\n',encoding='utf-8')

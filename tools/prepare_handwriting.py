@@ -69,7 +69,7 @@ def main():
         "字体作者及原始来源：https://github.com/lxgw/yozai-font\n"
         "许可：SIL Open Font License 1.1，完整授权及版权声明见 Yozai-Regular-OFL.txt。\n"
         "发布包仅含本模组固定信件的文字图层，不包含完整字体文件。\n"
-        "第二封信颜文字的少数字符在制作时使用Windows的Segoe UI和Gadugi字形回退；正文仍为悠哉，不附带这些字体文件。\n"
+        "第二、五封信颜文字的少数字符在制作时使用Windows的Segoe UI、Gadugi和Leelawadee UI字形回退；正文仍为悠哉，不附带这些字体文件。\n"
         "这些文字图层在制作阶段生成；玩家不需要安装字体或联网。\n",encoding="utf-8")
     print(json.dumps(dict(letters=len(rows),bytes=sum(r["bytes"] for r in rows),
                          max_file=max(r["bytes"] for r in rows),font_in_package=False),indent=2))

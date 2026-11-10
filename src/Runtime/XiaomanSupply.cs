@@ -45,13 +45,15 @@ namespace XiaomanVisitor
         }
         private void BuildSupplyMenu(CustomUIBuilder b,string page)
         {
-            var p=ReadSupply();int day=StoreStation.Instance.dayCounter;
+            PrepareLuxuryStock();var p=ReadSupply();int day=StoreStation.Instance.dayCounter;
             Action<string,Action> button=(label,click) => { b.AddButton(label,() => { if (TavernMayAct && !TavernDialogueBusy && !supplyBusy) click(); });b.Last.SetPreferredSize(360,38); };
+            b.BeginScroll(490);
             if (p.Blocked || p.Pending!=null) b.AddWarning(Text("ui_w04_pending"));
             if (page=="supply") {
                 b.AddLabel(Text("ui_w04_recipe",SupplyConfig.RecipeWater,SupplyConfig.RecipeJuice,SupplyConfig.Output,SupplyConfig.MakingCost));
                 b.AddLabel(Text("ui_w04_ratio",SupplyConfig.PlayerNumerator,SupplyConfig.Denominator));
                 b.AddLabel(Text("ui_w04_prices",SupplyConfig.WaterPrice,SupplyConfig.JuicePrice,SupplyConfig.Wholesale));
+                if (day>=LuxuryConfig.UnlockDay) b.AddLabel(Text("ui_w05_recipe",LuxuryConfig.Output,LuxuryConfig.RareCost,LuxuryConfig.MakingCost,LuxuryConfig.Wholesale,LuxuryConfig.Onsite));
                 b.AddLabel(Text("ui_w04_limits",SupplyConfig.WaterLimit,SupplyConfig.JuiceLimit,SupplyConfig.WeeklyBudget));
                 b.AddLabel(Text("ui_w04_test"));
                 if (!p.Signed) {
@@ -82,7 +84,7 @@ namespace XiaomanVisitor
                 if (available.Length==0) b.AddLabel(Text("ui_w04_soldout"));
                 foreach (var group in available) {
                     string batch=group.First().Id,key=group.Key;
-                    button(Text("ui_w04_take_offer",Text("cocktail_"+key+"_name"),SupplyConfig.Wholesale,group.Sum(v => v.PlayerRemaining)),() => ConfirmSupplyOutput(batch));
+                    button(Text("ui_w04_take_offer",Text("cocktail_"+key+"_name"),group.First().WholesalePrice,group.Sum(v => v.PlayerRemaining)),() => ConfirmSupplyOutput(batch));
                 }
             }
             else if (page=="support_news") {
@@ -93,9 +95,15 @@ namespace XiaomanVisitor
                 b.AddLabel(Text("ui_w04_balance",p.Cash,p.BoughtThisWeek(day)));
                 b.AddLabel(Text("ui_w04_stock",p.Water,p.Juice,p.Batches.Sum(v => v.PlayerRemaining),p.Batches.Sum(v => v.StoreRemaining)));
                 b.AddLabel(Text("ui_w04_totals",p.Trades.Where(t => t.Status=="complete" && t.Direction=="in").Sum(t => t.Price),p.Batches.Sum(v => v.MakingCost),p.Trades.Where(t => t.Status=="complete" && t.Direction=="out").Sum(t => t.Price)));
+                if (p.CompanyLots.Count>0) {
+                    b.AddLabel(Text("ui_w05_company_total",p.CompanyLots.Sum(l => l.Paid)));
+                    foreach (var lot in p.CompanyLots.AsEnumerable().Reverse().Take(2))
+                        b.AddLabel(Text("ui_w05_lot",lot.Day,Text("cocktail_"+lot.Key+"_name"),lot.Paid,lot.WaterFromPlayer,lot.JuiceFromPlayer));
+                }
                 foreach (var t in p.Trades.Where(t => t.Status=="complete").Reverse().Take(7))
                     b.AddLabel(Text("ui_w04_receipt",t.Day,Text(t.Direction=="in"?"ui_w04_deliver":"ui_w04_buy"),t.Count,t.Price));
             }
+            b.End();
             button(Text("ui_tavern_back"),() => ShowTavernMenu(page=="supply"?"interaction":"supply"));
         }
         private void ConfirmSupplyInput(int itemId,int count,int quote)
@@ -110,7 +118,7 @@ namespace XiaomanVisitor
             supplyBusy=true;
             try {
                 var item=CarriedSupplyItems().FirstOrDefault(i => i.uniqueId==id);
-                var p=ReadSupply();int day=StoreStation.Instance.dayCounter;
+                PrepareLuxuryStock();var p=ReadSupply();int day=StoreStation.Instance.dayCounter;
                 if (!AcceptSupplyItem(item) || item.unitCount!=count || p.InputPrice(item.identifier)*count!=quote || !p.MayReceive(day,item.identifier,count)) { TavernNotice("ui_w04_no_need");return; }
                 var t=p.PrepareInput(WorkRunIdentity,day,item.identifier,id,count,PlayerStore.Instance.GetCash());if (t==null) return;
                 SaveSupply(p);item.Destroy();t.Status="moving";SaveSupply(p);
@@ -118,13 +126,13 @@ namespace XiaomanVisitor
                 if (PlayerStore.Instance.GetCash()!=t.BeforeCash+t.Price) throw new InvalidOperationException("Input payment snapshot differs");
                 t.Status="paid";SaveSupply(p);
                 if (!p.Complete(t)) throw new InvalidOperationException("Supply input could not be committed");
-                p.Produce(day);SaveSupply(p);TavernNotice("ui_w04_done");ShowTavernMenu("supply_in");
+                p.ProduceLuxury(day,ReadSupport().LuxuryChannelAvailable(day));p.Produce(day);SaveSupply(p);TavernNotice("ui_w04_done");ShowTavernMenu("supply_in");
             } catch (Exception e) { Log.Warning("Supply input held: "+e.Message);TavernNotice("ui_w04_pending"); }
             finally { supplyBusy=false; }
         }
         private void ConfirmSupplyOutput(string batch)
         {
-            CloseTavernMenu();tavernStage.ShowChoices(new[]{new TavernChoice(Text("ui_w04_confirm")+" · "+SupplyConfig.Wholesale+" CR",() => TradeSupplyOutput(batch)),
+            CloseTavernMenu();tavernStage.ShowChoices(new[]{new TavernChoice(Text("ui_w04_confirm")+" · "+(ReadSupply().Batches.FirstOrDefault(v => v.Id==batch)?.WholesalePrice??0)+" CR",() => TradeSupplyOutput(batch)),
                 new TavernChoice(Text("ui_w04_cancel"),() => ShowTavernMenu("supply_out"))});
         }
         private void TradeSupplyOutput(string batch)
@@ -134,8 +142,10 @@ namespace XiaomanVisitor
             try {
                 var p=ReadSupply();var stock=p.Batches.FirstOrDefault(b => b.Id==batch);
                 if (p.Pending!=null || stock==null || stock.PlayerRemaining<1) { TavernNotice("ui_w04_soldout");return; }
-                if (PlayerStore.Instance.GetCash()<SupplyConfig.Wholesale) { QueueTavernSpeech(new[]{"xm_tavern_no_money"});return; }
+                if (PlayerStore.Instance.GetCash()<stock.WholesalePrice) { QueueTavernSpeech(new[]{"xm_tavern_no_money"});return; }
                 var item=ModHelper.SpawnItem(CocktailCatalog.Find(stock.Key).ItemId);
+                if (item==null) return;
+                item.ModifyTag("XIAOMAN_BATCH_SOURCE",tag => tag.Enable().SetString(stock.Id));
                 var t=p.PrepareOutput(WorkRunIdentity,StoreStation.Instance.dayCounter,batch,item.GetUniqueID(),PlayerStore.Instance.GetCash());
                 if (t==null) { item.Destroy();return; }SaveSupply(p);
                 ModHelper.SetItemOwnerShip(item,true);GraphUtils.TryAcceptAll(EmporiumEntry.Instance.afterhourInventory,item);
@@ -168,7 +178,7 @@ namespace XiaomanVisitor
             int cash=PlayerStore.Instance.GetCash(),after=t.Direction=="in"?t.BeforeCash+t.Price:t.BeforeCash-t.Price;
             if (t.Status=="prepared" && cash==t.BeforeCash && (t.Direction=="in"?owned:!owned)) t.Status="cancelled";
             else if (cash==after && (t.Direction=="in"?!owned:owned)) {
-                if (!p.Complete(t)) t.Status="uncertain";else p.Produce(StoreStation.Instance.dayCounter);
+                if (!p.Complete(t)) t.Status="uncertain";else { p.ProduceLuxury(StoreStation.Instance.dayCounter,ReadSupport().LuxuryChannelAvailable(StoreStation.Instance.dayCounter));p.Produce(StoreStation.Instance.dayCounter); }
             } else t.Status="uncertain";
             SaveSupply(p);
         }

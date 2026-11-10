@@ -29,11 +29,11 @@
     "key": "xm_06_shop",
     "language": "ja",
     "subtitle_templates": {
-      "zh": "今天来买点饮用水。",
+      "zh": "今天想买点饮用水。带了 {0} 信用点。",
       "ja": "今日は飲み水を少し買いに来ました。",
-      "en": "I've come for some drinking water today."
+      "en": "I need some drinking water today. I brought {0} credits."
     },
-    "generic": false
+    "generic": true
   },
   "binding_history": [
     {

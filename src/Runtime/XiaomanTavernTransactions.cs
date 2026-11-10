@@ -55,7 +55,8 @@ namespace XiaomanVisitor
             var progress=ReadTavern();
             int day=StoreStation.Instance.dayCounter;
             var spec=CocktailCatalog.Find(key);
-            if (spec == null) return;
+            if (spec == null || !LuxuryDrinkCatalog.OnMenu(key,day)) return;
+            if (LuxuryDrinkCatalog.IsStandard(key)) PrepareLuxuryStock();
             if (progress.RecoveryBlocked || progress.Pending != null) { TavernNotice("ui_tavern_payment_pending"); return; }
             if (progress.Drank(day)) { QueueTavernSpeech(new[]{"xm_tavern_drink_limit"}); return; }
             if (PlayerStore.Instance.GetCash() < TavernPrices.For(spec)) { QueueTavernSpeech(new[]{"xm_tavern_no_money"}); return; }
@@ -65,8 +66,12 @@ namespace XiaomanVisitor
                 var record=progress.PrepareDrink(day,key,PlayerStore.Instance.GetCash(),before);
                 if (record == null) return;
                 var supply=ReadSupply();
-                if (supply.Batches.Any(b => b.Key==key)) {
-                    if (!supply.ReserveBar(record.Id,key)) { TavernNotice("ui_w04_pool_empty");return; }
+                if (LuxuryDrinkCatalog.IsStandard(key) || supply.Batches.Any(b => b.Key==key)) {
+                    if (!supply.ReserveBar(record.Id,key)) {
+                        if (LuxuryDrinkCatalog.IsStandard(key)) { CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_05_soldout"}); }
+                        else TavernNotice("ui_w04_pool_empty");
+                        return;
+                    }
                     SaveSupply(supply);
                 }
                 SaveTavern(progress); // Verified before touching the native wallet.

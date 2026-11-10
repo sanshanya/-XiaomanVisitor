@@ -32,8 +32,8 @@ FONTS = {
     "yozai": TRIAL / "fonts/Yozai-Regular.ttf",
     "xiaolai": TRIAL / "fonts/Xiaolai-Regular.ttf",
 }
-KAOMOJI = set('٩(ˊᗜˋ*)و(´,,•ω•,,)♡')
-FALLBACKS = (Path('C:/Windows/Fonts/segoeui.ttf'),Path('C:/Windows/Fonts/gadugi.ttf'))
+KAOMOJI = set('٩(ˊᗜˋ*)و(´,,•ω•,,)♡(๑•́ ₃ •̀๑)')
+FALLBACKS = (Path('C:/Windows/Fonts/segoeui.ttf'),Path('C:/Windows/Fonts/gadugi.ttf'),Path('C:/Windows/Fonts/LeelawUI.ttf'))
 LABEL_FONT = "C:/Windows/Fonts/msyh.ttc"  # comparison labels only
 OPENING = set("（《「『【〔〈([{“‘")
 CLOSING = set("，。！？；：、）》」』】〕〉)]}”’….,!?;:%")
@@ -180,12 +180,13 @@ def letter_layout(font_key, visit, language, texts, letter_id=None):
     body = texts[key+"_body"]
     lines = wrap(body, font, BODY_SIZE, 500, language)
     step = BODY_SIZE*(1.565 if key=="story_note_04_b" else LINE_HEIGHT)
+    gap = 0.36 if visit==5 and language in ("ja","en") else 0.66 if visit==6 and language=="ja" else PARAGRAPH_GAP
     y = 140 + BODY_SIZE  # first baseline; same region as the current letter
     positions = []
     for index, (line, paragraph_end) in enumerate(lines):
         drift = fixed_rng(f"{visit}/{language}/line/{index}").uniform(-0.7, 0.7)
         positions.append((60+drift, y, line))
-        y += step * (1+PARAGRAPH_GAP if paragraph_end else 1)
+        y += step * (1+gap if paragraph_end else 1)
     body_bottom = positions[-1][1] + font.getmetrics()[1]/SCALE if positions else 140
     row = dict(font=font_key, visit=visit, language=language, lines=len(lines),
                body_bottom=round(body_bottom, 2), available_bottom=665,

@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "key": "wonderland",
+      "source": "package/XiaomanVisitor/Textures/Items/xiaoman_cocktail_bluebird.png",
+      "packaged": "Textures/Items/xiaoman_cocktail_wonderland.png",
+      "sha256": "fb1fbef30ed0693d31eb4aa7aa855433b07ec3a2b5a06100cc9ff72f50d3fbd8",
+      "note": "首测复用已验证原作杯型；不宣称新增独立原画"
+    },
+    {
+      "key": "spring_sway",
+      "source": "package/XiaomanVisitor/Textures/Items/xiaoman_cocktail_sky_after_rain.png",
+      "packaged": "Textures/Items/xiaoman_cocktail_spring_sway.png",
+      "sha256": "dc5725628ecfe16468db4c14aa1371491b4e68a4488a8be9a6def60e06b9e7e7",
+      "note": "首测复用已验证原作杯型；不宣称新增独立原画"
+    },
+    {
+      "key": "wonderland_improv",
+      "source": "package/XiaomanVisitor/Textures/Items/xiaoman_cocktail_bluebird.png",
+      "packaged": "Textures/Items/xiaoman_cocktail_wonderland_improv.png",
+      "sha256": "fb1fbef30ed0693d31eb4aa7aa855433b07ec3a2b5a06100cc9ff72f50d3fbd8",
+      "note": "首测复用已验证原作杯型；不宣称新增独立原画"
+    }
+  ]
+}

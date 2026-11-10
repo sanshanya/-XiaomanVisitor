@@ -1140,6 +1140,230 @@
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
       "source_sha256": "dc29c069e250de6d8c5efca37a89c6d282e4b8527ec6e7b62514fc280875f9e7",
       "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_new_01",
+      "subtitle_templates": {
+        "zh": "前辈，看到新酒单了吗？新添了两款酒哦。",
+        "ja": "先輩、新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+        "en": "Senpai, have you seen the new menu? There are two new drinks."
+      },
+      "spoken_text": "先輩、新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+      "generate_text": "先輩、新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "616911acf37552c053dd508fd1733289660f44c495e272be92b39f1191983a41",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_new_02",
+      "subtitle_templates": {
+        "zh": "梦游仙境是我试了好几次才调好的，轻摇春色则想做得清爽一点。",
+        "ja": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+        "en": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher."
+      },
+      "spoken_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+      "generate_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "3214a1890d4b397561c742e3f4f4280ff79cbf7ddd5d2d1d32f5dd2777f9487f",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_new_03",
+      "subtitle_templates": {
+        "zh": "这批原料有点紧俏，暂时只能做这么多。喜欢的话，以后再多进一点吧。",
+        "ja": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+        "en": "These ingredients are hard to come by, so I can only make a few for now. If people like them, I will order more."
+      },
+      "spoken_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+      "generate_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "d56beffcf266b3a6a42905bdc339341e9aa98c0545cd096ba0b9362b60a5c25d",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_soldout",
+      "subtitle_templates": {
+        "zh": "啊，抱歉……这款今天已经卖完啦。下批到了再来看看吧。",
+        "ja": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+        "en": "Ah, sorry... that one is sold out. Come back when the next batch arrives."
+      },
+      "spoken_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+      "generate_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "e28ea988a7ebc8a456e834899cfb4abf8bf59ac2289b0bc92faba20063744abe",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_daily",
+      "subtitle_templates": {
+        "zh": "最近一直有人问那两款新酒呢。不过我还是想把原来的几款留在酒单上。毕竟不是每个人都喜欢喝贵的嘛。",
+        "ja": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+        "en": "People keep asking about the two new drinks. I still want to keep the old ones on the menu, though. Not everyone wants something expensive."
+      },
+      "spoken_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+      "generate_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "b72e7c7bb2888a73d06574dfee5394d85f2a3d7103630c40d34ced4b40c69593",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_new_01_unknown",
+      "subtitle_templates": {
+        "zh": "看到新酒单了吗？新添了两款酒哦。",
+        "ja": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+        "en": "have you seen the new menu? There are two new drinks."
+      },
+      "spoken_text": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+      "generate_text": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "4809e3f3a6ddbb6e1b1114bda2e2f8dbd12579cf5c01d4e40332679cf2698ed9",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_new_02_unknown",
+      "subtitle_templates": {
+        "zh": "梦游仙境是我试了好几次才调好的，轻摇春色则想做得清爽一点。",
+        "ja": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+        "en": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher."
+      },
+      "spoken_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+      "generate_text": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "3214a1890d4b397561c742e3f4f4280ff79cbf7ddd5d2d1d32f5dd2777f9487f",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_new_03_unknown",
+      "subtitle_templates": {
+        "zh": "这批原料有点紧俏，暂时只能做这么多。喜欢的话，以后再多进一点吧。",
+        "ja": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+        "en": "These ingredients are hard to come by, so I can only make a few for now. If people like them, I will order more."
+      },
+      "spoken_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+      "generate_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "d56beffcf266b3a6a42905bdc339341e9aa98c0545cd096ba0b9362b60a5c25d",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_soldout_unknown",
+      "subtitle_templates": {
+        "zh": "啊，抱歉……这款今天已经卖完啦。下批到了再来看看吧。",
+        "ja": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+        "en": "Ah, sorry... that one is sold out. Come back when the next batch arrives."
+      },
+      "spoken_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+      "generate_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "e28ea988a7ebc8a456e834899cfb4abf8bf59ac2289b0bc92faba20063744abe",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_05_daily_unknown",
+      "subtitle_templates": {
+        "zh": "最近一直有人问那两款新酒呢。不过我还是想把原来的几款留在酒单上。毕竟不是每个人都喜欢喝贵的嘛。",
+        "ja": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+        "en": "People keep asking about the two new drinks. I still want to keep the old ones on the menu, though. Not everyone wants something expensive."
+      },
+      "spoken_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+      "generate_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "b72e7c7bb2888a73d06574dfee5394d85f2a3d7103630c40d34ced4b40c69593",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_06_chat_01",
+      "subtitle_templates": {
+        "zh": "最近来了不少从外面经过的旅客呢。有人只是等船，也有人专程绕过来喝一杯。",
+        "ja": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+        "en": "Quite a few passing travellers have come in lately. Some are waiting for their ships. Others make a special detour for a drink."
+      },
+      "spoken_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+      "generate_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "e54815654afcb514e659751ec46c9f85897c70cf4a12da2332b8fdf655de4ca1",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_06_chat_02",
+      "subtitle_templates": {
+        "zh": "有些客人喝着喝着，就聊起自己去过的地方。明明我哪里都没去，却好像跟着他们旅行了一圈呢。",
+        "ja": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
+        "en": "Some start telling me about places they have been. I have not gone anywhere, yet it feels as if I have travelled with them."
+      },
+      "spoken_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
+      "generate_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "5e5abff355645d1861652f9be7fc24c8b8f48a1633c727e13757254139a20dc5",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_06_chat_01_unknown",
+      "subtitle_templates": {
+        "zh": "最近来了不少从外面经过的旅客呢。有人只是等船，也有人专程绕过来喝一杯。",
+        "ja": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+        "en": "Quite a few passing travellers have come in lately. Some are waiting for their ships. Others make a special detour for a drink."
+      },
+      "spoken_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+      "generate_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "e54815654afcb514e659751ec46c9f85897c70cf4a12da2332b8fdf655de4ca1",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_06_chat_02_unknown",
+      "subtitle_templates": {
+        "zh": "有些客人喝着喝着，就聊起自己去过的地方。明明我哪里都没去，却好像跟着他们旅行了一圈呢。",
+        "ja": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
+        "en": "Some start telling me about places they have been. I have not gone anywhere, yet it feels as if I have travelled with them."
+      },
+      "spoken_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
+      "generate_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "5e5abff355645d1861652f9be7fc24c8b8f48a1633c727e13757254139a20dc5",
+      "defer_recording": true
     }
   ],
   "integration_note": "完整配音脚本的待录子集，不可单独覆盖现有语音索引；本次不请求TTS。"

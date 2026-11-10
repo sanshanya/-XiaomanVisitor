@@ -61,6 +61,7 @@ namespace XiaomanVisitor
             EnableCocktails();
             EnablePaidWork();
             EnableWeekFour();
+            EnableWeekFiveSix();
             EnsureTavernMap();
             ModHelper.AddDebugFunction(Id, ModHelper.DEBUG_CATEGORY_SPAWN, "Invite Xiaoman", () => Invite());
             driverObject = new GameObject("XiaomanVisitor.Animator");
@@ -90,6 +91,7 @@ namespace XiaomanVisitor
             DisableCocktails();
             DisablePaidWork();
             DisableWeekFour();
+            DisableWeekFiveSix();
             DisableTavernMap();
             ModHelper.RemoveDebugFunctions(Id);
             if (PlayerStore.HasInstance && PlayerStore.Instance.storeClientManager != null)

@@ -10,6 +10,7 @@ import wave
 import week_two_source
 import week_three_source
 import week_four_source
+import week_five_six_source
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "package/XiaomanVisitor"
@@ -66,13 +67,19 @@ def main():
     week_two = week_two_source.read()
     week_three = week_three_source.read()
     week_four = week_four_source.read()
+    week_five = week_five_six_source.read(5)
+    week_six = week_five_six_source.read(6)
+    overlays={2:week_two,3:week_three,4:week_four,5:week_five,6:week_six}
+    week_five_six_source.generate()
     week_four_source.generate()
     week_three_source.generate()
-    week_two_source.generate(dict(week_two,lines=dict(week_two['lines'],**week_three['lines'],**week_four['lines'])))
+    week_two_source.generate(dict(week_two,lines=dict(week_two['lines'],**week_three['lines'],**week_four['lines'],**week_five['lines'],**week_six['lines'])))
     english = json.loads((ROOT / "story/英文台词.json").read_text(encoding="utf-8"))
     english.update({key:row['en'] for key,row in week_two['lines'].items()})
     english.update({key:row['en'] for key,row in week_three['lines'].items()})
     english.update({key:row['en'] for key,row in week_four['lines'].items()})
+    for overlay in (week_five,week_six):
+        english.update({key:row['en'] for key,row in overlay['lines'].items()})
     notes_path=ROOT/'story/纸条正文.json'
     note_document=json.loads(notes_path.read_text(encoding='utf-8'))
     note_two=next(n for n in note_document['notes'] if n['visit']==2)
@@ -88,6 +95,11 @@ def main():
     for lang,note in week_four['letters']['A'].items():
         note_four[lang]=note['body'];note_four['title_'+lang]=note['title'];note_four['signature_'+lang]=note['signature']
     note_four['source']=week_four['source'];note_four['variants']={'B':week_four['letters']['B']}
+    for visit in (5,6):
+        overlay=overlays[visit]; note=next(n for n in note_document['notes'] if n['visit']==visit)
+        for lang,fields in overlay['letters'].items():
+            note[lang]=fields['body'];note['title_'+lang]=fields['title'];note['signature_'+lang]=fields['signature']
+        note['source']=overlay['source'];note.pop('variants',None)
     save(notes_path,note_document)
     translated_notes = {n['visit']:n for n in note_document['notes']}
     paper_style_path = ROOT / "assets/paper-style.json"
@@ -118,8 +130,8 @@ def main():
         n = int(match[1])
         section = text[match.end():sections[i+1].start() if i+1 < len(sections) else text.index("## 尾声")]
         opening, special = [], {}
-        overlay=week_two if n==2 else week_three if n==3 else week_four
-        chapter_rows = table_lines(section) if n not in (2,3,4) else [
+        overlay=overlays.get(n)
+        chapter_rows = table_lines(section) if n not in overlays else [
             [f'`{key}` · {row["mood"]}',row['zh'],row['ja'],'暂不配音']
             for key,row in overlay['lines'].items() if key.startswith(f'xm_{n:02d}_')]
         for row in chapter_rows:
@@ -128,7 +140,7 @@ def main():
             key, mood = m.groups()
             extra = {"defer_voice": True} if len(row) > 3 and row[3] == "暂不配音" else {}
             add(key, row[1], row[2], mood, **extra)
-            if re.search(r"_(?:\d+|shop)$", key):
+            if re.search(r"_(?:\d+|shop)$", key) or key=="xm_05_gift":
                 opening.append(key)
             elif not key.endswith(('_late','_already_worked','_existing')):
                 special[key.rsplit("_", 1)[1]] = key
@@ -179,6 +191,12 @@ def main():
             for field,value in fields.items(): loc[lang]['story_note_04'+('_b' if variant=='B' else '')+'_'+field]=value
     for key,row in week_four['lines'].items():
         if not key.startswith('xm_04_'): add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
+    for visit in (5,6):
+        overlay=overlays[visit];episodes[visit-1]['title']=overlay['title']
+        for key,row in overlay['lines'].items():
+            if not key.startswith(f'xm_{visit:02d}_'): add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
+    ui_five=json.loads((ROOT/'assets/week-five-six-localization.json').read_text(encoding='utf-8'))
+    for lang,entries in ui_five.items():loc[lang].update(entries)
     ui_four=json.loads((ROOT/'assets/week-four-localization.json').read_text(encoding='utf-8'))
     for lang,entries in ui_four.items(): loc[lang].update(entries)
 
@@ -205,7 +223,7 @@ def main():
     override_section = text[text.index("### D. 十四周"):text.index("### E. 实现验收")]
     for row in table_lines(override_section):
         key = row[0].strip("`")
-        if key in week_two['lines'] or key in week_three['lines'] or key in week_four['lines']:
+        if any(key in overlay['lines'] for overlay in overlays.values()):
             continue # An older performance draft cannot override a rewritten week's Japanese.
         lines[key]["generate_text"] = row[2]
         lines[key]["performance_optional"] = True
@@ -279,7 +297,7 @@ def main():
     old_manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     save(manifest_path, [dict(next(r for r in old_manifest if r["key"] == key), number=n, storyNode=f"visit_{n:02d}") for n, key in enumerate(TRACKS, 1)])
 
-    csharp = ["// Generated from the user's v3.4 final script. Subtitles live in Localization.", "namespace XiaomanVisitor", "{", "    public static class StoryCatalog", "    {", "        public static readonly StoryEpisode[] Episodes =", "        {"]
+    csharp = ["// Generated from approved weekly story inputs. Subtitles live in Localization.", "namespace XiaomanVisitor", "{", "    public static class StoryCatalog", "    {", "        public static readonly StoryEpisode[] Episodes =", "        {"]
     for e in episodes:
         defs = ", ".join("new StoryLineSpec(" + quote(key) + ", Mood." + lines[key]["mood"] + ")" for key in e["opening"])
         csharp.append(f"            new StoryEpisode({e['index']}, {e['credits']}, XiaomanDemand.{e['demand']}, {quote(e['track'])}, {quote(e['accept'])}, {quote(e['goodbye'])}, {quote(e['cocktail'])}, new StoryLineSpec[] {{ {defs} }}),")
@@ -299,10 +317,12 @@ def main():
     voice_keys = [k for k, row in lines.items() if not row.get("reference") and row["kind"] == "speech" and "voice_alias" not in row]
     source_path = args.source.resolve()
     source_name = source_path.relative_to(ROOT).as_posix() if source_path.is_relative_to(ROOT) else source_path.name
-    snapshot = dict(schema=1, version="4.6-W04", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+    snapshot = dict(schema=1, version="4.7-W05-W06", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
                     week_two_source=week_two['source'],week_two_sha256=week_two['sha256'],
                     week_three_source=week_three['source'],week_three_sha256=week_three['sha256'],
                     week_four_source=week_four['source'],week_four_sha256=week_four['sha256'],
+                    week_five_source=week_five['source'],week_five_sha256=week_five['sha256'],
+                    week_six_source=week_six['source'],week_six_sha256=week_six['sha256'],
                     episodes=episodes, actions=actions, lines=list(lines.values()), voice_keys=voice_keys,
                     sale_rule=dict(first=4, last=13, later_chance_percent=30, count=2, basic_only=True, excluded_visits=[6]),
                     fixed_drink_gift=dict(visit=6, count=1, tier=2, random_once=True, next_day=True, replaces_trade_reward=True),
@@ -317,7 +337,7 @@ def main():
         generate = line["generate_text"]
         spoken = re.sub(r"\[[^\]]+\]", "", generate).strip()
         templates = {lang: loc[lang][key] for lang in ("zh", "ja", "en")}
-        generic = "{" in loc["ja"][key]
+        generic = any("{" in template for template in templates.values())
         assert "{" not in spoken and "}" not in spoken, key
         row = dict(key=key, subtitle_templates=templates, spoken_text=spoken, generate_text=generate, generic=generic,
                    reviewed=True, audio="", note="用户v3.4终版；演出标签仅在generate_text，不进入字幕。",

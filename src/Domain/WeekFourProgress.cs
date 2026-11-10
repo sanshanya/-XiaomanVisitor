@@ -47,6 +47,8 @@ namespace XiaomanVisitor
     {
         public string Id, Key;
         public int Day, Produced, PlayerInitial, StoreInitial, PlayerSold, StoreSold, IngredientCost, MakingCost;
+        public int WholesalePrice=SupplyConfig.Wholesale;
+        public string MaterialSource="player", CompanyLot="";
         public int PlayerRemaining { get { return PlayerInitial-PlayerSold; } }
         public int StoreRemaining { get { return StoreInitial-StoreSold; } }
     }
@@ -58,7 +60,7 @@ namespace XiaomanVisitor
     public sealed class BarStockUse { public string Id, BatchId;public bool Cancelled, Settled; }
 
     // Own ledger only: no native rent, debt, reputation or W03 order revenue.
-    public sealed class SupplyProgress
+    public sealed partial class SupplyProgress
     {
         public const string SaveKey="tavern_supply_v1";
         public int Schema=1,SignedDay=-1,Cash=SupplyConfig.InitialCash,Water,Juice;
@@ -91,9 +93,9 @@ namespace XiaomanVisitor
         public SupplyTrade PrepareOutput(string run,int day,string batchId,int item,int cash)
         {
             var b=Batches.FirstOrDefault(v => v.Id==batchId);
-            if (Blocked || !Signed || Pending!=null || item<=0 || cash<SupplyConfig.Wholesale || b==null || b.PlayerRemaining<=0) return null;
+            if (Blocked || !Signed || Pending!=null || item<=0 || b==null || cash<b.WholesalePrice || b.PlayerRemaining<=0) return null;
             var t=new SupplyTrade { Id=run+":supply_out:"+day+":"+item,Day=day,Direction="out",Key=b.Key,BatchId=b.Id,
-                ItemId=item,Count=1,Price=SupplyConfig.Wholesale,BeforeCash=cash };
+                ItemId=item,Count=1,Price=b.WholesalePrice,BeforeCash=cash };
             if (Trades.Any(v => v.Id==t.Id)) return null;
             Trades.Add(t);return t;
         }
@@ -151,7 +153,7 @@ namespace XiaomanVisitor
             if (string.IsNullOrEmpty(raw)) return new SupplyProgress();
             try {
                 var p=JsonConvert.DeserializeObject<SupplyProgress>(raw);
-                if (p!=null && p.Schema==1 && p.Cash>=0 && p.Water>=0 && p.Juice>=0 && p.Trades!=null && p.Batches!=null && p.BarUses!=null
+                if (p!=null && p.Schema==1 && p.Cash>=0 && p.Water>=0 && p.Juice>=0 && p.Trades!=null && p.Batches!=null && p.BarUses!=null && p.ValidLuxury()
                     && p.Trades.All(t => t!=null && t.Count>0 && t.Price>0 && t.ItemId>0 && new[]{"prepared","moving","paid","complete","cancelled","uncertain"}.Contains(t.Status))
                     && p.Trades.GroupBy(t => t.Id).All(g => g.Count()==1) && p.Trades.Count(t => t.Status!="complete" && t.Status!="cancelled")<=1
                     && p.Batches.All(b => b!=null && !string.IsNullOrEmpty(b.Id)) && p.BarUses.All(u => u!=null && !string.IsNullOrEmpty(u.Id))

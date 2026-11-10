@@ -10,6 +10,10 @@
     {
       "file": "gadugi.ttf",
       "sha256": "0ec2bdbfc2ba99d9fb05b6f7c511e7ab8b7c055e2d644570ad777455d6e9796d"
+    },
+    {
+      "file": "LeelawUI.ttf",
+      "sha256": "ca9a670f12d0e47c20441012a22f78ab17c1b126818e0e887ef7db6ecf5e76b4"
     }
   ],
   "authoring_font": "experiments/handwriting/fonts/Yozai-Regular.ttf",
@@ -113,15 +117,15 @@
       "id": "story_note_05",
       "language": "zh",
       "file": "Letters/zh/story_note_05.png",
-      "sha256": "a5aef2df81c738546e3ff5088854e2bf8ef1eb778d465ca57294d52b8ec7f631",
-      "bytes": 61390,
-      "text_sha256": "e64f14ff2a52221f9a00e5592cf8f2c9b32f6242d51a6a04eae42137b7d098c4",
+      "sha256": "296c576c3b0a1e624536fb866d4505169a27f9b10a4382e2091b28f602e37513",
+      "bytes": 100475,
+      "text_sha256": "a4392eceebe1fbe70397d57f3d2208f6abd3e7f7c1b6416528ab4dca3cc75cb0",
       "layout": {
         "font": "yozai",
         "visit": 5,
         "language": "zh",
-        "lines": 7,
-        "body_bottom": 430.0,
+        "lines": 11,
+        "body_bottom": 621.12,
         "available_bottom": 665,
         "fits": true,
         "longest_line": 495.36
@@ -131,15 +135,15 @@
       "id": "story_note_06",
       "language": "zh",
       "file": "Letters/zh/story_note_06.png",
-      "sha256": "16a39ec96797928791ae9e131e8280886bd7459dfb61a5737b0cfdc069f11811",
-      "bytes": 59998,
-      "text_sha256": "745def0066b68b93aec5e2a16e96ba80e4771bb65bf775dea54ea40254c89d71",
+      "sha256": "4434b6910a19d675f3b2bbace2cf68a822e7ea807ee9227b277c065d8e9fd48a",
+      "bytes": 90187,
+      "text_sha256": "922da4ae7225b2e2830f8242ce4d0bcdcc7b60a2bab8097a6daa5faa7ace04c0",
       "layout": {
         "font": "yozai",
         "visit": 6,
         "language": "zh",
-        "lines": 7,
-        "body_bottom": 430.0,
+        "lines": 9,
+        "body_bottom": 525.56,
         "available_bottom": 665,
         "fits": true,
         "longest_line": 495.36
@@ -401,15 +405,15 @@
       "id": "story_note_05",
       "language": "ja",
       "file": "Letters/ja/story_note_05.png",
-      "sha256": "0b6e29e7e451fe37b199fd78ecde847082ffa0d143d1cde791cae7b4591ca29f",
-      "bytes": 81445,
-      "text_sha256": "add39cf897c26c282f784fbe37fb27f7169ae6a080c882c27fa01444b2b4cc60",
+      "sha256": "e3523399973a45bd239298f28bef55c6b57c41f93d3d3cc276fc141429aeca71",
+      "bytes": 123513,
+      "text_sha256": "97022878d30fdc477357ce692a31c8a848099113c23c5f85c6869a9c6e08cedc",
       "layout": {
         "font": "yozai",
         "visit": 5,
         "language": "ja",
-        "lines": 10,
-        "body_bottom": 515.32,
+        "lines": 15,
+        "body_bottom": 652.97,
         "available_bottom": 665,
         "fits": true,
         "longest_line": 495.36
@@ -419,15 +423,15 @@
       "id": "story_note_06",
       "language": "ja",
       "file": "Letters/ja/story_note_06.png",
-      "sha256": "68f1360af3d166bed6cc38534497703bad75a93a341969ae8441aa11ddca2b6d",
-      "bytes": 83959,
-      "text_sha256": "a9af9243f84943856a4052dcc4cda19d7e5a0760a9fe740e84946c07029d1e12",
+      "sha256": "e1f706774b40dc292bb470f53e85831b5fe144af31a4db953425120790eec8b7",
+      "bytes": 106459,
+      "text_sha256": "2b737a871f695c2c97bbb8076dbaa9e3363edccb54b3c79bf4322c5f4fedc438",
       "layout": {
         "font": "yozai",
         "visit": 6,
         "language": "ja",
-        "lines": 10,
-        "body_bottom": 515.32,
+        "lines": 14,
+        "body_bottom": 663.78,
         "available_bottom": 665,
         "fits": true,
         "longest_line": 495.36
@@ -689,36 +693,36 @@
       "id": "story_note_05",
       "language": "en",
       "file": "Letters/en/story_note_05.png",
-      "sha256": "ebd277b9608c50adcd4c000309ed75408aa458fad3af77921f6a9435ebe81bdf",
-      "bytes": 76057,
-      "text_sha256": "c368519a63b351fd6bc4462bd761e3b06f567fa677e0f39f6c09b5880990743b",
+      "sha256": "052931815b75cdb763d587580a84dc198134532610ec297731a76887b9f5c852",
+      "bytes": 103464,
+      "text_sha256": "f3d396cea3cce6609cf975b4cf5d99fb1257ec3f9605d1a2f1b7ff584d9bf602",
       "layout": {
         "font": "yozai",
         "visit": 5,
         "language": "en",
-        "lines": 11,
-        "body_bottom": 543.76,
+        "lines": 14,
+        "body_bottom": 624.53,
         "available_bottom": 665,
         "fits": true,
-        "longest_line": 496.11
+        "longest_line": 497.16
       }
     },
     {
       "id": "story_note_06",
       "language": "en",
       "file": "Letters/en/story_note_06.png",
-      "sha256": "4b7e3d9f63d8d35349f988f9389fdbb4d0dfd8ac2dbf54207e3fc458a3019d02",
-      "bytes": 67860,
-      "text_sha256": "61e2c27bbf14ad407e1f356de342c09b3fa580ebb7c78ad7aa7eba3ad979fd16",
+      "sha256": "1d9d55e3e9c83aaa439b733173764699e1b8c2b7ce70d5222654e5b999350606",
+      "bytes": 87463,
+      "text_sha256": "5faa393797967448a168fb4d290b0c7c5b2b36e6918d04cecaaef2a90f6d1849",
       "layout": {
         "font": "yozai",
         "visit": 6,
         "language": "en",
-        "lines": 8,
-        "body_bottom": 458.44,
+        "lines": 13,
+        "body_bottom": 639.32,
         "available_bottom": 665,
         "fits": true,
-        "longest_line": 490.49
+        "longest_line": 496.13
       }
     },
     {

@@ -1,4 +1,4 @@
-// Generated from the user's v3.4 final script. Subtitles live in Localization.
+// Generated from approved weekly story inputs. Subtitles live in Localization.
 namespace XiaomanVisitor
 {
     public static class StoryCatalog
@@ -9,8 +9,8 @@ namespace XiaomanVisitor
             new StoryEpisode(2, 200, XiaomanDemand.Household, "intro", "xm_02_accept", "xm_02_bye", "", new StoryLineSpec[] { new StoryLineSpec("xm_02_01", Mood.Soft), new StoryLineSpec("xm_02_02", Mood.Smile), new StoryLineSpec("xm_02_03", Mood.Shy), new StoryLineSpec("xm_02_04", Mood.Smile), new StoryLineSpec("xm_02_shop", Mood.Neutral) }),
             new StoryEpisode(3, 250, XiaomanDemand.Food, "nightfall", "xm_03_accept", "xm_03_bye", "", new StoryLineSpec[] { new StoryLineSpec("xm_03_01", Mood.Soft), new StoryLineSpec("xm_03_02", Mood.Smile), new StoryLineSpec("xm_03_03", Mood.Shy), new StoryLineSpec("xm_03_04", Mood.Smile), new StoryLineSpec("xm_03_shop", Mood.Neutral) }),
             new StoryEpisode(4, 300, XiaomanDemand.Water, "intro2", "xm_04_accept", "xm_04_bye", "xm_04_cocktail", new StoryLineSpec[] { new StoryLineSpec("xm_04_01", Mood.Soft), new StoryLineSpec("xm_04_02", Mood.Smile), new StoryLineSpec("xm_04_03", Mood.Smile), new StoryLineSpec("xm_04_04", Mood.Smile), new StoryLineSpec("xm_04_shop", Mood.Neutral) }),
-            new StoryEpisode(5, 350, XiaomanDemand.Household, "midnight", "accept_return", "goodbye", "", new StoryLineSpec[] { new StoryLineSpec("xm_05_01", Mood.Smile), new StoryLineSpec("xm_05_02", Mood.Shy), new StoryLineSpec("xm_05_shop", Mood.Neutral) }),
-            new StoryEpisode(6, 400, XiaomanDemand.Water, "latenight", "accept_return", "goodbye", "", new StoryLineSpec[] { new StoryLineSpec("xm_06_01", Mood.Soft), new StoryLineSpec("xm_06_02", Mood.Shy), new StoryLineSpec("xm_06_shop", Mood.Neutral) }),
+            new StoryEpisode(5, 350, XiaomanDemand.Household, "midnight", "xm_05_accept", "xm_05_bye", "", new StoryLineSpec[] { new StoryLineSpec("xm_05_01", Mood.Smile), new StoryLineSpec("xm_05_02", Mood.Smile), new StoryLineSpec("xm_05_03", Mood.Smile), new StoryLineSpec("xm_05_04", Mood.Shy), new StoryLineSpec("xm_05_gift", Mood.Smile), new StoryLineSpec("xm_05_shop", Mood.Neutral) }),
+            new StoryEpisode(6, 400, XiaomanDemand.Water, "latenight", "xm_06_accept", "xm_06_bye", "", new StoryLineSpec[] { new StoryLineSpec("xm_06_01", Mood.Soft), new StoryLineSpec("xm_06_02", Mood.Smile), new StoryLineSpec("xm_06_03", Mood.Smile), new StoryLineSpec("xm_06_04", Mood.Smile), new StoryLineSpec("xm_06_shop", Mood.Neutral) }),
             new StoryEpisode(7, 450, XiaomanDemand.Food, "diary", "accept_return", "goodbye", "", new StoryLineSpec[] { new StoryLineSpec("xm_07_01", Mood.Soft), new StoryLineSpec("xm_07_02", Mood.Smile), new StoryLineSpec("xm_07_shop", Mood.Neutral) }),
             new StoryEpisode(8, 500, XiaomanDemand.Household, "gallery1", "accept_return", "goodbye", "", new StoryLineSpec[] { new StoryLineSpec("xm_08_01", Mood.Smile), new StoryLineSpec("xm_08_02", Mood.Soft), new StoryLineSpec("xm_08_shop", Mood.Neutral) }),
             new StoryEpisode(9, 450, XiaomanDemand.Food, "lost", "accept_return", "goodbye", "", new StoryLineSpec[] { new StoryLineSpec("xm_09_01", Mood.Neutral), new StoryLineSpec("xm_09_02", Mood.Shy), new StoryLineSpec("xm_09_shop", Mood.Neutral) }),

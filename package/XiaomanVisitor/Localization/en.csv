@@ -89,18 +89,18 @@ story_note_04_title,"Dear shopkeeper,"
 story_note_04_body,"After mentioning supplies yesterday, I went back and made another list of what the bar needs.\n\nI used to write down only what was missing that day. Now I am planning ingredients for the weeks ahead.\n\nIt is tiring, but I am happy.\n\nThere is still so much you can teach me about running a shop.\n\nPlease do not feel you have to agree right away. You have your own business. We can talk when it suits you.\n\nHere is this week's tape. (´,,•ω•,,)♡\n\nI have enclosed this week's supply categories. Come and see me if you are interested."
 story_note_04_signature,— Xiaoman
 story_note_04_name,A note from Xiaoman
-xm_05_01,Good evening. A customer called me 'the owner' yesterday.
-xm_05_02,It took me a moment to realise she meant me. Even though it is my own place.
-xm_05_shop,I'd like a few everyday supplies today.
-story_note_05_title,"Dear shopkeeper,"
-story_note_05_body,"Thank you for yesterday.\n\nA friend back home asked how the new place was going. I spent ages choosing a photo and finally sent one of the bar just after I'd switched on the lights.\n\nShe said, 'It looks wonderful.'\n\nIt's my own place, but hearing someone say that somehow made me more nervous.\n\nPlease come by more often. I've put up lots of new decorations.\n\nI'd love a few pointers from someone with more experience."
+xm_05_01,"Good evening, senpai. The new supplier sent some fine spirits last week. I have been trying them out."
+xm_05_02,There was one base spirit I had always wanted to use. Yesterday I finally got the taste right.
+xm_05_shop,I need some household supplies today. I brought {0} credits.
+story_note_05_title,"Dear senpai,"
+story_note_05_body,"The new drinks are finally on the menu!\n\nThe ingredients are rare stock from the new supplier.\n\nI tried several times, but something was always missing. Yesterday I mixed them again and could not help thinking: yes, this is it!\n\nThey are quite a bit dearer than the old drinks, though.\n\nBut everyone at the tavern has loved them.\n\nMaybe I have found my way into the upper-level market~\n\nHehe, I am feeling a little proud. (๑•́ ₃ •̀๑)\n\nThe supplier sent a huge sign, too. They said it would stand out by the entrance.\n\nI held it up to try it, and it covered the rain on the window perfectly.\n\n...In the end, I put it away in the cupboard."
 story_note_05_signature,— Xiaoman
 story_note_05_name,A note from Xiaoman
-xm_06_01,Good evening. A customer told me the other day that my cocktails were a little sweet.
-xm_06_02,But I thought they were just right... Am I the only one?
-xm_06_shop,I've come for some drinking water today.
-story_note_06_title,"Dear shopkeeper,"
-story_note_06_body,"A wealthy customer from the upper district said my cocktails were too sweet last night.\n\nToday I kept adjusting the drink they said was too sweet.\n\nA little less sugar, a sip. Then I put it back.\n\nAll they really said was 'a little sweet,' not that it tasted bad. Why have I been thinking about it for two days?\n\nI'm leaving the menu alone today.\n\nI'd like to know what you think."
+xm_06_01,"Good evening, senpai. There have been so many new faces at the tavern lately."
+xm_06_02,Yesterday an interstellar traveller asked if there was anywhere nearby worth visiting after his drink.
+xm_06_shop,I need some drinking water today. I brought {0} credits.
+story_note_06_title,"Dear senpai,"
+story_note_06_body,"Yesterday I mentioned sending a traveller your way. Back at the tavern, I suddenly remembered the first time I walked into your shop.\n\nI still did not know my way around. I only came in because the lights were on.\n\nIt was a pawnshop, but there was a cassette deck on the counter.\n\nEven then, your shop felt a little mysterious.\n\nI wonder if that traveller ever found it.\n\nIf he really came by, I hope he found something interesting too.\n\nMay your business keep getting better, senpai~\n\nHere is this week's tape."
 story_note_06_signature,— Xiaoman
 story_note_06_name,A note from Xiaoman
 xm_07_01,Good evening. My friends sent me a photo of their get-together yesterday.
@@ -426,3 +426,45 @@ group_contract_body,"TENQUIN Assets | Joint Trial Operation Agreement (Summary)\
 ui_w04_deck,Xiaoman's cassette player
 xm_w04_audit_01_late,"Hello. Tenquin Asset Corporation, Merchant Assessment. We arranged this visit earlier."
 ui_w04_phone_name,Tenquin Merchant Development
+xm_05_03,They sold out as soon as I put them out yesterday. People asked if there would be more next time. Hehe... of course!
+xm_05_04,"But I quietly saved enough ingredients for one glass, so you could try it too."
+xm_05_gift,This one is for you. No charge today.
+xm_05_accept,Thank you. Just what I needed.
+xm_05_bye,"I should go. If you have time tonight, come try the new drinks."
+xm_05_01_late,"Good evening, senpai. I spent a while trying out some fine spirits from the new supplier."
+xm_05_02_late,I finally got the taste right with a base spirit I had always wanted to use.
+xm_05_03_late,The first batch sold out right away. People asked if there would be more. Hehe... of course!
+xm_06_03,So I told him there was a lovely pawnshop down the shopping street. He might find something interesting there.
+xm_06_04,"Hehe, I wonder if he will actually come by. If he does, remember my reward, senpai~"
+xm_06_accept,Thank you. Just what I needed.
+xm_06_bye,I should go. There are still a few things to get ready for tonight.
+xm_tavern_05_new_01,"Senpai, have you seen the new menu? There are two new drinks."
+xm_tavern_05_new_02,"Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher."
+xm_tavern_05_new_03,"These ingredients are hard to come by, so I can only make a few for now. If people like them, I will order more."
+xm_tavern_05_soldout,"Ah, sorry... that one is sold out. Come back when the next batch arrives."
+xm_tavern_05_daily,"People keep asking about the two new drinks. I still want to keep the old ones on the menu, though. Not everyone wants something expensive."
+xm_tavern_05_new_01_unknown,have you seen the new menu? There are two new drinks.
+xm_tavern_05_new_02_unknown,"Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher."
+xm_tavern_05_new_03_unknown,"These ingredients are hard to come by, so I can only make a few for now. If people like them, I will order more."
+xm_tavern_05_soldout_unknown,"Ah, sorry... that one is sold out. Come back when the next batch arrives."
+xm_tavern_05_daily_unknown,"People keep asking about the two new drinks. I still want to keep the old ones on the menu, though. Not everyone wants something expensive."
+xm_tavern_06_chat_01,Quite a few passing travellers have come in lately. Some are waiting for their ships. Others make a special detour for a drink.
+xm_tavern_06_chat_02,"Some start telling me about places they have been. I have not gone anywhere, yet it feels as if I have travelled with them."
+xm_w06_referral_tourist,Hello. Xiaoman at the tavern recommended this shop. I hear you have some interesting things.
+xm_w06_referral_upper,Hello. The owner of Xiaoman Tavern recommended you. I hear there are some fine finds here.
+xm_tavern_06_chat_01_unknown,Quite a few passing travellers have come in lately. Some are waiting for their ships. Others make a special detour for a drink.
+xm_tavern_06_chat_02_unknown,"Some start telling me about places they have been. I have not gone anywhere, yet it feels as if I have travelled with them."
+cocktail_wonderland_name,Wonderland
+cocktail_spring_sway_name,Spring Sway
+cocktail_wonderland_improv_name,Wonderland · Improvisation
+cocktail_wonderland_desc,"White peach, pear blossom and honey cream; fine bubbles as light as clouds. Citrus peel brightens the aroma, followed by violet and cool mint.\nSo smooth that each sip invites another, like a stroll through Wonderland."
+cocktail_spring_sway_desc,"Bright tart green plum and fragrant, bitter yuzu peel over cold-brewed jasmine and soft rice notes. Salted cherry leaf and a hint of young pepper leaf draw the finish back to sweetness."
+cocktail_wonderland_improv_desc,An improvisation mixed with a heart full of joy and happiness.
+drink_buff_today,Lasts for the rest of today.
+ui_w05_luxury,Fine drinks
+ui_w05_classic,Classic menu
+ui_w05_stock,Remaining: {0}
+ui_w05_gift,Xiaoman left a glass of Wonderland · Improvisation.
+ui_w05_recipe,"Fine drinks: {0} glasses per batch; rare kit {1} CR, preparation {2} CR, one water and one juice. Missing common ingredients are purchased at listed prices. Wholesale {3} CR/glass, onsite {4} CR/glass. One batch per recipe per week, using the agreed split."
+ui_w05_company_total,Supplier materials paid: {0} CR
+ui_w05_lot,"Day {0} · {1} · materials paid {2} CR\nUsed from your deliveries: {3} water, {4} juice"

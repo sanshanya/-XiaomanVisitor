@@ -1,0 +1,137 @@
+{
+  "schema": 1,
+  "visit": 5,
+  "title": "酒架上的新酒",
+  "author_source": "story/小满酒馆_第五周_v4.7_剧情与高档酒实施稿.md",
+  "lines": {
+    "xm_05_01": {
+      "zh": "晚上好，前辈。上星期新供货商送来了几瓶好酒，我这两天一直在试呢。",
+      "ja": "こんばんは、先輩。先週、新しい仕入れ先からいいお酒が何本か届いて。ここ数日、ずっと試していたんです。",
+      "en": "Good evening, senpai. The new supplier sent some fine spirits last week. I have been trying them out.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_05_02": {
+      "zh": "有一种基酒我以前就很想用，昨天终于调出满意的口味啦。",
+      "ja": "ずっと使ってみたかったベースのお酒があって。昨日、やっと納得できる味になったんですよ。",
+      "en": "There was one base spirit I had always wanted to use. Yesterday I finally got the taste right.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_05_03": {
+      "zh": "昨天一推出就直接售罄了，客人们走的时候问我下次还有没有。嘿嘿……当然有啦。",
+      "ja": "昨日出したら、あっという間に売り切れちゃって。帰り際に「次もある？」って聞かれたんです。えへへ……もちろん、ありますよ。",
+      "en": "They sold out as soon as I put them out yesterday. People asked if there would be more next time. Hehe... of course!",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_05_04": {
+      "zh": "不过我偷偷留了一杯的原料，想要带给前辈尝尝。",
+      "ja": "でも、先輩にも飲んでもらいたくて、一杯分の材料だけ、こっそり取っておいたんです。",
+      "en": "But I quietly saved enough ingredients for one glass, so you could try it too.",
+      "mood": "Shy",
+      "defer_voice": true
+    },
+    "xm_05_gift": {
+      "zh": "这个是留给前辈的。今天可不收钱哦。",
+      "ja": "これは先輩の分です。今日は、お代はいりませんからね。",
+      "en": "This one is for you. No charge today.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_05_shop": {
+      "zh": "今天想买点日用品。带了 {0} 信用点。",
+      "ja": "今日は日用品を少し買いに来ました。",
+      "en": "I need some household supplies today. I brought {0} credits.",
+      "mood": "Neutral",
+      "defer_voice": true
+    },
+    "xm_05_accept": {
+      "zh": "谢谢。正好用得上。",
+      "ja": "ありがとうございます。ちょうど必要だったんです。",
+      "en": "Thank you. Just what I needed.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_05_bye": {
+      "zh": "那我先走啦。晚上有空的话，欢迎来尝尝新酒。",
+      "ja": "それじゃ、また。夜、時間があったら、新しいお酒も飲みに来てくださいね。",
+      "en": "I should go. If you have time tonight, come try the new drinks.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_tavern_05_new_01": {
+      "zh": "前辈，看到新酒单了吗？新添了两款酒哦。",
+      "ja": "先輩、新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+      "en": "Senpai, have you seen the new menu? There are two new drinks.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_tavern_05_new_02": {
+      "zh": "梦游仙境是我试了好几次才调好的，轻摇春色则想做得清爽一点。",
+      "ja": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+      "en": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_tavern_05_new_03": {
+      "zh": "这批原料有点紧俏，暂时只能做这么多。喜欢的话，以后再多进一点吧。",
+      "ja": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+      "en": "These ingredients are hard to come by, so I can only make a few for now. If people like them, I will order more.",
+      "mood": "Shy",
+      "defer_voice": true
+    },
+    "xm_tavern_05_soldout": {
+      "zh": "啊，抱歉……这款今天已经卖完啦。下批到了再来看看吧。",
+      "ja": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+      "en": "Ah, sorry... that one is sold out. Come back when the next batch arrives.",
+      "mood": "Neutral",
+      "defer_voice": true
+    },
+    "xm_tavern_05_daily": {
+      "zh": "最近一直有人问那两款新酒呢。不过我还是想把原来的几款留在酒单上。毕竟不是每个人都喜欢喝贵的嘛。",
+      "ja": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+      "en": "People keep asking about the two new drinks. I still want to keep the old ones on the menu, though. Not everyone wants something expensive.",
+      "mood": "Soft",
+      "defer_voice": true
+    },
+    "xm_05_01_late": {
+      "zh": "晚上好，前辈。新供货商送来了一批好酒，我试了好一阵子呢。",
+      "ja": "こんばんは、先輩。新しい仕入れ先からいいお酒が届いて、しばらく試していたんです。",
+      "en": "Good evening, senpai. I spent a while trying out some fine spirits from the new supplier.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_05_02_late": {
+      "zh": "有一种基酒我以前就很想用，终于调出满意的口味啦。",
+      "ja": "ずっと使ってみたかったベースのお酒で、やっと納得できる味になったんですよ。",
+      "en": "I finally got the taste right with a base spirit I had always wanted to use.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_05_03_late": {
+      "zh": "第一次推出就直接售罄了，客人们走的时候问我下次还有没有。嘿嘿……当然有啦。",
+      "ja": "初めて出した日に、あっという間に売り切れちゃって。「次もある？」って聞かれたんです。えへへ……もちろん、ありますよ。",
+      "en": "The first batch sold out right away. People asked if there would be more. Hehe... of course!",
+      "mood": "Smile",
+      "defer_voice": true
+    }
+  },
+  "letters": {
+    "zh": {
+      "title": "致店长前辈：",
+      "body": "新酒终于写上酒单啦！\n\n原料是新供应商提供的紧俏货，\n\n之前试调好几次，总觉得味道还差那么一点点。昨天重新调过以后，才忍不住想：嗯，就是这个！\n\n不过价格比以前的酒贵了不少呢。\n\n不过店里的反馈非常好呢。\n\n我算是打通了上层区的销路了吧～\n\n嘿嘿，稍微有点得意呢。(๑•́ ₃ •̀๑)\n\n供货商还送了一块很大的宣传牌，说挂在门口比较显眼。\n\n我拿着试了一下，发现刚好会挡住窗户上的雨。\n\n……最后还是收进柜子里了。",
+      "signature": "——小满"
+    },
+    "ja": {
+      "title": "店長の先輩へ",
+      "body": "新しいお酒、ついにメニューに載せました！\n\n材料は、新しい仕入れ先から届いた、ちょっと貴重なものなんです。\n\n何度か試していたんですけど、どうしてもあと少しだけ納得できなくて。昨日もう一度作り直したら、思わず「うん、これ！」って。\n\n前のお酒より、ずいぶん高くなっちゃったんですけどね。\n\nでも、お店での評判はとってもよかったんです。\n\nこれで上層区のお客さんにも、少しは知ってもらえたのかな～。\n\nえへへ、ちょっとだけ得意になっちゃいました。(๑•́ ₃ •̀๑)\n\n仕入れ先が、大きな宣伝用の看板も送ってくれたんです。入口に置くと目立つんですって。\n\n試しに置いてみたら、窓の雨がちょうど隠れちゃって。\n\n……結局、しまっておくことにしました。",
+      "signature": "みちる"
+    },
+    "en": {
+      "title": "Dear senpai,",
+      "body": "The new drinks are finally on the menu!\n\nThe ingredients are rare stock from the new supplier.\n\nI tried several times, but something was always missing. Yesterday I mixed them again and could not help thinking: yes, this is it!\n\nThey are quite a bit dearer than the old drinks, though.\n\nBut everyone at the tavern has loved them.\n\nMaybe I have found my way into the upper-level market~\n\nHehe, I am feeling a little proud. (๑•́ ₃ •̀๑)\n\nThe supplier sent a huge sign, too. They said it would stand out by the entrance.\n\nI held it up to try it, and it covered the rain on the window perfectly.\n\n...In the end, I put it away in the cupboard.",
+      "signature": "— Xiaoman"
+    }
+  }
+}

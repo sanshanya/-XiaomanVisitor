@@ -28,7 +28,10 @@ namespace XiaomanVisitor
         public static bool IsOpen(bool enabled, bool hasRun, int day, bool departed)
         { return enabled && hasRun && day >= OpeningDay && !departed; }
         public static string OpeningLineKey(int visit, string key, int day)
-        { return visit == 2 && key == "xm_02_02" && day > OpeningDay ? "xm_02_02_late" : key; }
+        {
+            if (visit==5 && day>29 && new[]{"xm_05_01","xm_05_02","xm_05_03"}.Contains(key)) return key+"_late";
+            return visit==2 && key=="xm_02_02" && day>OpeningDay ? "xm_02_02_late" : key;
+        }
         public static bool OpeningWeek(int day) { return day >= OpeningDay && day <= 14; }
         public static string[] MusicKeys(int visits)
         { return StoryCatalog.Episodes.Take(Math.Max(2,Math.Min(14,visits))).Select(e => e.TrackKey).ToArray(); }
@@ -107,6 +110,8 @@ namespace XiaomanVisitor
         { return key=="xm_tavern_w03_chat_after_work" ? key+"@"+day : key; }
         public string NextChat(int day,bool workedToday=false)
         {
+            if (day>=36) return new[]{"xm_tavern_06_chat_01","xm_tavern_06_chat_02"}.FirstOrDefault(k => !ChatSeen.Contains(k)) ?? "xm_tavern_chat_rest";
+            if (day>=29) return !ChatSeen.Contains("xm_tavern_05_daily") ? "xm_tavern_05_daily" : "xm_tavern_chat_rest";
             if (day>=15) {
                 string after="xm_tavern_w03_chat_after_work";
                 if (workedToday && !ChatSeen.Contains(ChatReceipt(after,day))) return after;
@@ -120,7 +125,7 @@ namespace XiaomanVisitor
         public TavernDrinkRecord PrepareDrink(int day, string key, int cash, string beforeBuffs)
         {
             CocktailSpec spec = CocktailCatalog.Find(key);
-            if (spec == null || !MayDrink(day) || cash < TavernPrices.For(spec)) return null;
+            if (spec == null || !LuxuryDrinkCatalog.OnMenu(key,day) || !MayDrink(day) || cash < TavernPrices.For(spec)) return null;
             var buffs = DrinkBuffCollection.Restore(beforeBuffs);
             buffs.Replace(spec,day);
             var record = new TavernDrinkRecord { Id = "tavern_drink_"+day, Day=day, Key=key, Paid=TavernPrices.For(spec),

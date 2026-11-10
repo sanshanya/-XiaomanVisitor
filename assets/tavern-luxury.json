@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "unlock_day": 29,
+  "preview_day": 28,
+  "onsite_price": 300,
+  "wholesale_price": 220,
+  "batch_output": 6,
+  "rare_kit_cost": 180,
+  "making_cost": 12,
+  "water": 1,
+  "juice": 1,
+  "restock": "one batch per SKU per calendar week; no retroactive missed weeks",
+  "trial": "narrative_only_no_cash",
+  "keys": [
+    "wonderland",
+    "spring_sway"
+  ]
+}

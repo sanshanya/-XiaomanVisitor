@@ -1,0 +1,50 @@
+{
+  "zh": {
+    "cocktail_wonderland_name": "梦游仙境",
+    "cocktail_spring_sway_name": "轻摇春色",
+    "cocktail_wonderland_improv_name": "梦游仙境·即兴版",
+    "cocktail_wonderland_desc": "白桃、梨花与蜂蜜奶油入口，细密气泡轻盈得像踩在云上；柑橘皮提亮香气，尾段浮出紫罗兰与凉薄荷。\n它柔顺得让人一口接一口，仿佛仙境游园。",
+    "cocktail_spring_sway_desc": "青梅酸亮，柚子皮清苦提香，茉莉冷萃与米香柔和铺底；尾韵一点盐渍樱叶的咸鲜、山椒叶的微辛收回甘味。",
+    "cocktail_wonderland_improv_desc": "在饱含喜悦和幸福的心情中完成的一次即兴调制。",
+    "drink_buff_today": "持续至今日结束。",
+    "ui_w05_luxury": "高档酒",
+    "ui_w05_classic": "原来的酒单",
+    "ui_w05_stock": "余量：{0}",
+    "ui_w05_gift": "小满留下了一杯梦游仙境·即兴版。",
+    "ui_w05_recipe": "高档酒每批{0}杯：稀有材料包{1} CR，制作{2} CR，水、果汁各1份。缺少的普通材料按清单采购。批发{3} CR／杯，店内{4} CR／杯；每款每周一批，沿用成品分配约定。",
+    "ui_w05_company_total": "供应商材料实付合计：{0} CR",
+    "ui_w05_lot": "第{0}天 · {1} · 材料付款{2} CR\n使用前辈供货：水{3}、果汁{4}"
+  },
+  "ja": {
+    "cocktail_wonderland_name": "夢遊仙境",
+    "cocktail_spring_sway_name": "軽揺春色",
+    "cocktail_wonderland_improv_name": "夢遊仙境・即興",
+    "cocktail_wonderland_desc": "白桃、梨の花、蜂蜜クリーム。雲を歩くように軽い泡に、柑橘の皮が香りを添え、最後にスミレと涼やかなミントが浮かぶ。\nひと口、またひと口。仙境を巡るような、なめらかな一杯。",
+    "cocktail_spring_sway_desc": "青梅の鮮やかな酸味に、柚子の皮のほろ苦い香り。水出しの茉莉花茶と米の香りがやさしく広がり、塩漬けの桜葉の旨味と山椒の若葉のかすかな辛みが、甘い余韻を引き締める。",
+    "cocktail_wonderland_improv_desc": "喜びと幸せをいっぱいに込めた、一度きりの即興の一杯。",
+    "drink_buff_today": "効果は今日いっぱい。",
+    "ui_w05_luxury": "特選のお酒",
+    "ui_w05_classic": "いつものメニュー",
+    "ui_w05_stock": "残り：{0}",
+    "ui_w05_gift": "みちるが「夢遊仙境・即興」を一杯置いていった。",
+    "ui_w05_recipe": "特選酒は一仕込み{0}杯。希少材料{1} CR、調製{2} CR、水とジュース各1。通常材料の不足分はリスト価格で仕入れます。卸{3} CR／杯、店内{4} CR／杯。各種類週一仕込み、分配は既存の約束通り。",
+    "ui_w05_company_total": "仕入れ先への材料支払計：{0} CR",
+    "ui_w05_lot": "{0}日目・{1}・材料支払{2} CR\n先輩の納品から使用：水{3}、ジュース{4}"
+  },
+  "en": {
+    "cocktail_wonderland_name": "Wonderland",
+    "cocktail_spring_sway_name": "Spring Sway",
+    "cocktail_wonderland_improv_name": "Wonderland · Improvisation",
+    "cocktail_wonderland_desc": "White peach, pear blossom and honey cream; fine bubbles as light as clouds. Citrus peel brightens the aroma, followed by violet and cool mint.\nSo smooth that each sip invites another, like a stroll through Wonderland.",
+    "cocktail_spring_sway_desc": "Bright tart green plum and fragrant, bitter yuzu peel over cold-brewed jasmine and soft rice notes. Salted cherry leaf and a hint of young pepper leaf draw the finish back to sweetness.",
+    "cocktail_wonderland_improv_desc": "An improvisation mixed with a heart full of joy and happiness.",
+    "drink_buff_today": "Lasts for the rest of today.",
+    "ui_w05_luxury": "Fine drinks",
+    "ui_w05_classic": "Classic menu",
+    "ui_w05_stock": "Remaining: {0}",
+    "ui_w05_gift": "Xiaoman left a glass of Wonderland · Improvisation.",
+    "ui_w05_recipe": "Fine drinks: {0} glasses per batch; rare kit {1} CR, preparation {2} CR, one water and one juice. Missing common ingredients are purchased at listed prices. Wholesale {3} CR/glass, onsite {4} CR/glass. One batch per recipe per week, using the agreed split.",
+    "ui_w05_company_total": "Supplier materials paid: {0} CR",
+    "ui_w05_lot": "Day {0} · {1} · materials paid {2} CR\nUsed from your deliveries: {3} water, {4} juice"
+  }
+}

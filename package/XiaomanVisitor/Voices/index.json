@@ -74,76 +74,16 @@
       "generic": false
     },
     {
-      "line_key": "xm_05_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_05_01_d630aae8835a",
-      "spoken_text": "こんばんは。昨日ね、 お客さんに「店長さん」って呼ばれたんです。",
-      "subtitle_templates": [
-        "晚上好。昨天有客人叫我「老板」了。",
-        "こんばんは。昨日、お客さんに「店長さん」って呼ばれたんです。",
-        "Good evening. A customer called me 'the owner' yesterday."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_05_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_05_02_87a99fecb7af",
-      "spoken_text": "一瞬、誰のことかと思っちゃいました。自分のお店なのに、変ですよね。",
-      "subtitle_templates": [
-        "我愣了一下才发现是在叫我。明明是自己的店呢。",
-        "一瞬、誰のことかと思っちゃいました。自分のお店なのに、変ですよね。",
-        "It took me a moment to realise she meant me. Even though it is my own place."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_05_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_05_shop_e6a21fd43af1",
-      "spoken_text": "今日は日用品を少し買い足したくて。",
-      "subtitle_templates": [
-        "今天想补点日用品。",
-        "今日は日用品を少し買い足したくて。",
-        "I'd like a few everyday supplies today."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_06_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_06_01_1c6c087fd61b",
-      "spoken_text": "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
-      "subtitle_templates": [
-        "晚上好。前两天有个客人说，我调的酒有点甜。",
-        "こんばんは。この前、お客さんに、カクテルがちょっと甘いって言われたんです。",
-        "Good evening. A customer told me the other day that my cocktails were a little sweet."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_06_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_06_02_4c3135ade223",
-      "spoken_text": "でも、わたしはちょうどいいと思うんですけど…… わたしだけかな。",
-      "subtitle_templates": [
-        "可我觉得刚刚好啊……是不是只有我这么觉得？",
-        "でも、わたしはちょうどいいと思うんですけど……わたしだけかな。",
-        "But I thought they were just right... Am I the only one?"
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_06_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_06_shop_da764496eae1",
       "spoken_text": "今日は飲み水を少し買いに来ました。",
       "subtitle_templates": [
-        "今天来买点饮用水。",
+        "今天想买点饮用水。带了 {0} 信用点。",
         "今日は飲み水を少し買いに来ました。",
-        "I've come for some drinking water today."
+        "I need some drinking water today. I brought {0} credits."
       ],
-      "generic": false
+      "generic": true
     },
     {
       "line_key": "xm_07_01",
@@ -1166,8 +1106,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 113,
+  "pending_lines": 146,
   "pending_by_language": {
-    "ja": 113
+    "ja": 146
   }
 }

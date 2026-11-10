@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "visit": 6,
+  "title": "从酒馆来的客人",
+  "author_source": "story/第六周_作者讨论与最终修订.txt",
+  "confirmed_letter": "末尾回望初遇改写稿；作者2026-11-10确认",
+  "rules": {
+    "unlock_day": 36,
+    "daily_percent": 25,
+    "monday": false,
+    "sunday_guarantee": true,
+    "daily_limit": 1,
+    "weekly_limit": null,
+    "pending_rollover": true
+  },
+  "lines": {
+    "xm_06_01": {
+      "zh": "晚上好，前辈。最近店里来了好多新面孔呢。",
+      "ja": "こんばんは、先輩。最近、お店に初めてのお客さんがたくさん来てくれるんです。",
+      "en": "Good evening, senpai. There have been so many new faces at the tavern lately.",
+      "mood": "Soft",
+      "defer_voice": true
+    },
+    "xm_06_02": {
+      "zh": "昨天有位星际旅客，喝完酒还问我，这附近有没有什么值得逛的地方。",
+      "ja": "昨日、星間旅行中のお客さんが、お酒を飲んだあとで、この辺りに寄ってみるといい場所はないかって。",
+      "en": "Yesterday an interstellar traveller asked if there was anywhere nearby worth visiting after his drink.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_06_03": {
+      "zh": "我就告诉他，商业街那头有一家很不错的当铺，说不定能淘到些有意思的东西。",
+      "ja": "それで、商店街の向こうに素敵な質屋さんがあるから、面白いものが見つかるかもしれませんよって、教えたんです。",
+      "en": "So I told him there was a lovely pawnshop down the shopping street. He might find something interesting there.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_06_04": {
+      "zh": "嘿嘿，也不知道他会不会真的来这里看看。如果来了，前辈记得给我奖励吖～",
+      "ja": "えへへ、本当に見に来てくれるかな。来てくれたら、先輩、ご褒美を忘れないでくださいね～。",
+      "en": "Hehe, I wonder if he will actually come by. If he does, remember my reward, senpai~",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_06_shop": {
+      "zh": "今天想买点饮用水。带了 {0} 信用点。",
+      "ja": "今日は飲み水を少し買いに来ました。",
+      "en": "I need some drinking water today. I brought {0} credits.",
+      "mood": "Neutral",
+      "defer_voice": true
+    },
+    "xm_06_accept": {
+      "zh": "谢谢。正好用得上。",
+      "ja": "ありがとうございます。ちょうど必要だったんです。",
+      "en": "Thank you. Just what I needed.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_06_bye": {
+      "zh": "那我先走啦。今晚店里还有些事要准备呢。",
+      "ja": "それじゃ、また。今夜のお店の準備が、まだ少し残っているんです。",
+      "en": "I should go. There are still a few things to get ready for tonight.",
+      "mood": "Soft",
+      "defer_voice": true
+    },
+    "xm_tavern_06_chat_01": {
+      "zh": "最近来了不少从外面经过的旅客呢。有人只是等船，也有人专程绕过来喝一杯。",
+      "ja": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+      "en": "Quite a few passing travellers have come in lately. Some are waiting for their ships. Others make a special detour for a drink.",
+      "mood": "Smile",
+      "defer_voice": true
+    },
+    "xm_tavern_06_chat_02": {
+      "zh": "有些客人喝着喝着，就聊起自己去过的地方。明明我哪里都没去，却好像跟着他们旅行了一圈呢。",
+      "ja": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
+      "en": "Some start telling me about places they have been. I have not gone anywhere, yet it feels as if I have travelled with them.",
+      "mood": "Soft",
+      "defer_voice": true
+    },
+    "xm_w06_referral_tourist": {
+      "zh": "您好，我是小满酒馆介绍来的。听说您这里有不少有意思的东西。",
+      "ja": "こんにちは。みちるの酒場でこちらを教えてもらいました。面白い品物がいろいろあるそうですね。",
+      "en": "Hello. Xiaoman at the tavern recommended this shop. I hear you have some interesting things.",
+      "mood": "Neutral",
+      "defer_voice": true
+    },
+    "xm_w06_referral_upper": {
+      "zh": "您好。小满酒馆的店主向我推荐了这里，听说偶尔能淘到些不错的货。",
+      "ja": "こんにちは。みちるの酒場の店主からこちらを勧められました。時々、いい掘り出し物が見つかるそうですね。",
+      "en": "Hello. The owner of Xiaoman Tavern recommended you. I hear there are some fine finds here.",
+      "mood": "Neutral",
+      "defer_voice": true
+    }
+  },
+  "letters": {
+    "zh": {
+      "title": "致前辈：",
+      "body": "昨天说给前辈介绍了位旅客，回店以后，忽然想起第一次走进前辈店里的时候。\n\n那时候还不太认得路，只是看见那边亮着灯，就进来了。\n\n明明是间当铺，柜台上却放着一台磁带机。\n\n那时候就觉得，前辈的店有点神秘呢。\n\n不知道那位旅客最后有没有找到这里。\n\n要是他真的来了，希望也能淘到些有意思的东西呀。\n\n希望前辈的生意也越来越好～\n\n这是这周的磁带。",
+      "signature": "——小满"
+    },
+    "ja": {
+      "title": "先輩へ",
+      "body": "昨日、先輩のお店を旅人さんに紹介したとお話ししましたよね。お店に戻ってから、初めて先輩のお店に入ったときのことを、ふと思い出したんです。\n\nあの頃はまだ道もよく分からなくて。ただ、明かりがついていたから入ったんでした。\n\n質屋さんなのに、カウンターにはカセットデッキが置いてあって。\n\nあのときから、先輩のお店は少し不思議だなって思っていました。\n\nあの旅人さん、無事にたどり着けたのかな。\n\n本当に来てくれたら、面白いものを見つけてもらえますように。\n\n先輩のお店も、ますます賑わいますように～。\n\n今週のカセットです。",
+      "signature": "みちる"
+    },
+    "en": {
+      "title": "Dear senpai,",
+      "body": "Yesterday I mentioned sending a traveller your way. Back at the tavern, I suddenly remembered the first time I walked into your shop.\n\nI still did not know my way around. I only came in because the lights were on.\n\nIt was a pawnshop, but there was a cassette deck on the counter.\n\nEven then, your shop felt a little mysterious.\n\nI wonder if that traveller ever found it.\n\nIf he really came by, I hope he found something interesting too.\n\nMay your business keep getting better, senpai~\n\nHere is this week's tape.",
+      "signature": "— Xiaoman"
+    }
+  }
+}
