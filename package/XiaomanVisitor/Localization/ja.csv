@@ -545,3 +545,5 @@ cocktail_roka_name,露華
 cocktail_roka_desc,塩漬けの桜と清酒の米の香りが、夜明け前の春の夜のようにふわりと立ちのぼる。桜餅と小豆の柔らかな甘みはごく薄く、柚子の皮が香りを明るくする。途中に抹茶の澄んだほろ苦さが残る。
 drink_unique,特別な一杯
 drink_buff_saleincome,品物の売却収入 +{0}%
+cfg_experimental_tavern_warning,このコンテンツは未完成です。実験・テスト用としてご利用ください。
+ui_tavern_warning_acknowledge,わかりました

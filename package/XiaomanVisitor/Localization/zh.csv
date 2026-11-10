@@ -545,3 +545,5 @@ cocktail_roka_name,露华
 cocktail_roka_desc,盐渍樱花与清酒的米香轻轻浮起，像天亮前最后一缕春夜；樱饼红豆的柔甜只铺薄薄一层，柚子皮把香气提亮，抹茶在中段落下一点干净微苦。
 drink_unique,唯一酒品
 drink_buff_saleincome,卖货信用点收入 +{0}%
+cfg_experimental_tavern_warning,内容未做完，仅供实验。
+ui_tavern_warning_acknowledge,我知道了

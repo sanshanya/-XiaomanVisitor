@@ -545,3 +545,5 @@ cocktail_roka_name,Dew Blossom
 cocktail_roka_desc,"Salted cherry blossom and the rice aroma of sake rise like the last breath of a spring night before dawn. Sakura mochi and red bean lend a thin layer of gentle sweetness; yuzu peel brightens the aroma, followed by a clean hint of bitter matcha."
 drink_unique,One of a kind
 drink_buff_saleincome,Credits earned from selling goods +{0}%
+cfg_experimental_tavern_warning,This content is unfinished and intended for experimental testing only.
+ui_tavern_warning_acknowledge,Understood
