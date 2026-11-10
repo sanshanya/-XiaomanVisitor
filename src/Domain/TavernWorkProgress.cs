@@ -25,7 +25,8 @@ namespace XiaomanVisitor
     public sealed class WorkThanksReceipt
     {
         public bool Drawn, Won, Seen, Merged, ProcurementClosed;
-        public int Roll=-1, DueDay, GiftItemId, PrivateSpent;
+        public int Roll=-1, DueDay, GiftItemId, PrivateSpent, Week=-1;
+        public string ShiftId="";
         public string DrinkKey="", GiftPhase="waiting";
         public readonly List<int> PurchasedItemIds=new List<int>();
         public bool GiftComplete { get { return GiftPhase=="complete"; } }
@@ -37,17 +38,19 @@ namespace XiaomanVisitor
     public sealed class TavernWorkProgress
     {
         public const string SaveKey="tavern_paid_work_v1";
-        [JsonProperty] public int Schema=1;
+        [JsonProperty] public int Schema=2;
         [JsonProperty] public string RunIdentity, PreservedData;
         [JsonProperty] public bool RecoveryBlocked, WorkIntroSeen, OpeningCallbackSeen, ShopkeeperKnown;
         [JsonProperty] public readonly List<WorkDemandBatch> Demand=new List<WorkDemandBatch>();
         [JsonProperty] public readonly List<PaidWorkShift> Shifts=new List<PaidWorkShift>();
         [JsonProperty] public WorkThanksReceipt Thanks=new WorkThanksReceipt();
+        [JsonProperty] public List<WorkThanksReceipt> ThanksHistory=new List<WorkThanksReceipt>();
+        [JsonProperty] public List<int> ThanksVisitWeeks=new List<int>();
         public bool HasWorked { get { return Shifts.Any(s => s.Status=="complete"); } }
         public long IncrementalNet { get { return Shifts.Where(s => s.Status=="complete").Sum(s => (long)s.Net); } }
         public PaidWorkShift Pending { get { return Shifts.FirstOrDefault(s => s.Status!="complete" && s.Status!="cancelled"); } }
         public bool WorkedOn(int day) { return Shifts.Any(s => s.Day==day && s.Status=="complete"); }
-        public bool ThanksDue(int day) { return !RecoveryBlocked && Thanks.Drawn && Thanks.Won && !Thanks.Seen && day>=Thanks.DueDay; }
+        public bool ThanksDue(int day) { return !RecoveryBlocked && Thanks.Drawn && Thanks.Won && !Thanks.Seen && day>=Thanks.DueDay && !ThanksVisitWeeks.Contains(SupplyProgress.Week(day)); }
         public int PurchaseRemaining { get { return Thanks.Merged ? 0 : Math.Max(0,TavernWorkConfig.PrivateReserve-Thanks.PrivateSpent); } }
 
         public bool EnsureDemand(int day,int quantity)
@@ -101,9 +104,13 @@ namespace XiaomanVisitor
             if (orders.Length!=shift.OrderIds.Length || orders.Any(o => !string.IsNullOrEmpty(o.RevenueOwner))) return false;
             foreach (var order in orders) order.RevenueOwner=shift.Id;
             shift.Status="complete";
-            if (!Thanks.Drawn) {
-                Thanks.Drawn=true; Thanks.Roll=StableRoll(RunIdentity,shift.Id,"visit")%100;
-                Thanks.Won=Thanks.Roll<TavernWorkConfig.ThanksPercent; Thanks.DueDay=shift.Day+1;
+            int week=SupplyProgress.Week(shift.Day);
+            bool pendingThanks=Thanks.Won && (!Thanks.Seen || !Thanks.GiftComplete || !Thanks.Merged && !Thanks.ProcurementClosed);
+            if (!pendingThanks && !ThanksHistory.Concat(new[]{Thanks}).Any(t => t.Drawn && t.Week==week && t.Won)) {
+                if (Thanks.Drawn) ThanksHistory.Add(Thanks);
+                Thanks=new WorkThanksReceipt { Drawn=true,Week=week,ShiftId=shift.Id,
+                    Roll=StableRoll(RunIdentity,shift.Id,"visit")%100,DueDay=shift.Day+1 };
+                Thanks.Won=Thanks.Roll<TavernWorkConfig.ThanksPercent;
                 Thanks.DrinkKey=StoryRules.BasicDrinks[StableRoll(RunIdentity,shift.Id,"drink")%StoryRules.BasicDrinks.Length];
             }
             return true;
@@ -111,7 +118,7 @@ namespace XiaomanVisitor
         public bool BeginThanks(int day,bool merged)
         {
             if (!ThanksDue(day)) return false;
-            Thanks.Seen=true; Thanks.Merged=merged; ShopkeeperKnown=true; return true;
+            Thanks.Seen=true; Thanks.Merged=merged; ThanksVisitWeeks.Add(SupplyProgress.Week(day)); ShopkeeperKnown=true; return true;
         }
         public bool RecordPurchase(int itemId,int credits)
         {
@@ -147,8 +154,18 @@ namespace XiaomanVisitor
             TavernWorkProgress p;
             try { p=JsonConvert.DeserializeObject<TavernWorkProgress>(data); }
             catch (JsonException) { return Blocked(data,identity); }
-            if (p==null || p.Schema!=1 || p.Demand==null || p.Shifts==null || p.Thanks==null
+            if (p==null || (p.Schema!=1 && p.Schema!=2) || p.Demand==null || p.Shifts==null || p.Thanks==null
                 || p.Thanks.PurchasedItemIds==null || string.IsNullOrEmpty(p.RunIdentity)) return Blocked(data,identity);
+            if (p.Schema==1) {
+                if (p.Thanks.Drawn) {
+                    var first=p.Shifts.Where(s => s.Status=="complete").OrderBy(s => s.Day).FirstOrDefault();
+                    if (first==null) return Blocked(data,identity);
+                    p.Thanks.Week=SupplyProgress.Week(first.Day);p.Thanks.ShiftId=first.Id;
+                    if (p.Thanks.Seen) p.ThanksVisitWeeks.Add(SupplyProgress.Week(today));
+                }
+                p.Schema=2;
+            }
+            if (p.ThanksHistory==null || p.ThanksVisitWeeks==null) return Blocked(data,identity);
             if (p.Demand.Any(d => d==null || d.Day<TavernWorkConfig.UnlockDay || d.Day>today || d.Orders==null
                     || d.Orders.Any(o => o==null || o.Day!=d.Day))
                 || p.Demand.GroupBy(d => d.Day).Any(g => g.Count()>1)) return Blocked(data,identity);
@@ -167,7 +184,7 @@ namespace XiaomanVisitor
             }
             if (p.Shifts.Count(s => s.Status!="complete" && s.Status!="cancelled")>1) return Blocked(data,identity);
             if (p.Thanks.Drawn && (p.Thanks.Roll<0 || p.Thanks.Roll>=100 || !StoryRules.BasicDrinks.Contains(p.Thanks.DrinkKey))
-                || p.Thanks.Drawn!=p.HasWorked || p.Thanks.PrivateSpent<0 || p.Thanks.PrivateSpent>TavernWorkConfig.PrivateReserve
+                || p.Thanks.Drawn && !p.HasWorked || p.Thanks.PrivateSpent<0 || p.Thanks.PrivateSpent>TavernWorkConfig.PrivateReserve
                 || !new[]{"waiting","placing","complete","uncertain"}.Contains(p.Thanks.GiftPhase)
                 || p.Thanks.PurchasedItemIds.Any(id => id<=0) || p.Thanks.PurchasedItemIds.Distinct().Count()!=p.Thanks.PurchasedItemIds.Count
                 || (p.Thanks.Seen && !p.Thanks.Won) || (p.Thanks.Merged && p.Thanks.PrivateSpent!=0)

@@ -49,7 +49,7 @@ namespace XiaomanVisitor
     public static class LetterInkRules
     {
         public static string VariantPath(string path,string bookId,string variant)
-        { return bookId=="story_note_03" && variant=="B" && path!=null ? path.Replace("story_note_03.png","story_note_03_b.png") : path; }
+        { return (bookId=="story_note_03" || bookId=="story_note_04") && variant=="B" && path!=null ? path.Replace(bookId+".png",bookId+"_b.png") : path; }
         public static string Language(string locale)
         {
             string language = VoiceCatalog.Language(locale);

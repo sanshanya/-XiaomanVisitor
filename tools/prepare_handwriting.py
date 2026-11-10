@@ -26,7 +26,7 @@ def main():
         texts = layout.read_texts(language)
         folder = target / language
         folder.mkdir(exist_ok=True)
-        letters=[(visit,f"story_note_{visit:02d}") for visit in range(1,15)]+[(3,'story_note_03_b')]
+        letters=[(visit,f"story_note_{visit:02d}") for visit in range(1,15)]+[(3,'story_note_03_b'),(4,'story_note_04_b')]
         for visit,key in letters:
             required = "".join(texts[key+"_"+part] for part in ("title","body","signature"))
             missing = {c for c in required if not c.isspace() and layout.glyph_path(font,c) is None}

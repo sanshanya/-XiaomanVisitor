@@ -81,6 +81,7 @@ namespace XiaomanVisitor
         [JsonProperty] public string[] SaleKeys = new string[0];
         [JsonProperty] public string GiftDrinkKey = "";
         [JsonProperty] public string NoteVariant = "";
+        [JsonProperty] public SupplyNoteSnapshot SupplySnapshot;
         public bool HasFixedDrink { get { return Index == 6 && StoryRules.FinalDrinks.Contains(GiftDrinkKey); } }
         public int RequiredMask { get { return Index == 14 ? 31 : HasFixedDrink ? 7 : 3; } }
         public bool GiftComplete { get { return GiftMask == RequiredMask; } }
@@ -134,6 +135,13 @@ namespace XiaomanVisitor
             return true;
         }
 
+        public bool FreezeFourthNote(int today,Func<int,bool> signedBy)
+        {
+            var v=Visits.FirstOrDefault(x => x.Index==4);
+            if (v==null || today<=v.Day || !string.IsNullOrEmpty(v.NoteVariant)) return false;
+            v.NoteVariant=v.HasPart(0) ? "A" : signedBy(v.Day) ? "B" : "A";return true;
+        }
+
         public string Data { get { return JsonConvert.SerializeObject(this); } }
         public static StoryProgress Restore(string data)
         {
@@ -155,7 +163,7 @@ namespace XiaomanVisitor
                         visit.GiftDrinkKey = (visit.GiftMask & 3) == 3 ? "" : StoryRules.FixedDrink(6, visit.Day);
                 }
                 else visit.GiftDrinkKey = "";
-                if (visit.Index==3) {
+                if (visit.Index==3 || visit.Index==4) {
                     if (visit.NoteVariant!="A" && visit.NoteVariant!="B") visit.NoteVariant=visit.HasPart(0)?"A":"";
                 }
                 else visit.NoteVariant="";

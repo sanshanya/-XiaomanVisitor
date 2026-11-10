@@ -31,7 +31,7 @@ def main():
         placeholders = re.findall(r"\{\d+\}", texts["zh"][key])
         for lang in ('en','ja'):
             # Approved shopping subtitles deliberately omit the Japanese spoken budget.
-            expected=[] if key in ('xm_02_shop','xm_03_shop') and lang=='ja' else sorted(placeholders)
+            expected=[] if key in ('xm_02_shop','xm_03_shop','xm_04_shop','xm_w04_audit_shop') and lang=='ja' else sorted(placeholders)
             assert sorted(re.findall(r"\{\d+\}",texts[lang][key]))==expected,key
     assert texts["zh"]["gift_note_body"] == texts["zh"]["story_note_01_body"]
     assert texts["zh"]["gift_note_title"] == "致店长先生："
@@ -94,6 +94,8 @@ def main():
     import week_two_source,week_three_source
     w02=week_two_source.read()
     w03=week_three_source.read()
+    import week_four_source
+    w04=week_four_source.read()
     prices=json.loads((ROOT/'assets/tavern-prices.json').read_text(encoding='utf-8'))
     generated=(ROOT/'src/Generated/TavernPrices.Generated.cs').read_text(encoding='utf-8')
     match=re.search(r'Juice = (\d+), Alcohol = (\d+)',generated)
@@ -102,6 +104,8 @@ def main():
     assert story['week_three_sha256']==w03['sha256'] and set(w03['lines']).issubset({row['key'] for row in story['lines']})
     english.update({key:row['en'] for key,row in w02['lines'].items()})
     english.update({key:row['en'] for key,row in w03['lines'].items()})
+    english.update({key:row['en'] for key,row in w04['lines'].items()})
+    assert story['week_four_sha256']==w04['sha256']
     notes = json.loads((ROOT / "story/纸条正文.json").read_text(encoding="utf-8"))["notes"]
     assert set(english) == {line["key"] for line in story["lines"]}
     assert all(texts["en"][key].replace("\\n", "\n") == value for key, value in english.items())

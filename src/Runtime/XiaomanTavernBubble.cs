@@ -43,7 +43,7 @@ namespace XiaomanVisitor
             Vector2 gap = (name.anchoredPosition - body.anchoredPosition) / factor;
             foreach (RectTransform rect in new[] { body, name }) {
                 rect.anchorMin = rect.anchorMax = new Vector2(0, 1);
-                rect.localScale /= factor;
+                rect.localScale = Vector3.one;
                 // StoreUI.OnDisable closes the original named shop window.
                 foreach (StoreUI marker in rect.GetComponentsInChildren<StoreUI>(true)) {
                     marker.identifier = XiaomanMod.Id + ".tavern.dialogue";
@@ -82,7 +82,11 @@ namespace XiaomanVisitor
             Hide();
             DialogUIManager native = DialogUIManager.Instance;
             bubble.textfield.font = native.clientBubble.textfield.font;
+            bubble.textfield.fontSize = 18f;
+            bubble.textfield.enableAutoSizing=false;
             nameText.font = native.clientNameTMP.font;
+            nameText.fontSize = 18f;
+            nameText.enableAutoSizing=false;
             nameText.text = speaker;
             layoutDirty = true;
             completedAt = -1f;
@@ -108,15 +112,17 @@ namespace XiaomanVisitor
         internal void PrepareLayout(RectTransform panel)
         {
             if (!Visible) return;
-            scaler.Apply();
             RectTransform room = (RectTransform)root.parent;
-            float right = room.rect.width - 16f;
+            float unit=room.rect.height/1080f;
+            scaler.Apply(unit*EmporiumOption.DialogBubbleScale);
+            name.anchoredPosition=new Vector2(0,name.rect.height*name.localScale.y);
+            float right = room.rect.width - 16f*unit;
             if (panel != null && panel.gameObject.activeInHierarchy) {
                 float edge = room.InverseTransformPoint(panel.TransformPoint(new Vector3(panel.rect.xMin, 0))).x + room.rect.width / 2;
-                right = Mathf.Min(right, edge - 16f);
+                if (edge>room.rect.width*.65f) right = Mathf.Min(right, edge - 16f*unit);
             }
-            float available = Mathf.Max(64f, right - 16f);
-            float maxWidth = Mathf.Min(560f * EmporiumOption.DialogBubbleScale, available);
+            float available = Mathf.Max(120f*unit, right - 16f*unit);
+            float maxWidth = Mathf.Min(430f*unit*EmporiumOption.DialogBubbleScale, available);
             rightEdge = right;
             float desired = Mathf.Max(24f, maxWidth / Mathf.Max(.01f, body.localScale.x) - 16f);
             if (width != null && Mathf.Abs(width.maxWidth - desired) > .01f) {

@@ -74,54 +74,6 @@
       "generic": false
     },
     {
-      "line_key": "xm_04_01",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_04_01_b2f4de534a95",
-      "spoken_text": "こんばんは。この前話したお店、やっとオープンしたんです。",
-      "subtitle_templates": [
-        "晚上好。上次说的小店，终于开门了。",
-        "こんばんは。この前話したお店、やっとオープンしたんです。",
-        "Good evening. That little place I mentioned is finally open."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_04_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_04_02_ae5259d40965",
-      "spoken_text": "実は、小さなバーなんです。下の商業通路にあるんですよ。",
-      "subtitle_templates": [
-        "其实是间小酒吧。就在下面那条商业通道。",
-        "実は、小さなバーなんです。下の商業通路にあるんですよ。",
-        "It's actually a little bar, down in the shopping passage below."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_04_shop",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_04_shop_1b3fab3a7993",
-      "spoken_text": "今日は飲み水を少し買い足したくて。",
-      "subtitle_templates": [
-        "今天想补些饮用水。",
-        "今日は飲み水を少し買い足したくて。",
-        "I'd like to stock up on drinking water today."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_04_cocktail",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_04_cocktail_72d1f4c44ea3",
-      "spoken_text": "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
-      "subtitle_templates": [
-        "对了，我带了几杯店里的鸡尾酒。你这儿会收吗？",
-        "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
-        "Oh, I brought a few cocktails from my bar. Would you buy things like these?"
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_05_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_01_d630aae8835a",
@@ -1214,8 +1166,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 74,
+  "pending_lines": 112,
   "pending_by_language": {
-    "ja": 74
+    "ja": 112
   }
 }

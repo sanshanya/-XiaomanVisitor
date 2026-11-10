@@ -33,7 +33,7 @@ internal static class CheckMod
             Console.Error.WriteLine("PENDING (next API enforcement): " + finding);
         if (scan.Refused || scan.Capabilities.Except(manifest.Capabilities).Any()) return 2;
         if (scan.Pending.Count > 0) return 2;
-        CheckStory.Run(package, Require); WeekOneChecks.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require);
+        CheckStory.Run(package, Require); WeekOneChecks.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require); WeekFourChecks.Run(package,Require);
         Console.WriteLine("PASS: " + assertions + " assertions; native manifest, capability scanner and paper parser accepted.");
         return 0;
     }
@@ -398,8 +398,8 @@ internal static class CheckMod
             && typeof(GameInventory).GetProperty("mayInventoryAddItemFunc").PropertyType == typeof(Func<GameItem, GameInventory, bool>),
             "case and warehouse extension bind to the installed game's native container APIs");
         var patches = typeof(XiaomanMod).Assembly.GetTypes().Where(type => type.IsDefined(typeof(HarmonyPatch), false)).ToArray();
-        Require(patches.All(type => ((HarmonyPatch)type.GetCustomAttributes(typeof(HarmonyPatch), false).Single())
-            .info.declaringType != typeof(MachineCassettePlayer)), "no added global cassette playback patch");
+        Require(patches.Where(type => ((HarmonyPatch)type.GetCustomAttributes(typeof(HarmonyPatch), false).Single()).info.declaringType == typeof(MachineCassettePlayer))
+            .All(type => type.Name.StartsWith("TavernDeck")), "only tavern-owned native deck adapters may patch playback");
         Console.WriteLine("PASS: cassette case capacity, exact owned-tape whitelist, legacy storage, native filter preservation and unchanged playback bindings.");
     }
     private static void CheckTavernMap()
@@ -434,7 +434,7 @@ internal static class CheckMod
         Require(!location.IsDiscovered() && !location.IsAvailable(), "the next disabled session hides the tavern again");
         Require(location.ImageKey == TavernMapRules.ImageKey && location.title != null,
             "renovation card displays the author's approved tavern preview while remaining unavailable");
-        Require(location.onArrive != null && location.onLeave != null && location.onTick != null && location.buildPanel != null
+        Require(location.onArrive != null && location.onLeave != null && location.onTick != null && location.buildPanel == null
             && location.stageObject == null && location.panelObject == null,
             "night callbacks exist; scene and panel are allocated lazily through native travel");
         Require(location.UsesAfterhourBag && !location.ShowsStoreCounters && !location.AllowsHazardousWaste && !location.CountsDumpedWaste,
@@ -623,7 +623,7 @@ internal static class CheckMod
         foreach (StoryEpisode episode in StoryCatalog.Episodes)
         {
             var letter = ModHelper.ParsePaperBook(File.ReadAllText(Path.Combine(package, "Books", episode.NoteId + ".json")));
-            Require(letter != null && letter.pages.Count == 1 && letter.id == episode.NoteId
+            Require(letter != null && letter.pages.Count == (episode.Index==4?2:1) && letter.id == episode.NoteId
                 && letter.item.id == XiaomanMod.Id + "." + episode.NoteId, "native story letter/item binding");
         }
     }

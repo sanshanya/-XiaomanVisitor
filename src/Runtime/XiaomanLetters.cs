@@ -68,7 +68,7 @@ namespace XiaomanVisitor
         {
             if (paper == null || !paper.IsVisible || XiaomanMod.Instance == null) return;
             string language = LetterInkRules.Language(LocHelper.GetCurrentLocaleCode());
-            string variant=paper.Data.id=="story_note_03" ? XiaomanMod.Instance.ThirdNoteVariant : "A";
+            string variant=paper.Data.id=="story_note_03" ? XiaomanMod.Instance.ThirdNoteVariant : paper.Data.id=="story_note_04" ? XiaomanMod.Instance.FourthNoteVariant : "A";
             if (texture != null && image != null && attemptedLanguage == language && attemptedVariant==variant)
             {
                 image.gameObject.SetActive(true);

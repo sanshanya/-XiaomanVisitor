@@ -371,62 +371,146 @@
     {
       "key": "xm_04_01",
       "subtitle_templates": {
-        "zh": "晚上好。上次说的小店，终于开门了。",
-        "ja": "こんばんは。この前話したお店、やっとオープンしたんです。",
-        "en": "Good evening. That little place I mentioned is finally open."
+        "zh": "晚上好，店长前辈。今天还想跟您商量件事呢。",
+        "ja": "こんばんは、店長さん。今日は、ちょっと相談したいことがあるんです。",
+        "en": "Good evening, senpai. There is something I would like to discuss today."
       },
-      "spoken_text": "こんばんは。この前話したお店、やっとオープンしたんです。",
-      "generate_text": "こんばんは。この前話したお店、やっとオープンしたんです。",
+      "spoken_text": "こんばんは、店長さん。今日は、ちょっと相談したいことがあるんです。",
+      "generate_text": "こんばんは、店長さん。今日は、ちょっと相談したいことがあるんです。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_04_01.58a14d9d9b030e60.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "84c6fdc0fcbdc8e09831e73101e403f43100ee503f9b6be155dea2251b536ce9"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "82f4cad3088640983e5f71318bcb54160fd8644839c7a5ffc83b5f8326c2162b",
+      "defer_recording": true
     },
     {
       "key": "xm_04_02",
       "subtitle_templates": {
-        "zh": "其实是间小酒吧。就在下面那条商业通道。",
-        "ja": "実は、小さなバーなんです。下の商業通路にあるんですよ。",
-        "en": "It's actually a little bar, down in the shopping passage below."
+        "zh": "最近店里用的水和原材料越来越多了，都快供不应求了。",
+        "ja": "最近、お店で使う水も材料もどんどん増えてきて、仕入れが追いつかなくなりそうで。",
+        "en": "We are using more and more water and ingredients. I can hardly keep up with the orders."
       },
-      "spoken_text": "実は、小さなバーなんです。下の商業通路にあるんですよ。",
-      "generate_text": "実は、小さなバーなんです。下の商業通路にあるんですよ。",
+      "spoken_text": "最近、お店で使う水も材料もどんどん増えてきて、仕入れが追いつかなくなりそうで。",
+      "generate_text": "最近、お店で使う水も材料もどんどん増えてきて、仕入れが追いつかなくなりそうで。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_04_02.c7c0d5d11de03fad.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "a5be0c34154c24138cc8cdac5280529c29484ffd60f410e3ea3d3f1130240389"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "140af0dda5f015ba803e895671172605b13c9fa20e841bd146b157b7823a419d",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_04_03",
+      "subtitle_templates": {
+        "zh": "前辈这里要是有合适的货，能不能按清单定期卖给我呢？",
+        "ja": "先輩のお店にちょうどいい品物があったら、リストを作って定期的に仕入れさせてもらえませんか？",
+        "en": "If you have suitable supplies, could I buy from you regularly, from a list?"
+      },
+      "spoken_text": "先輩のお店にちょうどいい品物があったら、リストを作って定期的に仕入れさせてもらえませんか？",
+      "generate_text": "先輩のお店にちょうどいい品物があったら、リストを作って定期的に仕入れさせてもらえませんか？",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "e1589f1e04be3aaedd2ff0f5eabcc6a8019f8053b773e1c43712800b8494ecce",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_04_04",
+      "subtitle_templates": {
+        "zh": "我这边调好的饮品，也可以给前辈进货。嘿嘿，这样我们就算正式的生意伙伴啦。",
+        "ja": "うちで作った飲み物も、先輩のお店に卸せますよ。えへへ、そうしたら、ちゃんとした商売仲間ですね。",
+        "en": "You could stock the drinks I make, too. Hehe, we would be proper business partners!"
+      },
+      "spoken_text": "うちで作った飲み物も、先輩のお店に卸せますよ。えへへ、そうしたら、ちゃんとした商売仲間ですね。",
+      "generate_text": "うちで作った飲み物も、先輩のお店に卸せますよ。えへへ、そうしたら、ちゃんとした商売仲間ですね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "f7e9b6583ad0039ee4a3c929fbb440198ad10214e9a09546ee196eb7838c0f72",
+      "defer_recording": true
     },
     {
       "key": "xm_04_shop",
       "subtitle_templates": {
-        "zh": "今天想补些饮用水。",
-        "ja": "今日は飲み水を少し買い足したくて。",
-        "en": "I'd like to stock up on drinking water today."
+        "zh": "今天想买点饮用水。带了 {0} 信用点。",
+        "ja": "今日は飲み水を少し買いたくて。",
+        "en": "I would like some drinking water today. I have {0} credits."
       },
-      "spoken_text": "今日は飲み水を少し買い足したくて。",
-      "generate_text": "今日は飲み水を少し買い足したくて。",
+      "spoken_text": "今日は飲み水を少し買いたくて。",
+      "generate_text": "今日は飲み水を少し買いたくて。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_04_shop.72ab135b2e3a6262.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "4b1139e20f579c7768fc32b313e14b107b77fb635e94140c0a8385d4721b1516"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "0e4191224fe5ede1226b1768fb10d4f0de2d20749e7d4e213ff59b6a4e52f5ec",
+      "defer_recording": true
     },
     {
       "key": "xm_04_cocktail",
       "subtitle_templates": {
-        "zh": "对了，我带了几杯店里的鸡尾酒。你这儿会收吗？",
-        "ja": "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
-        "en": "Oh, I brought a few cocktails from my bar. Would you buy things like these?"
+        "zh": "对了，还带了两瓶店里调好的果汁版饮品。前辈要看看吗？",
+        "ja": "あ、そうだ。お店で作ったジュースも二本持ってきたんです。よかったら見てみますか？",
+        "en": "I also brought two bottled juice drinks from the bar. Would you like a look?"
       },
-      "spoken_text": "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
-      "generate_text": "あ、そうだ。お店のカクテルを何杯か持ってきたんです。ここで買い取ってもらえますか？",
+      "spoken_text": "あ、そうだ。お店で作ったジュースも二本持ってきたんです。よかったら見てみますか？",
+      "generate_text": "あ、そうだ。お店で作ったジュースも二本持ってきたんです。よかったら見てみますか？",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_04_cocktail.4135d249113d5dbf.wav",
-      "note": "用户v3.4终版；演出标签仅在generate_text，不进入字幕。",
-      "source_sha256": "fb0b7c6088597d086825073a60a722bb0ece8b0da53e002cbb4bbf0552a4b0ec"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "f88da8e91d738a8cb077b58c855e797ad632da2bd5b3b5ac918d7f61d77e4008",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_04_accept",
+      "subtitle_templates": {
+        "zh": "谢谢。正好用得上。",
+        "ja": "ありがとうございます。ちょうど助かります。",
+        "en": "Thank you. Just what I needed."
+      },
+      "spoken_text": "ありがとうございます。ちょうど助かります。",
+      "generate_text": "ありがとうございます。ちょうど助かります。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "68e6fced81c8f5c1eeaef917a2b5148521003e4774c937d658a94d26a30a4e48",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_04_bye",
+      "subtitle_templates": {
+        "zh": "那我先走啦。供货的事，晚上来店里再慢慢谈也可以哦。",
+        "ja": "それじゃ、また。仕入れの話は、夜にお店でゆっくりでも大丈夫ですから。",
+        "en": "I should go. We can talk about supplies at my place tonight, if you like."
+      },
+      "spoken_text": "それじゃ、また。仕入れの話は、夜にお店でゆっくりでも大丈夫ですから。",
+      "generate_text": "それじゃ、また。仕入れの話は、夜にお店でゆっくりでも大丈夫ですから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "9cc0555585cfa5a3a3bbbff6ef2f875d5559c14c7dd0ea921249c47911c59ac7",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_04_03_existing",
+      "subtitle_templates": {
+        "zh": "前辈，上次谈好的货单我已经留着啦。有什么合适的东西，我们照单子慢慢来就好。",
+        "ja": "先輩、この前の取引リストは取ってあります。品物があったら、リストに沿って少しずつで大丈夫ですよ。",
+        "en": "Senpai, I kept the supply list we agreed on. If you find something suitable, we can work through it at our own pace."
+      },
+      "spoken_text": "先輩、この前の取引リストは取ってあります。品物があったら、リストに沿って少しずつで大丈夫ですよ。",
+      "generate_text": "先輩、この前の取引リストは取ってあります。品物があったら、リストに沿って少しずつで大丈夫ですよ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "099e93fc0e154381787aeb290587b0be282671d4279d790cda47c9238893864c",
+      "defer_recording": true
     },
     {
       "key": "xm_05_01",
@@ -1818,6 +1902,470 @@
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
       "source_sha256": "3b470eed2c96e4f0e3294bb3c625bbf3a65600a570783a468afb1bd69901dec4",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_01",
+      "subtitle_templates": {
+        "zh": "前辈来啦。白天说的那件事，我把清单准备好了。",
+        "ja": "先輩、いらっしゃい。昼間に話したこと、リストにまとめておきました。",
+        "en": "Welcome, senpai. I made that list we discussed during the day."
+      },
+      "spoken_text": "先輩、いらっしゃい。昼間に話したこと、リストにまとめておきました。",
+      "generate_text": "先輩、いらっしゃい。昼間に話したこと、リストにまとめておきました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "3fcc951a0428aef8fde3ca2f863ac865d704480408663cebccd45a2efb1119b0",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_02",
+      "subtitle_templates": {
+        "zh": "我想从前辈这儿定期买水和原材料。制成成品后，按约定比例，一部分留在店里销售，另一部分供给前辈销售。",
+        "ja": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
+        "en": "I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop."
+      },
+      "spoken_text": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
+      "generate_text": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "14ba2515801fc988242eb2e06b6ba1883c94ef424d9c13296c07448d40f71f02",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_03",
+      "subtitle_templates": {
+        "zh": "数量和价钱都写清楚了，保证前辈不会吃亏。",
+        "ja": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
+        "en": "The quantities and prices are all written down. I want this to be a fair deal for you."
+      },
+      "spoken_text": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
+      "generate_text": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "8ff67c6e486879d704e4ef47641c6a5dabcb4fbacc710450d0370631a3e54984",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_yes",
+      "subtitle_templates": {
+        "zh": "太好啦！那以后就照着清单来。嘿嘿，感觉和前辈的关系更近了呢。",
+        "ja": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
+        "en": "Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
+      },
+      "spoken_text": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
+      "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "d52def807fecae3ca20ca3909af474792ff88e00ca5c542e9ce6121fb2e220e5",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_later",
+      "subtitle_templates": {
+        "zh": "好呀，不着急。前辈也有自己的店要忙嘛。",
+        "ja": "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
+        "en": "Of course. No hurry. You have your own shop to look after."
+      },
+      "spoken_text": "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
+      "generate_text": "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "5630a34e396ea0ff3928cd3fe4b8b16180928fb6a038a2176ae7f9cbaba4396a",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_phone_01",
+      "subtitle_templates": {
+        "zh": "您好，这里是企鹅资产公司商户发展部。",
+        "ja": "お電話ありがとうございます。ペンギン資産会社、商店振興部でございます。",
+        "en": "Hello. Tenquin Asset Corporation, Merchant Development."
+      },
+      "spoken_text": "お電話ありがとうございます。ペンギン資産会社、商店振興部でございます。",
+      "generate_text": "お電話ありがとうございます。ペンギン資産会社、商店振興部でございます。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "19ccd1887cb11a85e4320a8b3e279c0ba0514e126079eb3337f1aacc82fe98d1",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_phone_02",
+      "subtitle_templates": {
+        "zh": "烟酒类商户扶持计划正在接受预评估申请。我们可安排专员到您的店铺了解经营情况。",
+        "ja": "酒類・たばこ取扱店向け支援制度の事前審査を受け付けております。担当者が店舗の営業状況を確認に伺います。",
+        "en": "Pre-assessment applications are open for our alcohol and tobacco retailer support programme. A representative can visit your shop."
+      },
+      "spoken_text": "酒類・たばこ取扱店向け支援制度の事前審査を受け付けております。担当者が店舗の営業状況を確認に伺います。",
+      "generate_text": "酒類・たばこ取扱店向け支援制度の事前審査を受け付けております。担当者が店舗の営業状況を確認に伺います。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "98ec65f7ae9ca8900efe8be1ee80b9e5a751cd78c6dfc4baf13050cc41763f89",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_phone_confirm",
+      "subtitle_templates": {
+        "zh": "已登记。评估员将在明天到店，最终结果于本周五通知。",
+        "ja": "お申し込みを承りました。担当者は明日伺います。結果は今週金曜日にお知らせいたします。",
+        "en": "Your application is registered. An assessor will visit tomorrow. The result will be sent this Friday."
+      },
+      "spoken_text": "お申し込みを承りました。担当者は明日伺います。結果は今週金曜日にお知らせいたします。",
+      "generate_text": "お申し込みを承りました。担当者は明日伺います。結果は今週金曜日にお知らせいたします。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "20773d049f265318039bd387c2f3eee15d2a52d4e9dab150ff8e53d1481ba47c",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_phone_closed",
+      "subtitle_templates": {
+        "zh": "抱歉，本期评估登记已经结束。",
+        "ja": "申し訳ございません。今期の受付は終了いたしました。",
+        "en": "We are sorry. Registration for this round has closed."
+      },
+      "spoken_text": "申し訳ございません。今期の受付は終了いたしました。",
+      "generate_text": "申し訳ございません。今期の受付は終了いたしました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "3cf0be3c970bdfc0846c46e30826a8afa37cee15cabb639b0b2502babb28c3ba",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_audit_01",
+      "subtitle_templates": {
+        "zh": "您好，企鹅资产公司商户评估部。我们昨天约过。",
+        "ja": "こんにちは。ペンギン資産会社の店舗審査担当です。昨日ご予約いただきました。",
+        "en": "Hello. Tenquin Asset Corporation, Merchant Assessment. We arranged this visit yesterday."
+      },
+      "spoken_text": "こんにちは。ペンギン資産会社の店舗審査担当です。昨日ご予約いただきました。",
+      "generate_text": "こんにちは。ペンギン資産会社の店舗審査担当です。昨日ご予約いただきました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "17d8995c03f9bffe1c3575ab3358169b306849cec4b6b80040c4cb23119be35e",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_audit_02",
+      "subtitle_templates": {
+        "zh": "想了解一下贵店的烟酒类经营情况。有合适的商品，我也会按正常价格收购。",
+        "ja": "酒類・たばこのお取り扱い状況を確認させてください。適当な商品があれば、通常の価格で買い取ります。",
+        "en": "I would like to see your alcohol and tobacco business. I can also buy suitable goods at normal prices."
+      },
+      "spoken_text": "酒類・たばこのお取り扱い状況を確認させてください。適当な商品があれば、通常の価格で買い取ります。",
+      "generate_text": "酒類・たばこのお取り扱い状況を確認させてください。適当な商品があれば、通常の価格で買い取ります。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "c98f83f3e6e93691aacbe21734b0455ffe8f3b81fa79425883f67f8b885b5bbb",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_audit_shop",
+      "subtitle_templates": {
+        "zh": "今天想采购一些烟酒类商品，预算是 {0} 信用点。",
+        "ja": "本日は酒類・たばこの商品を少し購入したいと思います。",
+        "en": "I am buying alcohol and tobacco products today. My budget is {0} credits."
+      },
+      "spoken_text": "本日は酒類・たばこの商品を少し購入したいと思います。",
+      "generate_text": "本日は酒類・たばこの商品を少し購入したいと思います。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "259b9b6d2f12357e1612f90b17bd7cd7bb79b683714962140a47118789232336",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_audit_accept",
+      "subtitle_templates": {
+        "zh": "谢谢。这笔采购会记入本次评估记录。",
+        "ja": "ありがとうございます。今回の確認記録に残しておきます。",
+        "en": "Thank you. This purchase will be included in our visit record."
+      },
+      "spoken_text": "ありがとうございます。今回の確認記録に残しておきます。",
+      "generate_text": "ありがとうございます。今回の確認記録に残しておきます。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "3fca213872ad570cfa16cb157809e4bf60651eb440b88f68c721d4ccef1c0f13",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_audit_no_trade",
+      "subtitle_templates": {
+        "zh": "明白了。今天没有成交也没关系，审核会照常进行。",
+        "ja": "承知しました。今回は取引がなくても、審査は通常どおり進みます。",
+        "en": "Understood. No purchase is necessary. The assessment will proceed as usual."
+      },
+      "spoken_text": "承知しました。今回は取引がなくても、審査は通常どおり進みます。",
+      "generate_text": "承知しました。今回は取引がなくても、審査は通常どおり進みます。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "78e2c030958b0a2f8d77dea5ddffb880ff5aa5bf820d25ae15193b9a9ce211fa",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_audit_bye",
+      "subtitle_templates": {
+        "zh": "感谢配合。本周五会收到评估结果。",
+        "ja": "ご協力ありがとうございました。結果は今週金曜日にお知らせいたします。",
+        "en": "Thank you for your cooperation. You will receive the result this Friday."
+      },
+      "spoken_text": "ご協力ありがとうございました。結果は今週金曜日にお知らせいたします。",
+      "generate_text": "ご協力ありがとうございました。結果は今週金曜日にお知らせいたします。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "b7c6a44cf63db6dde047b304fa11a96fe3fd3d62a5520aece628456eaa2ce4f6",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_wang_01",
+      "subtitle_templates": {
+        "zh": "嘿，听说你前几天去申请那个商业街扶持了？",
+        "ja": "よう。この前、商業通路の支援制度に申し込んだんだって？",
+        "en": "Hey. Heard you applied for that commercial street support scheme."
+      },
+      "spoken_text": "よう。この前、商業通路の支援制度に申し込んだんだって？",
+      "generate_text": "よう。この前、商業通路の支援制度に申し込んだんだって？",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "90d296f6330d908e75cf21e57fd50046b246b4934df54d963e00ac0ecd800313",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_wang_02",
+      "subtitle_templates": {
+        "zh": "你可是我罩着的。那边的手续，我找人给你挡回去了。",
+        "ja": "お前は俺が面倒見てるんだ。あっちの手続きは、知り合いに頼んで止めてもらった。",
+        "en": "You are under my wing. I asked someone to stop that paperwork for you."
+      },
+      "spoken_text": "お前は俺が面倒見てるんだ。あっちの手続きは、知り合いに頼んで止めてもらった。",
+      "generate_text": "お前は俺が面倒見てるんだ。あっちの手続きは、知り合いに頼んで止めてもらった。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "0f00543ac97d9b38154a4f727db15390bf18bf92c4f30295343cfd169487c401",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_wang_03",
+      "subtitle_templates": {
+        "zh": "别觉得可惜。那帮人写着扶持，合同一签可就没那么简单了。",
+        "ja": "残念がるなよ。あいつらは「支援」なんて言うけど、契約したらそう簡単な話じゃ済まねえぞ。",
+        "en": "Do not feel bad about it. They call it support, but once you sign, it is a different story."
+      },
+      "spoken_text": "残念がるなよ。あいつらは「支援」なんて言うけど、契約したらそう簡単な話じゃ済まねえぞ。",
+      "generate_text": "残念がるなよ。あいつらは「支援」なんて言うけど、契約したらそう簡単な話じゃ済まねえぞ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "848ecbb5ed5cc2627102947172c0eb310d6a5e6f091c75c9ee61f3fb6ddcf8a3",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_wang_04",
+      "subtitle_templates": {
+        "zh": "真有那么好的买卖，他们干吗不自己做？",
+        "ja": "そんなにうまい商売なら、どうして自分たちでやらないんだろうな？",
+        "en": "If it is such a good deal, why do they not run the business themselves?"
+      },
+      "spoken_text": "そんなにうまい商売なら、どうして自分たちでやらないんだろうな？",
+      "generate_text": "そんなにうまい商売なら、どうして自分たちでやらないんだろうな？",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "a5f54b6409b12247c4f47455a2793ff09d3a8b832362d176024c036b260d1ef9",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_w04_wang_bye",
+      "subtitle_templates": {
+        "zh": "行了，你好好开店。以后有事多过过脑子。",
+        "ja": "いいから、お前は店をしっかりやれ。次からはもうちょっと頭を使えよ。",
+        "en": "Anyway, look after your shop. Think things through next time."
+      },
+      "spoken_text": "いいから、お前は店をしっかりやれ。次からはもうちょっと頭を使えよ。",
+      "generate_text": "いいから、お前は店をしっかりやれ。次からはもうちょっと頭を使えよ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "4fedcdcaf40c27ede65a158396229f17d6bbecfdbe85b560a91eeabd5d087b0c",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_existing",
+      "subtitle_templates": {
+        "zh": "前辈，货单在这里。今天想给店里送点什么，还是从我这里进货？",
+        "ja": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+        "en": "The list is here, senpai. Are you delivering supplies today, or buying from me?"
+      },
+      "spoken_text": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+      "generate_text": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "3edbb52d5f5907396d1d986baad03ec61ef8a59648c4a5ded57c9b39d4f0890b",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_early",
+      "subtitle_templates": {
+        "zh": "前辈来啦。我把店里需要的东西列了一张清单，想跟您商量一下。",
+        "ja": "先輩、いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
+        "en": "Welcome, senpai. I made a list of supplies for the bar. May I discuss it with you?"
+      },
+      "spoken_text": "先輩、いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
+      "generate_text": "先輩、いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "f396624c36e85c04648bd1a1a145367ed368ec51695c276e91aea179445b7364",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_01_unknown",
+      "subtitle_templates": {
+        "zh": "欢迎。白天说的那件事，我把清单准备好了。",
+        "ja": "いらっしゃい。昼間に話したこと、リストにまとめておきました。",
+        "en": "Welcome. I made that list we discussed during the day."
+      },
+      "spoken_text": "いらっしゃい。昼間に話したこと、リストにまとめておきました。",
+      "generate_text": "いらっしゃい。昼間に話したこと、リストにまとめておきました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "d7a464500d44f0596e03a85a5f0941362a18eab9c9c80e3f50e1557564f89388",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_02_unknown",
+      "subtitle_templates": {
+        "zh": "我想从您这儿定期买水和原材料。制成成品后，按约定比例，一部分留在店里销售，另一部分供给您销售。",
+        "ja": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
+        "en": "I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop."
+      },
+      "spoken_text": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
+      "generate_text": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "04b1f06609ffbee1ed868b17ddead5b8e6cc3318c07f50a561cc1fe51b95ba3f",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_03_unknown",
+      "subtitle_templates": {
+        "zh": "数量和价钱都写清楚了，保证您不会吃亏。",
+        "ja": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
+        "en": "The quantities and prices are all written down. I want this to be a fair deal for you."
+      },
+      "spoken_text": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
+      "generate_text": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "77415dc20ed5870f9caa151e7077e6b9c09ee4c806f8dc1ac183b1237a11eab5",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_yes_unknown",
+      "subtitle_templates": {
+        "zh": "太好啦！那以后就照着清单来。嘿嘿，感觉和您的关系更近了呢。",
+        "ja": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
+        "en": "Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
+      },
+      "spoken_text": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
+      "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "de60681724da22f44b187c99e72e636f4d6bed6c6abfbf785f8cce5800f90928",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_later_unknown",
+      "subtitle_templates": {
+        "zh": "好呀，不着急。您也有自己的店要忙嘛。",
+        "ja": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
+        "en": "Of course. No hurry. You have your own shop to look after."
+      },
+      "spoken_text": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
+      "generate_text": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "bd9fd89780608d758bace10b206a55f13fdf8880186aa0be6bc51d283a874cc6",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_existing_unknown",
+      "subtitle_templates": {
+        "zh": "货单在这里。今天想给店里送点什么，还是从我这里进货？",
+        "ja": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+        "en": "The list is here. Are you delivering supplies today, or buying from me?"
+      },
+      "spoken_text": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+      "generate_text": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "cdcbf4e18f179b93d556656db94e42f3c91373140d5bb9243c14835ec68dae77",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_tavern_w04_supply_early_unknown",
+      "subtitle_templates": {
+        "zh": "欢迎。我把店里需要的东西列了一张清单，想跟您商量一下。",
+        "ja": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
+        "en": "Welcome. I made a list of supplies for the bar. May I discuss it with you?"
+      },
+      "spoken_text": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
+      "generate_text": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "dc29c069e250de6d8c5efca37a89c6d282e4b8527ec6e7b62514fc280875f9e7",
       "defer_recording": true
     },
     {

@@ -9,6 +9,7 @@ import sys
 import wave
 import week_two_source
 import week_three_source
+import week_four_source
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "package/XiaomanVisitor"
@@ -64,11 +65,14 @@ def main():
     text = args.source.read_text(encoding="utf-8-sig")
     week_two = week_two_source.read()
     week_three = week_three_source.read()
+    week_four = week_four_source.read()
+    week_four_source.generate()
     week_three_source.generate()
-    week_two_source.generate(dict(week_two,lines=dict(week_two['lines'],**week_three['lines'])))
+    week_two_source.generate(dict(week_two,lines=dict(week_two['lines'],**week_three['lines'],**week_four['lines'])))
     english = json.loads((ROOT / "story/英文台词.json").read_text(encoding="utf-8"))
     english.update({key:row['en'] for key,row in week_two['lines'].items()})
     english.update({key:row['en'] for key,row in week_three['lines'].items()})
+    english.update({key:row['en'] for key,row in week_four['lines'].items()})
     notes_path=ROOT/'story/纸条正文.json'
     note_document=json.loads(notes_path.read_text(encoding='utf-8'))
     note_two=next(n for n in note_document['notes'] if n['visit']==2)
@@ -80,6 +84,10 @@ def main():
     for lang,note in week_three['letters']['A'].items():
         note_three[lang]=note['body'];note_three['title_'+lang]=note['title'];note_three['signature_'+lang]=note['signature']
     note_three['source']=week_three['source'];note_three['variants']={'B':week_three['letters']['B']}
+    note_four=next(n for n in note_document['notes'] if n['visit']==4)
+    for lang,note in week_four['letters']['A'].items():
+        note_four[lang]=note['body'];note_four['title_'+lang]=note['title'];note_four['signature_'+lang]=note['signature']
+    note_four['source']=week_four['source'];note_four['variants']={'B':week_four['letters']['B']}
     save(notes_path,note_document)
     translated_notes = {n['visit']:n for n in note_document['notes']}
     paper_style_path = ROOT / "assets/paper-style.json"
@@ -110,8 +118,8 @@ def main():
         n = int(match[1])
         section = text[match.end():sections[i+1].start() if i+1 < len(sections) else text.index("## 尾声")]
         opening, special = [], {}
-        overlay=week_two if n==2 else week_three
-        chapter_rows = table_lines(section) if n not in (2,3) else [
+        overlay=week_two if n==2 else week_three if n==3 else week_four
+        chapter_rows = table_lines(section) if n not in (2,3,4) else [
             [f'`{key}` · {row["mood"]}',row['zh'],row['ja'],'暂不配音']
             for key,row in overlay['lines'].items() if key.startswith(f'xm_{n:02d}_')]
         for row in chapter_rows:
@@ -122,7 +130,7 @@ def main():
             add(key, row[1], row[2], mood, **extra)
             if re.search(r"_(?:\d+|shop)$", key):
                 opening.append(key)
-            elif not key.endswith(('_late','_already_worked')):
+            elif not key.endswith(('_late','_already_worked','_existing')):
                 special[key.rsplit("_", 1)[1]] = key
         note_start = section.index("**周二｜纸条")
         jp_start = section.index("**日本語｜手紙**", note_start)
@@ -165,6 +173,15 @@ def main():
         if not key.startswith('xm_03_'):
             add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
 
+    episodes[3]['title']='两份约定'
+    for variant,note in week_four['letters'].items():
+        for lang,fields in note.items():
+            for field,value in fields.items(): loc[lang]['story_note_04'+('_b' if variant=='B' else '')+'_'+field]=value
+    for key,row in week_four['lines'].items():
+        if not key.startswith('xm_04_'): add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
+    ui_four=json.loads((ROOT/'assets/week-four-localization.json').read_text(encoding='utf-8'))
+    for lang,entries in ui_four.items(): loc[lang].update(entries)
+
     generic_section = text[text.index("## 通用交易台词与衔接"):text.index("## 0.7.0 专属动作")]
     for row in table_lines(generic_section):
         m = re.fullmatch(r"`(xm_[^`]+)`\s*·\s*(.+)", row[0])
@@ -188,7 +205,7 @@ def main():
     override_section = text[text.index("### D. 十四周"):text.index("### E. 实现验收")]
     for row in table_lines(override_section):
         key = row[0].strip("`")
-        if key in week_two['lines'] or key in week_three['lines']:
+        if key in week_two['lines'] or key in week_three['lines'] or key in week_four['lines']:
             continue # An older performance draft cannot override a rewritten week's Japanese.
         lines[key]["generate_text"] = row[2]
         lines[key]["performance_optional"] = True
@@ -236,6 +253,18 @@ def main():
         book["item"].update(id=f"sansm.xiaoman.visitor.{id}", nameLoc=f"story_note_{n:02d}_name")
         save(PACKAGE / f"Books/{id}.json", book)
 
+    book=json.loads(json.dumps(template));book['id']='w04_support_notice';book['title']='TENQUIN Assets'
+    book['item'].update(id='sansm.xiaoman.visitor.w04_support_notice',nameLoc='ui_w04_notice_name')
+    book['pages'][0]['elements']=[dict(type='text',id='notice',x=24,y=30,w=270,h=340,fontSize=10,loc='support_notice_body',color='#28466B',wrap=True)]
+    save(PACKAGE/'Books/w04_support_notice.json',book)
+    book=json.loads(json.dumps(template));book['id']='w04_group_contract';book['title']='TENQUIN Assets';book.pop('item',None)
+    book['pages'][0]['elements']=[dict(type='text',id='contract',x=24,y=30,w=270,h=340,fontSize=9,loc='group_contract_body',color='#28466B',wrap=True)]
+    save(PACKAGE/'Books/w04_group_contract.json',book)
+    book_path=PACKAGE/'Books/story_note_04.json'
+    book=json.loads(book_path.read_text(encoding='utf-8'))
+    book['pages'].append(dict(id='supply_list',elements=[dict(type='text',id='supply_snapshot',x=28,y=32,w=260,h=340,fontSize=11,loc='ui_w04_supply_list',color='#28466B',wrap=True)]))
+    save(book_path,book)
+
     catalog = json.loads((ROOT / "assets/cassettes.json").read_text(encoding="utf-8"))
     catalog = [next(c for c in catalog if c["key"] == key) for key in TRACKS]
     for n, track in enumerate(catalog, 1):
@@ -270,9 +299,10 @@ def main():
     voice_keys = [k for k, row in lines.items() if not row.get("reference") and row["kind"] == "speech" and "voice_alias" not in row]
     source_path = args.source.resolve()
     source_name = source_path.relative_to(ROOT).as_posix() if source_path.is_relative_to(ROOT) else source_path.name
-    snapshot = dict(schema=1, version="4.4-W03", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
+    snapshot = dict(schema=1, version="4.6-W04", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
                     week_two_source=week_two['source'],week_two_sha256=week_two['sha256'],
                     week_three_source=week_three['source'],week_three_sha256=week_three['sha256'],
+                    week_four_source=week_four['source'],week_four_sha256=week_four['sha256'],
                     episodes=episodes, actions=actions, lines=list(lines.values()), voice_keys=voice_keys,
                     sale_rule=dict(first=4, last=13, later_chance_percent=30, count=2, basic_only=True, excluded_visits=[6]),
                     fixed_drink_gift=dict(visit=6, count=1, tier=2, random_once=True, next_day=True, replaces_trade_reward=True),

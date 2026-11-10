@@ -16,8 +16,8 @@ namespace XiaomanVisitor
     internal sealed class XiaomanTavernChoices
     {
         internal readonly RectTransform Root;
-        private readonly DialogChoiceBubble[] views=new DialogChoiceBubble[3];
-        private readonly RectTransform[] rects=new RectTransform[3];
+        private readonly DialogChoiceBubble[] views=new DialogChoiceBubble[4];
+        private readonly RectTransform[] rects=new RectTransform[4];
         private readonly DialogBubbleScaler scaler=new DialogBubbleScaler();
         private TavernChoice[] options=new TavernChoice[0];
         private bool dirty=true;
@@ -32,18 +32,24 @@ namespace XiaomanVisitor
             Root=new GameObject("Xiaoman.NativeChoices",typeof(RectTransform)).GetComponent<RectTransform>();
             Root.SetParent(room,false);Root.anchorMin=Root.anchorMax=Root.pivot=new Vector2(0,1);
             Root.gameObject.SetActive(false);
-            for (int i=0;i<3;i++) {
+            for (int i=0;i<views.Length;i++) {
                 var view=UnityEngine.Object.Instantiate(templates[0],Root,false);
                 views[i]=view;view.SetInteractable(true);view.enabled=false;
                 var rect=(RectTransform)view.transform;rects[i]=rect;
                 rect.anchorMin=rect.anchorMax=rect.pivot=new Vector2(0,1);
-                rect.localScale/=Mathf.Max(.01f,EmporiumOption.DialogBubbleScale);scaler.Register(rect);
+                rect.localScale=Vector3.one;scaler.Register(rect);
                 foreach (StoreUI marker in view.GetComponentsInChildren<StoreUI>(true)) {
                     marker.identifier=XiaomanMod.Id+".tavern.choices";marker.isPaperUI=false;marker.zoomable=false;
                     marker.enabled=false;UnityEngine.Object.Destroy(marker);
                 }
                 foreach (ContentSizeFitter fit in view.GetComponents<ContentSizeFitter>()) fit.enabled=false;
                 foreach (DialogBubbleWidth width in view.GetComponents<DialogBubbleWidth>()) width.enabled=false;
+                foreach (LayoutGroup layout in view.GetComponents<LayoutGroup>()) layout.enabled=false;
+                var textRect=view.TMP.rectTransform;
+                textRect.anchorMin=Vector2.zero;textRect.anchorMax=Vector2.one;
+                textRect.offsetMin=new Vector2(12,5);textRect.offsetMax=new Vector2(-12,-5);
+                view.TMP.fontSize=18;view.TMP.enableAutoSizing=false;
+                view.TMP.alignment=TMPro.TextAlignmentOptions.MidlineLeft;
                 foreach (Button button in view.GetComponentsInChildren<Button>(true)) {
                     XiaomanTavernBubble.Clear(button.onClick);
                     button.navigation=new Navigation { mode=Navigation.Mode.None };
@@ -56,7 +62,7 @@ namespace XiaomanVisitor
         }
         internal void Show(TavernChoice[] choices)
         {
-            if (choices==null || choices.Length==0 || choices.Length>3) throw new ArgumentException("One to three choices required");
+            if (choices==null || choices.Length==0 || choices.Length>4) throw new ArgumentException("One to four choices required");
             options=choices;
             dirty=true;
             for (int i=0;i<views.Length;i++) {
@@ -76,18 +82,19 @@ namespace XiaomanVisitor
             if (!dirty && previousSize==room.size && previousActor==actor.rect.size
                 && Mathf.Approximately(previousBottom,bottom) && Mathf.Approximately(previousScale,factor)) return;
             dirty=false;previousSize=room.size;previousActor=actor.rect.size;previousBottom=bottom;previousScale=factor;
-            scaler.Apply();
+            float unit=room.height/1080f;
+            scaler.Apply(unit*factor);
             float y=0,w=0;
             for (int i=0;i<options.Length;i++) {
                 var rect=rects[i];var text=views[i].TMP;
                 float scale=Mathf.Max(.01f,rect.localScale.x);
-                float max=Mathf.Max(100,room.width*.32f/scale);
-                float width=Mathf.Clamp(text.GetPreferredValues(options[i].Label).x+28,100,max);
+                float max=Mathf.Max(100,Mathf.Min(280*unit,room.width*.28f)/scale);
+                float width=Mathf.Clamp(text.GetPreferredValues(options[i].Label).x+24,76,max);
                 float height=Mathf.Max(26,text.GetPreferredValues(options[i].Label,width-24,float.PositiveInfinity).y+12);
                 rect.sizeDelta=new Vector2(width,height);rect.anchoredPosition=new Vector2(0,-y);
-                w=Mathf.Max(w,width*scale);y+=height*scale+6;
+                w=Mathf.Max(w,width*scale);y+=height*scale+6*unit;
             }
-            float heightTotal=Mathf.Max(0,y-6);
+            float heightTotal=Mathf.Max(0,y-6*unit);
             Root.sizeDelta=new Vector2(w,heightTotal);
             float x=Mathf.Min(actorRest.x+actor.rect.width+12,room.width-w-12);
             float top=Mathf.Min(-actorRest.y+actor.rect.height*.6f,bottom-heightTotal-8);

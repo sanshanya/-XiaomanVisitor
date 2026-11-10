@@ -95,15 +95,15 @@
       "id": "story_note_04",
       "language": "zh",
       "file": "Letters/zh/story_note_04.png",
-      "sha256": "b742d26c68c32509b0a7c8a85665157131677e433e5861af772f0fe2e1ae895c",
-      "bytes": 76938,
-      "text_sha256": "2101ff56695a156bca96dcd1fc283e28643e898bd63ce92b77c929f7aacad595",
+      "sha256": "f74cc7a4e102b2c10fa31ae00de0cde2b7ae4815cba125fb643382f50c6ed4d9",
+      "bytes": 96638,
+      "text_sha256": "5f4350e3d19597675403e08fad8be184729d3a53f8fabbfb5e24fd767643016b",
       "layout": {
         "font": "yozai",
         "visit": 4,
         "language": "zh",
-        "lines": 7,
-        "body_bottom": 410.66,
+        "lines": 11,
+        "body_bottom": 563.1,
         "available_bottom": 665,
         "fits": true,
         "longest_line": 495.36
@@ -308,6 +308,24 @@
       }
     },
     {
+      "id": "story_note_04_b",
+      "language": "zh",
+      "file": "Letters/zh/story_note_04_b.png",
+      "sha256": "f5951c402350046807c4aea017845728bda2a4b2ca20ba8d058d8ace80dac229",
+      "bytes": 113703,
+      "text_sha256": "7f0d51569d6fec58378a78e3d9be99d2853cd4e081b01b32f92bdd370b649a75",
+      "layout": {
+        "font": "yozai",
+        "visit": 4,
+        "language": "zh",
+        "lines": 11,
+        "body_bottom": 578.46,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 495.36
+      }
+    },
+    {
       "id": "story_note_01",
       "language": "ja",
       "file": "Letters/ja/story_note_01.png",
@@ -365,15 +383,15 @@
       "id": "story_note_04",
       "language": "ja",
       "file": "Letters/ja/story_note_04.png",
-      "sha256": "189d0a958260da824872f630ca62c845acf7a97fc5113a1443ac7d5ae2dbf920",
-      "bytes": 102558,
-      "text_sha256": "7094c37ea4d84594d8ae8822603ce7bc5b95bd8c0e8b27e957ace44b873639e9",
+      "sha256": "b13579edc9f85c0c8263ece63980ad8653bbc2fab963531ce4c8715f6d6bd5b1",
+      "bytes": 115317,
+      "text_sha256": "2e660c0d9d6ebc5114ac7f4573276d8de805b784a765db503496b8a0e9147984",
       "layout": {
         "font": "yozai",
         "visit": 4,
         "language": "ja",
-        "lines": 11,
-        "body_bottom": 524.42,
+        "lines": 13,
+        "body_bottom": 619.98,
         "available_bottom": 665,
         "fits": true,
         "longest_line": 495.36
@@ -578,6 +596,24 @@
       }
     },
     {
+      "id": "story_note_04_b",
+      "language": "ja",
+      "file": "Letters/ja/story_note_04_b.png",
+      "sha256": "cabade834670c133d5d7b3ab67654bcf179843a373944e2e6e78241db88e4aca",
+      "bytes": 120717,
+      "text_sha256": "a7cdca0a6be8434c3152130f3ac0e62a65ec53ac597f25b4eac85763d385d0bc",
+      "layout": {
+        "font": "yozai",
+        "visit": 4,
+        "language": "ja",
+        "lines": 14,
+        "body_bottom": 662.97,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 495.36
+      }
+    },
+    {
       "id": "story_note_01",
       "language": "en",
       "file": "Letters/en/story_note_01.png",
@@ -635,18 +671,18 @@
       "id": "story_note_04",
       "language": "en",
       "file": "Letters/en/story_note_04.png",
-      "sha256": "d4bfef853249416eff80e0c9dc7369c8b29b5eb5cb04d86593dc3761d1b9e45d",
-      "bytes": 86992,
-      "text_sha256": "e6fc3d3acfbc87f0b2bb279b791e04f4f944e775410e30be8b0a77427d0e3193",
+      "sha256": "2f2c2fea490d491bf9ad7e6321918dbe8624ac496201b08e61d5943d65d4498c",
+      "bytes": 91865,
+      "text_sha256": "114674a927ed53596e837a00cba432a471093558f3f971c689428c223d44693b",
       "layout": {
         "font": "yozai",
         "visit": 4,
         "language": "en",
         "lines": 12,
-        "body_bottom": 552.86,
+        "body_bottom": 591.54,
         "available_bottom": 665,
         "fits": true,
-        "longest_line": 495.55
+        "longest_line": 494.47
       }
     },
     {
@@ -845,6 +881,24 @@
         "available_bottom": 665,
         "fits": true,
         "longest_line": 486.13
+      }
+    },
+    {
+      "id": "story_note_04_b",
+      "language": "en",
+      "file": "Letters/en/story_note_04_b.png",
+      "sha256": "f96ab181c04d020422daba996f3923437aaeb0c879714fb8a0b295769810f080",
+      "bytes": 99079,
+      "text_sha256": "a017b3ae6caff077aef78d5f58e767c87f7571769113cb51e6dd19e4151c249a",
+      "layout": {
+        "font": "yozai",
+        "visit": 4,
+        "language": "en",
+        "lines": 14,
+        "body_bottom": 662.97,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 489.13
       }
     }
   ]

@@ -97,11 +97,10 @@ internal static class WeekThreeChecks
         var won=Worked(wonId,15);var lost=Worked(lostId,15);
         check(won.Thanks.Won && !lost.Thanks.Won && won.Thanks.DueDay==16
             && !won.ThanksDue(15) && won.ThanksDue(16),"W03-A15: a single stable 35% draw schedules only next-day thanks");
-        int roll=lost.Thanks.Roll;string key=lost.Thanks.DrinkKey;
         lost=TavernWorkProgress.Restore(lost.Data,lostId,16);
         lost.EnsureDemand(16,3);lost.Complete(lost.PrepareShift(16,160));
-        check(!lost.Thanks.Won && lost.Thanks.Roll==roll && lost.Thanks.DrinkKey==key
-            && StoryRules.BasicDrinks.Contains(key),"later work and reload never reroll a miss or change the basic juice");
+        check(lost.Thanks.ShiftId=="paid_shift_16" && lost.ThanksHistory.Count==1
+            && StoryRules.BasicDrinks.Contains(lost.Thanks.DrinkKey),"W04 supersedes first-only: a later paid shift may draw once; the previous miss stays archived");
         var emptyStory=new StoryProgress();
         check(CustomerQueuePolicy.Next(16,emptyStory,won,true)==XiaomanVisitKind.WorkThanks
             && CustomerQueuePolicy.Next(22,emptyStory,won,true)==XiaomanVisitKind.Story

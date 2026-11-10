@@ -43,7 +43,6 @@ namespace XiaomanVisitor
                 onArrive = ArriveAtTavern,
                 onLeave = LeaveTavern,
                 onTick = TickTavernPanel,
-                buildPanel = BuildTavernPanel,
                 usesAfterhourBag = true,
                 showsStoreCounters = false,
                 allowsHazardousWaste = false,

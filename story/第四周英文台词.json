@@ -1,0 +1,47 @@
+{
+  "lines": {
+    "xm_04_01": "Good evening, senpai. There is something I would like to discuss today.",
+    "xm_04_02": "We are using more and more water and ingredients. I can hardly keep up with the orders.",
+    "xm_04_03": "If you have suitable supplies, could I buy from you regularly, from a list?",
+    "xm_04_04": "You could stock the drinks I make, too. Hehe, we would be proper business partners!",
+    "xm_04_shop": "I would like some drinking water today. I have {0} credits.",
+    "xm_04_cocktail": "I also brought two bottled juice drinks from the bar. Would you like a look?",
+    "xm_04_accept": "Thank you. Just what I needed.",
+    "xm_04_bye": "I should go. We can talk about supplies at my place tonight, if you like.",
+    "xm_tavern_w04_supply_01": "Welcome, senpai. I made that list we discussed during the day.",
+    "xm_tavern_w04_supply_02": "I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop.",
+    "xm_tavern_w04_supply_03": "The quantities and prices are all written down. I want this to be a fair deal for you.",
+    "xm_tavern_w04_supply_yes": "Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now.",
+    "xm_tavern_w04_supply_later": "Of course. No hurry. You have your own shop to look after.",
+    "xm_w04_phone_01": "Hello. Tenquin Asset Corporation, Merchant Development.",
+    "xm_w04_phone_02": "Pre-assessment applications are open for our alcohol and tobacco retailer support programme. A representative can visit your shop.",
+    "xm_w04_phone_confirm": "Your application is registered. An assessor will visit tomorrow. The result will be sent this Friday.",
+    "xm_w04_phone_closed": "We are sorry. Registration for this round has closed.",
+    "xm_w04_audit_01": "Hello. Tenquin Asset Corporation, Merchant Assessment. We arranged this visit yesterday.",
+    "xm_w04_audit_02": "I would like to see your alcohol and tobacco business. I can also buy suitable goods at normal prices.",
+    "xm_w04_audit_shop": "I am buying alcohol and tobacco products today. My budget is {0} credits.",
+    "xm_w04_audit_accept": "Thank you. This purchase will be included in our visit record.",
+    "xm_w04_audit_no_trade": "Understood. No purchase is necessary. The assessment will proceed as usual.",
+    "xm_w04_audit_bye": "Thank you for your cooperation. You will receive the result this Friday.",
+    "xm_w04_wang_01": "Hey. Heard you applied for that commercial street support scheme.",
+    "xm_w04_wang_02": "You are under my wing. I asked someone to stop that paperwork for you.",
+    "xm_w04_wang_03": "Do not feel bad about it. They call it support, but once you sign, it is a different story.",
+    "xm_w04_wang_04": "If it is such a good deal, why do they not run the business themselves?",
+    "xm_w04_wang_bye": "Anyway, look after your shop. Think things through next time.",
+    "xm_04_03_existing": "Senpai, I kept the supply list we agreed on. If you find something suitable, we can work through it at our own pace.",
+    "xm_tavern_w04_supply_existing": "The list is here, senpai. Are you delivering supplies today, or buying from me?",
+    "xm_tavern_w04_supply_early": "Welcome, senpai. I made a list of supplies for the bar. May I discuss it with you?"
+  },
+  "letters": {
+    "A": {
+      "title": "Dear shopkeeper,",
+      "body": "After mentioning supplies yesterday, I went back and made another list of what the bar needs.\n\nI used to write down only what was missing that day. Now I am planning ingredients for the weeks ahead.\n\nIt is tiring, but I am happy.\n\nThere is still so much you can teach me about running a shop.\n\nPlease do not feel you have to agree right away. You have your own business. We can talk when it suits you.\n\nHere is this week's tape. (´,,•ω•,,)♡\n\nI have enclosed this week's supply categories. Come and see me if you are interested.",
+      "signature": "— Xiaoman"
+    },
+    "B": {
+      "title": "Dear shopkeeper,",
+      "body": "After closing last night, I wrote our two shops' supply arrangement into my ledger.\n\nNow we are officially business partners.\n\nThere is still so much you can teach me about running a shop.\n\nAnd if anything comes up at your shop, come to me too! I will help however I can.\n\nNot long ago I only bought a little water from you and carried it home in one small bag.\n\nIf it turns into crates and crates one day, will your counter have room for them all...?\n\nBefore that, though, I need to work out the orders properly. We both have a good business to run.\n\nHere is this week's tape. (´,,•ω•,,)♡",
+      "signature": "— Xiaoman"
+    }
+  }
+}

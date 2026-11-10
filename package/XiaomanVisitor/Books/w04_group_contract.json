@@ -1,0 +1,43 @@
+{
+  "id": "w04_group_contract",
+  "title": "TENQUIN Assets",
+  "background": "sansm.xiaoman.visitor:xiaoman_letter_paper",
+  "width": 628,
+  "height": 784.7201426024956,
+  "designWidth": 314,
+  "designHeight": 392.3600713012478,
+  "posX": -250,
+  "posY": 0,
+  "chrome": [
+    {
+      "type": "button",
+      "id": "close",
+      "action": "close",
+      "sprite": "sansm.xiaoman.visitor:xiaoman_note_close",
+      "hoverSprite": "sansm.xiaoman.visitor:xiaoman_note_close_hover",
+      "x": 297,
+      "y": 2.5,
+      "w": 14,
+      "h": 15
+    }
+  ],
+  "pages": [
+    {
+      "name": "Note",
+      "elements": [
+        {
+          "type": "text",
+          "id": "contract",
+          "x": 24,
+          "y": 30,
+          "w": 270,
+          "h": 340,
+          "fontSize": 9,
+          "loc": "group_contract_body",
+          "color": "#28466B",
+          "wrap": true
+        }
+      ]
+    }
+  ]
+}

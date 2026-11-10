@@ -50,6 +50,7 @@ namespace XiaomanVisitor
             foreach (StoryLineSpec spec in episode.Opening)
             {
                 string key=TavernRules.OpeningLineKey(index,spec.Key,session.Day);
+                if (key=="xm_04_03" && ReadSupply().Signed) key="xm_04_03_existing";
                 if (key=="xm_03_04" && ReadWork().HasWorked) key="xm_03_04_already_worked";
                 Dialogue next = StoryLine(client,key,spec.Mood,episode.Credits);
                 if (tail == null) client.mainDialogue = next;
@@ -113,6 +114,7 @@ namespace XiaomanVisitor
             {
                 if (session.Placed[i]) continue;
                 GameItem item = ModHelper.SpawnItem(CocktailCatalog.Find(session.SaleKeys[i]).ItemId);
+                item.ModifyTag("XIAOMAN_BATCH_SOURCE",tag => tag.Enable().SetString("private_visit_sample:"+session.Day+":"+session.SaleKeys[i]));
                 session.Placed[i] = PlayerStore.Instance.TryAddDirectSellingItemToTable(item);
             }
         }

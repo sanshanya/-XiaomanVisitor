@@ -12,6 +12,7 @@ namespace XiaomanVisitor
     {
         private XiaomanMod mod;
         private RectTransform room;
+        internal RectTransform ControlRoot { get;private set; }
         private RawImage background, actor, foreground;
         private RectTransform actorHit, rainHit, tapeHit;
         private RectTransform workBar, workFill;
@@ -68,6 +69,8 @@ namespace XiaomanVisitor
             speech = new XiaomanTavernBubble(room, StopVoice);
             choices = new XiaomanTavernChoices(room);
             nextBlink = Time.unscaledTime + 3f;
+            ControlRoot=new GameObject("Xiaoman.TavernControls",typeof(RectTransform)).GetComponent<RectTransform>();
+            ControlRoot.SetParent(room,false);ControlRoot.anchorMin=ControlRoot.anchorMax=ControlRoot.pivot=new Vector2(0,0);
             Layout();
             Pose(Mood.Neutral, 0);
         }
@@ -117,6 +120,10 @@ namespace XiaomanVisitor
             PlaceHit(actorHit,TavernSceneLayout.ActorX,TavernSceneLayout.ActorY,TavernSceneLayout.ActorWidth,TavernSceneLayout.ActorHeight,scale);
             PlaceHit(rainHit,TavernSceneLayout.RainX,TavernSceneLayout.RainY,TavernSceneLayout.RainWidth,TavernSceneLayout.RainHeight,scale);
             PlaceHit(tapeHit,TavernSceneLayout.TapeX,TavernSceneLayout.TapeY,TavernSceneLayout.TapeWidth,TavernSceneLayout.TapeHeight,scale);
+            if (ControlRoot!=null) {
+                float unit=room.rect.height/1080f;ControlRoot.localScale=Vector3.one*unit;
+                ControlRoot.sizeDelta=new Vector2(270,40);ControlRoot.anchoredPosition=new Vector2(18*unit,18*unit);
+            }
             LayoutWorkBar();
         }
 
@@ -155,7 +162,11 @@ namespace XiaomanVisitor
                 workLabel.rectTransform.offsetMin=workLabel.rectTransform.offsetMax=Vector2.zero;
                 workLabel.font=DialogUIManager.Instance.clientNameTMP.font;workLabel.alignment=TextAlignmentOptions.Center;
                 workLabel.color=new Color32(226,224,197,255);workLabel.raycastTarget=false;
-                LayoutWorkBar();
+                if (ControlRoot!=null) {
+                float unit=room.rect.height/1080f;ControlRoot.localScale=Vector3.one*unit;
+                ControlRoot.sizeDelta=new Vector2(270,40);ControlRoot.anchoredPosition=new Vector2(18*unit,18*unit);
+            }
+            LayoutWorkBar();
             }
             workBar.gameObject.SetActive(true);
             workFill.anchorMax=new Vector2(Mathf.Clamp01(progress),1);workLabel.text=label;
@@ -199,6 +210,8 @@ namespace XiaomanVisitor
             music.volume=Mathf.Clamp01(EmporiumOption.Instance.musicVolume);
             music.clip=clip; music.mute=previousMusicMute; music.Play(); return true;
         }
+        internal void PauseMusic() { music?.Pause(); }
+        internal void ResumeMusic() { music?.UnPause(); }
         private void StopMusic()
         {
             if (music!=null) { music.Stop(); music.clip=null; }

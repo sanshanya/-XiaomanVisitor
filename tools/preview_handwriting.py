@@ -179,7 +179,7 @@ def letter_layout(font_key, visit, language, texts, letter_id=None):
     key = letter_id or f"story_note_{visit:02d}"
     body = texts[key+"_body"]
     lines = wrap(body, font, BODY_SIZE, 500, language)
-    step = BODY_SIZE*LINE_HEIGHT
+    step = BODY_SIZE*(1.565 if key=="story_note_04_b" else LINE_HEIGHT)
     y = 140 + BODY_SIZE  # first baseline; same region as the current letter
     positions = []
     for index, (line, paragraph_end) in enumerate(lines):

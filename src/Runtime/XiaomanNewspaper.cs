@@ -50,6 +50,7 @@ namespace XiaomanVisitor
         {
             if (!XiaomanNewspaper.Rendering) return;
             __result = XiaomanNewspaper.Append(__result, XiaomanMod.Instance?.RenovationNews());
+            __result = XiaomanNewspaper.Append(__result,XiaomanMod.Instance?.SupportNews());
         }
     }
 }

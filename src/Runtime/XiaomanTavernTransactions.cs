@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace XiaomanVisitor
 {
@@ -24,7 +25,8 @@ namespace XiaomanVisitor
             tavernActionBusy=true;
             try {
                 TavernRecovery recovery=progress.Recover(StoreStation.Instance.dayCounter,PlayerStore.Instance.GetCash(),ReadDrinkBuffs().Data);
-                if (recovery == TavernRecovery.Cancel) { record.Status="cancelled"; SaveTavern(progress); }
+                if (recovery == TavernRecovery.Cancel) { record.Status="cancelled"; SaveTavern(progress);
+                    var supply=ReadSupply();supply.CancelBar(record.Id);SaveSupply(supply); }
                 else if (recovery == TavernRecovery.ApplyBuff || recovery == TavernRecovery.Finish)
                     CommitTavernBuff(progress,record,recovery == TavernRecovery.ApplyBuff);
                 else if (recovery == TavernRecovery.Hold) { record.Status="uncertain"; SaveTavern(progress); }
@@ -43,6 +45,7 @@ namespace XiaomanVisitor
             record.Status="complete"; SaveTavern(progress);
             // Optional native relief/sound occurs only after the durable completed receipt.
             // Recovery never repeats a completed receipt or creates an inventory item.
+            var supply=ReadSupply();supply.SettleBar(record.Id,record.Paid);SaveSupply(supply);
             CocktailConsumed(CocktailCatalog.Find(record.Key));
         }
 
@@ -61,6 +64,11 @@ namespace XiaomanVisitor
                 string before=ReadDrinkBuffs().Data;
                 var record=progress.PrepareDrink(day,key,PlayerStore.Instance.GetCash(),before);
                 if (record == null) return;
+                var supply=ReadSupply();
+                if (supply.Batches.Any(b => b.Key==key)) {
+                    if (!supply.ReserveBar(record.Id,key)) { TavernNotice("ui_w04_pool_empty");return; }
+                    SaveSupply(supply);
+                }
                 SaveTavern(progress); // Verified before touching the native wallet.
                 PlayerStore.Instance.PayMoney(record.Paid);
                 if (progress.Recover(day,PlayerStore.Instance.GetCash(),ReadDrinkBuffs().Data) != TavernRecovery.ApplyBuff)

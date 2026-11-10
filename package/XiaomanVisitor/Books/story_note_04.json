@@ -64,6 +64,23 @@
           "color": "#1B304A"
         }
       ]
+    },
+    {
+      "id": "supply_list",
+      "elements": [
+        {
+          "type": "text",
+          "id": "supply_snapshot",
+          "x": 28,
+          "y": 32,
+          "w": 260,
+          "h": 340,
+          "fontSize": 11,
+          "loc": "ui_w04_supply_list",
+          "color": "#28466B",
+          "wrap": true
+        }
+      ]
     }
   ],
   "item": {
