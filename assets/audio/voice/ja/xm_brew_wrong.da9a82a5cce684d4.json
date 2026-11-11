@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今回は、普通の飲み水か、それより質のいいお水と、お酒を作る材料だけなんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "72",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.022,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 433122
+  },
+  "sha256": "c16196885952b95192bc29ae88b8eaddb413981ff1298dcb2708211c674e4a68",
+  "binding": {
+    "key": "xm_brew_wrong",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这次只收基础水以上的水，还有酿酒材料哦。",
+      "ja": "今回は、普通の飲み水か、それより質のいいお水と、お酒を作る材料だけなんです。",
+      "en": "I'm only collecting basic-quality water or better and brewing ingredients this time."
+    },
+    "generic": false
+  }
+}

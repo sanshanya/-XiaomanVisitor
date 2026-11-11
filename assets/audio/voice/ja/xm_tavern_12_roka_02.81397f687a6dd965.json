@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "塩漬けの桜に、日本酒を少し。それから抹茶も、ほんの少しだけ。あとから、ちょっとだけ苦みが残るんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "94",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 12.003,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 576184
+  },
+  "sha256": "61472a5a9b5a6bb455295d85f5a4206eb85e7c85d0eb821b6252e4e16ff8ecfb",
+  "binding": {
+    "key": "xm_tavern_12_roka_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "用了盐渍樱花和一点清酒。后面还添了些抹茶，喝起来会有一点点苦。",
+      "ja": "塩漬けの桜に、日本酒を少し。それから抹茶も、ほんの少しだけ。あとから、ちょっとだけ苦みが残るんです。",
+      "en": "I used salted cherry blossoms and a little sake, then added a touch of matcha. There is a little bitterness at the end."
+    },
+    "generic": false
+  }
+}

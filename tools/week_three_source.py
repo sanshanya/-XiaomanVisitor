@@ -3,6 +3,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+import story_variants
 from week_two_source import MOODS
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -29,15 +30,8 @@ def read():
     assert set(lines)==set(english['lines'])
     for line in list(lines.values()):
         if not line['key'].startswith('xm_tavern_') or '前辈' not in line['zh']: continue
-        variant=dict(line,key=line['key']+'_unknown')
+        variant=story_variants.unacquainted(line)
         assert variant['key'] not in lines
-        variant['zh']=line['zh'].replace('前辈，','').replace('前辈！','').replace('前辈','您')
-        variant['ja']=line['ja'].replace('先輩、','').replace('先輩に','お客さんに').replace('先輩の','お客さんの').replace('先輩','お客さん')
-        variant['en']=line['en'].replace(', senpai','').replace('Senpai, ','')
-        if line['key']=='xm_tavern_w03_work_decline':
-            variant.update(zh='嗯，没关系。您也有自己的事情要忙嘛。',
-                ja='うん、大丈夫です。ご用事もあるでしょうし。',
-                en="That's all right. You have things of your own to take care of too.")
         lines[variant['key']]=variant
     letters={}
     for variant,start,end in (('A','### 4.2 A','### 4.3 B'),('B','### 4.3 B','### 4.4')):

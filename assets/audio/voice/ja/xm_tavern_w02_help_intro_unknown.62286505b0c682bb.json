@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "90",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.217,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 442462
+  },
+  "sha256": "064fd3e6fbbacb918a5e6859616c7ed314a857726cd10f865ac345a1e662593c",
+  "binding": {
+    "key": "xm_tavern_w02_help_intro_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "被你发现了啊……我这边还忙着调酒。可以帮我把酒单递过去吗？",
+      "ja": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
+      "en": "You caught me… I'm still making drinks. could you take them a menu for me?"
+    },
+    "generic": false
+  }
+}

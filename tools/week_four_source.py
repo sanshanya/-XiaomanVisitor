@@ -3,6 +3,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+import story_variants
 
 ROOT=Path(__file__).resolve().parents[1]
 SOURCE=ROOT/'story/小满酒馆_第四周_v4.6_剧情与扶持支线修订稿.md'
@@ -28,10 +29,7 @@ def read():
         lines[key]=dict(key=key,zh=zh,ja=ja,en=english['lines'][key],mood='Soft',defer_voice=True)
     for line in list(lines.values()):
         if not line['key'].startswith('xm_tavern_'): continue
-        variant=dict(line,key=line['key']+'_unknown')
-        variant['zh']=line['zh'].replace('前辈来啦。','欢迎。').replace('前辈，','').replace('前辈','您')
-        variant['ja']=line['ja'].replace('先輩、','').replace('先輩','お客さん')
-        variant['en']=line['en'].replace('Senpai, ','').replace(', senpai','')
+        variant=story_variants.unacquainted(line)
         lines[variant['key']]=variant
     letters={}
     for variant,start,end in [('A','A｜尚未正式签供销约定','B｜当晚已正式签下供销约定'),('B','B｜当晚已正式签下供销约定','纸条文本约束：')]:

@@ -110,7 +110,7 @@ story_note_07_title,致前辈：
 story_note_07_body,今天收到了故乡朋友们的合照。\n\n她们居然特地留了一个空位，还在上面画了个我。画得一点也不像嘛。\n\n她们问我，能不能也发张在空间站的照片回去。\n\n翻了翻相册，最近拍的几乎全是酒瓶、杯子，还有窗上的雨。\n\n最后只好挑了一张吧台给她们。\n\n结果她们回我：“光拍店不行，下次要有你本人哦！”\n\n真是的，我明明是想让她们看看我的小酒馆呀。\n\n这是这周的磁带。
 story_note_07_signature,——小满
 story_note_07_name,小满留下的纸条
-xm_08_01,晚上好，前辈。前阵子故乡的朋友一直催我，叫我发张自己的照片回去。
+xm_08_01,晚上好，前辈。前阵子老家的朋友一直催我，叫我发张自己的照片回去。
 xm_08_02,昨晚我请几位常来的夜班姑娘帮忙，她们还抢着说要给我拍呢。
 xm_08_shop,今天想买点日用品。带了 {0} 信用点。
 story_note_08_title,致前辈：
@@ -139,7 +139,7 @@ story_note_11_body,最近打烊以后，我常常坐在吧台后面，把酒单�
 story_note_11_signature,——小满
 story_note_11_name,小满留下的纸条
 xm_12_01,晚上好，前辈。昨天妈妈给我打电话了呢。
-xm_12_02,她说故乡的樱花开了，还拍了好多照片给我。
+xm_12_02,她说老家的樱花开了，还拍了好多照片给我。
 xm_12_shop,今天想买点吃的。带了 {0} 信用点。
 story_note_12_title,致前辈：
 story_note_12_body,最近收店早了，我总会在商业街走走。\n\n刚搬来的时候，商业街的通道看起来都差不多，连回住处的路都记不清。\n\n现在哪块广告牌几点熄灯，哪个路口的自动贩卖机还亮着，我都记住了。\n\n不知不觉，已经在这里待了这么久呀。\n\n想想第一次去前辈店里的时候，我还说自己认不清路呢。\n\n现在闭着眼睛都知道怎么走啦。
@@ -198,7 +198,7 @@ xm_act_markup_reject_high_02,对不起，这个价钱我买不了。
 xm_act_markup_reject_high_03,这样的话，今天还是算了。
 xm_act_angry_leave_01,……够了。今天我先回去了。
 xm_act_angry_leave_02,继续说也没意义了。失礼了。
-xm_act_angry_leave_03,对不起，我没办法继续在这里买东西了。
+xm_act_angry_leave_03,对不起，今天我没法继续在这里买东西了。
 xm_act_bad_word_01,这种事，我会和认识的人说清楚的。
 xm_act_bad_word_02,抱歉……但别人问起这家店，我没法当作什么都没发生。
 xm_act_bad_word_03,这里的传闻很快的。希望你以后别这样了。
@@ -243,7 +243,7 @@ xm_02_accept,谢谢。正好用得上。
 xm_02_bye,那我先走啦。期待店长光临小店。
 xm_02_02_late,对了……我在商业街开了间小酒馆。最近终于开业啦。
 xm_tavern_w02_entry_01,欢迎光临……啊，是店长先生。
-xm_tavern_w02_entry_02,我一直期待您的到来。
+xm_tavern_w02_entry_02,一直盼着您来呢。
 xm_tavern_w02_entry_03,我好像还不太习惯，在自己的店里说“欢迎光临”呢。
 xm_tavern_w02_reentry,啊，店长先生。又见面啦。
 xm_tavern_greeting,晚上好，前辈。欢迎光临。
@@ -262,18 +262,18 @@ xm_tavern_w02_chat_04,刚开业的时候，连说“欢迎光临”都会紧张�
 xm_tavern_w02_help_intro,被你发现了啊……我这边还忙着调酒。前辈，可以帮我把酒单递过去吗？
 xm_tavern_w02_help_done,谢谢前辈！刚开店就有点手忙脚乱的……还好有您在。
 xm_tavern_w02_help_skip,嗯，没关系。我自己来就好啦。
-xm_tavern_w02_rain_01,前辈在看窗户上的雨幕吗？这可是本店的独特设计哦。
-xm_tavern_w02_rain_02,为了呈现下雨的效果，我可是花了好一番功夫呢。
-xm_tavern_w02_tape_intro,这台磁带机是我从故乡带来的，如果店长有喜欢的曲目，可以自己选着听。
+xm_tavern_w02_rain_01,前辈在看窗户上的雨幕吗？这个是我特意装的哦。
+xm_tavern_w02_rain_02,为了让它看起来像真的下雨，我可是折腾了好久呢。
+xm_tavern_w02_tape_intro,这台磁带机是我从老家带来的。店长先生想听的话，自己放就好啦。
 xm_tavern_greeting_plain,欢迎光临。
 xm_tavern_chat_rest,前辈，慢慢坐吧。一起听会儿音乐。
 xm_tavern_w02_entry_01_unknown,欢迎光临……啊，是
 xm_tavern_w02_reentry_unknown,啊，又见面啦。
 xm_tavern_drink_limit_unknown,不可以哦，今晚已经喝过一杯啦。想听歌的话，倒是随时欢迎。
 xm_tavern_w02_help_intro_unknown,被你发现了啊……我这边还忙着调酒。可以帮我把酒单递过去吗？
-xm_tavern_w02_help_done_unknown,谢谢刚开店就有点手忙脚乱的……还好有您在。
-xm_tavern_w02_rain_01_unknown,您在看窗户上的雨幕吗？这可是本店的独特设计哦。
-xm_tavern_w02_tape_intro_unknown,这台磁带机是我从故乡带来的，如果您有喜欢的曲目，可以自己选着听。
+xm_tavern_w02_help_done_unknown,谢谢！刚开店就有点手忙脚乱的……还好有您在。
+xm_tavern_w02_rain_01_unknown,您在看窗户上的雨幕吗？这个是我特意装的哦。
+xm_tavern_w02_tape_intro_unknown,这台磁带机是我从老家带来的。想听的话，自己放就好啦。
 xm_tavern_chat_rest_unknown,慢慢坐吧。一起听会儿音乐。
 ui_tavern_open_desc,灯还亮着，里面传来了音乐。
 ui_tavern_menu,酒单
@@ -316,7 +316,7 @@ xm_tavern_w03_work_offer_01_unknown,啊，正好换班的客人快来了。能�
 xm_tavern_w03_work_w02_callback_unknown,上次您帮忙递酒单，我还记得呢。这次可不能再让您白帮忙啦。
 xm_tavern_w03_work_start_unknown,那就拜托您啦！这边的客人交给您，我去照看吧台。
 xm_tavern_w03_work_done_01_unknown,呼……总算忙过这一阵啦。帮大忙了！
-xm_tavern_w03_work_done_02_unknown,今天的工资，请收好。多亏刚才那几位客人总算没白跑一趟呢。
+xm_tavern_w03_work_done_02_unknown,今天的工资，请收好。多亏您帮忙，刚才那几位客人总算没白跑一趟呢。
 xm_tavern_w03_work_decline_unknown,嗯，没关系。您也有自己的事情要忙嘛。
 xm_tavern_w03_work_done_today_unknown,今天已经下过班啦。再留下来，我可要担心您休息不够了。
 xm_tavern_w03_work_no_orders_unknown,今天暂时忙得过来。您来听听歌就好啦。
@@ -335,18 +335,18 @@ gift_note_arrived,小满留下了一封纸条。
 gift_tape_arrived,小满留下了一盘磁带。
 gift_note_stored,小满的纸条已放入信笺簿。
 gift_tape_stored,小满的磁带已放入磁带盒。
-xm_04_03,前辈这里要是有合适的水和酿酒材料，能不能留一些给我？有空来酒馆，我们商量个约定吧。
-xm_04_04,签好协议后，我周三来取材料，周五把调好的酒带过来。材料和酒都不算钱，就当我们一起做的小生意啦。
+xm_04_03,前辈这里要是有合适的水和酿酒用的材料，能不能留一些给我？有空来酒馆，我们商量一下怎么合作吧。
+xm_04_04,签好协议后，我周三来取材料，周五把调好的酒带过来。材料和酒都不用付钱，就当我们一起做点小生意啦。
 xm_04_accept,谢谢。正好用得上。
 xm_04_bye,那我先走啦。供货的事，晚上来店里再慢慢谈也可以哦。
-xm_04_03_existing,前辈，取料和交酒的安排，随时可以来酒馆找我确认。想停一停也没关系。
+xm_04_03_existing,前辈，取材料和送酒的事，随时可以来酒馆找我商量。想先歇一阵也没关系，告诉我就好。
 story_note_04_b_title,致店长前辈：
 story_note_04_b_body,"昨晚关店以后，我把两家店的供货单写进账本里了。\n\n以后我们就是正式的商业合作伙伴了。\n\n关于经营店铺的事情，还有许多地方需要前辈的指教。\n\n当然如果前辈经营店铺遇到问题尽管来找我就好啦～我一定会鼎力相助。\n\n前阵子去前辈那里，还只是买点水，拎一个小袋子就回来了。\n\n要是哪天变成一整箱一整箱的货，不知道前辈的柜台还放不放得下呀……？\n\n不过在那之前，我得先把订单认真算清楚才行。毕竟，我们都要做成一笔好生意嘛。\n\n这是这周的磁带。(´,,•ω•,,)♡"
 story_note_04_b_signature,——小满
 xm_tavern_w04_supply_01,前辈来啦。白天说的那件事，我把清单准备好了。
-xm_tavern_w04_supply_02,前辈留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，签好协议后我周三去店里取。
-xm_tavern_w04_supply_03,材料按价值记下来，我多做三成价值的酒，周五带过去。我们两边都不用付钱。下周要不要继续，到时候再商量。
-xm_tavern_w04_supply_yes,太好啦！那以后就照着清单来。嘿嘿，感觉和前辈的关系更近了呢。
+xm_tavern_w04_supply_02,前辈留些基础水或者品质更好的水，还有酿酒用的材料给我就好。不用特地凑齐配方。约好了，我周三去店里取。
+xm_tavern_w04_supply_03,我会照材料的价值，再多添三成，给前辈做成酒。周五带过去，我们两边都不用付钱。下周还要不要继续，到时候再商量，好不好？
+xm_tavern_w04_supply_yes,太好啦！那就说定了，周三我过去。嘿嘿，能和前辈一起做酒，还挺期待的呢。
 xm_tavern_w04_supply_later,好呀，不着急。前辈也有自己的店要忙嘛。
 xm_w04_phone_01,您好，这里是企鹅资产公司商户发展部。
 xm_w04_phone_02,烟酒类商户扶持计划正在接受预评估申请。我们可安排专员到您的店铺了解经营情况。
@@ -363,14 +363,14 @@ xm_w04_wang_02,你可是我罩着的。那边的手续，我找人给你挡回�
 xm_w04_wang_03,别觉得可惜。那帮人写着扶持，合同一签可就没那么简单了。
 xm_w04_wang_04,真有那么好的买卖，他们干吗不自己做？
 xm_w04_wang_bye,行了，你好好开店。以后有事多过过脑子。
-xm_tavern_w04_supply_existing,前辈，材料和成酒的记录在这里。要中断或者续签，都可以在这里告诉我，已经收下的材料我还是会做好送去。
+xm_tavern_w04_supply_existing,前辈，材料和酒的记录都在这里。想先歇一阵，或者接着做，在这里告诉我就好。已经收下的这批，我还是会做好送去的。
 xm_tavern_w04_supply_early,前辈来啦。我把店里需要的东西列了一张清单，想跟您商量一下。
 xm_tavern_w04_supply_01_unknown,欢迎。白天说的那件事，我把清单准备好了。
-xm_tavern_w04_supply_02_unknown,您留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，签好协议后我周三去店里取。
-xm_tavern_w04_supply_03_unknown,材料按价值记下来，我多做三成价值的酒，周五带过去。我们两边都不用付钱。下周要不要继续，到时候再商量。
-xm_tavern_w04_supply_yes_unknown,太好啦！那以后就照着清单来。嘿嘿，感觉和您的关系更近了呢。
-xm_tavern_w04_supply_later_unknown,好呀，不着急。您也有自己的店要忙嘛。
-xm_tavern_w04_supply_existing_unknown,材料和成酒的记录在这里。要中断或者续签，都可以在这里告诉我，已经收下的材料我还是会做好送去。
+xm_tavern_w04_supply_02_unknown,您留些基础水或者品质更好的水，还有酿酒用的材料给我就好。不用特地凑齐配方。约好了，我周三去店里取。
+xm_tavern_w04_supply_03_unknown,我会照材料的价值，再多添三成，做成酒。周五带过去，我们两边都不用付钱。下周还要不要继续，到时候再商量，好不好？
+xm_tavern_w04_supply_yes_unknown,太好啦！那就说定了，周三我过去。嘿嘿，能和您一起做酒，还挺期待的呢。
+xm_tavern_w04_supply_later_unknown,好呀，不着急。您也有别的事情要忙嘛。
+xm_tavern_w04_supply_existing_unknown,材料和酒的记录都在这里。想先歇一阵，或者接着做，在这里告诉我就好。已经收下的这批，我还是会做好送去的。
 xm_tavern_w04_supply_early_unknown,欢迎。我把店里需要的东西列了一张清单，想跟您商量一下。
 ui_w04_supply,材料合作
 ui_w04_contract,供销约定
@@ -427,7 +427,7 @@ xm_05_01_late,晚上好，前辈。新供货商送来了一批好酒，我试了
 xm_05_02_late,有一种基酒我以前就很想用，终于调出满意的口味啦。
 xm_05_03_late,第一次推出就直接售罄了，客人们走的时候问我下次还有没有。嘿嘿……当然有啦。
 xm_06_03,我就告诉他，商业街那头有一家很不错的当铺，说不定能淘到些有意思的东西。
-xm_06_04,嘿嘿，也不知道他会不会真的来这里看看。如果来了，前辈记得给我奖励吖～
+xm_06_04,嘿嘿，也不知道他会不会真的来这里看看。如果来了，前辈可要记得奖励我呀～
 xm_06_accept,谢谢。正好用得上。
 xm_06_bye,那我先走啦。今晚店里还有些事要准备呢。
 xm_tavern_05_new_01,前辈，看到新酒单了吗？新添了两款酒哦。
@@ -531,8 +531,8 @@ xm_tavern_12_business_02,之前的租金扶持，原来还有业绩考核。没�
 xm_tavern_12_business_03,我把营业记录整理了一下。前几周生意明明还不错，可最近的客流实在少了很多。
 xm_tavern_12_business_04,现在连下个月的进货，都得重新算一遍了。
 xm_tavern_12_business_05,我想先去申请复核。毕竟当初承诺的推广，后来一直没有排上。
-xm_tavern_13_entry,啊，前辈。进来坐坐吧。今天不接客了。
-xm_tavern_13_tape,磁带机还没收起来。想听哪首，就自己挑吧。
+xm_tavern_13_entry,啊，前辈。进来坐坐吧。今天已经不营业啦。
+xm_tavern_13_tape,磁带机还没收起来。想听的话，就放着听吧。
 xm_tavern_13_chat,有几只杯子我准备留着。以后看到它们，应该还会想起这里吧。
 ui_w12_roka,白天说的那杯酒
 ui_w12_business,最近的经营
@@ -545,7 +545,7 @@ cocktail_roka_name,露华
 cocktail_roka_desc,盐渍樱花与清酒的米香轻轻浮起，像天亮前最后一缕春夜；樱饼红豆的柔甜只铺薄薄一层，柚子皮把香气提亮，抹茶在中段落下一点干净微苦。
 drink_unique,唯一酒品
 drink_buff_saleincome,卖货信用点收入 +{0}%
-xm_brew_hello,前辈，周三啦。我来取酿酒的材料了。
+xm_brew_hello,前辈，我来取说好的材料啦。
 xm_brew_request,基础水、品质更好的水，还有酿酒用的原料都可以。前辈放到交易台上就好。
 xm_brew_last,前辈，之前答应调好的酒，我给您带来了。
 xm_brew_wrong,这次只收基础水以上的水，还有酿酒材料哦。
@@ -564,7 +564,7 @@ ui_brew_bottle_desc,小满调制并封好的酒，装在一只朴素的大瓶里
 xm_brew_renew,这批就这样啦。前辈，下周还继续吗？
 xm_brew_renew_yes,好，那我下周三再来取材料，周五送酒。
 xm_brew_renew_no,好呀，先停一停。想再合作的时候，来店里找我就好。
-xm_brew_small_batch,这次还不够装一小瓶，我把余下的价值记着，下次一起给前辈。
+xm_brew_small_batch,这次还不够装一小瓶，先替前辈记着哦。下回一起做好了带来。
 ui_brew_resume,续签合作
 ui_brew_pause,中断合作
 ui_brew_continue,下周继续。

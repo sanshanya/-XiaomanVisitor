@@ -29,9 +29,9 @@
     "key": "xm_tavern_w02_rain_02",
     "language": "ja",
     "subtitle_templates": {
-      "zh": "为了呈现下雨的效果，我可是花了好一番功夫呢。",
+      "zh": "为了让它看起来像真的下雨，我可是折腾了好久呢。",
       "ja": "雨が降っているように見せたくて、けっこう頑張ったんです。",
-      "en": "It took quite a bit of work to make it look as though it was raining."
+      "en": "It took me ages to get it to look like real rain."
     },
     "generic": false
   }

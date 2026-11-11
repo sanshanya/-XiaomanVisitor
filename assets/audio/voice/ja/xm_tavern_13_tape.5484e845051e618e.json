@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "カセットデッキは、まだ片づけてないんです。よかったら、聴いていってくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "74",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.164,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 391902
+  },
+  "sha256": "78a1f809c56512984e0b97b430361be3f8e68554021270842ccb3b68325fd3e1",
+  "binding": {
+    "key": "xm_tavern_13_tape",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "磁带机还没收起来。想听的话，就放着听吧。",
+      "ja": "カセットデッキは、まだ片づけてないんです。よかったら、聴いていってくださいね。",
+      "en": "I have not packed the cassette player away yet. Put the tape on if you would like to listen."
+    },
+    "generic": false
+  }
+}

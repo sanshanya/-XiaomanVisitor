@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "はい、少しお休みですね。また再開したくなったら、お店で声をかけてください。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "70",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.599,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 412792
+  },
+  "sha256": "aadb47c9250cb7658d4c284537ef3295bc8c40d11b2c42dea79ae6fe35294afb",
+  "binding": {
+    "key": "xm_brew_renew_no",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "好呀，先停一停。想再合作的时候，来店里找我就好。",
+      "ja": "はい、少しお休みですね。また再開したくなったら、お店で声をかけてください。",
+      "en": "Of course, we can pause. Just see me at the tavern when you’d like to start again."
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩のところに、使えそうな水やお酒を作る材料があったら、少し取っておいてもらえませんか？ 時間のあるときに、お店で相談できたらうれしいです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "134",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 14.782,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 709598
+  },
+  "sha256": "67d18aba98aaf719082135c69509982d51b521cf264a6f377e0e8f96fb0cda23",
+  "binding": {
+    "key": "xm_04_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈这里要是有合适的水和酿酒用的材料，能不能留一些给我？有空来酒馆，我们商量一下怎么合作吧。",
+      "ja": "先輩のところに、使えそうな水やお酒を作る材料があったら、少し取っておいてもらえませんか？ 時間のあるときに、お店で相談できたらうれしいです。",
+      "en": "Could you set aside suitable water and brewing ingredients for me, senpai? Come by the tavern when you have time, and we can talk about working together."
+    },
+    "generic": false
+  }
+}

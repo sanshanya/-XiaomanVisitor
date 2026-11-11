@@ -3,6 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 import story_master_source
+import story_variants
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCES = {5: '第五周实现.json', 6: '第六周实现.json', 7: '第七周实现.json', 8: '第八周实现.json', 9: '第九周实现.json', 10: '第十周实现.json', 11: '第十一周实现.json'}
@@ -43,11 +44,7 @@ def read(visit):
     for key, row in list(data['lines'].items()):
         row['key'] = key
         if key.startswith('xm_tavern_') and chat['min_visit'] == 0:
-            variant = dict(row)
-            variant['key'] = key + '_unknown'
-            variant['zh'] = row['zh'].replace('前辈，', '').replace('前辈', '您')
-            variant['ja'] = row['ja'].replace('先輩、', '').replace('先輩', 'お客さん')
-            variant['en'] = row['en'].replace('Senpai, ', '').replace(', senpai', '')
+            variant = story_variants.unacquainted(row)
             data['lines'][key + '_unknown'] = variant
     data['source'] = path.relative_to(ROOT).as_posix()
     data['sha256'] = hashlib.sha256(text.encode('utf-8')).hexdigest()

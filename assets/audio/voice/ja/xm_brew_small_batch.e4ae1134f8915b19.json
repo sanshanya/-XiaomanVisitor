@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今回はまだ、小瓶一本分に足りなくて。今回の分は、ちゃんとメモしておきますね。次の分と合わせて、お酒にしてお返しします。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "112",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 13.823,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 663560
+  },
+  "sha256": "82fea5b90ce224eff8debafad053400e120ab32224f3e87e94509c036a108288",
+  "binding": {
+    "key": "xm_brew_small_batch",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这次还不够装一小瓶，先替前辈记着哦。下回一起做好了带来。",
+      "ja": "今回はまだ、小瓶一本分に足りなくて。今回の分は、ちゃんとメモしておきますね。次の分と合わせて、お酒にしてお返しします。",
+      "en": "This is not quite enough for a small bottle yet. I will keep it on your account, senpai, and bring the wine together with the next batch."
+    },
+    "generic": false
+  }
+}

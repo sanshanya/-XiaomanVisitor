@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんばんは、先輩。この前から地元の友達に、自分が写った写真を送ってって言われてて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "78",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.799,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 470418
+  },
+  "sha256": "ecb21108293ac13d76b43311ae2f1046cf379dcaf1ee607a17c0f34d2b6fbe52",
+  "binding": {
+    "key": "xm_08_01",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "晚上好，前辈。前阵子老家的朋友一直催我，叫我发张自己的照片回去。",
+      "ja": "こんばんは、先輩。この前から地元の友達に、自分が写った写真を送ってって言われてて。",
+      "en": "Good evening, senpai. My friends back home kept asking me to send a photo of myself."
+    },
+    "generic": false
+  }
+}

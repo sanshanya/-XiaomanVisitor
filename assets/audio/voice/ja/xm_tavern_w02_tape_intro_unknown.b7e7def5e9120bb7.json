@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "このカセットデッキ、実家から持ってきたんです。よかったら、聴いていってくださいね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "78",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.454,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 405828
+  },
+  "sha256": "0b012930f17c38f2f80bb66e54f6058041d9c928ce46a92259b4cacd60cfdeac",
+  "binding": {
+    "key": "xm_tavern_w02_tape_intro_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这台磁带机是我从老家带来的。想听的话，自己放就好啦。",
+      "ja": "このカセットデッキ、実家から持ってきたんです。よかったら、聴いていってくださいね。",
+      "en": "I brought this cassette player from home. Feel free to put the tape on if you would like to listen."
+    },
+    "generic": false
+  }
+}

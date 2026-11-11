@@ -1,13 +1,13 @@
 {
   "schema": 1,
-  "authorization": "2026-11-11 作者要求整理并生成配音，沿用上次规则并适配表情与感情",
+  "authorization": "2026-11-12 作者采纳口头稿审校，要求整理差分并补录；沿用Ayano日语1.1倍速与逐句表情/感情适配。",
   "voice_id": "ayano",
   "language": "ja",
   "model_id": "luna-tts-1.5",
   "speed": 1.1,
   "preserve_existing_recordings": true,
   "notes": [
-    "中文字幕与日语显示稿不因读音和轻笑标签改变。",
+    "2026-11-12采纳中日口头润色；读音与非语言标签仍只用于合成，不进入显示字幕。",
     "表情以当前逐句Mood为准；演出指导不是API参数。Luna标准模型不处理emotion_class，只用可支持的少量非语言标签、台词语义与停顿。",
     "原开场及仍然匹配的已有录音保留；纸条不配音。",
     "王哥、集团电话、评估员、引荐者沿用原生/当前处理，不误用Ayano，亦不为不可达条目扣费。"
@@ -159,8 +159,8 @@
       "preserve_audio": false
     },
     "xm_03_04": {
-      "subtitle_ja": "先輩、夜に時間があったら、少し手伝ってもらえませんか？ もちろん、お給料はお支払いします！ 先輩の時間を、ただでもらうわけにはいきませんから。",
-      "generate_text": "先輩、夜に時間があったら、少し手伝ってもらえませんか？ もちろん、お給料はお支払いします！ 先輩の時間を、ただでもらうわけにはいきませんから。",
+      "subtitle_ja": "先輩、夜に時間があったら、少し手伝ってもらえませんか？ もちろん、お給料も出しますよ！ 先輩に、ただで手伝ってもらうわけにはいきませんから。",
+      "generate_text": "先輩、夜に時間があったら、少し手伝ってもらえませんか？ もちろん、お給料も出しますよ！ 先輩に、ただで手伝ってもらうわけにはいきませんから。",
       "mood": "Smile",
       "delivery": "工作认真，感谢轻快，求助不卑微",
       "reviewed": true,
@@ -215,19 +215,19 @@
       "preserve_audio": false
     },
     "xm_04_03": {
-      "subtitle_ja": "先輩のところに使えそうな水や醸造の材料があったら、少し取っておいてもらえませんか？お時間のあるとき、お店で相談しましょう。",
-      "generate_text": "先輩のところに使えそうな水や醸造の材料があったら、少し取っておいてもらえませんか？お時間のあるとき、お店で相談しましょう。",
+      "subtitle_ja": "先輩のところに、使えそうな水やお酒を作る材料があったら、少し取っておいてもらえませんか？ 時間のあるときに、お店で相談できたらうれしいです。",
+      "generate_text": "先輩のところに、使えそうな水やお酒を作る材料があったら、少し取っておいてもらえませんか？ 時間のあるときに、お店で相談できたらうれしいです。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_04_04": {
-      "subtitle_ja": "取り決めができたら、水曜日に材料を取りに来て、金曜日にお酒を持ってきます。材料もお酒もお金はなしで、二人でちょっとした商売をする感じですね。",
-      "generate_text": "取り決めができたら、水曜日に材料を取りに来て、金曜日にお酒を持ってきます。材料もお酒もお金はなしで、二人でちょっとした商売をする感じですね。",
+      "subtitle_ja": "話が決まったら、水曜日に材料をもらいに来て、金曜日にお酒を持ってきますね。材料代もお酒代も、お互いなしで……一緒にやってみませんか？",
+      "generate_text": "話が決まったら、水曜日に材料をもらいに来て、金曜日にお酒を持ってきますね。材料代もお酒代も、お互いなしで……一緒にやってみませんか？",
       "mood": "Smile",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_04_shop": {
@@ -263,11 +263,11 @@
       "preserve_audio": false
     },
     "xm_04_03_existing": {
-      "subtitle_ja": "先輩、材料の受け取りとお酒のお届けは、いつでもお店で相談できます。少しお休みしたくなっても大丈夫ですよ。",
-      "generate_text": "先輩、材料の受け取りとお酒のお届けは、いつでもお店で相談できます。少しお休みしたくなっても大丈夫ですよ。",
+      "subtitle_ja": "先輩、材料やお酒のことで気になることがあったら、いつでもお店で声をかけてくださいね。少しお休みしたくなっても、大丈夫ですから。",
+      "generate_text": "先輩、材料やお酒のことで気になることがあったら、いつでもお店で声をかけてくださいね。少しお休みしたくなっても、大丈夫ですから。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_05_01": {
@@ -383,8 +383,8 @@
       "preserve_audio": false
     },
     "xm_06_04": {
-      "subtitle_ja": "えへへ、本当に来てくれるかな。もし来たら、先輩、ごほうびくださいね～。",
-      "generate_text": "えへへ、本当に来てくれるかな。もし来たら、先輩、ごほうびくださいね～。",
+      "subtitle_ja": "えへへ、本当に来てくれるかな。もし来てくれたら、先輩、ごほうび期待しててもいいですか？",
+      "generate_text": "えへへ、本当に来てくれるかな。もし来てくれたら、先輩、ごほうび期待しててもいいですか？",
       "mood": "Smile",
       "delivery": "亲近、俏皮，分享旅客趣事",
       "reviewed": true,
@@ -479,8 +479,8 @@
       "preserve_audio": false
     },
     "xm_08_01": {
-      "subtitle_ja": "こんばんは、先輩。この前から故郷の友達に、自分が写った写真を送ってって言われてて。",
-      "generate_text": "こんばんは、先輩。この前から故郷の友達に、自分が写った写真を送ってって言われてて。",
+      "subtitle_ja": "こんばんは、先輩。この前から地元の友達に、自分が写った写真を送ってって言われてて。",
+      "generate_text": "こんばんは、先輩。この前から地元の友達に、自分が写った写真を送ってって言われてて。",
       "mood": "Soft",
       "delivery": "自然开心，谈照片时害羞",
       "reviewed": true,
@@ -495,8 +495,8 @@
       "preserve_audio": false
     },
     "xm_08_03": {
-      "subtitle_ja": "「店長、もちろんカウンターの中に立って！」って言われて……おとなしく戻りました。",
-      "generate_text": "「店長、もちろんカウンターの中に立って！」って言われて……おとなしく戻りました。",
+      "subtitle_ja": "「店長は、やっぱりカウンターの中でしょ！」って言われて……おとなしく戻りました。",
+      "generate_text": "「店長は、やっぱりカウンターの中でしょ！」って言われて……おとなしく戻りました。",
       "mood": "Shy",
       "delivery": "自然开心，谈照片时害羞",
       "reviewed": true,
@@ -727,16 +727,16 @@
       "preserve_audio": false
     },
     "xm_12_01": {
-      "subtitle_ja": "こんばんは、先輩。昨日、母から電話が来たんです。",
-      "generate_text": "こんばんは、先輩。昨日、母から電話が来たんです。",
+      "subtitle_ja": "こんばんは、先輩。昨日、お母さんから電話があって。",
+      "generate_text": "こんばんは、先輩。昨日、お母さんから電話があって。",
       "mood": "Soft",
       "delivery": "妈妈与樱花温暖、介绍新酒开心；谈经营才收敛",
       "reviewed": true,
       "preserve_audio": false
     },
     "xm_12_02": {
-      "subtitle_ja": "故郷の桜が咲いたって、写真をいっぱい送ってくれました。",
-      "generate_text": "故郷の桜が咲いたって、写真をいっぱい送ってくれました。",
+      "subtitle_ja": "地元の桜が咲いたって、写真をいっぱい送ってくれました。",
+      "generate_text": "地元の桜が咲いたって、写真をいっぱい送ってくれました。",
       "mood": "Smile",
       "delivery": "妈妈与樱花温暖、介绍新酒开心；谈经营才收敛",
       "reviewed": true,
@@ -799,8 +799,8 @@
       "preserve_audio": false
     },
     "xm_13_03": {
-      "subtitle_ja": "残りの帳簿も計算してみました。借り入れを増やして営業を続けても、借金が増えるだけで。",
-      "generate_text": "残りの帳簿も計算してみました。借り入れを増やして営業を続けても、借金が増えるだけで。",
+      "subtitle_ja": "残っている支払いも計算してみました。これ以上お金を借りてお店を続けても、借金が増えるだけで。",
+      "generate_text": "残っている支払いも計算してみました。これ以上お金を借りてお店を続けても、借金が増えるだけで。",
       "mood": "Neutral",
       "delivery": "处理实际事务，平静中带不舍；不崩溃",
       "reviewed": true,
@@ -1027,8 +1027,8 @@
       "subtitle_ja": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
       "generate_text": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
       "mood": "Shy",
-      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。新句待统一录音。",
-      "reviewed": false,
+      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w02_help_done": {
@@ -1064,8 +1064,8 @@
       "preserve_audio": false
     },
     "xm_tavern_w02_tape_intro": {
-      "subtitle_ja": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、店長さんも自由に選んで聴いてくださいね。",
-      "generate_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、店長さんも自由に選んで聴いてくださいね。",
+      "subtitle_ja": "このカセットデッキ、実家から持ってきたんです。よかったら、店長さんも聴いていってくださいね。",
+      "generate_text": "このカセットデッキ、実家から持ってきたんです。よかったら、店長さんも聴いていってくださいね。",
       "mood": "Soft",
       "delivery": "开业期待，邀请时略害羞",
       "reviewed": true,
@@ -1099,8 +1099,8 @@
       "subtitle_ja": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
       "generate_text": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
       "mood": "Shy",
-      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。新句待统一录音。",
-      "reviewed": false,
+      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w02_help_done_unknown": {
@@ -1120,8 +1120,8 @@
       "preserve_audio": false
     },
     "xm_tavern_w02_tape_intro_unknown": {
-      "subtitle_ja": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
-      "generate_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
+      "subtitle_ja": "このカセットデッキ、実家から持ってきたんです。よかったら、聴いていってくださいね。",
+      "generate_text": "このカセットデッキ、実家から持ってきたんです。よかったら、聴いていってくださいね。",
       "mood": "Soft",
       "delivery": "开业期待，邀请时略害羞",
       "reviewed": true,
@@ -1144,8 +1144,8 @@
       "preserve_audio": false
     },
     "xm_tavern_w03_work_offer_02": {
-      "subtitle_ja": "お給料はちゃんとお支払いします。これでも、立派なお仕事ですからね。",
-      "generate_text": "お給料はちゃんとお支払いします。これでも、立派なお仕事ですからね。",
+      "subtitle_ja": "お給料は、ちゃんと出しますね。これも、ちゃんとしたお仕事ですから。",
+      "generate_text": "お給料は、ちゃんと出しますね。これも、ちゃんとしたお仕事ですから。",
       "mood": "Shy",
       "delivery": "工作认真，感谢轻快，求助不卑微",
       "reviewed": true,
@@ -1184,8 +1184,8 @@
       "preserve_audio": false
     },
     "xm_tavern_w03_work_decline": {
-      "subtitle_ja": "うん、大丈夫です。先輩もご自分のお店で忙しいですもんね。",
-      "generate_text": "うん、大丈夫です。先輩もご自分のお店で忙しいですもんね。",
+      "subtitle_ja": "うん、大丈夫です。先輩も、お店のことで忙しいですもんね。",
+      "generate_text": "うん、大丈夫です。先輩も、お店のことで忙しいですもんね。",
       "mood": "Soft",
       "delivery": "工作认真，感谢轻快，求助不卑微",
       "reviewed": true,
@@ -1264,8 +1264,8 @@
       "preserve_audio": false
     },
     "xm_tavern_w03_work_offer_01_unknown": {
-      "subtitle_ja": "あ、お客さん！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
-      "generate_text": "あ、お客さん！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+      "subtitle_ja": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+      "generate_text": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
       "mood": "Smile",
       "delivery": "工作认真，感谢轻快，求助不卑微",
       "reviewed": true,
@@ -1280,8 +1280,8 @@
       "preserve_audio": false
     },
     "xm_tavern_w03_work_start_unknown": {
-      "subtitle_ja": "じゃあ、お客さんにお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
-      "generate_text": "じゃあ、お客さんにお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
+      "subtitle_ja": "それじゃ、こちらのお客さんをお願いします！ わたしはカウンターを見てきますね。",
+      "generate_text": "それじゃ、こちらのお客さんをお願いします！ わたしはカウンターを見てきますね。",
       "mood": "Soft",
       "delivery": "工作认真，感谢轻快，求助不卑微",
       "reviewed": true,
@@ -1296,8 +1296,8 @@
       "preserve_audio": false
     },
     "xm_tavern_w03_work_done_02_unknown": {
-      "subtitle_ja": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
-      "generate_text": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
+      "subtitle_ja": "今日のお給料、受け取ってください。手伝ってくれたおかげで、さっきのお客さんたちも待たせずに済みました。",
+      "generate_text": "今日のお給料、受け取ってください。手伝ってくれたおかげで、さっきのお客さんたちも待たせずに済みました。",
       "mood": "Smile",
       "delivery": "工作认真，感谢轻快，求助不卑微",
       "reviewed": true,
@@ -1320,8 +1320,8 @@
       "preserve_audio": false
     },
     "xm_tavern_w03_work_no_orders_unknown": {
-      "subtitle_ja": "今夜はまだ一人で大丈夫そうです。お客さんは、のんびり音楽でも聴いていってくださいね。",
-      "generate_text": "今夜はまだ一人で大丈夫そうです。お客さんは、のんびり音楽でも聴いていってくださいね。",
+      "subtitle_ja": "今夜はまだ一人で大丈夫そうです。のんびり音楽でも聴いていってくださいね。",
+      "generate_text": "今夜はまだ一人で大丈夫そうです。のんびり音楽でも聴いていってくださいね。",
       "mood": "Soft",
       "delivery": "工作认真，感谢轻快，求助不卑微",
       "reviewed": true,
@@ -1336,8 +1336,8 @@
       "preserve_audio": false
     },
     "xm_tavern_w03_chat_after_work_unknown": {
-      "subtitle_ja": "お客さんもお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
-      "generate_text": "お客さんもお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
+      "subtitle_ja": "お疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
+      "generate_text": "お疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
       "mood": "Soft",
       "delivery": "工作认真，感谢轻快，求助不卑微",
       "reviewed": true,
@@ -1352,24 +1352,24 @@
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_02": {
-      "subtitle_ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
-      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
+      "subtitle_ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+      "generate_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_03": {
-      "subtitle_ja": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
-      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
+      "subtitle_ja": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+      "generate_text": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
       "mood": "Smile",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_yes": {
-      "subtitle_ja": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
-      "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
+      "subtitle_ja": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、先輩とお酒を作れるの、楽しみです。",
+      "generate_text": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、先輩とお酒を作れるの、楽しみです。",
       "mood": "Smile",
       "delivery": "谈生意认真，成为伙伴时高兴",
       "reviewed": true,
@@ -1384,11 +1384,11 @@
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_existing": {
-      "subtitle_ja": "先輩、材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
-      "generate_text": "先輩、材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
+      "subtitle_ja": "先輩、材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+      "generate_text": "先輩、材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_early": {
@@ -1408,43 +1408,43 @@
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_02_unknown": {
-      "subtitle_ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
-      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
+      "subtitle_ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+      "generate_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_03_unknown": {
-      "subtitle_ja": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
-      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
+      "subtitle_ja": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+      "generate_text": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
       "mood": "Smile",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_yes_unknown": {
-      "subtitle_ja": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
-      "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
+      "subtitle_ja": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、一緒にお酒を作れるの、楽しみです。",
+      "generate_text": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、一緒にお酒を作れるの、楽しみです。",
       "mood": "Smile",
       "delivery": "谈生意认真，成为伙伴时高兴",
       "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_later_unknown": {
-      "subtitle_ja": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
-      "generate_text": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
+      "subtitle_ja": "うん、急がなくて大丈夫です。また、時間のあるときにお話ししましょう。",
+      "generate_text": "うん、急がなくて大丈夫です。また、時間のあるときにお話ししましょう。",
       "mood": "Soft",
       "delivery": "谈生意认真，成为伙伴时高兴",
       "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_existing_unknown": {
-      "subtitle_ja": "材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
-      "generate_text": "材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
+      "subtitle_ja": "材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+      "generate_text": "材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_tavern_w04_supply_early_unknown": {
@@ -1760,8 +1760,8 @@
       "preserve_audio": false
     },
     "xm_tavern_12_roka_02": {
-      "subtitle_ja": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
-      "generate_text": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
+      "subtitle_ja": "塩漬けの桜に、日本酒を少し。それから抹茶も、ほんの少しだけ。あとから、ちょっとだけ苦みが残るんです。",
+      "generate_text": "塩漬けの桜に、日本酒を少し。それから抹茶も、ほんの少しだけ。あとから、ちょっとだけ苦みが残るんです。",
       "mood": "Soft",
       "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低",
       "reviewed": true,
@@ -1832,8 +1832,8 @@
       "preserve_audio": false
     },
     "xm_tavern_13_tape": {
-      "subtitle_ja": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
-      "generate_text": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
+      "subtitle_ja": "カセットデッキは、まだ片づけてないんです。よかったら、聴いていってくださいね。",
+      "generate_text": "カセットデッキは、まだ片づけてないんです。よかったら、聴いていってくださいね。",
       "mood": "Smile",
       "delivery": "处理实际事务，平静中带不舍；不崩溃",
       "reviewed": true,
@@ -1950,7 +1950,7 @@
       "subtitle_ja": "あ、少し安くなるんですね。ありがとうございます。",
       "generate_text": "あ、少し安くなるんですね。ありがとうございます。",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "轻微意外后认真道谢；自然微笑，不额外加笑声或拖长尾音。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "1f714379dd7bd442ad012f37aa7677995db365793105d6ca4bd05a679d6ed908"
@@ -1959,7 +1959,7 @@
       "subtitle_ja": "いいんですか？ じゃあ、お願いします。",
       "generate_text": "いいんですか？ じゃあ、お願いします。",
       "mood": "Smile",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "轻微意外后认真道谢；自然微笑，不额外加笑声或拖长尾音。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "f72fb44b31af247b15caacab62b682772320e128b4dd21fe01aca94650ab66ad"
@@ -1968,7 +1968,7 @@
       "subtitle_ja": "助かります。それじゃ、このお値段でお願いします。",
       "generate_text": "助かります。それじゃ、このお値段でお願いします。",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "轻微意外后认真道谢；自然微笑，不额外加笑声或拖长尾音。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "76dba6f53f3c12ba0341371e5f46a1618f004975b42de0013a5a37ddd02d3f27"
@@ -1977,7 +1977,7 @@
       "subtitle_ja": "えっ、そんなに安くしてくれるんですか？ 本当にいいんですか？",
       "generate_text": "えっ、[gasps] そんなに安くしてくれるんですか？ 本当にいいんですか？",
       "mood": "Shy",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "先短促惊讶，再放松感谢；害羞是不好意思占便宜，不是讨好或暧昧喘气。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "62eeff4c15f37860e77aaddc45a282136177653e86210bbaa45367a8874c52f2"
@@ -1986,7 +1986,7 @@
       "subtitle_ja": "そこまでしてもらって……本当にありがとうございます。",
       "generate_text": "そこまでしてもらって……本当にありがとうございます。",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "先短促惊讶，再放松感谢；害羞是不好意思占便宜，不是讨好或暧昧喘气。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "fc6b492075345c5312653e94bcee18aeb0e75e50ac38c345ee16b088e935746d"
@@ -1995,7 +1995,7 @@
       "subtitle_ja": "びっくりしました。じゃあ、お言葉に甘えちゃおうかな。",
       "generate_text": "びっくりしました。[chuckles] じゃあ、お言葉に甘えちゃおうかな。",
       "mood": "Smile",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "先短促惊讶，再放松感谢；害羞是不好意思占便宜，不是讨好或暧昧喘气。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "70d5b4f319ade40165dc3d356436acc8762e55ed8b284e2dac7f03cbdb7f4f0c"
@@ -2004,7 +2004,7 @@
       "subtitle_ja": "これなら、もう少し買い物できそうですね。",
       "generate_text": "これなら、もう少し買い物できそうですね。",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "普通购物中的轻快思考，声音放松；保留既定文字，不额外加“啊”。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "1313128f53606df0aff9b8bfa6708a00259b5ba0c2c1bfc8240d466d154ec6e5"
@@ -2013,7 +2013,7 @@
       "subtitle_ja": "浮いた分で、もう一つ見てみようかな。",
       "generate_text": "浮いた分で、もう一つ見てみようかな。",
       "mood": "Smile",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "普通购物中的轻快思考，声音放松；保留既定文字，不额外加“啊”。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "a5ffd381fcea319a49a60341a170ac0ed4dc54cba024f6467262a6914012995f"
@@ -2022,7 +2022,7 @@
       "subtitle_ja": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
       "generate_text": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "普通购物中的轻快思考，声音放松；保留既定文字，不额外加“啊”。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "d34d11b7312aabfb98e2fd05717ebb19767b95475d51d53928f59fbb0a917330"
@@ -2031,7 +2031,7 @@
       "subtitle_ja": "……分かりました。それでお願いします。",
       "generate_text": "……分かりました。それでお願いします。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "核对价格、稍作犹豫后自己决定买下；不是笑着附和，也不演成吓哭。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "3426d6bb5a5901e18d519d2aa37c6123c7acb9b1c6677f2258e9bec4876bdc4a"
@@ -2040,7 +2040,7 @@
       "subtitle_ja": "さっきより高いけど……今日は必要なので。",
       "generate_text": "さっきより高いけど……今日は必要なので。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "核对价格、稍作犹豫后自己决定买下；不是笑着附和，也不演成吓哭。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "e352598e4ca903a3d6764e4e87bca29b76b694adc1bf0b36ff091f48f820e8cd"
@@ -2049,7 +2049,7 @@
       "subtitle_ja": "うーん……今回は、そのお値段で。",
       "generate_text": "うーん……今回は、そのお値段で。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "核对价格、稍作犹豫后自己决定买下；不是笑着附和，也不演成吓哭。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "8f4007270635cae742d73a0d3593926756e1677aac90e449ee7dc80cf18376d7"
@@ -2058,7 +2058,7 @@
       "subtitle_ja": "こんなに上がるんですか……。でも、今回はお願いします。",
       "generate_text": "こんなに上がるんですか……。でも、今回はお願いします。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "核对价格、稍作犹豫后自己决定买下；不是笑着附和，也不演成吓哭。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "c1781d99639c40790c6fed07729d3a1b948dacb92b98304f33f5208fde1fddac"
@@ -2067,7 +2067,7 @@
       "subtitle_ja": "高いですね……。これだけは必要なので。",
       "generate_text": "高いですね……。[sighs] これだけは必要なので。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "核对价格、稍作犹豫后自己决定买下；不是笑着附和，也不演成吓哭。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "b8adadc58f1477cd7ea861280d3962bcdc58dd91d5c2b53e91ac2c12bc80d999"
@@ -2076,7 +2076,7 @@
       "subtitle_ja": "……本当にこのお値段なんですね。分かりました。",
       "generate_text": "……本当にこのお値段なんですね。分かりました。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "核对价格、稍作犹豫后自己决定买下；不是笑着附和，也不演成吓哭。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "5a1b1c8ef217aa5569106612ca0677dabadaef6a99f5df59e58a2082c4a4e7c3"
@@ -2085,7 +2085,7 @@
       "subtitle_ja": "あ……残りの予算、少なくなっちゃいました。",
       "generate_text": "あ……残りの予算、少なくなっちゃいました。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "看了剩余预算后的轻微遗憾，平常购物语气；不是经营危机的悲伤。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "7282c218b5cd428b6a92c84f0b4a97c030b16b7a8cedb7575c27dd3907b2e0d8"
@@ -2094,7 +2094,7 @@
       "subtitle_ja": "これだと、今日はあまり買えませんね。",
       "generate_text": "これだと、今日はあまり買えませんね。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "看了剩余预算后的轻微遗憾，平常购物语气；不是经营危机的悲伤。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "8dd12341bf8df5345cd089134f73ad4a84a318bb695332eb3dfd86d7469ddc27"
@@ -2103,7 +2103,7 @@
       "subtitle_ja": "もう一つ買うつもりだったんですけど……また今度にします。",
       "generate_text": "もう一つ買うつもりだったんですけど……また今度にします。",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "看了剩余预算后的轻微遗憾，平常购物语气；不是经营危机的悲伤。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "f6a35c3a00439373341fef8077d7c01136a89fac7c866c85b0dd3283ce5034c1"
@@ -2112,7 +2112,7 @@
       "subtitle_ja": "すみません。そのお値段なら、今回はやめておきます。",
       "generate_text": "すみません。そのお値段なら、今回はやめておきます。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "迟疑后礼貌拒绝，最后落得干脆；高额涨价可带惊讶，不靠可爱尾音软化决定。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "c4c001b49beb768e3f13811c520eb048bf8e7eb6653750517ed4e5f30e3f4884"
@@ -2121,7 +2121,7 @@
       "subtitle_ja": "うーん……ちょっと予算が足りなくて。",
       "generate_text": "うーん……ちょっと予算が足りなくて。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "迟疑后礼貌拒绝，最后落得干脆；高额涨价可带惊讶，不靠可爱尾音软化决定。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "fc1c33389bc6f22748d1d6cbf1abfb6aa17ffdebfb1ffd1bd8bea0dea44aa78c"
@@ -2130,7 +2130,7 @@
       "subtitle_ja": "その金額だと、ちょっと難しいです。",
       "generate_text": "その金額だと、ちょっと難しいです。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "迟疑后礼貌拒绝，最后落得干脆；高额涨价可带惊讶，不靠可爱尾音软化决定。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "e9f60032f8366216eaa1afe3a62c5daa92943a2d435041000a58263c207c132c"
@@ -2139,7 +2139,7 @@
       "subtitle_ja": "……えっ？ さすがに高すぎませんか。",
       "generate_text": "……えっ、[gasps] さすがに高すぎませんか。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "迟疑后礼貌拒绝，最后落得干脆；高额涨价可带惊讶，不靠可爱尾音软化决定。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "f7681d2d50615421e545ecce1d7e094c7a03b1157ebb8f3171650e212b7cb6ea"
@@ -2148,7 +2148,7 @@
       "subtitle_ja": "ごめんなさい。そのお値段では買えません。",
       "generate_text": "ごめんなさい。そのお値段では買えません。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "迟疑后礼貌拒绝，最后落得干脆；高额涨价可带惊讶，不靠可爱尾音软化决定。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "ce4819619f03e167968299b69354b835fbe83053758306d2d6f503288a700e59"
@@ -2157,7 +2157,7 @@
       "subtitle_ja": "それなら、今日はやめておきます。",
       "generate_text": "それなら、今日はやめておきます。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "迟疑后礼貌拒绝，最后落得干脆；高额涨价可带惊讶，不靠可爱尾音软化决定。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "a73315b10a29d8f58bcbd1800ddeb7b657c3812a6ec26a9a77bde13fd35cf80f"
@@ -2166,7 +2166,7 @@
       "subtitle_ja": "……もう結構です。今日は帰ります。",
       "generate_text": "……もう結構です。今日は帰ります。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "压住不悦、句子缩短，拉开距离；礼貌收尾但不示好，不笑、不撒娇、不默认哭腔。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "6a2d3dedb5cb86aa4fd188f806729b078bc170541c9b66045ef518eedf48b3fd"
@@ -2175,25 +2175,24 @@
       "subtitle_ja": "これ以上お話ししても仕方なさそうなので。失礼します。",
       "generate_text": "これ以上お話ししても仕方なさそうなので。失礼します。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "压住不悦、句子缩短，拉开距离；礼貌收尾但不示好，不笑、不撒娇、不默认哭腔。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "0ad23aa12f960f296b00a9fc2c6610d7f4eba3fdb20e283d09524f92f18b973f"
     },
     "xm_act_angry_leave_03": {
-      "subtitle_ja": "すみません。もうここでは買い物できません。",
-      "generate_text": "すみません。もうここでは買い物できません。",
+      "subtitle_ja": "すみません。今日はもう、ここで買い物する気になれません。",
+      "generate_text": "すみません。今日はもう、ここで買い物する気になれません。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "压住不悦、句子缩短，拉开距离；礼貌收尾但不示好，不笑、不撒娇、不默认哭腔。",
       "reviewed": true,
-      "preserve_audio": true,
-      "approved_audio_sha256": "caa5cb8d8d51ee6463403f5e8d640e936a0ee9171e6299cd364038aa3fe66a13"
+      "preserve_audio": false
     },
     "xm_act_bad_word_01": {
       "subtitle_ja": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
       "generate_text": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "受冒犯后的认真提醒，轻微失望和警告；不是调情，也不演成强势反派。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "d185c6c2bf939ba6c5d52e13b3c967a8fdd350f335a68125d47dc7e2b667adc5"
@@ -2202,7 +2201,7 @@
       "subtitle_ja": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
       "generate_text": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "受冒犯后的认真提醒，轻微失望和警告；不是调情，也不演成强势反派。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "422a09dddd20e1a0de7caa6c263449df4542ef0f30a9ebb214d1119906887062"
@@ -2211,7 +2210,7 @@
       "subtitle_ja": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
       "generate_text": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "受冒犯后的认真提醒，轻微失望和警告；不是调情，也不演成强势反派。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "bccb1005d2d5cb5eecf9b053c6eb30b250bccdc78a2d671de3c446d72582db81"
@@ -2220,7 +2219,7 @@
       "subtitle_ja": "……犯罪者って、わたしのことですか？ 違います。そんなふうに決めつけないでください。",
       "generate_text": "……犯罪者って、わたしのことですか？ [inhales] 違います。そんなふうに決めつけないでください。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "先惊讶，随后清楚自辩；紧张但有边界，不道歉认错，不笑。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "62171decc2a3ae304ce4f1a1ad5875956a57c93ca546d7d73b0854be82de382a"
@@ -2229,7 +2228,7 @@
       "subtitle_ja": "そういう冗談、笑えません。わたし、何もしてませんよ。",
       "generate_text": "そういう冗談、笑えません。わたし、何もしてませんよ。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "先惊讶，随后清楚自辩；紧张但有边界，不道歉认错，不笑。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "44a05a6354f81b93a958492e806109624016d42619cadae591d66d46f2dedc32"
@@ -2238,7 +2237,7 @@
       "subtitle_ja": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
       "generate_text": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "先惊讶，随后清楚自辩；紧张但有边界，不道歉认错，不笑。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "d695763820f9b135e09c6bc2184c1eb4c2b1ff15f6f8fec5210f6aef36f4a42b"
@@ -2247,7 +2246,7 @@
       "subtitle_ja": "……AI人間？ わたし、違いますよ。",
       "generate_text": "……AI人間？ わたし、違いますよ。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "突然被怀疑后的惊讶与戒备；否认要明确，保留害怕和不悦的差异。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "7bec73287a59e69e1695ea0e198a5c6ad51d3e5757b99d49154462bb627a260b"
@@ -2256,7 +2255,7 @@
       "subtitle_ja": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
       "generate_text": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "突然被怀疑后的惊讶与戒备；否认要明确，保留害怕和不悦的差异。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "5c9a2c9ef7b671d6e0a02323a43ffdad350b6de6077605915381e7ef4ecad8d6"
@@ -2265,7 +2264,7 @@
       "subtitle_ja": "そんなことで脅かさないでください……本当に違うんです。",
       "generate_text": "そんなことで脅かさないでください……本当に違うんです。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "突然被怀疑后的惊讶与戒备；否认要明确，保留害怕和不悦的差异。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "7f845be57bddf1924c999385847f4cf55013019b0781bb3da9bdff2fbc2e47b0"
@@ -2274,7 +2273,7 @@
       "subtitle_ja": "ほかにもありますか？ もう少し見てみたいです。",
       "generate_text": "ほかにもありますか？ もう少し見てみたいです。",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "普通购物中的轻快思考，声音放松；保留既定文字，不额外加“啊”。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "8e83c2a124adf98c2964734c9da61976ba6d1bdd952713f5670bfe447a4aba6b"
@@ -2283,7 +2282,7 @@
       "subtitle_ja": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
       "generate_text": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "看了剩余预算后的轻微遗憾，平常购物语气；不是经营危机的悲伤。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "e8c3e8b907d50add4183230a686265a63d126017ce31f53a5e53f4bd675a7828"
@@ -2292,7 +2291,7 @@
       "subtitle_ja": "すみません。こういうものは、買えないんです。",
       "generate_text": "すみません。こういうものは、買えないんです。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "平静、有边界地拒绝；不用惊恐尖叫，也不需要撒娇缓和。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "d819694c72991d12db5108edf8bfe003a0c5e29bc709266832c826178432ceb2"
@@ -2301,7 +2300,7 @@
       "subtitle_ja": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
       "generate_text": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "具体的小请求，轻声、清楚、礼貌；不用客服播报腔。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "7c8e85e4f7c1d84251d2f41814438d33ac3cb37137d0565053fa432b19b1b5b9"
@@ -2310,7 +2309,7 @@
       "subtitle_ja": "えっ、ちょっと待ってください！ まだ買い物の途中で……！",
       "generate_text": "えっ、[gasps] ちょっと待ってください！ まだ買い物の途中で……！",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "按句意区分：没买完时提高一点声音叫住；突然打烊是惊讶；被甩门后是克制不悦。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "9ffe1931bd934898376e39c2437fb86a0913c6edf5c9d6299a97dbefb10c8bfb"
@@ -2319,7 +2318,7 @@
       "subtitle_ja": "……それは、ちょっとひどくないですか。",
       "generate_text": "……それは、ちょっとひどくないですか。",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "按句意区分：没买完时提高一点声音叫住；突然打烊是惊讶；被甩门后是克制不悦。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "746097d5f2ed1ea4b860f5b604496c98dc50b9c1a2a89cd860acb39926f391ef"
@@ -2328,7 +2327,7 @@
       "subtitle_ja": "えっ、もう閉めちゃうんですか？",
       "generate_text": "えっ、もう閉めちゃうんですか？",
       "mood": "Worried",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "按句意区分：没买完时提高一点声音叫住；突然打烊是惊讶；被甩门后是克制不悦。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "68bda792f1b42bf97af8ff4fc8fa03ed7529736271bf1187fea14621e3b615b0"
@@ -2337,7 +2336,7 @@
       "subtitle_ja": "あれ……これ、普通のお水ですよね。ラベルとちょっと違うみたいです。",
       "generate_text": "あれ……これ、普通のお水ですよね。ラベルとちょっと違うみたいです。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "看过标签或测量后的疑问，认真、稍困惑；体现懂原料，不装侦探、不嘲弄玩家。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "0106a219915ea07605f0d25dd84e96b5cddb6ab2d9f95116ea0d0546ab04f56d"
@@ -2346,7 +2345,7 @@
       "subtitle_ja": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
       "generate_text": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "看过标签或测量后的疑问，认真、稍困惑；体现懂原料，不装侦探、不嘲弄玩家。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "d0644438703c25536b69ee8d63db0100665862939d738d94b206512f300a6c43"
@@ -2355,7 +2354,7 @@
       "subtitle_ja": "この水、純度がラベルの表示と違うみたいです。",
       "generate_text": "この水、純度がラベルの表示と違うみたいです。",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "看过标签或测量后的疑问，认真、稍困惑；体现懂原料，不装侦探、不嘲弄玩家。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "8000adb16f430e700b6b6727ac4e57579db0f249d19c6f7dd78000bc290903e3"
@@ -2364,7 +2363,7 @@
       "subtitle_ja": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
       "generate_text": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
       "mood": "Soft",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "看过标签或测量后的疑问，认真、稍困惑；体现懂原料，不装侦探、不嘲弄玩家。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "29325f6d9682b66b245af696edefc85bbd34c6eff3e441936beaaee1ae349f15"
@@ -2373,7 +2372,7 @@
       "subtitle_ja": "このラベルの数字……間違ってませんか？",
       "generate_text": "このラベルの数字……間違ってませんか？",
       "mood": "Neutral",
-      "delivery": "日常交易、自然亲切，按句意演绎；不机械加笑声",
+      "delivery": "看过标签或测量后的疑问，认真、稍困惑；体现懂原料，不装侦探、不嘲弄玩家。",
       "reviewed": true,
       "preserve_audio": true,
       "approved_audio_sha256": "6554c6358bfd686a4546a1f2a6cbc282957e5dd9f497c6c2d45ba1ce7d148266"
@@ -2395,83 +2394,83 @@
       "preserve_audio": false
     },
     "xm_brew_hello": {
-      "subtitle_ja": "先輩、水曜日ですね。醸造の材料を取りに来ました。",
-      "generate_text": "先輩、水曜日ですね。醸造の材料を取りに来ました。",
+      "subtitle_ja": "先輩、お約束の材料、受け取りに来ました。",
+      "generate_text": "先輩、お約束の材料、受け取りに来ました。",
       "mood": "Smile",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_brew_request": {
-      "subtitle_ja": "基本水かそれより良い水と、醸造用の材料なら大丈夫です。取引台に置いてくださいね。",
-      "generate_text": "基本水かそれより良い水と、醸造用の材料なら大丈夫です。取引台に置いてくださいね。",
+      "subtitle_ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料なら使えます。ここに置いてもらえますか？",
+      "generate_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料なら使えます。ここに置いてもらえますか？",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_brew_last": {
       "subtitle_ja": "先輩、前にお約束したお酒を持ってきました。",
       "generate_text": "先輩、前にお約束したお酒を持ってきました。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_brew_wrong": {
-      "subtitle_ja": "今回は基本水以上の水と、醸造用の材料だけなんです。",
-      "generate_text": "今回は基本水以上の水と、醸造用の材料だけなんです。",
+      "subtitle_ja": "今回は、普通の飲み水か、それより質のいいお水と、お酒を作る材料だけなんです。",
+      "generate_text": "今回は、普通の飲み水か、それより質のいいお水と、お酒を作る材料だけなんです。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_brew_accept": {
       "subtitle_ja": "では、こちらをお預かりしますね。金曜日に、できたお酒を持ってきます。",
       "generate_text": "では、こちらをお預かりしますね。金曜日に、できたお酒を持ってきます。",
       "mood": "Smile",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_brew_bye": {
       "subtitle_ja": "それじゃ、戻りますね、先輩。",
       "generate_text": "それじゃ、戻りますね、先輩。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_brew_renew": {
-      "subtitle_ja": "今回はこれで大丈夫ですね。先輩、来週も続けますか？",
-      "generate_text": "今回はこれで大丈夫ですね。先輩、来週も続けますか？",
+      "subtitle_ja": "今回は、これで一区切りですね。先輩、来週もお願いしていいですか？",
+      "generate_text": "今回は、これで一区切りですね。先輩、来週もお願いしていいですか？",
       "mood": "Smile",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_brew_renew_yes": {
       "subtitle_ja": "はい。では、来週の水曜日に材料を取りに来て、金曜日にお酒をお届けしますね。",
       "generate_text": "はい。では、来週の水曜日に材料を取りに来て、金曜日にお酒をお届けしますね。",
       "mood": "Smile",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_brew_renew_no": {
       "subtitle_ja": "はい、少しお休みですね。また再開したくなったら、お店で声をかけてください。",
       "generate_text": "はい、少しお休みですね。また再開したくなったら、お店で声をかけてください。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     },
     "xm_brew_small_batch": {
-      "subtitle_ja": "今回はまだ小瓶一本分に足りないので、残りの分は記録して、次の分と一緒にお渡ししますね。",
-      "generate_text": "今回はまだ小瓶一本分に足りないので、残りの分は記録して、次の分と一緒にお渡ししますね。",
+      "subtitle_ja": "今回はまだ、小瓶一本分に足りなくて。今回の分は、ちゃんとメモしておきますね。次の分と合わせて、お酒にしてお返しします。",
+      "generate_text": "今回はまだ、小瓶一本分に足りなくて。今回の分は、ちゃんとメモしておきますね。次の分と合わせて、お酒にしてお返しします。",
       "mood": "Soft",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "reviewed": false,
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。",
+      "reviewed": true,
       "preserve_audio": false
     }
   }

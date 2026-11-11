@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "地元の桜が咲いたって、写真をいっぱい送ってくれました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "52",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.938,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 285054
+  },
+  "sha256": "9b989e44268d72449ea8484c1bf719505ab95ce6e692762ec998d396f82c19ef",
+  "binding": {
+    "key": "xm_12_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "她说老家的樱花开了，还拍了好多照片给我。",
+      "ja": "地元の桜が咲いたって、写真をいっぱい送ってくれました。",
+      "en": "She said the cherry blossoms are out back home, and sent me lots of photos."
+    },
+    "generic": false
+  }
+}

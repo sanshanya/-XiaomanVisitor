@@ -198,7 +198,7 @@ xm_act_markup_reject_high_02,"I'm sorry, I can't buy it at that price."
 xm_act_markup_reject_high_03,"In that case, I'll leave it for today."
 xm_act_angry_leave_01,...That's enough. I'm going home.
 xm_act_angry_leave_02,There's no point in discussing this any further. Excuse me.
-xm_act_angry_leave_03,"I'm sorry, but I can't keep shopping here."
+xm_act_angry_leave_03,"Sorry, I cannot carry on shopping here today."
 xm_act_bad_word_01,I'll make sure the people I know hear about this.
 xm_act_bad_word_02,"I'm sorry... But if someone asks about this shop, I can't pretend nothing happened."
 xm_act_bad_word_03,Word travels fast here. I hope you won't do this again.
@@ -243,7 +243,7 @@ xm_02_accept,Thank you. Just what I needed.
 xm_02_bye,I'd better go. I hope you'll visit my little tavern.
 xm_02_02_late,"Oh, right… I've opened a little tavern on the shopping street. We finally opened recently."
 xm_tavern_w02_entry_01,"Welcome… Oh, it's you, shopkeeper."
-xm_tavern_w02_entry_02,I've been looking forward to having you here.
+xm_tavern_w02_entry_02,I have been looking forward to seeing you here.
 xm_tavern_w02_entry_03,"It still feels a little strange, saying ‘welcome’ in my very own shop."
 xm_tavern_w02_reentry,"Oh, shopkeeper. Here you are again."
 xm_tavern_greeting,"Good evening, senpai. Welcome."
@@ -262,18 +262,18 @@ xm_tavern_w02_chat_04,"When I first opened, even saying ‘welcome’ made me ne
 xm_tavern_w02_help_intro,"You caught me… I'm still making drinks. Senpai, could you take them a menu for me?"
 xm_tavern_w02_help_done,"Thank you, senpai! It's been a little hectic since opening… I'm glad you were here."
 xm_tavern_w02_help_skip,That's all right. I'll take care of it.
-xm_tavern_w02_rain_01,"Looking at the rain on the window, senpai? It's one of my little touches for the tavern."
-xm_tavern_w02_rain_02,It took quite a bit of work to make it look as though it was raining.
-xm_tavern_w02_tape_intro,"I brought this cassette deck from home. If there's something you'd like to hear, shopkeeper, feel free to choose."
+xm_tavern_w02_rain_01,"Looking at the rain on the window, senpai? I had that put in specially."
+xm_tavern_w02_rain_02,It took me ages to get it to look like real rain.
+xm_tavern_w02_tape_intro,"I brought this cassette player from home. Feel free to put the tape on if you would like to listen, shopkeeper."
 xm_tavern_greeting_plain,Welcome.
 xm_tavern_chat_rest,Make yourself comfortable. Let's listen for a while.
 xm_tavern_w02_entry_01_unknown,"Welcome… Oh, it's you, friend."
 xm_tavern_w02_reentry_unknown,"Oh, friend. Here you are again."
 xm_tavern_drink_limit_unknown,"No more tonight. You've already had a glass. You're always welcome to stay for the music, though."
 xm_tavern_w02_help_intro_unknown,You caught me… I'm still making drinks. could you take them a menu for me?
-xm_tavern_w02_help_done_unknown,Thank you! It's been a little hectic since opening… I'm glad you were here.
-xm_tavern_w02_rain_01_unknown,Looking at the rain on the window? It's one of my little touches for the tavern.
-xm_tavern_w02_tape_intro_unknown,"I brought this cassette deck from home. If there's something you'd like to hear, feel free to choose."
+xm_tavern_w02_help_done_unknown,Thank you! I am still getting flustered with the shop just opening... I am glad you were here.
+xm_tavern_w02_rain_01_unknown,Looking at the rain on the window? I had that put in specially.
+xm_tavern_w02_tape_intro_unknown,I brought this cassette player from home. Feel free to put the tape on if you would like to listen.
 xm_tavern_chat_rest_unknown,Make yourself comfortable. Let's listen for a while.
 ui_tavern_open_desc,The lights are on. Music drifts from inside.
 ui_tavern_menu,Drinks
@@ -316,7 +316,7 @@ xm_tavern_w03_work_offer_01_unknown,Oh! The next shift's customers will be here 
 xm_tavern_w03_work_w02_callback_unknown,"I remember you handing out menus for me. This time, I really must pay you for your help."
 xm_tavern_w03_work_start_unknown,Thank you! I'll leave these customers with you while I look after the bar.
 xm_tavern_w03_work_done_01_unknown,Phew… We've finally caught up. You were a huge help!
-xm_tavern_w03_work_done_02_unknown,"Here's your pay. Thanks to you, those customers didn't have a wasted trip."
+xm_tavern_w03_work_done_02_unknown,"Here is your pay for today. Thanks to your help, those customers did not make the trip for nothing."
 xm_tavern_w03_work_decline_unknown,That's all right. You have things of your own to take care of too.
 xm_tavern_w03_work_done_today_unknown,"You've already finished your shift today. If you stay any longer, I'll start worrying you aren't getting enough rest."
 xm_tavern_w03_work_no_orders_unknown,I can manage for now. Just stay and enjoy the music.
@@ -335,18 +335,18 @@ gift_note_arrived,Xiaoman left you a letter.
 gift_tape_arrived,Xiaoman left you a tape.
 gift_note_stored,Xiaoman's letter was placed in the notebook.
 gift_tape_stored,Xiaoman's tape was placed in the cassette case.
-xm_04_03,"Could you set aside suitable water and brewing ingredients for me, senpai? Come by the tavern when you have time, and we can arrange a partnership."
-xm_04_04,"Once we agree, I’ll collect the materials on Wednesday and bring the bottles on Friday. No cash for either—our own little partnership."
+xm_04_03,"Could you set aside suitable water and brewing ingredients for me, senpai? Come by the tavern when you have time, and we can talk about working together."
+xm_04_04,"Once we sign, I will collect the materials on Wednesday and bring the bottles on Friday. Neither of us pays cash. Our own little partnership!"
 xm_04_accept,Thank you. Just what I needed.
 xm_04_bye,"I should go. We can talk about supplies at my place tonight, if you like."
-xm_04_03_existing,"You can always check our collection and delivery arrangements at the tavern, senpai. It’s fine if you want to pause."
+xm_04_03_existing,"You can always come by the tavern to talk about the materials and bottles, senpai. Just let me know if you would like a break."
 story_note_04_b_title,"Dear shopkeeper,"
 story_note_04_b_body,"After closing last night, I wrote our two shops' supply arrangement into my ledger.\n\nNow we are officially business partners.\n\nThere is still so much you can teach me about running a shop.\n\nAnd if anything comes up at your shop, come to me too! I will help however I can.\n\nNot long ago I only bought a little water from you and carried it home in one small bag.\n\nIf it turns into crates and crates one day, will your counter have room for them all...?\n\nBefore that, though, I need to work out the orders properly. We both have a good business to run.\n\nHere is this week's tape. (´,,•ω•,,)♡"
 story_note_04_b_signature,— Xiaoman
 xm_tavern_w04_supply_01,"Welcome, senpai. I made that list we discussed during the day."
-xm_tavern_w04_supply_02,"Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; once we sign, I’ll collect them at your shop on Wednesday, senpai."
-xm_tavern_w04_supply_03,I’ll record the materials’ value and bring bottles worth thirty percent more on Friday. Neither of us pays cash. We can decide then whether to continue next week.
-xm_tavern_w04_supply_yes,"Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
+xm_tavern_w04_supply_02,"Just set aside basic-quality water or better and brewing ingredients for me, senpai. No need to put together a recipe. Once we agree, I will collect them at your shop on Wednesday."
+xm_tavern_w04_supply_03,"I will turn the materials into bottles worth thirty percent more and bring them over on Friday. Neither of us pays cash. We can decide then whether to carry on next week, all right?"
+xm_tavern_w04_supply_yes,"Wonderful! Then it is settled. I will come by on Wednesday. Hehe, I am looking forward to making wine together, senpai."
 xm_tavern_w04_supply_later,Of course. No hurry. You have your own shop to look after.
 xm_w04_phone_01,"Hello. Tenquin Asset Corporation, Merchant Development."
 xm_w04_phone_02,Pre-assessment applications are open for our alcohol and tobacco retailer support programme. A representative can visit your shop.
@@ -363,14 +363,14 @@ xm_w04_wang_02,You are under my wing. I asked someone to stop that paperwork for
 xm_w04_wang_03,"Do not feel bad about it. They call it support, but once you sign, it is a different story."
 xm_w04_wang_04,"If it is such a good deal, why do they not run the business themselves?"
 xm_w04_wang_bye,"Anyway, look after your shop. Think things through next time."
-xm_tavern_w04_supply_existing,"Here are our material and bottle records, senpai. You can pause or renew here. I’ll still finish and deliver anything I’ve already accepted."
+xm_tavern_w04_supply_existing,"Here are our material and bottle records, senpai. Just tell me here if you would like a break or want to carry on. I will still finish and deliver the batch I have already taken."
 xm_tavern_w04_supply_early,"Welcome, senpai. I made a list of supplies for the bar. May I discuss it with you?"
 xm_tavern_w04_supply_01_unknown,Welcome. I made that list we discussed during the day.
-xm_tavern_w04_supply_02_unknown,"Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; once we sign, I’ll collect them at your shop on Wednesday."
-xm_tavern_w04_supply_03_unknown,I’ll record the materials’ value and bring bottles worth thirty percent more on Friday. Neither of us pays cash. We can decide then whether to continue next week.
-xm_tavern_w04_supply_yes_unknown,"Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
-xm_tavern_w04_supply_later_unknown,Of course. No hurry. You have your own shop to look after.
-xm_tavern_w04_supply_existing_unknown,Here are our material and bottle records. You can pause or renew here. I’ll still finish and deliver anything I’ve already accepted.
+xm_tavern_w04_supply_02_unknown,"Just set aside basic-quality water or better and brewing ingredients for me. No need to put together a recipe. Once we agree, I will collect them at your shop on Wednesday."
+xm_tavern_w04_supply_03_unknown,"I will turn the materials into bottles worth thirty percent more and bring them over on Friday. Neither of us pays cash. We can decide then whether to carry on next week, all right?"
+xm_tavern_w04_supply_yes_unknown,"Wonderful! Then it is settled. I will come by on Wednesday. Hehe, I am looking forward to making wine together."
+xm_tavern_w04_supply_later_unknown,"Of course, no hurry. You have other things to keep you busy too."
+xm_tavern_w04_supply_existing_unknown,Here are our material and bottle records. Just tell me here if you would like a break or want to carry on. I will still finish and deliver the batch I have already taken.
 xm_tavern_w04_supply_early_unknown,Welcome. I made a list of supplies for the bar. May I discuss it with you?
 ui_w04_supply,Material Partnership
 ui_w04_contract,Supply agreement
@@ -427,7 +427,7 @@ xm_05_01_late,"Good evening, senpai. I spent a while trying out some fine spirit
 xm_05_02_late,I finally got the taste right with a base spirit I had always wanted to use.
 xm_05_03_late,The first batch sold out right away. People asked if there would be more. Hehe... of course!
 xm_06_03,So I told him there was a lovely pawnshop down the shopping street. He might find something interesting there.
-xm_06_04,"Hehe, I wonder if he will actually come by. If he does, remember my reward, senpai~"
+xm_06_04,"Hehe, I wonder whether he will really come and have a look. If he does, remember to reward me, senpai!"
 xm_06_accept,Thank you. Just what I needed.
 xm_06_bye,I should go. There are still a few things to get ready for tonight.
 xm_tavern_05_new_01,"Senpai, have you seen the new menu? There are two new drinks."
@@ -531,8 +531,8 @@ xm_tavern_12_business_02,It turns out the rent support had sales targets attache
 xm_tavern_12_business_03,"I put the sales records together. Business was so good a few weeks ago, but hardly anyone has been coming lately."
 xm_tavern_12_business_04,Now I even have to work out next month's supplies all over again.
 xm_tavern_12_business_05,"I want to ask for a review first. After all, the promotion they promised never came through."
-xm_tavern_13_entry,"Oh, senpai. Come in and sit for a while. I am not serving customers today."
-xm_tavern_13_tape,I have not packed the cassette player yet. Pick something you would like to hear.
+xm_tavern_13_entry,"Oh, senpai. Come and sit for a while. I am not open for business today."
+xm_tavern_13_tape,I have not packed the cassette player away yet. Put the tape on if you would like to listen.
 xm_tavern_13_chat,I am keeping a few of the glasses. I suppose they will remind me of this place whenever I see them.
 ui_w12_roka,The drink you mentioned
 ui_w12_business,How business is going
@@ -545,7 +545,7 @@ cocktail_roka_name,Dew Blossom
 cocktail_roka_desc,"Salted cherry blossom and the rice aroma of sake rise like the last breath of a spring night before dawn. Sakura mochi and red bean lend a thin layer of gentle sweetness; yuzu peel brightens the aroma, followed by a clean hint of bitter matcha."
 drink_unique,One of a kind
 drink_buff_saleincome,Credits earned from selling goods +{0}%
-xm_brew_hello,"It's Wednesday, senpai. I'm here to collect the brewing materials."
+xm_brew_hello,"Senpai, I am here for the materials we agreed on."
 xm_brew_request,"Basic-quality water or better and brewing ingredients are welcome. Just place them on the trading counter, senpai."
 xm_brew_last,"I've brought the bottles I promised you, senpai."
 xm_brew_wrong,I'm only collecting basic-quality water or better and brewing ingredients this time.
@@ -564,7 +564,7 @@ ui_brew_bottle_desc,"Mixed and sealed by Xiaoman, in a plain large bottle."
 xm_brew_renew,"That’s this batch sorted. Shall we continue next week, senpai?"
 xm_brew_renew_yes,All right. I’ll collect the materials next Wednesday and bring the bottles on Friday.
 xm_brew_renew_no,"Of course, we can pause. Just see me at the tavern when you’d like to start again."
-xm_brew_small_batch,"This batch isn’t quite enough for a sample bottle. I’ve kept the remainder on record for next time, senpai."
+xm_brew_small_batch,"This is not quite enough for a small bottle yet. I will keep it on your account, senpai, and bring the wine together with the next batch."
 ui_brew_resume,Renew Partnership
 ui_brew_pause,Pause Partnership
 ui_brew_continue,Let’s continue next week.

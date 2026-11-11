@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "156",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 17.873,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 857950
+  },
+  "sha256": "6c4a36031792fce396632482081a650238e36161193c725cf64927194f04191c",
+  "binding": {
+    "key": "xm_tavern_w04_supply_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈留些基础水或者品质更好的水，还有酿酒用的材料给我就好。不用特地凑齐配方。约好了，我周三去店里取。",
+      "ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+      "en": "Just set aside basic-quality water or better and brewing ingredients for me, senpai. No need to put together a recipe. Once we agree, I will collect them at your shop on Wednesday."
+    },
+    "generic": false
+  }
+}

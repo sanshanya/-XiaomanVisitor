@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "うん、急がなくて大丈夫です。また、時間のあるときにお話ししましょう。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "64",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.871,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 377874
+  },
+  "sha256": "79c63a0f5734a83593f9d1f1b35350fd0cde4fbc8535364a55a34e56ea5ee785",
+  "binding": {
+    "key": "xm_tavern_w04_supply_later_unknown",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "好呀，不着急。您也有别的事情要忙嘛。",
+      "ja": "うん、急がなくて大丈夫です。また、時間のあるときにお話ししましょう。",
+      "en": "Of course, no hurry. You have other things to keep you busy too."
+    },
+    "generic": false
+  }
+}

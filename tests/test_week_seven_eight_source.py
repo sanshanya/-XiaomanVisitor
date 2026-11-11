@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 import weekly_story_source as source
+import story_master_source as master
 
 
 class WeekSevenEightSourceTests(unittest.TestCase):
@@ -14,12 +15,15 @@ class WeekSevenEightSourceTests(unittest.TestCase):
         for visit in (7, 8):
             overlay = source.read(visit)
             text = (ROOT / overlay['author_source']).read_text(encoding='utf-8-sig')
+            current = master.read()[visit]['lines']
             checked = 0
             for row in text.splitlines():
                 cells = [c.strip() for c in row.strip('|').split('|')]
                 match = re.fullmatch(r'`(xm_\w+)` · .+', cells[0])
                 if match and match[1] in overlay['lines']:
-                    self.assertEqual(overlay['lines'][match[1]]['zh'], cells[-1])
+                    # The accepted master revision takes priority over the older attachment.
+                    expected = current.get(match[1], {}).get('zh', cells[-1])
+                    self.assertEqual(overlay['lines'][match[1]]['zh'], expected)
                     checked += 1
             self.assertEqual(checked, 9)
             self.assertEqual(overlay['night_chat']['min_visit'], visit)

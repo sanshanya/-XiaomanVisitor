@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、お約束の材料、受け取りに来ました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "37",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.399,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 259192
+  },
+  "sha256": "a46b9daf7f644c23fd70c669611e7760f74f244eeebf1139d9321db139c9ddef",
+  "binding": {
+    "key": "xm_brew_hello",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，我来取说好的材料啦。",
+      "ja": "先輩、お約束の材料、受け取りに来ました。",
+      "en": "Senpai, I am here for the materials we agreed on."
+    },
+    "generic": false
+  }
+}

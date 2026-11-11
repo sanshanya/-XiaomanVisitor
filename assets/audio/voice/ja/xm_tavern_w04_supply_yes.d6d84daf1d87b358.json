@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、先輩とお酒を作れるの、楽しみです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "79",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.018,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 480914
+  },
+  "sha256": "fa8a1d62057e39c5479557c89d0fe27cf113e0d34c164f8ba93317654373e049",
+  "binding": {
+    "key": "xm_tavern_w04_supply_yes",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "太好啦！那就说定了，周三我过去。嘿嘿，能和前辈一起做酒，还挺期待的呢。",
+      "ja": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、先輩とお酒を作れるの、楽しみです。",
+      "en": "Wonderful! Then it is settled. I will come by on Wednesday. Hehe, I am looking forward to making wine together, senpai."
+    },
+    "generic": false
+  }
+}

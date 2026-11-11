@@ -29,9 +29,9 @@
     "key": "xm_tavern_13_entry",
     "language": "ja",
     "subtitle_templates": {
-      "zh": "啊，前辈。进来坐坐吧。今天不接客了。",
+      "zh": "啊，前辈。进来坐坐吧。今天已经不营业啦。",
       "ja": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
-      "en": "Oh, senpai. Come in and sit for a while. I am not serving customers today."
+      "en": "Oh, senpai. Come and sit for a while. I am not open for business today."
     },
     "generic": false
   }

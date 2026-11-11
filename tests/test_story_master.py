@@ -10,9 +10,18 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools'))
 import story_master_source as master
 import brewing_source
+import story_variants
 
 
 class StoryMasterTests(unittest.TestCase):
+    def test_unacquainted_dialogue_keeps_sentence_boundaries_and_the_person_who_helped(self):
+        thanks=story_variants.unacquainted(dict(key='xm_tavern_w02_help_done',mood='Smile'))
+        wages=story_variants.unacquainted(dict(key='xm_tavern_w03_work_done_02',mood='Smile'))
+        self.assertTrue(thanks['zh'].startswith('谢谢！刚开店'))
+        self.assertIn('多亏您帮忙，',wages['zh'])
+        self.assertNotIn('お客さんのおかげ',wages['ja'])
+        self.assertEqual((thanks['mood'],wages['mood']),('Smile','Smile'))
+
     def test_fourteen_chapters_are_actually_replaced(self):
         story=json.loads((ROOT/'assets/story.json').read_text(encoding='utf-8'))
         self.assertEqual(story['master_sha256'],hashlib.sha256(master.SOURCE.read_bytes()).hexdigest())

@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料なら使えます。ここに置いてもらえますか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "90",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 10.563,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 507052
+  },
+  "sha256": "f8829a9de9d7023d471149d0ad8ca3d959151a3e412e068741407dd3f7bb5188",
+  "binding": {
+    "key": "xm_brew_request",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "基础水、品质更好的水，还有酿酒用的原料都可以。前辈放到交易台上就好。",
+      "ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料なら使えます。ここに置いてもらえますか？",
+      "en": "Basic-quality water or better and brewing ingredients are welcome. Just place them on the trading counter, senpai."
+    },
+    "generic": false
+  }
+}

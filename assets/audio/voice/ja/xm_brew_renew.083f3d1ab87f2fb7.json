@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今回は、これで一区切りですね。先輩、来週もお願いしていいですか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "60",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 8.154,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 391444
+  },
+  "sha256": "4075d1b26ab6a6bf296bb9535118bc1f2c1a5f1ab3348966309b7ad82a93f512",
+  "binding": {
+    "key": "xm_brew_renew",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这批就这样啦。前辈，下周还继续吗？",
+      "ja": "今回は、これで一区切りですね。先輩、来週もお願いしていいですか？",
+      "en": "That’s this batch sorted. Shall we continue next week, senpai?"
+    },
+    "generic": false
+  }
+}

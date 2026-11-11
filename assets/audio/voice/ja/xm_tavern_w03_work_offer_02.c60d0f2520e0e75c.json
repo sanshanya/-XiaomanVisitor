@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "お給料は、ちゃんと出しますね。これも、ちゃんとしたお仕事ですから。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "62",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.253,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 348204
+  },
+  "sha256": "eaa578b19266cb361b08162501252a8ff8a80041c5ce9259f65ce1098124df79",
+  "binding": {
+    "key": "xm_tavern_w03_work_offer_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "工资我会好好付的。这可是正经工作哦。",
+      "ja": "お給料は、ちゃんと出しますね。これも、ちゃんとしたお仕事ですから。",
+      "en": "I'll make sure you're paid. This is a proper job, you know."
+    },
+    "generic": false
+  }
+}

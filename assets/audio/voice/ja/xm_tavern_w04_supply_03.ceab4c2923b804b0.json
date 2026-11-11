@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "150",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 17.436,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 836958
+  },
+  "sha256": "306521c3cbb04cbd5969381401504cd0e1d736309be13a12ede09fa5c1209f5d",
+  "binding": {
+    "key": "xm_tavern_w04_supply_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我会照材料的价值，再多添三成，给前辈做成酒。周五带过去，我们两边都不用付钱。下周还要不要继续，到时候再商量，好不好？",
+      "ja": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+      "en": "I will turn the materials into bottles worth thirty percent more and bring them over on Friday. Neither of us pays cash. We can decide then whether to carry on next week, all right?"
+    },
+    "generic": false
+  }
+}

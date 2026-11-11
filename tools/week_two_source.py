@@ -3,6 +3,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+import story_variants
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'story/小满酒馆_第二周_v4.1_实施稿.md'
@@ -37,11 +38,8 @@ def read():
     for line in list(lines.values()):
         if line['key'] not in neutral_variants:
             continue
-        variant=dict(line,key=line['key']+'_unknown')
+        variant=story_variants.unacquainted(line)
         assert variant['key'] not in lines, 'A voice variant must never replace an authored line'
-        variant['zh']=line['zh'].replace('店长先生。','').replace('店长先生','您').replace('店长','您').replace('前辈，','').replace('前辈','您')
-        variant['ja']=line['ja'].replace('先輩、','').replace('先輩','お客さん').replace('店長さん','お客さん')
-        variant['en']=line['en'].replace(', senpai','').replace('Senpai, ','').replace(', shopkeeper','').replace('. could','. Could')
         lines[variant['key']]=variant
     letters={}
     for lang,start,end in (('zh','### 中文｜纸条','### 日本語｜手紙'),('ja','### 日本語｜手紙','`店長先輩`')):

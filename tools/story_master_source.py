@@ -9,6 +9,7 @@ import json
 import re
 from functools import lru_cache
 from pathlib import Path
+import story_variants
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / 'story/小满酒馆_十四周剧情台词整合母稿_v5.4.md'
@@ -84,11 +85,8 @@ def apply(data, visit):
             del data['lines'][key]
     for key, row in week['lines'].items():
         data['lines'][key] = row
-        if key+'_unknown' in data['lines'] and key!='xm_tavern_w03_work_decline':
-            variant = dict(row, key=key+'_unknown')
-            variant['zh'] = row['zh'].replace('店长先生。', '').replace('店长先生', '您').replace('店长', '您').replace('前辈来啦。', '欢迎。').replace('前辈，', '').replace('前辈！', '').replace('前辈', '您')
-            variant['ja'] = row['ja'].replace('先輩、', '').replace('先輩', 'お客さん').replace('店長さん', 'お客さん')
-            variant['en'] = row['en'].replace('Senpai, ', '').replace(', senpai', '').replace(', shopkeeper', '')
+        if key+'_unknown' in data['lines']:
+            variant = story_variants.unacquainted(row)
             data['lines'][variant['key']] = variant
     data['title'] = week['title']
     data['letters'] = week['letters'] if visit in (3, 4) else week['letters']['A']

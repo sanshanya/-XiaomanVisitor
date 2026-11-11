@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、夜に時間があったら、少し手伝ってもらえませんか？ もちろん、お給料も出しますよ！ 先輩に、ただで手伝ってもらうわけにはいきませんから。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "131",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 14.999,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 719992
+  },
+  "sha256": "b853f224f364d69a6e04fc23adc2cb637508b8b60afa85db926b577817732e0c",
+  "binding": {
+    "key": "xm_03_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈晚上要是有空，能来帮我一下吗？当然会付工资的！可不能白占用前辈的时间呀。",
+      "ja": "先輩、夜に時間があったら、少し手伝ってもらえませんか？ もちろん、お給料も出しますよ！ 先輩に、ただで手伝ってもらうわけにはいきませんから。",
+      "en": "If you're free tonight, could you give me a hand? I'll pay you, of course! I can't just take up your time for nothing."
+    },
+    "generic": false
+  }
+}

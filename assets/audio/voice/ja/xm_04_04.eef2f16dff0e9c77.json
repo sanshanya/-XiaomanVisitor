@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "話が決まったら、水曜日に材料をもらいに来て、金曜日にお酒を持ってきますね。材料代もお酒代も、お互いなしで……一緒にやってみませんか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "125",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 15.363,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 737452
+  },
+  "sha256": "9119780e6cedb82d93d4ead65af30e5f633096bac5e2e79957b5f258ce55363c",
+  "binding": {
+    "key": "xm_04_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "签好协议后，我周三来取材料，周五把调好的酒带过来。材料和酒都不用付钱，就当我们一起做点小生意啦。",
+      "ja": "話が決まったら、水曜日に材料をもらいに来て、金曜日にお酒を持ってきますね。材料代もお酒代も、お互いなしで……一緒にやってみませんか？",
+      "en": "Once we sign, I will collect the materials on Wednesday and bring the bottles on Friday. Neither of us pays cash. Our own little partnership!"
+    },
+    "generic": false
+  }
+}

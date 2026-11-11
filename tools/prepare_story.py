@@ -12,6 +12,7 @@ import week_three_source
 import week_four_source
 import weekly_story_source
 import story_master_source
+import story_variants
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "package/XiaomanVisitor"
@@ -355,6 +356,8 @@ def main():
     source_name = source_path.relative_to(ROOT).as_posix() if source_path.is_relative_to(ROOT) else source_path.name
     snapshot = dict(schema=1, version="v5.4-fourteen-weeks", source=source_name, source_sha256=hashlib.sha256(text.encode("utf-8")).hexdigest(),
                     master_source=story_master_source.SOURCE.relative_to(ROOT).as_posix(),master_sha256=hashlib.sha256(story_master_source.SOURCE.read_bytes()).hexdigest(),
+                    variants_source=story_variants.SOURCE.relative_to(ROOT).as_posix(),
+                    variants_sha256=hashlib.sha256(story_variants.SOURCE.read_bytes()).hexdigest(),
                     performance_source='story/配音演出_ja.json' if performance_path.exists() else None,
                     performance_sha256=hashlib.sha256(performance_path.read_bytes()).hexdigest() if performance_path.exists() else None,
                     brewing_source=brewing_source.SOURCE.relative_to(ROOT).as_posix(),
@@ -404,7 +407,7 @@ def main():
     save(ROOT/'story/酒馆配音脚本_ja_待审.json',dict(schema=1,language='ja',voice_id='ayano',speed=1.1,
         purpose='authoring_reference_not_standalone_pack_script',
         lines=[row for row in production if row['key'].startswith(('xm_tavern_','xm_w03_thanks_'))],
-        integration_note='完整配音脚本的待录子集，不可单独覆盖现有语音索引；本次不请求TTS。'))
+        integration_note='完整配音脚本的酒馆子集，不可单独覆盖现有语音索引；目录生成保持离线，录音仅由显式generate调用。'))
     # A quiet double tap for the non-verbal shutter slot. This is not a voice line.
     import numpy as np
     rate = 48000

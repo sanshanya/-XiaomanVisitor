@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "はい。では、来週の水曜日に材料を取りに来て、金曜日にお酒をお届けしますね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "70",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 9.217,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 442462
+  },
+  "sha256": "7344ec7afc71c9189e9a094761d4ff640642675bd26e4969532cd15222bfd837",
+  "binding": {
+    "key": "xm_brew_renew_yes",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "好，那我下周三再来取材料，周五送酒。",
+      "ja": "はい。では、来週の水曜日に材料を取りに来て、金曜日にお酒をお届けしますね。",
+      "en": "All right. I’ll collect the materials next Wednesday and bring the bottles on Friday."
+    },
+    "generic": false
+  }
+}

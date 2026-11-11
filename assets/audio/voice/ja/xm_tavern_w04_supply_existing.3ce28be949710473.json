@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "166",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 18.734,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 899258
+  },
+  "sha256": "6309db60c59de4794cf244dcc36b9ae5b717361d213242f6953fec93a2e933f4",
+  "binding": {
+    "key": "xm_tavern_w04_supply_existing",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，材料和酒的记录都在这里。想先歇一阵，或者接着做，在这里告诉我就好。已经收下的这批，我还是会做好送去的。",
+      "ja": "先輩、材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+      "en": "Here are our material and bottle records, senpai. Just tell me here if you would like a break or want to carry on. I will still finish and deliver the batch I have already taken."
+    },
+    "generic": false
+  }
+}

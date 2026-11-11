@@ -2,52 +2,52 @@
   "authority": "2026-11-11 作者修订：先在酒馆互动签订协议；周三取料、当周周五交酒；交酒后询问下周是否继续；酒馆可中断、续签。双方不收款，材料估值加30%。",
   "overrides": {
     "xm_04_03": {
-      "zh": "前辈这里要是有合适的水和酿酒材料，能不能留一些给我？有空来酒馆，我们商量个约定吧。",
-      "ja": "先輩のところに使えそうな水や醸造の材料があったら、少し取っておいてもらえませんか？お時間のあるとき、お店で相談しましょう。",
-      "en": "Could you set aside suitable water and brewing ingredients for me, senpai? Come by the tavern when you have time, and we can arrange a partnership.",
+      "zh": "前辈这里要是有合适的水和酿酒用的材料，能不能留一些给我？有空来酒馆，我们商量一下怎么合作吧。",
+      "ja": "先輩のところに、使えそうな水やお酒を作る材料があったら、少し取っておいてもらえませんか？ 時間のあるときに、お店で相談できたらうれしいです。",
+      "en": "Could you set aside suitable water and brewing ingredients for me, senpai? Come by the tavern when you have time, and we can talk about working together.",
       "mood": "Soft"
     },
     "xm_04_04": {
-      "zh": "签好协议后，我周三来取材料，周五把调好的酒带过来。材料和酒都不算钱，就当我们一起做的小生意啦。",
-      "ja": "取り決めができたら、水曜日に材料を取りに来て、金曜日にお酒を持ってきます。材料もお酒もお金はなしで、二人でちょっとした商売をする感じですね。",
-      "en": "Once we agree, I’ll collect the materials on Wednesday and bring the bottles on Friday. No cash for either—our own little partnership.",
+      "zh": "签好协议后，我周三来取材料，周五把调好的酒带过来。材料和酒都不用付钱，就当我们一起做点小生意啦。",
+      "ja": "話が決まったら、水曜日に材料をもらいに来て、金曜日にお酒を持ってきますね。材料代もお酒代も、お互いなしで……一緒にやってみませんか？",
+      "en": "Once we sign, I will collect the materials on Wednesday and bring the bottles on Friday. Neither of us pays cash. Our own little partnership!",
       "mood": "Smile"
     },
     "xm_04_03_existing": {
-      "zh": "前辈，取料和交酒的安排，随时可以来酒馆找我确认。想停一停也没关系。",
-      "ja": "先輩、材料の受け取りとお酒のお届けは、いつでもお店で相談できます。少しお休みしたくなっても大丈夫ですよ。",
-      "en": "You can always check our collection and delivery arrangements at the tavern, senpai. It’s fine if you want to pause.",
+      "zh": "前辈，取材料和送酒的事，随时可以来酒馆找我商量。想先歇一阵也没关系，告诉我就好。",
+      "ja": "先輩、材料やお酒のことで気になることがあったら、いつでもお店で声をかけてくださいね。少しお休みしたくなっても、大丈夫ですから。",
+      "en": "You can always come by the tavern to talk about the materials and bottles, senpai. Just let me know if you would like a break.",
       "mood": "Soft"
     },
     "xm_tavern_w04_supply_02": {
-      "zh": "前辈留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，签好协议后我周三去店里取。",
-      "ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
-      "en": "Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; once we sign, I’ll collect them at your shop on Wednesday, senpai.",
+      "zh": "前辈留些基础水或者品质更好的水，还有酿酒用的材料给我就好。不用特地凑齐配方。约好了，我周三去店里取。",
+      "ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+      "en": "Just set aside basic-quality water or better and brewing ingredients for me, senpai. No need to put together a recipe. Once we agree, I will collect them at your shop on Wednesday.",
       "mood": "Soft"
     },
     "xm_tavern_w04_supply_03": {
-      "zh": "材料按价值记下来，我多做三成价值的酒，周五带过去。我们两边都不用付钱。下周要不要继续，到时候再商量。",
-      "ja": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
-      "en": "I’ll record the materials’ value and bring bottles worth thirty percent more on Friday. Neither of us pays cash. We can decide then whether to continue next week.",
+      "zh": "我会照材料的价值，再多添三成，给前辈做成酒。周五带过去，我们两边都不用付钱。下周还要不要继续，到时候再商量，好不好？",
+      "ja": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+      "en": "I will turn the materials into bottles worth thirty percent more and bring them over on Friday. Neither of us pays cash. We can decide then whether to carry on next week, all right?",
       "mood": "Smile"
     },
     "xm_tavern_w04_supply_existing": {
-      "zh": "前辈，材料和成酒的记录在这里。要中断或者续签，都可以在这里告诉我，已经收下的材料我还是会做好送去。",
-      "ja": "先輩、材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
-      "en": "Here are our material and bottle records, senpai. You can pause or renew here. I’ll still finish and deliver anything I’ve already accepted.",
+      "zh": "前辈，材料和酒的记录都在这里。想先歇一阵，或者接着做，在这里告诉我就好。已经收下的这批，我还是会做好送去的。",
+      "ja": "先輩、材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+      "en": "Here are our material and bottle records, senpai. Just tell me here if you would like a break or want to carry on. I will still finish and deliver the batch I have already taken.",
       "mood": "Soft"
     }
   },
   "lines": {
     "xm_brew_hello": {
-      "zh": "前辈，周三啦。我来取酿酒的材料了。",
-      "ja": "先輩、水曜日ですね。醸造の材料を取りに来ました。",
-      "en": "It's Wednesday, senpai. I'm here to collect the brewing materials.",
+      "zh": "前辈，我来取说好的材料啦。",
+      "ja": "先輩、お約束の材料、受け取りに来ました。",
+      "en": "Senpai, I am here for the materials we agreed on.",
       "mood": "Smile"
     },
     "xm_brew_request": {
       "zh": "基础水、品质更好的水，还有酿酒用的原料都可以。前辈放到交易台上就好。",
-      "ja": "基本水かそれより良い水と、醸造用の材料なら大丈夫です。取引台に置いてくださいね。",
+      "ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料なら使えます。ここに置いてもらえますか？",
       "en": "Basic-quality water or better and brewing ingredients are welcome. Just place them on the trading counter, senpai.",
       "mood": "Soft"
     },
@@ -59,7 +59,7 @@
     },
     "xm_brew_wrong": {
       "zh": "这次只收基础水以上的水，还有酿酒材料哦。",
-      "ja": "今回は基本水以上の水と、醸造用の材料だけなんです。",
+      "ja": "今回は、普通の飲み水か、それより質のいいお水と、お酒を作る材料だけなんです。",
       "en": "I'm only collecting basic-quality water or better and brewing ingredients this time.",
       "mood": "Soft"
     },
@@ -77,7 +77,7 @@
     },
     "xm_brew_renew": {
       "zh": "这批就这样啦。前辈，下周还继续吗？",
-      "ja": "今回はこれで大丈夫ですね。先輩、来週も続けますか？",
+      "ja": "今回は、これで一区切りですね。先輩、来週もお願いしていいですか？",
       "en": "That’s this batch sorted. Shall we continue next week, senpai?",
       "mood": "Smile"
     },
@@ -94,9 +94,9 @@
       "mood": "Soft"
     },
     "xm_brew_small_batch": {
-      "zh": "这次还不够装一小瓶，我把余下的价值记着，下次一起给前辈。",
-      "ja": "今回はまだ小瓶一本分に足りないので、残りの分は記録して、次の分と一緒にお渡ししますね。",
-      "en": "This batch isn’t quite enough for a sample bottle. I’ve kept the remainder on record for next time, senpai.",
+      "zh": "这次还不够装一小瓶，先替前辈记着哦。下回一起做好了带来。",
+      "ja": "今回はまだ、小瓶一本分に足りなくて。今回の分は、ちゃんとメモしておきますね。次の分と合わせて、お酒にしてお返しします。",
+      "en": "This is not quite enough for a small bottle yet. I will keep it on your account, senpai, and bring the wine together with the next batch.",
       "mood": "Soft"
     }
   }

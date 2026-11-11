@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、材料やお酒のことで気になることがあったら、いつでもお店で声をかけてくださいね。少しお休みしたくなっても、大丈夫ですから。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "121",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 13.618,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 653688
+  },
+  "sha256": "4bee2877ca32dac08aba04e6639e977e9d7c92bc2df30f073ecfb1c71138727c",
+  "binding": {
+    "key": "xm_04_03_existing",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，取材料和送酒的事，随时可以来酒馆找我商量。想先歇一阵也没关系，告诉我就好。",
+      "ja": "先輩、材料やお酒のことで気になることがあったら、いつでもお店で声をかけてくださいね。少しお休みしたくなっても、大丈夫ですから。",
+      "en": "You can always come by the tavern to talk about the materials and bottles, senpai. Just let me know if you would like a break."
+    },
+    "generic": false
+  }
+}

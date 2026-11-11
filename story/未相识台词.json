@@ -1,0 +1,161 @@
+{
+  "schema": 1,
+  "authority": "2026-11-12 作者采纳口头稿审校；未相识称呼差分逐句定稿，不用删除称呼或全局替换生成。",
+  "lines": {
+    "xm_tavern_greeting_unknown": {
+      "zh": "欢迎光临。我叫小满，这间店刚开业不久。",
+      "ja": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
+      "en": "Welcome. My name is Xiaoman. I just opened this little place."
+    },
+    "xm_tavern_drink_limit_unknown": {
+      "zh": "不可以哦，今晚已经喝过一杯啦。想听歌的话，倒是随时欢迎。",
+      "ja": "だめですよ、お客さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
+      "en": "No more tonight. You've already had a glass. You're always welcome to stay for the music, though."
+    },
+    "xm_tavern_w02_help_intro_unknown": {
+      "zh": "被你发现了啊……我这边还忙着调酒。可以帮我把酒单递过去吗？",
+      "ja": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
+      "en": "You caught me… I'm still making drinks. could you take them a menu for me?"
+    },
+    "xm_tavern_w02_help_done_unknown": {
+      "zh": "谢谢！刚开店就有点手忙脚乱的……还好有您在。",
+      "ja": "ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
+      "en": "Thank you! I am still getting flustered with the shop just opening... I am glad you were here."
+    },
+    "xm_tavern_w02_rain_01_unknown": {
+      "zh": "您在看窗户上的雨幕吗？这个是我特意装的哦。",
+      "ja": "窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
+      "en": "Looking at the rain on the window? I had that put in specially."
+    },
+    "xm_tavern_w02_tape_intro_unknown": {
+      "zh": "这台磁带机是我从老家带来的。想听的话，自己放就好啦。",
+      "ja": "このカセットデッキ、実家から持ってきたんです。よかったら、聴いていってくださいね。",
+      "en": "I brought this cassette player from home. Feel free to put the tape on if you would like to listen."
+    },
+    "xm_tavern_chat_rest_unknown": {
+      "zh": "慢慢坐吧。一起听会儿音乐。",
+      "ja": "どうぞゆっくり。少し音楽でも聴きましょう。",
+      "en": "Make yourself comfortable. Let's listen for a while."
+    },
+    "xm_tavern_w03_work_offer_01_unknown": {
+      "zh": "啊，正好换班的客人快来了。能帮我招呼一下吗？",
+      "ja": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+      "en": "Oh! The next shift's customers will be here soon. Could you help me look after them?"
+    },
+    "xm_tavern_w03_work_w02_callback_unknown": {
+      "zh": "上次您帮忙递酒单，我还记得呢。这次可不能再让您白帮忙啦。",
+      "ja": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
+      "en": "I remember you handing out menus for me. This time, I really must pay you for your help."
+    },
+    "xm_tavern_w03_work_start_unknown": {
+      "zh": "那就拜托您啦！这边的客人交给您，我去照看吧台。",
+      "ja": "それじゃ、こちらのお客さんをお願いします！ わたしはカウンターを見てきますね。",
+      "en": "Thank you! I'll leave these customers with you while I look after the bar."
+    },
+    "xm_tavern_w03_work_done_01_unknown": {
+      "zh": "呼……总算忙过这一阵啦。帮大忙了！",
+      "ja": "ふう……やっとひと段落ですね。すごく助かりました！",
+      "en": "Phew… We've finally caught up. You were a huge help!"
+    },
+    "xm_tavern_w03_work_done_02_unknown": {
+      "zh": "今天的工资，请收好。多亏您帮忙，刚才那几位客人总算没白跑一趟呢。",
+      "ja": "今日のお給料、受け取ってください。手伝ってくれたおかげで、さっきのお客さんたちも待たせずに済みました。",
+      "en": "Here is your pay for today. Thanks to your help, those customers did not make the trip for nothing."
+    },
+    "xm_tavern_w03_work_decline_unknown": {
+      "zh": "嗯，没关系。您也有自己的事情要忙嘛。",
+      "ja": "うん、大丈夫です。ご用事もあるでしょうし。",
+      "en": "That's all right. You have things of your own to take care of too."
+    },
+    "xm_tavern_w03_work_done_today_unknown": {
+      "zh": "今天已经下过班啦。再留下来，我可要担心您休息不够了。",
+      "ja": "今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
+      "en": "You've already finished your shift today. If you stay any longer, I'll start worrying you aren't getting enough rest."
+    },
+    "xm_tavern_w03_work_no_orders_unknown": {
+      "zh": "今天暂时忙得过来。您来听听歌就好啦。",
+      "ja": "今夜はまだ一人で大丈夫そうです。のんびり音楽でも聴いていってくださいね。",
+      "en": "I can manage for now. Just stay and enjoy the music."
+    },
+    "xm_tavern_w03_chat_01_unknown": {
+      "zh": "您有没有发现？换班的时候，客人说话的声音特别热闹。等他们走了，雨幕的声音又会慢慢听清楚。",
+      "ja": "気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
+      "en": "Have you noticed? It's so lively when the shifts change. After everyone leaves, you can slowly hear the rain again."
+    },
+    "xm_tavern_w03_chat_after_work_unknown": {
+      "zh": "您也辛苦啦。刚才那几位客人走的时候，还说下次要再来呢。",
+      "ja": "お疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
+      "en": "You worked hard too. Those customers said they'd come again as they were leaving."
+    },
+    "xm_tavern_w04_supply_01_unknown": {
+      "zh": "欢迎。白天说的那件事，我把清单准备好了。",
+      "ja": "いらっしゃい。昼間に話したこと、リストにまとめておきました。",
+      "en": "Welcome. I made that list we discussed during the day."
+    },
+    "xm_tavern_w04_supply_02_unknown": {
+      "zh": "您留些基础水或者品质更好的水，还有酿酒用的材料给我就好。不用特地凑齐配方。约好了，我周三去店里取。",
+      "ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+      "en": "Just set aside basic-quality water or better and brewing ingredients for me. No need to put together a recipe. Once we agree, I will collect them at your shop on Wednesday."
+    },
+    "xm_tavern_w04_supply_03_unknown": {
+      "zh": "我会照材料的价值，再多添三成，做成酒。周五带过去，我们两边都不用付钱。下周还要不要继续，到时候再商量，好不好？",
+      "ja": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+      "en": "I will turn the materials into bottles worth thirty percent more and bring them over on Friday. Neither of us pays cash. We can decide then whether to carry on next week, all right?"
+    },
+    "xm_tavern_w04_supply_yes_unknown": {
+      "zh": "太好啦！那就说定了，周三我过去。嘿嘿，能和您一起做酒，还挺期待的呢。",
+      "ja": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、一緒にお酒を作れるの、楽しみです。",
+      "en": "Wonderful! Then it is settled. I will come by on Wednesday. Hehe, I am looking forward to making wine together."
+    },
+    "xm_tavern_w04_supply_later_unknown": {
+      "zh": "好呀，不着急。您也有别的事情要忙嘛。",
+      "ja": "うん、急がなくて大丈夫です。また、時間のあるときにお話ししましょう。",
+      "en": "Of course, no hurry. You have other things to keep you busy too."
+    },
+    "xm_tavern_w04_supply_existing_unknown": {
+      "zh": "材料和酒的记录都在这里。想先歇一阵，或者接着做，在这里告诉我就好。已经收下的这批，我还是会做好送去的。",
+      "ja": "材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+      "en": "Here are our material and bottle records. Just tell me here if you would like a break or want to carry on. I will still finish and deliver the batch I have already taken."
+    },
+    "xm_tavern_w04_supply_early_unknown": {
+      "zh": "欢迎。我把店里需要的东西列了一张清单，想跟您商量一下。",
+      "ja": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
+      "en": "Welcome. I made a list of supplies for the bar. May I discuss it with you?"
+    },
+    "xm_tavern_05_new_01_unknown": {
+      "zh": "看到新酒单了吗？新添了两款酒哦。",
+      "ja": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
+      "en": "have you seen the new menu? There are two new drinks."
+    },
+    "xm_tavern_05_new_02_unknown": {
+      "zh": "梦游仙境是我试了好几次才调好的，轻摇春色则想做得清爽一点。",
+      "ja": "「夢遊仙境」は何度も試して、やっと納得できた味で。「軽揺春色」は、もう少しすっきりした感じにしたかったんです。",
+      "en": "Wonderland took quite a few attempts. For Spring Sway, I wanted something a little fresher."
+    },
+    "xm_tavern_05_new_03_unknown": {
+      "zh": "这批原料有点紧俏，暂时只能做这么多。喜欢的话，以后再多进一点吧。",
+      "ja": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
+      "en": "These ingredients are hard to come by, so I can only make a few for now. If people like them, I will order more."
+    },
+    "xm_tavern_05_soldout_unknown": {
+      "zh": "啊，抱歉……这款今天已经卖完啦。下批到了再来看看吧。",
+      "ja": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
+      "en": "Ah, sorry... that one is sold out. Come back when the next batch arrives."
+    },
+    "xm_tavern_05_daily_unknown": {
+      "zh": "最近一直有人问那两款新酒呢。不过我还是想把原来的几款留在酒单上。毕竟不是每个人都喜欢喝贵的嘛。",
+      "ja": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
+      "en": "People keep asking about the two new drinks. I still want to keep the old ones on the menu, though. Not everyone wants something expensive."
+    },
+    "xm_tavern_06_chat_01_unknown": {
+      "zh": "最近来了不少从外面经过的旅客呢。有人只是等船，也有人专程绕过来喝一杯。",
+      "ja": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
+      "en": "Quite a few passing travellers have come in lately. Some are waiting for their ships. Others make a special detour for a drink."
+    },
+    "xm_tavern_06_chat_02_unknown": {
+      "zh": "有些客人喝着喝着，就聊起自己去过的地方。明明我哪里都没去，却好像跟着他们旅行了一圈呢。",
+      "ja": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
+      "en": "Some start telling me about places they have been. I have not gone anywhere, yet it feels as if I have travelled with them."
+    }
+  }
+}

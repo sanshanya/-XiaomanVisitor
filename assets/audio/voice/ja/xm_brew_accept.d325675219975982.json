@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "では、こちらをお預かりしますね。金曜日に、できたお酒を持ってきます。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "64",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.871,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 377874
+  },
+  "sha256": "3c5ed6cc13c8535566bb6ec159ad3d02d760cf2601d22747a5951037181de6a2",
+  "binding": {
+    "key": "xm_brew_accept",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这些我就收下啦。周五，把调好的酒给前辈带来。",
+      "ja": "では、こちらをお預かりしますね。金曜日に、できたお酒を持ってきます。",
+      "en": "I’ll take these, then. I’ll bring the finished bottles on Friday, senpai."
+    },
+    "generic": false
+  }
+}

@@ -24,9 +24,9 @@
     {
       "key": "xm_tavern_w02_entry_02",
       "subtitle_templates": {
-        "zh": "我一直期待您的到来。",
+        "zh": "一直盼着您来呢。",
         "ja": "ずっと、来てくださるのを楽しみにしてたんです。",
-        "en": "I've been looking forward to having you here."
+        "en": "I have been looking forward to seeing you here."
       },
       "spoken_text": "ずっと、来てくださるのを楽しみにしてたんです。",
       "generate_text": "ずっと、来てくださるのを楽しみにしてたんです。",
@@ -34,7 +34,7 @@
       "reviewed": true,
       "audio": "assets/audio/voice/ja/xm_tavern_w02_entry_02.c3a04c21e3cb39b3.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "997eb686e815b8118823c9e99c9296654610462f6798f697e2f043b751d93c1c",
+      "source_sha256": "a6a230f32a33eb953c7e147af4aad8c8d3fb39caa447c2a2c6a3b5ccfd85a2eb",
       "delivery": "开业期待，邀请时略害羞"
     },
     {
@@ -287,12 +287,11 @@
       "spoken_text": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
       "generate_text": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_help_intro.76b8d22af7506706.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "ce28de3eec93749bf2a9cd8098c09c810767176a886b33238072e29639085626",
-      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。新句待统一录音。",
-      "defer_recording": true
+      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。"
     },
     {
       "key": "xm_tavern_w02_help_done",
@@ -329,9 +328,9 @@
     {
       "key": "xm_tavern_w02_rain_01",
       "subtitle_templates": {
-        "zh": "前辈在看窗户上的雨幕吗？这可是本店的独特设计哦。",
+        "zh": "前辈在看窗户上的雨幕吗？这个是我特意装的哦。",
         "ja": "先輩、窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
-        "en": "Looking at the rain on the window, senpai? It's one of my little touches for the tavern."
+        "en": "Looking at the rain on the window, senpai? I had that put in specially."
       },
       "spoken_text": "先輩、窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
       "generate_text": "先輩、窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
@@ -339,15 +338,15 @@
       "reviewed": true,
       "audio": "assets/audio/voice/ja/xm_tavern_w02_rain_01.ac952500e044232a.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "fab1ac1f81966b443f6b03d243968f5e2035bb50698759a68b16a594de811240",
+      "source_sha256": "ff60bab300ddab2c3d24f7c96573e62bc9ff63743d4cdba0593aa628ed5fdd0a",
       "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_rain_02",
       "subtitle_templates": {
-        "zh": "为了呈现下雨的效果，我可是花了好一番功夫呢。",
+        "zh": "为了让它看起来像真的下雨，我可是折腾了好久呢。",
         "ja": "雨が降っているように見せたくて、けっこう頑張ったんです。",
-        "en": "It took quite a bit of work to make it look as though it was raining."
+        "en": "It took me ages to get it to look like real rain."
       },
       "spoken_text": "雨が降っているように見せたくて、けっこう頑張ったんです。",
       "generate_text": "雨が降っているように見せたくて、けっこう頑張ったんです。",
@@ -355,23 +354,23 @@
       "reviewed": true,
       "audio": "assets/audio/voice/ja/xm_tavern_w02_rain_02.89df833415da3ad8.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "ca8d7cc40b1cc6f47f6558f86d299ead37d246d568a63f2b0208bfa80d3158ee",
+      "source_sha256": "33dd3036093872d6796be1a3132e617dd803a49ba4e5caf06b12e121e6924c80",
       "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_tape_intro",
       "subtitle_templates": {
-        "zh": "这台磁带机是我从故乡带来的，如果店长有喜欢的曲目，可以自己选着听。",
-        "ja": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、店長さんも自由に選んで聴いてくださいね。",
-        "en": "I brought this cassette deck from home. If there's something you'd like to hear, shopkeeper, feel free to choose."
+        "zh": "这台磁带机是我从老家带来的。店长先生想听的话，自己放就好啦。",
+        "ja": "このカセットデッキ、実家から持ってきたんです。よかったら、店長さんも聴いていってくださいね。",
+        "en": "I brought this cassette player from home. Feel free to put the tape on if you would like to listen, shopkeeper."
       },
-      "spoken_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、店長さんも自由に選んで聴いてくださいね。",
-      "generate_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、店長さんも自由に選んで聴いてくださいね。",
+      "spoken_text": "このカセットデッキ、実家から持ってきたんです。よかったら、店長さんも聴いていってくださいね。",
+      "generate_text": "このカセットデッキ、実家から持ってきたんです。よかったら、店長さんも聴いていってくださいね。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w02_tape_intro.0e3ffa93ada53829.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_tape_intro.8321726cd617b874.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "fc506ffaa770fafd3812518bd83e0e3278c19e18eb1e2ef90805a5e62ae27e74",
+      "source_sha256": "c869de7795539b51e91aeccc0792968ef29dfcbc9dc2e3d2cc8cd8514580d4ee",
       "delivery": "开业期待，邀请时略害羞"
     },
     {
@@ -432,19 +431,18 @@
       "spoken_text": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
       "generate_text": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_help_intro_unknown.62286505b0c682bb.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "817219973577ac213a687f5408a75ff042d2214a79615fc3398b981a2009d302",
-      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。新句待统一录音。",
-      "defer_recording": true
+      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。"
     },
     {
       "key": "xm_tavern_w02_help_done_unknown",
       "subtitle_templates": {
-        "zh": "谢谢刚开店就有点手忙脚乱的……还好有您在。",
+        "zh": "谢谢！刚开店就有点手忙脚乱的……还好有您在。",
         "ja": "ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
-        "en": "Thank you! It's been a little hectic since opening… I'm glad you were here."
+        "en": "Thank you! I am still getting flustered with the shop just opening... I am glad you were here."
       },
       "spoken_text": "ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
       "generate_text": "ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
@@ -452,15 +450,15 @@
       "reviewed": true,
       "audio": "assets/audio/voice/ja/xm_tavern_w02_help_done_unknown.2d9321b2678cae9d.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "e1d457339b17530eebba422d2227b1e26e35f2bbaa1a2186fea423175a008e05",
+      "source_sha256": "e738e67d9f2cc4490d5d839023a8b2fec3cd3c0cd12b4cc26e00ff402091020e",
       "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_rain_01_unknown",
       "subtitle_templates": {
-        "zh": "您在看窗户上的雨幕吗？这可是本店的独特设计哦。",
+        "zh": "您在看窗户上的雨幕吗？这个是我特意装的哦。",
         "ja": "窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
-        "en": "Looking at the rain on the window? It's one of my little touches for the tavern."
+        "en": "Looking at the rain on the window? I had that put in specially."
       },
       "spoken_text": "窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
       "generate_text": "窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
@@ -468,23 +466,23 @@
       "reviewed": true,
       "audio": "assets/audio/voice/ja/xm_tavern_w02_rain_01_unknown.4fa3a9f103a83816.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "519b4952c544d4c183debeecf54281bb89f6ff08e5084509a37aad34bac64b3c",
+      "source_sha256": "3be6255b30a6a4c63c56bcb3bad33a53544e87057aefab8d1c9be2e49aedacb6",
       "delivery": "开业期待，邀请时略害羞"
     },
     {
       "key": "xm_tavern_w02_tape_intro_unknown",
       "subtitle_templates": {
-        "zh": "这台磁带机是我从故乡带来的，如果您有喜欢的曲目，可以自己选着听。",
-        "ja": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
-        "en": "I brought this cassette deck from home. If there's something you'd like to hear, feel free to choose."
+        "zh": "这台磁带机是我从老家带来的。想听的话，自己放就好啦。",
+        "ja": "このカセットデッキ、実家から持ってきたんです。よかったら、聴いていってくださいね。",
+        "en": "I brought this cassette player from home. Feel free to put the tape on if you would like to listen."
       },
-      "spoken_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
-      "generate_text": "このカセットデッキは故郷から持ってきたんです。好きな曲があったら、お客さんも自由に選んで聴いてくださいね。",
+      "spoken_text": "このカセットデッキ、実家から持ってきたんです。よかったら、聴いていってくださいね。",
+      "generate_text": "このカセットデッキ、実家から持ってきたんです。よかったら、聴いていってくださいね。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w02_tape_intro_unknown.50b9288cfda9a46d.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w02_tape_intro_unknown.b7e7def5e9120bb7.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "ab733b9cde508c28d4f265a6a4eff1a486e2be568f7f5f6873579ea9770f6dab",
+      "source_sha256": "fc2dc3c8d55a6d1ae8438f5801441ab9a8a24cf3aa538258e2bb77942f1474c7",
       "delivery": "开业期待，邀请时略害羞"
     },
     {
@@ -523,16 +521,16 @@
       "key": "xm_tavern_w03_work_offer_02",
       "subtitle_templates": {
         "zh": "工资我会好好付的。这可是正经工作哦。",
-        "ja": "お給料はちゃんとお支払いします。これでも、立派なお仕事ですからね。",
+        "ja": "お給料は、ちゃんと出しますね。これも、ちゃんとしたお仕事ですから。",
         "en": "I'll make sure you're paid. This is a proper job, you know."
       },
-      "spoken_text": "お給料はちゃんとお支払いします。これでも、立派なお仕事ですからね。",
-      "generate_text": "お給料はちゃんとお支払いします。これでも、立派なお仕事ですからね。",
+      "spoken_text": "お給料は、ちゃんと出しますね。これも、ちゃんとしたお仕事ですから。",
+      "generate_text": "お給料は、ちゃんと出しますね。これも、ちゃんとしたお仕事ですから。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_02.eddadac7cde93465.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_02.c60d0f2520e0e75c.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "292996734284ae426d2b522232a2f11a2478249a3524ea2447c8ad5b4cab8c70",
+      "source_sha256": "9f06d0102a8b71957eb70f76afbdacc9668364e1d2fe03258b0c572998f91cab",
       "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
@@ -603,16 +601,16 @@
       "key": "xm_tavern_w03_work_decline",
       "subtitle_templates": {
         "zh": "嗯，没关系。前辈也有自己的店要忙嘛。",
-        "ja": "うん、大丈夫です。先輩もご自分のお店で忙しいですもんね。",
+        "ja": "うん、大丈夫です。先輩も、お店のことで忙しいですもんね。",
         "en": "That's all right. You have your own shop to look after too."
       },
-      "spoken_text": "うん、大丈夫です。先輩もご自分のお店で忙しいですもんね。",
-      "generate_text": "うん、大丈夫です。先輩もご自分のお店で忙しいですもんね。",
+      "spoken_text": "うん、大丈夫です。先輩も、お店のことで忙しいですもんね。",
+      "generate_text": "うん、大丈夫です。先輩も、お店のことで忙しいですもんね。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_decline.8259818e31bb3b95.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_decline.1a022613957b92aa.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "f0c1833203cf9bb028200b98fc8fbe2a3e7e5a06d25d388b0350dcd86c88a4a2",
+      "source_sha256": "f37210e117b02a9d8ef60839dfe384ae570dd6425b607c43269000a3ba43aa99",
       "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
@@ -763,16 +761,16 @@
       "key": "xm_tavern_w03_work_offer_01_unknown",
       "subtitle_templates": {
         "zh": "啊，正好换班的客人快来了。能帮我招呼一下吗？",
-        "ja": "あ、お客さん！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+        "ja": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
         "en": "Oh! The next shift's customers will be here soon. Could you help me look after them?"
       },
-      "spoken_text": "あ、お客さん！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
-      "generate_text": "あ、お客さん！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+      "spoken_text": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+      "generate_text": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_01_unknown.0172a6b1fabb15b6.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_01_unknown.7e55824d727fc405.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "4cb13dce52bcb5f64879b43a6214c672e3caf56cb38ca6fdde222dcf81ea42fe",
+      "source_sha256": "cbd2541c41c979fb76bfb95237dd10adf2e75837dc06cf8fdba74758dc7dae78",
       "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
@@ -795,16 +793,16 @@
       "key": "xm_tavern_w03_work_start_unknown",
       "subtitle_templates": {
         "zh": "那就拜托您啦！这边的客人交给您，我去照看吧台。",
-        "ja": "じゃあ、お客さんにお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
+        "ja": "それじゃ、こちらのお客さんをお願いします！ わたしはカウンターを見てきますね。",
         "en": "Thank you! I'll leave these customers with you while I look after the bar."
       },
-      "spoken_text": "じゃあ、お客さんにお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
-      "generate_text": "じゃあ、お客さんにお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
+      "spoken_text": "それじゃ、こちらのお客さんをお願いします！ わたしはカウンターを見てきますね。",
+      "generate_text": "それじゃ、こちらのお客さんをお願いします！ わたしはカウンターを見てきますね。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_start_unknown.7a587ea9e9dd7cfa.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_start_unknown.676585056ccaee91.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "9025f3bb21e4a396d3f1de3b1a54713f8166224a34b177dcda4026023846d603",
+      "source_sha256": "d133bde09aec8669ccc8dfb0599e62b770fd023a2c5591897f4d96d66b894359",
       "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
@@ -826,17 +824,17 @@
     {
       "key": "xm_tavern_w03_work_done_02_unknown",
       "subtitle_templates": {
-        "zh": "今天的工资，请收好。多亏刚才那几位客人总算没白跑一趟呢。",
-        "ja": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
-        "en": "Here's your pay. Thanks to you, those customers didn't have a wasted trip."
+        "zh": "今天的工资，请收好。多亏您帮忙，刚才那几位客人总算没白跑一趟呢。",
+        "ja": "今日のお給料、受け取ってください。手伝ってくれたおかげで、さっきのお客さんたちも待たせずに済みました。",
+        "en": "Here is your pay for today. Thanks to your help, those customers did not make the trip for nothing."
       },
-      "spoken_text": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
-      "generate_text": "今日のお給料、受け取ってください。お客さんのおかげで、さっきのお客さんたちをお待たせせずに済みました。",
+      "spoken_text": "今日のお給料、受け取ってください。手伝ってくれたおかげで、さっきのお客さんたちも待たせずに済みました。",
+      "generate_text": "今日のお給料、受け取ってください。手伝ってくれたおかげで、さっきのお客さんたちも待たせずに済みました。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_done_02_unknown.9c9c2bd3141a861a.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_done_02_unknown.eed45164a1c3af37.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "451e7fa8e79455d4a463eef146ab7353c099675e43f913c525b522e1926d6afa",
+      "source_sha256": "a23f8feeec5c2e6625274ea8e81d460dfc122e975807fa4f0c866374b908bc0d",
       "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
@@ -875,16 +873,16 @@
       "key": "xm_tavern_w03_work_no_orders_unknown",
       "subtitle_templates": {
         "zh": "今天暂时忙得过来。您来听听歌就好啦。",
-        "ja": "今夜はまだ一人で大丈夫そうです。お客さんは、のんびり音楽でも聴いていってくださいね。",
+        "ja": "今夜はまだ一人で大丈夫そうです。のんびり音楽でも聴いていってくださいね。",
         "en": "I can manage for now. Just stay and enjoy the music."
       },
-      "spoken_text": "今夜はまだ一人で大丈夫そうです。お客さんは、のんびり音楽でも聴いていってくださいね。",
-      "generate_text": "今夜はまだ一人で大丈夫そうです。お客さんは、のんびり音楽でも聴いていってくださいね。",
+      "spoken_text": "今夜はまだ一人で大丈夫そうです。のんびり音楽でも聴いていってくださいね。",
+      "generate_text": "今夜はまだ一人で大丈夫そうです。のんびり音楽でも聴いていってくださいね。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_no_orders_unknown.c094ae6c4d175939.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_no_orders_unknown.fa14ba74359f134d.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "c68c48d999d251d1d95850014e5029dd6e5902d1360de541a77c46011f7c6457",
+      "source_sha256": "ce13236c0d7d51f6840441b0479543c8712120a68691939bf86e7d8040667d95",
       "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
@@ -907,16 +905,16 @@
       "key": "xm_tavern_w03_chat_after_work_unknown",
       "subtitle_templates": {
         "zh": "您也辛苦啦。刚才那几位客人走的时候，还说下次要再来呢。",
-        "ja": "お客さんもお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
+        "ja": "お疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
         "en": "You worked hard too. Those customers said they'd come again as they were leaving."
       },
-      "spoken_text": "お客さんもお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
-      "generate_text": "お客さんもお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
+      "spoken_text": "お疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
+      "generate_text": "お疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w03_chat_after_work_unknown.d6998a13bed4ad71.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_chat_after_work_unknown.28a71eae93b56704.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "3b470eed2c96e4f0e3294bb3c625bbf3a65600a570783a468afb1bd69901dec4",
+      "source_sha256": "e4d87f57c8df2d86aa1e9d1e73be28e1050491e6fa07b2f3683cb934bdb8ae31",
       "delivery": "工作认真，感谢轻快，求助不卑微"
     },
     {
@@ -938,51 +936,49 @@
     {
       "key": "xm_tavern_w04_supply_02",
       "subtitle_templates": {
-        "zh": "前辈留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，签好协议后我周三去店里取。",
-        "ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
-        "en": "Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; once we sign, I’ll collect them at your shop on Wednesday, senpai."
+        "zh": "前辈留些基础水或者品质更好的水，还有酿酒用的材料给我就好。不用特地凑齐配方。约好了，我周三去店里取。",
+        "ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+        "en": "Just set aside basic-quality water or better and brewing ingredients for me, senpai. No need to put together a recipe. Once we agree, I will collect them at your shop on Wednesday."
       },
-      "spoken_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
-      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
+      "spoken_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+      "generate_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "2d8442d50446295dd82b41330a3773d6b44c2ba7768e1a09736964473b9108b9",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "defer_recording": true
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_02.88214e00a5f8c2a6.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
+      "source_sha256": "85c37ac4359f999a56508e2a7efc412c261f22e47338fb45789cec9aa786e940",
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。"
     },
     {
       "key": "xm_tavern_w04_supply_03",
       "subtitle_templates": {
-        "zh": "材料按价值记下来，我多做三成价值的酒，周五带过去。我们两边都不用付钱。下周要不要继续，到时候再商量。",
-        "ja": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
-        "en": "I’ll record the materials’ value and bring bottles worth thirty percent more on Friday. Neither of us pays cash. We can decide then whether to continue next week."
+        "zh": "我会照材料的价值，再多添三成，给前辈做成酒。周五带过去，我们两边都不用付钱。下周还要不要继续，到时候再商量，好不好？",
+        "ja": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+        "en": "I will turn the materials into bottles worth thirty percent more and bring them over on Friday. Neither of us pays cash. We can decide then whether to carry on next week, all right?"
       },
-      "spoken_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
-      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
+      "spoken_text": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+      "generate_text": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "878c95e4df5063d6fc69a3d1d9bfecfaaebeb9cce01be2944f9e141c2ef22a49",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "defer_recording": true
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_03.ceab4c2923b804b0.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
+      "source_sha256": "7a1dfef49d1f4bac5a34f77c3060602fcb0dd982db1c0a88f6e88d0edb325f4c",
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。"
     },
     {
       "key": "xm_tavern_w04_supply_yes",
       "subtitle_templates": {
-        "zh": "太好啦！那以后就照着清单来。嘿嘿，感觉和前辈的关系更近了呢。",
-        "ja": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
-        "en": "Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
+        "zh": "太好啦！那就说定了，周三我过去。嘿嘿，能和前辈一起做酒，还挺期待的呢。",
+        "ja": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、先輩とお酒を作れるの、楽しみです。",
+        "en": "Wonderful! Then it is settled. I will come by on Wednesday. Hehe, I am looking forward to making wine together, senpai."
       },
-      "spoken_text": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
-      "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、先輩とちょっと距離が近くなった気がします。",
+      "spoken_text": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、先輩とお酒を作れるの、楽しみです。",
+      "generate_text": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、先輩とお酒を作れるの、楽しみです。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_yes.1fb3adc01f9168ac.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_yes.d6d84daf1d87b358.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "d52def807fecae3ca20ca3909af474792ff88e00ca5c542e9ce6121fb2e220e5",
+      "source_sha256": "57eb066ffef993de0c49dc5f226df7d45e8ba5a3590f5fd112eed0cf7a3f972c",
       "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
@@ -1004,19 +1000,18 @@
     {
       "key": "xm_tavern_w04_supply_existing",
       "subtitle_templates": {
-        "zh": "前辈，材料和成酒的记录在这里。要中断或者续签，都可以在这里告诉我，已经收下的材料我还是会做好送去。",
-        "ja": "先輩、材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
-        "en": "Here are our material and bottle records, senpai. You can pause or renew here. I’ll still finish and deliver anything I’ve already accepted."
+        "zh": "前辈，材料和酒的记录都在这里。想先歇一阵，或者接着做，在这里告诉我就好。已经收下的这批，我还是会做好送去的。",
+        "ja": "先輩、材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+        "en": "Here are our material and bottle records, senpai. Just tell me here if you would like a break or want to carry on. I will still finish and deliver the batch I have already taken."
       },
-      "spoken_text": "先輩、材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
-      "generate_text": "先輩、材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
+      "spoken_text": "先輩、材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+      "generate_text": "先輩、材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "850ffa8f4f1daaa4af88b7b95bf0d46f35288aacd9addc754c867c0a23d82142",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "defer_recording": true
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_existing.3ce28be949710473.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
+      "source_sha256": "c506eb871fe729233b66bbf8aca540bfccff8e2764bcadbfd1fe0d1b41801a53",
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。"
     },
     {
       "key": "xm_tavern_w04_supply_early",
@@ -1053,85 +1048,82 @@
     {
       "key": "xm_tavern_w04_supply_02_unknown",
       "subtitle_templates": {
-        "zh": "您留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，签好协议后我周三去店里取。",
-        "ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
-        "en": "Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; once we sign, I’ll collect them at your shop on Wednesday."
+        "zh": "您留些基础水或者品质更好的水，还有酿酒用的材料给我就好。不用特地凑齐配方。约好了，我周三去店里取。",
+        "ja": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+        "en": "Just set aside basic-quality water or better and brewing ingredients for me. No need to put together a recipe. Once we agree, I will collect them at your shop on Wednesday."
       },
-      "spoken_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
-      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
+      "spoken_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
+      "generate_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "cfe4937b4f2d02c5c7141218dcf3bbeaf9ff06d398c19b91ddade481a02e60b1",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "defer_recording": true
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_02_unknown.88214e00a5f8c2a6.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
+      "source_sha256": "9048c484ebc27dd43647d96645e70f1075b7d927913f1eb4466b85c62e66080e",
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。"
     },
     {
       "key": "xm_tavern_w04_supply_03_unknown",
       "subtitle_templates": {
-        "zh": "材料按价值记下来，我多做三成价值的酒，周五带过去。我们两边都不用付钱。下周要不要继续，到时候再商量。",
-        "ja": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
-        "en": "I’ll record the materials’ value and bring bottles worth thirty percent more on Friday. Neither of us pays cash. We can decide then whether to continue next week."
+        "zh": "我会照材料的价值，再多添三成，做成酒。周五带过去，我们两边都不用付钱。下周还要不要继续，到时候再商量，好不好？",
+        "ja": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+        "en": "I will turn the materials into bottles worth thirty percent more and bring them over on Friday. Neither of us pays cash. We can decide then whether to carry on next week, all right?"
       },
-      "spoken_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
-      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
+      "spoken_text": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
+      "generate_text": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "878c95e4df5063d6fc69a3d1d9bfecfaaebeb9cce01be2944f9e141c2ef22a49",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "defer_recording": true
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_03_unknown.ceab4c2923b804b0.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
+      "source_sha256": "21f4645b6a823f76e6c995871b37a1521d308f6c13b91090ab281b68a22891a8",
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。"
     },
     {
       "key": "xm_tavern_w04_supply_yes_unknown",
       "subtitle_templates": {
-        "zh": "太好啦！那以后就照着清单来。嘿嘿，感觉和您的关系更近了呢。",
-        "ja": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
-        "en": "Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
+        "zh": "太好啦！那就说定了，周三我过去。嘿嘿，能和您一起做酒，还挺期待的呢。",
+        "ja": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、一緒にお酒を作れるの、楽しみです。",
+        "en": "Wonderful! Then it is settled. I will come by on Wednesday. Hehe, I am looking forward to making wine together."
       },
-      "spoken_text": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
-      "generate_text": "やった！ じゃあ、これからはリストどおりに。えへへ、お客さんとちょっと距離が近くなった気がします。",
+      "spoken_text": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、一緒にお酒を作れるの、楽しみです。",
+      "generate_text": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、一緒にお酒を作れるの、楽しみです。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_yes_unknown.d99db1cd87830be7.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_yes_unknown.f4daff266b4dfe78.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "de60681724da22f44b187c99e72e636f4d6bed6c6abfbf785f8cce5800f90928",
+      "source_sha256": "8e1d6de177d899a0f7088c60a2a58ab6ef1b994dfa708977273f13220258d6a6",
       "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_later_unknown",
       "subtitle_templates": {
-        "zh": "好呀，不着急。您也有自己的店要忙嘛。",
-        "ja": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
-        "en": "Of course. No hurry. You have your own shop to look after."
+        "zh": "好呀，不着急。您也有别的事情要忙嘛。",
+        "ja": "うん、急がなくて大丈夫です。また、時間のあるときにお話ししましょう。",
+        "en": "Of course, no hurry. You have other things to keep you busy too."
       },
-      "spoken_text": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
-      "generate_text": "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
+      "spoken_text": "うん、急がなくて大丈夫です。また、時間のあるときにお話ししましょう。",
+      "generate_text": "うん、急がなくて大丈夫です。また、時間のあるときにお話ししましょう。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_later_unknown.2a62bba0fadc6215.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_later_unknown.ff9352209fd1f02b.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "bd9fd89780608d758bace10b206a55f13fdf8880186aa0be6bc51d283a874cc6",
+      "source_sha256": "6526237bcecd6bd8639c90ae93befa0edae469e7f660bd3221f39492b30251f7",
       "delivery": "谈生意认真，成为伙伴时高兴"
     },
     {
       "key": "xm_tavern_w04_supply_existing_unknown",
       "subtitle_templates": {
-        "zh": "材料和成酒的记录在这里。要中断或者续签，都可以在这里告诉我，已经收下的材料我还是会做好送去。",
-        "ja": "材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
-        "en": "Here are our material and bottle records. You can pause or renew here. I’ll still finish and deliver anything I’ve already accepted."
+        "zh": "材料和酒的记录都在这里。想先歇一阵，或者接着做，在这里告诉我就好。已经收下的这批，我还是会做好送去的。",
+        "ja": "材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+        "en": "Here are our material and bottle records. Just tell me here if you would like a break or want to carry on. I will still finish and deliver the batch I have already taken."
       },
-      "spoken_text": "材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
-      "generate_text": "材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
+      "spoken_text": "材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
+      "generate_text": "材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
       "generic": false,
-      "reviewed": false,
-      "audio": "",
-      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "f26395523c0f790e140dbad9c296cf2b2d0d429f829ef38ac3d9db065647bbab",
-      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
-      "defer_recording": true
+      "reviewed": true,
+      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_existing_unknown.5ede37e1929e5a3c.wav",
+      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
+      "source_sha256": "1110143d04a52ea2aecea11c72255093cb95bb9ca65d55e9882ece45c8e8e782",
+      "delivery": "日常合作说明，亲切自然；保留自然停顿，合作说明亲切清楚。"
     },
     {
       "key": "xm_tavern_w04_supply_early_unknown",
@@ -1761,16 +1753,16 @@
       "key": "xm_tavern_12_roka_02",
       "subtitle_templates": {
         "zh": "用了盐渍樱花和一点清酒。后面还添了些抹茶，喝起来会有一点点苦。",
-        "ja": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
+        "ja": "塩漬けの桜に、日本酒を少し。それから抹茶も、ほんの少しだけ。あとから、ちょっとだけ苦みが残るんです。",
         "en": "I used salted cherry blossoms and a little sake, then added a touch of matcha. There is a little bitterness at the end."
       },
-      "spoken_text": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
-      "generate_text": "塩漬けの桜と少しのお酒を使って、抹茶もほんの少し。あとから、ちょっとだけ苦味が残るんです。",
+      "spoken_text": "塩漬けの桜に、日本酒を少し。それから抹茶も、ほんの少しだけ。あとから、ちょっとだけ苦みが残るんです。",
+      "generate_text": "塩漬けの桜に、日本酒を少し。それから抹茶も、ほんの少しだけ。あとから、ちょっとだけ苦みが残るんです。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_12_roka_02.63dc07c142d79eda.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_12_roka_02.81397f687a6dd965.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "edb3b7160b478857d6caf22192d077f9390054a35c2f0737423364a910a22139",
+      "source_sha256": "6f0110217ffad3f8607f1a9b3427839356192d785c73d981d7dd1b9bb93580de",
       "delivery": "温暖开心，带一点创作完成后的期待；不受合同话题压低"
     },
     {
@@ -1888,9 +1880,9 @@
     {
       "key": "xm_tavern_13_entry",
       "subtitle_templates": {
-        "zh": "啊，前辈。进来坐坐吧。今天不接客了。",
+        "zh": "啊，前辈。进来坐坐吧。今天已经不营业啦。",
         "ja": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
-        "en": "Oh, senpai. Come in and sit for a while. I am not serving customers today."
+        "en": "Oh, senpai. Come and sit for a while. I am not open for business today."
       },
       "spoken_text": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
       "generate_text": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
@@ -1898,23 +1890,23 @@
       "reviewed": true,
       "audio": "assets/audio/voice/ja/xm_tavern_13_entry.bdbc67c46490e2e5.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "a170942b40fa663703373d09f25db1c1ab594f0057563965856cbdfd26dc6cc5",
+      "source_sha256": "bc59673cbffe858725847a3b98d96a45f439da4d63bf045405ddfa0a8bf45b07",
       "delivery": "处理实际事务，平静中带不舍；不崩溃"
     },
     {
       "key": "xm_tavern_13_tape",
       "subtitle_templates": {
-        "zh": "磁带机还没收起来。想听哪首，就自己挑吧。",
-        "ja": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
-        "en": "I have not packed the cassette player yet. Pick something you would like to hear."
+        "zh": "磁带机还没收起来。想听的话，就放着听吧。",
+        "ja": "カセットデッキは、まだ片づけてないんです。よかったら、聴いていってくださいね。",
+        "en": "I have not packed the cassette player away yet. Put the tape on if you would like to listen."
       },
-      "spoken_text": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
-      "generate_text": "カセットデッキはまだ片づけていないので、聴きたい曲があったら自由に選んでくださいね。",
+      "spoken_text": "カセットデッキは、まだ片づけてないんです。よかったら、聴いていってくださいね。",
+      "generate_text": "カセットデッキは、まだ片づけてないんです。よかったら、聴いていってくださいね。",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_13_tape.eee429d6ecd00586.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_13_tape.5484e845051e618e.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "6ee373a632f3023167f3e00a11aa40276ee5edee660b75db49c200b81f54aa0b",
+      "source_sha256": "6b3fecfa9c949e431fc89a1965d9a9c177b54c66640061c9242a39ddbb780d02",
       "delivery": "处理实际事务，平静中带不舍；不崩溃"
     },
     {
@@ -1934,5 +1926,5 @@
       "delivery": "处理实际事务，平静中带不舍；不崩溃"
     }
   ],
-  "integration_note": "完整配音脚本的待录子集，不可单独覆盖现有语音索引；本次不请求TTS。"
+  "integration_note": "完整配音脚本的酒馆子集，不可单独覆盖现有语音索引；目录生成保持离线，录音仅由显式generate调用。"
 }

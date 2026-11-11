@@ -1,0 +1,38 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それじゃ、戻りますね、先輩。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "25",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.873,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 185924
+  },
+  "sha256": "c185b470fc35535696e41bcadf3a6fbd29b1f4a23fa1beccff9f102e74fc614b",
+  "binding": {
+    "key": "xm_brew_bye",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那我先回去啦，前辈。",
+      "ja": "それじゃ、戻りますね、先輩。",
+      "en": "I’ll head back now, senpai."
+    },
+    "generic": false
+  }
+}
