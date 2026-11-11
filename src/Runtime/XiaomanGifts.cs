@@ -179,7 +179,6 @@ namespace XiaomanVisitor
         private bool TryPlaceGift(GameItem item)
         {
             if (item == null) return false;
-            if (WineCrateRules.IsWine(item.identifier)) RequestWineCrate();
             ModHelper.SetItemOwnerShip(item, true);
             GraphUtils.TryAcceptAllMid(EmporiumEntry.Instance.frontInvinvElement, item);
             if (item.parentInventory == null && TryStoreWineGift(item)) return true;

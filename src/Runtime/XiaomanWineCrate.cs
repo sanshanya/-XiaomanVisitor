@@ -24,16 +24,17 @@ namespace XiaomanVisitor
         private void ConfigureWineCrate(GameItem box)
         {
             box.name=Text("ui_wine_crate_name");box.shortDescription=Text("ui_wine_crate_desc");box.flavorText="";box.unitValue=0;
-            box.SetSprite("Items/items_container","eleanor_box");
+            box.SetSpriteAndShapeFromMod(Id,WineCrateRules.SpriteKey);
             box.SetShape(new GridShapeBuilder().SetData(Enumerable.Repeat((byte)1,WineCrateRules.Footprint*WineCrateRules.Footprint).ToArray(),WineCrateRules.Footprint));
             box.SetGameItemType("STORAGE");ContainerHelper.InitContainerItemTagOnly(box);box.EnableTag(ContainerHelper.NESTABLE_DEVICE_TAG);
             var inventory=WineCrateInventory(box);
             if (inventory!=null) inventory.mayInventoryAddItemFunc=(item,target) => item!=null && target!=null
                 && WineCrateRules.CanStore(item.identifier,GeneralHelper.IsItemOwned(item),GeneralHelper.IsItemOwned(target.GetParentItem()),item.IsTag(ContainerHelper.CONTAINER_TAG));
         }
-        private void RequestWineCrate()
+        private void RequestWineCrate(GameItem wine)
         {
-            try { var p=ReadWineCrate();if (!p.Requested) { p.Requested=true;SaveWineCrate(p); }TryDeliverWineCrate(); }
+            if (!WineCrateRules.IsBottledWine(wine?.identifier) || wine.parentInventory==null || !GeneralHelper.IsItemOwned(wine)) return;
+            try { var p=ReadWineCrate();if (p.RequestForDelivery(wine.identifier,true)) SaveWineCrate(p);TryDeliverWineCrate(); }
             catch (Exception e) { Log.Warning("Wine crate remains pending: "+e.Message); }
         }
         private void TryDeliverWineCrate()
@@ -41,14 +42,8 @@ namespace XiaomanVisitor
             if (!enabled || deliveringWineCrate || !PlayerStore.HasInstance || EmporiumEntry.Instance==null || ModHelper.IsOutsideStore()) return;
             deliveringWineCrate=true;
             try {
-                var p=ReadWineCrate();if (p.Phase=="complete" || p.Phase=="uncertain") return;
+                var p=ReadWineCrate();if (!p.Requested || p.Phase=="complete" || p.Phase=="uncertain") return;
                 var owned=EmporiumEntry.Instance.GetAllOwnedItems();
-                // Existing saves may already own Xiaoman drinks from before the
-                // crate existed. Grant the utility once, without moving old wine.
-                if (!p.Requested) {
-                    if (!owned.Any(i => WineCrateRules.IsWine(i.identifier))) return;
-                    p.Requested=true;SaveWineCrate(p);
-                }
                 if (p.Phase=="placing") { p.Recover(owned.Any(i => i.uniqueId==p.ItemId));SaveWineCrate(p); }
                 if (p.Phase!="waiting") return;
                 if (owned.Any(i => i.identifier==WineCrateRules.ItemId)) { p.Prepare(owned.First(i => i.identifier==WineCrateRules.ItemId).GetUniqueID());p.Placed(true);SaveWineCrate(p);return; }

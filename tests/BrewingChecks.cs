@@ -99,8 +99,16 @@ internal static class BrewingChecks
         check(!WineCrateRules.CanStore("wine_bottle",true,true,false) && !WineCrateRules.CanStore(CassetteCaseRules.ItemId,true,true,true)
             && !WineCrateRules.CanStore(BrewingProgress.SampleId,false,true,false) && !WineCrateRules.CanStore(BrewingProgress.SampleId,true,true,true),"native wine, other items, unowned goods and nested containers are refused");
         var p=new WineCrateProgress();check(!p.Prepare(7),"no crate before a wine gift has been requested");
-        p.Requested=true;p.Prepare(7);p=WineCrateProgress.Restore(p.Data);p.Recover(true);
+        check(!p.RequestForDelivery(BrewingProgress.SampleId,false) && !p.RequestForDelivery(CassetteCaseRules.ItemId,true)
+            && !p.RequestForDelivery(CocktailCatalog.Drinks[0].ItemId,true) && !p.Requested,"failed deliveries, normal cocktail gifts and cassette-case gifts cannot trigger the wine crate");
+        check(p.RequestForDelivery(BrewingProgress.SampleId,true) && !p.RequestForDelivery(BrewingProgress.BottleId,true),"the first real cooperation delivery requests exactly one crate");
+        p.Prepare(7);p=WineCrateProgress.Restore(p.Data);p.Recover(true);
         check(p.Phase=="complete" && !p.Prepare(8),"the saved crate identity recovers once without creating another crate");
+        var oldWaiting=WineCrateProgress.Restore("{\"Requested\":true,\"ItemId\":0,\"Phase\":\"waiting\"}");
+        check(oldWaiting.Schema==2 && !oldWaiting.Requested && !oldWaiting.Prepare(8)
+            && oldWaiting.RequestForDelivery(BrewingProgress.SampleId,true),"legacy possession-only or failed-gift requests wait for a real cooperation delivery");
+        var oldDelivered=WineCrateProgress.Restore("{\"Requested\":true,\"ItemId\":7,\"Phase\":\"complete\"}");
+        check(oldDelivered.Phase=="complete" && oldDelivered.ItemId==7 && !oldDelivered.RequestForDelivery(BrewingProgress.BottleId,true),"already delivered legacy crates and their identity survive without a second gift");
         var full=new WineCrateProgress{Requested=true};full.Prepare(8);full.Placed(false);
         check(full.Prepare(9),"full counter retains a pending crate for later placement");
         full.Recover(false);check(full.Phase=="uncertain" && !full.Prepare(10),"ambiguous crate placement is held instead of duplicated");

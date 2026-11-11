@@ -1,0 +1,28 @@
+{
+  "native_atlas": "Items/items_container",
+  "native_sprite": "eleanor_box",
+  "native_size": [
+    80,
+    48
+  ],
+  "source_rgba_sha256": "c4a77a4758c201993d577042ee5a60c898e6a5e6909c6eb952accb1260c0597d",
+  "packaged": "Textures/Items/xiaoman_wine_crate.png",
+  "size": [
+    48,
+    48
+  ],
+  "footprint": [
+    3,
+    3
+  ],
+  "fit_size": [
+    48,
+    29
+  ],
+  "offset": [
+    0,
+    9
+  ],
+  "resampling": "nearest",
+  "sha256": "e18adac845d46493cab261bbde79205d7e78cf20b8a8216f26e9c69c6a26ff50"
+}

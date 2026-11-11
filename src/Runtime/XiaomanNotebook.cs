@@ -82,7 +82,6 @@ namespace XiaomanVisitor
         private bool TryPlaceStoryGift(GameItem item)
         {
             if (item == null) return false;
-            if (WineCrateRules.IsWine(item.identifier)) RequestWineCrate();
             ModHelper.SetItemOwnerShip(item, true);
             // Newly delivered gifts should be visible before being filed away.
             GraphUtils.TryAcceptAllMid(EmporiumEntry.Instance.frontInvinvElement,item);

@@ -37,7 +37,6 @@ namespace XiaomanVisitor
                 SaveRokaGift(p); // Both collection channels share this exact physical identity.
                 bool placed;
                 if (atTavern) {
-                    RequestWineCrate();
                     ModHelper.SetItemOwnerShip(gift,true);
                     GraphUtils.TryAcceptAll(EmporiumEntry.Instance.afterhourInventory,gift);
                     placed=gift.parentInventory!=null;

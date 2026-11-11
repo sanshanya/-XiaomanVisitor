@@ -204,7 +204,11 @@ namespace XiaomanVisitor
                 long before=p.CreditMilli;
                 p.CreditDue(StoreStation.Instance.dayCounter,final);
                 bool recovering=p.Placing!=null;
-                if (recovering) p.RecoverBottle(EmporiumEntry.Instance.GetAllOwnedItems().Any(i => i.uniqueId==p.Placing.ItemId));
+                if (recovering) {
+                    var recovered=EmporiumEntry.Instance.GetAllOwnedItems().FirstOrDefault(i => i.uniqueId==p.Placing.ItemId);
+                    p.RecoverBottle(recovered!=null);
+                    if (recovered!=null) RequestWineCrate(recovered);
+                }
                 if (p.CreditMilli!=before || recovering) SaveBrewing(p);
                 // Bound placement work per tick; a full table keeps the remaining value.
                 for (int n=0;n<3 && !p.Blocked && p.CreditMilli>=BrewingConfig.SampleValue*1000L;n++) {
@@ -213,7 +217,9 @@ namespace XiaomanVisitor
                     var bottle=p.PrepareBottle(item.GetUniqueID());if (bottle==null) { item.Destroy();return; }
                     item.ModifyTag("XIAOMAN_BATCH_SOURCE",t => t.Enable().SetString(bottle.Id));
                     SaveBrewing(p);
-                    bool placed=TryPlaceGift(item);p.BottlePlaced(placed);SaveBrewing(p);
+                    bool placed=TryPlaceGift(item);
+                    if (placed) RequestWineCrate(item);
+                    p.BottlePlaced(placed);SaveBrewing(p);
                     if (!placed) { nextBrewingDelivery=Time.unscaledTime+5f;return; }
                 }
             } catch (Exception e) { Log.Warning("Brewing gift remains pending: "+e.Message); }

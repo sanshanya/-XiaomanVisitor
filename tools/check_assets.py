@@ -88,6 +88,10 @@ def main():
     luxury_art=json.loads((ROOT/'assets/luxury-art.json').read_text(encoding='utf-8'))
     for art in luxury_art['files']:
         expected[art['packaged']]=art['sha256']
+    crate=json.loads((ROOT/'assets/wine-crate-style.json').read_text(encoding='utf-8'))
+    expected[crate['packaged']]=crate['sha256']
+    crate_image=Image.open(PACKAGE/crate['packaged']).convert('RGBA')
+    assert list(crate_image.size)==crate['size']==[48,48] and crate['footprint']==[3,3], 'Wine crate sprite exceeds its inventory footprint'
     assert current == expected, "Approved texture changed, missing or unexpected"
     detail = json.loads((ROOT / "assets/portrait-detail.json").read_text(encoding="utf-8"))
     assert hashlib.sha256((PACKAGE / detail["packaged"]).read_bytes()).hexdigest() == detail["sha256"]
