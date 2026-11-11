@@ -1024,11 +1024,11 @@
       "preserve_audio": false
     },
     "xm_tavern_w02_help_intro": {
-      "subtitle_ja": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
-      "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
-      "mood": "Worried",
-      "delivery": "开业期待，邀请时略害羞",
-      "reviewed": true,
+      "subtitle_ja": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
+      "generate_text": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
+      "mood": "Shy",
+      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。新句待统一录音。",
+      "reviewed": false,
       "preserve_audio": false
     },
     "xm_tavern_w02_help_done": {
@@ -1096,11 +1096,11 @@
       "preserve_audio": false
     },
     "xm_tavern_w02_help_intro_unknown": {
-      "subtitle_ja": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
-      "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
-      "mood": "Worried",
-      "delivery": "开业期待，邀请时略害羞",
-      "reviewed": true,
+      "subtitle_ja": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
+      "generate_text": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
+      "mood": "Shy",
+      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。新句待统一录音。",
+      "reviewed": false,
       "preserve_audio": false
     },
     "xm_tavern_w02_help_done_unknown": {

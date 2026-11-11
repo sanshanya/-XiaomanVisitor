@@ -259,7 +259,7 @@ xm_tavern_w02_chat_01,其实开业之前，我还偷偷练过几遍“欢迎光�
 xm_tavern_w02_chat_02,昨天有位客人说，店里的音乐挺好听的。嘿嘿，挑磁带的时候，我可是很认真的。
 xm_tavern_w02_chat_03,有人喜欢甜一点的，也有人喜欢酸一点的……看来酒单还有得改呢。
 xm_tavern_w02_chat_04,刚开业的时候，连说“欢迎光临”都会紧张。现在好像……稍微习惯一点了。
-xm_tavern_w02_help_intro,啊，有客人来啦……我这边还忙着调酒。前辈，可以帮我把酒单递过去吗？
+xm_tavern_w02_help_intro,被你发现了啊……我这边还忙着调酒。前辈，可以帮我把酒单递过去吗？
 xm_tavern_w02_help_done,谢谢前辈！刚开店就有点手忙脚乱的……还好有您在。
 xm_tavern_w02_help_skip,嗯，没关系。我自己来就好啦。
 xm_tavern_w02_rain_01,前辈在看窗户上的雨幕吗？这可是本店的独特设计哦。
@@ -270,7 +270,7 @@ xm_tavern_chat_rest,前辈，慢慢坐吧。一起听会儿音乐。
 xm_tavern_w02_entry_01_unknown,欢迎光临……啊，是
 xm_tavern_w02_reentry_unknown,啊，又见面啦。
 xm_tavern_drink_limit_unknown,不可以哦，今晚已经喝过一杯啦。想听歌的话，倒是随时欢迎。
-xm_tavern_w02_help_intro_unknown,啊，有客人来啦……我这边还忙着调酒。可以帮我把酒单递过去吗？
+xm_tavern_w02_help_intro_unknown,被你发现了啊……我这边还忙着调酒。可以帮我把酒单递过去吗？
 xm_tavern_w02_help_done_unknown,谢谢刚开店就有点手忙脚乱的……还好有您在。
 xm_tavern_w02_rain_01_unknown,您在看窗户上的雨幕吗？这可是本店的独特设计哦。
 xm_tavern_w02_tape_intro_unknown,这台磁带机是我从故乡带来的，如果您有喜欢的曲目，可以自己选着听。

@@ -259,7 +259,7 @@ xm_tavern_w02_chat_01,"Before opening, I secretly practiced saying ‘welcome’
 xm_tavern_w02_chat_02,A customer told me yesterday that they liked the music. Hehe. I do put a lot of thought into choosing tapes.
 xm_tavern_w02_chat_03,"Some people like their drinks sweeter, others prefer something sour… I suppose there's still work to do on the menu."
 xm_tavern_w02_chat_04,"When I first opened, even saying ‘welcome’ made me nervous. Now… I think I'm getting a little more used to it."
-xm_tavern_w02_help_intro,"Oh, a customer… I'm still making drinks. Senpai, could you take them a menu for me?"
+xm_tavern_w02_help_intro,"You caught me… I'm still making drinks. Senpai, could you take them a menu for me?"
 xm_tavern_w02_help_done,"Thank you, senpai! It's been a little hectic since opening… I'm glad you were here."
 xm_tavern_w02_help_skip,That's all right. I'll take care of it.
 xm_tavern_w02_rain_01,"Looking at the rain on the window, senpai? It's one of my little touches for the tavern."
@@ -270,7 +270,7 @@ xm_tavern_chat_rest,Make yourself comfortable. Let's listen for a while.
 xm_tavern_w02_entry_01_unknown,"Welcome… Oh, it's you, friend."
 xm_tavern_w02_reentry_unknown,"Oh, friend. Here you are again."
 xm_tavern_drink_limit_unknown,"No more tonight. You've already had a glass. You're always welcome to stay for the music, though."
-xm_tavern_w02_help_intro_unknown,"Oh, a customer… I'm still making drinks. could you take them a menu for me?"
+xm_tavern_w02_help_intro_unknown,You caught me… I'm still making drinks. could you take them a menu for me?
 xm_tavern_w02_help_done_unknown,Thank you! It's been a little hectic since opening… I'm glad you were here.
 xm_tavern_w02_rain_01_unknown,Looking at the rain on the window? It's one of my little touches for the tavern.
 xm_tavern_w02_tape_intro_unknown,"I brought this cassette deck from home. If there's something you'd like to hear, feel free to choose."
