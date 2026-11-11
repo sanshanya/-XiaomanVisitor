@@ -231,7 +231,7 @@ ui_tavern_renovating,装修中
 ui_tavern_closed,已歇业
 ui_tavern_cash,随身信用点：{0}
 cfg_experimental_tavern,小满的酒馆（实验性）
-cfg_experimental_tavern_tip,默认关闭。开启并重启后，第3–7天显示装修中的新店，第8天夜间正式开放。关闭保留酒馆记录；原有周一剧情不受影响。
+cfg_experimental_tavern_tip,默认开启，更改后重启生效。第3–7天装修，第8天夜间开放。关闭保留酒馆记录，不影响周一剧情。
 xm_01_04,现在还听磁带的人，已经很少了吧。
 xm_01_05,现在还听磁带的人，已经很少了吧。
 ui_tavern_preview_name,商业街神秘新店
@@ -545,8 +545,6 @@ cocktail_roka_name,露华
 cocktail_roka_desc,盐渍樱花与清酒的米香轻轻浮起，像天亮前最后一缕春夜；樱饼红豆的柔甜只铺薄薄一层，柚子皮把香气提亮，抹茶在中段落下一点干净微苦。
 drink_unique,唯一酒品
 drink_buff_saleincome,卖货信用点收入 +{0}%
-cfg_experimental_tavern_warning,内容未做完，仅供实验。
-ui_tavern_warning_acknowledge,我知道了
 xm_brew_hello,前辈，周三啦。我来取酿酒的材料了。
 xm_brew_request,基础水、品质更好的水，还有酿酒用的原料都可以。前辈放到交易台上就好。
 xm_brew_last,前辈，之前答应调好的酒，我给您带来了。

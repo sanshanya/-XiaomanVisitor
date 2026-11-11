@@ -43,7 +43,6 @@ namespace XiaomanVisitor
             experimentalTavern = config.Define(TavernRules.ExperimentalConfigKey, TavernRules.ExperimentalDefault,
                 "实验性 / Experimental", () => Text("cfg_experimental_tavern"),
                 tooltip: () => Text("cfg_experimental_tavern_tip"), requiresRestart: true);
-            experimentalTavern.OnChanged += OnExperimentalTavernChanged;
             InitVoice(config);
             size.OnChanged += _ => { registeredDictionary = null; };
             Log.Log("Initialized: independent customer, original portrait layers, three temporary drink effects.");

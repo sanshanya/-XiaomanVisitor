@@ -231,7 +231,7 @@ ui_tavern_renovating,Under renovation
 ui_tavern_closed,Closed
 ui_tavern_cash,Credits on hand: {0}
 cfg_experimental_tavern,Xiaoman's Tavern (Experimental)
-cfg_experimental_tavern_tip,"Off by default. Enable and restart: renovation appears on days 3–7, and the tavern opens on the night of day 8. Disabling keeps tavern records and does not affect Monday visits."
+cfg_experimental_tavern_tip,On by default; changes take effect after restarting. Renovation appears on days 3–7; the tavern opens on the night of day 8. Disabling keeps tavern records and Monday visits.
 xm_01_04,"Not many people still listen to tapes these days, do they?"
 xm_01_05,"Not many people still listen to tapes these days, do they?"
 ui_tavern_preview_name,A Mysterious New Shop
@@ -545,8 +545,6 @@ cocktail_roka_name,Dew Blossom
 cocktail_roka_desc,"Salted cherry blossom and the rice aroma of sake rise like the last breath of a spring night before dawn. Sakura mochi and red bean lend a thin layer of gentle sweetness; yuzu peel brightens the aroma, followed by a clean hint of bitter matcha."
 drink_unique,One of a kind
 drink_buff_saleincome,Credits earned from selling goods +{0}%
-cfg_experimental_tavern_warning,This content is unfinished and intended for experimental testing only.
-ui_tavern_warning_acknowledge,Understood
 xm_brew_hello,"It's Wednesday, senpai. I'm here to collect the brewing materials."
 xm_brew_request,"Basic-quality water or better and brewing ingredients are welcome. Just place them on the trading counter, senpai."
 xm_brew_last,"I've brought the bottles I promised you, senpai."

@@ -18,7 +18,7 @@ namespace XiaomanVisitor
     public static class TavernRules
     {
         public const string ExperimentalConfigKey = "experimental_tavern";
-        public const bool ExperimentalDefault = false;
+        public const bool ExperimentalDefault = true;
         public const int OpeningDay = 8;
         public const int DiscoveryDay = 3;
         public const string SaveKey = "tavern_v1_progress";

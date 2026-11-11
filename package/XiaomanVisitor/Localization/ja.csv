@@ -231,7 +231,7 @@ ui_tavern_renovating,内装工事中
 ui_tavern_closed,閉店しました
 ui_tavern_cash,所持クレジット：{0}
 cfg_experimental_tavern,みちるのバー（実験的）
-cfg_experimental_tavern_tip,初期設定はオフです。有効にして再起動すると、3～7日目は内装工事中、8日目の夜から営業します。無効にしても記録は残り、月曜の物語には影響しません。
+cfg_experimental_tavern_tip,初期設定はオンです。変更は再起動後に反映されます。3～7日目は内装工事中、8日目の夜から営業します。無効にしても記録は残り、月曜の物語には影響しません。
 xm_01_04,今どき、カセットを聴く人って、もうあまりいませんよね。
 xm_01_05,今もカセットを聴いている人って、もうあまりいないんでしょうね。
 ui_tavern_preview_name,商業通路の謎の新店舗
@@ -545,8 +545,6 @@ cocktail_roka_name,露華
 cocktail_roka_desc,塩漬けの桜と清酒の米の香りが、夜明け前の春の夜のようにふわりと立ちのぼる。桜餅と小豆の柔らかな甘みはごく薄く、柚子の皮が香りを明るくする。途中に抹茶の澄んだほろ苦さが残る。
 drink_unique,特別な一杯
 drink_buff_saleincome,品物の売却収入 +{0}%
-cfg_experimental_tavern_warning,このコンテンツは未完成です。実験・テスト用としてご利用ください。
-ui_tavern_warning_acknowledge,わかりました
 xm_brew_hello,先輩、水曜日ですね。醸造の材料を取りに来ました。
 xm_brew_request,基本水かそれより良い水と、醸造用の材料なら大丈夫です。取引台に置いてくださいね。
 xm_brew_last,先輩、前にお約束したお酒を持ってきました。

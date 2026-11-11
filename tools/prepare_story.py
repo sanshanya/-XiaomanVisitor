@@ -276,7 +276,8 @@ def main():
         english[key]=gun_reactions['en'][key]
         add(key,gun_reactions['zh'][key],gun_reactions['ja'][key],'Worried',defer_voice=True)
     for lang, rows in loc.items():
-        for obsolete in ("cfg_interval", "cfg_interval_tip", "cfg_budget"):
+        for obsolete in ("cfg_interval", "cfg_interval_tip", "cfg_budget",
+                         "cfg_experimental_tavern_warning", "ui_tavern_warning_acknowledge"):
             rows.pop(obsolete, None)
         with (PACKAGE / f"Localization/{lang}.csv").open("w", encoding="utf-8", newline="") as f:
             csv.writer(f, lineterminator="\n").writerows((k, v.replace("\n", "\\n")) for k, v in rows.items())
