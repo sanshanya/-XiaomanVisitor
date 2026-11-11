@@ -1,7 +1,10 @@
 {
   "unlock_day": 22,
   "bonus_percent": 30,
-  "sample_value": 10,
+  "initial_material_limit": 500,
+  "weekly_material_increase": 100,
+  "maximum_material_limit": 3000,
+  "sample_value": 30,
   "bottle_value": 150,
   "delivery_days": 2,
   "collection_weekday": "Wednesday",

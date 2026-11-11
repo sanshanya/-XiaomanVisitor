@@ -29,7 +29,7 @@ namespace XiaomanVisitor
         public const string SaveKey = "tavern_brewing_v1";
         public const string ClientId = XiaomanMod.ClientId + ".brewing";
         public const string SampleId = XiaomanMod.Id + ".brewing.sample", BottleId = XiaomanMod.Id + ".brewing.bottle";
-        public int Schema = 2, LastVisitDay = -1, NextCollectionDay = -1, AgreementRevision;
+        public int Schema = 3, LastVisitDay = -1, NextCollectionDay = -1, CapacityStartWeek = -1, AgreementRevision;
         public bool Blocked, AgreementActive;
         public string PreservedData = "";
         public long CreditMilli;
@@ -46,7 +46,9 @@ namespace XiaomanVisitor
         public bool Sign(int day)
         {
             if (Blocked || day<BrewingConfig.UnlockDay || (AgreementActive && NextCollectionDay>day)) return false;
-            AgreementActive=true;NextCollectionDay=NextWednesday(day);AgreementRevision++;return true;
+            AgreementActive=true;NextCollectionDay=NextWednesday(day);
+            if (CapacityStartWeek<0) CapacityStartWeek=(NextCollectionDay-1)/7;
+            AgreementRevision++;return true;
         }
         public bool Pause()
         {
@@ -55,6 +57,13 @@ namespace XiaomanVisitor
         }
         public bool MayCollect(int day)
         { return !Blocked && AgreementActive && NextCollectionDay>=BrewingConfig.UnlockDay && day>=NextCollectionDay && Wednesday(day); }
+        public int MaterialLimit(int day)
+        {
+            long weeks=CapacityStartWeek<0?0:Math.Max(0,(day-1)/7-CapacityStartWeek);
+            return (int)Math.Min(BrewingConfig.MaximumMaterialLimit,BrewingConfig.InitialMaterialLimit+weeks*BrewingConfig.WeeklyMaterialIncrease);
+        }
+        public bool AcceptsValue(decimal cents,int day)
+        { return cents>0 && cents<=MaterialLimit(day)*100m; }
         public bool ContinueAfterDelivery(string batchId,int revision,int day,bool yes)
         {
             if (!Friday(day) || revision!=AgreementRevision || Renewal?.Id!=batchId) return false;
@@ -79,7 +88,9 @@ namespace XiaomanVisitor
                 || materials.Any(m => m == null || m.ItemId <= 0 || m.Count <= 0 || m.ValueCents <= 0)
                 || materials.Select(m => m.ItemId).Distinct().Count() != materials.Count
                 || Batches.Any(b => b.Day == day && b.Phase != "cancelled")) return null;
-            long input = materials.Sum(m => m.ValueCents);
+            decimal total=materials.Sum(m => (decimal)m.ValueCents);
+            if (!AcceptsValue(total,day)) return null;
+            long input=(long)total;
             if (input > long.MaxValue / (100 + BrewingConfig.BonusPercent)) return null;
             var batch = new BrewingBatch { Id = run + ":brew:" + day + ":" + Batches.Count, Day = day, DueDay = day + BrewingConfig.DeliveryDays,
                 AgreementRevision=AgreementRevision,
@@ -135,7 +146,13 @@ namespace XiaomanVisitor
                     p.Schema=2;p.AgreementActive=false;p.NextCollectionDay=-1;p.AgreementRevision=0;
                     foreach (var b in p.Batches) { b.DueDay=b.Day+BrewingConfig.DeliveryDays;b.RenewalAnswered=true;b.AgreementRevision=0; }
                 }
-                if (p != null && p.Schema == 2 && p.CreditMilli >= 0 && p.Batches != null && p.Bottles != null && p.AgreementRevision>=0
+                if (p!=null && p.Schema==2 && p.Batches!=null) {
+                    if (p.Batches.Any(b => b==null)) return new BrewingProgress { Blocked=true,PreservedData=raw };
+                    p.Schema=3;
+                    p.CapacityStartWeek=p.Batches.Count>0?(p.Batches.Min(b => b.Day)-1)/7:p.NextCollectionDay>=0?(p.NextCollectionDay-1)/7:-1;
+                }
+                if (p != null && p.Schema == 3 && p.CreditMilli >= 0 && p.Batches != null && p.Bottles != null && p.AgreementRevision>=0
+                    && p.CapacityStartWeek>=-1 && (!p.AgreementActive || p.CapacityStartWeek>=0)
                     && (p.LastVisitDay == -1 || VisitDay(p.LastVisitDay))
                     && (p.NextCollectionDay==-1 || p.AgreementActive && p.NextCollectionDay>=BrewingConfig.UnlockDay && Wednesday(p.NextCollectionDay))
                     && p.Batches.All(b => b != null && !string.IsNullOrEmpty(b.Id) && Wednesday(b.Day) && b.DueDay == b.Day + BrewingConfig.DeliveryDays
@@ -146,7 +163,7 @@ namespace XiaomanVisitor
                         && new[] { "prepared", "complete", "cancelled", "uncertain" }.Contains(b.Phase)
                         && (!b.Credited || b.Phase == "complete"))
                     && p.Batches.Select(b => b.Id).Distinct().Count() == p.Batches.Count && p.Batches.Count(b => b.Phase == "prepared") <= 1
-                    && p.Bottles.All(b => b != null && !string.IsNullOrEmpty(b.Id) && b.ItemId > 0 && (b.Value == 10 || b.Value == 150)
+                    && p.Bottles.All(b => b != null && !string.IsNullOrEmpty(b.Id) && b.ItemId > 0 && (b.Value == 10 || b.Value == 30 || b.Value == 150)
                         && new[] { "placing", "complete", "cancelled", "uncertain" }.Contains(b.Phase))
                     && p.Bottles.Select(b => b.Id).Distinct().Count() == p.Bottles.Count && p.Bottles.Count(b => b.Phase == "placing") <= 1
                     && p.Bottles.Where(b => b.Phase == "complete").Sum(b => b.Value * 1000L) + p.CreditMilli

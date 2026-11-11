@@ -75,13 +75,14 @@ internal static class CheckStory
         for (int roll = 0; roll < 100; roll++)
         {
             check(StoryRules.SaleOffer(4, roll, roll).Length == 2, "fourth visit guaranteed sale offer");
-            string[] offer = StoryRules.SaleOffer(5, roll, roll);
+            string[] offer = StoryRules.SaleOffer(7, roll, roll);
             if (offer.Length > 0)
             {
                 offered++;
                 check(offer.Length == 2 && offer.Distinct().Count() == 2 && offer.All(k => CocktailCatalog.Find(k).Tier == 1), "sale has two different basic drinks");
             }
-            check(StoryRules.SaleOffer(3, roll, 0).Length == 0 && StoryRules.SaleOffer(6, roll, roll).Length == 0
+            check(StoryRules.SaleOffer(3, roll, 0).Length == 0 && StoryRules.SaleOffer(5, roll, roll).Length == 0
+                && StoryRules.SaleOffer(6, roll, roll).Length == 0 && StoryRules.SaleOffer(12, roll, roll).Length == 0
                 && StoryRules.SaleOffer(14, roll, 0).Length == 0, "no early, sixth-week or final-week sale stock");
         }
         check(offered == 30, "later sale offer is exactly 30 percent");

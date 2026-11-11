@@ -45,9 +45,11 @@ namespace XiaomanVisitor
         public static bool IsMonday(int day) { return day >= 1 && day % 7 == 1; }
         public static StoryEpisode Episode(int index)
         { return index >= 1 && index <= 14 ? StoryCatalog.Episodes[index - 1] : null; }
+        public static bool HasStoryDrinkGift(int index) { return index==5 || index==6 || index==12 || index==14; }
+        public static bool AllowsSaleOffer(int index) { return index>=4 && index<13 && !HasStoryDrinkGift(index); }
         public static string[] SaleOffer(int index, int chanceRoll, int pairRoll)
         {
-            if (index < 4 || index == 6 || index >= 13 || (index != 4 && (uint)chanceRoll % 100 >= 30)) return new string[0];
+            if (!AllowsSaleOffer(index) || (index != 4 && (uint)chanceRoll % 100 >= 30)) return new string[0];
             int excluded = (int)((uint)pairRoll % 3);
             return BasicDrinks.Where((key, i) => i != excluded).ToArray();
         }
@@ -173,7 +175,7 @@ namespace XiaomanVisitor
                 visit.SaleKeys = visit.SaleKeys ?? new string[0];
                 if (visit.SaleKeys.Length != 0 && (visit.SaleKeys.Length != 2 || visit.SaleKeys.Distinct().Count() != 2
                     || visit.SaleKeys.Any(key => !StoryRules.BasicDrinks.Contains(key)))) visit.SaleKeys = new string[0];
-                if (visit.Index < 4 || visit.Index == 6 || visit.Index >= 13) visit.SaleKeys = new string[0];
+                if (!StoryRules.AllowsSaleOffer(visit.Index)) visit.SaleKeys = new string[0];
                 result.Visits.Add(visit);
             }
             result.LastCompletedGiftDay = loaded.LastCompletedGiftDay;

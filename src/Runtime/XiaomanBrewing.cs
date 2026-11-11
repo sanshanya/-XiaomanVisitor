@@ -12,7 +12,8 @@ namespace XiaomanVisitor
         private float nextBrewingDelivery;
         private bool brewingBusy;
         private StoreClient brewingRenewalClient;
-        private string BrewingTerms { get { return Text("ui_brew_terms",BrewingConfig.BonusPercent,BrewingConfig.BottleValue,BrewingConfig.SampleValue); } }
+        private string BrewingTerms { get { return Text("ui_brew_terms",BrewingConfig.BonusPercent,BrewingConfig.BottleValue,BrewingConfig.SampleValue,
+            ReadBrewing().MaterialLimit(StoreStation.Instance.dayCounter),BrewingConfig.WeeklyMaterialIncrease,BrewingConfig.MaximumMaterialLimit); } }
         private BrewingProgress ReadBrewing() { return BrewingProgress.Restore(ModHelper.GetModData(Id, BrewingProgress.SaveKey, "")); }
         private void SaveBrewing(BrewingProgress p)
         {
@@ -59,11 +60,29 @@ namespace XiaomanVisitor
             }
             return result;
         }
-        private string BrewingQuote(List<BrewingMaterial> materials)
+        internal string BrewingQuoteSignature(StoreClient client)
         {
-            if (materials==null) return Text("xm_brew_wrong");
-            decimal value=materials.Sum(m => (decimal)m.ValueCents)/100m;
-            return Text("ui_brew_quote",value.ToString("0.##"),(value*(100+BrewingConfig.BonusPercent)/100m).ToString("0.##"));
+            if (!IsBrewingCollection(client)) return "";
+            var goods=SelectedBrewingMaterials();
+            return Text("ui_brew_table")+":"+ReadBrewing().MaterialLimit(StoreStation.Instance.dayCounter)+":"+BrewingConfig.BonusPercent+":"
+                +(goods==null?"invalid:"+EmporiumEntry.Instance.backInvinvElement.childItems.Count:goods.Sum(m => (decimal)m.ValueCents).ToString("0"));
+        }
+        private bool IsBrewingCollection(StoreClient client)
+        { return enabled && TavernMapEnabled && BrewingTarget() && client?.identifier==BrewingProgress.ClientId && client.clientIntent==StoreClient.ClientIntent.BARTER; }
+        internal void ShowBrewingQuote(StoreClient client,NegotiationTabletFrame frame)
+        {
+            if (!IsBrewingCollection(client) || frame==null) return;
+            var goods=SelectedBrewingMaterials();decimal value=goods==null?0:goods.Sum(m => (decimal)m.ValueCents)/100m;
+            int limit=ReadBrewing().MaterialLimit(StoreStation.Instance.dayCounter);
+            TabletUI.ListRow(frame,frame.content,Text("ui_brew_material_value"),value.ToString("0.##")+" CR",false,null,null);
+            TabletUI.ListRow(frame,frame.content,Text("ui_brew_limit"),limit+" CR",false,null,null);
+            TabletUI.ListRow(frame,frame.content,Text("ui_brew_return_value"),(value*(100+BrewingConfig.BonusPercent)/100m).ToString("0.##")+" CR",false,null,null);
+            bool empty=EmporiumEntry.Instance.backInvinvElement.childItems.Count==0;
+            string status=empty?Text("ui_brew_empty"):goods==null?Text("ui_brew_invalid")
+                :value>limit?Text("ui_brew_over_limit",(value-limit).ToString("0.##"))
+                :value==limit?Text("ui_brew_at_limit")
+                :Text("ui_brew_remaining",(limit-value).ToString("0.##"));
+            TabletUI.TextRow(frame,frame.content,status,18f,(!empty && goods==null || value>limit)?TabletStyle.RED:value==limit?TabletStyle.GREEN:TabletStyle.INK);
         }
         private StoreClient CreateBrewingVisitor()
         {
@@ -76,9 +95,11 @@ namespace XiaomanVisitor
                 getBarterResult=() => {
                     var goods=SelectedBrewingMaterials();
                     var p=ReadBrewing();
-                    bool valid=MayCollectBrewing && goods!=null && p.Pending==null && !p.Blocked
+                    bool valid=MayCollectBrewing && goods!=null && p.AcceptsValue(goods.Sum(m => (decimal)m.ValueCents),StoreStation.Instance.dayCounter) && p.Pending==null && !p.Blocked
                         && !p.Batches.Any(b => b.Day==StoreStation.Instance.dayCounter && b.Phase!="cancelled");
-                    return new BarterResult { isAccepted=valid,response=valid?BrewingQuote(goods):Text("xm_brew_wrong") };
+                    // Valuation and limits belong to the native tablet, never a
+                    // generated character line when materials are moved.
+                    return new BarterResult { isAccepted=valid,response=goods==null?Text("xm_brew_wrong"):"" };
                 } };
             c.willAcceptItem=item => BrewingMaterialCents(item)>0;
             var ledger=ReadBrewing();
@@ -210,9 +231,12 @@ namespace XiaomanVisitor
             var model=DirectoryMaster.Item(small?"mini_bottle":"wine_bottle");
             var item=ItemDirectory.CreateEmptyItem(id).SetSpriteAndShape(model.spriteAtlasPath,model.spritePath);
             model.Destroy();
-            item.name=Text(small?"ui_brew_sample_name":"ui_brew_bottle_name");
-            item.shortDescription=Text(small?"ui_brew_sample_desc":"ui_brew_bottle_desc");
-            item.unitValue=small?BrewingConfig.SampleValue:BrewingConfig.BottleValue;
+            Action<GameItem> describe=bottle => {
+                bottle.name=Text(small?"ui_brew_sample_name":"ui_brew_bottle_name");
+                bottle.shortDescription=Text(small?"ui_brew_sample_desc":"ui_brew_bottle_desc");
+                bottle.unitValue=small?BrewingConfig.SampleValue:BrewingConfig.BottleValue;
+            };
+            describe(item);item.onLoaded+=describe;
             item.SetGameItemType("SUBSTANCE");item.SetGameItemType("ALCOHOL");
             AudioHelper.InitGlass(item);ConsumableHelper.InitAlcohol(item,1);
             ModHelper.SetSource(item,Id,ModName);return item;
@@ -223,5 +247,17 @@ namespace XiaomanVisitor
     {
         public static bool Prefix() { return XiaomanMod.Instance==null || XiaomanMod.Instance.BeginBrewingExchange(); }
         public static void Postfix() { XiaomanMod.Instance?.CompleteBrewingExchange(); }
+    }
+    [HarmonyPatch(typeof(NegociationUIManager),"BuildSignature")]
+    public static class XiaomanBrewingQuoteRefreshPatch
+    {
+        private static void Postfix(StoreClient storeClient,ref string __result)
+        { string extra=XiaomanMod.Instance?.BrewingQuoteSignature(storeClient);if (!string.IsNullOrEmpty(extra)) __result+="|xiaoman:"+extra; }
+    }
+    [HarmonyPatch(typeof(NegociationUIManager),"BuildBarter")]
+    public static class XiaomanBrewingQuoteRowsPatch
+    {
+        private static void Postfix(StoreClient storeClient,NegotiationTabletFrame ___frame)
+        { XiaomanMod.Instance?.ShowBrewingQuote(storeClient,___frame); }
     }
 }

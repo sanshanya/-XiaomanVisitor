@@ -553,15 +553,15 @@ xm_brew_last,"I've brought the bottles I promised you, senpai."
 xm_brew_wrong,I'm only collecting basic-quality water or better and brewing ingredients this time.
 xm_brew_accept,"I’ll take these, then. I’ll bring the finished bottles on Friday, senpai."
 xm_brew_bye,"I’ll head back now, senpai."
-ui_brew_terms,"Sign at the tavern for Wednesday collection and Friday delivery.\nAccepts basic-quality water or better, brewing ingredients and consumable yeast.\nBottles are worth {0}% more than the materials. Neither side pays cash.\nLarge bottle: {1} CR; sample: {2} CR. Remainders carry over.\nDecide whether to continue after delivery, or pause and renew at the tavern."
+ui_brew_terms,"Sign at the tavern for Wednesday collection and Friday delivery. Decide whether to continue after delivery, or pause and renew at the tavern.\nAccepts basic-quality water or better, brewing ingredients and consumable yeast. No recipe or cash payment required.\nBottles are worth {0}% more than the materials. Large: {1} CR; small: {2} CR. Remainders carry over.\nCurrent limit: {3} CR; rises {4} CR each week, up to {5} CR. No minimum; delivery is scheduled only after materials are handed over."
 ui_brew_table,Place materials for Xiaoman on the trading counter. Neither side pays credits.\nWater containers are handed over too; only their water contents are valued.
 ui_brew_quote,Materials: {0} CR · Bottles: {1} CR (Friday delivery)
 ui_brew_balance,Awaiting bottling: {0} CR
 ui_brew_receipt,Day {0}: materials {1} CR → bottles {2} CR\nDelivery from day {3}
 ui_brew_legacy,Previous trade records (preserved)
-ui_brew_sample_name,Xiaoman's Sample Bottle
-ui_brew_sample_desc,A carefully sealed little bottle. Just enough for a taste.
-ui_brew_bottle_name,Xiaoman's Bottled Drink
+ui_brew_sample_name,Xiaoman's Small Bottled Drink
+ui_brew_sample_desc,"Mixed and sealed by Xiaoman, in a small bottle."
+ui_brew_bottle_name,Xiaoman's Large Bottled Drink
 ui_brew_bottle_desc,"Mixed and sealed by Xiaoman, in a plain large bottle."
 xm_brew_renew,"That’s this batch sorted. Shall we continue next week, senpai?"
 xm_brew_renew_yes,All right. I’ll collect the materials next Wednesday and bring the bottles on Friday.
@@ -574,3 +574,13 @@ ui_brew_pause_choice,Let’s pause for now.
 ui_brew_scheduled,Next collection: day {0} (Wednesday)
 ui_brew_waiting,Materials received for this batch. Next collection not booked.
 ui_brew_inactive,No collection scheduled. Accepted batches will still be delivered.
+ui_brew_material_value,Material Value
+ui_brew_return_value,Expected Bottle Value
+ui_brew_limit,Material Limit
+ui_brew_empty,Place materials on the counter to see their value.
+ui_brew_invalid,Remove ineligible items before handing over materials.
+ui_brew_at_limit,This batch has reached its limit.
+ui_brew_over_limit,Limit reached; {0} CR over. Remove some materials.
+ui_brew_remaining,Room for another {0} CR of materials.
+ui_wine_crate_name,Xiaoman's Drink Crate
+ui_wine_crate_desc,"A gift from Xiaoman, with dividers for her drinks.\nOnly holds Xiaoman's drinks."
