@@ -8,6 +8,7 @@ from pathlib import Path
 from unittest import mock
 sys.path.insert(0,str(Path(__file__).resolve().parents[1] / "tools"))
 import voice_pipeline as pipeline
+from voice_delivery import VoiceDelivery, audio_filename
 
 
 class VoicePipelineTests(unittest.TestCase):
@@ -121,6 +122,44 @@ class VoicePipelineTests(unittest.TestCase):
     def test_changed_audio_is_not_packed(self):
         (self.root / self.row["audio"]).write_bytes(b"corrupt")
         self.assertEqual(pipeline.audio_status(self.row, self.script, self.texts), "audio_hash_mismatch")
+
+    def test_native_ogg_migration_keeps_keys_aliases_masters_and_music(self):
+        old = pipeline.pack(self.script_path)["lines"][0]
+        source = self.root / self.row["audio"]
+        original = source.read_bytes()
+        music = self.package / "Sounds/rain_title.mp3"
+        music.write_bytes(b"already compressed music")
+        self.texts["zh"]["second_line"] = "相同录音的另一句。"
+        self.texts["ja"]["second_line"] = "こんばんは。"
+        second = dict(self.row, key="second_line", audio="", subtitle_templates=pipeline.templates_for("second_line", self.texts))
+        self.script["lines"].append(second)
+        pipeline.save(self.script_path, self.script)
+        with mock.patch.object(pipeline.subprocess, "run", side_effect=AssertionError("Unexpected paid request")):
+            pipeline.generate(self.script_path, ["second_line"])
+        pipeline.save(self.root / "assets/voice-delivery.json",
+                      dict(schema=1, codec="libvorbis", quality=8, sample_rate=24000, channels=1))
+        result = pipeline.pack(self.script_path)
+        self.assertEqual({r["sound_key"] for r in result["lines"]}, {old["sound_key"]})
+        self.assertEqual(len(list((self.package / "Sounds").glob("xm_voice_*.ogg"))), 1)
+        self.assertEqual(list((self.package / "Sounds").glob("xm_voice_*.wav")), [])
+        self.assertEqual(source.read_bytes(), original)
+        self.assertEqual(music.read_bytes(), b"already compressed music")
+        self.assertTrue(audio_filename(result["lines"][0]).endswith(".ogg"))
+        self.assertEqual(result, pipeline.pack(self.script_path))
+
+    def test_delivery_cache_repairs_corruption_without_changing_source(self):
+        pipeline.save(self.root / "assets/voice-delivery.json",
+                      dict(schema=1, codec="libvorbis", quality=8, sample_rate=24000, channels=1))
+        source = self.root / self.row["audio"]
+        before = source.read_bytes()
+        encoded, checksum = VoiceDelivery(self.root).encode(source)
+        encoded.write_bytes(b"truncated cache")
+        repaired, actual = VoiceDelivery(self.root).encode(source)
+        self.assertEqual(encoded, repaired)
+        self.assertEqual(actual, checksum)
+        self.assertEqual(source.read_bytes(), before)
+        with self.assertRaises(ValueError):
+            audio_filename(dict(sound_key="clip", audio_file="../clip.ogg"))
 
     def test_performance_text_is_separate_and_invalidates_old_audio(self):
         self.row["generate_text"] = "こんばんは。[chuckles]"

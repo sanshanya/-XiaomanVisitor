@@ -45,7 +45,7 @@ if ($Install) {
     foreach ($folder in @('Textures','Portraits','Localization','Sounds','Books','Voices','Letters','Licenses','Scenes')) {
         Copy-Item -LiteralPath (Join-Path $package $folder) -Destination $installPath -Recurse -Force
     }
-    foreach ($oldVoice in Get-ChildItem -LiteralPath (Join-Path $installPath 'Sounds') -Filter 'xm_voice_*.wav' -File) {
+    foreach ($oldVoice in Get-ChildItem -LiteralPath (Join-Path $installPath 'Sounds') -Filter 'xm_voice_*.*' -File | Where-Object { $_.Extension -in @('.wav','.ogg') }) {
         if (-not (Test-Path -LiteralPath (Join-Path $package ('Sounds\' + $oldVoice.Name)))) {
             Remove-Item -LiteralPath $oldVoice.FullName -Force
         }

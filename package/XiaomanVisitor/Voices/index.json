@@ -5,6 +5,9 @@
       "line_key": "xm_01_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_01_02_df1515b63141",
+      "audio_file": "xm_voice_ja_xm_01_02_df1515b63141.ogg",
+      "source_sha256": "df1515b631419b2604dadf1b5f92fab1c1c56da8bde51baef7f59257edbd42a6",
+      "packaged_sha256": "11d206d30d34a939c764b75230c1a2f6610ee4f890943a735d128a481ed1bc37",
       "spoken_text": "わたし、みちるっていいます。この近くに越してきたばかりで、まだ道をよく覚えてなくて。",
       "subtitle_templates": [
         "我叫小满。刚搬到附近，还有点认不清路。",
@@ -17,6 +20,9 @@
       "line_key": "xm_01_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_01_03_1eff7aca9242",
+      "audio_file": "xm_voice_ja_xm_01_03_1eff7aca9242.ogg",
+      "source_sha256": "1eff7aca9242122b8f732f6e2cefd8ede69364f46051f540eb4c09c3abc37784",
+      "packaged_sha256": "35103839c569c4769409abc63fe1aebfa4029060a62a3e4e509630ab7550a37d",
       "spoken_text": "あ……ここ、カセットデッキがあるんですね。わたしも引っ越すとき、テープをけっこう持ってきたんです。",
       "subtitle_templates": [
         "咦……你这里还有磁带机。我搬家的时候，也带来了不少磁带呢。",
@@ -29,6 +35,9 @@
       "line_key": "xm_01_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_01_04_48e6d0a5e1fc",
+      "audio_file": "xm_voice_ja_xm_01_04_48e6d0a5e1fc.ogg",
+      "source_sha256": "48e6d0a5e1fc4ba9b982ed85d36eba710a91fb2ac13dc6deee454ce68038939e",
+      "packaged_sha256": "f61dddadfb37d8371b1a09eb1ab9f818c4f9da5f2cdf4ebcfd748831f6e33e6f",
       "spoken_text": "今どき、カセットを聴く人って、もうあまりいませんよね。",
       "subtitle_templates": [
         "现在还听磁带的人，已经很少了吧。",
@@ -41,6 +50,9 @@
       "line_key": "xm_01_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_01_shop_1d58f326597a",
+      "audio_file": "xm_voice_ja_xm_01_shop_1d58f326597a.ogg",
+      "source_sha256": "1d58f326597afe5b439a52ad309ed4e391de9dc8f5867a57a484aad68fff28db",
+      "packaged_sha256": "d290656ae638025d8ee9f8316d362c8482860cb0504e87c935a36f8723f5ac79",
       "spoken_text": "食べ物か飲み水を、少し買いたくて。",
       "subtitle_templates": [
         "想买点吃的或者饮用水。带了 150 信用点。",
@@ -53,6 +65,9 @@
       "line_key": "xm_01_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_01_accept_6ae21ff734e1",
+      "audio_file": "xm_voice_ja_xm_01_accept_6ae21ff734e1.ogg",
+      "source_sha256": "6ae21ff734e1a13864efa432c798961569478417559263452e7714e6d51e956f",
+      "packaged_sha256": "d2a47beab77b54940f5b50accfc191271d1a0426f490ccd1f2547225ba5402ec",
       "spoken_text": "ありがとうございます。助かりました。",
       "subtitle_templates": [
         "谢谢。帮大忙了。",
@@ -65,6 +80,9 @@
       "line_key": "xm_01_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_01_bye_4f6b8f964b7d",
+      "audio_file": "xm_voice_ja_xm_01_bye_4f6b8f964b7d.ogg",
+      "source_sha256": "4f6b8f964b7d2173ae9fe99275f670dad138ba2f4c5bff9a7b3e6304c8ab8ea6",
+      "packaged_sha256": "1ff787617d6cff455cd3cc0be902e97c25db1304d530637987693f8b5c405bf4",
       "spoken_text": "それじゃ、また来ますね。",
       "subtitle_templates": [
         "那我先走啦。下次见。",
@@ -77,6 +95,9 @@
       "line_key": "xm_02_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_01_e6fc89df1950",
+      "audio_file": "xm_voice_ja_xm_02_01_e6fc89df1950.ogg",
+      "source_sha256": "e6fc89df1950f28053b11e8faeee61b7be2c7cfdcfcd06503d5300f819c2b42e",
+      "packaged_sha256": "cc57c6244159624748ecd53c4d2ba81f75e9d91ecec5b9078c3d533e7a1748f8",
       "spoken_text": "こんばんは。またお邪魔しちゃいました。",
       "subtitle_templates": [
         "晚上好。又来打扰啦。",
@@ -89,6 +110,9 @@
       "line_key": "xm_02_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_02_ed781ad0f6a0",
+      "audio_file": "xm_voice_ja_xm_02_02_ed781ad0f6a0.ogg",
+      "source_sha256": "ed781ad0f6a040630ddc2e6afba7a545a86e26c008cd561889596dcfbf7a994a",
+      "packaged_sha256": "87fc6484a2ba1ee4a4bb1c1c315bd455858bd354ff851c8fb9db140e935a021c",
       "spoken_text": "あ、そうだ……商業通路に小さなバーを開いたんです。今夜、いよいよオープンなんですよ。",
       "subtitle_templates": [
         "对了……我在商业街开了间小酒馆。今晚终于要开业啦。",
@@ -101,6 +125,9 @@
       "line_key": "xm_02_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_03_d136e30337a1",
+      "audio_file": "xm_voice_ja_xm_02_03_d136e30337a1.ogg",
+      "source_sha256": "d136e30337a10ba5df232957c4c0496767eec8150d4b8663bb7724b46c59e2d9",
+      "packaged_sha256": "2b852086f74ff66afa01738ca1371d74bd03e8dffcf755cbd158eabfd40df607",
       "spoken_text": "メニューは何度も書き直したんですけど、このステーションの人たちはどんなお酒が好きなのかなって。",
       "subtitle_templates": [
         "酒单改了好几遍，不知道空间站的人喜欢喝什么。",
@@ -113,6 +140,9 @@
       "line_key": "xm_02_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_04_f3c3d8b966f6",
+      "audio_file": "xm_voice_ja_xm_02_04_f3c3d8b966f6.ogg",
+      "source_sha256": "f3c3d8b966f65e193c886d75f51c47de3d57aef2fd1689b1578310873589e810",
+      "packaged_sha256": "d46c3b48551dc5c9af5f40e2f19d61f1b0a796201948e4e3634d93ea548ebdb9",
       "spoken_text": "店長さん、夜お時間があったら、お店に来ていただけませんか。先輩として、いろいろ教えてもらえたらうれしいです。",
       "subtitle_templates": [
         "店长先生晚上要是有空，希望能作为前辈来小店指导一下。",
@@ -125,6 +155,9 @@
       "line_key": "xm_02_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_shop_e490d9d29329",
+      "audio_file": "xm_voice_ja_xm_02_shop_e490d9d29329.ogg",
+      "source_sha256": "e490d9d2932984e49a9a92cfcb97308a6e0f8c595e271e01c55427cdccb7a9ce",
+      "packaged_sha256": "77c6e27764e6aacec6856a85654c87cba658340e24dd04dc5d9cf38515bff69b",
       "spoken_text": "今日は日用品を少し買いに来ました。",
       "subtitle_templates": [
         "今天想买点日用品。带了 {0} 信用点。",
@@ -137,6 +170,9 @@
       "line_key": "xm_02_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_accept_b973e6d737f2",
+      "audio_file": "xm_voice_ja_xm_02_accept_b973e6d737f2.ogg",
+      "source_sha256": "b973e6d737f233df43085dbab10b091e1701390b569c46712c0b3787afb9abad",
+      "packaged_sha256": "4006a63d7bcc4cf9147f071011cd1e65260ae0d486bdf86b9c966bac965ef5d2",
       "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -149,6 +185,9 @@
       "line_key": "xm_02_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_bye_a0fbcf48f0e0",
+      "audio_file": "xm_voice_ja_xm_02_bye_a0fbcf48f0e0.ogg",
+      "source_sha256": "a0fbcf48f0e0667d4c4d0616f1caabf26f78bbcf335c0b89365f748a1e846506",
+      "packaged_sha256": "1838b9c28b4fea1e0ead38fc46109dddd37ff1e73612d5f045544625cd835cc9",
       "spoken_text": "それじゃ、また。お店に来てくださるのを楽しみにしてますね。",
       "subtitle_templates": [
         "那我先走啦。期待店长光临小店。",
@@ -161,6 +200,9 @@
       "line_key": "xm_02_02_late",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_02_late_8fd3cebf70b2",
+      "audio_file": "xm_voice_ja_xm_02_02_late_8fd3cebf70b2.ogg",
+      "source_sha256": "8fd3cebf70b2ce2746f0d136175867093ef550d3e5d69afe25736d09a92216f2",
+      "packaged_sha256": "39f6d802040ca4d609bf7e639228d4734e718c6df6ff3840f1e3c04640ffee68",
       "spoken_text": "あ、そうだ……商業通路に小さなバーを開いたんです。最近、ようやくオープンしたんですよ。",
       "subtitle_templates": [
         "对了……我在商业街开了间小酒馆。最近终于开业啦。",
@@ -173,6 +215,9 @@
       "line_key": "xm_03_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_01_2893cdad66ba",
+      "audio_file": "xm_voice_ja_xm_03_01_2893cdad66ba.ogg",
+      "source_sha256": "2893cdad66ba8209c5c7d69813667ac4149e888a49a841c21cd85fbc64e57b2b",
+      "packaged_sha256": "a98d4b8ba9d6e16432013d9370904226a3415dfaf2147ecf7d29579cb6631a72",
       "spoken_text": "こんばんは、店長さん。またお邪魔しちゃいました。",
       "subtitle_templates": [
         "晚上好，店长前辈。又来打扰啦。",
@@ -185,6 +230,9 @@
       "line_key": "xm_03_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_02_46b27916305a",
+      "audio_file": "xm_voice_ja_xm_03_02_46b27916305a.ogg",
+      "source_sha256": "46b27916305a344d3c9b65f1ea30cd7ad1861b6db9f4f6ace154f6d961fdbe55",
+      "packaged_sha256": "71bbe84ace16b81929f3d913ce816e7ee357274884a649d2919b3838babd57ee",
       "spoken_text": "最近、お店がちょっと忙しくて。ドックの交代時間になると、お客さんが一度に来るんです。",
       "subtitle_templates": [
         "最近店里有点忙呢。船坞换班的时候，客人一下子就都来了。",
@@ -197,6 +245,9 @@
       "line_key": "xm_03_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_03_20d5213e9878",
+      "audio_file": "xm_voice_ja_xm_03_03_20d5213e9878.ogg",
+      "source_sha256": "20d5213e98788bd2a7e3240f64632accf2b9931697f463720ab55fc3b04c9922",
+      "packaged_sha256": "09e38b0ead7aa324ff169ff510c8f265a0c0c114edcf23780cbe2aeba386958d",
       "spoken_text": "一人でお酒を作って、お客さんの相手もしてると……ときどき手が回らなくて。",
       "subtitle_templates": [
         "我一个人又要调酒，又要招呼客人……常常有点忙不过来。",
@@ -209,6 +260,9 @@
       "line_key": "xm_03_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_04_b853f224f364",
+      "audio_file": "xm_voice_ja_xm_03_04_b853f224f364.ogg",
+      "source_sha256": "b853f224f364d69a6e04fc23adc2cb637508b8b60afa85db926b577817732e0c",
+      "packaged_sha256": "009cd0db58c872f3d0692b2b1bec107c2e76e09b354b5d206f6b4ebaf3f0ba85",
       "spoken_text": "先輩、夜に時間があったら、少し手伝ってもらえませんか？ もちろん、お給料も出しますよ！ 先輩に、ただで手伝ってもらうわけにはいきませんから。",
       "subtitle_templates": [
         "前辈晚上要是有空，能来帮我一下吗？当然会付工资的！可不能白占用前辈的时间呀。",
@@ -221,6 +275,9 @@
       "line_key": "xm_03_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_shop_e4d0bb6cf1a7",
+      "audio_file": "xm_voice_ja_xm_03_shop_e4d0bb6cf1a7.ogg",
+      "source_sha256": "e4d0bb6cf1a730c38c20a065c26a378ffb95cf8e781e883c7848ac32238ac3f6",
+      "packaged_sha256": "391c8db9c0c08611eaeff70e0167efe749f9a2c3c613db2aa6b989a89af1fe57",
       "spoken_text": "今日は食べるものを少し買いに来ました。",
       "subtitle_templates": [
         "今天想买点吃的。带了 {0} 信用点。",
@@ -233,6 +290,9 @@
       "line_key": "xm_03_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_accept_1f4a82d11d3e",
+      "audio_file": "xm_voice_ja_xm_03_accept_1f4a82d11d3e.ogg",
+      "source_sha256": "1f4a82d11d3eb5dce27927c94fdc64a897dcaee5433c73997ded3efaa2930d6a",
+      "packaged_sha256": "e0141fa716d765e8b092881b7b3b806c8cf8db3dacd93151bc988d9812d21cc9",
       "spoken_text": "ありがとうございます。ちょうど助かります。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -245,6 +305,9 @@
       "line_key": "xm_03_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_bye_e35fae7ca1cb",
+      "audio_file": "xm_voice_ja_xm_03_bye_e35fae7ca1cb.ogg",
+      "source_sha256": "e35fae7ca1cbadb56ee6f66742516e46514ada5637c2e4d34cece7e7140e9951",
+      "packaged_sha256": "50ca31e27e72188e476c8a938fda0d06a94f23fae10bdc73100cf0b362592c54",
       "spoken_text": "それじゃ、また。夜、お時間があったら、遊びに来てくださいね。",
       "subtitle_templates": [
         "那我先走啦。晚上有空的话，来坐坐也好哦。",
@@ -257,6 +320,9 @@
       "line_key": "xm_03_04_already_worked",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_04_already_worked_a6ee524245b1",
+      "audio_file": "xm_voice_ja_xm_03_04_already_worked_a6ee524245b1.ogg",
+      "source_sha256": "a6ee524245b112762470d681f2afbc283ddb665bd343f47319890d5095a458fd",
+      "packaged_sha256": "7239ff36296ec2a80a4d3f6c56290678c66902e21b8227544701de2969dcc418",
       "spoken_text": "先輩がお店を手伝ってくれたこと、ちゃんと覚えています。忙しい時期が落ち着いたら、また音楽でも聴きに来てくださいね。",
       "subtitle_templates": [
         "前辈最近来店里帮忙的事，我都记着呢。等忙过这阵子，也请来听听歌呀。",
@@ -269,6 +335,9 @@
       "line_key": "xm_04_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_01_32ebf10ed44c",
+      "audio_file": "xm_voice_ja_xm_04_01_32ebf10ed44c.ogg",
+      "source_sha256": "32ebf10ed44c959f3739260b84a132a5b81bf4f6fbff3493f52089b9d22981a7",
+      "packaged_sha256": "148ef13f666d290b01b525a689647fbeced7c8e7a45b06ebf417be6b0b4f27d6",
       "spoken_text": "こんばんは、店長さん。今日は、ちょっと相談したいことがあるんです。",
       "subtitle_templates": [
         "晚上好，店长前辈。今天还想跟您商量件事呢。",
@@ -281,6 +350,9 @@
       "line_key": "xm_04_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_02_4b4a0cb0f986",
+      "audio_file": "xm_voice_ja_xm_04_02_4b4a0cb0f986.ogg",
+      "source_sha256": "4b4a0cb0f986d8d0005e19ff8c9ec2933c1d54ead1654a5eeaba987ec3bb3889",
+      "packaged_sha256": "7e28f0e87102a5a386edb51661aba2be7c2dc18c9e1bad47a4e7bda1c65a4c25",
       "spoken_text": "最近、お店で使う水も材料もどんどん増えてきて、仕入れが追いつかなくなりそうで。",
       "subtitle_templates": [
         "最近店里用的水和原材料越来越多了，都快供不应求了。",
@@ -293,6 +365,9 @@
       "line_key": "xm_04_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_03_67d18aba98aa",
+      "audio_file": "xm_voice_ja_xm_04_03_67d18aba98aa.ogg",
+      "source_sha256": "67d18aba98aaf719082135c69509982d51b521cf264a6f377e0e8f96fb0cda23",
+      "packaged_sha256": "89f8f486c5e3c47499d848adc017e9d7f30d8b1cfc5fc861efc28924241211bf",
       "spoken_text": "先輩のところに、使えそうな水やお酒を作る材料があったら、少し取っておいてもらえませんか？ 時間のあるときに、お店で相談できたらうれしいです。",
       "subtitle_templates": [
         "前辈这里要是有合适的水和酿酒用的材料，能不能留一些给我？有空来酒馆，我们商量一下怎么合作吧。",
@@ -305,6 +380,9 @@
       "line_key": "xm_04_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_04_9119780e6ced",
+      "audio_file": "xm_voice_ja_xm_04_04_9119780e6ced.ogg",
+      "source_sha256": "9119780e6cedb82d93d4ead65af30e5f633096bac5e2e79957b5f258ce55363c",
+      "packaged_sha256": "453e5487ea1f7059200e2e1bdc17cc10da5d1acaa0d94463fcd7548fc9059ca4",
       "spoken_text": "話が決まったら、水曜日に材料をもらいに来て、金曜日にお酒を持ってきますね。材料代もお酒代も、お互いなしで……一緒にやってみませんか？",
       "subtitle_templates": [
         "签好协议后，我周三来取材料，周五把调好的酒带过来。材料和酒都不用付钱，就当我们一起做点小生意啦。",
@@ -317,6 +395,9 @@
       "line_key": "xm_04_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_shop_f29e2cd5861f",
+      "audio_file": "xm_voice_ja_xm_04_shop_f29e2cd5861f.ogg",
+      "source_sha256": "f29e2cd5861fad4d2779dfe9016102606cba3e20c953b2e3e829b53a8760cbb5",
+      "packaged_sha256": "3e84cba1e8ef517cf1c2c51f9fce449afb3e10551375b3acbfb6f53cf353aa22",
       "spoken_text": "今日は飲み水を少し買いたくて。",
       "subtitle_templates": [
         "今天想买点饮用水。带了 {0} 信用点。",
@@ -329,6 +410,9 @@
       "line_key": "xm_04_cocktail",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_cocktail_9cf5c766afa5",
+      "audio_file": "xm_voice_ja_xm_04_cocktail_9cf5c766afa5.ogg",
+      "source_sha256": "9cf5c766afa572186a5b7ede8c1402f94b9ccd3df4c26a626ca803467e42cc58",
+      "packaged_sha256": "96b420a86cb668ce725fb26164282cb8e310be2e5038aee7a6c388118404dfd4",
       "spoken_text": "あ、そうだ。お店で作ったジュースも二本持ってきたんです。よかったら見てみますか？",
       "subtitle_templates": [
         "对了，还带了两瓶店里调好的果汁版饮品。前辈要看看吗？",
@@ -341,6 +425,9 @@
       "line_key": "xm_04_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_accept_1f4a82d11d3e",
+      "audio_file": "xm_voice_ja_xm_03_accept_1f4a82d11d3e.ogg",
+      "source_sha256": "1f4a82d11d3eb5dce27927c94fdc64a897dcaee5433c73997ded3efaa2930d6a",
+      "packaged_sha256": "e0141fa716d765e8b092881b7b3b806c8cf8db3dacd93151bc988d9812d21cc9",
       "spoken_text": "ありがとうございます。ちょうど助かります。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -353,6 +440,9 @@
       "line_key": "xm_04_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_bye_a0fdb754b590",
+      "audio_file": "xm_voice_ja_xm_04_bye_a0fdb754b590.ogg",
+      "source_sha256": "a0fdb754b59085fe37fb11db8ee4eacc7aa1b3818f2804b01f24a867f7b84b47",
+      "packaged_sha256": "80848e861071b39fe6d3619bcab0e77e9dc0c5effbfac3ad43d2d4fe7bd60251",
       "spoken_text": "それじゃ、また。仕入れの話は、夜にお店でゆっくりでも大丈夫ですから。",
       "subtitle_templates": [
         "那我先走啦。供货的事，晚上来店里再慢慢谈也可以哦。",
@@ -365,6 +455,9 @@
       "line_key": "xm_04_03_existing",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_03_existing_4bee2877ca32",
+      "audio_file": "xm_voice_ja_xm_04_03_existing_4bee2877ca32.ogg",
+      "source_sha256": "4bee2877ca32dac08aba04e6639e977e9d7c92bc2df30f073ecfb1c71138727c",
+      "packaged_sha256": "11f54f1fb3fe75b5f7df53b51af4bac36b800a7ed9d2d228b5c41f1eb6f97332",
       "spoken_text": "先輩、材料やお酒のことで気になることがあったら、いつでもお店で声をかけてくださいね。少しお休みしたくなっても、大丈夫ですから。",
       "subtitle_templates": [
         "前辈，取材料和送酒的事，随时可以来酒馆找我商量。想先歇一阵也没关系，告诉我就好。",
@@ -377,6 +470,9 @@
       "line_key": "xm_05_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_01_9198fca18c48",
+      "audio_file": "xm_voice_ja_xm_05_01_9198fca18c48.ogg",
+      "source_sha256": "9198fca18c48b12f6be6e70ded70b0fd9fef7221128952e288cf9d4aecb29ba1",
+      "packaged_sha256": "6f8812a5322f23796cca5b5a36dfb1316dfbab9359b4a99eeb3f34e4360e2c8a",
       "spoken_text": "こんばんは、先輩。先週、新しい仕入れ先からいいお酒が何本か届いて。ここ数日、ずっと試していたんです。",
       "subtitle_templates": [
         "晚上好，前辈。上星期新供货商送来了几瓶好酒，我这两天一直在试呢。",
@@ -389,6 +485,9 @@
       "line_key": "xm_05_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_02_0fc93435501f",
+      "audio_file": "xm_voice_ja_xm_05_02_0fc93435501f.ogg",
+      "source_sha256": "0fc93435501fa1344120dc615d5138b349137e58f3d08fe8c217efa02fba6ef4",
+      "packaged_sha256": "f31cf7f5d6eead7e7930b7c972400ce0e01d5540519608360f995d06d20580e8",
       "spoken_text": "ずっと使ってみたかったベースのお酒があって。昨日、やっと納得できる味になったんですよ。",
       "subtitle_templates": [
         "有一种基酒我以前就很想用，昨天终于调出满意的口味啦。",
@@ -401,6 +500,9 @@
       "line_key": "xm_05_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_03_074fe25c9f79",
+      "audio_file": "xm_voice_ja_xm_05_03_074fe25c9f79.ogg",
+      "source_sha256": "074fe25c9f79549e4db0218c6af788f70b7099bf09534a784079113b992f2e29",
+      "packaged_sha256": "a96c877793c18c471673ee91503906ec9e4b2889dac8f402ba64d928b31a5fae",
       "spoken_text": "昨日出したら、あっという間に売り切れちゃって。帰り際に「次もある？」って聞かれたんです。……もちろん、ありますよ。",
       "subtitle_templates": [
         "昨天一推出就直接售罄了，客人们走的时候问我下次还有没有。嘿嘿……当然有啦。",
@@ -413,6 +515,9 @@
       "line_key": "xm_05_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_04_291b7e897c57",
+      "audio_file": "xm_voice_ja_xm_05_04_291b7e897c57.ogg",
+      "source_sha256": "291b7e897c570a91f8e3a7b6a93f396553b7f3acaad34412b3c9949c78f9db82",
+      "packaged_sha256": "081287d240d7f149ec85ef3f3020a25da0f09dfa6b44093df3e653bbc807e9c3",
       "spoken_text": "でも、先輩にも飲んでもらいたくて、一杯分の材料だけ、こっそり取っておいたんです。",
       "subtitle_templates": [
         "不过我偷偷留了一杯的原料，想要带给前辈尝尝。",
@@ -425,6 +530,9 @@
       "line_key": "xm_05_gift",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_gift_22735d79be55",
+      "audio_file": "xm_voice_ja_xm_05_gift_22735d79be55.ogg",
+      "source_sha256": "22735d79be55c6d588bbf0348db208e588994240ac7086427b05bb99431f718e",
+      "packaged_sha256": "2f58d3afa8919b79351028564a3350b0798eaf00a0f19dd9a45686d329e7b7d3",
       "spoken_text": "これは先輩の分です。今日は、お代はいりませんからね。",
       "subtitle_templates": [
         "这个是留给前辈的。今天可不收钱哦。",
@@ -437,6 +545,9 @@
       "line_key": "xm_05_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_shop_e490d9d29329",
+      "audio_file": "xm_voice_ja_xm_02_shop_e490d9d29329.ogg",
+      "source_sha256": "e490d9d2932984e49a9a92cfcb97308a6e0f8c595e271e01c55427cdccb7a9ce",
+      "packaged_sha256": "77c6e27764e6aacec6856a85654c87cba658340e24dd04dc5d9cf38515bff69b",
       "spoken_text": "今日は日用品を少し買いに来ました。",
       "subtitle_templates": [
         "今天想买点日用品。带了 {0} 信用点。",
@@ -449,6 +560,9 @@
       "line_key": "xm_05_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_accept_b973e6d737f2",
+      "audio_file": "xm_voice_ja_xm_02_accept_b973e6d737f2.ogg",
+      "source_sha256": "b973e6d737f233df43085dbab10b091e1701390b569c46712c0b3787afb9abad",
+      "packaged_sha256": "4006a63d7bcc4cf9147f071011cd1e65260ae0d486bdf86b9c966bac965ef5d2",
       "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -461,6 +575,9 @@
       "line_key": "xm_05_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_bye_b0b998a793e6",
+      "audio_file": "xm_voice_ja_xm_05_bye_b0b998a793e6.ogg",
+      "source_sha256": "b0b998a793e6b4edacb3ff19ebbef8ac28e6c3f72c69fbd5fd242f1a1cac00e3",
+      "packaged_sha256": "94ff34c2d82e4bc217e9346027dcedca24daf0c61166465d729f29eb3af8766e",
       "spoken_text": "それじゃ、また。夜、時間があったら、新しいお酒も飲みに来てくださいね。",
       "subtitle_templates": [
         "那我先走啦。晚上有空的话，欢迎来尝尝新酒。",
@@ -473,6 +590,9 @@
       "line_key": "xm_05_01_late",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_01_late_ed76daa5acaa",
+      "audio_file": "xm_voice_ja_xm_05_01_late_ed76daa5acaa.ogg",
+      "source_sha256": "ed76daa5acaafb9183079952cb1f78dae8af5eee9387de7535324aa2e54dc2b1",
+      "packaged_sha256": "08844b042ac9437c8ac9d066677efbb9618e764db306c6bb478c467de09137a9",
       "spoken_text": "こんばんは、先輩。新しい仕入れ先からいいお酒が届いて、しばらく試していたんです。",
       "subtitle_templates": [
         "晚上好，前辈。新供货商送来了一批好酒，我试了好一阵子呢。",
@@ -485,6 +605,9 @@
       "line_key": "xm_05_02_late",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_02_late_3132647ac59d",
+      "audio_file": "xm_voice_ja_xm_05_02_late_3132647ac59d.ogg",
+      "source_sha256": "3132647ac59d7a58845d972b70d1a9debcf1b714c2fb02a6e33c75e6455efd1b",
+      "packaged_sha256": "2ae74c589a8bcf4d19653ebe9699099a473d946a2e022bf0a4665da6988d884e",
       "spoken_text": "ずっと使ってみたかったベースのお酒で、やっと納得できる味になったんですよ。",
       "subtitle_templates": [
         "有一种基酒我以前就很想用，终于调出满意的口味啦。",
@@ -497,6 +620,9 @@
       "line_key": "xm_05_03_late",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_05_03_late_fb9cddea18e9",
+      "audio_file": "xm_voice_ja_xm_05_03_late_fb9cddea18e9.ogg",
+      "source_sha256": "fb9cddea18e952bc2842632b1171cf0ebfb52c224695223aedcc33d935880b3a",
+      "packaged_sha256": "0d19daa1c74f07da9cf2c0070c6eb835493e6525eef4f297cac51812d1a44e6a",
       "spoken_text": "初めて出した日に、あっという間に売り切れちゃって。「次もある？」って聞かれたんです。……もちろん、ありますよ。",
       "subtitle_templates": [
         "第一次推出就直接售罄了，客人们走的时候问我下次还有没有。嘿嘿……当然有啦。",
@@ -509,6 +635,9 @@
       "line_key": "xm_06_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_06_01_a57d40eed9c9",
+      "audio_file": "xm_voice_ja_xm_06_01_a57d40eed9c9.ogg",
+      "source_sha256": "a57d40eed9c95186c2a6e346ab01e87bfa971bce5f3f94559514b82a10102c72",
+      "packaged_sha256": "c790502a5525ecb80af6b2f35205f39d17986beed4ebd29485a250f78965bdc2",
       "spoken_text": "こんばんは、先輩。最近、お店に初めて来るお客さんが増えたんです。",
       "subtitle_templates": [
         "晚上好，前辈。最近店里来了好多新面孔呢。",
@@ -521,6 +650,9 @@
       "line_key": "xm_06_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_06_02_a5bc9b8dd958",
+      "audio_file": "xm_voice_ja_xm_06_02_a5bc9b8dd958.ogg",
+      "source_sha256": "a5bc9b8dd9582e5dcdde57cf7e49eaab037de3a6c2dbdf629c9b91b28feb5066",
+      "packaged_sha256": "0233d5f72d3630ac1cfd32d2e4dc10e30e69700bed637cdb753c4f658420de9e",
       "spoken_text": "昨日、星間旅行中のお客さんに、お酒を飲んだあと「この辺りでほかに寄るところは？」って聞かれて。",
       "subtitle_templates": [
         "昨天有位星际旅客，喝完酒还问我，这附近有没有什么值得逛的地方。",
@@ -533,6 +665,9 @@
       "line_key": "xm_06_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_06_03_3c7217106a1c",
+      "audio_file": "xm_voice_ja_xm_06_03_3c7217106a1c.ogg",
+      "source_sha256": "3c7217106a1cbe200dd4dac06c0f4d2c1a050c467c49fe43694b61eff95d2d04",
+      "packaged_sha256": "3be021ae5cab3dfd3de956075baad899c5a6b65f25699fee4b1358f7497829bf",
       "spoken_text": "商業通路の向こうに、面白いものが見つかる質屋さんがあるって教えたんです。",
       "subtitle_templates": [
         "我就告诉他，商业街那头有一家很不错的当铺，说不定能淘到些有意思的东西。",
@@ -545,6 +680,9 @@
       "line_key": "xm_06_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_06_04_191035dc3acb",
+      "audio_file": "xm_voice_ja_xm_06_04_191035dc3acb.ogg",
+      "source_sha256": "191035dc3acb2e7421a4978e8527345514aaadb0d2f9f4dcc0ca44f6ee98e48e",
+      "packaged_sha256": "ca7a967e97bf47d8f0304d1dd157b5aa53614ab4182bc0d2bed73c39cc7477c7",
       "spoken_text": "えへへ、本当に来てくれるかな。もし来てくれたら、先輩、ごほうび期待しててもいいですか？",
       "subtitle_templates": [
         "嘿嘿，也不知道他会不会真的来这里看看。如果来了，前辈可要记得奖励我呀～",
@@ -557,6 +695,9 @@
       "line_key": "xm_06_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_shop_f29e2cd5861f",
+      "audio_file": "xm_voice_ja_xm_04_shop_f29e2cd5861f.ogg",
+      "source_sha256": "f29e2cd5861fad4d2779dfe9016102606cba3e20c953b2e3e829b53a8760cbb5",
+      "packaged_sha256": "3e84cba1e8ef517cf1c2c51f9fce449afb3e10551375b3acbfb6f53cf353aa22",
       "spoken_text": "今日は飲み水を少し買いたくて。",
       "subtitle_templates": [
         "今天想买点饮用水。带了 {0} 信用点。",
@@ -569,6 +710,9 @@
       "line_key": "xm_06_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_accept_1f4a82d11d3e",
+      "audio_file": "xm_voice_ja_xm_03_accept_1f4a82d11d3e.ogg",
+      "source_sha256": "1f4a82d11d3eb5dce27927c94fdc64a897dcaee5433c73997ded3efaa2930d6a",
+      "packaged_sha256": "e0141fa716d765e8b092881b7b3b806c8cf8db3dacd93151bc988d9812d21cc9",
       "spoken_text": "ありがとうございます。ちょうど助かります。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -581,6 +725,9 @@
       "line_key": "xm_06_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_06_bye_47a2fb4fce6b",
+      "audio_file": "xm_voice_ja_xm_06_bye_47a2fb4fce6b.ogg",
+      "source_sha256": "47a2fb4fce6b7f4c3cf579281f01a204ee4e1dc7dd7e1a76c0be4219c8d85413",
+      "packaged_sha256": "ee08d9f4831281665f550bf13e07fa967685181cc4763e6a0bd89236c19b7641",
       "spoken_text": "それじゃ、そろそろ。今夜のお店の準備が、まだ残ってるので。",
       "subtitle_templates": [
         "那我先走啦。今晚店里还有些事要准备呢。",
@@ -593,6 +740,9 @@
       "line_key": "xm_07_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_01_b4ce47a1c1cf",
+      "audio_file": "xm_voice_ja_xm_07_01_b4ce47a1c1cf.ogg",
+      "source_sha256": "b4ce47a1c1cf529b98f50220592e7bfd5ff55c55f02b3e581c48c6f510e33874",
+      "packaged_sha256": "b35c2c3738a77dcffe01d87a8ac8b33cc33f2594ce1e2b5a8da20dfde39d109e",
       "spoken_text": "こんばんは、先輩。最近、ドックのお客さんがほとんど毎日、少しだけ寄ってくれるんです。",
       "subtitle_templates": [
         "晚上好，前辈。最近有位船坞的客人，几乎每天都会来店里坐一会儿。",
@@ -605,6 +755,9 @@
       "line_key": "xm_07_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_02_5507ea57eaa3",
+      "audio_file": "xm_voice_ja_xm_07_02_5507ea57eaa3.ogg",
+      "source_sha256": "5507ea57eaa3a655f0f09cda161a5a3e9c03df09fb358b348cfe174da8cac6d0",
+      "packaged_sha256": "a470d120f3335d225a63fef084b03af57a01d6e8fdeacdaf3d8dbea0c7689c83",
       "spoken_text": "いつも窓際の同じ席で、少し酸っぱいお酒を頼むんですよ。",
       "subtitle_templates": [
         "每次都坐在窗边，点一杯偏酸的酒，连位置都不怎么换呢。",
@@ -617,6 +770,9 @@
       "line_key": "xm_07_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_03_290416b77d10",
+      "audio_file": "xm_voice_ja_xm_07_03_290416b77d10.ogg",
+      "source_sha256": "290416b77d103f5121beadc6d2e4336ccd2fec051e5f1a139f367fa89e69bb9c",
+      "packaged_sha256": "c07601f282703132468f89c8b4645e425ca9979ed480fc201782cad9342cbeeb",
       "spoken_text": "昨日なんて、入ってすぐ「いつもの」って。もう、何を作ればいいかすぐ分かっちゃいました。",
       "subtitle_templates": [
         "昨天他一进门就说了句“老样子”，我一下就知道该调哪杯了。",
@@ -629,6 +785,9 @@
       "line_key": "xm_07_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_04_4776a5542a9b",
+      "audio_file": "xm_voice_ja_xm_07_04_4776a5542a9b.ogg",
+      "source_sha256": "4776a5542a9be3625ea3d8fe6479ee61a1206a3a98652d6501a76ba024b153a9",
+      "packaged_sha256": "0673c22632a24798ae9de08bd8b3cd3b41e38175e1e96a6aeb93ed840bd53e94",
       "spoken_text": "えへへ、うちにも「いつもの」で通じるお客さんができたんですね。",
       "subtitle_templates": [
         "嘿嘿，原来我的店里，也有会说“老样子”的客人啦。",
@@ -641,6 +800,9 @@
       "line_key": "xm_07_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_shop_a1d45cd09440",
+      "audio_file": "xm_voice_ja_xm_07_shop_a1d45cd09440.ogg",
+      "source_sha256": "a1d45cd09440cc5b0bbcbdc6b1e4b919f62beed9dfa6f1a8f40208609ea0f4d4",
+      "packaged_sha256": "55164ea32e688866c72071a0f2fa340c8890cb6789f35a2f7bfe65f18c533079",
       "spoken_text": "今日は食べ物を少し買いたくて。",
       "subtitle_templates": [
         "今天想买点吃的。带了 {0} 信用点。",
@@ -653,6 +815,9 @@
       "line_key": "xm_07_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_accept_b973e6d737f2",
+      "audio_file": "xm_voice_ja_xm_02_accept_b973e6d737f2.ogg",
+      "source_sha256": "b973e6d737f233df43085dbab10b091e1701390b569c46712c0b3787afb9abad",
+      "packaged_sha256": "4006a63d7bcc4cf9147f071011cd1e65260ae0d486bdf86b9c966bac965ef5d2",
       "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -665,6 +830,9 @@
       "line_key": "xm_07_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_bye_6b0148817485",
+      "audio_file": "xm_voice_ja_xm_07_bye_6b0148817485.ogg",
+      "source_sha256": "6b01488174851888d328fcdde13c124698692d19ab89e27cb0e720c23e90e5ed",
+      "packaged_sha256": "3227695d33855f54930ebd8d17d4817ec81652bdabbc020848c33ebdd19b10c5",
       "spoken_text": "それじゃ、また。先輩も夜、お時間があったら寄ってくださいね。",
       "subtitle_templates": [
         "那我先走啦。前辈晚上有空，再来坐坐哦。",
@@ -677,6 +845,9 @@
       "line_key": "xm_07_03_late",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_03_late_76d9e028fb84",
+      "audio_file": "xm_voice_ja_xm_07_03_late_76d9e028fb84.ogg",
+      "source_sha256": "76d9e028fb84dba80c3526861971940026ae18a441a3ab63618d915813c3b628",
+      "packaged_sha256": "fe71f8badbc33cb58482443cb4dfb93947f8b8bee1d1c1f583b40589c7276d6d",
       "spoken_text": "この前、その人が入ってくるなり「いつもの」って。私、すぐに何を作ればいいか分かったんです。",
       "subtitle_templates": [
         "前阵子他一进门就说了句“老样子”，我一下就知道该调哪杯了。",
@@ -689,6 +860,9 @@
       "line_key": "xm_08_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_08_01_ecb21108293a",
+      "audio_file": "xm_voice_ja_xm_08_01_ecb21108293a.ogg",
+      "source_sha256": "ecb21108293ac13d76b43311ae2f1046cf379dcaf1ee607a17c0f34d2b6fbe52",
+      "packaged_sha256": "80f33751ba059f698772f1e612ba10a3d1e591dbf8f3d666d98b2969549d5909",
       "spoken_text": "こんばんは、先輩。この前から地元の友達に、自分が写った写真を送ってって言われてて。",
       "subtitle_templates": [
         "晚上好，前辈。前阵子老家的朋友一直催我，叫我发张自己的照片回去。",
@@ -701,6 +875,9 @@
       "line_key": "xm_08_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_08_02_edc83868d0fd",
+      "audio_file": "xm_voice_ja_xm_08_02_edc83868d0fd.ogg",
+      "source_sha256": "edc83868d0fd3de009f357f185e94475b9114c19e765c03cde0059ff10aa903e",
+      "packaged_sha256": "645ae03505b459f720cc7247a69da64adc21cb9e474e089ac97e97e51dfad606",
       "spoken_text": "昨日、いつも来てくれる夜勤の女の子たちに頼んだら、みんな撮りたいって言ってくれたんです。",
       "subtitle_templates": [
         "昨晚我请几位常来的夜班姑娘帮忙，她们还抢着说要给我拍呢。",
@@ -713,6 +890,9 @@
       "line_key": "xm_08_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_08_03_ec2bcbf6b35b",
+      "audio_file": "xm_voice_ja_xm_08_03_ec2bcbf6b35b.ogg",
+      "source_sha256": "ec2bcbf6b35bf5b28503faf087893f99ea6cff7348c14402ade78f6c8cd76864",
+      "packaged_sha256": "778ce4ac82c9522043b0bbbb4f471838b5d37b0545651dae607eceda701bc5bb",
       "spoken_text": "「店長は、やっぱりカウンターの中でしょ！」って言われて……おとなしく戻りました。",
       "subtitle_templates": [
         "她们说：“老板，当然要站在吧台后面呀！”……我就乖乖站回去了。",
@@ -725,6 +905,9 @@
       "line_key": "xm_08_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_08_04_a6e4adc07f8f",
+      "audio_file": "xm_voice_ja_xm_08_04_a6e4adc07f8f.ogg",
+      "source_sha256": "a6e4adc07f8fa2e9b48d7543db0fceb134dbab279577897a564d01a479ff513d",
+      "packaged_sha256": "d41125e94d2e56af5b3d281499708070ab511a50848ab530b4e4cb6bc12836b2",
       "spoken_text": "窓の雨が写ってる一枚を選んで、もう友達に送りました。 けっこういい感じなんですよ。",
       "subtitle_templates": [
         "最后挑了一张窗上有雨的，已经发给朋友们啦。嘿嘿，拍得还挺不错呢。",
@@ -737,6 +920,9 @@
       "line_key": "xm_08_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_shop_e7f07c13214a",
+      "audio_file": "xm_voice_ja_xm_13_shop_e7f07c13214a.ogg",
+      "source_sha256": "e7f07c13214a0fc2aa66fa76d4c0c344e2699dfb867a6cd58b3e8497222d2c73",
+      "packaged_sha256": "03f7bbbd317869af5dfac8da67835c82e03f78ba646ee6ce87b631e61f91a398",
       "spoken_text": "今日は日用品を少し買いたくて。",
       "subtitle_templates": [
         "今天想买点日用品。带了 {0} 信用点。",
@@ -749,6 +935,9 @@
       "line_key": "xm_08_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_accept_b973e6d737f2",
+      "audio_file": "xm_voice_ja_xm_02_accept_b973e6d737f2.ogg",
+      "source_sha256": "b973e6d737f233df43085dbab10b091e1701390b569c46712c0b3787afb9abad",
+      "packaged_sha256": "4006a63d7bcc4cf9147f071011cd1e65260ae0d486bdf86b9c966bac965ef5d2",
       "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -761,6 +950,9 @@
       "line_key": "xm_08_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_08_bye_51f50bed67d3",
+      "audio_file": "xm_voice_ja_xm_08_bye_51f50bed67d3.ogg",
+      "source_sha256": "51f50bed67d3933ce77233db0c487cdb82fb28e8fd4742889375c99d4e0e5bf4",
+      "packaged_sha256": "2db6a0667d48d916a59c27a85f238490c435c248fd712c957de31c3d50d223b7",
       "spoken_text": "それじゃ、また。時間があったら、顔を出してくださいね。",
       "subtitle_templates": [
         "那我先走啦。前辈有空再来坐坐哦。",
@@ -773,6 +965,9 @@
       "line_key": "xm_08_02_late",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_08_02_late_8b9d6ce1399c",
+      "audio_file": "xm_voice_ja_xm_08_02_late_8b9d6ce1399c.ogg",
+      "source_sha256": "8b9d6ce1399c7c2db30f78b5d8c0d147b4b16c1ab3b66f0345ce1a97362a7579",
+      "packaged_sha256": "23cccbd4dd1a7d7d35c4923f3cf22634ced19026e5beb1ebe024f4efffe87baf",
       "spoken_text": "この前、よく来てくれる夜勤の女の子たちにお願いしたら、みんな「私が撮る」って、張り切ってくれて。",
       "subtitle_templates": [
         "前阵子我请几位常来的夜班姑娘帮忙，她们还抢着说要给我拍呢。",
@@ -785,6 +980,9 @@
       "line_key": "xm_09_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_09_01_769fa9a9f69c",
+      "audio_file": "xm_voice_ja_xm_09_01_769fa9a9f69c.ogg",
+      "source_sha256": "769fa9a9f69c7345f518bd693b4de0c956abf533524cf2623179eab560f4c6f7",
+      "packaged_sha256": "4569fc2237ae67c5674356ffc6de857f78ff3e7ed7caea97cddb6a26f2d4bc12",
       "spoken_text": "こんばんは、先輩。最近、お店の調子がどんどんよくなってきて。",
       "subtitle_templates": [
         "晚上好，前辈。最近店里生意越来越好啦。",
@@ -797,6 +995,9 @@
       "line_key": "xm_09_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_09_02_8c8bbea9d301",
+      "audio_file": "xm_voice_ja_xm_09_02_8c8bbea9d301.ogg",
+      "source_sha256": "8c8bbea9d30159ab1d83bf3d4c4a576669215270efcf408b094f7e55712874c0",
+      "packaged_sha256": "1b0eb06f34046c5c4b86f873fafa9d3df71a4ad54f386c569e75e4114c368925",
       "spoken_text": "先週はいつもより多めに用意したのに、それでも足りなかったんですよ。",
       "subtitle_templates": [
         "上周特意多准备了一批酒，结果还是不够卖呢。",
@@ -809,6 +1010,9 @@
       "line_key": "xm_09_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_09_03_80ba8ea13ff2",
+      "audio_file": "xm_voice_ja_xm_09_03_80ba8ea13ff2.ogg",
+      "source_sha256": "80ba8ea13ff22c5dfb29e85a9303a6f826cd9db48c877da8d377fe8498676d71",
+      "packaged_sha256": "e9ea97f5f5bc2e6e686c401f1df3f357fbb90665dd528df916cdb0318e8cc28d",
       "spoken_text": "週末の分を取り置きできるか、聞いてくれたお客さんまでいて。 次は材料をもう少し増やさないと。",
       "subtitle_templates": [
         "有几位客人还提前来问，能不能帮他们留到周末。嘿嘿，看来下次得再多进些原料了。",
@@ -821,6 +1025,9 @@
       "line_key": "xm_09_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_shop_a1d45cd09440",
+      "audio_file": "xm_voice_ja_xm_07_shop_a1d45cd09440.ogg",
+      "source_sha256": "a1d45cd09440cc5b0bbcbdc6b1e4b919f62beed9dfa6f1a8f40208609ea0f4d4",
+      "packaged_sha256": "55164ea32e688866c72071a0f2fa340c8890cb6789f35a2f7bfe65f18c533079",
       "spoken_text": "今日は食べ物を少し買いたくて。",
       "subtitle_templates": [
         "今天想买点吃的。带了 {0} 信用点。",
@@ -833,6 +1040,9 @@
       "line_key": "xm_09_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_accept_b973e6d737f2",
+      "audio_file": "xm_voice_ja_xm_02_accept_b973e6d737f2.ogg",
+      "source_sha256": "b973e6d737f233df43085dbab10b091e1701390b569c46712c0b3787afb9abad",
+      "packaged_sha256": "4006a63d7bcc4cf9147f071011cd1e65260ae0d486bdf86b9c966bac965ef5d2",
       "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -845,6 +1055,9 @@
       "line_key": "xm_09_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_09_bye_80755cbf6ed6",
+      "audio_file": "xm_voice_ja_xm_09_bye_80755cbf6ed6.ogg",
+      "source_sha256": "80755cbf6ed686dc763d42e33f51dcd31a24ce1662a74b05224c76905d15ba2e",
+      "packaged_sha256": "95e539e17b0942255e6aef0f37a5c06a5b36dd0a874deff2863a171459cc28e3",
       "spoken_text": "それじゃ、また。夜、お時間があったら寄ってくださいね。",
       "subtitle_templates": [
         "那我先走啦。晚上有空的话，来坐坐哦。",
@@ -857,6 +1070,9 @@
       "line_key": "xm_09_02_late",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_09_02_late_35b537f5c384",
+      "audio_file": "xm_voice_ja_xm_09_02_late_35b537f5c384.ogg",
+      "source_sha256": "35b537f5c384f4d2539050aff5162f5f544a6328090987059942dd9f0d371b15",
+      "packaged_sha256": "25f7f8f6df4ed84cf1d814b17ad37da96de834e79e014e1d21443b8a5dd618e5",
       "spoken_text": "この前は、わざわざ一仕込み多めに用意したのに、それでも足りなかったんですよ。",
       "subtitle_templates": [
         "前阵子特意多准备了一批酒，结果还是不够卖呢。",
@@ -869,6 +1085,9 @@
       "line_key": "xm_10_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_10_01_ed7c50b197e7",
+      "audio_file": "xm_voice_ja_xm_10_01_ed7c50b197e7.ogg",
+      "source_sha256": "ed7c50b197e7c48526cb3711e828c5381411a8af3746eae972664486827690e0",
+      "packaged_sha256": "f04772229b3a1eadc8d6d6cd6ed160dccce1cfa718339715abf78c461a12b3aa",
       "spoken_text": "こんばんは、先輩。先週オープンした「きょくちゅう」っていうバー、知ってますか？ 昨日、ちょっと見に行ってきたんです。",
       "subtitle_templates": [
         "晚上好，前辈。你知道上周新开的那家叫「极昼」的酒廊吗？昨天我去看了看。",
@@ -881,6 +1100,9 @@
       "line_key": "xm_10_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_10_02_5eee7cce8103",
+      "audio_file": "xm_voice_ja_xm_10_02_5eee7cce8103.ogg",
+      "source_sha256": "5eee7cce8103dc46e8e41bfc6cd247e3239723814b020edefc6d407f212129b5",
+      "packaged_sha256": "a3657ada8bec6dc5d78a20607550df67a362d2656929fefb724c1e49b0fa3e20",
       "spoken_text": "あそこの機械、すごかったです。お酒もちゃんとおいしくて。行列ができるのも分かるなあって。",
       "subtitle_templates": [
         "那里的调酒设备真的很厉害，酒的味道也不错。难怪那么多人排队呢。",
@@ -893,6 +1115,9 @@
       "line_key": "xm_10_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_10_03_a41ddda84ac8",
+      "audio_file": "xm_voice_ja_xm_10_03_a41ddda84ac8.ogg",
+      "source_sha256": "a41ddda84ac836f35a9d2cdecaa2267c3a06dbd0c3fb03ec0c4fca666be2f1e4",
+      "packaged_sha256": "2c2799ceca39aeef5d3746a8c3300b71ebfd684dbdb2c97de80d87c9facb7b41",
       "spoken_text": "あんなにいい材料で全品七割引きなんて、ずっとは続けられないですよね。",
       "subtitle_templates": [
         "那么好的原料还能做到全场三折，应该不能长久吧。",
@@ -905,6 +1130,9 @@
       "line_key": "xm_10_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_10_04_a0345d0d48f8",
+      "audio_file": "xm_voice_ja_xm_10_04_a0345d0d48f8.ogg",
+      "source_sha256": "a0345d0d48f8ff60fe64e2d5a4e5986a045cc5de4ae1185743cd27101de6147a",
+      "packaged_sha256": "60c993df9e37ee64128df7765a491a71c8d577c21a07199fd0b5b6d840436c8b",
       "spoken_text": "うちに来てくれたことのあるお客さんにも会いました。向こうから笑って声をかけてくれて。",
       "subtitle_templates": [
         "还碰见了几个以前来我店里的客人。他们看见我，还挺高兴地打招呼呢。",
@@ -917,6 +1145,9 @@
       "line_key": "xm_10_05",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_10_05_8547bc44c919",
+      "audio_file": "xm_voice_ja_xm_10_05_8547bc44c919.ogg",
+      "source_sha256": "8547bc44c9190981f133bb0f15cc397359a7f8a5db31f50174f4f30c17065904",
+      "packaged_sha256": "71f59a0281d325daa3cdf544f681c6e9f688064279852ad92f2b8368743f01d4",
       "spoken_text": "最近、予約が少し減ったみたいです。もう少し様子を見て、あそこの割引が終わるのを待とうかなって。",
       "subtitle_templates": [
         "最近预订好像少了一些。我想再观察几天，等那家店的折扣期过去。",
@@ -929,6 +1160,9 @@
       "line_key": "xm_10_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_shop_f29e2cd5861f",
+      "audio_file": "xm_voice_ja_xm_04_shop_f29e2cd5861f.ogg",
+      "source_sha256": "f29e2cd5861fad4d2779dfe9016102606cba3e20c953b2e3e829b53a8760cbb5",
+      "packaged_sha256": "3e84cba1e8ef517cf1c2c51f9fce449afb3e10551375b3acbfb6f53cf353aa22",
       "spoken_text": "今日は飲み水を少し買いたくて。",
       "subtitle_templates": [
         "今天想买点饮用水。带了 {0} 信用点。",
@@ -941,6 +1175,9 @@
       "line_key": "xm_10_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_10_accept_15f25debc37d",
+      "audio_file": "xm_voice_ja_xm_10_accept_15f25debc37d.ogg",
+      "source_sha256": "15f25debc37d762d30caf3d6345ebfeaae8245967ecc9b73442f65410833913c",
+      "packaged_sha256": "afc52850d1e2c61049450406bae16789330a8b11425e85f6c2cff443f7202f7a",
       "spoken_text": "ありがとうございます。助かります。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -953,6 +1190,9 @@
       "line_key": "xm_10_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_10_bye_f1f7fd4affaf",
+      "audio_file": "xm_voice_ja_xm_10_bye_f1f7fd4affaf.ogg",
+      "source_sha256": "f1f7fd4affaf2cf291557c4b9c6402461edafa2a2c3782ac604e35206b239afc",
+      "packaged_sha256": "6b1fdd250840ca0e71ba0c28727cfab1d9bb5f9bad471c4c78e61d5cd91b3a71",
       "spoken_text": "それじゃ、また。先輩も、夜に時間があったら寄ってくださいね。",
       "subtitle_templates": [
         "那我先走啦。前辈晚上有空，还是欢迎来坐坐哦。",
@@ -965,6 +1205,9 @@
       "line_key": "xm_10_01_late",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_10_01_late_a968e92bfbf0",
+      "audio_file": "xm_voice_ja_xm_10_01_late_a968e92bfbf0.ogg",
+      "source_sha256": "a968e92bfbf0a8d8260519dd04dcfe4f9286918d3ab69a4f79db00c564a6a893",
+      "packaged_sha256": "5cc395ffcdab7d781735c547ffd89fb179ffd4e0210373fff2087ced37fe65e7",
       "spoken_text": "こんばんは、先輩。この前オープンした「きょくちゅう」っていうラウンジ、知っていますか？ 先日、見に行ってきたんです。",
       "subtitle_templates": [
         "晚上好，前辈。你知道前阵子新开的那家叫「极昼」的酒廊吗？前些天我去看了看。",
@@ -977,6 +1220,9 @@
       "line_key": "xm_11_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_11_01_688da105d6ef",
+      "audio_file": "xm_voice_ja_xm_11_01_688da105d6ef.ogg",
+      "source_sha256": "688da105d6efd4fb990b9959c68ee00f79e2d300f1ee51eb1f3360a3188f0b7e",
+      "packaged_sha256": "03596d67705c34b0d093306d2f326f57780ce41760e08ef8349999a513f590b6",
       "spoken_text": "こんばんは、先輩。「きょくちゅう」の割引、まだ続くらしいんです。",
       "subtitle_templates": [
         "晚上好，前辈。极昼那边的折扣，好像还要继续呢。",
@@ -989,6 +1235,9 @@
       "line_key": "xm_11_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_11_02_c3b9ffc862d6",
+      "audio_file": "xm_voice_ja_xm_11_02_c3b9ffc862d6.ogg",
+      "source_sha256": "c3b9ffc862d6ab4b24a3ea6ecb66652a0bf94892d41a921a393a22feb733bdca",
+      "packaged_sha256": "1bf839b9728a50ac41d3b92cdbecd60bfb7767a35688eca1d6552e11826b8a85",
       "spoken_text": "自分でも計算したんですけど、あの値段に合わせたら材料代さえ出なくて。",
       "subtitle_templates": [
         "我仔细算过了。要是照他们的价格卖，连原料钱都不够呢。",
@@ -1001,6 +1250,9 @@
       "line_key": "xm_11_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_11_03_06fb988983c8",
+      "audio_file": "xm_voice_ja_xm_11_03_06fb988983c8.ogg",
+      "source_sha256": "06fb988983c8aa47f3802278ba5d29290597105314cb9bcf9374702f5f3244b2",
+      "packaged_sha256": "0820f69effdb5e2178fcee3acce6a1db301f98986059ed8f55e8072bb0a85ac3",
       "spoken_text": "最近、お客さんが少なくなったので、営業時間を変えたんです。前は午前二時までだったけど、今は夜の十二時までに。",
       "subtitle_templates": [
         "最近来的客人比较少，我把营业时间改了一下。原来写到凌晨两点，现在改成十二点了。",
@@ -1013,6 +1265,9 @@
       "line_key": "xm_11_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_11_04_7208891ee321",
+      "audio_file": "xm_voice_ja_xm_11_04_7208891ee321.ogg",
+      "source_sha256": "7208891ee321a11bc7f723d5dac8574a769f8112e095d6403bc36deb164076e2",
+      "packaged_sha256": "6af993ccf86568d86a0f64079257e2fa0245c84786e8fcf2009c9bf2c314437e",
       "spoken_text": "開店した頃は、みんな遅くまでいてくれて大変だったのに。今は早く閉められますね。",
       "subtitle_templates": [
         "开店的时候，总嫌客人待到太晚。现在倒是能早点收店啦。",
@@ -1025,6 +1280,9 @@
       "line_key": "xm_11_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_shop_e7f07c13214a",
+      "audio_file": "xm_voice_ja_xm_13_shop_e7f07c13214a.ogg",
+      "source_sha256": "e7f07c13214a0fc2aa66fa76d4c0c344e2699dfb867a6cd58b3e8497222d2c73",
+      "packaged_sha256": "03f7bbbd317869af5dfac8da67835c82e03f78ba646ee6ce87b631e61f91a398",
       "spoken_text": "今日は日用品を少し買いたくて。",
       "subtitle_templates": [
         "今天想买些日用品。带了 {0} 信用点。",
@@ -1037,6 +1295,9 @@
       "line_key": "xm_11_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_accept_b973e6d737f2",
+      "audio_file": "xm_voice_ja_xm_02_accept_b973e6d737f2.ogg",
+      "source_sha256": "b973e6d737f233df43085dbab10b091e1701390b569c46712c0b3787afb9abad",
+      "packaged_sha256": "4006a63d7bcc4cf9147f071011cd1e65260ae0d486bdf86b9c966bac965ef5d2",
       "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -1049,6 +1310,9 @@
       "line_key": "xm_11_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_11_bye_fbef509d9463",
+      "audio_file": "xm_voice_ja_xm_11_bye_fbef509d9463.ogg",
+      "source_sha256": "fbef509d94637cc4ba3d08c89e9b687e9e704f9d5549995bcf264e6f210bcb8e",
+      "packaged_sha256": "2119d1dbe5442eecc8cda5e9b8dcc14ec6ca0de7c296652fbeaf6f2da17d6d0f",
       "spoken_text": "それじゃ、帰りますね。先輩、夜に来るなら少し早めにお願いします。",
       "subtitle_templates": [
         "那我先回去啦。前辈晚上要来的话，记得早点哦。",
@@ -1061,6 +1325,9 @@
       "line_key": "xm_12_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_12_01_b17d092f3862",
+      "audio_file": "xm_voice_ja_xm_12_01_b17d092f3862.ogg",
+      "source_sha256": "b17d092f3862991090741759ca64405e75c68f241b107e933019922159497672",
+      "packaged_sha256": "20f74e9aefffba7a808269eafc1e26fd245687939ac9175103876896b352729f",
       "spoken_text": "こんばんは、先輩。昨日、お母さんから電話があって。",
       "subtitle_templates": [
         "晚上好，前辈。昨天妈妈给我打电话了呢。",
@@ -1073,6 +1340,9 @@
       "line_key": "xm_12_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_12_02_9b989e44268d",
+      "audio_file": "xm_voice_ja_xm_12_02_9b989e44268d.ogg",
+      "source_sha256": "9b989e44268d72449ea8484c1bf719505ab95ce6e692762ec998d396f82c19ef",
+      "packaged_sha256": "25cc9884c0ad6ebd362c5e466b31739f1dddacd7c5d9cf0dbaa4b56dd6314d42",
       "spoken_text": "地元の桜が咲いたって、写真をいっぱい送ってくれました。",
       "subtitle_templates": [
         "她说老家的樱花开了，还拍了好多照片给我。",
@@ -1085,6 +1355,9 @@
       "line_key": "xm_12_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_12_03_d9ab938fbbc1",
+      "audio_file": "xm_voice_ja_xm_12_03_d9ab938fbbc1.ogg",
+      "source_sha256": "d9ab938fbbc10d212b0881c74310c7eee9d2aeeddd02d85d2f681d74156ea0e2",
+      "packaged_sha256": "309b21214308c6a564519f2f1fbf97a04f7377b5f7c06ed7ed1dbe5e35d5f302",
       "spoken_text": "桜を見るの、久しぶりだなあって。写真を見てたら、春みたいなお酒を作りたくなって。",
       "subtitle_templates": [
         "好久没见到樱花了呀。看着那些照片，突然很想调一杯带着春天气息的酒。",
@@ -1097,6 +1370,9 @@
       "line_key": "xm_12_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_12_04_3ab451bc1b87",
+      "audio_file": "xm_voice_ja_xm_12_04_3ab451bc1b87.ogg",
+      "source_sha256": "3ab451bc1b871da710407418552b9027e06f8645c96d58aba8a4204a510a9f40",
+      "packaged_sha256": "00af5f10567c8091fd13e1b643c69876df661b4bbaa1f161907a30f8056e579b",
       "spoken_text": "昨夜、一杯試してみたら、思ったよりいい感じにできたんです。先輩、夜に時間があったら飲みに来てくださいね。",
       "subtitle_templates": [
         "昨晚试着做了一杯，味道意外地不错呢。前辈晚上有空的话，来尝尝吧。",
@@ -1109,6 +1385,9 @@
       "line_key": "xm_12_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_07_shop_a1d45cd09440",
+      "audio_file": "xm_voice_ja_xm_07_shop_a1d45cd09440.ogg",
+      "source_sha256": "a1d45cd09440cc5b0bbcbdc6b1e4b919f62beed9dfa6f1a8f40208609ea0f4d4",
+      "packaged_sha256": "55164ea32e688866c72071a0f2fa340c8890cb6789f35a2f7bfe65f18c533079",
       "spoken_text": "今日は食べ物を少し買いたくて。",
       "subtitle_templates": [
         "今天想买点吃的。带了 {0} 信用点。",
@@ -1121,6 +1400,9 @@
       "line_key": "xm_12_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_03_accept_1f4a82d11d3e",
+      "audio_file": "xm_voice_ja_xm_03_accept_1f4a82d11d3e.ogg",
+      "source_sha256": "1f4a82d11d3eb5dce27927c94fdc64a897dcaee5433c73997ded3efaa2930d6a",
+      "packaged_sha256": "e0141fa716d765e8b092881b7b3b806c8cf8db3dacd93151bc988d9812d21cc9",
       "spoken_text": "ありがとうございます。ちょうど助かります。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -1133,6 +1415,9 @@
       "line_key": "xm_12_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_12_bye_6ea0241c7c2f",
+      "audio_file": "xm_voice_ja_xm_12_bye_6ea0241c7c2f.ogg",
+      "source_sha256": "6ea0241c7c2fa41b046eab54f18203d4157d657d5984b497afe81f8d8d983960",
+      "packaged_sha256": "9821dcc15efdb9aeeb79ed574b1426b11036d15e194f50798efb5d3121af6407",
       "spoken_text": "それじゃ、そろそろ。また夜に、先輩。",
       "subtitle_templates": [
         "那我先走啦。晚上见，前辈。",
@@ -1145,6 +1430,9 @@
       "line_key": "xm_13_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_01_a213023a8d4a",
+      "audio_file": "xm_voice_ja_xm_13_01_a213023a8d4a.ogg",
+      "source_sha256": "a213023a8d4af31cb731d0f13cea2327f3d796dd846fa6a16bd7cd37fac87f3f",
+      "packaged_sha256": "b6ddbc2910b36be1f46fde74b64b1b5991306e92402a6b61ccddae084f064ca9",
       "spoken_text": "こんばんは、先輩。契約の再審査の結果が届いたんです。",
       "subtitle_templates": [
         "晚上好，前辈。合同复核的结果寄来了。",
@@ -1157,6 +1445,9 @@
       "line_key": "xm_13_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_02_2ae51fce33e6",
+      "audio_file": "xm_voice_ja_xm_13_02_2ae51fce33e6.ogg",
+      "source_sha256": "2ae51fce33e64947c4a63aed4c373be11abe12e980a6beef0c4d781aa1b78a0f",
+      "packaged_sha256": "33bed412923972ffa1a3e2d94005216c056bd655463bec068581c4645d10401b",
       "spoken_text": "宣伝の予定は変更できても、家賃の差額は契約どおり返さないといけないそうです。",
       "subtitle_templates": [
         "他们说，推广安排可以调整，租金的差额却得按约定还。",
@@ -1169,6 +1460,9 @@
       "line_key": "xm_13_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_03_b52686f0b82b",
+      "audio_file": "xm_voice_ja_xm_13_03_b52686f0b82b.ogg",
+      "source_sha256": "b52686f0b82bb964e7e4b82d503e591755bb41cd8c788a5050486689c902f585",
+      "packaged_sha256": "2e39880a4034c51b5886c4b887297f862be7ee65c3b078ae967225b929099d09",
       "spoken_text": "残っている支払いも計算してみました。これ以上お金を借りてお店を続けても、借金が増えるだけで。",
       "subtitle_templates": [
         "我把剩下的账算过了。再借钱把店开下去，只会欠得更多。",
@@ -1181,6 +1475,9 @@
       "line_key": "xm_13_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_04_c059187fe631",
+      "audio_file": "xm_voice_ja_xm_13_04_c059187fe631.ogg",
+      "source_sha256": "c059187fe631f0efaf781c7001d53d5a17e375ff80b8bad0434ffa968d20c840",
+      "packaged_sha256": "8081f3e5fda5b1720854c4dbf007650a6aa67fa8a78c1d85366407f2ec2ab50c",
       "spoken_text": "だから……お店を閉めることにしました。まずは荷物を片づけようと思います。",
       "subtitle_templates": [
         "所以……我决定关店了。这几天先把东西整理好。",
@@ -1193,6 +1490,9 @@
       "line_key": "xm_13_05",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_05_a1cc4e582caa",
+      "audio_file": "xm_voice_ja_xm_13_05_a1cc4e582caa.ogg",
+      "source_sha256": "a1cc4e582caad2aa436eac145d8736508dfdc564a927b67191dfdc76cfa7d4e1",
+      "packaged_sha256": "e85093a3cee887da290063c68dc75052a43454d9d312fa02a2657058f02ddfd0",
       "spoken_text": "最近、丈夫な箱を探してるんです。グラスって、服よりずっと荷造りが大変なんですね。",
       "subtitle_templates": [
         "最近在找结实一点的箱子。那些酒杯呀，比衣服难装多了呢。",
@@ -1205,6 +1505,9 @@
       "line_key": "xm_13_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_shop_e7f07c13214a",
+      "audio_file": "xm_voice_ja_xm_13_shop_e7f07c13214a.ogg",
+      "source_sha256": "e7f07c13214a0fc2aa66fa76d4c0c344e2699dfb867a6cd58b3e8497222d2c73",
+      "packaged_sha256": "03f7bbbd317869af5dfac8da67835c82e03f78ba646ee6ce87b631e61f91a398",
       "spoken_text": "今日は日用品を少し買いたくて。",
       "subtitle_templates": [
         "今天想买点日用品。带了 {0} 信用点。",
@@ -1217,6 +1520,9 @@
       "line_key": "xm_13_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_02_accept_b973e6d737f2",
+      "audio_file": "xm_voice_ja_xm_02_accept_b973e6d737f2.ogg",
+      "source_sha256": "b973e6d737f233df43085dbab10b091e1701390b569c46712c0b3787afb9abad",
+      "packaged_sha256": "4006a63d7bcc4cf9147f071011cd1e65260ae0d486bdf86b9c966bac965ef5d2",
       "spoken_text": "ありがとうございます。ちょうど必要だったんです。",
       "subtitle_templates": [
         "谢谢。正好用得上。",
@@ -1229,6 +1535,9 @@
       "line_key": "xm_13_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_13_bye_a5e09149ceac",
+      "audio_file": "xm_voice_ja_xm_13_bye_a5e09149ceac.ogg",
+      "source_sha256": "a5e09149ceace0c364a7555403303ae4010767c1759c9bc17d41325b0e26104e",
+      "packaged_sha256": "44c7e8258b3950f22f5fb7302a97771064db19146c4fb77661b16a6c192f9061",
       "spoken_text": "それじゃ、片づけに戻りますね。時間があったら、また少し寄ってください。",
       "subtitle_templates": [
         "那我先回去收拾啦。前辈有空的话，还可以来坐坐。",
@@ -1241,6 +1550,9 @@
       "line_key": "xm_14_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_14_01_49840ca45581",
+      "audio_file": "xm_voice_ja_xm_14_01_49840ca45581.ogg",
+      "source_sha256": "49840ca455816a7e896eff919fb21a8faad93e530cd68e080d1dbc60e32b3251",
+      "packaged_sha256": "7baf9cac6c91a9ded4d394cd8c0dbf2beeb22a64b4dd6f9b0a53a08607341cac",
       "spoken_text": "……こんばんは、先輩。明日、船で実家に帰るんです。",
       "subtitle_templates": [
         "……晚上好，前辈。明天就坐船回老家了。",
@@ -1253,6 +1565,9 @@
       "line_key": "xm_14_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_14_02_e5b18a2b20a8",
+      "audio_file": "xm_voice_ja_xm_14_02_e5b18a2b20a8.ogg",
+      "source_sha256": "e5b18a2b20a8df6ae6353b0fb04f8bfbad94c6dbd34a05f7a5f26fb1f430e841",
+      "packaged_sha256": "253c8804ab5d4814a9bc50e7b43f9752ec3919a0bc008774909feda211bd5cf5",
       "spoken_text": "グラスは全部送って、残った荷物はリュックひとつだけ。引っ越してきた頃みたいですね。",
       "subtitle_templates": [
         "杯子都寄走啦，剩下的东西只有一个背包。倒像刚搬来那会儿呢。",
@@ -1265,6 +1580,9 @@
       "line_key": "xm_14_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_14_shop_e9cb1a8564b2",
+      "audio_file": "xm_voice_ja_xm_14_shop_e9cb1a8564b2.ogg",
+      "source_sha256": "e9cb1a8564b2d0b390a4d7b5720510de42c3132b952bf1fec92318731df125c1",
+      "packaged_sha256": "d4d0c9a999ad82c26bfccf7cbec03f0a3334e351b9f22305275c2732b5379ce6",
       "spoken_text": "船で飲む水を少し買いたくて。",
       "subtitle_templates": [
         "想买点路上喝的水。带了 {0} 信用点。",
@@ -1277,6 +1595,9 @@
       "line_key": "xm_14_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_14_accept_fb7d612a740c",
+      "audio_file": "xm_voice_ja_xm_14_accept_fb7d612a740c.ogg",
+      "source_sha256": "fb7d612a740c89808f5e29d97abbe0d2fd874cb0a2d111da7ab792d2845976ae",
+      "packaged_sha256": "13175ec93a99f2a8b90ddcf55d33ded20c28572728661fbf1641ab129a01e892",
       "spoken_text": "うん、ありがとう。ちょうどよかった。",
       "subtitle_templates": [
         "嗯，谢谢。正好。",
@@ -1289,6 +1610,9 @@
       "line_key": "xm_14_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_14_bye_4a205706e197",
+      "audio_file": "xm_voice_ja_xm_14_bye_4a205706e197.ogg",
+      "source_sha256": "4a205706e197cb07cd8238859ba3d99b147d6579616168110cfa2cd1091a794b",
+      "packaged_sha256": "10ae72648e5dc04f40477606d82745ec0f71a98e9ce930490256a740f2673f79",
       "spoken_text": "それじゃ……行きますね。先輩、元気で。",
       "subtitle_templates": [
         "那……我走啦。前辈，保重。",
@@ -1301,6 +1625,9 @@
       "line_key": "xm_tavern_w02_entry_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_entry_01_b5ff815e744a",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_entry_01_b5ff815e744a.ogg",
+      "source_sha256": "b5ff815e744a37fcc432ca60deafdecccb11acfdc0d3dbab32f13cccc7d3fb70",
+      "packaged_sha256": "dc99feb1350eb75e8227654831da72ee6d697d0878f9c55e212a7fa4cdf54259",
       "spoken_text": "いらっしゃいませ……あっ、店長さん。",
       "subtitle_templates": [
         "欢迎光临……啊，是店长先生。",
@@ -1313,6 +1640,9 @@
       "line_key": "xm_tavern_w02_entry_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_entry_02_3a21ad8f60a4",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_entry_02_3a21ad8f60a4.ogg",
+      "source_sha256": "3a21ad8f60a4dc9b4154e90dbf99e84afb153aee061c16cfe3838d117cd2a287",
+      "packaged_sha256": "28da91e9b332af7cdbd355b0a81b1dbeb8592d5809e045ad6cb76daa54cc2437",
       "spoken_text": "ずっと、来てくださるのを楽しみにしてたんです。",
       "subtitle_templates": [
         "一直盼着您来呢。",
@@ -1325,6 +1655,9 @@
       "line_key": "xm_tavern_w02_entry_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_entry_03_80fd42247991",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_entry_03_80fd42247991.ogg",
+      "source_sha256": "80fd42247991897b0e802c4293654d3b37358668960177f679fc26c1976d4e42",
+      "packaged_sha256": "0d3cedd0ca14d1d8bb7e884fa7f8889a9e21207931bfb278d7f1390832b10a1f",
       "spoken_text": "自分のお店で「いらっしゃいませ」って言うの、まだちょっと慣れなくて。",
       "subtitle_templates": [
         "我好像还不太习惯，在自己的店里说“欢迎光临”呢。",
@@ -1337,6 +1670,9 @@
       "line_key": "xm_tavern_w02_reentry",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_reentry_22f0b66c0e87",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_reentry_22f0b66c0e87.ogg",
+      "source_sha256": "22f0b66c0e87299501baade25a36468c3fa3ddf9820d762183b6df456ec6b5b5",
+      "packaged_sha256": "ba22da29753f109ab1e75f227d0f464381185ee5f3738e6cce763425cdda09d7",
       "spoken_text": "あ、店長さん。また会いましたね。",
       "subtitle_templates": [
         "啊，店长先生。又见面啦。",
@@ -1349,6 +1685,9 @@
       "line_key": "xm_tavern_greeting",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_greeting_03930a26ec50",
+      "audio_file": "xm_voice_ja_xm_tavern_greeting_03930a26ec50.ogg",
+      "source_sha256": "03930a26ec5009b434859af2854dd3c44f9b50506a85afc84e27fd3a3892c1f8",
+      "packaged_sha256": "62d3ed5f4c0d5608ff299a34d864a67aed06036e855be87d6e3dba5ca52d3182",
       "spoken_text": "こんばんは、先輩。いらっしゃいませ。",
       "subtitle_templates": [
         "晚上好，前辈。欢迎光临。",
@@ -1361,6 +1700,9 @@
       "line_key": "xm_tavern_greeting_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_greeting_unknown_2d6c16dca2b6",
+      "audio_file": "xm_voice_ja_xm_tavern_greeting_unknown_2d6c16dca2b6.ogg",
+      "source_sha256": "2d6c16dca2b6ef3b1c10cdc2a9be68077f0cb2f4c76ecc1d57eef010efb22a63",
+      "packaged_sha256": "03061b1f69f9e2594ddabfe73dc09f7ec2568daf6a89e95cfa10c23e80b63ab5",
       "spoken_text": "いらっしゃいませ。みちるっていいます。最近、このお店を開いたばかりなんです。",
       "subtitle_templates": [
         "欢迎光临。我叫小满，这间店刚开业不久。",
@@ -1373,6 +1715,9 @@
       "line_key": "xm_tavern_menu_open",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_menu_open_c29723644817",
+      "audio_file": "xm_voice_ja_xm_tavern_menu_open_c29723644817.ogg",
+      "source_sha256": "c297236448175a6be8d3aaa64bad7f71bbaa1a69856449cbe3acabe8be80f4de",
+      "packaged_sha256": "136734dbbed209e03c90fb42c06b31f39249e1b18106d3cec9a743a8841acc3e",
       "spoken_text": "何になさいますか？",
       "subtitle_templates": [
         "请问您需要什么？",
@@ -1385,6 +1730,9 @@
       "line_key": "xm_tavern_w02_menu",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_menu_a7a90f018e20",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_menu_a7a90f018e20.ogg",
+      "source_sha256": "a7a90f018e20a450ba347c4e1b66eef8d8ca0f57a5c2fa8e895ebe45d2463675",
+      "packaged_sha256": "ea4e734c63636631d62f626564287815091703feab7012ca7b4952e07640958b",
       "spoken_text": "こちらが今のメニューです。まだこのくらいの種類しかないんですけど、味には自信があります。",
       "subtitle_templates": [
         "这是现在的酒单。暂时只有这些口味，不过味道我有信心。",
@@ -1397,6 +1745,9 @@
       "line_key": "xm_tavern_order",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_order_3d97eebd61d9",
+      "audio_file": "xm_voice_ja_xm_tavern_order_3d97eebd61d9.ogg",
+      "source_sha256": "3d97eebd61d9cb8264ffa7355a0d5bb7e7501211cf234177b7e5349e084d89db",
+      "packaged_sha256": "2936df51373e59ad9c6fd5c5fed017df80bac620c47ad0e16710414aac2c3870",
       "spoken_text": "はい、少々お待ちください。",
       "subtitle_templates": [
         "好，请稍等一下。",
@@ -1409,6 +1760,9 @@
       "line_key": "xm_tavern_serve",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_serve_18e5f4bcf082",
+      "audio_file": "xm_voice_ja_xm_tavern_serve_18e5f4bcf082.ogg",
+      "source_sha256": "18e5f4bcf08268e173cda1cc11acc863176b676e46551ab5c744807530411145",
+      "packaged_sha256": "24ec3644e485ac4d00a39e1927a26c5547d002f36a7ad465a39be78cbcdcbd67",
       "spoken_text": "どうぞ。お口に合うといいんですけど。",
       "subtitle_templates": [
         "请慢用。希望合您的口味。",
@@ -1421,6 +1775,9 @@
       "line_key": "xm_tavern_no_money",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_no_money_d375822a6a92",
+      "audio_file": "xm_voice_ja_xm_tavern_no_money_d375822a6a92.ogg",
+      "source_sha256": "d375822a6a92565a4815a7b989c95461f03ed7425b013da407b42280b996831c",
+      "packaged_sha256": "4db4782e2b87855b28f3ddae8f9982e24ca050841f47778ecd2663a68b4f991d",
       "spoken_text": "あ……クレジットが少し足りないみたいですね。",
       "subtitle_templates": [
         "啊……信用点好像不太够呢。",
@@ -1433,6 +1790,9 @@
       "line_key": "xm_tavern_no_takeaway",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_no_takeaway_5196a85df002",
+      "audio_file": "xm_voice_ja_xm_tavern_no_takeaway_5196a85df002.ogg",
+      "source_sha256": "5196a85df00226f368cea2d3300d4100e726aa31b86e52298c6fb02d06202bed",
+      "packaged_sha256": "80c609c2abf573014c99eb60a939a617ee4d1c2769e7e40a5d79de041b4fc571",
       "spoken_text": "あ、ごめんなさい……うちのお酒は、今はまだお持ち帰りできないんです。",
       "subtitle_templates": [
         "啊，抱歉……店里的酒暂时还不能外带呢。",
@@ -1445,6 +1805,9 @@
       "line_key": "xm_tavern_drink_limit",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_drink_limit_3d1062022146",
+      "audio_file": "xm_voice_ja_xm_tavern_drink_limit_3d1062022146.ogg",
+      "source_sha256": "3d1062022146a3d29ce4ed4eff43c43b43f13516f86f6787766fdb66446df940",
+      "packaged_sha256": "b30924f8feac66ff1cf37712beb770bb941499568fdb5d78168a2ac89899d6d6",
       "spoken_text": "だめですよ、店長さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
       "subtitle_templates": [
         "不可以哦，店长先生。今晚已经喝过一杯啦。想听歌的话，倒是随时欢迎。",
@@ -1457,6 +1820,9 @@
       "line_key": "xm_tavern_w02_chat_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_chat_01_a8ac23609a45",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_chat_01_a8ac23609a45.ogg",
+      "source_sha256": "a8ac23609a45b26e35548a4ac5ec719788bcd4ffdb7b7f9b911d505c5b6e5657",
+      "packaged_sha256": "a60c3a2a8f2a17216691c8b8a92c2a051c925f9fa59624016fa63048bb97f905",
       "spoken_text": "実は開店前、「いらっしゃいませ」ってこっそり何度も練習したんです。本当にお客さんが来ると、かえって緊張しちゃって。",
       "subtitle_templates": [
         "其实开业之前，我还偷偷练过几遍“欢迎光临”呢。真正有人进来，反而更紧张了。",
@@ -1469,6 +1835,9 @@
       "line_key": "xm_tavern_w02_chat_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_chat_02_aeadf4290c7b",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_chat_02_aeadf4290c7b.ogg",
+      "source_sha256": "aeadf4290c7b344d30ebf35136eaf629f0a71e3e69f7a069cbbd91182e257faa",
+      "packaged_sha256": "5a009ed3c114d974155b1d02e941f06dd7bc54f43e69754f497a3e55726e3276",
       "spoken_text": "昨日、お客さんに「ここの音楽、いいですね」って言われたんです。えへへ、テープ選びには、けっこうこだわってるんですよ。",
       "subtitle_templates": [
         "昨天有位客人说，店里的音乐挺好听的。嘿嘿，挑磁带的时候，我可是很认真的。",
@@ -1481,6 +1850,9 @@
       "line_key": "xm_tavern_w02_chat_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_chat_03_a93e17318a97",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_chat_03_a93e17318a97.ogg",
+      "source_sha256": "a93e17318a97e9414d7e7348f705bca13225212d22d35df3fde79ff377e194f5",
+      "packaged_sha256": "799a291ec4a37dd87e99942859306d7dbe9db4f3d2ce56f9231ca0c2360cd409",
       "spoken_text": "甘いのが好きな人もいれば、酸っぱいのが好きな人もいて……メニューはまだまだ考えないとですね。",
       "subtitle_templates": [
         "有人喜欢甜一点的，也有人喜欢酸一点的……看来酒单还有得改呢。",
@@ -1493,6 +1865,9 @@
       "line_key": "xm_tavern_w02_chat_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_chat_04_1cd81b4528d3",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_chat_04_1cd81b4528d3.ogg",
+      "source_sha256": "1cd81b4528d3ab4b9a964c7ac2ee2fc7841405241567ceea731da5682a117b92",
+      "packaged_sha256": "fbe58e86e41af32ea0eb398df2f0409820d94bdc5b435fed80eeb4422c7ab9bf",
       "spoken_text": "開店したばかりのころは、「いらっしゃいませ」って言うだけでも緊張してたのに。今は……少し慣れてきたかもしれません。",
       "subtitle_templates": [
         "刚开业的时候，连说“欢迎光临”都会紧张。现在好像……稍微习惯一点了。",
@@ -1505,6 +1880,9 @@
       "line_key": "xm_tavern_w02_help_intro",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_help_intro_4fca3760bdaf",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_help_intro_4fca3760bdaf.ogg",
+      "source_sha256": "4fca3760bdafcae6f87c3c63ddce4e8db8334e1c26a20da2bcb1991323f503d3",
+      "packaged_sha256": "ca90a474b8b069fd0356bf48d63d17971c13be6b20c42fd835ffb82fe1bc4133",
       "spoken_text": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
       "subtitle_templates": [
         "被你发现了啊……我这边还忙着调酒。前辈，可以帮我把酒单递过去吗？",
@@ -1517,6 +1895,9 @@
       "line_key": "xm_tavern_w02_help_done",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_help_done_e885d39d9383",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_help_done_e885d39d9383.ogg",
+      "source_sha256": "e885d39d93836f4684446942dd21e8fef39ef19705304bc61076967d4adb5694",
+      "packaged_sha256": "5b7b4326447c62cd60bb88c263da104b7cfb66e5143e6d04c90221767a914e77",
       "spoken_text": "先輩、ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
       "subtitle_templates": [
         "谢谢前辈！刚开店就有点手忙脚乱的……还好有您在。",
@@ -1529,6 +1910,9 @@
       "line_key": "xm_tavern_w02_help_skip",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_help_skip_026eb3fa87e8",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_help_skip_026eb3fa87e8.ogg",
+      "source_sha256": "026eb3fa87e8cbcb04cc2e7c354a4bfe71f3cf0d2de3aa56f954a3aa4fe71128",
+      "packaged_sha256": "d30941a83b0ab497132722be0ab2cc55ad39dfd5ecf9d977ac411a79bbfc1d1c",
       "spoken_text": "うん、大丈夫です。わたしがやりますね。",
       "subtitle_templates": [
         "嗯，没关系。我自己来就好啦。",
@@ -1541,6 +1925,9 @@
       "line_key": "xm_tavern_w02_rain_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_rain_01_d05ef8602d37",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_rain_01_d05ef8602d37.ogg",
+      "source_sha256": "d05ef8602d370da2962a328232c9f1a48d5efff4a214f674058daed02696493c",
+      "packaged_sha256": "93451e990ce69b80b22db7409cf57468dc43d736c0661ea1172e4066d124c7a9",
       "spoken_text": "先輩、窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
       "subtitle_templates": [
         "前辈在看窗户上的雨幕吗？这个是我特意装的哦。",
@@ -1553,6 +1940,9 @@
       "line_key": "xm_tavern_w02_rain_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_rain_02_b1b3e77ba591",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_rain_02_b1b3e77ba591.ogg",
+      "source_sha256": "b1b3e77ba591cb846562ed37789f2b1d173f8dcaabb3f5fcd75edccae781ca8e",
+      "packaged_sha256": "776152eb9c9e7e219effe17a02de6833dacc9d2a23a21f9a8fe945e9b95ffdb4",
       "spoken_text": "雨が降っているように見せたくて、けっこう頑張ったんです。",
       "subtitle_templates": [
         "为了让它看起来像真的下雨，我可是折腾了好久呢。",
@@ -1565,6 +1955,9 @@
       "line_key": "xm_tavern_w02_tape_intro",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_tape_intro_64900ad67255",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_tape_intro_64900ad67255.ogg",
+      "source_sha256": "64900ad67255f4dc094d0f54ba2b58f15c95c478b9cd4fa2cdee6fc33cb7f2a2",
+      "packaged_sha256": "7d30a287825e90a71265165b4b885df81dc76a9399eca608b662699895f71200",
       "spoken_text": "このカセットデッキ、実家から持ってきたんです。よかったら、店長さんも聴いていってくださいね。",
       "subtitle_templates": [
         "这台磁带机是我从老家带来的。店长先生想听的话，自己放就好啦。",
@@ -1577,6 +1970,9 @@
       "line_key": "xm_tavern_greeting_plain",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_greeting_plain_efcdab0d74dd",
+      "audio_file": "xm_voice_ja_xm_tavern_greeting_plain_efcdab0d74dd.ogg",
+      "source_sha256": "efcdab0d74dd25696b142bd493796b5935d12fa3ea639f7e2532a37cba1ec2af",
+      "packaged_sha256": "a48ac313ad1010dd13ff1c5906ae43d427a608683c92436037bb3b6e4ad98dd3",
       "spoken_text": "いらっしゃいませ。",
       "subtitle_templates": [
         "欢迎光临。",
@@ -1589,6 +1985,9 @@
       "line_key": "xm_tavern_chat_rest",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_chat_rest_abee567f6e7e",
+      "audio_file": "xm_voice_ja_xm_tavern_chat_rest_abee567f6e7e.ogg",
+      "source_sha256": "abee567f6e7ee99d17f6a6ed1041c28afb2ffead553350d133ff761772a3b08d",
+      "packaged_sha256": "9eda1633f547fe97ece59ddbf7944cf956fbdaec0958ece9fc3cc4a67f42c78a",
       "spoken_text": "先輩、どうぞゆっくり。少し音楽でも聴きましょう。",
       "subtitle_templates": [
         "前辈，慢慢坐吧。一起听会儿音乐。",
@@ -1601,6 +2000,9 @@
       "line_key": "xm_tavern_drink_limit_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_drink_limit_unknown_840c4654808c",
+      "audio_file": "xm_voice_ja_xm_tavern_drink_limit_unknown_840c4654808c.ogg",
+      "source_sha256": "840c4654808c642749fc6114524570cb95bf3c8bae466a6ccadb08638a181b59",
+      "packaged_sha256": "daed0354ec8271faa8a04913690f4977da783de3a719e132e1bb95cf8f3a3b42",
       "spoken_text": "だめですよ、お客さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
       "subtitle_templates": [
         "不可以哦，今晚已经喝过一杯啦。想听歌的话，倒是随时欢迎。",
@@ -1613,6 +2015,9 @@
       "line_key": "xm_tavern_w02_help_intro_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_help_intro_unknown_064fd3e6fbba",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_help_intro_unknown_064fd3e6fbba.ogg",
+      "source_sha256": "064fd3e6fbbacb918a5e6859616c7ed314a857726cd10f865ac345a1e662593c",
+      "packaged_sha256": "be5254b2c55752095aae090e7c7256ce0e90fe6072f646ccfb8a84893fe3fa14",
       "spoken_text": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
       "subtitle_templates": [
         "被你发现了啊……我这边还忙着调酒。可以帮我把酒单递过去吗？",
@@ -1625,6 +2030,9 @@
       "line_key": "xm_tavern_w02_help_done_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_help_done_unknown_72a80c5126f1",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_help_done_unknown_72a80c5126f1.ogg",
+      "source_sha256": "72a80c5126f13eedfa01d5fac99896da989cd6f6181e961bab72f5f381e94901",
+      "packaged_sha256": "cb7a7a5026ff7cf8e288d8a1d5079001e81c4b091d49a1d3c759f6fdf6234be4",
       "spoken_text": "ありがとうございます！ 開店したばかりで、ちょっとあたふたしちゃって……助かりました。",
       "subtitle_templates": [
         "谢谢！刚开店就有点手忙脚乱的……还好有您在。",
@@ -1637,6 +2045,9 @@
       "line_key": "xm_tavern_w02_rain_01_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_rain_01_unknown_046f9583c46b",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_rain_01_unknown_046f9583c46b.ogg",
+      "source_sha256": "046f9583c46bb82b588d9bc916e0ded7c7251b6e79dd8785ba1c0e30487b60b4",
+      "packaged_sha256": "b6c266420d25e77e5a6f6133719e16ac17a8a5adb4f401f8370c70893c250d20",
       "spoken_text": "窓の雨を見てるんですか？ これ、うちのお店のこだわりなんですよ。",
       "subtitle_templates": [
         "您在看窗户上的雨幕吗？这个是我特意装的哦。",
@@ -1649,6 +2060,9 @@
       "line_key": "xm_tavern_w02_tape_intro_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_tape_intro_unknown_0b012930f17c",
+      "audio_file": "xm_voice_ja_xm_tavern_w02_tape_intro_unknown_0b012930f17c.ogg",
+      "source_sha256": "0b012930f17c38f2f80bb66e54f6058041d9c928ce46a92259b4cacd60cfdeac",
+      "packaged_sha256": "e14f136c7e9d966f9e9b2d5cdf6dd5baf94fb4cf9f61dcbb44074b6789e3975a",
       "spoken_text": "このカセットデッキ、実家から持ってきたんです。よかったら、聴いていってくださいね。",
       "subtitle_templates": [
         "这台磁带机是我从老家带来的。想听的话，自己放就好啦。",
@@ -1661,6 +2075,9 @@
       "line_key": "xm_tavern_chat_rest_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_chat_rest_unknown_cb09113c9a99",
+      "audio_file": "xm_voice_ja_xm_tavern_chat_rest_unknown_cb09113c9a99.ogg",
+      "source_sha256": "cb09113c9a99f3ae90d3482fb13ee6ab02e908e1a7d95503871cd51ea32026e7",
+      "packaged_sha256": "19bac8e2239bafc0cca8b2d7428143c3c6ae4febee5041fc990f2ae683ed6635",
       "spoken_text": "どうぞゆっくり。少し音楽でも聴きましょう。",
       "subtitle_templates": [
         "慢慢坐吧。一起听会儿音乐。",
@@ -1673,6 +2090,9 @@
       "line_key": "xm_tavern_w03_work_offer_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_offer_01_8a0118116c48",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_offer_01_8a0118116c48.ogg",
+      "source_sha256": "8a0118116c4849c2b1d3026c1707dc4fcbb896d0e1a0ebd5730d01b1377d17cf",
+      "packaged_sha256": "e34e824259a10b69eddee195d13d287bc0cca907ae5b9ef0e4377f9626728e7f",
       "spoken_text": "もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
       "subtitle_templates": [
         "正好换班的客人快来了。能帮我招呼一下吗？",
@@ -1685,6 +2105,9 @@
       "line_key": "xm_tavern_w03_work_offer_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_offer_02_eaa578b19266",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_offer_02_eaa578b19266.ogg",
+      "source_sha256": "eaa578b19266cb361b08162501252a8ff8a80041c5ce9259f65ce1098124df79",
+      "packaged_sha256": "19e0511dae052f785b20abfe9675408bff7cb822be2cd77dfd42d24420a74042",
       "spoken_text": "お給料は、ちゃんと出しますね。これも、ちゃんとしたお仕事ですから。",
       "subtitle_templates": [
         "工资我会好好付的。这可是正经工作哦。",
@@ -1697,6 +2120,9 @@
       "line_key": "xm_tavern_w03_work_w02_callback",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_w02_callback_701a7046da4c",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_w02_callback_701a7046da4c.ogg",
+      "source_sha256": "701a7046da4c67a531877357cff51de20e75b15066281ffc3e047ee570a925a9",
+      "packaged_sha256": "1cd6439a4bcb67e0136bd5fa03706f81677b2ce08e2157dda590b70ce8956342",
       "spoken_text": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
       "subtitle_templates": [
         "上次前辈帮忙递酒单，我还记得呢。这次可不能再让您白帮忙啦。",
@@ -1709,6 +2135,9 @@
       "line_key": "xm_tavern_w03_work_start",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_start_df67fd2a0a24",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_start_df67fd2a0a24.ogg",
+      "source_sha256": "df67fd2a0a2478d8465cf50fef52672cc7a44521142f861aa5a2fbbc8437d0b9",
+      "packaged_sha256": "4f5aeaea5c07dfa21fe8137c325fe60141970f42a1cc2c1b0345ad39c87d8025",
       "spoken_text": "じゃあ、先輩にお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。",
       "subtitle_templates": [
         "那就拜托前辈啦！这边的客人交给您，我去照看吧台。",
@@ -1721,6 +2150,9 @@
       "line_key": "xm_tavern_w03_work_done_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_done_01_e033b59a58a6",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_done_01_e033b59a58a6.ogg",
+      "source_sha256": "e033b59a58a63ef200783f5a9f558e06537c3b7eba5d9856bb3ec0162937ad23",
+      "packaged_sha256": "6f92e015b153dd4e3f437ef42a08f48f8eab51f57b2a26ad5f23a7448f5117e8",
       "spoken_text": "ふう……やっとひと段落ですね。先輩、すごく助かりました！",
       "subtitle_templates": [
         "呼……总算忙过这一阵啦。前辈，帮大忙了！",
@@ -1733,6 +2165,9 @@
       "line_key": "xm_tavern_w03_work_done_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_done_02_4adc2d37ee10",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_done_02_4adc2d37ee10.ogg",
+      "source_sha256": "4adc2d37ee10d6bcbfe4b4bf18a9ff535b76a514a54d3cb6148a2537bbe37029",
+      "packaged_sha256": "af7f9822fb1e5f8b6b6ba7e6d17482f929eb4327c21ebfb75c39299d0f95d6f5",
       "spoken_text": "今日のお給料、受け取ってください。先輩のおかげで、さっきのお客さんたちをお待たせせずに済みました。",
       "subtitle_templates": [
         "今天的工资，请收好。多亏前辈，刚才那几位客人总算没白跑一趟呢。",
@@ -1745,6 +2180,9 @@
       "line_key": "xm_tavern_w03_work_decline",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_decline_4bc3923a8822",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_decline_4bc3923a8822.ogg",
+      "source_sha256": "4bc3923a88227dfb85f6dcca8513d52ded766dd5f076f1f7d9f5b6e6fb9554d7",
+      "packaged_sha256": "6164c6e606304c4f5e8879d75b06cdb3b1438de330a50622f9926dda7d4f4185",
       "spoken_text": "うん、大丈夫です。先輩も、お店のことで忙しいですもんね。",
       "subtitle_templates": [
         "嗯，没关系。前辈也有自己的店要忙嘛。",
@@ -1757,6 +2195,9 @@
       "line_key": "xm_tavern_w03_work_done_today",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_done_today_024fd8ca6402",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_done_today_024fd8ca6402.ogg",
+      "source_sha256": "024fd8ca640229dbd0b21e13e14fdcb809b018d21f902e80da598339569c5b1d",
+      "packaged_sha256": "3cc18064005fc89b18eaae518a439de0d9eea66f63943d20d3dbafe5e2c95b03",
       "spoken_text": "先輩、今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
       "subtitle_templates": [
         "前辈，今天已经下过班啦。再留下来，我可要担心您休息不够了。",
@@ -1769,6 +2210,9 @@
       "line_key": "xm_tavern_w03_work_no_orders",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_no_orders_b1b8397062ad",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_no_orders_b1b8397062ad.ogg",
+      "source_sha256": "b1b8397062aded1ddbf3396c8210ff913a2d908e14337557a6f6a548ff3783de",
+      "packaged_sha256": "5e3061613e0519018411329961d7f9ef5ec8bc6b136a52a28f632a5b23bd9beb",
       "spoken_text": "今夜はまだ一人で大丈夫そうです。先輩は、のんびり音楽でも聴いていってくださいね。",
       "subtitle_templates": [
         "今天暂时忙得过来。前辈来听听歌就好啦。",
@@ -1781,6 +2225,9 @@
       "line_key": "xm_w03_thanks_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_w03_thanks_01_aa9f83880286",
+      "audio_file": "xm_voice_ja_xm_w03_thanks_01_aa9f83880286.ogg",
+      "source_sha256": "aa9f83880286db2d28bd167a3cefe3e30b8cf5ceb2e45ae5f79209ce03b58399",
+      "packaged_sha256": "ddf7e3e16009fe01f18daa2cc0e1c847507a40830872cd17c0a83e3499d24d79",
       "spoken_text": "先輩、この前はお店を手伝ってくれて、ありがとうございました。やっぱり、直接お礼を言いたくて。",
       "subtitle_templates": [
         "前辈，晚上帮忙的事，真的谢谢啦。我想着还是该来当面说一声。",
@@ -1793,6 +2240,9 @@
       "line_key": "xm_w03_thanks_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_w03_thanks_02_82b20fc24dd4",
+      "audio_file": "xm_voice_ja_xm_w03_thanks_02_82b20fc24dd4.ogg",
+      "source_sha256": "82b20fc24dd492ec2f6e2e9796c4e4c1b5e0bbcc0247097f6dc96536ab4fa3e1",
+      "packaged_sha256": "fecd253c6ac62055ad6902ce356833b029b29dfcc14b672657fa2aadb6c9dd8f",
       "spoken_text": "これは、先輩のために取っておいた一杯です。お給料はお給料、こっちはわたしの気持ちですから。",
       "subtitle_templates": [
         "这杯是我特地留给前辈的。工资是工资，这个是我的一点心意哦。",
@@ -1805,6 +2255,9 @@
       "line_key": "xm_w03_thanks_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_w03_thanks_shop_93f34b437df4",
+      "audio_file": "xm_voice_ja_xm_w03_thanks_shop_93f34b437df4.ogg",
+      "source_sha256": "93f34b437df4bbee2bb8a21ccec1a0a662cc144280cff4aab6673b24dd019543",
+      "packaged_sha256": "b62e58c420a2e9be2102e3afd920e14764b2dafe08cb8cce1294aa068c001a73",
       "spoken_text": "あ、そうだ。せっかく来たので、食べるものか飲み水も少し買いたくて。",
       "subtitle_templates": [
         "对了，既然来了，我也想买点吃的或者饮用水。",
@@ -1817,6 +2270,9 @@
       "line_key": "xm_w03_thanks_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_w03_thanks_bye_bbf4385ac34a",
+      "audio_file": "xm_voice_ja_xm_w03_thanks_bye_bbf4385ac34a.ogg",
+      "source_sha256": "bbf4385ac34ad0ee4a715eef8e6ac527a7a99a0f6e94bc4d75613c9ee66f57c6",
+      "packaged_sha256": "991518f1311207d0dfa13ac1974c9d1db96e25ce0c07f0b42159ff367ed3c0f0",
       "spoken_text": "それじゃ、お店に戻りますね。先輩も、無理しすぎないでくださいね。",
       "subtitle_templates": [
         "那我回店里去啦。前辈也不要太累哦。",
@@ -1829,6 +2285,9 @@
       "line_key": "xm_tavern_w03_chat_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_chat_01_568307116da1",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_chat_01_568307116da1.ogg",
+      "source_sha256": "568307116da150d320b7a3ce258d8899dac557f0d5d426fea9c4c3f2668c5822",
+      "packaged_sha256": "144630d7917163cc17ef6efa588e50dc5a70cdd3b48b57588b80219e948f436d",
       "spoken_text": "先輩、気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
       "subtitle_templates": [
         "前辈有没有发现？换班的时候，客人说话的声音特别热闹。等他们走了，雨幕的声音又会慢慢听清楚。",
@@ -1841,6 +2300,9 @@
       "line_key": "xm_tavern_w03_chat_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_chat_02_ed240d42c275",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_chat_02_ed240d42c275.ogg",
+      "source_sha256": "ed240d42c275e716d52f2e569918c8b9452bc9e8912269e46ea9498db73e6661",
+      "packaged_sha256": "88fb12ec3b3f15a3084887a99f13106f9bb05ae6fba14e6920a37c9c87ece4ec",
       "spoken_text": "忙しいとあたふたしちゃうんですけど、お客さんの笑い声が聞こえると、お店を開いてよかったなって思うんです。",
       "subtitle_templates": [
         "虽然忙起来会手忙脚乱，可听见客人在那边笑，我就觉得开这家店真好。",
@@ -1853,6 +2315,9 @@
       "line_key": "xm_tavern_w03_chat_after_work",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_chat_after_work_c1533c8da6f7",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_chat_after_work_c1533c8da6f7.ogg",
+      "source_sha256": "c1533c8da6f7fee635dfec2294c5f58a154061783c5f6b374c595a9cee87a5c8",
+      "packaged_sha256": "43900305387774e9ec03dd3e0747be95ca5fb9a47733c7c757f595f0e69744cc",
       "spoken_text": "先輩もお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
       "subtitle_templates": [
         "前辈也辛苦啦。刚才那几位客人走的时候，还说下次要再来呢。",
@@ -1865,6 +2330,9 @@
       "line_key": "xm_tavern_w03_work_offer_01_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_offer_01_unknown_07295d6ce6fb",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_offer_01_unknown_07295d6ce6fb.ogg",
+      "source_sha256": "07295d6ce6fb06ba1625897d187a96da33c1be34b96e8ebbdcb5a1cdcd3bc882",
+      "packaged_sha256": "bc85fdbcf5d9bfcc4d3749f5ab50bf012f18aad8e5483d6552af1b67392e47cb",
       "spoken_text": "もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
       "subtitle_templates": [
         "正好换班的客人快来了。能帮我招呼一下吗？",
@@ -1877,6 +2345,9 @@
       "line_key": "xm_tavern_w03_work_w02_callback_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_w02_callback_701a7046da4c",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_w02_callback_701a7046da4c.ogg",
+      "source_sha256": "701a7046da4c67a531877357cff51de20e75b15066281ffc3e047ee570a925a9",
+      "packaged_sha256": "1cd6439a4bcb67e0136bd5fa03706f81677b2ce08e2157dda590b70ce8956342",
       "spoken_text": "この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。",
       "subtitle_templates": [
         "上次您帮忙递酒单，我还记得呢。这次可不能再让您白帮忙啦。",
@@ -1889,6 +2360,9 @@
       "line_key": "xm_tavern_w03_work_start_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_start_unknown_5d1b2e78c801",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_start_unknown_5d1b2e78c801.ogg",
+      "source_sha256": "5d1b2e78c801867b23a0e8285e62d00a65c91a7873c20b60fd2a1739ee5c9b4f",
+      "packaged_sha256": "34a58e69504124612fc945e16bebca8cc768787eb0e5c2fb711903d32ed73a27",
       "spoken_text": "それじゃ、こちらのお客さんをお願いします！ わたしはカウンターを見てきますね。",
       "subtitle_templates": [
         "那就拜托您啦！这边的客人交给您，我去照看吧台。",
@@ -1901,6 +2375,9 @@
       "line_key": "xm_tavern_w03_work_done_01_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_done_01_unknown_51b813297976",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_done_01_unknown_51b813297976.ogg",
+      "source_sha256": "51b8132979761936a1e20a3880c7fdc4cbb61bd135cb83dba6204797990a4d50",
+      "packaged_sha256": "0abf88d06bc9b971fbf2bacf2f446ce26728f15c20bd27388a5399e1dabcdc06",
       "spoken_text": "ふう……やっとひと段落ですね。すごく助かりました！",
       "subtitle_templates": [
         "呼……总算忙过这一阵啦。帮大忙了！",
@@ -1913,6 +2390,9 @@
       "line_key": "xm_tavern_w03_work_done_02_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_done_02_unknown_2e27a91fc8ff",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_done_02_unknown_2e27a91fc8ff.ogg",
+      "source_sha256": "2e27a91fc8ffabbc0b20667b3170b795a53806fe803e9e2657688b3d4bfc3207",
+      "packaged_sha256": "f356530dda01c2a52178a0bd0885a3c40ca9b7859759b4f634a11cbe7b9150aa",
       "spoken_text": "今日のお給料、受け取ってください。手伝ってくれたおかげで、さっきのお客さんたちも待たせずに済みました。",
       "subtitle_templates": [
         "今天的工资，请收好。多亏您帮忙，刚才那几位客人总算没白跑一趟呢。",
@@ -1925,6 +2405,9 @@
       "line_key": "xm_tavern_w03_work_decline_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_decline_unknown_25ba8a2073de",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_decline_unknown_25ba8a2073de.ogg",
+      "source_sha256": "25ba8a2073de5638e946d7e42aace934cd1da6e2c4d18e01527ef8828351f9f2",
+      "packaged_sha256": "70c54a763b482a9f7a7404e11a463b376ca3ba37720d423009991f0d1809263a",
       "spoken_text": "うん、大丈夫です。ご用事もあるでしょうし。",
       "subtitle_templates": [
         "嗯，没关系。您也有自己的事情要忙嘛。",
@@ -1937,6 +2420,9 @@
       "line_key": "xm_tavern_w03_work_done_today_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_done_today_unknown_fb7f93e4947e",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_done_today_unknown_fb7f93e4947e.ogg",
+      "source_sha256": "fb7f93e4947e424179c53d9695578990cb7a106e9f1f200913dfabe46ba18773",
+      "packaged_sha256": "d9a1308b6ca793de73a12459b158d52c77fc9ed04ac8d1f9a577397bb77da703",
       "spoken_text": "今日はもうお仕事終わりですよ。これ以上働いたら、ちゃんと休めてるか心配になっちゃいます。",
       "subtitle_templates": [
         "今天已经下过班啦。再留下来，我可要担心您休息不够了。",
@@ -1949,6 +2435,9 @@
       "line_key": "xm_tavern_w03_work_no_orders_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_work_no_orders_unknown_70623dfc1638",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_work_no_orders_unknown_70623dfc1638.ogg",
+      "source_sha256": "70623dfc1638690fe573e64f9e727ed6fb141c1dc46338a124bea2eae0bbf378",
+      "packaged_sha256": "514e291b271ffa2a73f8db457da92864027e71c53ee4306a6515fbb724137d8e",
       "spoken_text": "今夜はまだ一人で大丈夫そうです。のんびり音楽でも聴いていってくださいね。",
       "subtitle_templates": [
         "今天暂时忙得过来。您来听听歌就好啦。",
@@ -1961,6 +2450,9 @@
       "line_key": "xm_tavern_w03_chat_01_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_chat_01_unknown_fcf0c94ca12a",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_chat_01_unknown_fcf0c94ca12a.ogg",
+      "source_sha256": "fcf0c94ca12ad991c10522f82d707fc3e269abaa6f37fec02d0e193ea3abed48",
+      "packaged_sha256": "a4eb4c5fa965aa1f76ef0d2992826624c8b9ae6062f2d3ad30dd421c8c2cf29b",
       "spoken_text": "気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。",
       "subtitle_templates": [
         "您有没有发现？换班的时候，客人说话的声音特别热闹。等他们走了，雨幕的声音又会慢慢听清楚。",
@@ -1973,6 +2465,9 @@
       "line_key": "xm_tavern_w03_chat_after_work_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w03_chat_after_work_unknown_2a99b588954a",
+      "audio_file": "xm_voice_ja_xm_tavern_w03_chat_after_work_unknown_2a99b588954a.ogg",
+      "source_sha256": "2a99b588954aa44e8a45ec3e58c445b0cc6746d52b43e6491a836f63ea2e67dd",
+      "packaged_sha256": "7fcfd188e3bf77a92fb54368db83f334b40f3f62f4e75ebbe5e54726ed59236f",
       "spoken_text": "お疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。",
       "subtitle_templates": [
         "您也辛苦啦。刚才那几位客人走的时候，还说下次要再来呢。",
@@ -1985,6 +2480,9 @@
       "line_key": "xm_tavern_w04_supply_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_01_6cd8a671fa38",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_01_6cd8a671fa38.ogg",
+      "source_sha256": "6cd8a671fa380417b09eafe494c3ebac474fb08a49bb165d818d60fdfee28242",
+      "packaged_sha256": "3b9b41c6b8ee73b400dfc2fd1df8294218de5ee0ec26e2e7b54c04f2ca17f17f",
       "spoken_text": "先輩、いらっしゃい。昼間に話したこと、リストにまとめておきました。",
       "subtitle_templates": [
         "前辈来啦。白天说的那件事，我把清单准备好了。",
@@ -1997,6 +2495,9 @@
       "line_key": "xm_tavern_w04_supply_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_02_6c4a36031792",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_02_6c4a36031792.ogg",
+      "source_sha256": "6c4a36031792fce396632482081a650238e36161193c725cf64927194f04191c",
+      "packaged_sha256": "ba62c2a479a9d88781c9e7519bd98de8a9d14b256176395b693116f592a0e2ab",
       "spoken_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
       "subtitle_templates": [
         "前辈留些基础水或者品质更好的水，还有酿酒用的材料给我就好。不用特地凑齐配方。约好了，我周三去店里取。",
@@ -2009,6 +2510,9 @@
       "line_key": "xm_tavern_w04_supply_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_03_306521c3cbb0",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_03_306521c3cbb0.ogg",
+      "source_sha256": "306521c3cbb04cbd5969381401504cd0e1d736309be13a12ede09fa5c1209f5d",
+      "packaged_sha256": "f985fd1dea346ce97ed17b816a2bda67cea0f14a925ee1a817392b181cc65749",
       "spoken_text": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
       "subtitle_templates": [
         "我会照材料的价值，再多添三成，给前辈做成酒。周五带过去，我们两边都不用付钱。下周还要不要继续，到时候再商量，好不好？",
@@ -2021,6 +2525,9 @@
       "line_key": "xm_tavern_w04_supply_yes",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_yes_fa8a1d62057e",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_yes_fa8a1d62057e.ogg",
+      "source_sha256": "fa8a1d62057e39c5479557c89d0fe27cf113e0d34c164f8ba93317654373e049",
+      "packaged_sha256": "b775c40ccaf07f28dee522afb28703fc7c94452bc0fec21255de43248c9b2178",
       "spoken_text": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、先輩とお酒を作れるの、楽しみです。",
       "subtitle_templates": [
         "太好啦！那就说定了，周三我过去。嘿嘿，能和前辈一起做酒，还挺期待的呢。",
@@ -2033,6 +2540,9 @@
       "line_key": "xm_tavern_w04_supply_later",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_later_b3941718f438",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_later_b3941718f438.ogg",
+      "source_sha256": "b3941718f438a38e313b996f41ecfadd8a5dc44158dc79f2182388ad33e04c11",
+      "packaged_sha256": "f13af5248d274f7a3ed10fae835961a9f1e0deb5504c79ca86853f015ef06d59",
       "spoken_text": "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
       "subtitle_templates": [
         "好呀，不着急。前辈也有自己的店要忙嘛。",
@@ -2045,6 +2555,9 @@
       "line_key": "xm_tavern_w04_supply_existing",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_existing_6309db60c59d",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_existing_6309db60c59d.ogg",
+      "source_sha256": "6309db60c59de4794cf244dcc36b9ae5b717361d213242f6953fec93a2e933f4",
+      "packaged_sha256": "74e55b61c1d0b5dc77276a30164344e86bf0017d4cd65f444f0244edc622d284",
       "spoken_text": "先輩、材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
       "subtitle_templates": [
         "前辈，材料和酒的记录都在这里。想先歇一阵，或者接着做，在这里告诉我就好。已经收下的这批，我还是会做好送去的。",
@@ -2057,6 +2570,9 @@
       "line_key": "xm_tavern_w04_supply_early",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_early_0b0ba9757ca2",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_early_0b0ba9757ca2.ogg",
+      "source_sha256": "0b0ba9757ca25358bde35f6dbefe7880fad8c1de09789cae82d7e50904fcd683",
+      "packaged_sha256": "b1854bc5afed1912e0d4f6e647922c831b6bc484f196528e5bc7072b95fcfca3",
       "spoken_text": "先輩、いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
       "subtitle_templates": [
         "前辈来啦。我把店里需要的东西列了一张清单，想跟您商量一下。",
@@ -2069,6 +2585,9 @@
       "line_key": "xm_tavern_w04_supply_01_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_01_unknown_f4abe3493fed",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_01_unknown_f4abe3493fed.ogg",
+      "source_sha256": "f4abe3493fed4a554e74bdd17b4da6a27486d12d2950991b865f6234e528903a",
+      "packaged_sha256": "11b0ddbf4950e101520978905754ff5d4c40169bd4edac553b364bf9d70d7835",
       "spoken_text": "いらっしゃい。昼間に話したこと、リストにまとめておきました。",
       "subtitle_templates": [
         "欢迎。白天说的那件事，我把清单准备好了。",
@@ -2081,6 +2600,9 @@
       "line_key": "xm_tavern_w04_supply_02_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_02_6c4a36031792",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_02_6c4a36031792.ogg",
+      "source_sha256": "6c4a36031792fce396632482081a650238e36161193c725cf64927194f04191c",
+      "packaged_sha256": "ba62c2a479a9d88781c9e7519bd98de8a9d14b256176395b693116f592a0e2ab",
       "spoken_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料が使えます。材料を決まった組み合わせでそろえなくても大丈夫ですよ。話が決まったら、水曜日に取りに行きますね。",
       "subtitle_templates": [
         "您留些基础水或者品质更好的水，还有酿酒用的材料给我就好。不用特地凑齐配方。约好了，我周三去店里取。",
@@ -2093,6 +2615,9 @@
       "line_key": "xm_tavern_w04_supply_03_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_03_306521c3cbb0",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_03_306521c3cbb0.ogg",
+      "source_sha256": "306521c3cbb04cbd5969381401504cd0e1d736309be13a12ede09fa5c1209f5d",
+      "packaged_sha256": "f985fd1dea346ce97ed17b816a2bda67cea0f14a925ee1a817392b181cc65749",
       "spoken_text": "材料のお値段に三割分をおまけして、その分のお酒にしてお返ししますね。金曜日に持っていくので、お代はお互いなしで。来週も続けるかは、そのときに相談しましょう。",
       "subtitle_templates": [
         "我会照材料的价值，再多添三成，做成酒。周五带过去，我们两边都不用付钱。下周还要不要继续，到时候再商量，好不好？",
@@ -2105,6 +2630,9 @@
       "line_key": "xm_tavern_w04_supply_yes_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_yes_unknown_0591c59402e3",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_yes_unknown_0591c59402e3.ogg",
+      "source_sha256": "0591c59402e3ba66a037d99772ffa7dcec7a0b0cd324a45d3049e7d3f3081a66",
+      "packaged_sha256": "e45f37bc1ea27427e1bf2ef3cbcddfc38291439553201ce42ebd02b12d222622",
       "spoken_text": "やった！ じゃあ、水曜日に取りに行きますね。えへへ、一緒にお酒を作れるの、楽しみです。",
       "subtitle_templates": [
         "太好啦！那就说定了，周三我过去。嘿嘿，能和您一起做酒，还挺期待的呢。",
@@ -2117,6 +2645,9 @@
       "line_key": "xm_tavern_w04_supply_later_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_later_unknown_79c63a0f5734",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_later_unknown_79c63a0f5734.ogg",
+      "source_sha256": "79c63a0f5734a83593f9d1f1b35350fd0cde4fbc8535364a55a34e56ea5ee785",
+      "packaged_sha256": "60f204e6b7751b81025e73b490a8348c9025cb8e534e24ba1982aafa16b36a2b",
       "spoken_text": "うん、急がなくて大丈夫です。また、時間のあるときにお話ししましょう。",
       "subtitle_templates": [
         "好呀，不着急。您也有别的事情要忙嘛。",
@@ -2129,6 +2660,9 @@
       "line_key": "xm_tavern_w04_supply_existing_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_existing_unknown_78df7a2d716c",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_existing_unknown_78df7a2d716c.ogg",
+      "source_sha256": "78df7a2d716c57d29c429ed8d8dcff0cef23d37ff6bcec269af69f6a4678fb03",
+      "packaged_sha256": "39eb16eba2117508cb0c4371d85e08c687b63d4b3dec334faec480997635b8bd",
       "spoken_text": "材料とお酒の記録は、ここにまとめてあります。少しお休みしたいときも、また始めたいときも、ここで声をかけてくださいね。もう受け取った分は、ちゃんとお酒にして届けますから。",
       "subtitle_templates": [
         "材料和酒的记录都在这里。想先歇一阵，或者接着做，在这里告诉我就好。已经收下的这批，我还是会做好送去的。",
@@ -2141,6 +2675,9 @@
       "line_key": "xm_tavern_w04_supply_early_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_early_unknown_68b8ea1e7cbc",
+      "audio_file": "xm_voice_ja_xm_tavern_w04_supply_early_unknown_68b8ea1e7cbc.ogg",
+      "source_sha256": "68b8ea1e7cbced0434b0af507b7d3e6d1b085c35b2ffba0246b7037e01eb4d27",
+      "packaged_sha256": "cfcdc6bc57860a4d6de78668db288691cee4a1ed461c09b12dc3fd23fe13549b",
       "spoken_text": "いらっしゃい。お店で必要なものをリストにしたので、相談してもいいですか？",
       "subtitle_templates": [
         "欢迎。我把店里需要的东西列了一张清单，想跟您商量一下。",
@@ -2153,6 +2690,9 @@
       "line_key": "xm_brew_hello",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_hello_a46b9daf7f64",
+      "audio_file": "xm_voice_ja_xm_brew_hello_a46b9daf7f64.ogg",
+      "source_sha256": "a46b9daf7f644c23fd70c669611e7760f74f244eeebf1139d9321db139c9ddef",
+      "packaged_sha256": "d537de30bea973958c25b08f96bad740d2855980bb17598e429aa756b79276a1",
       "spoken_text": "先輩、お約束の材料、受け取りに来ました。",
       "subtitle_templates": [
         "前辈，我来取说好的材料啦。",
@@ -2165,6 +2705,9 @@
       "line_key": "xm_brew_request",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_request_f8829a9de9d7",
+      "audio_file": "xm_voice_ja_xm_brew_request_f8829a9de9d7.ogg",
+      "source_sha256": "f8829a9de9d7023d471149d0ad8ca3d959151a3e412e068741407dd3f7bb5188",
+      "packaged_sha256": "d114638f298d1850e60cbe92f7ada865b75776b337b504f0e27d8a5c7f3e9eb3",
       "spoken_text": "普通の飲み水か、それより質のいいお水と、お酒を作る材料なら使えます。ここに置いてもらえますか？",
       "subtitle_templates": [
         "基础水、品质更好的水，还有酿酒用的原料都可以。前辈放到交易台上就好。",
@@ -2177,6 +2720,9 @@
       "line_key": "xm_brew_last",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_last_6825c4416007",
+      "audio_file": "xm_voice_ja_xm_brew_last_6825c4416007.ogg",
+      "source_sha256": "6825c44160071aea3f7c0db710d663ae148a9f3af482309d441fa44b69ba2a7f",
+      "packaged_sha256": "06e1fa0a40e09c86febb67294842a9386aeec068fe83a0c99cd68aac5f25fe7b",
       "spoken_text": "先輩、前にお約束したお酒を持ってきました。",
       "subtitle_templates": [
         "前辈，之前答应调好的酒，我给您带来了。",
@@ -2189,6 +2735,9 @@
       "line_key": "xm_brew_wrong",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_wrong_c16196885952",
+      "audio_file": "xm_voice_ja_xm_brew_wrong_c16196885952.ogg",
+      "source_sha256": "c16196885952b95192bc29ae88b8eaddb413981ff1298dcb2708211c674e4a68",
+      "packaged_sha256": "6a99e7fb9f59d0559b9ff3bf027807e35bd7f692264b1695053eee21323f591c",
       "spoken_text": "今回は、普通の飲み水か、それより質のいいお水と、お酒を作る材料だけなんです。",
       "subtitle_templates": [
         "这次只收基础水以上的水，还有酿酒材料哦。",
@@ -2201,6 +2750,9 @@
       "line_key": "xm_brew_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_accept_3c5ed6cc13c8",
+      "audio_file": "xm_voice_ja_xm_brew_accept_3c5ed6cc13c8.ogg",
+      "source_sha256": "3c5ed6cc13c8535566bb6ec159ad3d02d760cf2601d22747a5951037181de6a2",
+      "packaged_sha256": "c7c5e5d15b533747684c62e6dfae6ddd830da139f77b4f98569f662f64a7e494",
       "spoken_text": "では、こちらをお預かりしますね。金曜日に、できたお酒を持ってきます。",
       "subtitle_templates": [
         "这些我就收下啦。周五，把调好的酒给前辈带来。",
@@ -2213,6 +2765,9 @@
       "line_key": "xm_brew_bye",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_bye_c185b470fc35",
+      "audio_file": "xm_voice_ja_xm_brew_bye_c185b470fc35.ogg",
+      "source_sha256": "c185b470fc35535696e41bcadf3a6fbd29b1f4a23fa1beccff9f102e74fc614b",
+      "packaged_sha256": "4c1cae420bb046ffc2b8dbffb9430bf7b1515cca1adbca538a263245ca6e7169",
       "spoken_text": "それじゃ、戻りますね、先輩。",
       "subtitle_templates": [
         "那我先回去啦，前辈。",
@@ -2225,6 +2780,9 @@
       "line_key": "xm_brew_renew",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_renew_4075d1b26ab6",
+      "audio_file": "xm_voice_ja_xm_brew_renew_4075d1b26ab6.ogg",
+      "source_sha256": "4075d1b26ab6a6bf296bb9535118bc1f2c1a5f1ab3348966309b7ad82a93f512",
+      "packaged_sha256": "1d4104f938a0642d57e3ff2ad3c4fe9a97027b9d659f97525f9e4fedeae7f3f2",
       "spoken_text": "今回は、これで一区切りですね。先輩、来週もお願いしていいですか？",
       "subtitle_templates": [
         "这批就这样啦。前辈，下周还继续吗？",
@@ -2237,6 +2795,9 @@
       "line_key": "xm_brew_renew_yes",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_renew_yes_7344ec7afc71",
+      "audio_file": "xm_voice_ja_xm_brew_renew_yes_7344ec7afc71.ogg",
+      "source_sha256": "7344ec7afc71c9189e9a094761d4ff640642675bd26e4969532cd15222bfd837",
+      "packaged_sha256": "eb1dcbe9880c4ecb67c8425f7cf24d43f2e7ece5b80a62e04772f76a4a3316aa",
       "spoken_text": "はい。では、来週の水曜日に材料を取りに来て、金曜日にお酒をお届けしますね。",
       "subtitle_templates": [
         "好，那我下周三再来取材料，周五送酒。",
@@ -2249,6 +2810,9 @@
       "line_key": "xm_brew_renew_no",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_renew_no_aadb47c9250c",
+      "audio_file": "xm_voice_ja_xm_brew_renew_no_aadb47c9250c.ogg",
+      "source_sha256": "aadb47c9250cb7658d4c284537ef3295bc8c40d11b2c42dea79ae6fe35294afb",
+      "packaged_sha256": "b2d5c0206d4a1e697ec6ef9ec76f851151c6e0c71531b1e03b94f3838fc4b461",
       "spoken_text": "はい、少しお休みですね。また再開したくなったら、お店で声をかけてください。",
       "subtitle_templates": [
         "好呀，先停一停。想再合作的时候，来店里找我就好。",
@@ -2261,6 +2825,9 @@
       "line_key": "xm_brew_small_batch",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_brew_small_batch_82fea5b90ce2",
+      "audio_file": "xm_voice_ja_xm_brew_small_batch_82fea5b90ce2.ogg",
+      "source_sha256": "82fea5b90ce224eff8debafad053400e120ab32224f3e87e94509c036a108288",
+      "packaged_sha256": "b3e9e22078242972114d72f2e0a3b1b0642486fddf0af5e699338bd206bbbaf3",
       "spoken_text": "今回はまだ、小瓶一本分に足りなくて。今回の分は、ちゃんとメモしておきますね。次の分と合わせて、お酒にしてお返しします。",
       "subtitle_templates": [
         "这次还不够装一小瓶，先替前辈记着哦。下回一起做好了带来。",
@@ -2273,6 +2840,9 @@
       "line_key": "xm_tavern_05_new_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_new_01_f4214c3aae95",
+      "audio_file": "xm_voice_ja_xm_tavern_05_new_01_f4214c3aae95.ogg",
+      "source_sha256": "f4214c3aae95541f1edfe5f56447fbdd326b68d8110593ee8d27e7291bb8d4a6",
+      "packaged_sha256": "2096b67166e431d20326f7771ef33c0a833f8af806d14af0923b7a8103970028",
       "spoken_text": "先輩、新しいメニュー、見ました？ お酒を二種類増やしたんです。",
       "subtitle_templates": [
         "前辈，看到新酒单了吗？新添了两款酒哦。",
@@ -2285,6 +2855,9 @@
       "line_key": "xm_tavern_05_new_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_new_02_aa9909317ed7",
+      "audio_file": "xm_voice_ja_xm_tavern_05_new_02_aa9909317ed7.ogg",
+      "source_sha256": "aa9909317ed7bece958981591d843de35b020351ac116c9c88e806da88c04d73",
+      "packaged_sha256": "e0dd72c2a8e256739cf19a07644712663d48cf6f8abf3d72ca9d842fa71ecfe8",
       "spoken_text": "「むゆうせんきょう」は何度も試して、やっと納得できた味で。「けいようしゅんしょく」は、もう少しすっきりした感じにしたかったんです。",
       "subtitle_templates": [
         "梦游仙境是我试了好几次才调好的，轻摇春色则想做得清爽一点。",
@@ -2297,6 +2870,9 @@
       "line_key": "xm_tavern_05_new_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_new_03_ffbdc542e607",
+      "audio_file": "xm_voice_ja_xm_tavern_05_new_03_ffbdc542e607.ogg",
+      "source_sha256": "ffbdc542e607dc7403fafc697b9749391685b318ddde89529fae7ede1ebe71ef",
+      "packaged_sha256": "5f551d1dfdcb5d3a42ee2fc52f2fd99cae3fa1c39afb2ebf630b958bdb0be1f0",
       "spoken_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
       "subtitle_templates": [
         "这批原料有点紧俏，暂时只能做这么多。喜欢的话，以后再多进一点吧。",
@@ -2309,6 +2885,9 @@
       "line_key": "xm_tavern_05_soldout",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_soldout_1a67762f023d",
+      "audio_file": "xm_voice_ja_xm_tavern_05_soldout_1a67762f023d.ogg",
+      "source_sha256": "1a67762f023d67fce744b41f891e04ea3aee3951de820e823a7774a50daf2b19",
+      "packaged_sha256": "6d2cb468bc6a48b9df1cdb824602ca879909bfce41fefec8d8d93c85b1c3e435",
       "spoken_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
       "subtitle_templates": [
         "啊，抱歉……这款今天已经卖完啦。下批到了再来看看吧。",
@@ -2321,6 +2900,9 @@
       "line_key": "xm_tavern_05_daily",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_daily_1959154f3dfb",
+      "audio_file": "xm_voice_ja_xm_tavern_05_daily_1959154f3dfb.ogg",
+      "source_sha256": "1959154f3dfb937b183c0e1084a4058202967ec11ca60735abd5a3ea81fa7b14",
+      "packaged_sha256": "d942ece91af582afdd650db9696e3880e622dc3fb51a92f95869b89b32470809",
       "spoken_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
       "subtitle_templates": [
         "最近一直有人问那两款新酒呢。不过我还是想把原来的几款留在酒单上。毕竟不是每个人都喜欢喝贵的嘛。",
@@ -2333,6 +2915,9 @@
       "line_key": "xm_tavern_05_new_01_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_new_01_unknown_bb46657e550e",
+      "audio_file": "xm_voice_ja_xm_tavern_05_new_01_unknown_bb46657e550e.ogg",
+      "source_sha256": "bb46657e550e0ddaa2c6677fd284df879d7bdb3b0802b6a479b5456689ea1a0e",
+      "packaged_sha256": "13081842b054b5b1ed63c9ba2a3f9dc7c4b5477665909babf5afc1b36218f8c7",
       "spoken_text": "新しいメニュー、見ました？ お酒を二種類増やしたんです。",
       "subtitle_templates": [
         "看到新酒单了吗？新添了两款酒哦。",
@@ -2345,6 +2930,9 @@
       "line_key": "xm_tavern_05_new_02_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_new_02_aa9909317ed7",
+      "audio_file": "xm_voice_ja_xm_tavern_05_new_02_aa9909317ed7.ogg",
+      "source_sha256": "aa9909317ed7bece958981591d843de35b020351ac116c9c88e806da88c04d73",
+      "packaged_sha256": "e0dd72c2a8e256739cf19a07644712663d48cf6f8abf3d72ca9d842fa71ecfe8",
       "spoken_text": "「むゆうせんきょう」は何度も試して、やっと納得できた味で。「けいようしゅんしょく」は、もう少しすっきりした感じにしたかったんです。",
       "subtitle_templates": [
         "梦游仙境是我试了好几次才调好的，轻摇春色则想做得清爽一点。",
@@ -2357,6 +2945,9 @@
       "line_key": "xm_tavern_05_new_03_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_new_03_ffbdc542e607",
+      "audio_file": "xm_voice_ja_xm_tavern_05_new_03_ffbdc542e607.ogg",
+      "source_sha256": "ffbdc542e607dc7403fafc697b9749391685b318ddde89529fae7ede1ebe71ef",
+      "packaged_sha256": "5f551d1dfdcb5d3a42ee2fc52f2fd99cae3fa1c39afb2ebf630b958bdb0be1f0",
       "spoken_text": "今回の材料はちょっと手に入りにくくて、まだそんなにたくさんは作れないんです。気に入ってもらえたら、次はもう少し仕入れてみようかな。",
       "subtitle_templates": [
         "这批原料有点紧俏，暂时只能做这么多。喜欢的话，以后再多进一点吧。",
@@ -2369,6 +2960,9 @@
       "line_key": "xm_tavern_05_soldout_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_soldout_1a67762f023d",
+      "audio_file": "xm_voice_ja_xm_tavern_05_soldout_1a67762f023d.ogg",
+      "source_sha256": "1a67762f023d67fce744b41f891e04ea3aee3951de820e823a7774a50daf2b19",
+      "packaged_sha256": "6d2cb468bc6a48b9df1cdb824602ca879909bfce41fefec8d8d93c85b1c3e435",
       "spoken_text": "あ、ごめんなさい……こちらは今日はもう売り切れなんです。次の入荷を待ってもらえたらうれしいです。",
       "subtitle_templates": [
         "啊，抱歉……这款今天已经卖完啦。下批到了再来看看吧。",
@@ -2381,6 +2975,9 @@
       "line_key": "xm_tavern_05_daily_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_05_daily_1959154f3dfb",
+      "audio_file": "xm_voice_ja_xm_tavern_05_daily_1959154f3dfb.ogg",
+      "source_sha256": "1959154f3dfb937b183c0e1084a4058202967ec11ca60735abd5a3ea81fa7b14",
+      "packaged_sha256": "d942ece91af582afdd650db9696e3880e622dc3fb51a92f95869b89b32470809",
       "spoken_text": "最近、あの新しい二種類を聞いてくれる人が増えたんです。でも、前からあるお酒も残しておきたくて。高いお酒が好きな人ばかりじゃないですから。",
       "subtitle_templates": [
         "最近一直有人问那两款新酒呢。不过我还是想把原来的几款留在酒单上。毕竟不是每个人都喜欢喝贵的嘛。",
@@ -2393,6 +2990,9 @@
       "line_key": "xm_tavern_06_chat_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_06_chat_01_48878f211727",
+      "audio_file": "xm_voice_ja_xm_tavern_06_chat_01_48878f211727.ogg",
+      "source_sha256": "48878f2117279ae272997498a73b20d371c5d347306fd8476776605989d8a31e",
+      "packaged_sha256": "139ba27b53b97db1f1f64dc992401c9294005ed1cf0129370481182ef4c35fa8",
       "spoken_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
       "subtitle_templates": [
         "最近来了不少从外面经过的旅客呢。有人只是等船，也有人专程绕过来喝一杯。",
@@ -2405,6 +3005,9 @@
       "line_key": "xm_tavern_06_chat_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_06_chat_02_48832c3a8959",
+      "audio_file": "xm_voice_ja_xm_tavern_06_chat_02_48832c3a8959.ogg",
+      "source_sha256": "48832c3a895953ac406fc23a552e053de7f3ecb4d90eabccd81d7221f8f5cf5f",
+      "packaged_sha256": "a7b1f73a60761d9fee15e5a30228c6aed5bae4b7ba4289eb3df3b0b47088a7a6",
       "spoken_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
       "subtitle_templates": [
         "有些客人喝着喝着，就聊起自己去过的地方。明明我哪里都没去，却好像跟着他们旅行了一圈呢。",
@@ -2417,6 +3020,9 @@
       "line_key": "xm_tavern_06_chat_01_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_06_chat_01_48878f211727",
+      "audio_file": "xm_voice_ja_xm_tavern_06_chat_01_48878f211727.ogg",
+      "source_sha256": "48878f2117279ae272997498a73b20d371c5d347306fd8476776605989d8a31e",
+      "packaged_sha256": "139ba27b53b97db1f1f64dc992401c9294005ed1cf0129370481182ef4c35fa8",
       "spoken_text": "最近、通りがかりの旅人さんがよく来てくれるんです。船を待っている人もいれば、一杯飲むためにわざわざ寄ってくれる人もいて。",
       "subtitle_templates": [
         "最近来了不少从外面经过的旅客呢。有人只是等船，也有人专程绕过来喝一杯。",
@@ -2429,6 +3035,9 @@
       "line_key": "xm_tavern_06_chat_02_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_06_chat_02_48832c3a8959",
+      "audio_file": "xm_voice_ja_xm_tavern_06_chat_02_48832c3a8959.ogg",
+      "source_sha256": "48832c3a895953ac406fc23a552e053de7f3ecb4d90eabccd81d7221f8f5cf5f",
+      "packaged_sha256": "a7b1f73a60761d9fee15e5a30228c6aed5bae4b7ba4289eb3df3b0b47088a7a6",
       "spoken_text": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
       "subtitle_templates": [
         "有些客人喝着喝着，就聊起自己去过的地方。明明我哪里都没去，却好像跟着他们旅行了一圈呢。",
@@ -2441,6 +3050,9 @@
       "line_key": "xm_tavern_07_chat_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_07_chat_01_40a3cf7ddf92",
+      "audio_file": "xm_voice_ja_xm_tavern_07_chat_01_40a3cf7ddf92.ogg",
+      "source_sha256": "40a3cf7ddf9212382f64527c39ef6ba8690d9d1068112c3f4da5ee00d312f82b",
+      "packaged_sha256": "f6eb6a3084b94a18b63aaa006cb125de26e59242fa05961081d04ceec5c9842f",
       "spoken_text": "座ったら、ずっと雨の音を聴いてるお客さんもいるんです。本物の雨じゃないのに、気に入ってくれて。",
       "subtitle_templates": [
         "有的客人坐下以后就安安静静听雨声。明明外面不是真的在下雨，他们却挺喜欢。",
@@ -2453,6 +3065,9 @@
       "line_key": "xm_tavern_07_chat_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_07_chat_02_005f6cf31f57",
+      "audio_file": "xm_voice_ja_xm_tavern_07_chat_02_005f6cf31f57.ogg",
+      "source_sha256": "005f6cf31f57a08c5cd671f36177192c3f203144577fec950174c430ef0f17b0",
+      "packaged_sha256": "77ae88496d8c4fbfd42749ae42e97be37f87ceddc64d6ca55059dd7d6870542c",
       "spoken_text": "最近は閉店前にふらっと一杯飲みに来る人もいて。約束なんてしてないのに、その時間になると、誰が来るかなんとなく分かるんです。",
       "subtitle_templates": [
         "最近有人会在收店前顺路来喝一杯。也不用特地约好，到了那个时间，我大概就知道谁会推门了。",
@@ -2465,6 +3080,9 @@
       "line_key": "xm_tavern_08_chat_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_08_chat_01_4cafdfd034b7",
+      "audio_file": "xm_voice_ja_xm_tavern_08_chat_01_4cafdfd034b7.ogg",
+      "source_sha256": "4cafdfd034b7ecc76f581e78a4c4d0935bc1d76c2169a09d5ae65ceee08fc9cf",
+      "packaged_sha256": "fa5932def6a9ad350f6ac1bc8048694acc5462b9e751cebfe28d4ff2e6a85ff5",
       "spoken_text": "写真を撮ってくれた子たち、どれにするかまで一緒に悩んでくれて。お酒を飲みに来たのに、まるで撮影会でした。",
       "subtitle_templates": [
         "帮我拍照的那几位姑娘，后来还认真帮我挑了半天。明明她们是来喝酒的，倒像我请了摄影师呢。",
@@ -2477,6 +3095,9 @@
       "line_key": "xm_tavern_08_chat_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_08_chat_02_01dc022bb3bf",
+      "audio_file": "xm_voice_ja_xm_tavern_08_chat_02_01dc022bb3bf.ogg",
+      "source_sha256": "01dc022bb3bfb2a7f65abdae57a78e2df5dcfa81808c3ea0991b18c709a8fcc0",
+      "packaged_sha256": "5c2eb3d0f38ae03adddb6fcbe0274e7fdf1bacff888acb818a1222bd1d640839",
       "spoken_text": "次の交代のときは新人も連れてくるって。来てくれたら、材料をもう少し用意しておかないと。",
       "subtitle_templates": [
         "她们说下次换班，还要带新同事来。要是真来了，我得记着多准备一点原料才行。",
@@ -2489,6 +3110,9 @@
       "line_key": "xm_tavern_09_chat_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_09_chat_01_e2754f203044",
+      "audio_file": "xm_voice_ja_xm_tavern_09_chat_01_e2754f203044.ogg",
+      "source_sha256": "e2754f203044ab3390573a373ec0eebb5cfcfb886ad8ccf9ba8dd957d7af4d85",
+      "packaged_sha256": "b0f5c4ad5e73aff5f47d5b9e4c11665c34438f0ff9fafbdb6925c60939e7f131",
       "spoken_text": "先輩、最近はよく出るお酒の材料を先に用意するようにしてるんです。",
       "subtitle_templates": [
         "前辈，最近我在试着把常卖的酒提前备好原料。",
@@ -2501,6 +3125,9 @@
       "line_key": "xm_tavern_09_chat_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_09_chat_02_9b74e0962de4",
+      "audio_file": "xm_voice_ja_xm_tavern_09_chat_02_9b74e0962de4.ogg",
+      "source_sha256": "9b74e0962de48694d6496d17eb2859cf798bbfbca186be4d8efbd96ef96b33c8",
+      "packaged_sha256": "13b428bf14033e1818c415f2059d8b2fe27d246d0e5b69ea535f9d3d94d4586b",
       "spoken_text": "前はお客さんが増えると大慌てだったけど、今は少し落ち着いて対応できるようになりました。",
       "subtitle_templates": [
         "以前客人一多，我就忙得团团转。现在总算能从容一些了呢。",
@@ -2513,6 +3140,9 @@
       "line_key": "xm_tavern_09_chat_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_09_chat_03_9144117fe273",
+      "audio_file": "xm_voice_ja_xm_tavern_09_chat_03_9144117fe273.ogg",
+      "source_sha256": "9144117fe2738fa6944268b8ac0ceae875a428c56f6d76901a74f4c8c9ec4f59",
+      "packaged_sha256": "e2da30d300a8ab868d66d8762d30d79f5991fcf49a7da33f08b33c318ef545a0",
       "spoken_text": "でも、カウンターの奥には、もうひとつ棚が必要かもしれませんね。",
       "subtitle_templates": [
         "不过看样子，吧台后面可能还得添个柜子才行。",
@@ -2525,6 +3155,9 @@
       "line_key": "xm_tavern_10_chat_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_chat_01_af977005e03f",
+      "audio_file": "xm_voice_ja_xm_tavern_10_chat_01_af977005e03f.ogg",
+      "source_sha256": "af977005e03f1961fa3996262a3573987073e297e01fd67124902a25a1c6d7b7",
+      "packaged_sha256": "8ff0177dd706acf140640d65c02516883ff1d4d9828ff4cfffdb3cc8ac570cf6",
       "spoken_text": "先輩、最近は新しいお酒の材料があまり減らなくなって。",
       "subtitle_templates": [
         "前辈，最近新酒的原料倒是不怎么缺了呢。",
@@ -2537,6 +3170,9 @@
       "line_key": "xm_tavern_10_chat_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_chat_02_9ffe91df2e41",
+      "audio_file": "xm_voice_ja_xm_tavern_10_chat_02_9ffe91df2e41.ogg",
+      "source_sha256": "9ffe91df2e413267fd0f669b84be35233abcc4800595ed75a95f2ca106402e9a",
+      "packaged_sha256": "80ecde650538501a1bdf201044982f79d7473ecb5b68750300c611069f9d6c42",
       "spoken_text": "先週は足りないかもって多めに用意したのに、今週は思ったより残っちゃって。",
       "subtitle_templates": [
         "上周还担心不够用，特地多准备了一些。结果这几天，剩下的比想象中多。",
@@ -2549,6 +3185,9 @@
       "line_key": "xm_tavern_10_chat_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_chat_03_ea8bef86ed0f",
+      "audio_file": "xm_voice_ja_xm_tavern_10_chat_03_ea8bef86ed0f.ogg",
+      "source_sha256": "ea8bef86ed0f2f7cc3e47ed1695245f725885153ed863d3725f77b9fdfcbbbb1",
+      "packaged_sha256": "7516e5be57d66567e0473f3ffd4288201cc0f6aba8a664f522096a7579cb8950",
       "spoken_text": "長く保存できる材料もあるから、助かってます。そうじゃなかったら、もったいないですもんね。",
       "subtitle_templates": [
         "还好有些东西能放很久。不然真有点浪费呢。",
@@ -2561,6 +3200,9 @@
       "line_key": "xm_tavern_10_chat_supported_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_chat_supported_01_5b8579b329d4",
+      "audio_file": "xm_voice_ja_xm_tavern_10_chat_supported_01_5b8579b329d4.ogg",
+      "source_sha256": "5b8579b329d400f6180612bbfd56973218c37772c27bf9e338307be67010783f",
+      "packaged_sha256": "5818ef2228775b83be1f9ff5ce47639b515a19de6d70ed218610657975424aaf",
       "spoken_text": "先輩、最近、次にどれくらい材料を仕入れるか、もう一度考えているんです。",
       "subtitle_templates": [
         "前辈，最近我在重新算下一批要进多少原料。",
@@ -2573,6 +3215,9 @@
       "line_key": "xm_tavern_10_chat_supported_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_chat_supported_02_a4cecfba2bfb",
+      "audio_file": "xm_voice_ja_xm_tavern_10_chat_supported_02_a4cecfba2bfb.ogg",
+      "source_sha256": "a4cecfba2bfb66ced3849dae77d5dcc6b215d5163bee5013bb1a76931ebf0da3",
+      "packaged_sha256": "2b6a9b47ad91a8d34d7021c2408f4c8fd416c4adde01479f291ed0cf215a2d7d",
       "spoken_text": "でも、今ある仕事はいつもどおりできています。用意したものも、少しずつ使えていますし。",
       "subtitle_templates": [
         "还好，手边的生意还在照常做。备下的东西，也在慢慢用掉呢。",
@@ -2585,6 +3230,9 @@
       "line_key": "xm_tavern_10_chat_supported_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_chat_supported_03_f84f5ae1289b",
+      "audio_file": "xm_voice_ja_xm_tavern_10_chat_supported_03_f84f5ae1289b.ogg",
+      "source_sha256": "f84f5ae1289b006ab128b57bad9ac630739c78e33bacfa996329230962e2afaa",
+      "packaged_sha256": "3b866c0e37552f8991ba4bfc9f7ca23a078e3828a3305a035f28f5104426f7b6",
       "spoken_text": "今のペースを続けながら、もう何日か様子を見てみようと思います。",
       "subtitle_templates": [
         "我想先保持现在的节奏，再观察几天。",
@@ -2597,6 +3245,9 @@
       "line_key": "xm_tavern_10_chat_neutral_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_chat_neutral_01_8ee0e9e483c2",
+      "audio_file": "xm_voice_ja_xm_tavern_10_chat_neutral_01_8ee0e9e483c2.ogg",
+      "source_sha256": "8ee0e9e483c256f5f4c3ff21bf261c6b7637969068932497cbb2d83e0c76ec8e",
+      "packaged_sha256": "c646c912cb13c6f8ae76678ea4f20ad618bdd3c7fb207030bb5cab3d05eeaab6",
       "spoken_text": "先輩、次の仕入れは、もう少し丁寧に考えてみようと思っているんです。",
       "subtitle_templates": [
         "前辈，最近我想把下一批采购再算仔细一点。",
@@ -2609,6 +3260,9 @@
       "line_key": "xm_tavern_10_chat_neutral_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_chat_neutral_02_8116026d6739",
+      "audio_file": "xm_voice_ja_xm_tavern_10_chat_neutral_02_8116026d6739.ogg",
+      "source_sha256": "8116026d6739c820cbfdb0a1af9115fc9dcadaf2aeb1c480c9ad64c2f296960e",
+      "packaged_sha256": "8da5e93a75e5358208be7f0ff1f008041b97e0cf735c4f068d5f3f5a738efdf7",
       "spoken_text": "長く置ける材料もあれば、新鮮なうちに使いたいものもありますから。必要な分を、少しずつ用意しようかな。",
       "subtitle_templates": [
         "有些原料能放得久，有些得趁新鲜用掉。还是按需要慢慢准备吧。",
@@ -2621,6 +3275,9 @@
       "line_key": "xm_tavern_10_chat_neutral_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_chat_neutral_03_4e4e713f12e2",
+      "audio_file": "xm_voice_ja_xm_tavern_10_chat_neutral_03_4e4e713f12e2.ogg",
+      "source_sha256": "4e4e713f12e23bd14299e9f8d8923e57d767a66e6ec513bec5dfe957f29ef4c3",
+      "packaged_sha256": "e470bbbfbb8158b9ce189e81313a82b66889b7cab62b5a88270d7f0c2066fc26",
       "spoken_text": "メニューはまだ変えずに、もう少し様子を見たいです。",
       "subtitle_templates": [
         "酒单先不改，我还想再看看呢。",
@@ -2633,6 +3290,9 @@
       "line_key": "xm_tavern_10_regular_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_regular_01_1bc16639104c",
+      "audio_file": "xm_voice_ja_xm_tavern_10_regular_01_1bc16639104c.ogg",
+      "source_sha256": "1bc16639104c12d7db6f4d422588a171d7d6cb03b252b38ea65741fb135d6061",
+      "packaged_sha256": "6175e637e07096a8f97f0d8dd40a3d7e82479722304fc78a0a76e5073d8fcda9",
       "spoken_text": "先輩、前に来たお客さんが、今日はお友達と一緒に来てくれたんです。",
       "subtitle_templates": [
         "前辈，今天有位以前来过的客人又来了，还带了朋友呢。",
@@ -2645,6 +3305,9 @@
       "line_key": "xm_tavern_10_regular_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_regular_02_654d884f00f9",
+      "audio_file": "xm_voice_ja_xm_tavern_10_regular_02_654d884f00f9.ogg",
+      "source_sha256": "654d884f00f981e5f687f0b83b52c58d2bf7b29f4b2ebd6665b01bc8cb5f0a2f",
+      "packaged_sha256": "842fbe34008fb048f2f7ae103b2523bbbd996c184d313565cc0bf353a66f3d51",
       "spoken_text": "寮に帰るなら直通のエレベーターでいいのに、わざわざ寄ってくれたそうで。",
       "subtitle_templates": [
         "她说本来直接坐电梯就能回宿舍的，不过还是想绕过来喝一杯。",
@@ -2657,6 +3320,9 @@
       "line_key": "xm_tavern_10_regular_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_regular_03_e52ca0934812",
+      "audio_file": "xm_voice_ja_xm_tavern_10_regular_03_e52ca0934812.ogg",
+      "source_sha256": "e52ca0934812518ee0c158c04e9abff3b317cf627f52aca564832b2419c32e75",
+      "packaged_sha256": "29098fe3e42c3bfa8e118e4fda90d63160175e488619f2128e414f906d9a5111",
       "spoken_text": "一人は甘いの、もう一人は酸っぱいのを頼んだのに、出したら交換して飲み始めたんですよ。",
       "subtitle_templates": [
         "一个人要甜的，一个人要酸的。结果酒端上去以后，她们又交换着喝起来了。",
@@ -2669,6 +3335,9 @@
       "line_key": "xm_tavern_10_regular_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_10_regular_04_bd37a7534105",
+      "audio_file": "xm_voice_ja_xm_tavern_10_regular_04_bd37a7534105.ogg",
+      "source_sha256": "bd37a7534105c64622dc402a14534459405168e1d70e1a237e3c8b77cd766793",
+      "packaged_sha256": "a65cc62f511434f93d1a3e72c9a06311828316f4a9ccbe8aff35f28d2a9f468d",
       "spoken_text": "えへへ、うれしかったな。",
       "subtitle_templates": [
         "嘿嘿，还是挺开心的。",
@@ -2681,6 +3350,9 @@
       "line_key": "xm_tavern_11_chat_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_11_chat_01_076b47f9928e",
+      "audio_file": "xm_voice_ja_xm_tavern_11_chat_01_076b47f9928e.ogg",
+      "source_sha256": "076b47f9928e30ee0e4adb6132db4af4a05a0f32258902e773a1f038ee7d388d",
+      "packaged_sha256": "7d6392cbfc6fe5e1f515f6b3e27b51b9f00a0ad6f01e7185f86257ace2b6a03d",
       "spoken_text": "先輩、今日、商店振興部にうちの案内表示はいつになるのか聞いてきたんです。",
       "subtitle_templates": [
         "前辈，我今天去问了商户发展部，酒馆的导览推荐什么时候能排上。",
@@ -2693,6 +3365,9 @@
       "line_key": "xm_tavern_11_chat_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_11_chat_02_e475f1d96a71",
+      "audio_file": "xm_voice_ja_xm_tavern_11_chat_02_e475f1d96a71.ogg",
+      "source_sha256": "e475f1d96a71c6dc0832550710766a144e632653012b4d13d4b74eaa87aeb748",
+      "packaged_sha256": "b2e16682a6e912ca6cf314c4ee959a1a1cec0f70873defe39712eaa8add30538",
       "spoken_text": "今の通路の計画に合わせて枠を調整してるから、もう少し待ってほしいって。",
       "subtitle_templates": [
         "他们说，推广位置要按照商业街的最新安排调整，让我再等等。",
@@ -2705,6 +3380,9 @@
       "line_key": "xm_tavern_11_chat_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_11_chat_03_fc817287a4be",
+      "audio_file": "xm_voice_ja_xm_tavern_11_chat_03_fc817287a4be.ogg",
+      "source_sha256": "fc817287a4bee4477bd47cbb1dea933587b79fe4e70d651394a257f27bfef39a",
+      "packaged_sha256": "70cc3ea16cc0cdcef9402108f6872a52596a64d1f2b4e5381d06f3c566741dcd",
       "spoken_text": "でも、支援制度に申し込んだとき、新しいお店の集客も手伝うって言ってくれたのに……。",
       "subtitle_templates": [
         "可之前申请扶持的时候，明明说好会帮新店吸引客人的呀……",
@@ -2717,6 +3395,9 @@
       "line_key": "xm_tavern_12_roka_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_12_roka_01_1d41b687a152",
+      "audio_file": "xm_voice_ja_xm_tavern_12_roka_01_1d41b687a152.ogg",
+      "source_sha256": "1d41b687a152bae456b8140151edcf3ce2a5af9926d3bb57dc827ef650b44d30",
+      "packaged_sha256": "fdc9c7dab39e976904b0b11162fec22155286313b9ae6a86f840c5218e0162c3",
       "spoken_text": "先輩、いらっしゃい。昼間に話したお酒、できましたよ。",
       "subtitle_templates": [
         "前辈来啦。白天说的那杯酒，我已经调好了呢。",
@@ -2729,6 +3410,9 @@
       "line_key": "xm_tavern_12_roka_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_12_roka_02_61472a5a9b5a",
+      "audio_file": "xm_voice_ja_xm_tavern_12_roka_02_61472a5a9b5a.ogg",
+      "source_sha256": "61472a5a9b5a6bb455295d85f5a4206eb85e7c85d0eb821b6252e4e16ff8ecfb",
+      "packaged_sha256": "dd941c78cdc05ac466f4d1175623ed2a463a995998d435af0b532316f2f36a58",
       "spoken_text": "塩漬けの桜に、日本酒を少し。それから抹茶も、ほんの少しだけ。あとから、ちょっとだけ苦みが残るんです。",
       "subtitle_templates": [
         "用了盐渍樱花和一点清酒。后面还添了些抹茶，喝起来会有一点点苦。",
@@ -2741,6 +3425,9 @@
       "line_key": "xm_tavern_12_roka_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_12_roka_03_82460d31f026",
+      "audio_file": "xm_voice_ja_xm_tavern_12_roka_03_82460d31f026.ogg",
+      "source_sha256": "82460d31f0260c634256ef17106df496bc874189b181fe7bf23bfc7572acf10e",
+      "packaged_sha256": "f00dde03839061da2db6829181f048a1cb171d929fb11336f2d232a109db9631",
       "spoken_text": "名前は「ろか」にしました。 先輩、どうでしょう？",
       "subtitle_templates": [
         "我给它取名叫《露华》。嘿嘿，前辈觉得怎么样？",
@@ -2753,6 +3440,9 @@
       "line_key": "xm_tavern_12_roka_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_12_roka_04_4c2aae088d63",
+      "audio_file": "xm_voice_ja_xm_tavern_12_roka_04_4c2aae088d63.ogg",
+      "source_sha256": "4c2aae088d63472d57a2f5a4578c95524d893d44c4ebe394c057c75799de6547",
+      "packaged_sha256": "2baca67093ba3861806408a08d09d267704f38d2c2c44e2ec42807dbbabcc9f8",
       "spoken_text": "これは普通のメニューには入れないつもりです。先輩の分にしておきますね。",
       "subtitle_templates": [
         "这一杯不打算放进普通酒单。留给前辈吧。",
@@ -2765,6 +3455,9 @@
       "line_key": "xm_tavern_12_business_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_12_business_01_ffc1d3e58c6e",
+      "audio_file": "xm_voice_ja_xm_tavern_12_business_01_ffc1d3e58c6e.ogg",
+      "source_sha256": "ffc1d3e58c6ec9933a629685f6af6e651dd800c3a943d6481a7ed6fde2162ec4",
+      "packaged_sha256": "d7e1e507bac988a4bda4bc60c2b1eb0b3d608f321bc0c465060667cb4ba4c270",
       "spoken_text": "先輩、最近、ペンギン資産会社から精算の通知が届いたんです。",
       "subtitle_templates": [
         "前辈，最近收到一份企鹅资产公司的结算通知。",
@@ -2777,6 +3470,9 @@
       "line_key": "xm_tavern_12_business_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_12_business_02_32249654501d",
+      "audio_file": "xm_voice_ja_xm_tavern_12_business_02_32249654501d.ogg",
+      "source_sha256": "32249654501dee00b407ce047ae518638e22cbd92905fab70a65c75024cf0472",
+      "packaged_sha256": "d3da690424ef6929bd28e378ba1b92204575a7d194815eff58dc91c2fd525d19",
       "spoken_text": "前の家賃の支援には、売上の条件があったみたいで。届かなかった分は契約どおり返さないといけないそうです。",
       "subtitle_templates": [
         "之前的租金扶持，原来还有业绩考核。没有达到要求的部分，要按照合同补回来。",
@@ -2789,6 +3485,9 @@
       "line_key": "xm_tavern_12_business_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_12_business_03_debc326160d7",
+      "audio_file": "xm_voice_ja_xm_tavern_12_business_03_debc326160d7.ogg",
+      "source_sha256": "debc326160d7f199811d15a5a2fea50c0b633235d5877d1eec4fbcf75b553a61",
+      "packaged_sha256": "822f8cad32894138376e46b3b6f9929832664ebec0ee2d27332ff1be66761a24",
       "spoken_text": "売上の記録をまとめてみました。前はあんなにお客さんが来てくれたのに、最近はすっかり減ってしまって。",
       "subtitle_templates": [
         "我把营业记录整理了一下。前几周生意明明还不错，可最近的客流实在少了很多。",
@@ -2801,6 +3500,9 @@
       "line_key": "xm_tavern_12_business_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_12_business_04_35da2b69f218",
+      "audio_file": "xm_voice_ja_xm_tavern_12_business_04_35da2b69f218.ogg",
+      "source_sha256": "35da2b69f21855b94ce41bbc7789dee8cc2ab1cdce9c6b13bd8d54b293d45e44",
+      "packaged_sha256": "1d941a8241b68880bf720563845cb9116f85b5c6965e6b03429bb7c37e1dbdea",
       "spoken_text": "来月の仕入れも、最初から考え直さないと。",
       "subtitle_templates": [
         "现在连下个月的进货，都得重新算一遍了。",
@@ -2813,6 +3515,9 @@
       "line_key": "xm_tavern_12_business_05",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_12_business_05_880aee934e74",
+      "audio_file": "xm_voice_ja_xm_tavern_12_business_05_880aee934e74.ogg",
+      "source_sha256": "880aee934e7449b33b683e0a2a5b9fb1f30d7f432ae5a6ce3eb5fd7b50e9a719",
+      "packaged_sha256": "5000516faea2d505c2b3533b8b12e75dc360b4bd08408fb35d437db53bce58cd",
       "spoken_text": "まずは審査のやり直しを頼んでみます。約束された宣伝も、結局うちには回ってこなかったので。",
       "subtitle_templates": [
         "我想先去申请复核。毕竟当初承诺的推广，后来一直没有排上。",
@@ -2825,6 +3530,9 @@
       "line_key": "xm_tavern_13_entry",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_13_entry_fabc5325eecd",
+      "audio_file": "xm_voice_ja_xm_tavern_13_entry_fabc5325eecd.ogg",
+      "source_sha256": "fabc5325eecd839c482287184c20acf54bb8b27d6e802b45337f226163944465",
+      "packaged_sha256": "240bc4dd4d6a872ea9045026a7c3c015adbc9823801526e27e5d31ec3300f884",
       "spoken_text": "あ、先輩。よかったら、少し座っていってください。今日はもう営業していないんです。",
       "subtitle_templates": [
         "啊，前辈。进来坐坐吧。今天已经不营业啦。",
@@ -2837,6 +3545,9 @@
       "line_key": "xm_tavern_13_tape",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_13_tape_78a1f809c565",
+      "audio_file": "xm_voice_ja_xm_tavern_13_tape_78a1f809c565.ogg",
+      "source_sha256": "78a1f809c56512984e0b97b430361be3f8e68554021270842ccb3b68325fd3e1",
+      "packaged_sha256": "c9bdf2c2c46b7e4ab55effd998fbf20c520f323e837b9303e86253e0bc238a88",
       "spoken_text": "カセットデッキは、まだ片づけてないんです。よかったら、聴いていってくださいね。",
       "subtitle_templates": [
         "磁带机还没收起来。想听的话，就放着听吧。",
@@ -2849,6 +3560,9 @@
       "line_key": "xm_tavern_13_chat",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_13_chat_b019299e1166",
+      "audio_file": "xm_voice_ja_xm_tavern_13_chat_b019299e1166.ogg",
+      "source_sha256": "b019299e11663c6473dc49a954c0d838e72fd264874fd2c2ac26527d4378c620",
+      "packaged_sha256": "91d5537e960c91602b3724786592b61c29a8f3e088b00f3bccabcc48f4362bb5",
       "spoken_text": "グラスを何個か、手元に残すことにしました。見るたびに、ここを思い出すのかな。",
       "subtitle_templates": [
         "有几只杯子我准备留着。以后看到它们，应该还会想起这里吧。",
@@ -2861,6 +3575,9 @@
       "line_key": "xm_repeat_first",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_repeat_first_657dddbdb760",
+      "audio_file": "xm_voice_ja_xm_repeat_first_657dddbdb760.ogg",
+      "source_sha256": "657dddbdb760d56dc8f6a23246122655f60276e01763180c137beab56d232382",
+      "packaged_sha256": "a5d2b27c55805d8b4cc0294eadb3479249fc538aa0eb481b0cd7aef0a493554f",
       "spoken_text": "食べるものでも、飲み水でも大丈夫です。",
       "subtitle_templates": [
         "吃的或者饮用水，都可以。",
@@ -2873,6 +3590,9 @@
       "line_key": "xm_cocktail_accept",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_cocktail_accept_acc5ee8c81a8",
+      "audio_file": "xm_voice_ja_xm_cocktail_accept_acc5ee8c81a8.ogg",
+      "source_sha256": "acc5ee8c81a84d82875dc3a2773bd109c176290d62d9ba474b477beb5f7a650d",
+      "packaged_sha256": "0153c7baea195fdeccc4e697b9c91ab89027833deba4a88e7e6585d208b25225",
       "spoken_text": "ありがとうございます。お口に合うといいんですけど。",
       "subtitle_templates": [
         "谢谢，希望合你的口味。",
@@ -2885,6 +3605,9 @@
       "line_key": "intro_1",
       "language": "ja",
       "sound_key": "xm_voice_ja_intro_1_df8db937df8e",
+      "audio_file": "xm_voice_ja_intro_1_df8db937df8e.ogg",
+      "source_sha256": "df8db937df8e04c601fbc73900920c3447bc23fed95795b9a6d0cf625f678a5a",
+      "packaged_sha256": "6b600c149493dac26de58ffec3c1739d82458b76c28d9b50855cddae4ae75e1e",
       "spoken_text": "……こんばんは。まだ明かりがついていたので、入ってきました。",
       "subtitle_templates": [
         "……你好。看见这边还亮着灯，就进来了。",
@@ -2897,6 +3620,9 @@
       "line_key": "goodbye",
       "language": "ja",
       "sound_key": "xm_voice_ja_goodbye_44984ca425de",
+      "audio_file": "xm_voice_ja_goodbye_44984ca425de.ogg",
+      "source_sha256": "44984ca425de0facafb4915c5bdbde97cbc64a72ffac9c120320cc2b2f945c48",
+      "packaged_sha256": "9d4630350bcaa18ca93af0b960f05ab36fe31ab7b80ed154d9586aef6269c3c0",
       "spoken_text": "それじゃ、そろそろ行きますね。また。",
       "subtitle_templates": [
         "那我先走啦。下次见。",
@@ -2909,6 +3635,9 @@
       "line_key": "wrong_item",
       "language": "ja",
       "sound_key": "xm_voice_ja_wrong_item_e8065d92a9d1",
+      "audio_file": "xm_voice_ja_wrong_item_e8065d92a9d1.ogg",
+      "source_sha256": "e8065d92a9d14ee62a4afd9d9a2e90aed8148a57ef7d0dcfc1e047dee0561491",
+      "packaged_sha256": "44e2f376078986347791a97dd7f613d947675ff68d1fe41afaadeec64d5aa99c",
       "spoken_text": "これは……今日は使わないかな。",
       "subtitle_templates": [
         "这个……今天暂时用不上。",
@@ -2921,6 +3650,9 @@
       "line_key": "right_item",
       "language": "ja",
       "sound_key": "xm_voice_ja_right_item_ace7e93c80ac",
+      "audio_file": "xm_voice_ja_right_item_ace7e93c80ac.ogg",
+      "source_sha256": "ace7e93c80acf279f07e6b59adc3c6e9b22d0cca8eddb2765082a77244348d43",
+      "packaged_sha256": "c966ac0a40219d5602be27c9238f284baf4ff918fb19de56e380a5e1af31bcf6",
       "spoken_text": "うん、これです。",
       "subtitle_templates": [
         "嗯，就是这种。",
@@ -2933,6 +3665,9 @@
       "line_key": "repeat",
       "language": "ja",
       "sound_key": "xm_voice_ja_repeat_929d092c13ae",
+      "audio_file": "xm_voice_ja_repeat_929d092c13ae.ogg",
+      "source_sha256": "929d092c13ae5203c92f0e6cda47389ef0ee739fed80e9ea50f73208899433e6",
+      "packaged_sha256": "f1beece8837bcca10b30986876366eec312991952d3986ede7152e94e3b970fc",
       "spoken_text": "普通の飲み水だけで大丈夫です。他のものは、また今度。",
       "subtitle_templates": [
         "普通饮用水就好。别的先不用啦。",
@@ -2945,6 +3680,9 @@
       "line_key": "accept_return",
       "language": "ja",
       "sound_key": "xm_voice_ja_accept_return_f76caf6b2c03",
+      "audio_file": "xm_voice_ja_accept_return_f76caf6b2c03.ogg",
+      "source_sha256": "f76caf6b2c03a9000f28fedbc16aeda1f5b8150eb465e2eeb5874013461ef6f3",
+      "packaged_sha256": "ac8214dcb6843bdc0a65ff48c7526b9ba15c49b656decde8586533caa925a249",
       "spoken_text": "うん、ありがとう。今日も助かりました。",
       "subtitle_templates": [
         "嗯，谢谢。今天也帮上忙了。",
@@ -2957,6 +3695,9 @@
       "line_key": "goodbye_discount",
       "language": "ja",
       "sound_key": "xm_voice_ja_goodbye_discount_aa3d782032a3",
+      "audio_file": "xm_voice_ja_goodbye_discount_aa3d782032a3.ogg",
+      "source_sha256": "aa3d782032a381bf65e8c2d536b7d0dd26334e55195c2b8ca24928bae63dc359",
+      "packaged_sha256": "4c9db082d6dac5816dbe7d38f699decb0f1ff603f5a4467c0666fa147b1e6183",
       "spoken_text": "お安くしてくれたんですね……ありがとうございます。 ちょっと助かっちゃいました。それじゃ、また。",
       "subtitle_templates": [
         "还特地算便宜了……谢谢，帮大忙了。那我先走啦。",
@@ -2969,6 +3710,9 @@
       "line_key": "repeat_food",
       "language": "ja",
       "sound_key": "xm_voice_ja_repeat_food_80fa57aa9503",
+      "audio_file": "xm_voice_ja_repeat_food_80fa57aa9503.ogg",
+      "source_sha256": "80fa57aa95037ca9679236175b8893c98fee149b6fbc3c927291776ad6c5a82e",
+      "packaged_sha256": "93b6c6c859ae1a4198206b5bb5f6b3e154ac830c67c5c3893195ff7f77cfe1d2",
       "spoken_text": "食べ物だけで大丈夫です。他のものは、また今度。",
       "subtitle_templates": [
         "吃的就好。其他东西这次先不买啦。",
@@ -2981,6 +3725,9 @@
       "line_key": "repeat_household",
       "language": "ja",
       "sound_key": "xm_voice_ja_repeat_household_93374e7a678e",
+      "audio_file": "xm_voice_ja_repeat_household_93374e7a678e.ogg",
+      "source_sha256": "93374e7a678ea5ac4599b6ef74dc759b6a779f707a58ade045c0f7a7b399e8e7",
+      "packaged_sha256": "766f958839f49271569a933e3631de03ea546fdc1583e87a4edee0b7a37a4431",
       "spoken_text": "普段使うものを。今日はそれを揃えたくて。",
       "subtitle_templates": [
         "日常用的东西就好，今天先把这些买齐。",
@@ -2993,6 +3740,9 @@
       "line_key": "xm_act_discount_accept_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_discount_accept_01_1f714379dd7b",
+      "audio_file": "xm_voice_ja_xm_act_discount_accept_01_1f714379dd7b.ogg",
+      "source_sha256": "1f714379dd7bd442ad012f37aa7677995db365793105d6ca4bd05a679d6ed908",
+      "packaged_sha256": "361a3201bb9ad432b22394c9c1497c9d63b4392b667678b514579992c4a2762d",
       "spoken_text": "あ、少し安くなるんですね。ありがとうございます。",
       "subtitle_templates": [
         "啊，稍微便宜了一些。谢谢你。",
@@ -3005,6 +3755,9 @@
       "line_key": "xm_act_discount_accept_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_discount_accept_02_f72fb44b31af",
+      "audio_file": "xm_voice_ja_xm_act_discount_accept_02_f72fb44b31af.ogg",
+      "source_sha256": "f72fb44b31af247b15caacab62b682772320e128b4dd21fe01aca94650ab66ad",
+      "packaged_sha256": "bf39c5faeed33b342341136f113119a0e5d6123b9c2d8ba9441b562d3ca7f74c",
       "spoken_text": "いいんですか？ じゃあ、お願いします。",
       "subtitle_templates": [
         "真的可以吗？那就拜托啦。",
@@ -3017,6 +3770,9 @@
       "line_key": "xm_act_discount_accept_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_discount_accept_03_76dba6f53f3c",
+      "audio_file": "xm_voice_ja_xm_act_discount_accept_03_76dba6f53f3c.ogg",
+      "source_sha256": "76dba6f53f3c12ba0341371e5f46a1618f004975b42de0013a5a37ddd02d3f27",
+      "packaged_sha256": "c24b0cc77452b854f20b45f4a5e6aa0baf727ffe026f7d1348b61f9657694211",
       "spoken_text": "助かります。それじゃ、このお値段でお願いします。",
       "subtitle_templates": [
         "帮大忙了。那就按这个价钱吧。",
@@ -3029,6 +3785,9 @@
       "line_key": "xm_act_discount_accept_high_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_discount_accept_high_01_62eeff4c15f3",
+      "audio_file": "xm_voice_ja_xm_act_discount_accept_high_01_62eeff4c15f3.ogg",
+      "source_sha256": "62eeff4c15f37860e77aaddc45a282136177653e86210bbaa45367a8874c52f2",
+      "packaged_sha256": "a7fe6538f4c4c34205231173d16dfa1a023af5a0bd9563033e9831f13d580e76",
       "spoken_text": "えっ、 そんなに安くしてくれるんですか？ 本当にいいんですか？",
       "subtitle_templates": [
         "诶，便宜这么多？……真的可以吗？",
@@ -3041,6 +3800,9 @@
       "line_key": "xm_act_discount_accept_high_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_discount_accept_high_02_fc6b49207534",
+      "audio_file": "xm_voice_ja_xm_act_discount_accept_high_02_fc6b49207534.ogg",
+      "source_sha256": "fc6b492075345c5312653e94bcee18aeb0e75e50ac38c345ee16b088e935746d",
+      "packaged_sha256": "44d130c1067761a2e2708d5bac62bdb97a1123f4a00176d065c827193bb903a5",
       "spoken_text": "そこまでしてもらって……本当にありがとうございます。",
       "subtitle_templates": [
         "太照顾我了……真的谢谢。",
@@ -3053,6 +3815,9 @@
       "line_key": "xm_act_discount_accept_high_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_discount_accept_high_03_70d5b4f319ad",
+      "audio_file": "xm_voice_ja_xm_act_discount_accept_high_03_70d5b4f319ad.ogg",
+      "source_sha256": "70d5b4f319ade40165dc3d356436acc8762e55ed8b284e2dac7f03cbdb7f4f0c",
+      "packaged_sha256": "ed5421a92b8e714ff47126ebb85a683b966a337e10a91d9f8116dddd2f86cd79",
       "spoken_text": "びっくりしました。 じゃあ、お言葉に甘えちゃおうかな。",
       "subtitle_templates": [
         "吓我一跳。那我就不客气了。",
@@ -3065,6 +3830,9 @@
       "line_key": "xm_act_budget_increase_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_budget_increase_01_1313128f5360",
+      "audio_file": "xm_voice_ja_xm_act_budget_increase_01_1313128f5360.ogg",
+      "source_sha256": "1313128f53606df0aff9b8bfa6708a00259b5ba0c2c1bfc8240d466d154ec6e5",
+      "packaged_sha256": "ae83b487ed61aefbf40c50149c9d59304e27975b57c53c1462d3b0b66ba9e501",
       "spoken_text": "これなら、もう少し買い物できそうですね。",
       "subtitle_templates": [
         "这样还能再买点别的呢。",
@@ -3077,6 +3845,9 @@
       "line_key": "xm_act_budget_increase_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_budget_increase_02_a5ffd381fcea",
+      "audio_file": "xm_voice_ja_xm_act_budget_increase_02_a5ffd381fcea.ogg",
+      "source_sha256": "a5ffd381fcea319a49a60341a170ac0ed4dc54cba024f6467262a6914012995f",
+      "packaged_sha256": "8945a8ee61787eb0f82e5793904268c063a63257f61770487bfaf66bb45fa882",
       "spoken_text": "浮いた分で、もう一つ見てみようかな。",
       "subtitle_templates": [
         "省下的这点钱，可以再挑一样。",
@@ -3089,6 +3860,9 @@
       "line_key": "xm_act_budget_increase_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_budget_increase_03_d34d11b7312a",
+      "audio_file": "xm_voice_ja_xm_act_budget_increase_03_d34d11b7312a.ogg",
+      "source_sha256": "d34d11b7312aabfb98e2fd05717ebb19767b95475d51d53928f59fbb0a917330",
+      "packaged_sha256": "0b031c94a0a7083aad9e7e87c91cc013a3853e71590767270acd78bfa4e14034",
       "spoken_text": "まだ予算が残ってます。ほかのものも見せてもらえますか？",
       "subtitle_templates": [
         "还有预算。能再看看别的吗？",
@@ -3101,6 +3875,9 @@
       "line_key": "xm_act_markup_accept_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_accept_01_3426d6bb5a59",
+      "audio_file": "xm_voice_ja_xm_act_markup_accept_01_3426d6bb5a59.ogg",
+      "source_sha256": "3426d6bb5a5901e18d519d2aa37c6123c7acb9b1c6677f2258e9bec4876bdc4a",
+      "packaged_sha256": "59c29083823788a89aced4cfe15f165f79e5244cc1bf7d28c532d05e424636ed",
       "spoken_text": "……分かりました。それでお願いします。",
       "subtitle_templates": [
         "……好吧。那就这样。",
@@ -3113,6 +3890,9 @@
       "line_key": "xm_act_markup_accept_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_accept_02_e352598e4ca9",
+      "audio_file": "xm_voice_ja_xm_act_markup_accept_02_e352598e4ca9.ogg",
+      "source_sha256": "e352598e4ca903a3d6764e4e87bca29b76b694adc1bf0b36ff091f48f820e8cd",
+      "packaged_sha256": "387906ece5a0c9a4994c165208ea356f811f8da564cbdea082b18efe73f11ce2",
       "spoken_text": "さっきより高いけど……今日は必要なので。",
       "subtitle_templates": [
         "是比刚才贵一点……不过今天确实需要。",
@@ -3125,6 +3905,9 @@
       "line_key": "xm_act_markup_accept_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_accept_03_8f4007270635",
+      "audio_file": "xm_voice_ja_xm_act_markup_accept_03_8f4007270635.ogg",
+      "source_sha256": "8f4007270635cae742d73a0d3593926756e1677aac90e449ee7dc80cf18376d7",
+      "packaged_sha256": "55982faf61bb0ef542ea6c3cedf0b5054714cbc0a84b5b1f5739b9557459da23",
       "spoken_text": "うーん……今回は、そのお値段で。",
       "subtitle_templates": [
         "嗯……这回就按你说的吧。",
@@ -3137,6 +3920,9 @@
       "line_key": "xm_act_markup_accept_high_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_accept_high_01_c1781d99639c",
+      "audio_file": "xm_voice_ja_xm_act_markup_accept_high_01_c1781d99639c.ogg",
+      "source_sha256": "c1781d99639c40790c6fed07729d3a1b948dacb92b98304f33f5208fde1fddac",
+      "packaged_sha256": "58692779bfa5bb547914817dd82efbe3fd053b14036bbfcceb5f3f322d2f8ed2",
       "spoken_text": "こんなに上がるんですか……。でも、今回はお願いします。",
       "subtitle_templates": [
         "居然加这么多……算了，这次还是要买。",
@@ -3149,6 +3935,9 @@
       "line_key": "xm_act_markup_accept_high_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_accept_high_02_b8adadc58f14",
+      "audio_file": "xm_voice_ja_xm_act_markup_accept_high_02_b8adadc58f14.ogg",
+      "source_sha256": "b8adadc58f1477cd7ea861280d3962bcdc58dd91d5c2b53e91ac2c12bc80d999",
+      "packaged_sha256": "44ca3013a034eca29da50b51d43feb8862ba69054cb3ad28dc3f64beca157a76",
       "spoken_text": "高いですね……。 これだけは必要なので。",
       "subtitle_templates": [
         "好贵啊。……我是真的需要这个。",
@@ -3161,6 +3950,9 @@
       "line_key": "xm_act_markup_accept_high_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_accept_high_03_5a1b1c8ef217",
+      "audio_file": "xm_voice_ja_xm_act_markup_accept_high_03_5a1b1c8ef217.ogg",
+      "source_sha256": "5a1b1c8ef217aa5569106612ca0677dabadaef6a99f5df59e58a2082c4a4e7c3",
+      "packaged_sha256": "2eb025727d1e11d1effb1c0d064fb3f03145355e699b798eed3e084cab4df1e9",
       "spoken_text": "……本当にこのお値段なんですね。分かりました。",
       "subtitle_templates": [
         "……确认是这个价钱？我明白了。",
@@ -3173,6 +3965,9 @@
       "line_key": "xm_act_budget_decrease_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_budget_decrease_01_7282c218b5cd",
+      "audio_file": "xm_voice_ja_xm_act_budget_decrease_01_7282c218b5cd.ogg",
+      "source_sha256": "7282c218b5cd428b6a92c84f0b4a97c030b16b7a8cedb7575c27dd3907b2e0d8",
+      "packaged_sha256": "cadc010a46e1ffb7cbe11d3ef1581014d75ac4bec98ff4b3e1f8c677749e431a",
       "spoken_text": "あ……残りの予算、少なくなっちゃいました。",
       "subtitle_templates": [
         "啊……剩下的钱不多了。",
@@ -3185,6 +3980,9 @@
       "line_key": "xm_act_budget_decrease_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_budget_decrease_02_8dd12341bf8d",
+      "audio_file": "xm_voice_ja_xm_act_budget_decrease_02_8dd12341bf8d.ogg",
+      "source_sha256": "8dd12341bf8df5345cd089134f73ad4a84a318bb695332eb3dfd86d7469ddc27",
+      "packaged_sha256": "c42343ab9601ef5bb0c59405316ea0c7b0c09645f592a68a82a5a9b673af7be9",
       "spoken_text": "これだと、今日はあまり買えませんね。",
       "subtitle_templates": [
         "这样今天就不能买太多了呢。",
@@ -3197,6 +3995,9 @@
       "line_key": "xm_act_budget_decrease_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_budget_decrease_03_f6a35c3a0043",
+      "audio_file": "xm_voice_ja_xm_act_budget_decrease_03_f6a35c3a0043.ogg",
+      "source_sha256": "f6a35c3a00439373341fef8077d7c01136a89fac7c866c85b0dd3283ce5034c1",
+      "packaged_sha256": "de4771dbe3ddf010947a979c0c8a69c28a818ffff5a6cbe828168c199329d993",
       "spoken_text": "もう一つ買うつもりだったんですけど……また今度にします。",
       "subtitle_templates": [
         "原本还想多买一样……算啦，下次吧。",
@@ -3209,6 +4010,9 @@
       "line_key": "xm_act_markup_reject_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_reject_01_c4c001b49beb",
+      "audio_file": "xm_voice_ja_xm_act_markup_reject_01_c4c001b49beb.ogg",
+      "source_sha256": "c4c001b49beb768e3f13811c520eb048bf8e7eb6653750517ed4e5f30e3f4884",
+      "packaged_sha256": "2edcc5a1105572a011cc4205cd7c87b36f5b9b0c2f4f37121cea0bce4596d679",
       "spoken_text": "すみません。そのお値段なら、今回はやめておきます。",
       "subtitle_templates": [
         "抱歉，这个价钱我还是不要了。",
@@ -3221,6 +4025,9 @@
       "line_key": "xm_act_markup_reject_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_reject_02_fc1c33389bc6",
+      "audio_file": "xm_voice_ja_xm_act_markup_reject_02_fc1c33389bc6.ogg",
+      "source_sha256": "fc1c33389bc6f22748d1d6cbf1abfb6aa17ffdebfb1ffd1bd8bea0dea44aa78c",
+      "packaged_sha256": "30307b38ae2468f51c04030cb37972cecaf58749b5550c0c12db2cd384037707",
       "spoken_text": "うーん……ちょっと予算が足りなくて。",
       "subtitle_templates": [
         "唔……预算有点不够。",
@@ -3233,6 +4040,9 @@
       "line_key": "xm_act_markup_reject_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_reject_03_e9f60032f836",
+      "audio_file": "xm_voice_ja_xm_act_markup_reject_03_e9f60032f836.ogg",
+      "source_sha256": "e9f60032f8366216eaa1afe3a62c5daa92943a2d435041000a58263c207c132c",
+      "packaged_sha256": "289507dedd65365b6b9e83e56eb759d3c5e8ba30d8d15f568278d899ac2ed4c6",
       "spoken_text": "その金額だと、ちょっと難しいです。",
       "subtitle_templates": [
         "这个价钱有点难接受。",
@@ -3245,6 +4055,9 @@
       "line_key": "xm_act_markup_reject_high_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_reject_high_01_f7681d2d5061",
+      "audio_file": "xm_voice_ja_xm_act_markup_reject_high_01_f7681d2d5061.ogg",
+      "source_sha256": "f7681d2d50615421e545ecce1d7e094c7a03b1157ebb8f3171650e212b7cb6ea",
+      "packaged_sha256": "1ccb24f96ec09646aac9fda6b46e5bfea5075399160e0bc8f759e794138442ab",
       "spoken_text": "……えっ、 さすがに高すぎませんか。",
       "subtitle_templates": [
         "……诶？这也太贵了吧。",
@@ -3257,6 +4070,9 @@
       "line_key": "xm_act_markup_reject_high_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_reject_high_02_ce4819619f03",
+      "audio_file": "xm_voice_ja_xm_act_markup_reject_high_02_ce4819619f03.ogg",
+      "source_sha256": "ce4819619f03e167968299b69354b835fbe83053758306d2d6f503288a700e59",
+      "packaged_sha256": "9ee2a04ff0d98b74b47add3df52cd40323e0ece9b2424069fe6c8fecdeeccb76",
       "spoken_text": "ごめんなさい。そのお値段では買えません。",
       "subtitle_templates": [
         "对不起，这个价钱我买不了。",
@@ -3269,6 +4085,9 @@
       "line_key": "xm_act_markup_reject_high_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_markup_reject_high_03_a73315b10a29",
+      "audio_file": "xm_voice_ja_xm_act_markup_reject_high_03_a73315b10a29.ogg",
+      "source_sha256": "a73315b10a29d8f58bcbd1800ddeb7b657c3812a6ec26a9a77bde13fd35cf80f",
+      "packaged_sha256": "96297fac513919317d8cc1ca4c72f83e8a5cbcaf53ceb4c70d34a703b90a4ad1",
       "spoken_text": "それなら、今日はやめておきます。",
       "subtitle_templates": [
         "这样的话，今天还是算了。",
@@ -3281,6 +4100,9 @@
       "line_key": "xm_act_angry_leave_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_angry_leave_01_6a2d3dedb5cb",
+      "audio_file": "xm_voice_ja_xm_act_angry_leave_01_6a2d3dedb5cb.ogg",
+      "source_sha256": "6a2d3dedb5cb86aa4fd188f806729b078bc170541c9b66045ef518eedf48b3fd",
+      "packaged_sha256": "8e5f5b315af7facc5958cb8173dd60c72075c1b7d90bc6dacb67a41953410c79",
       "spoken_text": "……もう結構です。今日は帰ります。",
       "subtitle_templates": [
         "……够了。今天我先回去了。",
@@ -3293,6 +4115,9 @@
       "line_key": "xm_act_angry_leave_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_angry_leave_02_0ad23aa12f96",
+      "audio_file": "xm_voice_ja_xm_act_angry_leave_02_0ad23aa12f96.ogg",
+      "source_sha256": "0ad23aa12f960f296b00a9fc2c6610d7f4eba3fdb20e283d09524f92f18b973f",
+      "packaged_sha256": "eb23763de23cf70adc98401a2f8b3c261ffe0f196e5f29fe1c80e236b6ee7bce",
       "spoken_text": "これ以上お話ししても仕方なさそうなので。失礼します。",
       "subtitle_templates": [
         "继续说也没意义了。失礼了。",
@@ -3305,6 +4130,9 @@
       "line_key": "xm_act_angry_leave_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_angry_leave_03_67e3e6887190",
+      "audio_file": "xm_voice_ja_xm_act_angry_leave_03_67e3e6887190.ogg",
+      "source_sha256": "67e3e688719001c25ba34546b36e1fae0e94fde88450f93b4bb65972b459868d",
+      "packaged_sha256": "9287e4d402274f6094d77ed58047ce0d98f221ae9d400eeec7a8180342749051",
       "spoken_text": "すみません。今日はもう、ここで買い物する気になれません。",
       "subtitle_templates": [
         "对不起，今天我没法继续在这里买东西了。",
@@ -3317,6 +4145,9 @@
       "line_key": "xm_act_bad_word_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_bad_word_01_d185c6c2bf93",
+      "audio_file": "xm_voice_ja_xm_act_bad_word_01_d185c6c2bf93.ogg",
+      "source_sha256": "d185c6c2bf939ba6c5d52e13b3c967a8fdd350f335a68125d47dc7e2b667adc5",
+      "packaged_sha256": "847ee2105cc4855c5c084622a585107886af4078347b3b229aab6ba941dcbc98",
       "spoken_text": "こういうことがあったって、知り合いにはちゃんと話しておきます。",
       "subtitle_templates": [
         "这种事，我会和认识的人说清楚的。",
@@ -3329,6 +4160,9 @@
       "line_key": "xm_act_bad_word_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_bad_word_02_422a09dddd20",
+      "audio_file": "xm_voice_ja_xm_act_bad_word_02_422a09dddd20.ogg",
+      "source_sha256": "422a09dddd20e1a0de7caa6c263449df4542ef0f30a9ebb214d1119906887062",
+      "packaged_sha256": "3e9de3b6fe1af8eb1f030c4c11328cd01a5ba6dd81d49ea61f117cd571560773",
       "spoken_text": "すみません……でも、誰かにこのお店のことを聞かれたら、黙ってはいられません。",
       "subtitle_templates": [
         "抱歉……但别人问起这家店，我没法当作什么都没发生。",
@@ -3341,6 +4175,9 @@
       "line_key": "xm_act_bad_word_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_bad_word_03_bccb1005d2d5",
+      "audio_file": "xm_voice_ja_xm_act_bad_word_03_bccb1005d2d5.ogg",
+      "source_sha256": "bccb1005d2d5cb5eecf9b053c6eb30b250bccdc78a2d671de3c446d72582db81",
+      "packaged_sha256": "6179ddfd8ec4745c68cdf99f9115f8cc75c298d54f553bfd63e1839ac7a909b0",
       "spoken_text": "この辺り、噂が広まるのは早いですから。もう、こういうことはしないでくださいね。",
       "subtitle_templates": [
         "这里的传闻很快的。希望你以后别这样了。",
@@ -3353,6 +4190,9 @@
       "line_key": "xm_act_blackmail_innocent_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_blackmail_innocent_01_62171decc2a3",
+      "audio_file": "xm_voice_ja_xm_act_blackmail_innocent_01_62171decc2a3.ogg",
+      "source_sha256": "62171decc2a3ae304ce4f1a1ad5875956a57c93ca546d7d73b0854be82de382a",
+      "packaged_sha256": "49c116314ed6d232a29d9148a64f8e8b22744214ba6d74248e5779d14bbb4871",
       "spoken_text": "……犯罪者って、わたしのことですか？  違います。そんなふうに決めつけないでください。",
       "subtitle_templates": [
         "……罪犯？是在说我吗？不是的。请不要随便这样指控人。",
@@ -3365,6 +4205,9 @@
       "line_key": "xm_act_blackmail_innocent_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_blackmail_innocent_02_44a05a6354f8",
+      "audio_file": "xm_voice_ja_xm_act_blackmail_innocent_02_44a05a6354f8.ogg",
+      "source_sha256": "44a05a6354f81b93a958492e806109624016d42619cadae591d66d46f2dedc32",
+      "packaged_sha256": "035af04e3af244b86a69d5e73f4002462422d07b65c12127f483d66652e19bfe",
       "spoken_text": "そういう冗談、笑えません。わたし、何もしてませんよ。",
       "subtitle_templates": [
         "这个玩笑，一点也不好笑。我什么都没做。",
@@ -3377,6 +4220,9 @@
       "line_key": "xm_act_blackmail_innocent_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_blackmail_innocent_03_d695763820f9",
+      "audio_file": "xm_voice_ja_xm_act_blackmail_innocent_03_d695763820f9.ogg",
+      "source_sha256": "d695763820f9b135e09c6bc2184c1eb4c2b1ff15f6f8fec5210f6aef36f4a42b",
+      "packaged_sha256": "837e2320f5ccc349d0c1be7146a6e1d5e54179afe3190cbaa497157616094d42",
       "spoken_text": "どうして急にそんなことを？ わたし、買い物に来ただけなのに。",
       "subtitle_templates": [
         "为什么突然说这种话？我只是来买东西的。",
@@ -3389,6 +4235,9 @@
       "line_key": "xm_act_threaten_false_aug_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_threaten_false_aug_01_7bec73287a59",
+      "audio_file": "xm_voice_ja_xm_act_threaten_false_aug_01_7bec73287a59.ogg",
+      "source_sha256": "7bec73287a59e69e1695ea0e198a5c6ad51d3e5757b99d49154462bb627a260b",
+      "packaged_sha256": "d509cc53a2638cacf99f88b4ba8dbfd43e7bbe8ddec810a4e553e35f5c189e64",
       "spoken_text": "……AI人間？ わたし、違いますよ。",
       "subtitle_templates": [
         "……改造体？我不是。",
@@ -3401,6 +4250,9 @@
       "line_key": "xm_act_threaten_false_aug_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_threaten_false_aug_02_5c9a2c9ef7b6",
+      "audio_file": "xm_voice_ja_xm_act_threaten_false_aug_02_5c9a2c9ef7b6.ogg",
+      "source_sha256": "5c9a2c9ef7b671d6e0a02323a43ffdad350b6de6077605915381e7ef4ecad8d6",
+      "packaged_sha256": "4193b4ddd0428f653ad888aee85cca9045c15fab3bf49a44d4e5a179a5892e57",
       "spoken_text": "ちゃんと確かめてから言ってください。わたしはAI人間じゃありません。",
       "subtitle_templates": [
         "能不能看清楚再说？我不是改造体。",
@@ -3413,6 +4265,9 @@
       "line_key": "xm_act_threaten_false_aug_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_threaten_false_aug_03_7f845be57bdd",
+      "audio_file": "xm_voice_ja_xm_act_threaten_false_aug_03_7f845be57bdd.ogg",
+      "source_sha256": "7f845be57bddf1924c999385847f4cf55013019b0781bb3da9bdff2fbc2e47b0",
+      "packaged_sha256": "1e324b2160703538caf3e62a390f20fad7f2dc8816965651f28ae94d3bc36d9f",
       "spoken_text": "そんなことで脅かさないでください……本当に違うんです。",
       "subtitle_templates": [
         "别拿这个吓我……真的不是。",
@@ -3425,6 +4280,9 @@
       "line_key": "xm_act_after_sale_continue_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_after_sale_continue_01_8e83c2a124ad",
+      "audio_file": "xm_voice_ja_xm_act_after_sale_continue_01_8e83c2a124ad.ogg",
+      "source_sha256": "8e83c2a124adf98c2964734c9da61976ba6d1bdd952713f5670bfe447a4aba6b",
+      "packaged_sha256": "65275cb0d5993ca811c999dbd49504852b431c3d6cfa115aa7652c6fcf39f8e7",
       "spoken_text": "ほかにもありますか？ もう少し見てみたいです。",
       "subtitle_templates": [
         "还有别的吗？我想再看看。",
@@ -3437,6 +4295,9 @@
       "line_key": "xm_act_after_sale_low_budget_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_after_sale_low_budget_01_e8c3e8b907d5",
+      "audio_file": "xm_voice_ja_xm_act_after_sale_low_budget_01_e8c3e8b907d5.ogg",
+      "source_sha256": "e8c3e8b907d50add4183230a686265a63d126017ce31f53a5e53f4bd675a7828",
+      "packaged_sha256": "f0439853a96b1c85865b43089786701b74228ef7d358919289b632cda5ca3423",
       "spoken_text": "あ……もうほとんど残ってないですね。今日はこのくらいで。",
       "subtitle_templates": [
         "啊……预算差不多用完了。今天就这些吧。",
@@ -3449,6 +4310,9 @@
       "line_key": "xm_act_reject_contraband_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_reject_contraband_01_d819694c7299",
+      "audio_file": "xm_voice_ja_xm_act_reject_contraband_01_d819694c7299.ogg",
+      "source_sha256": "d819694c72991d12db5108edf8bfe003a0c5e29bc709266832c826178432ceb2",
+      "packaged_sha256": "59ea92b94c22f0f2f3dacf8e6ae7c7a15c4ad4e60042a07c69b0bc77cbe1c07c",
       "spoken_text": "すみません。こういうものは、買えないんです。",
       "subtitle_templates": [
         "抱歉，这种东西我不能买。",
@@ -3461,6 +4325,9 @@
       "line_key": "xm_act_remove_filter_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_remove_filter_01_7c8e85e4f7c1",
+      "audio_file": "xm_voice_ja_xm_act_remove_filter_01_7c8e85e4f7c1.ogg",
+      "source_sha256": "7c8e85e4f7c1d84251d2f41814438d33ac3cb37137d0565053fa432b19b1b5b9",
+      "packaged_sha256": "3369320f7192afa88d03afbaf61364a177afe916b6cfc6ba92dff25ef8a26202",
       "spoken_text": "あの、中のフィルターだけ外してもらえますか？ 欲しいのはお水だけなので。",
       "subtitle_templates": [
         "不好意思，可以先把里面的滤芯取出来吗？我只买水。",
@@ -3473,6 +4340,9 @@
       "line_key": "xm_act_shutter_close_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_shutter_close_01_9ffe1931bd93",
+      "audio_file": "xm_voice_ja_xm_act_shutter_close_01_9ffe1931bd93.ogg",
+      "source_sha256": "9ffe1931bd934898376e39c2437fb86a0913c6edf5c9d6299a97dbefb10c8bfb",
+      "packaged_sha256": "71a52a53224c80308c393c94d156549e099430360bda47d21d47a3387d11501b",
       "spoken_text": "えっ、 ちょっと待ってください！ まだ買い物の途中で……！",
       "subtitle_templates": [
         "诶，等一下！我还没买完呢！",
@@ -3485,6 +4355,9 @@
       "line_key": "xm_act_shutter_close_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_shutter_close_03_746097d5f2ed",
+      "audio_file": "xm_voice_ja_xm_act_shutter_close_03_746097d5f2ed.ogg",
+      "source_sha256": "746097d5f2ed1ea4b860f5b604496c98dc50b9c1a2a89cd860acb39926f391ef",
+      "packaged_sha256": "4821e19252fca29dfa49c5e5dc224d81a7a7797bb7fd3bc2ce19260eeb3cde98",
       "spoken_text": "……それは、ちょっとひどくないですか。",
       "subtitle_templates": [
         "……这样有点过分了吧。",
@@ -3497,6 +4370,9 @@
       "line_key": "xm_act_shutter_close_04",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_shutter_close_04_68bda792f1b4",
+      "audio_file": "xm_voice_ja_xm_act_shutter_close_04_68bda792f1b4.ogg",
+      "source_sha256": "68bda792f1b42bf97af8ff4fc8fa03ed7529736271bf1187fea14621e3b615b0",
+      "packaged_sha256": "8056de2c39de4cbc5e095f1ac18a7ae9ad1584042ceb79b4fc8f99d603088beb",
       "spoken_text": "えっ、もう閉めちゃうんですか？",
       "subtitle_templates": [
         "咦，已经要打烊了吗？",
@@ -3509,6 +4385,9 @@
       "line_key": "xm_act_expose_water_base_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_expose_water_base_01_0106a219915e",
+      "audio_file": "xm_voice_ja_xm_act_expose_water_base_01_0106a219915e.ogg",
+      "source_sha256": "0106a219915ea07605f0d25dd84e96b5cddb6ab2d9f95116ea0d0546ab04f56d",
+      "packaged_sha256": "f363cff0b8d9c4734728f6525a1d8f67d6938dc3d9b4ef1c8f2b0ec7e46fb6a4",
       "spoken_text": "あれ……これ、普通のお水ですよね。ラベルとちょっと違うみたいです。",
       "subtitle_templates": [
         "嗯……这就是普通水吧？和标签不太一样。",
@@ -3521,6 +4400,9 @@
       "line_key": "xm_act_expose_water_high_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_expose_water_high_01_d0644438703c",
+      "audio_file": "xm_voice_ja_xm_act_expose_water_high_01_d0644438703c.ogg",
+      "source_sha256": "d0644438703c25536b69ee8d63db0100665862939d738d94b206512f300a6c43",
+      "packaged_sha256": "9ff2708ab3729628a3c5156e8453a6ec3e5fdcdd2c56e9a0522fffb85dc2b1fb",
       "spoken_text": "これ、高品質のお水ですよね。ラベルの表示と合ってない気がします。",
       "subtitle_templates": [
         "这应该是优质水吧？标签上好像不是这么写的。",
@@ -3533,6 +4415,9 @@
       "line_key": "xm_act_expose_water_other_01",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_expose_water_other_01_8000adb16f43",
+      "audio_file": "xm_voice_ja_xm_act_expose_water_other_01_8000adb16f43.ogg",
+      "source_sha256": "8000adb16f430e700b6b6727ac4e57579db0f249d19c6f7dd78000bc290903e3",
+      "packaged_sha256": "aed57d4e8ec11582affe7c2bc4da8ef50d4fa724a9e620de47989251892e94f8",
       "spoken_text": "この水、純度がラベルの表示と違うみたいです。",
       "subtitle_templates": [
         "这水的纯度和标签上写的不一样。",
@@ -3545,6 +4430,9 @@
       "line_key": "xm_act_expose_water_other_02",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_expose_water_other_02_29325f6d9682",
+      "audio_file": "xm_voice_ja_xm_act_expose_water_other_02_29325f6d9682.ogg",
+      "source_sha256": "29325f6d9682b66b245af696edefc85bbd34c6eff3e441936beaaee1ae349f15",
+      "packaged_sha256": "0068ecb2f707d5cf6f1c6f855dee3d206cdee9acab87ff38c743dcbb8e670d56",
       "spoken_text": "書いてある数値と合ってませんね。……ラベル、貼り間違えました？",
       "subtitle_templates": [
         "说明和测出来的数值对不上呢。是不是贴错了？",
@@ -3557,6 +4445,9 @@
       "line_key": "xm_act_expose_water_other_03",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_act_expose_water_other_03_6554c6358bfd",
+      "audio_file": "xm_voice_ja_xm_act_expose_water_other_03_6554c6358bfd.ogg",
+      "source_sha256": "6554c6358bfd686a4546a1f2a6cbc282957e5dd9f497c6c2d45ba1ce7d148266",
+      "packaged_sha256": "89ea66299f8d5810e0201af4193dc4dcc91d31500bd21c583e277317336c27c1",
       "spoken_text": "このラベルの数字……間違ってませんか？",
       "subtitle_templates": [
         "这个标签上的数字……你确定没写错吗？",
@@ -3569,6 +4460,9 @@
       "line_key": "xm_gun_plead",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_gun_plead_519022df67f3",
+      "audio_file": "xm_voice_ja_xm_gun_plead_519022df67f3.ogg",
+      "source_sha256": "519022df67f36a35c9df0570e381aad72e69ddcc29e023e6ad56c043e76f2fd1",
+      "packaged_sha256": "a5e07ce813e69ebe1ed9d0f0a84aa0c4cb9a8418b2e939d4987e0b21bd3f1dd1",
       "spoken_text": "先に銃を下ろしてもらえませんか？",
       "subtitle_templates": [
         "那个……可以先把枪放下吗？",
@@ -3581,6 +4475,9 @@
       "line_key": "xm_gun_holstered",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_gun_holstered_5181a14f674a",
+      "audio_file": "xm_voice_ja_xm_gun_holstered_5181a14f674a.ogg",
+      "source_sha256": "5181a14f674aaf20778026d99b842a67e77268985150a1acd8d05bbae2580cc1",
+      "packaged_sha256": "5e5e7a07081d700b1dc199528937a5a36eb228d64b7b0d2c979fa7f98214a8e5",
       "spoken_text": "……びっくりしました。",
       "subtitle_templates": [
         "……吓了我一跳。",

@@ -9,6 +9,7 @@ import subprocess
 import sys
 import wave
 from pathlib import Path
+from voice_delivery import VoiceDelivery, audio_filename
 
 ROOT = Path(__file__).resolve().parents[1]
 PACKAGE = ROOT / "package/XiaomanVisitor"
@@ -235,14 +236,15 @@ def pack(path):
     previous = load(previous_path) if previous_path.exists() else {}
     records = [r for r in previous.get("lines", []) if r["language"] != script["language"]]
     pending = dict(previous.get("pending_by_language", {}))
-    report, kept = [], {r["sound_key"] + ".wav" for r in records}
+    report, kept = [], {audio_filename(r) for r in records}
+    delivery = VoiceDelivery(ROOT)
     # Identical takes can serve different dialogue keys without storing the same
     # PCM repeatedly. Keep existing sound IDs where possible; faces stay per line.
     clips={}
     for record in previous.get('lines',[]):
-        file=sounds/(record['sound_key']+'.wav')
+        file=sounds/audio_filename(record)
         if record['language']==script['language'] and file.is_file():
-            clips.setdefault(hashlib.sha256(file.read_bytes()).hexdigest(),record['sound_key'])
+            clips.setdefault(record.get('source_sha256', hashlib.sha256(file.read_bytes()).hexdigest()),record['sound_key'])
     ready = 0
     for row in script["lines"]:
         state = audio_status(row, script, texts)
@@ -252,17 +254,19 @@ def pack(path):
         audio = ROOT / row["audio"]
         digest = hashlib.sha256(audio.read_bytes()).hexdigest()
         sound = clips.setdefault(digest,"xm_voice_" + script["language"] + "_" + re.sub("[^a-z0-9_]", "_", row["key"].lower()) + "_" + digest[:12])
-        target = sounds / (sound + ".wav")
-        if not target.exists() or hashlib.sha256(target.read_bytes()).hexdigest() != digest:
-            shutil.copyfile(audio, target)
+        encoded, packaged_hash = delivery.encode(audio)
+        target = sounds / (sound + encoded.suffix)
+        if not target.exists() or hashlib.sha256(target.read_bytes()).hexdigest() != packaged_hash:
+            shutil.copyfile(encoded, target)
         kept.add(target.name)
         records.append({"line_key": row["key"], "language": script["language"], "sound_key": sound,
+                        "audio_file": target.name, "source_sha256": digest, "packaged_sha256": packaged_hash,
                         "spoken_text": row["spoken_text"], "subtitle_templates": list(row["subtitle_templates"].values()),
                         "generic": bool(row.get("generic"))})
         ready += 1
-    for old in sounds.glob("xm_voice_*.wav"):
-        if old.name not in kept and old.resolve().parent == sounds.resolve():
-            old.unlink()  # Only this pipeline's prefixed WAVs; never music or author originals.
+    for old in sounds.glob("xm_voice_*.*"):
+        if old.suffix in (".wav", ".ogg") and old.name not in kept and old.resolve().parent == sounds.resolve():
+            old.unlink()  # Only this pipeline's voice deliveries; never music or author originals.
     pending[script["language"]] = len(report) - ready
     result = {"schema": 1, "lines": records, "pending_lines": sum(pending.values()), "pending_by_language": pending}
     save(PACKAGE / "Voices/index.json", result)

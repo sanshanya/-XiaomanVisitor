@@ -19,9 +19,12 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--with-audio", action="store_true", help="Also export a separately playable voice ZIP.")
+    parser.add_argument("--manifest-only", action="store_true", help="Validate delivery and write checksums without creating a full ZIP.")
     parser.add_argument("--skip-installed-check", action="store_true", help="Prepare an archive without requiring this build to be installed.")
     parser.add_argument("--development", action="store_true", help="Build a local test archive without Workshop drafts or publication state.")
     args = parser.parse_args()
+    if args.manifest_only and args.with_audio:
+        parser.error("--manifest-only cannot create a separate voice ZIP")
     root, package = pipeline.ROOT, pipeline.PACKAGE
     manifest = ET.parse(package / "manifest.xml").getroot()
     version = manifest.findtext("ModVersion")
@@ -72,10 +75,12 @@ def main():
     output.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(report_path, output / "audio-validation.json")
     archive = output / f"XiaomanVisitor-{version}{'-dev' if args.development else ''}.zip"
-    with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
-        for file in files:
-            z.write(file, "XiaomanVisitor/" + file.relative_to(package).as_posix())
-    archives = [archive]
+    archives = []
+    if not args.manifest_only:
+        with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+            for file in files:
+                z.write(file, "XiaomanVisitor/" + file.relative_to(package).as_posix())
+        archives.append(archive)
     if args.with_audio:
         audio_archive = output / f"小满日语配音_1.1倍速_{version}.zip"
         audio_manifest = dict(version=version, voice="Ayano", language="ja", speed=1.1,
@@ -112,7 +117,7 @@ def main():
                    voice_lines=len(pack["lines"]), voice_pending_lines=pack["pending_lines"], voice_speed=1.1, installed_verified=not args.skip_installed_check,
                    text_languages=["zh", "ja", "en"], voice_languages=["ja"],
                    music_seconds=round(sum(t["seconds"] for t in tapes), 3), final_track=tapes[-1]["title"],
-                   content_folder=str(package), archives=results, files=checksums)
+                   content_folder=str(package), content_bytes=sum(f.stat().st_size for f in files), archives=results, files=checksums)
     if uploaded_id:
         release["workshop"] = dict(publishedfileid=uploaded_id, url=publication["url"],
                                    uploaded_content_matches=uploaded_matches, visibility=publication.get("visibility"))
@@ -127,7 +132,8 @@ def main():
         release.update(status="development_not_uploaded", gameplay_tested=False,
                        title_status="retained_author_title", description_status="development_description")
     pipeline.save(output / "release-manifest.json", release)
-    (output / "SHA256SUMS.txt").write_text("".join(f"{a['sha256']}  {a['file']}\n" for a in results), encoding="utf-8")
+    (output / "SHA256SUMS.txt").write_text("".join(f"{sha}  XiaomanVisitor/{name}\n" for name, sha in checksums.items())
+                                         + "".join(f"{a['sha256']}  {a['file']}\n" for a in results), encoding="utf-8")
     if args.development:
         instructions = root / "docs/实机验收.md"
         if instructions.exists(): shutil.copyfile(instructions, output / "实机验收.md")

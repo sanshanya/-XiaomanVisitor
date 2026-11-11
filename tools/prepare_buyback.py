@@ -222,6 +222,11 @@ def stage_package(stage):
     shutil.copyfile(ASSETS / "direction.json", scenes / "direction.json")
     sounds = stage / "Sounds"
     sounds.mkdir(exist_ok=True)
+    # Delivery formats can change between builds. Do not retain obsolete copies
+    # of the visitor's own recordings in this separate test directory.
+    for old in sounds.glob("xm_voice_*.*"):
+        if old.suffix in (".wav", ".ogg") and not (base / "Sounds" / old.name).is_file():
+            old.unlink()
     shutil.copyfile(ASSETS / "buyback_door_knock.wav", sounds / "buyback_door_knock.wav")
     music = asset_manifest()["music"]
     shutil.copyfile(ROOT / "package/XiaomanVisitor/Sounds" / music["file"], sounds / music["file"])

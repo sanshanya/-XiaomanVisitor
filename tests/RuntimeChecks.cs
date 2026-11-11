@@ -224,13 +224,18 @@ internal static class CheckMod
     }
     private static void CheckVoices()
     {
+        var loader = typeof(ModLoader).GetNestedTypes(BindingFlags.NonPublic)
+            .Single(t => t.Name.StartsWith("<LoadSoundsCoroutine>"));
+        var loadCode = PatchProcessor.GetOriginalInstructions(AccessTools.Method(loader, "MoveNext"));
+        Require(loadCode.Any(i => Equals(i.operand, "*.ogg")), "installed native sound loader supports Ogg delivery");
         var pack = JsonConvert.DeserializeObject<VoicePackDocument>(File.ReadAllText(Path.Combine(package, "Voices", "index.json")));
         Require(pack != null && pack.schema == 1 && pack.lines.Length > 0, "offline voice pack present");
         var catalog = new VoiceCatalog(pack.lines);
         Require(catalog.Count == pack.lines.Length, "all packaged voice bindings are valid and unique");
         foreach (var row in pack.lines)
         {
-            Require(File.Exists(Path.Combine(package, "Sounds", row.sound_key + ".wav")), "bound voice WAV exists");
+            Require(new[] { ".wav", ".ogg" }.Count(ext => File.Exists(Path.Combine(package, "Sounds", row.sound_key + ext))) == 1,
+                "exactly one native-loadable recording exists for each voice key");
             foreach (string template in row.subtitle_templates)
                 Require(catalog.Resolve(row.line_key, row.language, template) != null, "same recording supports approved subtitle translations");
             Require(catalog.Resolve(row.line_key, row.language, row.subtitle_templates[0] + "changed") == null,

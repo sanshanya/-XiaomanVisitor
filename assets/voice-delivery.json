@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "codec": "libvorbis",
+  "quality": 8,
+  "sample_rate": 24000,
+  "channels": 1
+}
