@@ -296,7 +296,7 @@ xm_03_04_already_worked,"I remember all the help you've given me lately. When th
 story_note_03_b_title,"Dear shopkeeper senpai,"
 story_note_03_b_body,"Thank you for all your work yesterday!\n\nI'd thought having another pair of hands would give us a little breathing room.\n\nThen the customers kept coming, one after another. We barely had time for a proper conversation.\n\nBut after closing, I turned around and found the whole counter neatly tidied up.\n\nUsually, I'd still have so much to do on my own.\n\nHehe. I was tired, but it was rather lovely.\n\nHere's this week's tape."
 story_note_03_b_signature,— Xiaoman
-xm_tavern_w03_work_offer_01,"Oh, senpai! The next shift's customers will be here soon. Could you help me look after them?"
+xm_tavern_w03_work_offer_01,The next shift's customers will be here soon. Could you help me look after them?
 xm_tavern_w03_work_offer_02,"I'll make sure you're paid. This is a proper job, you know."
 xm_tavern_w03_work_w02_callback,"I remember you handing out menus for me. This time, I really must pay you for your help."
 xm_tavern_w03_work_start,"Thank you, senpai! I'll leave these customers with you while I look after the bar."
@@ -312,7 +312,7 @@ xm_w03_thanks_bye,I'd better get back to the tavern. Don't wear yourself out eit
 xm_tavern_w03_chat_01,"Have you noticed? It's so lively when the shifts change. After everyone leaves, you can slowly hear the rain again."
 xm_tavern_w03_chat_02,"I can get a bit flustered when it's busy. But when I hear the customers laughing, I'm glad I opened this place."
 xm_tavern_w03_chat_after_work,You worked hard too. Those customers said they'd come again as they were leaving.
-xm_tavern_w03_work_offer_01_unknown,Oh! The next shift's customers will be here soon. Could you help me look after them?
+xm_tavern_w03_work_offer_01_unknown,The next shift's customers will be here soon. Could you help me look after them?
 xm_tavern_w03_work_w02_callback_unknown,"I remember you handing out menus for me. This time, I really must pay you for your help."
 xm_tavern_w03_work_start_unknown,Thank you! I'll leave these customers with you while I look after the bar.
 xm_tavern_w03_work_done_01_unknown,Phew… We've finally caught up. You were a huge help!
@@ -328,7 +328,7 @@ ui_tavern_work_phase_1,Welcoming guests
 ui_tavern_work_phase_2,Organizing orders
 ui_tavern_work_phase_3,Tidying up
 ui_tavern_wage_pending,This shift's pay is still being checked.
-xm_gun_plead,U-um… could you put the gun down first?
+xm_gun_plead,Um… could you put the gun down first?
 xm_gun_holstered,…You startled me.
 ui_tavern_backpack,Backpack
 gift_note_arrived,Xiaoman left you a letter.

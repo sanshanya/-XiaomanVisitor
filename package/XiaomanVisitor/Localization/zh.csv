@@ -296,7 +296,7 @@ xm_03_04_already_worked,前辈最近来店里帮忙的事，我都记着呢。�
 story_note_03_b_title,致店长前辈：
 story_note_03_b_body,昨天辛苦啦！\n\n本来还想着，多一个人帮忙，应该能从容一点。\n\n结果客人一个接一个地来，连好好说句话的时间都没有呢。\n\n不过打烊以后，回头一看，吧台居然已经收拾得整整齐齐了。\n\n以前这个时候，我还得一个人忙好久。\n\n嘿嘿，虽然累了点，不过还挺开心的。\n\n这是这周的磁带。
 story_note_03_b_signature,——小满
-xm_tavern_w03_work_offer_01,啊，前辈！正好换班的客人快来了。能帮我招呼一下吗？
+xm_tavern_w03_work_offer_01,正好换班的客人快来了。能帮我招呼一下吗？
 xm_tavern_w03_work_offer_02,工资我会好好付的。这可是正经工作哦。
 xm_tavern_w03_work_w02_callback,上次前辈帮忙递酒单，我还记得呢。这次可不能再让您白帮忙啦。
 xm_tavern_w03_work_start,那就拜托前辈啦！这边的客人交给您，我去照看吧台。
@@ -312,7 +312,7 @@ xm_w03_thanks_bye,那我回店里去啦。前辈也不要太累哦。
 xm_tavern_w03_chat_01,前辈有没有发现？换班的时候，客人说话的声音特别热闹。等他们走了，雨幕的声音又会慢慢听清楚。
 xm_tavern_w03_chat_02,虽然忙起来会手忙脚乱，可听见客人在那边笑，我就觉得开这家店真好。
 xm_tavern_w03_chat_after_work,前辈也辛苦啦。刚才那几位客人走的时候，还说下次要再来呢。
-xm_tavern_w03_work_offer_01_unknown,啊，正好换班的客人快来了。能帮我招呼一下吗？
+xm_tavern_w03_work_offer_01_unknown,正好换班的客人快来了。能帮我招呼一下吗？
 xm_tavern_w03_work_w02_callback_unknown,上次您帮忙递酒单，我还记得呢。这次可不能再让您白帮忙啦。
 xm_tavern_w03_work_start_unknown,那就拜托您啦！这边的客人交给您，我去照看吧台。
 xm_tavern_w03_work_done_01_unknown,呼……总算忙过这一阵啦。帮大忙了！
@@ -328,7 +328,7 @@ ui_tavern_work_phase_1,招呼客人
 ui_tavern_work_phase_2,整理订单
 ui_tavern_work_phase_3,收尾
 ui_tavern_wage_pending,这班的工资还在核对中。
-xm_gun_plead,那、那个……可以先把枪放下吗？
+xm_gun_plead,那个……可以先把枪放下吗？
 xm_gun_holstered,……吓了我一跳。
 ui_tavern_backpack,背包
 gift_note_arrived,小满留下了一封纸条。

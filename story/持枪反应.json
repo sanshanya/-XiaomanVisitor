@@ -5,15 +5,15 @@
   "presentation": "沿用原作担心眼神和小汗滴，两侧刘海缝隙的上方额头最深，阴影向眉毛方向逐渐变浅、下缘提前结束；保留原眼睛和三档原口型，停顿与说完闭嘴；收枪后短暂保留余悸",
   "localization": {
     "zh": {
-      "xm_gun_plead": "那、那个……可以先把枪放下吗？",
+      "xm_gun_plead": "那个……可以先把枪放下吗？",
       "xm_gun_holstered": "……吓了我一跳。"
     },
     "ja": {
-      "xm_gun_plead": "あ、あの……先に銃を下ろしてもらえませんか？",
+      "xm_gun_plead": "先に銃を下ろしてもらえませんか？",
       "xm_gun_holstered": "……びっくりしました。"
     },
     "en": {
-      "xm_gun_plead": "U-um… could you put the gun down first?",
+      "xm_gun_plead": "Um… could you put the gun down first?",
       "xm_gun_holstered": "…You startled me."
     }
   }

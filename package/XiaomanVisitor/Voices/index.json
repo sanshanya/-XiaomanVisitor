@@ -1672,12 +1672,12 @@
     {
       "line_key": "xm_tavern_w03_work_offer_01",
       "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w03_work_offer_01_f9d8f75b1563",
-      "spoken_text": "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+      "sound_key": "xm_voice_ja_xm_tavern_w03_work_offer_01_8a0118116c48",
+      "spoken_text": "もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
       "subtitle_templates": [
-        "啊，前辈！正好换班的客人快来了。能帮我招呼一下吗？",
-        "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
-        "Oh, senpai! The next shift's customers will be here soon. Could you help me look after them?"
+        "正好换班的客人快来了。能帮我招呼一下吗？",
+        "もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+        "The next shift's customers will be here soon. Could you help me look after them?"
       ],
       "generic": false
     },
@@ -1864,12 +1864,12 @@
     {
       "line_key": "xm_tavern_w03_work_offer_01_unknown",
       "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w03_work_offer_01_unknown_7c43e166947d",
-      "spoken_text": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+      "sound_key": "xm_voice_ja_xm_tavern_w03_work_offer_01_unknown_07295d6ce6fb",
+      "spoken_text": "もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
       "subtitle_templates": [
-        "啊，正好换班的客人快来了。能帮我招呼一下吗？",
-        "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
-        "Oh! The next shift's customers will be here soon. Could you help me look after them?"
+        "正好换班的客人快来了。能帮我招呼一下吗？",
+        "もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+        "The next shift's customers will be here soon. Could you help me look after them?"
       ],
       "generic": false
     },
@@ -3568,12 +3568,12 @@
     {
       "line_key": "xm_gun_plead",
       "language": "ja",
-      "sound_key": "xm_voice_ja_xm_gun_plead_64a864316841",
-      "spoken_text": "あ、 あの……先に銃を下ろしてもらえませんか？",
+      "sound_key": "xm_voice_ja_xm_gun_plead_519022df67f3",
+      "spoken_text": "先に銃を下ろしてもらえませんか？",
       "subtitle_templates": [
-        "那、那个……可以先把枪放下吗？",
-        "あ、あの……先に銃を下ろしてもらえませんか？",
-        "U-um… could you put the gun down first?"
+        "那个……可以先把枪放下吗？",
+        "先に銃を下ろしてもらえませんか？",
+        "Um… could you put the gun down first?"
       ],
       "generic": false
     },

@@ -2233,18 +2233,18 @@
     {
       "key": "xm_tavern_w03_work_offer_01",
       "subtitle_templates": {
-        "zh": "啊，前辈！正好换班的客人快来了。能帮我招呼一下吗？",
-        "ja": "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
-        "en": "Oh, senpai! The next shift's customers will be here soon. Could you help me look after them?"
+        "zh": "正好换班的客人快来了。能帮我招呼一下吗？",
+        "ja": "もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+        "en": "The next shift's customers will be here soon. Could you help me look after them?"
       },
-      "spoken_text": "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
-      "generate_text": "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+      "spoken_text": "もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+      "generate_text": "もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_01.89174649e2d26758.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_01.07f025804930617d.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "d59a7fecac3955bf6586db2ea072db2a4d3b4640695b41476f30321574913572",
-      "delivery": "工作认真，感谢轻快，求助不卑微"
+      "source_sha256": "a564792042b2fdb598f6d96a26c241bf0c05df2b3a99888dac88b6bafedb8ba7",
+      "delivery": "承接此前对话，自然亲切地提出帮忙请求；不再次惊讶或招呼，不在开头加语气词。"
     },
     {
       "key": "xm_tavern_w03_work_offer_02",
@@ -2489,18 +2489,18 @@
     {
       "key": "xm_tavern_w03_work_offer_01_unknown",
       "subtitle_templates": {
-        "zh": "啊，正好换班的客人快来了。能帮我招呼一下吗？",
-        "ja": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
-        "en": "Oh! The next shift's customers will be here soon. Could you help me look after them?"
+        "zh": "正好换班的客人快来了。能帮我招呼一下吗？",
+        "ja": "もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+        "en": "The next shift's customers will be here soon. Could you help me look after them?"
       },
-      "spoken_text": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
-      "generate_text": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+      "spoken_text": "もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+      "generate_text": "もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_01_unknown.7e55824d727fc405.wav",
+      "audio": "assets/audio/voice/ja/xm_tavern_w03_work_offer_01_unknown.46635c78d548370f.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "cbd2541c41c979fb76bfb95237dd10adf2e75837dc06cf8fdba74758dc7dae78",
-      "delivery": "工作认真，感谢轻快，求助不卑微"
+      "source_sha256": "86c457c4836ff8cc6c73ba396fffd4f234e36ced66a1bd2c6dbfb4681df869c1",
+      "delivery": "承接此前对话，自然礼貌地提出帮忙请求；不再次惊讶或招呼，不在开头加语气词。"
     },
     {
       "key": "xm_tavern_w03_work_w02_callback_unknown",
@@ -4763,18 +4763,18 @@
     {
       "key": "xm_gun_plead",
       "subtitle_templates": {
-        "zh": "那、那个……可以先把枪放下吗？",
-        "ja": "あ、あの……先に銃を下ろしてもらえませんか？",
-        "en": "U-um… could you put the gun down first?"
+        "zh": "那个……可以先把枪放下吗？",
+        "ja": "先に銃を下ろしてもらえませんか？",
+        "en": "Um… could you put the gun down first?"
       },
-      "spoken_text": "あ、 あの……先に銃を下ろしてもらえませんか？",
-      "generate_text": "あ、[gasps] あの……先に銃を下ろしてもらえませんか？",
+      "spoken_text": "先に銃を下ろしてもらえませんか？",
+      "generate_text": "先に銃を下ろしてもらえませんか？",
       "generic": false,
       "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_gun_plead.a886bbf4f2c41a0d.wav",
+      "audio": "assets/audio/voice/ja/xm_gun_plead.ec42f712bd626fe6.wav",
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "1c960c5b421689d86bd006931dad38937bff0129b56991bf1c8e09621f03b564",
-      "delivery": "突然受惊、声音收紧和结巴，低声请求放下枪"
+      "source_sha256": "58769e9ad06ad5e5af828a6a0d009324792dfdb1e08779600914b626b38e0ada",
+      "delivery": "受惊后小心请求，声音稍收紧、柔弱克制；不结巴，不在开头增加语气词或吸气音效。"
     },
     {
       "key": "xm_gun_holstered",

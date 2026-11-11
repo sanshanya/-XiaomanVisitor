@@ -296,7 +296,7 @@ xm_03_04_already_worked,先輩がお店を手伝ってくれたこと、ちゃ�
 story_note_03_b_title,先輩へ
 story_note_03_b_body,昨日はお疲れさまでした！\n\n一人増えたら、もう少し余裕ができるかなって思ってたんです。\n\nでも、お客さんが次から次へと来て、ゆっくり話す時間もありませんでしたね。\n\nそれなのに、閉店して振り返ったら、カウンターがすっかり片づいてて。\n\nいつもなら、あの時間からまだ一人で片づけてたんですよ。\n\nえへへ、ちょっと疲れたけど、楽しかったです。\n\nこれが今週のテープです。
 story_note_03_b_signature,みちる
-xm_tavern_w03_work_offer_01,あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？
+xm_tavern_w03_work_offer_01,もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？
 xm_tavern_w03_work_offer_02,お給料は、ちゃんと出しますね。これも、ちゃんとしたお仕事ですから。
 xm_tavern_w03_work_w02_callback,この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。
 xm_tavern_w03_work_start,じゃあ、先輩にお願いします！ こちらのお客さんをお任せして、わたしはカウンターを見てきますね。
@@ -312,7 +312,7 @@ xm_w03_thanks_bye,それじゃ、お店に戻りますね。先輩も、無理�
 xm_tavern_w03_chat_01,先輩、気づきました？ 交代時間はお客さんの声ですごくにぎやかなのに、みんなが帰ると、また雨の音がよく聞こえるんです。
 xm_tavern_w03_chat_02,忙しいとあたふたしちゃうんですけど、お客さんの笑い声が聞こえると、お店を開いてよかったなって思うんです。
 xm_tavern_w03_chat_after_work,先輩もお疲れさまでした。さっきのお客さん、帰るときに「また来ます」って言ってましたよ。
-xm_tavern_w03_work_offer_01_unknown,あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？
+xm_tavern_w03_work_offer_01_unknown,もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？
 xm_tavern_w03_work_w02_callback_unknown,この前、メニューを渡すのを手伝ってくれたでしょう？ 今度は、ちゃんとお給料を払わせてくださいね。
 xm_tavern_w03_work_start_unknown,それじゃ、こちらのお客さんをお願いします！ わたしはカウンターを見てきますね。
 xm_tavern_w03_work_done_01_unknown,ふう……やっとひと段落ですね。すごく助かりました！
@@ -328,7 +328,7 @@ ui_tavern_work_phase_1,お客さんをご案内
 ui_tavern_work_phase_2,ご注文を整理
 ui_tavern_work_phase_3,後片づけ
 ui_tavern_wage_pending,今回のお給料は、まだ確認中です。
-xm_gun_plead,あ、あの……先に銃を下ろしてもらえませんか？
+xm_gun_plead,先に銃を下ろしてもらえませんか？
 xm_gun_holstered,……びっくりしました。
 ui_tavern_backpack,持ち物
 gift_note_arrived,みちるから手紙が届きました。

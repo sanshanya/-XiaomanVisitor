@@ -1136,10 +1136,10 @@
       "preserve_audio": false
     },
     "xm_tavern_w03_work_offer_01": {
-      "subtitle_ja": "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
-      "generate_text": "あ、先輩！ もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+      "subtitle_ja": "もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
+      "generate_text": "もうすぐ交代時間のお客さんが来るんです。少し接客を手伝ってもらえますか？",
       "mood": "Smile",
-      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "delivery": "承接此前对话，自然亲切地提出帮忙请求；不再次惊讶或招呼，不在开头加语气词。",
       "reviewed": true,
       "preserve_audio": false
     },
@@ -1264,10 +1264,10 @@
       "preserve_audio": false
     },
     "xm_tavern_w03_work_offer_01_unknown": {
-      "subtitle_ja": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
-      "generate_text": "あの、もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+      "subtitle_ja": "もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
+      "generate_text": "もうすぐ交代時間のお客さんが来るんです。少し手伝ってもらえませんか？",
       "mood": "Smile",
-      "delivery": "工作认真，感谢轻快，求助不卑微",
+      "delivery": "承接此前对话，自然礼貌地提出帮忙请求；不再次惊讶或招呼，不在开头加语气词。",
       "reviewed": true,
       "preserve_audio": false
     },
@@ -2378,10 +2378,10 @@
       "approved_audio_sha256": "6554c6358bfd686a4546a1f2a6cbc282957e5dd9f497c6c2d45ba1ce7d148266"
     },
     "xm_gun_plead": {
-      "subtitle_ja": "あ、あの……先に銃を下ろしてもらえませんか？",
-      "generate_text": "あ、[gasps] あの……先に銃を下ろしてもらえませんか？",
+      "subtitle_ja": "先に銃を下ろしてもらえませんか？",
+      "generate_text": "先に銃を下ろしてもらえませんか？",
       "mood": "Worried",
-      "delivery": "突然受惊、声音收紧和结巴，低声请求放下枪",
+      "delivery": "受惊后小心请求，声音稍收紧、柔弱克制；不结巴，不在开头增加语气词或吸气音效。",
       "reviewed": true,
       "preserve_audio": false
     },
