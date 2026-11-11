@@ -36,8 +36,8 @@ namespace XiaomanVisitor
         private DelegateAfterhourLocation tavernLocation;
         private XiaomanTavernStage tavernStage;
         private bool TavernStoryFinished { get { return PlayerStore.HasInstance && ReadStory().Finished; } }
-        internal string TavernMapDescription { get { return Text(TavernStoryFinished ? "ui_tavern_closed"
-            : PlayerStore.HasInstance && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay ? "ui_tavern_open_desc" : "ui_tavern_map_desc"); } }
+        internal string TavernMapDescription { get { return Text(PlayerStore.HasInstance
+            && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay ? "ui_tavern_open_desc" : "ui_tavern_map_desc"); } }
         internal string TavernStatusLabel
         {
             get {
@@ -52,11 +52,11 @@ namespace XiaomanVisitor
             return tavernLocation = new DelegateAfterhourLocation {
                 id = TavernMapRules.LocationId,
                 source = Id,
-                title = () => Text(TavernStoryFinished || PlayerStore.HasInstance && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay
+                title = () => Text(PlayerStore.HasInstance && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay
                     ? "ui_tavern_name" : "ui_tavern_preview_name"),
                 imageKey = TavernMapRules.ImageKey,
                 isDiscovered = () => TavernRules.IsDiscovered(TavernMapEnabled, PlayerStore.HasInstance,
-                    PlayerStore.HasInstance ? StoreStation.Instance.dayCounter : 0),
+                    PlayerStore.HasInstance ? StoreStation.Instance.dayCounter : 0, TavernStoryFinished),
                 isAvailable = CanEnterTavern,
                 onArrive = ArriveAtTavern,
                 onLeave = LeaveTavern,

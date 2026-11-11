@@ -23,8 +23,8 @@ namespace XiaomanVisitor
         public const int DiscoveryDay = 3;
         public const string SaveKey = "tavern_v1_progress";
         public const string SceneFolder = "Scenes/Tavern/";
-        public static bool IsDiscovered(bool enabled, bool hasRun, int day)
-        { return enabled && hasRun && day >= DiscoveryDay; }
+        public static bool IsDiscovered(bool enabled, bool hasRun, int day, bool departed)
+        { return enabled && hasRun && day >= DiscoveryDay && !departed; }
         public static bool IsOpen(bool enabled, bool hasRun, int day, bool departed)
         { return enabled && hasRun && day >= OpeningDay && !departed; }
         public static string OpeningLineKey(int visit, string key, int day)
@@ -40,8 +40,7 @@ namespace XiaomanVisitor
         { return StoryCatalog.Episodes[Math.Max(1,Math.Min(StoryCatalog.Episodes.Length,visits))-1].TrackKey; }
         public static string StatusKey(string id, bool enabled, bool hasRun, int day, bool departed)
         {
-            if (!enabled || id != TavernMapRules.LocationId) return null;
-            if (departed) return "ui_tavern_closed";
+            if (!enabled || id != TavernMapRules.LocationId || departed) return null;
             return IsOpen(enabled, hasRun, day, departed) ? null : "ui_tavern_renovating";
         }
         // The author's reference canvas is shared by every layer.
