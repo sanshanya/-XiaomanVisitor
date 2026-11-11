@@ -1,26 +1,69 @@
 {
-  "schema": 1,
+  "schema": 2,
   "files": [
     {
       "key": "wonderland",
       "source": "package/XiaomanVisitor/Textures/Items/xiaoman_cocktail_bluebird.png",
       "packaged": "Textures/Items/xiaoman_cocktail_wonderland.png",
-      "sha256": "fb1fbef30ed0693d31eb4aa7aa855433b07ec3a2b5a06100cc9ff72f50d3fbd8",
-      "note": "首测复用已验证原作杯型；不宣称新增独立原画"
+      "sha256": "6a57430031e7cbcd56877219326a0ab23de7c3d9ef44db0b8b48cb34a847f7f6",
+      "note": "原作杯型的调色衍生；保持像素、透明轮廓与占格，不作为新增独立原画。",
+      "palette": {
+        "#5d7c89": "#996b9c",
+        "#3e6979": "#634d83",
+        "#8abfbb": "#d6aac7",
+        "#a8aea5": "#e7d6b8",
+        "#355271": "#4b3d6c"
+      },
+      "source_sha256": "fb1fbef30ed0693d31eb4aa7aa855433b07ec3a2b5a06100cc9ff72f50d3fbd8"
     },
     {
       "key": "spring_sway",
       "source": "package/XiaomanVisitor/Textures/Items/xiaoman_cocktail_sky_after_rain.png",
       "packaged": "Textures/Items/xiaoman_cocktail_spring_sway.png",
-      "sha256": "dc5725628ecfe16468db4c14aa1371491b4e68a4488a8be9a6def60e06b9e7e7",
-      "note": "首测复用已验证原作杯型；不宣称新增独立原画"
+      "sha256": "c0ef8f4ad239e82ccd72cddc86fc2d2cad88a5ea4c48a69eb40432c48af4d3b1",
+      "note": "原作杯型的调色衍生；保持像素、透明轮廓与占格，不作为新增独立原画。",
+      "palette": {
+        "#273456": "#293d3c",
+        "#355271": "#3d5e54",
+        "#3e6979": "#557b66",
+        "#5d7c89": "#82a78c",
+        "#8abfbb": "#bed0a0",
+        "#a272ac": "#c6a0a8"
+      },
+      "source_sha256": "dc5725628ecfe16468db4c14aa1371491b4e68a4488a8be9a6def60e06b9e7e7"
     },
     {
       "key": "wonderland_improv",
       "source": "package/XiaomanVisitor/Textures/Items/xiaoman_cocktail_bluebird.png",
       "packaged": "Textures/Items/xiaoman_cocktail_wonderland_improv.png",
-      "sha256": "fb1fbef30ed0693d31eb4aa7aa855433b07ec3a2b5a06100cc9ff72f50d3fbd8",
-      "note": "首测复用已验证原作杯型；不宣称新增独立原画"
+      "sha256": "12f56710ea2e4a658556b2bed21dcf3b1c3ffdd98998f240a14ce6483aaae154",
+      "note": "原作杯型的调色衍生；保持像素、透明轮廓与占格，不作为新增独立原画。",
+      "palette": {
+        "#5d7c89": "#b99359",
+        "#3e6979": "#83643f",
+        "#8abfbb": "#e4cb85",
+        "#a8aea5": "#f0e0b1",
+        "#355271": "#6d503d"
+      },
+      "source_sha256": "fb1fbef30ed0693d31eb4aa7aa855433b07ec3a2b5a06100cc9ff72f50d3fbd8"
+    },
+    {
+      "key": "roka",
+      "source": "package/XiaomanVisitor/Textures/Items/xiaoman_cocktail_sky_after_rain.png",
+      "packaged": "Textures/Items/xiaoman_cocktail_roka.png",
+      "palette": {
+        "#273456": "#59414c",
+        "#355271": "#87586b",
+        "#3e6979": "#b17b88",
+        "#5d7c89": "#c9a0a6",
+        "#8abfbb": "#ead4c7",
+        "#a272ac": "#c3cc9f",
+        "#88948a": "#c9bf9e",
+        "#373248": "#433643"
+      },
+      "source_sha256": "dc5725628ecfe16468db4c14aa1371491b4e68a4488a8be9a6def60e06b9e7e7",
+      "note": "原作杯型的调色衍生；保持像素、透明轮廓与占格，不作为新增独立原画。",
+      "sha256": "dbac342729e14faa3f1eaec74189f760dbc92209135743dddd2591dd9050130d"
     }
   ]
 }

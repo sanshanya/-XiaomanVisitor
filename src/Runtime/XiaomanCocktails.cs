@@ -54,7 +54,7 @@ namespace XiaomanVisitor
                 ready++;
             }
             Log.Log("Cocktail sprites ready: " + ready + "/" + CocktailCatalog.All.Length
-                + "; native palette, binary alpha, all at 16x32 / 1x2 cells.");
+                + "; reviewed palettes, binary alpha, all at 16x32 / 1x2 cells.");
         }
 
         private GameItem CreateCocktail(CocktailSpec spec)
@@ -90,6 +90,8 @@ namespace XiaomanVisitor
 
         private void ConfigureCocktail(GameItem item, CocktailSpec spec)
         {
+            // Older Roka items were saved with spring_sway's sprite key.
+            if (spec.Key=="roka") item.SetSpriteAndShapeFromMod(Id,spec.SpriteKey);
             ApplyCocktailFootprint(item, spec);
             item.name = Text("cocktail_" + spec.Key + "_name");
             item.shortDescription = Text("cocktail_" + spec.Key + "_desc");

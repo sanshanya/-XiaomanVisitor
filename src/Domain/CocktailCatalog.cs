@@ -30,8 +30,8 @@ namespace XiaomanVisitor
         }
 
         public string ItemId { get { return XiaomanMod.Id + ".cocktail." + Key; } }
-        // The first-test unique drink reuses an approved glass; no fabricated new original artwork.
-        public string SpriteKey { get { return "xiaoman_cocktail_" + (Key=="roka" ? "spring_sway" : Key); } }
+        // Special drinks retain the original glass geometry with their own palettes.
+        public string SpriteKey { get { return "xiaoman_cocktail_" + Key; } }
     }
 
     public static class CocktailCatalog

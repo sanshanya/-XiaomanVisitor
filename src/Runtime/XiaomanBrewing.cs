@@ -88,7 +88,8 @@ namespace XiaomanVisitor
         {
             var c=new StoreClient { identifier=BrewingProgress.ClientId,displayName=Text("name"),realName=Text("name"),spriteName=SpriteKey,
                 clientFaction=StoreClient.FACTION_LOWER,clientIntent=MayCollectBrewing?StoreClient.ClientIntent.BARTER:StoreClient.ClientIntent.DIALOGUE,cooldown=0,
-                arrestable=false,nonShootable=true,noAcceptingContraband=true };
+                arrestable=false,nonShootable=true,noAcceptingContraband=true,
+                IsPersonalConsumption=false,CanReturn=false,CanReturnAsBuyer=false };
             ConfigureGunReaction(c);
             c.barterOffer=new BarterOffer { ownerClient=c,barterTextBody=Text("ui_brew_table"),
                 onInstance=() => { c.isIntroduced=true; },
@@ -253,6 +254,23 @@ namespace XiaomanVisitor
     {
         public static bool Prefix() { return XiaomanMod.Instance==null || XiaomanMod.Instance.BeginBrewingExchange(); }
         public static void Postfix() { XiaomanMod.Instance?.CompleteBrewingExchange(); }
+    }
+    [HarmonyPatch(typeof(PlayerStore),nameof(PlayerStore.OnItemsSold))]
+    public static class XiaomanBrewingInputSnapshotPatch
+    {
+        public static List<GameItem> Snapshot(StoreClient client,List<GameItem> items)
+        {
+            if (client?.identifier!=BrewingProgress.ClientId || client.sourceModId!=XiaomanMod.Id
+                || client.clientIntent!=StoreClient.ClientIntent.BARTER) return items;
+            // BarterOffer passes the live counter list. Native TrackItem moves each
+            // item into the sold bag, so iterate a snapshot, not that shrinking list.
+            return items?.ToList();
+        }
+        private static void Prefix(ref List<GameItem> gameItems)
+        {
+            if (XiaomanMod.Instance==null || !PlayerStore.HasInstance) return;
+            gameItems=Snapshot(PlayerStore.Instance.currentClientInstance?.GetClientBlueprint(),gameItems);
+        }
     }
     [HarmonyPatch(typeof(NegociationUIManager),"BuildSignature")]
     public static class XiaomanBrewingQuoteRefreshPatch

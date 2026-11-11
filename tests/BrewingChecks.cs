@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using HarmonyLib;
 using XiaomanVisitor;
 
 internal static class BrewingChecks
@@ -10,6 +11,7 @@ internal static class BrewingChecks
     { var p=new BrewingProgress();p.Sign(22);p.Arrive(24);return p; }
     internal static void Run(Action<bool,string> check)
     {
+        CheckNativeExchange(check);
         var p=new BrewingProgress();
         check(!p.MayVisit(24,true) && !p.Sign(21),"a chapter or Wednesday alone never authorizes material collection");
         check(p.Sign(22) && p.NextCollectionDay==24 && !p.Sign(22),"explicit tavern consent schedules the next Wednesday exactly once");
@@ -90,6 +92,44 @@ internal static class BrewingChecks
         check(CustomerQueuePolicy.Next(26,new StoryProgress(),new TavernWorkProgress(),true,true)==XiaomanVisitKind.Brewing
             && CustomerQueuePolicy.Next(25,new StoryProgress(),new TavernWorkProgress(),true,true)!=XiaomanVisitKind.Brewing,"native queue selection admits Friday delivery but never a Thursday spillover");
         check(ItemPresentation.OwnsItemId(BrewingProgress.SampleId) && ItemPresentation.OwnsItemId(BrewingProgress.BottleId),"bottled goods retain the existing scoped tooltip style");
+    }
+    private sealed class MaterialItem : GameItem
+    {
+        public MaterialItem(int id) : base("water_ration") { uniqueId=id;unitCount=1; }
+        public override void Destroy() { }
+        public override void Validate() { }
+    }
+    private static void CheckNativeExchange(Action<bool,string> check)
+    {
+        var client=new StoreClient { identifier=BrewingProgress.ClientId,sourceModId=XiaomanMod.Id,clientIntent=StoreClient.ClientIntent.BARTER };
+        var counter=new List<GameItem>{new MaterialItem(11),new MaterialItem(12),new MaterialItem(13)};
+        var stable=XiaomanBrewingInputSnapshotPatch.Snapshot(client,counter);
+        var p=Signed();
+        p.Prepare("native",24,counter.Select(i => new BrewingMaterial{ItemId=i.uniqueId,Key=i.identifier,Count=i.unitCount,ValueCents=10000}).ToList());
+        int tracked=0;
+        foreach (var item in stable) { counter.Remove(item);tracked++; }
+        check(tracked==3 && counter.Count==0 && p.RecoverInput(counter.Select(i => i.uniqueId)) && p.Batches[0].Phase=="complete",
+            "native sale tracking can remove every material without invalidating the barter enumeration or losing Friday's batch");
+        p.CreditDue(26);p.CreditDue(26);
+        check(p.CreditMilli==390000 && p.Prepare("native",24,new List<BrewingMaterial>{new BrewingMaterial{ItemId=99,Count=1,ValueCents=100}})==null,
+            "one material transfer produces one 30 percent Friday credit, never a second acceptance");
+        check(ReferenceEquals(counter,XiaomanBrewingInputSnapshotPatch.Snapshot(null,counter)),"no customer retains the native material list");
+        client.sourceModId="another.mod";
+        check(ReferenceEquals(counter,XiaomanBrewingInputSnapshotPatch.Snapshot(client,counter)),"same-named customers from other sources are not changed");
+        client.sourceModId=XiaomanMod.Id;client.identifier="native_barter";
+        check(ReferenceEquals(counter,XiaomanBrewingInputSnapshotPatch.Snapshot(client,counter)),"other barter customers keep their native input");
+        client.identifier=BrewingProgress.ClientId;client.clientIntent=StoreClient.ClientIntent.DIALOGUE;
+        check(ReferenceEquals(counter,XiaomanBrewingInputSnapshotPatch.Snapshot(client,counter)),"delivery-only visits never enter material exchange");
+        var native=PatchProcessor.GetOriginalInstructions(AccessTools.Method(typeof(PlayerStore),nameof(PlayerStore.AcceptBarter))).ToArray();
+        int complete=Array.FindIndex(native,i => i.Calls(AccessTools.Method(typeof(StoreClient),nameof(StoreClient.CompleteBusiness))));
+        int accepted=Array.FindIndex(native,i => i.Calls(AccessTools.Method(typeof(BarterOffer),nameof(BarterOffer.OnBarterAccepted))));
+        int swap=Array.FindIndex(native,i => i.Calls(AccessTools.Method(typeof(EmporiumEntry),nameof(EmporiumEntry.SwapInv))));
+        check(complete>=0 && accepted>complete && swap>accepted,"installed native barter completes business and transfers goods in its original order");
+        check(PatchProcessor.GetOriginalInstructions(AccessTools.Method(typeof(PlayerStore),nameof(PlayerStore.OnItemsSold)))
+            .Any(i => i.Calls(AccessTools.Method(typeof(SoldItem),nameof(SoldItem.TrackItem))))
+            && PatchProcessor.GetOriginalInstructions(AccessTools.Method(typeof(SoldItem),nameof(SoldItem.TrackItem)))
+                .Any(i => i.Calls(AccessTools.Method(typeof(SoldItem),"MoveToSoldBag"))),
+            "installed native sale tracking moves items out of the live counter, requiring the scoped snapshot");
     }
     private static void CheckCrate(Action<bool,string> check)
     {

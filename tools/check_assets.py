@@ -86,8 +86,16 @@ def main():
     assert tavern_map["phase"] == "week_two_opening" and tavern_map["enterable"] and tavern_map["discovery_game_day"] == 3 and tavern_map['opening_game_day']==8
     assert tavern_map["image_key"] == "sansm.xiaoman.visitor:" + Path(tavern_map["packaged"]).stem
     luxury_art=json.loads((ROOT/'assets/luxury-art.json').read_text(encoding='utf-8'))
+    from item_palette import apply_palette
+    assert luxury_art['schema']==2 and len(luxury_art['files'])==4
     for art in luxury_art['files']:
         expected[art['packaged']]=art['sha256']
+        source=ROOT/art['source']
+        assert hashlib.sha256(source.read_bytes()).hexdigest()==art['source_sha256']
+        target=Image.open(PACKAGE/art['packaged']).convert('RGBA')
+        derived=apply_palette(Image.open(source),art['palette'])
+        assert target.size==(16,32) and target.tobytes()==derived.tobytes(), 'Special drink palette/shape differs from its source recipe'
+    assert len({art['sha256'] for art in luxury_art['files']})==4, 'Special drinks need distinct colors'
     crate=json.loads((ROOT/'assets/wine-crate-style.json').read_text(encoding='utf-8'))
     expected[crate['packaged']]=crate['sha256']
     crate_image=Image.open(PACKAGE/crate['packaged']).convert('RGBA')
