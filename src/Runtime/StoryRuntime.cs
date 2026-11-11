@@ -79,6 +79,9 @@ namespace XiaomanVisitor
             client.OnDismiss = () => { Voice?.Stop(); ResetGunReaction(); SetMood(client, Mood.Neutral); if (storySession == session) storySession = null; };
             client.CompleteClientCreation();
             client.noAcceptingContraband = true;
+#if XIAOMAN_BUYBACK_TEST
+            SideStories.BuybackTestMod.Instance?.ConfigureStoryBuyer(client, episode.Demand);
+#endif
             return client;
         }
 

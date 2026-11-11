@@ -5,41 +5,55 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 namespace XiaomanVisitor.SideStories
 {
-    [Serializable] internal sealed class BuybackScript { public int schema; public string language; public BuybackCue[] cues; }
+    [Serializable] internal sealed class BuybackScript { public int schema; public string language, dialogue_mode; public BuybackCue[] cues; }
     [Serializable] internal sealed class BuybackCue
-    { public string kind, text, key; public int value, act; public float seconds; }
-    [Serializable] internal sealed class BuybackAssets { public int schema; public BuybackImage[] images; }
+    { public string kind, text, key, transition; public string[] options; public float[] gains, retry_gains; public int value, act; public float seconds, hold, x, y, opacity; }
+    [Serializable] internal sealed class BuybackAssets { public int schema; public BuybackImage[] images; public BuybackSound[] sounds; public BuybackMusicSpec music; }
+    [Serializable] internal sealed class BuybackMusicSpec { public string file, identifier, title, sha256; public bool loop; }
     [Serializable] internal sealed class BuybackImage { public string file; public int width, height; public string sha256; }
+    [Serializable] internal sealed class BuybackSound { public string role, identifier, source; public float gain, pan; }
 
-    internal sealed class BuybackStage : MonoBehaviour
+    internal sealed partial class BuybackStage : MonoBehaviour
     {
         private readonly Texture2D[] textures = new Texture2D[5];
+        private readonly BuybackLensGraphic[] bloodLayers = new BuybackLensGraphic[3];
         private readonly Dictionary<AudioSource, bool> nativeMutes = new Dictionary<AudioSource, bool>();
+        private readonly Dictionary<string, BuybackSound> soundSpecs = new Dictionary<string, BuybackSound>();
+        private readonly Dictionary<string, AudioClip> soundClips = new Dictionary<string, AudioClip>();
         private BuybackScript script;
         private ModLog log;
         private Action onClosed;
-        private Canvas canvas;
-        private RectTransform speechRoot, body, nameRect;
+        private RectTransform speechRoot, body, nameRect, viewRoot, drips, lensRect;
+        private CanvasGroup lens;
         private TextBubble bubble;
         private TextMeshProUGUI speaker, transaction, title, hint;
         private GameObject endingControls;
-        private RawImage cg;
-        private Image background, curtain, flash;
+        private RawImage cg, previousCg;
+        private Image background, curtain;
+        private BuybackDoorShadeGraphic doorShade;
         private AudioSource ambience, effects;
+        private BuybackMusic music;
+        private BuybackMusicSpec introMusic;
         private bool closing, lineActive, advanceRequested, atTitle, leaving;
-        private float completedAt = -1, imageStarted, lineStarted;
+        private bool chooseAgain;
+        private int shownCharacters;
+        private float imageStarted, previousImageStarted, lineStarted, bloodStarted = -1;
+        private float ambientLevel = .7f;
         private int startedFrame, lastAdvanceFrame = -1;
-        private Vector2 lastSize;
 
-        internal void Prepare(ModLog ownerLog, Action closed)
+        internal void Prepare(ModLog ownerLog, Action closed, Action<bool> doorChoice, BuybackRefusalText branch, int retry, BuybackMusic musicOwner)
         {
-            log = ownerLog; onClosed = closed;
-            script = JsonUtility.FromJson<BuybackScript>(Read("script.json"));
-            var assets = JsonUtility.FromJson<BuybackAssets>(Read("assets.json"));
+            log = ownerLog; onClosed = closed; onDoorChosen = doorChoice; refusalText = branch; retryDoor = retry;
+            music = musicOwner;
+            script = ParseData<BuybackScript>(Read("script.json"));
+            var assets = ParseData<BuybackAssets>(Read("assets.json"));
             Validate(script, assets);
+            log.Log("Parsed buyback data: language=" + script.language + "; cues=" + script.cues.Length
+                + "; CGs=" + assets.images.Length + "; sound roles=" + assets.sounds.Length + ".");
             for (int i = 0; i < textures.Length; i++)
             {
                 byte[] bytes = ModHelper.ReadModFileBytes(BuybackTestMod.Id, "Scenes/" + assets.images[i].file);
@@ -57,6 +71,8 @@ namespace XiaomanVisitor.SideStories
                 texture.anisoLevel = 0;
             }
             BuildPresentation();
+            LoadSounds(assets.sounds);
+            introMusic = assets.music;
         }
 
         private static string Read(string file)
@@ -66,12 +82,40 @@ namespace XiaomanVisitor.SideStories
             return text;
         }
 
+        // Runtime and offline validation must execute this exact parser, not two serializers.
+        internal static T ParseData<T>(string text) where T : class
+        {
+            if (string.IsNullOrWhiteSpace(text)) throw new InvalidOperationException("Empty " + typeof(T).Name);
+            try
+            {
+                return JsonConvert.DeserializeObject<T>(text.TrimStart('\uFEFF'),
+                    new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.None });
+            }
+            catch (JsonException error)
+            {
+                throw new InvalidOperationException("Invalid JSON in " + typeof(T).Name, error);
+            }
+        }
+
         internal static void Validate(BuybackScript story, BuybackAssets assets)
         {
-            if (story == null || story.schema != 1 || story.language != "zh" || story.cues == null
-                || story.cues.Length < 100 || story.cues.Length > 250
-                || assets == null || assets.schema != 1 || assets.images == null || assets.images.Length != 5)
-                throw new InvalidOperationException("Invalid five-act rehearsal data");
+            if (story == null) throw new InvalidOperationException("Missing buyback script object");
+            if (story.schema != 1 || story.language != "zh" || story.cues == null
+                || story.cues.Length < 100 || story.cues.Length > 250)
+                throw new InvalidOperationException("Invalid buyback script: schema=" + story.schema
+                    + "; language=" + (story.language ?? "null") + "; cues=" + (story.cues == null ? -1 : story.cues.Length));
+            if (assets == null) throw new InvalidOperationException("Missing buyback asset object");
+            if (assets.schema != 1 || assets.images == null || assets.images.Length != 5)
+                throw new InvalidOperationException("Invalid buyback assets: schema=" + assets.schema
+                    + "; images=" + (assets.images == null ? -1 : assets.images.Length));
+            if (story.cues[0].kind != "shop" || story.cues[1].kind != "knock")
+                throw new InvalidOperationException("Opening must retain the shop and play door knocks");
+            if (story.dialogue_mode != "manual")
+                throw new InvalidOperationException("Rehearsal dialogue must wait for player input");
+            if (assets.music == null || assets.music.file != "rain_intro.mp3"
+                || assets.music.identifier != "rain_intro" || !assets.music.loop
+                || assets.music.sha256 == null || assets.music.sha256.Length != 64)
+                throw new InvalidOperationException("Missing approved Intro music");
             for (int i = 0; i < 5; i++)
             {
                 var image = assets.images[i];
@@ -81,10 +125,12 @@ namespace XiaomanVisitor.SideStories
                     throw new InvalidOperationException("Invalid CG manifest");
             }
             int nextImage = 1, previousAct = 1;
-            bool impact = false, black = false, title = false;
+            bool impact = false, black = false, title = false, doorChoice = false, beautyChoice = false, attackLine = false;
+            string lastLine = null;
             foreach (var cue in story.cues)
             {
-                if (cue == null || title || cue.seconds < 0 || cue.seconds > 10 || float.IsNaN(cue.seconds))
+                if (cue == null || title || cue.seconds < 0 || cue.seconds > 10 || float.IsNaN(cue.seconds)
+                    || cue.hold < 0 || cue.hold > 3 || float.IsNaN(cue.hold))
                     throw new InvalidOperationException("Invalid cue timing/order");
                 switch (cue.kind)
                 {
@@ -93,23 +139,68 @@ namespace XiaomanVisitor.SideStories
                             || cue.act < previousAct || cue.act > previousAct + 1 || cue.act > 5)
                             throw new InvalidOperationException("Invalid spoken line/act order");
                         previousAct = cue.act;
+                        lastLine = cue.text;
+                        if (cue.value == 3)
+                        {
+                            if (!impact || nextImage != 3 || cue.transition != "late_reveal" || cue.hold < .5f || cue.hold >= 1)
+                                throw new InvalidOperationException("Attack shout must reveal CG03 near its end");
+                            attackLine = true;
+                        }
                         break;
                     case "image":
+                        if (nextImage == 1 && !doorChoice) throw new InvalidOperationException("CG01 bypasses the door decision");
+                        if (nextImage > 5) throw new InvalidOperationException("Too many CGs");
+                        string expected = new[] { "door_wipe", "dissolve", "late_reveal", "collapse", "dissolve" }[nextImage - 1];
+                        if (nextImage == 3 && !attackLine) throw new InvalidOperationException("CG03 precedes its delayed shout");
+                        if (cue.transition != expected) throw new InvalidOperationException("Invalid shot transition");
                         if (cue.value != nextImage++) throw new InvalidOperationException("Invalid CG order");
                         break;
                     case "impact":
-                        if (nextImage != 4 || impact) throw new InvalidOperationException("Impact before CG03");
+                        if (nextImage != 3 || impact || cue.value != 3 || cue.seconds <= 0
+                            || lastLine != "前辈也没有机会说了。") throw new InvalidOperationException("Three black-screen impacts must precede CG03");
                         impact = true; break;
                     case "black":
                         if (nextImage != 6 || black) throw new InvalidOperationException("Final fade before CG05");
                         black = true; break;
                     case "title": title = true; break;
-                    case "wait": case "fade": case "knock": case "lock": case "tape": break;
+                    case "shop":
+                        if (cue.x < 0 || cue.x > 1 || cue.y < 0 || cue.y > 1 || float.IsNaN(cue.x)
+                            || float.IsNaN(cue.y) || cue.opacity < 0 || cue.opacity > .25f || float.IsNaN(cue.opacity))
+                            throw new InvalidOperationException("Invalid door scene anchor/shade");
+                        break;
+                    case "door_choice":
+                        if (doorChoice || nextImage != 1 || previousAct != 1)
+                            throw new InvalidOperationException("Door decision must precede CG01 exactly once");
+                        doorChoice = true; break;
+                    case "reply_choice":
+                        if (beautyChoice || nextImage != 2 || lastLine != "呐，前辈，我今天美吗？"
+                            || cue.key != "beauty" || cue.options == null || string.Join("|", cue.options) != "……|……")
+                            throw new InvalidOperationException("Beauty question requires two silent replies");
+                        beautyChoice = true; break;
+                    case "knock":
+                        if (cue.value != 3 || nextImage != 1 || cue.gains == null || cue.gains.Length != 3
+                            || !(cue.gains[0] > 0 && cue.gains[0] < cue.gains[1] && cue.gains[1] < cue.gains[2] && cue.gains[2] <= 1)
+                            || cue.retry_gains == null || cue.retry_gains.Length != 2
+                            || !(cue.gains[2] < cue.retry_gains[0] && cue.retry_gains[0] < cue.retry_gains[1] && cue.retry_gains[1] <= 1))
+                            throw new InvalidOperationException("Opening requires three player-triggered knock sequences");
+                        break;
+                    case "wait": case "fade": case "lock": case "tape": break;
                     default: throw new InvalidOperationException("Unknown rehearsal cue");
                 }
             }
-            if (nextImage != 6 || previousAct != 5 || !impact || !black || !title)
+            if (nextImage != 6 || previousAct != 5 || !impact || !black || !title || !beautyChoice || !attackLine)
                 throw new InvalidOperationException("Incomplete ending");
+            if (assets.sounds == null || assets.sounds.Length != 8)
+                throw new InvalidOperationException("Missing directed sound roles");
+            var roles = new HashSet<string>();
+            foreach (var sound in assets.sounds)
+                if (sound == null || string.IsNullOrEmpty(sound.role) || string.IsNullOrEmpty(sound.identifier)
+                    || !roles.Add(sound.role) || sound.gain < 0 || sound.gain > 1 || float.IsNaN(sound.gain)
+                    || sound.pan < -1 || sound.pan > 1 || float.IsNaN(sound.pan)
+                    || (sound.source != null && sound.source != "mod"))
+                    throw new InvalidOperationException("Invalid directed sound");
+            if (!roles.SetEquals(new[] { "knock", "blade", "lunge", "hit", "blood", "fall", "touch", "tape" }))
+                throw new InvalidOperationException("Unknown directed sound role");
         }
 
         private void BuildPresentation()
@@ -117,7 +208,7 @@ namespace XiaomanVisitor.SideStories
             var native = DialogUIManager.Instance;
             if (native == null || native.clientBubble == null || native.clientNameBubble == null)
                 throw new InvalidOperationException("Native dialogue templates are not ready");
-            canvas = GetComponent<Canvas>();
+            var canvas = GetComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             canvas.sortingOrder = 32760;
             var scaler = GetComponent<CanvasScaler>();
@@ -126,10 +217,25 @@ namespace XiaomanVisitor.SideStories
             background = FullImage("FadeFromShop", Color.clear);
             background.raycastTarget = true;
             ClickAdvance(background.gameObject);
-            cg = Child("CG").gameObject.AddComponent<RawImage>();
+            viewRoot = FullRect("CameraView");
+            previousCg = Child("PreviousCG", viewRoot).gameObject.AddComponent<RawImage>();
+            previousCg.raycastTarget = false; previousCg.enabled = false;
+            cg = Child("CG", viewRoot).gameObject.AddComponent<RawImage>();
             cg.raycastTarget = false; cg.enabled = false;
+            doorShade = FullRect("DoorOpeningShadow", cg.transform).gameObject.AddComponent<BuybackDoorShadeGraphic>();
+            doorShade.raycastTarget = false; doorShade.gameObject.SetActive(false);
             curtain = FullImage("Transition", Color.clear);
-            flash = FullImage("Impact", Color.clear);
+            var lensRoot = FullRect("ScreenSpaceBlood");
+            lensRect = lensRoot;
+            lens = lensRoot.gameObject.AddComponent<CanvasGroup>(); lens.alpha = 0;
+            for (int style = 2; style >= 0; style--)
+            {
+                var rect = FullRect("LensLayer" + style, lensRoot);
+                var graphic = rect.gameObject.AddComponent<BuybackLensGraphic>();
+                bloodLayers[style] = graphic;
+                graphic.Style = style; graphic.raycastTarget = false;
+                if (style == 1) drips = rect;
+            }
             speechRoot = Child("NativeSubtitles");
             speechRoot.anchorMin = speechRoot.anchorMax = new Vector2(.5f, 0);
             speechRoot.sizeDelta = Vector2.zero;
@@ -157,7 +263,7 @@ namespace XiaomanVisitor.SideStories
             Clear(bubble.typewriter.onTextShowed); Clear(bubble.typewriter.onTypewriterStart);
             Clear(bubble.typewriter.onTextDisappeared); Clear(bubble.typewriter.onCharacterVisible);
             Clear(bubble.typewriter.onMessage);
-            bubble.typewriter.onTextShowed.AddListener(() => completedAt = Time.unscaledTime);
+            bubble.typewriter.onCharacterVisible.AddListener(c => shownCharacters++);
             bubble.textfield.fontSize = 28; bubble.textfield.enableAutoSizing = false;
             speaker.text = "小满"; speaker.fontSize = 26; speaker.enableAutoSizing = false;
             var palette = StoreUIManager.Instance.dialogBubbleList;
@@ -169,14 +275,15 @@ namespace XiaomanVisitor.SideStories
             hint = Label("Controls", new Vector2(0, -505), 18);
             hint.text = "点击 / 继续对话键　·　Esc 退出测试";
             hint.color = new Color(.65f, .66f, .72f, 1);
+            BuildChoiceMenu();
             endingControls = Child("EndingControls").gameObject;
             endingControls.SetActive(false);
-            AddButton("重播", new Vector2(-150, -80), Play);
-            AddButton("返回主菜单", new Vector2(150, -80), ReturnToMenu);
+            AddButton("重新选择", new Vector2(-150, -80), Rechoose);
+            AddButton("结局", new Vector2(150, -80), () => BuybackTestMod.Instance?.CompleteEnding());
             ambience = gameObject.AddComponent<AudioSource>();
             ambience.playOnAwake = false; ambience.loop = true; ambience.spatialBlend = 0;
             effects = gameObject.AddComponent<AudioSource>();
-            effects.playOnAwake = false; effects.spatialBlend = 0;
+            effects.playOnAwake = false; effects.spatialBlend = 0; effects.volume = .75f;
             if (StoreSoundPlayer.Instance != null)
             {
                 ambience.clip = StoreSoundPlayer.Instance.storeAmbient;
@@ -193,32 +300,64 @@ namespace XiaomanVisitor.SideStories
         }
         private Image FullImage(string imageName, Color color)
         {
-            var rect = Child(imageName); rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one;
-            rect.offsetMin = rect.offsetMax = Vector2.zero;
+            var rect = FullRect(imageName);
             var image = rect.gameObject.AddComponent<Image>();
             image.color = color; image.raycastTarget = false;
             return image;
         }
+        private RectTransform FullRect(string childName, Transform parent = null)
+        {
+            var rect = Child(childName, parent);
+            rect.anchorMin = Vector2.zero; rect.anchorMax = Vector2.one;
+            rect.offsetMin = rect.offsetMax = Vector2.zero;
+            return rect;
+        }
         private TextMeshProUGUI Label(string labelName, Vector2 position, float size, Transform parent = null)
         {
-            var rect = Child(labelName, parent);
+            // Speech text owns Febucci visibility state. Static labels instead
+            // clone the native choice label, which has no typewriter lifecycle.
+            var text = UnityEngine.Object.Instantiate(DialogUIManager.Instance.dialogChoiceBubbles[0].TMP, parent == null ? transform : parent, false);
+            text.gameObject.name = labelName;
+            var rect = text.rectTransform;
+            rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(.5f, .5f);
+            rect.localScale = Vector3.one;
             rect.sizeDelta = new Vector2(1250, 90); rect.anchoredPosition = position;
-            var text = rect.gameObject.AddComponent<TextMeshProUGUI>();
-            text.font = DialogUIManager.Instance.clientBubble.textfield.font;
+            text.enabled = true; text.gameObject.SetActive(true); text.maskable = false;
+            text.canvasRenderer.SetAlpha(1); text.canvasRenderer.DisableRectClipping(); text.canvasRenderer.cull = false;
+            text.margin = Vector4.zero;
+            text.firstVisibleCharacter = 0;
+            foreach (var group in text.GetComponents<CanvasGroup>()) group.alpha = 1;
+            text.maxVisibleCharacters = text.maxVisibleWords = text.maxVisibleLines = int.MaxValue;
+            text.enableAutoSizing = false; text.overflowMode = TextOverflowModes.Overflow; text.text = "";
             text.fontSize = size; text.alignment = TextAlignmentOptions.Center;
             text.raycastTarget = false; text.color = new Color(.88f, .86f, .78f, 1);
             return text;
         }
         private void AddButton(string label, Vector2 position, Action click)
         {
-            var rect = Child(label, endingControls.transform);
-            rect.sizeDelta = new Vector2(270, 65); rect.anchoredPosition = position;
-            var image = rect.gameObject.AddComponent<Image>(); image.color = new Color(.12f, .1f, .16f, 1);
-            var button = rect.gameObject.AddComponent<Button>(); button.targetGraphic = image;
-            button.navigation = new Navigation { mode = Navigation.Mode.None };
-            button.onClick.AddListener(() => click());
-            var text = Label("Label", Vector2.zero, 26, rect);
-            text.rectTransform.sizeDelta = rect.sizeDelta; text.text = label;
+            var option = UnityEngine.Object.Instantiate(DialogUIManager.Instance.dialogChoiceBubbles[0], endingControls.transform, false);
+            option.gameObject.name = label; option.SetInteractable(true); option.enabled = false;
+            var rect = (RectTransform)option.transform;
+            rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(.5f, .5f);
+            rect.localScale = Vector3.one; rect.sizeDelta = new Vector2(270, 65); rect.anchoredPosition = position;
+            foreach (var marker in option.GetComponentsInChildren<StoreUI>(true)) { marker.enabled = false; UnityEngine.Object.Destroy(marker); }
+            foreach (var fit in option.GetComponents<ContentSizeFitter>()) fit.enabled = false;
+            foreach (var width in option.GetComponents<DialogBubbleWidth>()) width.enabled = false;
+            foreach (var layout in option.GetComponents<LayoutGroup>()) layout.enabled = false;
+            foreach (var button in option.GetComponentsInChildren<Button>(true)) {
+                Clear(button.onClick); button.navigation = new Navigation { mode = Navigation.Mode.None };
+            }
+            var select = option.GetComponent<Button>() ?? option.GetComponentInChildren<Button>(true);
+            if (select == null) throw new InvalidOperationException("Native ending choice has no button");
+            select.onClick.AddListener(() => { if (atTitle) click(); });
+            var text = option.TMP;
+            text.enabled = true; text.gameObject.SetActive(true); text.text = label; text.fontSize = 26;
+            text.enableAutoSizing = false; text.alignment = TextAlignmentOptions.Center; text.margin = Vector4.zero;
+            text.maxVisibleCharacters = text.maxVisibleWords = text.maxVisibleLines = int.MaxValue;
+            text.color = new Color(.88f, .86f, .78f, 1); text.raycastTarget = false;
+            text.rectTransform.anchorMin = Vector2.zero; text.rectTransform.anchorMax = Vector2.one;
+            text.rectTransform.offsetMin = new Vector2(12, 5); text.rectTransform.offsetMax = new Vector2(-12, -5);
+            option.gameObject.SetActive(true);
         }
         private void ClickAdvance(GameObject target)
         {
@@ -240,10 +379,17 @@ namespace XiaomanVisitor.SideStories
             ModHelper.StopAllCoroutines(BuybackTestMod.Id);
             HideLine(); atTitle = false; advanceRequested = false;
             endingControls.SetActive(false); title.gameObject.SetActive(false); transaction.gameObject.SetActive(false);
-            cg.enabled = false; curtain.color = flash.color = background.color = Color.clear;
+            cg.enabled = previousCg.enabled = false; curtain.color = background.color = Color.clear;
+            lens.alpha = 0; bloodStarted = -1; drips.anchoredPosition = lensRect.anchoredPosition = Vector2.zero;
+            SetBloodBeat(0);
+            doorScene = true; choiceDecision = -1; choiceMenu.gameObject.SetActive(false);
+            doorShade.gameObject.SetActive(false);
+            waitingForKnock = knockRequested = false;
+            ResetView(); ambientLevel = .7f;
             hint.gameObject.SetActive(true); startedFrame = Time.frameCount; lastAdvanceFrame = -1;
             InputActionManager.current?.ResetExcept(null);
             MuteNative();
+            ambience.volume = Mathf.Clamp01(EmporiumOption.Instance.backgroundVolume) * ambientLevel;
             if (ambience.clip != null) ambience.Play();
             // The wrapper catches failures while iterating, rather than abandoning an invisible lock.
             if (ModHelper.StartCoroutine(BuybackTestMod.Id, Guarded(Run())) == null)
@@ -265,50 +411,78 @@ namespace XiaomanVisitor.SideStories
         }
         private IEnumerator Run()
         {
-            foreach (var cue in script.cues)
+            foreach (var frame in music.Start(introMusic, PlayerStore.Instance.runID, StoreStation.Instance.dayCounter)) yield return frame;
+            int firstCue = 0;
+            if (chooseAgain)
             {
+                foreach (var frame in ShowShop(script.cues[0])) yield return frame;
+                int decision = Array.FindIndex(script.cues, c => c.kind == "door_choice");
+                ShowLine(script.cues[decision - 1].text);
+                bubble.typewriter.SkipTypewriter(); lineActive = false;
+                ShowChoices(new[] { "开门", "不开门" }, true);
+                while (choiceDecision < 0) yield return null;
+                if (choiceDecision != 0) yield break;
+                firstCue = Array.FindIndex(script.cues, c => c.kind == "image" && c.value == 1);
+            }
+            else if (retryDoor > 0)
+            {
+                foreach (var frame in ShowShop(script.cues[0])) yield return frame;
+                foreach (var frame in DoorKnocks(1, true)) yield return frame;
+                var lines = retryDoor == 1 ? new[] { refusalText.retry_line } : refusalText.third_lines;
+                foreach (var line in lines)
+                    foreach (var frame in SpeakLine(line)) yield return frame;
+                ShowChoices(new[] { "开门", "不开门" }, true);
+                while (choiceDecision < 0) yield return null;
+                if (choiceDecision != 0) yield break;
+                firstCue = Array.FindIndex(script.cues, c => c.kind == "image" && c.value == 1);
+            }
+            for (int cueIndex = firstCue; cueIndex < script.cues.Length; cueIndex++)
+            {
+                var cue = script.cues[cueIndex];
                 switch (cue.kind)
                 {
+                    case "shop":
+                        foreach (var frame in ShowShop(cue)) yield return frame;
+                        break;
                     case "fade":
                         foreach (var frame in Fade(background, 0, 1, cue.seconds)) yield return frame;
                         break;
                     case "knock":
-                        for (int i = 0; i < 3; i++)
-                        {
-                            Sound(EmporiumAudioPlayer.Instance?.ratchet, .32f);
-                            foreach (var frame in Wait(cue.seconds / 3)) yield return frame;
-                        }
+                        foreach (var frame in DoorKnocks(cue.value)) yield return frame;
+                        break;
+                    case "door_choice":
+                        ShowChoices(new[] { "开门", "不开门" }, true);
+                        while (choiceDecision < 0) yield return null;
+                        if (choiceDecision != 0) yield break;
+                        break;
+                    case "reply_choice":
+                        ShowChoices(cue.options, false);
+                        while (choiceDecision < 0) yield return null;
                         break;
                     case "image":
-                        HideLine();
-                        if (cue.value == 1) Sound(EmporiumAudioPlayer.Instance?.airlock_ext_open, .5f);
-                        foreach (var frame in Fade(curtain, 0, 1, cue.seconds / 2)) yield return frame;
-                        cg.texture = textures[cue.value - 1]; cg.enabled = true; imageStarted = Time.unscaledTime;
-                        LayoutImage();
-                        foreach (var frame in Fade(curtain, 1, 0, cue.seconds / 2)) yield return frame;
+                        foreach (var frame in ChangeImage(cue)) yield return frame;
                         break;
                     case "line":
-                        ShowLine(cue.text);
-                        while (completedAt < 0 || (!advanceRequested &&
-                            (!EmporiumOption.Instance.autoNextDialog || Time.unscaledTime - completedAt <
-                                DialogUIManager.ScaleByDialogSpeed(.99f) + DialogUIManager.GetTypewriterDelay()))) yield return null;
-                        lineActive = false;
+                        if (cue.value == 3) { foreach (var frame in SpeakAttack(cue)) yield return frame; }
+                        else { foreach (var frame in SpeakLine(cue.text)) yield return frame; }
                         break;
                     case "wait":
                         foreach (var frame in Wait(cue.seconds)) yield return frame;
                         break;
                     case "impact":
-                        HideLine(); Sound(EmporiumAudioPlayer.Instance?.ratchet2, .75f);
-                        foreach (var frame in Fade(flash, 0, .92f, .07f, true)) yield return frame;
-                        Sound(EmporiumAudioPlayer.Instance?.audioRegister, .85f);
-                        transaction.gameObject.SetActive(true);
-                        foreach (var frame in Fade(flash, .92f, 0, .2f, true)) yield return frame;
-                        foreach (var frame in Wait(cue.seconds)) yield return frame;
-                        transaction.gameObject.SetActive(false);
+                        foreach (var frame in Impact(cue)) yield return frame;
                         break;
                     case "black":
                         HideLine();
-                        foreach (var frame in Fade(curtain, 0, 1, cue.seconds)) yield return frame;
+                        float endingStart = Time.unscaledTime;
+                        while (Time.unscaledTime - endingStart < cue.seconds)
+                        {
+                            float t = Mathf.Clamp01((Time.unscaledTime - endingStart) / cue.seconds);
+                            curtain.color = new Color(0, 0, 0, t);
+                            lens.alpha = 1 - t; ambientLevel = Mathf.Lerp(.45f, .20f, t);
+                            yield return null;
+                        }
+                        curtain.color = Color.black; lens.alpha = 0;
                         cg.enabled = false;
                         break;
                     case "lock":
@@ -316,7 +490,7 @@ namespace XiaomanVisitor.SideStories
                         foreach (var frame in Wait(cue.seconds)) yield return frame;
                         break;
                     case "tape":
-                        Sound(EmporiumAudioPlayer.Instance?.audioClickClick, .4f);
+                        Sound("tape");
                         foreach (var frame in Wait(cue.seconds)) yield return frame;
                         break;
                     case "title":
@@ -331,9 +505,175 @@ namespace XiaomanVisitor.SideStories
                         }
                         title.color = new Color(.88f, .86f, .78f, 1);
                         atTitle = true; endingControls.SetActive(true);
+                        foreach (var label in endingControls.GetComponentsInChildren<TextMeshProUGUI>(true)) {
+                            label.ForceMeshUpdate(true);
+                            log.Log("Ending choice label: " + label.text + "; characters=" + label.textInfo.characterCount + "; active=" + label.gameObject.activeInHierarchy + ".");
+                        }
                         break;
                 }
             }
+        }
+
+        private IEnumerable<object> ShowShop(BuybackCue cue)
+        {
+            doorAnchor = new Vector2(cue.x, cue.y); shopShade = cue.opacity;
+            foreach (var frame in Fade(background, 0, shopShade, cue.seconds)) yield return frame;
+        }
+        private IEnumerable<object> SpeakLine(string text)
+        {
+            ShowLine(text);
+            // Stage-local policy: the player's global auto-advance option stays untouched.
+            while (!advanceRequested) yield return null;
+            lineActive = false;
+        }
+        private IEnumerable<object> SpeakAttack(BuybackCue cue)
+        {
+            ShowLine(cue.text);
+            bool revealed = false;
+            while (!advanceRequested)
+            {
+                if (!revealed && Time.unscaledTime - lineStarted >= cue.seconds
+                    && (shownCharacters >= cue.text.Length * cue.hold || !bubble.typewriter.isShowingText))
+                {
+                    SetImage(3); curtain.color = Color.clear; revealed = true;
+                }
+                yield return null;
+            }
+            if (!revealed) { SetImage(3); curtain.color = Color.clear; }
+            lineActive = false;
+        }
+        private void Rechoose()
+        {
+            if (!atTitle || leaving) return;
+            chooseAgain = true; retryDoor = 0;
+            music.RetainUntilMorning();
+            Play();
+        }
+        internal void LeaveForEnding() { leaving = true; Shutdown(); }
+        internal void PlayFarewell(Action finished)
+        {
+            ModHelper.StopAllCoroutines(BuybackTestMod.Id);
+            if (ModHelper.StartCoroutine(BuybackTestMod.Id, Guarded(Farewell(finished))) == null)
+                throw new InvalidOperationException("Farewell coroutine did not start");
+        }
+        private IEnumerator Farewell(Action finished)
+        {
+            foreach (var frame in SpeakLine(refusalText.farewell_line)) yield return frame;
+            finished();
+        }
+
+        private bool Reduced { get { return BuybackTestMod.Instance?.ReducedEffects?.Value ?? false; } }
+        private void ResetView()
+        {
+            viewRoot.anchoredPosition = Vector2.zero;
+            viewRoot.localRotation = Quaternion.identity; viewRoot.localScale = Vector3.one;
+        }
+        private void SetImage(int number)
+        {
+            cg.texture = textures[number - 1]; cg.enabled = true; cg.color = Color.white;
+            imageStarted = Time.unscaledTime; LayoutImage();
+        }
+        private IEnumerable<object> ChangeImage(BuybackCue cue)
+        {
+            HideLine();
+            if (cue.transition == "door_wipe")
+            {
+                foreach (var frame in Fade(background, shopShade, 1, .45f)) yield return frame;
+                doorScene = false;
+                SetImage(cue.value); curtain.color = Color.black;
+                doorShade.Progress = 0; doorShade.gameObject.SetActive(true);
+                foreach (var frame in Wait(cue.hold)) yield return frame;
+                var door = EmporiumAudioPlayer.Instance?.airlock_ext_open;
+                float duration = door != null && door.clip != null && door.clip.length > 0 ? door.clip.length : cue.seconds;
+                curtain.color = Color.clear;
+                Sound(door, .5f);
+                log.Log("Door shadow: left to right; sound-synchronized duration=" + duration + ".");
+                float started = Time.unscaledTime;
+                while (Time.unscaledTime - started < duration)
+                {
+                    float t = Mathf.Clamp01((Time.unscaledTime - started) / duration);
+                    doorShade.Progress = t * t * (3 - 2 * t);
+                    yield return null;
+                }
+                doorShade.Progress = 1; doorShade.gameObject.SetActive(false);
+            }
+            else if (cue.transition == "dissolve")
+            {
+                previousCg.texture = cg.texture; previousCg.color = Color.white;
+                previousCg.enabled = true; previousImageStarted = imageStarted;
+                previousCg.rectTransform.sizeDelta = cg.rectTransform.sizeDelta;
+                SetImage(cue.value); cg.color = new Color(1, 1, 1, 0);
+                Sound(cue.value == 2 ? "blade" : "touch");
+                float start = Time.unscaledTime;
+                while (Time.unscaledTime - start < cue.seconds)
+                {
+                    float t = Mathf.Clamp01((Time.unscaledTime - start) / cue.seconds);
+                    cg.color = new Color(1, 1, 1, t * t * (3 - 2 * t));
+                    yield return null;
+                }
+                cg.color = Color.white; previousCg.enabled = false; previousCg.texture = null;
+            }
+            else if (cue.transition == "late_reveal")
+            {
+                if (cg.texture != textures[cue.value - 1]) SetImage(cue.value);
+                curtain.color = Color.clear; ResetView();
+            }
+            else // Loss of consciousness: close, hold in black, reopen on floor POV.
+            {
+                Sound("fall");
+                float start = Time.unscaledTime;
+                while (Time.unscaledTime - start < .20f)
+                {
+                    float t = Mathf.Clamp01((Time.unscaledTime - start) / .20f);
+                    curtain.color = new Color(0, 0, 0, t);
+                    if (!Reduced)
+                    {
+                        viewRoot.anchoredPosition = new Vector2(0, -70 * t);
+                        viewRoot.localRotation = Quaternion.Euler(0, 0, -3 * t);
+                    }
+                    yield return null;
+                }
+                curtain.color = Color.black;
+                foreach (var frame in Wait(cue.hold)) yield return frame;
+                SetImage(cue.value); ResetView();
+                foreach (var frame in Fade(curtain, 1, 0, cue.seconds - .20f)) yield return frame;
+            }
+        }
+
+        private void SetBloodBeat(int beat)
+        {
+            foreach (var graphic in bloodLayers) if (graphic != null) graphic.Beats = beat;
+        }
+        private IEnumerable<object> Impact(BuybackCue cue)
+        {
+            HideLine();
+            foreach (var frame in Fade(curtain, 0, 1, cue.hold)) yield return frame;
+            bloodStarted = Time.unscaledTime; lens.alpha = 1;
+            float interval = cue.seconds / cue.value;
+            for (int beat = 1; beat <= cue.value; beat++)
+            {
+                SetBloodBeat(beat);
+                Sound("hit"); Sound("blood");
+                float start = Time.unscaledTime;
+                bool registered = false;
+                while (Time.unscaledTime - start < interval)
+                {
+                    float elapsed = Time.unscaledTime - start;
+                    float kick = Reduced ? 0 : Mathf.Clamp01(1 - elapsed / .18f);
+                    var offset = new Vector2(Mathf.Sin(elapsed * 85) * 18 * kick,
+                        Mathf.Sin(elapsed * 67) * 12 * kick);
+                    viewRoot.anchoredPosition = lensRect.anchoredPosition = offset;
+                    ambientLevel = .08f;
+                    if (beat == cue.value && !registered && elapsed >= .24f)
+                    {
+                        Sound(EmporiumAudioPlayer.Instance?.audioRegister, .85f);
+                        transaction.gameObject.SetActive(true); registered = true;
+                    }
+                    yield return null;
+                }
+                ResetView(); lensRect.anchoredPosition = Vector2.zero;
+            }
+            ambientLevel = .45f; transaction.gameObject.SetActive(false);
         }
 
         private static IEnumerable<object> Wait(float duration)
@@ -341,13 +681,13 @@ namespace XiaomanVisitor.SideStories
             float until = Time.unscaledTime + duration;
             while (Time.unscaledTime < until) yield return null;
         }
-        private static IEnumerable<object> Fade(Image image, float from, float to, float duration, bool white = false)
+        private static IEnumerable<object> Fade(Image image, float from, float to, float duration)
         {
             float start = Time.unscaledTime;
             do
             {
                 float t = duration <= 0 ? 1 : Mathf.Clamp01((Time.unscaledTime - start) / duration);
-                var color = white ? Color.white : Color.black; color.a = Mathf.Lerp(from, to, t);
+                var color = Color.black; color.a = Mathf.Lerp(from, to, t);
                 image.color = color;
                 if (t >= 1) yield break;
                 yield return null;
@@ -355,9 +695,12 @@ namespace XiaomanVisitor.SideStories
         }
         private void ShowLine(string text)
         {
-            HideLine(); advanceRequested = false; completedAt = -1; lineActive = true;
+            HideLine(); advanceRequested = false; lineActive = true;
+            shownCharacters = 0;
             lineStarted = Time.unscaledTime;
             speechRoot.gameObject.SetActive(true);
+            bubble.textfield.fontSize = doorScene ? 20 : 28;
+            speaker.fontSize = doorScene ? 18 : 26;
             // Same native formula, using the Chinese manuscript's CJK multiplier.
             bubble.typewriter.SetTypewriterSpeed((EmporiumOption.Instance.dialogSpeed * 2 + .2f) * .35f);
             bubble.typewriter.hideAppearancesOnSkip = false;
@@ -376,7 +719,15 @@ namespace XiaomanVisitor.SideStories
         }
         internal void Advance()
         {
-            if (!lineActive || leaving || Time.frameCount <= startedFrame + 1
+            if (closing || leaving) return;
+            if (waitingForKnock)
+            {
+                if (Time.frameCount <= knockPromptFrame || lastAdvanceFrame == Time.frameCount) return;
+                lastAdvanceFrame = Time.frameCount;
+                knockRequested = true; waitingForKnock = false;
+                return;
+            }
+            if (!lineActive || Time.frameCount <= startedFrame + 1
                 || lastAdvanceFrame == Time.frameCount || Time.unscaledTime - lineStarted < .12f) return;
             lastAdvanceFrame = Time.frameCount;
             if (bubble.typewriter.isShowingText) bubble.typewriter.SkipTypewriter();
@@ -387,7 +738,14 @@ namespace XiaomanVisitor.SideStories
             if (closing) return;
             if (!leaving && KeyBindHelper.GetBackDown()) { Shutdown(); return; }
             if (!leaving && KeyBindHelper.GetKeyDown("advance_dialogue")) Advance();
-            if (ambience != null) ambience.volume = Mathf.Clamp01(EmporiumOption.Instance.backgroundVolume) * .7f;
+            if (choiceMenu != null && choiceMenu.gameObject.activeSelf)
+            {
+                if (Input.GetKeyDown(KeyCode.Alpha1)) SelectChoice(0);
+                else if (Input.GetKeyDown(KeyCode.Alpha2)) SelectChoice(1);
+            }
+            if (ambience != null) ambience.volume = Mathf.Clamp01(EmporiumOption.Instance.backgroundVolume) * ambientLevel;
+            if (bloodStarted >= 0 && lens.alpha > 0)
+                drips.anchoredPosition = new Vector2(0, -Mathf.Min(18, (Time.unscaledTime - bloodStarted) * .7f));
             if (cg != null && cg.enabled) LayoutImage();
         }
         private void LateUpdate()
@@ -397,23 +755,63 @@ namespace XiaomanVisitor.SideStories
             body.localScale = nameRect.localScale = Vector3.one * scale;
             float screenWidth = ((RectTransform)transform).rect.width;
             var width = body.GetComponent<DialogBubbleWidth>();
-            if (width != null) width.maxWidth = Mathf.Min(1000, screenWidth - 100) / scale - 16;
+            if (width != null) width.maxWidth = Mathf.Min(doorScene ? 560 : 1000, screenWidth - 100) / scale - 16;
             nameRect.anchoredPosition = new Vector2(0, nameRect.rect.height * scale);
-            speechRoot.anchoredPosition = new Vector2(-body.rect.width * scale / 2, 70 + body.rect.height * scale);
+            if (doorScene) LayoutDoorScene();
+            else
+            {
+                speechRoot.anchorMin = speechRoot.anchorMax = new Vector2(.5f, 0);
+                float reserved = choiceMenu.gameObject.activeSelf ? choiceCount * ChoiceStep * scale + 14 : 0;
+                speechRoot.anchoredPosition = new Vector2(-body.rect.width * scale / 2, 70 + reserved + body.rect.height * scale);
+            }
+            LayoutChoices(scale);
         }
         private void LayoutImage()
         {
-            if (cg.texture == null) return;
+            FitImage(cg, imageStarted);
+            if (previousCg.enabled) FitImage(previousCg, previousImageStarted);
+        }
+        private void FitImage(RawImage image, float started)
+        {
+            if (image.texture == null) return;
             Rect rect = ((RectTransform)transform).rect;
-            // Leave a 5% safety margin: the subtle push never crops the supplied originals.
-            float fit = Mathf.Min(rect.width / cg.texture.width, rect.height / cg.texture.height) * .95f;
-            float push = 1 + .02f * Mathf.Clamp01((Time.unscaledTime - imageStarted) / 45);
-            Vector2 size = new Vector2(cg.texture.width * fit * push, cg.texture.height * fit * push);
-            if (size != lastSize) { cg.rectTransform.sizeDelta = size; lastSize = size; }
+            // Preserve original proportions and a margin for the small camera impulse.
+            float fit = Mathf.Min(rect.width / image.texture.width, rect.height / image.texture.height) * .93f;
+            float push = 1 + .02f * Mathf.Clamp01((Time.unscaledTime - started) / 45);
+            Vector2 size = new Vector2(image.texture.width * fit * push, image.texture.height * fit * push);
+            if (size != image.rectTransform.sizeDelta) image.rectTransform.sizeDelta = size;
+        }
+        private void LoadSounds(BuybackSound[] specs)
+        {
+            foreach (var spec in specs)
+            {
+                soundSpecs.Add(spec.role, spec);
+                AudioClip unused; TrySound(spec.role, out unused);
+            }
+        }
+        private bool TrySound(string role, out AudioClip clip)
+        {
+            if (soundClips.TryGetValue(role, out clip)) return clip != null;
+            BuybackSound spec;
+            if (!soundSpecs.TryGetValue(role, out spec)) return false;
+            var directory = AudioManager.Exists ? AudioManager.Instance.audioDirectory : null;
+            string key = spec.source == "mod" ? ModHelper.GetSoundIdentifier(BuybackTestMod.Id, spec.identifier) : spec.identifier;
+            if (directory == null || !directory.HasAudioClip(key)) return false;
+            clip = directory.GetAudioClip(key); soundClips[role] = clip;
+            return clip != null;
+        }
+        private void Sound(string role, float scale = 1)
+        {
+            AudioClip clip; BuybackSound spec;
+            if (!TrySound(role, out clip) || !soundSpecs.TryGetValue(role, out spec))
+            { log.Warning("Cinematic sound unavailable: " + role); return; }
+            effects.panStereo = spec.pan;
+            effects.PlayOneShot(clip, Mathf.Clamp01(spec.gain * scale));
         }
         private void Sound(AudioSource source, float gain)
         {
             if (source == null || source.clip == null) return;
+            effects.panStereo = 0;
             effects.PlayOneShot(source.clip, Mathf.Clamp01(source.volume * gain));
         }
         private void Mute(AudioSource source)
@@ -425,19 +823,14 @@ namespace XiaomanVisitor.SideStories
         {
             if (AudioManager.Exists)
             {
-                Mute(AudioManager.Instance.audioSourceMusic); Mute(AudioManager.Instance.audioSourceAmbient);
+                Mute(AudioManager.Instance.audioSourceAmbient);
             }
             if (StoreSoundPlayer.Instance != null)
             {
-                Mute(StoreSoundPlayer.Instance.musicAudioSource); Mute(StoreSoundPlayer.Instance.ambianceAudioSource);
+                if (!AudioManager.Exists || StoreSoundPlayer.Instance.musicAudioSource != AudioManager.Instance.audioSourceMusic)
+                    Mute(StoreSoundPlayer.Instance.musicAudioSource);
+                Mute(StoreSoundPlayer.Instance.ambianceAudioSource);
             }
-        }
-        private void ReturnToMenu()
-        {
-            if (!atTitle || leaving || StoreUIManager.Instance == null) return;
-            leaving = true; endingControls.SetActive(false);
-            // Native navigation resets only live state. Do not call ExecuteGameOver/RunStats or save.
-            StoreUIManager.Instance.escapeUIManager.OnMainMenu();
         }
         internal void Shutdown()
         {
@@ -453,10 +846,13 @@ namespace XiaomanVisitor.SideStories
             closing = true; HideLine();
             if (ambience != null) ambience.Stop();
             if (effects != null) effects.Stop();
+            music?.ReleaseStage(leaving);
             foreach (var pair in nativeMutes)
                 if (pair.Key != null && pair.Key.mute) pair.Key.mute = pair.Value;
             nativeMutes.Clear();
             if (cg != null) cg.texture = null;
+            if (previousCg != null) previousCg.texture = null;
+            soundClips.Clear(); soundSpecs.Clear();
             for (int i = 0; i < textures.Length; i++)
             {
                 if (textures[i] != null) UnityEngine.Object.Destroy(textures[i]);

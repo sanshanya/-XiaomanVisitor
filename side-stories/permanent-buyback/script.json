@@ -1,16 +1,29 @@
 {
   "schema": 1,
   "language": "zh",
-  "source_sha256": "5cb471a6a4b80d7262837b5fa4bb886710b8aca8e228f1099760cdfdb2463999",
+  "dialogue_mode": "manual",
+  "source_sha256": "c993cbc72299918f57478fdeeaac02258c0cf328eb1cc8cfbca800d2b8c25b8e",
   "japanese_attack_reference": "返して……返してよ……！\n私の人生……返せよ……！！\n返せよおお！！！！",
   "cues": [
     {
-      "kind": "fade",
-      "seconds": 0.8
+      "kind": "shop",
+      "seconds": 0.35,
+      "opacity": 0.08,
+      "x": 0.055,
+      "y": 0.49
     },
     {
       "kind": "knock",
-      "seconds": 1.8
+      "value": 3,
+      "gains": [
+        0.42,
+        0.66,
+        0.9
+      ],
+      "retry_gains": [
+        0.95,
+        1.0
+      ]
     },
     {
       "kind": "line",
@@ -117,10 +130,16 @@
       "key": "buyback_01_16"
     },
     {
+      "kind": "door_choice",
+      "text": "开门／不开门"
+    },
+    {
       "kind": "image",
       "value": 1,
-      "seconds": 0.55,
-      "act": 1
+      "seconds": 1.15,
+      "act": 1,
+      "transition": "door_wipe",
+      "hold": 0.25
     },
     {
       "kind": "line",
@@ -139,6 +158,14 @@
       "text": "呐，前辈，我今天美吗？",
       "act": 1,
       "key": "buyback_01_19"
+    },
+    {
+      "kind": "reply_choice",
+      "key": "beauty",
+      "options": [
+        "……",
+        "……"
+      ]
     },
     {
       "kind": "line",
@@ -301,12 +328,6 @@
       "key": "buyback_02_26"
     },
     {
-      "kind": "image",
-      "value": 2,
-      "seconds": 0.55,
-      "act": 2
-    },
-    {
       "kind": "line",
       "text": "说起来……",
       "act": 2,
@@ -333,6 +354,14 @@
       "text": "嘿嘿……真是一笔好生意呢。",
       "act": 2,
       "key": "buyback_02_30"
+    },
+    {
+      "kind": "image",
+      "value": 2,
+      "seconds": 0.48,
+      "act": 2,
+      "transition": "dissolve",
+      "hold": 0.0
     },
     {
       "kind": "line",
@@ -561,26 +590,42 @@
       "key": "buyback_03_28"
     },
     {
-      "kind": "image",
-      "value": 3,
-      "seconds": 0.55,
-      "act": 3
-    },
-    {
       "kind": "line",
-      "text": "把我的人生还回来啊——！！！",
+      "text": "前辈也没有机会说了。",
       "act": 3,
       "key": "buyback_03_29"
     },
     {
       "kind": "impact",
-      "seconds": 1.2
+      "value": 3,
+      "seconds": 1.6500000000000001,
+      "hold": 0.25
+    },
+    {
+      "kind": "line",
+      "text": "把我的人生还回来啊——！！！",
+      "act": 3,
+      "key": "buyback_03_30",
+      "value": 3,
+      "transition": "late_reveal",
+      "hold": 0.85,
+      "seconds": 0.35
+    },
+    {
+      "kind": "image",
+      "value": 3,
+      "seconds": 0.3,
+      "act": 3,
+      "transition": "late_reveal",
+      "hold": 0.0
     },
     {
       "kind": "image",
       "value": 4,
-      "seconds": 0.55,
-      "act": 4
+      "seconds": 1.4,
+      "act": 4,
+      "transition": "collapse",
+      "hold": 0.45
     },
     {
       "kind": "line",
@@ -675,8 +720,10 @@
     {
       "kind": "image",
       "value": 5,
-      "seconds": 0.55,
-      "act": 5
+      "seconds": 1.1,
+      "act": 5,
+      "transition": "dissolve",
+      "hold": 0.0
     },
     {
       "kind": "line",
@@ -692,103 +739,109 @@
     },
     {
       "kind": "line",
-      "text": "前辈，您看。",
+      "text": "原来前辈是想要用自己的生命来作为代价",
       "act": 5,
       "key": "buyback_05_03"
     },
     {
       "kind": "line",
-      "text": "这样一来……",
+      "text": "前辈，您看。",
       "act": 5,
       "key": "buyback_05_04"
     },
     {
       "kind": "line",
-      "text": "我就不用每天想着，要不要再去您的店里买水了。",
+      "text": "这样一来……",
       "act": 5,
       "key": "buyback_05_05"
     },
     {
       "kind": "line",
-      "text": "前辈也不用再去招呼其他客人了。",
+      "text": "我就不用每天想着，要不要再去您的店里买水了。",
       "act": 5,
       "key": "buyback_05_06"
     },
     {
       "kind": "line",
-      "text": "嘿嘿……真好。",
+      "text": "前辈也不用再去招呼其他客人了。",
       "act": 5,
       "key": "buyback_05_07"
     },
     {
       "kind": "line",
-      "text": "明明我那么讨厌前辈。",
+      "text": "嘿嘿……真好。",
       "act": 5,
       "key": "buyback_05_08"
     },
     {
       "kind": "line",
-      "text": "可是现在，又觉得前辈好可爱呀。",
+      "text": "明明我那么讨厌前辈。",
       "act": 5,
       "key": "buyback_05_09"
     },
     {
       "kind": "line",
-      "text": "到底是喜欢呢……还是讨厌呢？",
+      "text": "可是现在，又觉得前辈好可爱呀。",
       "act": 5,
       "key": "buyback_05_10"
     },
     {
       "kind": "line",
-      "text": "啊哈哈……已经搞不清楚了。",
+      "text": "到底是喜欢呢……还是讨厌呢？",
       "act": 5,
       "key": "buyback_05_11"
     },
     {
       "kind": "line",
-      "text": "不过，没关系。",
+      "text": "啊哈哈……已经搞不清楚了。",
       "act": 5,
       "key": "buyback_05_12"
     },
     {
       "kind": "line",
-      "text": "我们再也不用做什么买卖啦。",
+      "text": "不过，没关系。",
       "act": 5,
       "key": "buyback_05_13"
     },
     {
       "kind": "line",
-      "text": "……前辈。",
+      "text": "我们再也不用做什么买卖啦。",
       "act": 5,
       "key": "buyback_05_14"
     },
     {
       "kind": "line",
-      "text": "第一次见面的时候，我就觉得前辈很亲切。",
+      "text": "……前辈。",
       "act": 5,
       "key": "buyback_05_15"
     },
     {
       "kind": "line",
-      "text": "那时候，还想着以后有机会再来呢。",
+      "text": "第一次见面的时候，我就觉得前辈很亲切。",
       "act": 5,
       "key": "buyback_05_16"
     },
     {
       "kind": "line",
-      "text": "没想到……",
+      "text": "那时候，还想着以后有机会再来呢。",
       "act": 5,
       "key": "buyback_05_17"
     },
     {
       "kind": "line",
-      "text": "真的会一直留在这里呀。♡",
+      "text": "没想到……",
       "act": 5,
       "key": "buyback_05_18"
     },
     {
+      "kind": "line",
+      "text": "真的会一直留在这里呀。♡",
+      "act": 5,
+      "key": "buyback_05_19"
+    },
+    {
       "kind": "black",
-      "seconds": 1.6
+      "seconds": 2.0
     },
     {
       "kind": "lock",
@@ -802,13 +855,13 @@
       "kind": "line",
       "text": "晚安，前辈。",
       "act": 5,
-      "key": "buyback_05_19"
+      "key": "buyback_05_20"
     },
     {
       "kind": "line",
       "text": "……明天也要在一起哦。",
       "act": 5,
-      "key": "buyback_05_20"
+      "key": "buyback_05_21"
     },
     {
       "kind": "title",

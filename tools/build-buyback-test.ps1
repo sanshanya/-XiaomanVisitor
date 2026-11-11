@@ -1,4 +1,4 @@
-param([string]$GameRoot, [switch]$Install)
+param([string]$GameRoot, [switch]$Install, [string]$ReplayFolder)
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'dev-environment.ps1')
 $GameRoot = Resolve-XiaomanGameRoot $GameRoot
@@ -17,12 +17,13 @@ $stage = Join-Path $output 'XiaomanBuybackTest'
 New-Item -ItemType Directory -Path $stage -Force | Out-Null
 & $python (Join-Path $PSScriptRoot 'prepare_buyback.py') --check --stage $stage
 if ($LASTEXITCODE -ne 0) { throw 'Rehearsal packaging failed' }
-$compileArgs = @('/nologo','/target:library','/nostdlib+','/langversion:latest','/optimize+','/deterministic+','/nowarn:0649',
+$compileArgs = @('/nologo','/target:library','/nostdlib+','/langversion:latest','/optimize+','/deterministic+','/nowarn:0649','/define:XIAOMAN_BUYBACK_TEST',
     ('/out:' + (Join-Path $stage 'XiaomanBuybackTest.dll')))
-foreach ($ref in @('mscorlib.dll','netstandard.dll','System.dll','System.Core.dll','Assembly-CSharp.dll','Assembly-CSharp-firstpass.dll','0Harmony.dll',
-    'UnityEngine.CoreModule.dll','UnityEngine.AudioModule.dll','UnityEngine.InputLegacyModule.dll','UnityEngine.ImageConversionModule.dll','UnityEngine.JSONSerializeModule.dll',
+foreach ($ref in @('mscorlib.dll','netstandard.dll','System.dll','System.Core.dll','Assembly-CSharp.dll','Assembly-CSharp-firstpass.dll','0Harmony.dll','Newtonsoft.Json.dll',
+    'UnityEngine.CoreModule.dll','UnityEngine.AudioModule.dll','UnityEngine.InputLegacyModule.dll','UnityEngine.ImageConversionModule.dll',
     'UnityEngine.UI.dll','UnityEngine.UIModule.dll','UnityEngine.TextRenderingModule.dll','Unity.TextMeshPro.dll',
-    'Febucci.TextAnimator.Runtime.dll','Febucci.TextAnimator.TMP.Runtime.dll')) { $compileArgs += '/reference:' + (Join-Path $managed $ref) }
+    'Febucci.TextAnimator.Runtime.dll','Febucci.TextAnimator.TMP.Runtime.dll','UnityEngine.VideoModule.dll','Unity.2D.PixelPerfect.dll')) { $compileArgs += '/reference:' + (Join-Path $managed $ref) }
+$compileArgs += @(Get-Content -LiteralPath (Join-Path $projectRoot '.dev\buyback\visitor-source-index.json') -Raw -Encoding UTF8 | ConvertFrom-Json)
 $compileArgs += @(Get-ChildItem -LiteralPath (Join-Path $projectRoot 'side-stories\permanent-buyback') -Filter '*.cs' -File | Sort-Object Name | Select-Object -ExpandProperty FullName)
 & $compiler @compileArgs
 if ($LASTEXITCODE -ne 0) { throw 'Rehearsal compilation failed' }
@@ -34,12 +35,14 @@ $checker = Join-Path $checks 'CheckBuybackTest.dll'
 $checkArgs = @('/nologo','/target:exe','/nostdlib+',('/out:' + $checker))
 foreach ($ref in Get-ChildItem -LiteralPath $runtime.FullName -Filter 'System.*.dll' -File | Where-Object { $_.Name -notlike '*.Native.dll' }) { $checkArgs += '/reference:' + $ref.FullName }
 foreach ($ref in @('netstandard.dll','mscorlib.dll')) { $checkArgs += '/reference:' + (Join-Path $runtime.FullName $ref) }
-foreach ($ref in @('Assembly-CSharp.dll','UnityEngine.CoreModule.dll')) { $checkArgs += '/reference:' + (Join-Path $managed $ref) }
+foreach ($ref in @('Assembly-CSharp.dll','0Harmony.dll','UnityEngine.CoreModule.dll','UnityEngine.UI.dll','UnityEngine.UIModule.dll','UnityEngine.TextRenderingModule.dll')) { $checkArgs += '/reference:' + (Join-Path $managed $ref) }
 $checkArgs += Join-Path $PSScriptRoot 'buyback-test\CheckBuybackTest.cs'
 & $compiler @checkArgs
 if ($LASTEXITCODE -ne 0) { throw 'Rehearsal checker compilation failed' }
 @{runtimeOptions=@{tfm='net8.0';framework=@{name='Microsoft.NETCore.App';version=$runtime.Name}}} | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $checks 'CheckBuybackTest.runtimeconfig.json') -Encoding utf8
-dotnet $checker $managed $stage
+$nativeCheckArgs = @($checker, $managed, $stage)
+if ($ReplayFolder) { $nativeCheckArgs += [IO.Path]::GetFullPath($ReplayFolder) }
+dotnet @nativeCheckArgs
 if ($LASTEXITCODE -ne 0) { throw 'Native rehearsal validation failed' }
 & $python (Join-Path $PSScriptRoot 'prepare_buyback.py') --check --stage $stage --zip
 if ($LASTEXITCODE -ne 0) { throw 'Rehearsal ZIP validation failed' }

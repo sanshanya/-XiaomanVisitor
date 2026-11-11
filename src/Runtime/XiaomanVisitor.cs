@@ -4,7 +4,10 @@ using UnityEngine;
 
 namespace XiaomanVisitor
 {
-    public sealed partial class XiaomanMod : IMod
+    public sealed partial class XiaomanMod
+#if !XIAOMAN_BUYBACK_TEST
+        : IMod
+#endif
     {
         public const string Id = "sansm.xiaoman.visitor";
         public const string ModName = "深空小满：可能很迷醉？";
@@ -149,6 +152,9 @@ namespace XiaomanVisitor
 
         private bool Queue(StoreClientManager manager)
         {
+#if XIAOMAN_BUYBACK_TEST
+            if (SideStories.BuybackTestMod.Instance != null && SideStories.BuybackTestMod.Instance.HandleVisitQueue(manager)) return false;
+#endif
             if (!PlayerStore.HasInstance || manager == null || manager.clientStack == null || StoreStation.Instance == null || !EnsurePortraits()) return false;
             StoreClient current = PlayerStore.Instance.currentClientInstance == null ? null : PlayerStore.Instance.currentClientInstance.GetClientBlueprint();
             if (current != null && CustomerQueuePolicy.IsXiaoman(current.identifier)) return false;
