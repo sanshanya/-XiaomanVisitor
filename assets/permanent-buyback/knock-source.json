@@ -1,0 +1,16 @@
+{
+  "file": "foley/freesound_458007_Fabrizio84.mp3",
+  "title": "Knocking on Door",
+  "author": "Fabrizio84",
+  "url": "https://freesound.org/people/Fabrizio84/sounds/458007/",
+  "download_url": "https://cdn.freesound.org/previews/458/458007_2841496-hq.mp3",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_sha256": "bcbb0de4fc4d7e7770a9e78125e299c058231a2d888cc7f1a656b22ff117ffe5",
+  "trim_seconds": [
+    6.48,
+    7.65
+  ],
+  "knock_count": 3,
+  "treatment": "截取末组连续三次真实敲门；单声道48kHz PCM16；去直流、短淡入淡出及峰值归一，不合成敲击或改变原节奏"
+}
