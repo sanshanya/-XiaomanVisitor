@@ -335,17 +335,17 @@ gift_note_arrived,Xiaoman left you a letter.
 gift_tape_arrived,Xiaoman left you a tape.
 gift_note_stored,Xiaoman's letter was placed in the notebook.
 gift_tape_stored,Xiaoman's tape was placed in the cassette case.
-xm_04_03,"If you find suitable water or brewing ingredients, could you set some aside for me, senpai? I'll collect them on Wednesdays."
-xm_04_04,I'll turn them into drinks and bring them the following Wednesday. No money for the materials or the drinks—our own little partnership.
+xm_04_03,"Could you set aside suitable water and brewing ingredients for me, senpai? Come by the tavern when you have time, and we can arrange a partnership."
+xm_04_04,"Once we agree, I’ll collect the materials on Wednesday and bring the bottles on Friday. No cash for either—our own little partnership."
 xm_04_accept,Thank you. Just what I needed.
 xm_04_bye,"I should go. We can talk about supplies at my place tonight, if you like."
-xm_04_03_existing,"I'll keep collecting brewing materials on Wednesdays, senpai, and bring the finished bottles then too."
+xm_04_03_existing,"You can always check our collection and delivery arrangements at the tavern, senpai. It’s fine if you want to pause."
 story_note_04_b_title,"Dear shopkeeper,"
 story_note_04_b_body,"After closing last night, I wrote our two shops' supply arrangement into my ledger.\n\nNow we are officially business partners.\n\nThere is still so much you can teach me about running a shop.\n\nAnd if anything comes up at your shop, come to me too! I will help however I can.\n\nNot long ago I only bought a little water from you and carried it home in one small bag.\n\nIf it turns into crates and crates one day, will your counter have room for them all...?\n\nBefore that, though, I need to work out the orders properly. We both have a good business to run.\n\nHere is this week's tape. (´,,•ω•,,)♡"
 story_note_04_b_signature,— Xiaoman
 xm_tavern_w04_supply_01,"Welcome, senpai. I made that list we discussed during the day."
-xm_tavern_w04_supply_02,"Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; I'll collect them at your shop on Wednesdays, senpai."
-xm_tavern_w04_supply_03,"I'll record the materials' value, make bottles worth thirty percent more, and deliver them the next Wednesday. Neither of us pays cash."
+xm_tavern_w04_supply_02,"Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; once we sign, I’ll collect them at your shop on Wednesday, senpai."
+xm_tavern_w04_supply_03,I’ll record the materials’ value and bring bottles worth thirty percent more on Friday. Neither of us pays cash. We can decide then whether to continue next week.
 xm_tavern_w04_supply_yes,"Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
 xm_tavern_w04_supply_later,Of course. No hurry. You have your own shop to look after.
 xm_w04_phone_01,"Hello. Tenquin Asset Corporation, Merchant Development."
@@ -363,18 +363,18 @@ xm_w04_wang_02,You are under my wing. I asked someone to stop that paperwork for
 xm_w04_wang_03,"Do not feel bad about it. They call it support, but once you sign, it is a different story."
 xm_w04_wang_04,"If it is such a good deal, why do they not run the business themselves?"
 xm_w04_wang_bye,"Anyway, look after your shop. Think things through next time."
-xm_tavern_w04_supply_existing,"Here are the material and bottle records, senpai. I collect and deliver at your shop on Wednesdays, so you don't need to bring supplies here."
+xm_tavern_w04_supply_existing,"Here are our material and bottle records, senpai. You can pause or renew here. I’ll still finish and deliver anything I’ve already accepted."
 xm_tavern_w04_supply_early,"Welcome, senpai. I made a list of supplies for the bar. May I discuss it with you?"
 xm_tavern_w04_supply_01_unknown,Welcome. I made that list we discussed during the day.
-xm_tavern_w04_supply_02_unknown,Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; I'll collect them at your shop on Wednesdays.
-xm_tavern_w04_supply_03_unknown,"I'll record the materials' value, make bottles worth thirty percent more, and deliver them the next Wednesday. Neither of us pays cash."
+xm_tavern_w04_supply_02_unknown,"Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; once we sign, I’ll collect them at your shop on Wednesday."
+xm_tavern_w04_supply_03_unknown,I’ll record the materials’ value and bring bottles worth thirty percent more on Friday. Neither of us pays cash. We can decide then whether to continue next week.
 xm_tavern_w04_supply_yes_unknown,"Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
 xm_tavern_w04_supply_later_unknown,Of course. No hurry. You have your own shop to look after.
-xm_tavern_w04_supply_existing_unknown,"Here are the material and bottle records. I collect and deliver at your shop on Wednesdays, so you don't need to bring supplies here."
+xm_tavern_w04_supply_existing_unknown,Here are our material and bottle records. You can pause or renew here. I’ll still finish and deliver anything I’ve already accepted.
 xm_tavern_w04_supply_early_unknown,Welcome. I made a list of supplies for the bar. May I discuss it with you?
-ui_w04_supply,Trade supplies
+ui_w04_supply,Material Partnership
 ui_w04_contract,Supply agreement
-ui_w04_sign,Sign the agreement
+ui_w04_sign,Sign Agreement
 ui_w04_later,Another time
 ui_w04_deliver,Deliver ingredients
 ui_w04_buy,Buy bottled drinks
@@ -551,11 +551,11 @@ xm_brew_hello,"It's Wednesday, senpai. I'm here to collect the brewing materials
 xm_brew_request,"Basic-quality water or better and brewing ingredients are welcome. Just place them on the trading counter, senpai."
 xm_brew_last,"I've brought the bottles I promised you, senpai."
 xm_brew_wrong,I'm only collecting basic-quality water or better and brewing ingredients this time.
-xm_brew_accept,"I'll take these, then. I'll bring the finished bottles next Wednesday, senpai."
-xm_brew_bye,"I'll head back now. See you next week, senpai."
-ui_brew_terms,"Wednesday collection; delivery the following Wednesday.\nAccepts basic-quality water or better, brewing ingredients and consumable yeast.\nBottles are worth {0}% more than the materials. Neither side pays cash.\nLarge bottle: {1} CR; sample: {2} CR. Smaller remainders carry over."
+xm_brew_accept,"I’ll take these, then. I’ll bring the finished bottles on Friday, senpai."
+xm_brew_bye,"I’ll head back now, senpai."
+ui_brew_terms,"Sign at the tavern for Wednesday collection and Friday delivery.\nAccepts basic-quality water or better, brewing ingredients and consumable yeast.\nBottles are worth {0}% more than the materials. Neither side pays cash.\nLarge bottle: {1} CR; sample: {2} CR. Remainders carry over.\nDecide whether to continue after delivery, or pause and renew at the tavern."
 ui_brew_table,Place materials for Xiaoman on the trading counter. Neither side pays credits.\nWater containers are handed over too; only their water contents are valued.
-ui_brew_quote,Materials: {0} CR · Bottles next week: {1} CR
+ui_brew_quote,Materials: {0} CR · Bottles: {1} CR (Friday delivery)
 ui_brew_balance,Awaiting bottling: {0} CR
 ui_brew_receipt,Day {0}: materials {1} CR → bottles {2} CR\nDelivery from day {3}
 ui_brew_legacy,Previous trade records (preserved)
@@ -563,3 +563,14 @@ ui_brew_sample_name,Xiaoman's Sample Bottle
 ui_brew_sample_desc,A carefully sealed little bottle. Just enough for a taste.
 ui_brew_bottle_name,Xiaoman's Bottled Drink
 ui_brew_bottle_desc,"Mixed and sealed by Xiaoman, in a plain large bottle."
+xm_brew_renew,"That’s this batch sorted. Shall we continue next week, senpai?"
+xm_brew_renew_yes,All right. I’ll collect the materials next Wednesday and bring the bottles on Friday.
+xm_brew_renew_no,"Of course, we can pause. Just see me at the tavern when you’d like to start again."
+xm_brew_small_batch,"This batch isn’t quite enough for a sample bottle. I’ve kept the remainder on record for next time, senpai."
+ui_brew_resume,Renew Partnership
+ui_brew_pause,Pause Partnership
+ui_brew_continue,Let’s continue next week.
+ui_brew_pause_choice,Let’s pause for now.
+ui_brew_scheduled,Next collection: day {0} (Wednesday)
+ui_brew_waiting,Materials received for this batch. Next collection not booked.
+ui_brew_inactive,No collection scheduled. Accepted batches will still be delivered.

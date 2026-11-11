@@ -44,7 +44,9 @@ namespace XiaomanVisitor
         internal static void TextStyle(TextMeshProUGUI source,TextMeshProUGUI target)
         {
             if (source==null || target==null) return;
-            target.font=source.font;target.color=source.color;target.fontSize=source.fontSize;
+            // Keep the builder's localized font. The commissary price font may
+            // contain only digits, which erased names, effect labels and units.
+            target.color=source.color;target.fontSize=source.fontSize;
             target.fontStyle=source.fontStyle;target.enableAutoSizing=false;
             target.alignment=TextAlignmentOptions.Center;target.enableWordWrapping=true;
         }

@@ -11,7 +11,7 @@ namespace XiaomanVisitor
         public static XiaomanVisitKind Next(int day,StoryProgress story,TavernWorkProgress work,bool tavernEnabled,bool brewingDue=false)
         {
             if (story.MayVisit(day)) return XiaomanVisitKind.Story;
-            if (tavernEnabled && !story.Finished && BrewingProgress.Wednesday(day) && brewingDue) return XiaomanVisitKind.Brewing;
+            if (tavernEnabled && !story.Finished && BrewingProgress.VisitDay(day) && brewingDue) return XiaomanVisitKind.Brewing;
             // A Monday with a completed/queued chapter never gets a second Xiaoman.
             return tavernEnabled && !story.Finished && !StoryRules.IsMonday(day) && work.ThanksDue(day)
                 ? XiaomanVisitKind.WorkThanks : XiaomanVisitKind.None;
