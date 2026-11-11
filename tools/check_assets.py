@@ -108,6 +108,9 @@ def main():
     english.update({key:row['en'] for key,row in w02['lines'].items()})
     english.update({key:row['en'] for key,row in w03['lines'].items()})
     english.update({key:row['en'] for key,row in w04['lines'].items()})
+    import brewing_source
+    english.update({key:row['en'] for key,row in brewing_source.read()['lines'].items()})
+    assert story['brewing_sha256']==hashlib.sha256(brewing_source.SOURCE.read_bytes()).hexdigest()
     gun=json.loads((ROOT/'story/持枪反应.json').read_text(encoding='utf-8'))
     english.update(gun['localization']['en'])
     assert story['week_four_sha256']==w04['sha256']

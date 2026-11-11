@@ -149,7 +149,7 @@ namespace XiaomanVisitor
             bool changed=p.FreezeFourthNote(day,ReadSupply().SignedBy);
             var visit=p.Visits.FirstOrDefault(v => v.Index==4);
             if (visit!=null && day>visit.Day && visit.SupplySnapshot==null) {
-                visit.SupplySnapshot=new SupplyNoteSnapshot { Day=visit.Day,WaterPrice=SupplyConfig.WaterPrice,JuicePrice=SupplyConfig.JuicePrice,Wholesale=SupplyConfig.Wholesale };changed=true;
+                visit.SupplySnapshot=new SupplyNoteSnapshot { Day=visit.Day,WaterPrice=SupplyConfig.WaterPrice,JuicePrice=SupplyConfig.JuicePrice,Wholesale=SupplyConfig.Wholesale,ContractSchema=2 };changed=true;
             }
             if (changed) SaveStory(p);
         }

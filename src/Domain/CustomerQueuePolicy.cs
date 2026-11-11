@@ -2,15 +2,16 @@ using System.Collections.Generic;
 
 namespace XiaomanVisitor
 {
-    public enum XiaomanVisitKind { None, Story, WorkThanks }
+    public enum XiaomanVisitKind { None, Story, WorkThanks, Brewing }
     public static class CustomerQueuePolicy
     {
         public const string WorkThanksId = XiaomanMod.ClientId + ".work_thanks";
         public static bool IsXiaoman(string id)
-        { return id == XiaomanMod.ClientId || id == WorkThanksId; }
-        public static XiaomanVisitKind Next(int day,StoryProgress story,TavernWorkProgress work,bool tavernEnabled)
+        { return id == XiaomanMod.ClientId || id == WorkThanksId || id == BrewingProgress.ClientId; }
+        public static XiaomanVisitKind Next(int day,StoryProgress story,TavernWorkProgress work,bool tavernEnabled,bool brewingDue=false)
         {
             if (story.MayVisit(day)) return XiaomanVisitKind.Story;
+            if (tavernEnabled && !story.Finished && BrewingProgress.Wednesday(day) && brewingDue) return XiaomanVisitKind.Brewing;
             // A Monday with a completed/queued chapter never gets a second Xiaoman.
             return tavernEnabled && !story.Finished && !StoryRules.IsMonday(day) && work.ThanksDue(day)
                 ? XiaomanVisitKind.WorkThanks : XiaomanVisitKind.None;

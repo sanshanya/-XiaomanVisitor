@@ -1,0 +1,125 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using Newtonsoft.Json;
+
+namespace XiaomanVisitor
+{
+    public sealed class BrewingMaterial
+    {
+        public int ItemId, Count;
+        public string Key;
+        public long ValueCents;
+    }
+    public sealed class BrewingBatch
+    {
+        public string Id, Phase = "prepared";
+        public int Day, DueDay;
+        public List<BrewingMaterial> Materials = new List<BrewingMaterial>();
+        public long InputCents, ReturnMilli;
+        public bool Credited;
+    }
+    public sealed class BrewingBottle
+    {
+        public string Id, Phase = "placing";
+        public int ItemId, Value;
+    }
+    public sealed class BrewingProgress
+    {
+        public const string SaveKey = "tavern_brewing_v1";
+        public const string ClientId = XiaomanMod.ClientId + ".brewing";
+        public const string SampleId = XiaomanMod.Id + ".brewing.sample", BottleId = XiaomanMod.Id + ".brewing.bottle";
+        public int Schema = 1, LastVisitDay = -1;
+        public bool Blocked;
+        public string PreservedData = "";
+        public long CreditMilli;
+        public List<BrewingBatch> Batches = new List<BrewingBatch>();
+        public List<BrewingBottle> Bottles = new List<BrewingBottle>();
+        [JsonIgnore] public BrewingBatch Pending { get { return Batches.FirstOrDefault(b => b.Phase == "prepared"); } }
+        [JsonIgnore] public BrewingBottle Placing { get { return Bottles.FirstOrDefault(b => b.Phase == "placing"); } }
+        public static bool Wednesday(int day) { return day >= 3 && (day - 1) % 7 == 2; }
+        public bool MayVisit(int day, bool mayCollect)
+        {
+            return !Blocked && Wednesday(day) && day >= BrewingConfig.UnlockDay && LastVisitDay != day
+                && (mayCollect || CreditMilli >= 10000 || Batches.Any(b => b.Phase == "complete" && !b.Credited && b.DueDay <= day));
+        }
+        public bool Arrive(int day)
+        {
+            if (Blocked || !Wednesday(day) || LastVisitDay == day) return false;
+            LastVisitDay = day; CreditDue(day); return true;
+        }
+        public BrewingBatch Prepare(string run, int day, List<BrewingMaterial> materials)
+        {
+            if (Blocked || Pending != null || !Wednesday(day) || LastVisitDay != day || materials == null || materials.Count == 0
+                || materials.Any(m => m == null || m.ItemId <= 0 || m.Count <= 0 || m.ValueCents <= 0)
+                || materials.Select(m => m.ItemId).Distinct().Count() != materials.Count
+                || Batches.Any(b => b.Day == day && b.Phase != "cancelled")) return null;
+            long input = materials.Sum(m => m.ValueCents);
+            if (input > long.MaxValue / (100 + BrewingConfig.BonusPercent)) return null;
+            var batch = new BrewingBatch { Id = run + ":brew:" + day + ":" + Batches.Count, Day = day, DueDay = day + 7,
+                Materials = materials, InputCents = input,
+                ReturnMilli = checked(input * (100 + BrewingConfig.BonusPercent) / 10) };
+            Batches.Add(batch); return batch;
+        }
+        public bool RecoverInput(IEnumerable<int> ownedIds)
+        {
+            var batch = Pending; if (Blocked || batch == null) return false;
+            var owned = new HashSet<int>(ownedIds);
+            int retained = batch.Materials.Count(m => owned.Contains(m.ItemId));
+            batch.Phase = retained == 0 ? "complete" : retained == batch.Materials.Count ? "cancelled" : "uncertain";
+            if (batch.Phase == "uncertain") Blocked = true;
+            return true;
+        }
+        public void CreditDue(int day, bool finalSettlement = false)
+        {
+            if (Blocked) return;
+            foreach (var batch in Batches.Where(b => b.Phase == "complete" && !b.Credited && (finalSettlement || b.DueDay <= day))) {
+                if (CreditMilli > long.MaxValue - batch.ReturnMilli) { Blocked = true; return; }
+                CreditMilli += batch.ReturnMilli; batch.Credited = true;
+            }
+        }
+        public BrewingBottle PrepareBottle(int itemId)
+        {
+            if (Blocked || Placing != null || itemId <= 0 || CreditMilli < BrewingConfig.SampleValue * 1000L) return null;
+            var bottle = new BrewingBottle { Id = "brew_gift:" + Bottles.Count, ItemId = itemId,
+                Value = CreditMilli >= BrewingConfig.BottleValue * 1000L ? BrewingConfig.BottleValue : BrewingConfig.SampleValue };
+            Bottles.Add(bottle); return bottle;
+        }
+        public bool BottlePlaced(bool success)
+        {
+            var bottle = Placing; if (Blocked || bottle == null) return false;
+            if (success) CreditMilli -= bottle.Value * 1000L;
+            bottle.Phase = success ? "complete" : "cancelled"; return true;
+        }
+        public bool RecoverBottle(bool owned)
+        {
+            if (Placing == null || Blocked) return false;
+            if (owned) return BottlePlaced(true);
+            // Missing after a saved placing marker is ambiguous; never spawn twice.
+            Placing.Phase = "uncertain"; Blocked = true; return true;
+        }
+        public static BrewingProgress Restore(string raw)
+        {
+            if (string.IsNullOrEmpty(raw)) return new BrewingProgress();
+            try {
+                var p = JsonConvert.DeserializeObject<BrewingProgress>(raw);
+                if (p != null && p.Schema == 1 && p.CreditMilli >= 0 && p.Batches != null && p.Bottles != null
+                    && (p.LastVisitDay == -1 || Wednesday(p.LastVisitDay))
+                    && p.Batches.All(b => b != null && !string.IsNullOrEmpty(b.Id) && Wednesday(b.Day) && b.DueDay == b.Day + 7
+                        && b.InputCents > 0 && b.ReturnMilli > 0 && b.Materials != null && b.Materials.Count > 0
+                        && b.Materials.All(m => m != null && m.ItemId > 0 && m.Count > 0 && m.ValueCents > 0)
+                        && b.Materials.Sum(m => m.ValueCents) == b.InputCents
+                        && new[] { "prepared", "complete", "cancelled", "uncertain" }.Contains(b.Phase)
+                        && (!b.Credited || b.Phase == "complete"))
+                    && p.Batches.Select(b => b.Id).Distinct().Count() == p.Batches.Count && p.Batches.Count(b => b.Phase == "prepared") <= 1
+                    && p.Bottles.All(b => b != null && !string.IsNullOrEmpty(b.Id) && b.ItemId > 0 && (b.Value == 10 || b.Value == 150)
+                        && new[] { "placing", "complete", "cancelled", "uncertain" }.Contains(b.Phase))
+                    && p.Bottles.Select(b => b.Id).Distinct().Count() == p.Bottles.Count && p.Bottles.Count(b => b.Phase == "placing") <= 1
+                    && p.Bottles.Where(b => b.Phase == "complete").Sum(b => b.Value * 1000L) + p.CreditMilli
+                        == p.Batches.Where(b => b.Credited).Sum(b => b.ReturnMilli)) return p;
+            } catch (Exception e) when (e is JsonException || e is OverflowException) { }
+            return new BrewingProgress { Blocked = true, PreservedData = raw };
+        }
+        [JsonIgnore] public string Data { get { return JsonConvert.SerializeObject(this); } }
+    }
+}

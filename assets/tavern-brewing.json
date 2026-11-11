@@ -1,0 +1,10 @@
+{
+  "unlock_day": 22,
+  "bonus_percent": 30,
+  "sample_value": 10,
+  "bottle_value": 150,
+  "delivery_days": 7,
+  "collection_weekday": "Wednesday",
+  "settlement": "free material exchange; no cash on either side",
+  "valuation": "actual intrinsic material value; water contents only; no container, children, market or deal modifiers"
+}

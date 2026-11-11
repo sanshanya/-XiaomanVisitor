@@ -23,7 +23,7 @@ namespace XiaomanVisitor
             // Narrative facts only. No fabricated NPC sale, revenue or ingredient lot.
             TrialSoldOut=true;UpperPreviewOrders=true;TrialDay=LuxuryConfig.PreviewDay;return true;
         }
-        public int ProduceLuxury(int day,bool channel)
+        public int ProduceLuxury(int day,bool channel,bool reservePlayerShare=true)
         {
             if (Blocked || Pending!=null || day<LuxuryConfig.UnlockDay || !channel) return 0;
             int made=0;
@@ -39,7 +39,7 @@ namespace XiaomanVisitor
                 CompanyLots.Add(new CompanyMaterialLot { Id=id,Key=spec.Key,Day=day,WaterFromPlayer=playerWater,JuiceFromPlayer=playerJuice,
                     WaterPurchased=missingWater,JuicePurchased=missingJuice,RarePaid=LuxuryConfig.RareCost,CommonPaid=common,
                     WaterUsed=LuxuryConfig.Water,JuiceUsed=LuxuryConfig.Juice,WaterUnitCost=SupplyConfig.WaterPrice,JuiceUnitCost=SupplyConfig.JuicePrice });
-                int partner=SignedBy(day)?LuxuryConfig.Output*SupplyConfig.PlayerNumerator/SupplyConfig.Denominator:0;
+                int partner=reservePlayerShare && SignedBy(day)?LuxuryConfig.Output*SupplyConfig.PlayerNumerator/SupplyConfig.Denominator:0;
                 Batches.Add(new SupplyBatch { Id=id,CompanyLot=id,Key=spec.Key,Day=day,Produced=LuxuryConfig.Output,
                     PlayerInitial=partner,StoreInitial=LuxuryConfig.Output-partner,WholesalePrice=LuxuryConfig.Wholesale,
                     IngredientCost=LuxuryConfig.RareCost+LuxuryConfig.Water*SupplyConfig.WaterPrice+LuxuryConfig.Juice*SupplyConfig.JuicePrice,

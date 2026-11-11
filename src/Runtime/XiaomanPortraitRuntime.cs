@@ -113,6 +113,7 @@ namespace XiaomanVisitor
         {
             XiaomanMod mod = XiaomanMod.Instance;
             if (mod == null) return;
+            mod.TickBrewing();
             mod.TickStoryStock();
             if (mod.ShortcutEnabled && !KeyBindHelper.SuppressHotkeys && Input.GetKeyDown(KeyCode.M)
                 && (Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl))

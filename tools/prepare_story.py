@@ -64,6 +64,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--source", type=Path, default=SOURCE)
     args = parser.parse_args()
+    import prepare_brewing, brewing_source
+    prepare_brewing.generate()
     performance_path=ROOT/'story/配音演出_ja.json'
     performance=json.loads(performance_path.read_text(encoding='utf-8')) if performance_path.exists() else {'lines':{}}
     text = args.source.read_text(encoding="utf-8-sig")
@@ -80,6 +82,8 @@ def main():
         chat_pools=[dict(overlay['night_chat'],visit=visit) for visit,overlay in extra_weeks.items()]))
     english = json.loads((ROOT / "story/英文台词.json").read_text(encoding="utf-8"))
     english.update({key:row['en'] for key,row in all_lines.items()})
+    brewing_lines=brewing_source.read()['lines']
+    english.update({key:row['en'] for key,row in brewing_lines.items()})
     notes_path=ROOT/'story/纸条正文.json'
     note_document=json.loads(notes_path.read_text(encoding='utf-8'))
     note_one=next(n for n in note_document['notes'] if n['visit']==1)
@@ -204,6 +208,8 @@ def main():
             for field,value in fields.items(): loc[lang]['story_note_04'+('_b' if variant=='B' else '')+'_'+field]=value
     for key,row in week_four['lines'].items():
         if not key.startswith('xm_04_'): add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
+    for key,row in brewing_lines.items():
+        add(key,row['zh'],row['ja'],row['mood'],defer_voice=True)
     for visit,overlay in extra_weeks.items():
         episodes[visit-1]['title']=overlay['title']
         for key,row in overlay['lines'].items():
@@ -350,6 +356,8 @@ def main():
                     master_source=story_master_source.SOURCE.relative_to(ROOT).as_posix(),master_sha256=hashlib.sha256(story_master_source.SOURCE.read_bytes()).hexdigest(),
                     performance_source='story/配音演出_ja.json' if performance_path.exists() else None,
                     performance_sha256=hashlib.sha256(performance_path.read_bytes()).hexdigest() if performance_path.exists() else None,
+                    brewing_source=brewing_source.SOURCE.relative_to(ROOT).as_posix(),
+                    brewing_sha256=hashlib.sha256(brewing_source.SOURCE.read_bytes()).hexdigest(),
                     week_two_source=week_two['source'],week_two_sha256=week_two['sha256'],
                     week_three_source=week_three['source'],week_three_sha256=week_three['sha256'],
                     week_four_source=week_four['source'],week_four_sha256=week_four['sha256'],

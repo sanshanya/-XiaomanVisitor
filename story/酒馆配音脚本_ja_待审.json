@@ -936,34 +936,36 @@
     {
       "key": "xm_tavern_w04_supply_02",
       "subtitle_templates": {
-        "zh": "我想从前辈这儿定期买水和原材料。制成成品后，按约定比例，一部分留在店里销售，另一部分供给前辈销售。",
-        "ja": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
-        "en": "I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop."
+        "zh": "前辈留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，每周三我去店里取。",
+        "ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
+        "en": "Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; I'll collect them at your shop on Wednesdays, senpai."
       },
-      "spoken_text": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
-      "generate_text": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
+      "spoken_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
+      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_02.392c583ea54a5456.wav",
-      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "14ba2515801fc988242eb2e06b6ba1883c94ef424d9c13296c07448d40f71f02",
-      "delivery": "谈生意认真，成为伙伴时高兴"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "09a89c86b88607e80d0d96939737e33119bcbca993b784ffc8459120db9f28f6",
+      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
+      "defer_recording": true
     },
     {
       "key": "xm_tavern_w04_supply_03",
       "subtitle_templates": {
-        "zh": "数量和价钱都写清楚了，保证前辈不会吃亏。",
-        "ja": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
-        "en": "The quantities and prices are all written down. I want this to be a fair deal for you."
+        "zh": "材料按价值记下来，我多做三成价值的酒，下周三带过去。我们两边都不用付钱。",
+        "ja": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
+        "en": "I'll record the materials' value, make bottles worth thirty percent more, and deliver them the next Wednesday. Neither of us pays cash."
       },
-      "spoken_text": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
-      "generate_text": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
+      "spoken_text": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
+      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_03.41aa0a0c83267326.wav",
-      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "8ff67c6e486879d704e4ef47641c6a5dabcb4fbacc710450d0370631a3e54984",
-      "delivery": "谈生意认真，成为伙伴时高兴"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "c8e7686abd10c7d5652b97b91f298ed4893595c4692f858aefbd1796189295d4",
+      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
+      "defer_recording": true
     },
     {
       "key": "xm_tavern_w04_supply_yes",
@@ -1000,18 +1002,19 @@
     {
       "key": "xm_tavern_w04_supply_existing",
       "subtitle_templates": {
-        "zh": "前辈，货单在这里。今天想给店里送点什么，还是从我这里进货？",
-        "ja": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-        "en": "The list is here, senpai. Are you delivering supplies today, or buying from me?"
+        "zh": "前辈，材料和成酒的记录在这里。我每周三去店里取料、交酒，前辈不用特地送来。",
+        "ja": "先輩、材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
+        "en": "Here are the material and bottle records, senpai. I collect and deliver at your shop on Wednesdays, so you don't need to bring supplies here."
       },
-      "spoken_text": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-      "generate_text": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+      "spoken_text": "先輩、材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
+      "generate_text": "先輩、材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_existing.d4a689c0384f2922.wav",
-      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "3edbb52d5f5907396d1d986baad03ec61ef8a59648c4a5ded57c9b39d4f0890b",
-      "delivery": "谈生意认真，成为伙伴时高兴"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "86088f6a590c03ecf46134702094f68c79212908c4692a0f4bd5656425c8394b",
+      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
+      "defer_recording": true
     },
     {
       "key": "xm_tavern_w04_supply_early",
@@ -1048,34 +1051,36 @@
     {
       "key": "xm_tavern_w04_supply_02_unknown",
       "subtitle_templates": {
-        "zh": "我想从您这儿定期买水和原材料。制成成品后，按约定比例，一部分留在店里销售，另一部分供给您销售。",
-        "ja": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
-        "en": "I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop."
+        "zh": "您留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，每周三我去店里取。",
+        "ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
+        "en": "Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; I'll collect them at your shop on Wednesdays."
       },
-      "spoken_text": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
-      "generate_text": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
+      "spoken_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
+      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_02_unknown.0462f5f759896b27.wav",
-      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "04b1f06609ffbee1ed868b17ddead5b8e6cc3318c07f50a561cc1fe51b95ba3f",
-      "delivery": "谈生意认真，成为伙伴时高兴"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "e53144ed8a74c21d689f71170c4c482e5e56d5a880166ad365327433c43d3e5d",
+      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
+      "defer_recording": true
     },
     {
       "key": "xm_tavern_w04_supply_03_unknown",
       "subtitle_templates": {
-        "zh": "数量和价钱都写清楚了，保证您不会吃亏。",
-        "ja": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
-        "en": "The quantities and prices are all written down. I want this to be a fair deal for you."
+        "zh": "材料按价值记下来，我多做三成价值的酒，下周三带过去。我们两边都不用付钱。",
+        "ja": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
+        "en": "I'll record the materials' value, make bottles worth thirty percent more, and deliver them the next Wednesday. Neither of us pays cash."
       },
-      "spoken_text": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
-      "generate_text": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
+      "spoken_text": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
+      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_03_unknown.49b2c839182b6633.wav",
-      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "77415dc20ed5870f9caa151e7077e6b9c09ee4c806f8dc1ac183b1237a11eab5",
-      "delivery": "谈生意认真，成为伙伴时高兴"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "c8e7686abd10c7d5652b97b91f298ed4893595c4692f858aefbd1796189295d4",
+      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
+      "defer_recording": true
     },
     {
       "key": "xm_tavern_w04_supply_yes_unknown",
@@ -1112,18 +1117,19 @@
     {
       "key": "xm_tavern_w04_supply_existing_unknown",
       "subtitle_templates": {
-        "zh": "货单在这里。今天想给店里送点什么，还是从我这里进货？",
-        "ja": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-        "en": "The list is here. Are you delivering supplies today, or buying from me?"
+        "zh": "材料和成酒的记录在这里。我每周三去店里取料、交酒，您不用特地送来。",
+        "ja": "材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
+        "en": "Here are the material and bottle records. I collect and deliver at your shop on Wednesdays, so you don't need to bring supplies here."
       },
-      "spoken_text": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-      "generate_text": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
+      "spoken_text": "材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
+      "generate_text": "材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w04_supply_existing_unknown.7dc76e26eb6f0227.wav",
-      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "cdcbf4e18f179b93d556656db94e42f3c91373140d5bb9243c14835ec68dae77",
-      "delivery": "谈生意认真，成为伙伴时高兴"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "6b3bfa62c45d434f9a8c57974cb21b568e84a861da1a2881c79441eef578d617",
+      "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
+      "defer_recording": true
     },
     {
       "key": "xm_tavern_w04_supply_early_unknown",

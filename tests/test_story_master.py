@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'tools'))
 import story_master_source as master
+import brewing_source
 
 
 class StoryMasterTests(unittest.TestCase):
@@ -16,6 +17,7 @@ class StoryMasterTests(unittest.TestCase):
         story=json.loads((ROOT/'assets/story.json').read_text(encoding='utf-8'))
         self.assertEqual(story['master_sha256'],hashlib.sha256(master.SOURCE.read_bytes()).hexdigest())
         rows={r['key']:r for r in story['lines']}
+        supply_overrides=brewing_source.read()['overrides']
         for n,week in master.read().items():
             episode=story['episodes'][n-1]
             self.assertEqual(episode['title'],week['title'])
@@ -24,6 +26,7 @@ class StoryMasterTests(unittest.TestCase):
             self.assertIn(f'xm_{n:02d}_accept',rows)
             self.assertEqual(episode['goodbye'],f'xm_{n:02d}_bye')
             for key,row in week['lines'].items():
+                row=supply_overrides.get(key,row) if n==4 else row
                 for lang in ('zh','ja','en'):
                     value=row[lang].replace('{0}','150') if n==1 and key=='xm_01_shop' and lang!='en' else row[lang]
                     self.assertEqual(rows[key][lang],value,(key,lang))
