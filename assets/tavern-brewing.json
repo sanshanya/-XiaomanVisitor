@@ -1,10 +1,15 @@
 {
   "unlock_day": 22,
   "bonus_percent": 30,
-  "sample_value": 10,
+  "initial_material_limit": 500,
+  "weekly_material_increase": 100,
+  "maximum_material_limit": 3000,
+  "sample_value": 30,
   "bottle_value": 150,
-  "delivery_days": 7,
+  "delivery_days": 2,
   "collection_weekday": "Wednesday",
+  "delivery_weekday": "Friday",
+  "agreement": "explicit tavern signature; renew after delivery or at the tavern; no automatic weekly continuation",
   "settlement": "free material exchange; no cash on either side",
   "valuation": "actual intrinsic material value; water contents only; no container, children, market or deal modifiers"
 }

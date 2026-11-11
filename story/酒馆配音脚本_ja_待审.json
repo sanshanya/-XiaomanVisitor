@@ -280,18 +280,19 @@
     {
       "key": "xm_tavern_w02_help_intro",
       "subtitle_templates": {
-        "zh": "啊，有客人来啦……我这边还忙着调酒。前辈，可以帮我把酒单递过去吗？",
-        "ja": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
-        "en": "Oh, a customer… I'm still making drinks. Senpai, could you take them a menu for me?"
+        "zh": "被你发现了啊……我这边还忙着调酒。前辈，可以帮我把酒单递过去吗？",
+        "ja": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
+        "en": "You caught me… I'm still making drinks. Senpai, could you take them a menu for me?"
       },
-      "spoken_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
-      "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
+      "spoken_text": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
+      "generate_text": "気づかれちゃいましたね……まだお酒を作っているところで。先輩、メニューを渡してもらってもいいですか？",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w02_help_intro.628cd181c8465cbe.wav",
-      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "caabeb9c9f54dfbabb91cfaa24260ffc2ab45e924ef1455adf6aeb2eabed39ca",
-      "delivery": "开业期待，邀请时略害羞"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "ce28de3eec93749bf2a9cd8098c09c810767176a886b33238072e29639085626",
+      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。新句待统一录音。",
+      "defer_recording": true
     },
     {
       "key": "xm_tavern_w02_help_done",
@@ -424,18 +425,19 @@
     {
       "key": "xm_tavern_w02_help_intro_unknown",
       "subtitle_templates": {
-        "zh": "啊，有客人来啦……我这边还忙着调酒。可以帮我把酒单递过去吗？",
-        "ja": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
-        "en": "Oh, a customer… I'm still making drinks. could you take them a menu for me?"
+        "zh": "被你发现了啊……我这边还忙着调酒。可以帮我把酒单递过去吗？",
+        "ja": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
+        "en": "You caught me… I'm still making drinks. could you take them a menu for me?"
       },
-      "spoken_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
-      "generate_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
+      "spoken_text": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
+      "generate_text": "気づかれちゃいましたね……まだお酒を作っているところで。メニューを渡してもらってもいいですか？",
       "generic": false,
-      "reviewed": true,
-      "audio": "assets/audio/voice/ja/xm_tavern_w02_help_intro_unknown.e14b93d24a568763.wav",
-      "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
-      "source_sha256": "30bde05c469441faffd8696d9e6793396e4ec0c6a837c05e3644e0b2f76b27f2",
-      "delivery": "开业期待，邀请时略害羞"
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
+      "source_sha256": "817219973577ac213a687f5408a75ff042d2214a79615fc3398b981a2009d302",
+      "delivery": "有一点被看穿忙乱后的不好意思，语气亲切轻松，随后自然请求帮忙；不惊慌、不诉苦。新句待统一录音。",
+      "defer_recording": true
     },
     {
       "key": "xm_tavern_w02_help_done_unknown",
@@ -936,34 +938,34 @@
     {
       "key": "xm_tavern_w04_supply_02",
       "subtitle_templates": {
-        "zh": "前辈留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，每周三我去店里取。",
-        "ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
-        "en": "Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; I'll collect them at your shop on Wednesdays, senpai."
+        "zh": "前辈留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，签好协议后我周三去店里取。",
+        "ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
+        "en": "Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; once we sign, I’ll collect them at your shop on Wednesday, senpai."
       },
-      "spoken_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
-      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
+      "spoken_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
+      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "09a89c86b88607e80d0d96939737e33119bcbca993b784ffc8459120db9f28f6",
+      "source_sha256": "2d8442d50446295dd82b41330a3773d6b44c2ba7768e1a09736964473b9108b9",
       "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_w04_supply_03",
       "subtitle_templates": {
-        "zh": "材料按价值记下来，我多做三成价值的酒，下周三带过去。我们两边都不用付钱。",
-        "ja": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
-        "en": "I'll record the materials' value, make bottles worth thirty percent more, and deliver them the next Wednesday. Neither of us pays cash."
+        "zh": "材料按价值记下来，我多做三成价值的酒，周五带过去。我们两边都不用付钱。下周要不要继续，到时候再商量。",
+        "ja": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
+        "en": "I’ll record the materials’ value and bring bottles worth thirty percent more on Friday. Neither of us pays cash. We can decide then whether to continue next week."
       },
-      "spoken_text": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
-      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
+      "spoken_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
+      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "c8e7686abd10c7d5652b97b91f298ed4893595c4692f858aefbd1796189295d4",
+      "source_sha256": "878c95e4df5063d6fc69a3d1d9bfecfaaebeb9cce01be2944f9e141c2ef22a49",
       "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
       "defer_recording": true
     },
@@ -1002,17 +1004,17 @@
     {
       "key": "xm_tavern_w04_supply_existing",
       "subtitle_templates": {
-        "zh": "前辈，材料和成酒的记录在这里。我每周三去店里取料、交酒，前辈不用特地送来。",
-        "ja": "先輩、材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
-        "en": "Here are the material and bottle records, senpai. I collect and deliver at your shop on Wednesdays, so you don't need to bring supplies here."
+        "zh": "前辈，材料和成酒的记录在这里。要中断或者续签，都可以在这里告诉我，已经收下的材料我还是会做好送去。",
+        "ja": "先輩、材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
+        "en": "Here are our material and bottle records, senpai. You can pause or renew here. I’ll still finish and deliver anything I’ve already accepted."
       },
-      "spoken_text": "先輩、材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
-      "generate_text": "先輩、材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
+      "spoken_text": "先輩、材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
+      "generate_text": "先輩、材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "86088f6a590c03ecf46134702094f68c79212908c4692a0f4bd5656425c8394b",
+      "source_sha256": "850ffa8f4f1daaa4af88b7b95bf0d46f35288aacd9addc754c867c0a23d82142",
       "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
       "defer_recording": true
     },
@@ -1051,34 +1053,34 @@
     {
       "key": "xm_tavern_w04_supply_02_unknown",
       "subtitle_templates": {
-        "zh": "您留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，每周三我去店里取。",
-        "ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
-        "en": "Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; I'll collect them at your shop on Wednesdays."
+        "zh": "您留些基础水或者更好的水，还有酿酒材料给我就好。不用凑配方，签好协议后我周三去店里取。",
+        "ja": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
+        "en": "Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; once we sign, I’ll collect them at your shop on Wednesday."
       },
-      "spoken_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
-      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。水曜日にお店へ取りに行きますね。",
+      "spoken_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
+      "generate_text": "基本水かそれより良い水と、醸造用の材料を取っておいてもらえれば大丈夫です。配合を揃える必要はありません。取り決めをしたら、水曜日にお店へ取りに行きますね。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "e53144ed8a74c21d689f71170c4c482e5e56d5a880166ad365327433c43d3e5d",
+      "source_sha256": "cfe4937b4f2d02c5c7141218dcf3bbeaf9ff06d398c19b91ddade481a02e60b1",
       "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
       "defer_recording": true
     },
     {
       "key": "xm_tavern_w04_supply_03_unknown",
       "subtitle_templates": {
-        "zh": "材料按价值记下来，我多做三成价值的酒，下周三带过去。我们两边都不用付钱。",
-        "ja": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
-        "en": "I'll record the materials' value, make bottles worth thirty percent more, and deliver them the next Wednesday. Neither of us pays cash."
+        "zh": "材料按价值记下来，我多做三成价值的酒，周五带过去。我们两边都不用付钱。下周要不要继续，到时候再商量。",
+        "ja": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
+        "en": "I’ll record the materials’ value and bring bottles worth thirty percent more on Friday. Neither of us pays cash. We can decide then whether to continue next week."
       },
-      "spoken_text": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
-      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、次の水曜日に持っていきます。お互いに支払いはなしです。",
+      "spoken_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
+      "generate_text": "材料の価値を記録して、その三割増しの価値のお酒にして、金曜日に持っていきます。お互いに支払いはなしです。来週も続けるかは、そのときに相談しましょう。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "c8e7686abd10c7d5652b97b91f298ed4893595c4692f858aefbd1796189295d4",
+      "source_sha256": "878c95e4df5063d6fc69a3d1d9bfecfaaebeb9cce01be2944f9e141c2ef22a49",
       "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
       "defer_recording": true
     },
@@ -1117,17 +1119,17 @@
     {
       "key": "xm_tavern_w04_supply_existing_unknown",
       "subtitle_templates": {
-        "zh": "材料和成酒的记录在这里。我每周三去店里取料、交酒，您不用特地送来。",
-        "ja": "材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
-        "en": "Here are the material and bottle records. I collect and deliver at your shop on Wednesdays, so you don't need to bring supplies here."
+        "zh": "材料和成酒的记录在这里。要中断或者续签，都可以在这里告诉我，已经收下的材料我还是会做好送去。",
+        "ja": "材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
+        "en": "Here are our material and bottle records. You can pause or renew here. I’ll still finish and deliver anything I’ve already accepted."
       },
-      "spoken_text": "材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
-      "generate_text": "材料とお酒の記録はこちらです。水曜日にお店へ材料を取りに行って、お酒をお届けしますから、わざわざ運んでこなくて大丈夫ですよ。",
+      "spoken_text": "材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
+      "generate_text": "材料とお酒の記録はこちらです。お休みや再開の相談もここでできます。お預かりした材料のお酒は、ちゃんと作ってお届けしますね。",
       "generic": false,
       "reviewed": false,
       "audio": "",
       "note": "新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。",
-      "source_sha256": "6b3bfa62c45d434f9a8c57974cb21b568e84a861da1a2881c79441eef578d617",
+      "source_sha256": "f26395523c0f790e140dbad9c296cf2b2d0d429f829ef38ac3d9db065647bbab",
       "delivery": "日常合作说明，亲切自然；新稿尚未录音，不借用旧供销配音。",
       "defer_recording": true
     },

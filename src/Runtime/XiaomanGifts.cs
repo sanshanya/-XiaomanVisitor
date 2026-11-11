@@ -48,6 +48,7 @@ namespace XiaomanVisitor
 
         private void RegisterGiftItems(ModItemDirectory directory)
         {
+            if (!directory.Has(WineCrateRules.ItemId)) directory.Add(WineCrateRules.ItemId,CreateWineCrate);
             if (!directory.Has(CassetteCaseRules.ItemId)) directory.Add(CassetteCaseRules.ItemId, CreateCassetteCase);
             if (!directory.Has(NotebookRules.ItemId)) directory.Add(NotebookRules.ItemId, CreateNotebook);
             if (!directory.Has(GiftCassetteId)) directory.Add(GiftCassetteId, CreateGiftCassette);
@@ -116,6 +117,7 @@ namespace XiaomanVisitor
             try
             {
                 int today = StoreStation.Instance.dayCounter;
+                TryDeliverWineCrate();
                 FreezeThirdWorkLetter();
                 FreezeFourthLetter();
                 TryDeliverWorkThanksGift();
@@ -182,6 +184,7 @@ namespace XiaomanVisitor
             if (item == null) return false;
             ModHelper.SetItemOwnerShip(item, true);
             GraphUtils.TryAcceptAllMid(EmporiumEntry.Instance.frontInvinvElement, item);
+            if (item.parentInventory == null && TryStoreWineGift(item)) return true;
             if (item.parentInventory == null) GraphUtils.TryAcceptAll(EmporiumEntry.Instance.invElement, item);
             if (item.parentInventory == null) GraphUtils.TryAcceptAll(EmporiumEntry.Instance.backInvinvElement, item);
             if (item.parentInventory != null) return true;

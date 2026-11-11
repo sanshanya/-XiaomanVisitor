@@ -36,7 +36,8 @@ namespace XiaomanVisitor
             StoryEpisode episode = StoryRules.Episode(index);
             var session = new StorySession { Episode = episode, Day = StoreStation.Instance.dayCounter,
                 ChanceRoll = UnityEngine.Random.Range(0, 100), PairRoll = UnityEngine.Random.Range(0, 3) };
-            session.SaleKeys = StoryRules.SaleOffer(index, session.ChanceRoll, session.PairRoll);
+            bool mergedGift=TavernMapEnabled && ReadWork().ThanksDue(session.Day);
+            session.SaleKeys = mergedGift?new string[0]:StoryRules.SaleOffer(index, session.ChanceRoll, session.PairRoll);
             session.Placed = new bool[session.SaleKeys.Length];
             var client = new StoreClient { identifier = ClientId, displayName = Text("name"), realName = Text("name"),
                 spriteName = SpriteKey, clientFaction = StoreClient.FACTION_LOWER,
@@ -94,6 +95,7 @@ namespace XiaomanVisitor
                 || record.Index != session.Episode.Index) return;
             session.Started = true;
             storySession = session;
+            record.SaleKeys=session.SaleKeys;
             SaveStory(progress);
             ModHelper.SetModDataInt(Id, "last_visit_day", session.Day);
             if (session.Episode.IsFinal)

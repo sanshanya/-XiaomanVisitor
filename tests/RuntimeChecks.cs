@@ -420,12 +420,20 @@ internal static class CheckMod
         typeof(XiaomanMod).GetField("experimentalTavern", flags).SetValue(mod, setting);
         typeof(XiaomanMod).GetField("enabled", flags).SetValue(mod, true);
         capture.Invoke(mod, null);
-        typeof(XiaomanMod).GetMethod("EnsureTavernMap", flags).Invoke(mod, null);
-        Require(!setting.Default && !location.IsDiscovered() && !location.IsAvailable(),
-            "active mod keeps the default-off tavern hidden and skips native registration and save initialization");
+        Require(setting.Default && (bool)typeof(XiaomanMod).GetProperty("TavernMapEnabled", flags).GetValue(mod)
+            && !location.IsDiscovered() && !location.IsAvailable(),
+            "default-on tavern still requires an active run before exposing a location or scene");
         Require(typeof(XiaomanMod).GetField("tavernScenePreview", flags) == null, "the retired preview setting cannot override calendar access");
+        setting.Set(false);
+        Require((bool)typeof(XiaomanMod).GetProperty("TavernMapEnabled", flags).GetValue(mod),
+            "disabling the default-on choice waits for the next session");
+        capture.Invoke(mod, null);
+        typeof(XiaomanMod).GetMethod("EnsureTavernMap", flags).Invoke(mod, null);
+        Require(!(bool)typeof(XiaomanMod).GetProperty("TavernMapEnabled", flags).GetValue(mod),
+            "an explicitly saved disabled choice is respected in the next session");
         setting.Set(true);
-        Require(!location.IsDiscovered(), "restart-required opt-in does not change the current travel session");
+        Require(!(bool)typeof(XiaomanMod).GetProperty("TavernMapEnabled", flags).GetValue(mod),
+            "re-enabling the option does not change the current travel session");
         capture.Invoke(mod, null);
         Require((bool)typeof(XiaomanMod).GetProperty("TavernMapEnabled", flags).GetValue(mod)
             && !location.IsDiscovered(), "opt-in is captured but cannot expose a location before an active run");
@@ -466,7 +474,7 @@ internal static class CheckMod
             && typeof(DialogBubbleWidth).GetField("maxWidth").FieldType == typeof(float)
             && typeof(DialogUIManager).GetMethod("ScaleByDialogSpeed", new[] { typeof(float) }) != null,
             "native bubble click, wrapping and timing APIs match the installed game");
-        Console.WriteLine("PASS: default-off experimental tavern, restart-scoped opt-in/out, native registration, lazy scene and source-safe removal.");
+        Console.WriteLine("PASS: default-on tavern, saved opt-out, restart-scoped choices, lazy scene and source-safe removal.");
     }
 
     private static void CheckTavernProgress()

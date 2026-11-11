@@ -14,11 +14,18 @@ internal static class EndingChecks
         story.BeginVisit(99,0,0,out visit); // A missed Monday postpones the thirteenth encounter.
         check(visit.Index==13 && !StoryRules.BusinessOpen(story.VisitIndex) && !story.Finished,
             "W13 stops new business only when the thirteenth encounter actually happens");
+        check(TavernRules.IsDiscovered(true,true,99,story.Finished) && TavernRules.IsOpen(true,true,99,story.Finished),
+            "a postponed thirteenth encounter keeps the packing-stage tavern on the map");
         check(StoryRules.SaleOffer(13,0,0).Length==0 && !StoryRules.AllowsTradeDrink(13)
             && StoryRules.GoodbyeKey(13,true)=="xm_13_bye","packing does not offer stock or a cheerful discount farewell");
         story.BeginVisit(106,0,0,out visit);
         check(story.Finished && visit.PartCount==5 && visit.RequiredMask==31 && StoryRules.FinalDrinks.Distinct().Count()==3,
             "final letter, tape and three different strong drinks retain individual delivery parts");
+        story=StoryProgress.Restore(story.Data);
+        check(!TavernRules.IsDiscovered(true,true,106,story.Finished) && !TavernRules.IsOpen(true,true,106,story.Finished)
+            && !TavernRules.IsDiscovered(true,true,200,story.Finished)
+            && TavernRules.StatusKey(TavernMapRules.LocationId,true,true,106,story.Finished)==null,
+            "the fourteenth encounter removes the location after reload and later days without a closed card");
         foreach (var v in story.Visits.Take(13)) v.GiftMask=v.RequiredMask;
         check(story.DueGift(106)==null && story.DueGift(107).Index==14,"final bundle is due next day without a trade");
         for (int part=0;part<5;part++) {

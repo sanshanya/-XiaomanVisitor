@@ -1466,18 +1466,6 @@
       "generic": false
     },
     {
-      "line_key": "xm_tavern_w02_help_intro",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w02_help_intro_6d84c8141db3",
-      "spoken_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
-      "subtitle_templates": [
-        "啊，有客人来啦……我这边还忙着调酒。前辈，可以帮我把酒单递过去吗？",
-        "あっ、お客さんが来ました……こっちはまだお酒を作っていて。先輩、メニューを渡してもらってもいいですか？",
-        "Oh, a customer… I'm still making drinks. Senpai, could you take them a menu for me?"
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_tavern_w02_help_done",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w02_help_done_e885d39d9383",
@@ -1570,18 +1558,6 @@
         "不可以哦，今晚已经喝过一杯啦。想听歌的话，倒是随时欢迎。",
         "だめですよ、お客さん。今夜はもう一杯飲んだでしょう？ 音楽を聴くなら、いつでも歓迎ですけどね。",
         "No more tonight. You've already had a glass. You're always welcome to stay for the music, though."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_tavern_w02_help_intro_unknown",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w02_help_intro_unknown_17628dae8257",
-      "spoken_text": "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
-      "subtitle_templates": [
-        "啊，有客人来啦……我这边还忙着调酒。可以帮我把酒单递过去吗？",
-        "あっ、お客さんが来ました……こっちはまだお酒を作っていて。メニューを渡してもらってもいいですか？",
-        "Oh, a customer… I'm still making drinks. could you take them a menu for me?"
       ],
       "generic": false
     },
@@ -3362,8 +3338,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 15,
+  "pending_lines": 21,
   "pending_by_language": {
-    "ja": 15
+    "ja": 21
   }
 }

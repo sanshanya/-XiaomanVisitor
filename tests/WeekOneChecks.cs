@@ -11,11 +11,11 @@ internal static class WeekOneChecks
 {
     internal static void Run(string package, Action<bool, string> check)
     {
-        check(!TavernRules.IsDiscovered(true, true, 1) && !TavernRules.IsDiscovered(true, true, 2)
-            && TavernRules.IsDiscovered(true, true, 3) && TavernRules.IsDiscovered(true, true, 52),
+        check(!TavernRules.IsDiscovered(true, true, 1, false) && !TavernRules.IsDiscovered(true, true, 2, false)
+            && TavernRules.IsDiscovered(true, true, 3, false) && TavernRules.IsDiscovered(true, true, 52, false),
             "map first appears on calendar day three, including existing runs");
-        check(!TavernRules.IsDiscovered(false, true, 3) && !TavernRules.IsDiscovered(true, false, 3),
-            "day-three discovery still respects the default-off setting and loaded-run gate");
+        check(!TavernRules.IsDiscovered(false, true, 3, false) && !TavernRules.IsDiscovered(true, false, 3, false),
+            "day-three discovery still respects the explicit disabled setting and loaded-run gate");
         check(!WeekOneRules.HasRenovationNews(2) && WeekOneRules.HasRenovationNews(3)
             && WeekOneRules.HasRenovationNews(7) && !WeekOneRules.HasRenovationNews(8), "anonymous renovation news has a calendar-only first-week window");
         check(StoryRules.Episode(1).Opening.Select(l => l.Key).SequenceEqual(new[] {

@@ -25,12 +25,12 @@ namespace XiaomanVisitor
                 bay.mayInventoryAddItemFunc=(i,_) => i.IsTag("XIAOMAN_TAVERN_TAPE");
                 boxInv.mayInventoryAddItemFunc=(i,_) => i.IsTag("XIAOMAN_TAVERN_TAPE");
                 ModHelper.SetItemOwnerShip(box,true);GraphUtils.TryAcceptAll(storage,box);
-                // One physical tape per visit to the room, shared by the case and
-                // playback bay. Reopening this window never creates another copy.
+                // Show the one current-chapter tape directly in native storage.
+                // The case remains optional; reopening never creates another tape.
                 var track=CassetteCollection.Find(TavernRules.MusicKey(ReadStory().VisitIndex));
                 var tape=CreateCollectionCassette(track);ModHelper.SetItemOwnerShip(tape,true);
                 tape.EnableTag("XIAOMAN_TAVERN_TAPE");tape.mayInventoryAddItemFunc=(i,dest) => tavernTapeInventories.Contains(dest);
-                GraphUtils.TryAcceptAll(boxInv,tape);
+                GraphUtils.TryAcceptAll(storage,tape);
                 if (tape.parentInventory==null) { tape.Destroy();throw new InvalidOperationException("Tavern tape storage is full"); }
             }
             tavernDeck.contentWindow.SetTitle(Text("ui_w04_deck"));tavernDeck.contentWindow.Show();

@@ -46,7 +46,6 @@ namespace XiaomanVisitor
             experimentalTavern = config.Define(TavernRules.ExperimentalConfigKey, TavernRules.ExperimentalDefault,
                 "实验性 / Experimental", () => Text("cfg_experimental_tavern"),
                 tooltip: () => Text("cfg_experimental_tavern_tip"), requiresRestart: true);
-            experimentalTavern.OnChanged += OnExperimentalTavernChanged;
             InitVoice(config);
             size.OnChanged += _ => { registeredDictionary = null; };
             Log.Log("Initialized: independent customer, original portrait layers, three temporary drink effects.");
@@ -158,8 +157,9 @@ namespace XiaomanVisitor
             if (!PlayerStore.HasInstance || manager == null || manager.clientStack == null || StoreStation.Instance == null || !EnsurePortraits()) return false;
             StoreClient current = PlayerStore.Instance.currentClientInstance == null ? null : PlayerStore.Instance.currentClientInstance.GetClientBlueprint();
             if (current != null && CustomerQueuePolicy.IsXiaoman(current.identifier)) return false;
-            // A saved Wednesday queue must never spill collection into Thursday.
-            manager.clientStack.RemoveAll(c => c!=null && c.identifier==BrewingProgress.ClientId && !BrewingVisitDue(StoreStation.Instance.dayCounter));
+            // Collection and delivery each retain their scheduled weekday.
+            manager.clientStack.RemoveAll(c => c!=null && c.identifier==BrewingProgress.ClientId
+                && (!BrewingVisitDue(StoreStation.Instance.dayCounter) || (c.clientIntent==StoreClient.ClientIntent.BARTER)!=MayCollectBrewing));
             StoreClient queued = manager.clientStack.Find(c => c != null && CustomerQueuePolicy.IsXiaoman(c.identifier));
             if (queued != null)
             {

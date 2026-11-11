@@ -8,24 +8,6 @@ namespace XiaomanVisitor
         private ConfigEntry<bool> experimentalTavern;
         private bool tavernEnabledForSession;
         internal bool TavernMapEnabled { get { return enabled && tavernEnabledForSession; } }
-        private const string TavernWarningId = Id + ".tavern.experimental_warning";
-
-        private void OnExperimentalTavernChanged(bool value)
-        {
-            var ui = CustomUIManager.Instance;
-            if (ui == null) return;
-            ui.CloseWindow(TavernWarningId);
-            if (!value) return;
-            // Use the same native window/prefab and canvas as the configuration UI,
-            // including when the player changes settings from the main menu.
-            var builder = ui.CreateWindow(TavernWarningId, Text("cfg_experimental_tavern"),
-                StoreUIManager.Instance != null ? "meta" : "menu", ui.optionUIPrefab);
-            builder.SetSize(520f, 220f).Center().SetCloseOnEscape().SetDraggable(false);
-            builder.AddWarning(Text("cfg_experimental_tavern_warning"));
-            builder.AddSpace(12f);
-            builder.AddButton(Text("ui_tavern_warning_acknowledge"), () => ui.CloseWindow(TavernWarningId));
-            builder.Show();
-        }
 
         // Match the native restart-required option; never tear down travel in progress.
         private void CaptureTavernSetting()
@@ -40,8 +22,8 @@ namespace XiaomanVisitor
             || SideStories.BuybackTestMod.LineClosed
 #endif
             ); } }
-        internal string TavernMapDescription { get { return Text(TavernStoryFinished ? "ui_tavern_closed"
-            : PlayerStore.HasInstance && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay ? "ui_tavern_open_desc" : "ui_tavern_map_desc"); } }
+        internal string TavernMapDescription { get { return Text(PlayerStore.HasInstance
+            && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay ? "ui_tavern_open_desc" : "ui_tavern_map_desc"); } }
         internal string TavernStatusLabel
         {
             get {
@@ -56,11 +38,11 @@ namespace XiaomanVisitor
             return tavernLocation = new DelegateAfterhourLocation {
                 id = TavernMapRules.LocationId,
                 source = Id,
-                title = () => Text(TavernStoryFinished || PlayerStore.HasInstance && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay
+                title = () => Text(PlayerStore.HasInstance && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay
                     ? "ui_tavern_name" : "ui_tavern_preview_name"),
                 imageKey = TavernMapRules.ImageKey,
                 isDiscovered = () => TavernRules.IsDiscovered(TavernMapEnabled, PlayerStore.HasInstance,
-                    PlayerStore.HasInstance ? StoreStation.Instance.dayCounter : 0),
+                    PlayerStore.HasInstance ? StoreStation.Instance.dayCounter : 0, TavernStoryFinished),
                 isAvailable = CanEnterTavern,
                 onArrive = ArriveAtTavern,
                 onLeave = LeaveTavern,
@@ -81,7 +63,6 @@ namespace XiaomanVisitor
 
         private void DisableTavernMap()
         {
-            if (CustomUIManager.Instance != null) CustomUIManager.Instance.CloseWindow(TavernWarningId);
             if (ModHelper.GetCurrentAfterhourLocationId() == TavernMapRules.LocationId)
                 ModHelper.ReturnFromAfterhour(false);
             LeaveTavern();

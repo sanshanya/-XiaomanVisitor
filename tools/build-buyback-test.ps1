@@ -1,4 +1,4 @@
-param([string]$GameRoot, [switch]$Install, [string]$ReplayFolder)
+param([string]$GameRoot, [switch]$Install, [string]$ReplayFolder, [string]$OutputDirectory)
 $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'dev-environment.ps1')
 $GameRoot = Resolve-XiaomanGameRoot $GameRoot
@@ -12,7 +12,11 @@ if ($LASTEXITCODE -ne 0) { throw 'Rehearsal inputs are stale' }
 if ($LASTEXITCODE -ne 0) { throw 'Rehearsal contract checks failed' }
 $version = & $python (Join-Path $PSScriptRoot 'prepare_buyback.py') --version
 if ($LASTEXITCODE -ne 0) { throw 'Cannot read rehearsal version' }
-$output = Join-Path $projectRoot ('release\buyback-test-' + $version)
+$releaseRoot = [IO.Path]::GetFullPath((Join-Path $projectRoot 'release'))
+$output = if ($OutputDirectory) { [IO.Path]::GetFullPath($OutputDirectory) } else { Join-Path $releaseRoot ('buyback-test-' + $version) }
+if (-not $output.StartsWith($releaseRoot + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
+    throw 'Test build output must stay inside this workspace release directory'
+}
 $stage = Join-Path $output 'XiaomanBuybackTest'
 New-Item -ItemType Directory -Path $stage -Force | Out-Null
 & $python (Join-Path $PSScriptRoot 'prepare_buyback.py') --check --stage $stage

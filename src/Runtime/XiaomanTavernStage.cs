@@ -163,11 +163,7 @@ namespace XiaomanVisitor
                 workLabel.rectTransform.offsetMin=workLabel.rectTransform.offsetMax=Vector2.zero;
                 workLabel.font=DialogUIManager.Instance.clientNameTMP.font;workLabel.alignment=TextAlignmentOptions.Center;
                 workLabel.color=new Color32(226,224,197,255);workLabel.raycastTarget=false;
-                if (ControlRoot!=null) {
-                float unit=room.rect.height/1080f;ControlRoot.localScale=Vector3.one*unit;
-                ControlRoot.sizeDelta=new Vector2(270,40);ControlRoot.anchoredPosition=new Vector2(18*unit,18*unit);
-            }
-            LayoutWorkBar();
+                LayoutWorkBar();
             }
             workBar.gameObject.SetActive(true);
             workFill.anchorMax=new Vector2(Mathf.Clamp01(progress),1);workLabel.text=label;
@@ -176,7 +172,7 @@ namespace XiaomanVisitor
         {
             if (workBar==null) return;
             PlaceHit(workBar,TavernSceneLayout.ActorX+TavernSceneLayout.ActorWidth*.5f-550,
-                TavernSceneLayout.BarY+TavernSceneLayout.BarHeight+75,1100,180,roomScale);
+                Mathf.Max(24f,TavernSceneLayout.ActorY-520f),1100,180,roomScale);
             workLabel.fontSize=50*roomScale;
         }
         internal void HideWorkProgress() { if (workBar!=null) workBar.gameObject.SetActive(false); }

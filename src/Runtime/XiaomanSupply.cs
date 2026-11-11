@@ -47,6 +47,9 @@ namespace XiaomanVisitor
                 b.AddLabel(Text("xm_w04_news_title"));b.AddLabel(Text("xm_w04_news_body"));b.AddLabel(Text("ui_w04_phone",ReadSupport().PhoneNumber));
             } else {
                 b.AddLabel(BrewingTerms);
+                b.AddLabel(brewing.AgreementActive
+                    ? (brewing.NextCollectionDay>=0?Text("ui_brew_scheduled",brewing.NextCollectionDay):Text("ui_brew_waiting"))
+                    : Text("ui_brew_inactive"));
                 b.AddLabel(Text("ui_brew_balance",(brewing.CreditMilli/1000m).ToString("0.###")));
                 foreach (var batch in brewing.Batches.Where(v => v.Phase=="complete").Reverse().Take(5))
                     b.AddLabel(Text("ui_brew_receipt",batch.Day,(batch.InputCents/100m).ToString("0.##"),(batch.ReturnMilli/1000m).ToString("0.###"),batch.DueDay));
@@ -55,8 +58,16 @@ namespace XiaomanVisitor
                     b.AddLabel(Text("ui_w04_balance",old.Cash,old.BoughtThisWeek(day)));
                     b.AddLabel(Text("ui_w04_stock",old.Water,old.Juice,old.Batches.Sum(v => v.PlayerRemaining),old.Batches.Sum(v => v.StoreRemaining)));
                 }
-                if (TavernTrading && !old.Signed && page=="supply")
-                    button(Text("ui_w04_sign"),() => { var p=ReadSupply();if (p.Sign(day)) SaveSupply(p);CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w04_supply_yes"}); });
+                if (TavernTrading && !brewing.Blocked && page=="supply") {
+                    if (!brewing.AgreementActive || brewing.NextCollectionDay<0)
+                        button(Text(brewing.AgreementRevision==0?"ui_w04_sign":"ui_brew_resume"),() => {
+                            var state=ReadBrewing();if (!state.Sign(day)) return;SaveBrewing(state);
+                            var prior=ReadSupply();if (prior.Sign(day)) SaveSupply(prior);
+                            CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w04_supply_yes"});
+                        });
+                    if (brewing.AgreementActive)
+                        button(Text("ui_brew_pause"),() => { var state=ReadBrewing();if (state.Pause()) SaveBrewing(state);ShowTavernMenu("supply"); });
+                }
                 if (day>=SupplyConfig.ContractDay) button(Text("ui_w04_group"),() => ModHelper.OpenPaper(Id,"w04_group_contract"));
             }
             b.End();button(Text("ui_tavern_back"),() => ShowTavernMenu("interaction"));
