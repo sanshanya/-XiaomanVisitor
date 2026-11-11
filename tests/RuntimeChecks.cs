@@ -31,7 +31,8 @@ internal static class CheckMod
         if (scan.Findings.Count > 0 || scan.HardFlags.Count > 0) Console.WriteLine(scan.FormatFindings(30));
         foreach (var finding in scan.Pending.Take(30))
             Console.Error.WriteLine("PENDING (next API enforcement): " + finding);
-        if (scan.Refused || scan.Capabilities.Except(manifest.Capabilities).Any()) return 2;
+        if (scan.Error != null || scan.HardFlags.Count > 0 || scan.Refused
+            || scan.Capabilities.Except(manifest.Capabilities).Any()) return 2;
         if (scan.Pending.Count > 0) return 2;
         CheckStory.Run(package, Require); WeekOneChecks.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require); WeekFourChecks.Run(package,Require); WeekFiveSixChecks.Run(Require); WeekSevenEightChecks.Run(Require); WeekNineChecks.Run(Require); WeekTenChecks.Run(Require); WeekElevenChecks.Run(Require);
         EndingChecks.Run(Require);
@@ -327,6 +328,15 @@ internal static class CheckMod
         bind.Invoke(mod, new object[] { knock, "xm_act_shutter_knock_01", "knock", Mood.Neutral, false });
         args = new object[] { knock, Mood.Neutral, true };
         Require((bool)read.Invoke(mod, args) && !(bool)args[2], "bound stage sound is explicitly non-speaking");
+        var mayComplete = typeof(XiaomanVoicePlayer).GetMethod("MayCompleteAction", BindingFlags.NonPublic | BindingFlags.Static);
+        Func<Dialogue, Dialogue, bool, bool> mayFinish = (line, current, active) =>
+            (bool)mayComplete.Invoke(null, new object[] { line, current, active });
+        Require(mayFinish(first, first, true), "a live matching dialogue may finish after its recording");
+        Require(!mayFinish(first, reaction, true) && !mayFinish(first, null, true),
+            "switching dialogue or loading a different context cannot execute the old trade callback");
+        Require(!mayFinish(first, first, false), "a hidden or disabled dialogue owner cannot finish a delayed action");
+        first.isEndActionExecuted = true;
+        Require(!mayFinish(first, first, true), "a callback already executed by native skip cannot execute twice");
         Console.WriteLine("PASS: voice-led lips, speech pauses, subtitle fallback, skip/interrupt/hidden cleanup, per-line emotions and voice aliases.");
     }
     private static void CheckNotebook()

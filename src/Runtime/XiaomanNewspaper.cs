@@ -8,11 +8,6 @@ namespace XiaomanVisitor
 {
     public sealed partial class XiaomanMod
     {
-        internal void NewspaperTrace(string state)
-        {
-            if (enabled && PlayerStore.HasInstance && StoreStation.Instance!=null)
-                Log.Log("Newspaper "+state+" on day "+StoreStation.Instance.dayCounter+".");
-        }
         internal StoreEvent LoungeExtensionNews()
         {
             if (!enabled || !PlayerStore.HasInstance || StoreStation.Instance==null || !WeekElevenRules.HasExtensionNews(StoreStation.Instance.dayCounter)) return null;
@@ -94,7 +89,6 @@ namespace XiaomanVisitor
             matches[0].operand=AccessTools.Method(typeof(XiaomanNewspaper),nameof(XiaomanNewspaper.GetDisplayEvents));
             return code;
         }
-        private static void Postfix() { XiaomanMod.Instance?.NewspaperTrace("rendered"); }
         private static Exception Finalizer(Exception __exception)
         {
             if (__exception!=null) XiaomanMod.Instance?.Log.Warning("Native newspaper rendering failed: "+__exception);
@@ -102,9 +96,4 @@ namespace XiaomanVisitor
         }
     }
 
-    [HarmonyPatch(typeof(NewsPaper),nameof(NewsPaper.OnClick))]
-    public static class XiaomanNewspaperClickPatch
-    {
-        private static void Prefix() { XiaomanMod.Instance?.NewspaperTrace("click received"); }
-    }
 }

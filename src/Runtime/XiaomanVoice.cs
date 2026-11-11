@@ -273,24 +273,37 @@ namespace XiaomanVisitor
 
         internal bool DeferAction(Dialogue line)
         {
-            if (mod == null || !mod.VoiceWait.Value || line.endAction == null || line.isEndActionExecuted || !BusyFor(line)) return false;
-            if (pendingActions.Add(line)) ModHelper.StartCoroutine(XiaomanMod.Id, WaitAction(line));
+            DialogUIManager owner = DialogUIManager.Instance;
+            if (mod == null || !mod.VoiceWait.Value || line == null || line.endAction == null || !BusyFor(line)
+                || !MayCompleteAction(line, owner == null ? null : owner.currentDialog, owner != null && owner.isActiveAndEnabled)) return false;
+            if (pendingActions.Add(line)) ModHelper.StartCoroutine(XiaomanMod.Id, WaitAction(owner, line));
             return true;
         }
 
-        private IEnumerator WaitAction(Dialogue line)
+        internal static bool MayCompleteAction(Dialogue line, Dialogue current, bool ownerActive)
+        { return ownerActive && line != null && ReferenceEquals(line, current) && !line.isEndActionExecuted; }
+
+        private IEnumerator WaitAction(DialogUIManager owner, Dialogue line)
         {
-            while (mod != null && mod.VoiceWait.Value && BusyFor(line)) yield return null;
+            while (owner != null && owner.currentDialog == line && mod != null && mod.VoiceWait.Value && BusyFor(line)) yield return null;
             pendingActions.Remove(line);
-            if (!line.isEndActionExecuted) line.ExecuteEndAction();
+            if (MayCompleteAction(line, owner == null ? null : owner.currentDialog, owner != null && owner.isActiveAndEnabled))
+                line.ExecuteEndAction();
+        }
+
+        internal void ResetConversation()
+        {
+            Stop();
+            // Loading another run or disabling the mod must not complete an old
+            // purchase, introduction or barter UI on behalf of the player.
+            ModHelper.StopAllCoroutines(XiaomanMod.Id); pendingActions.Clear(); pendingEnds.Clear();
+            voicedLine = null;
         }
 
         internal void Shutdown()
         {
-            Stop();
-            foreach (Dialogue line in new List<Dialogue>(pendingActions))
-                if (!line.isEndActionExecuted) line.ExecuteEndAction();
-            ModHelper.StopAllCoroutines(XiaomanMod.Id); pendingActions.Clear(); pendingEnds.Clear();
+            ResetConversation();
+            mouthEnvelopes.Clear();
         }
     }
 }

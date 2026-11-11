@@ -93,6 +93,7 @@ namespace XiaomanVisitor
             DisableWeekFour();
             DisableWeekFiveSix();
             DisableTavernMap();
+            WithdrawActiveVisitor();
             ModHelper.RemoveDebugFunctions(Id);
             if (PlayerStore.HasInstance && PlayerStore.Instance.storeClientManager != null)
                 PlayerStore.Instance.storeClientManager.clientStack.RemoveAll(c => c != null && CustomerQueuePolicy.IsXiaoman(c.identifier));
@@ -116,12 +117,23 @@ namespace XiaomanVisitor
         {
             CloseTavernCassettePlayer();
             ResetGunReaction();
-            Voice?.Stop();
+            Voice?.ResetConversation();
             moodOwner = null;
             EnsurePortraits();
             EnsureCassetteCaseStorage();
             EnsureTavernMap();
             RecoverTavernDrink();
+        }
+
+        private void WithdrawActiveVisitor()
+        {
+            if (!PlayerStore.HasInstance || StoreUIManager.Instance == null) return;
+            var current = PlayerStore.Instance.currentClientInstance?.GetClientBlueprint();
+            if (current == null || current.sourceModId != Id) return;
+            // Native dismissal keeps owned counter items and removes only the
+            // visitor's unsold stock; never leave custom delegates active after stop.
+            PlayerStore.Instance.DismissCurrentClient(false);
+            storySession = null;
         }
 
         private void GenerateVisitor(StoreClientManager manager)
