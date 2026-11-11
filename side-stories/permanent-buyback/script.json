@@ -1,0 +1,819 @@
+{
+  "schema": 1,
+  "language": "zh",
+  "source_sha256": "5cb471a6a4b80d7262837b5fa4bb886710b8aca8e228f1099760cdfdb2463999",
+  "japanese_attack_reference": "返して……返してよ……！\n私の人生……返せよ……！！\n返せよおお！！！！",
+  "cues": [
+    {
+      "kind": "fade",
+      "seconds": 0.8
+    },
+    {
+      "kind": "knock",
+      "seconds": 1.8
+    },
+    {
+      "kind": "line",
+      "text": "……前辈？",
+      "act": 1,
+      "key": "buyback_01_01"
+    },
+    {
+      "kind": "line",
+      "text": "是我，小满。",
+      "act": 1,
+      "key": "buyback_01_02"
+    },
+    {
+      "kind": "line",
+      "text": "这么晚了……真不好意思呢。",
+      "act": 1,
+      "key": "buyback_01_03"
+    },
+    {
+      "kind": "wait",
+      "seconds": 0.6
+    },
+    {
+      "kind": "line",
+      "text": "其实……我今天一直睡不着。",
+      "act": 1,
+      "key": "buyback_01_04"
+    },
+    {
+      "kind": "line",
+      "text": "浑身都热热的，心跳也好快……",
+      "act": 1,
+      "key": "buyback_01_05"
+    },
+    {
+      "kind": "line",
+      "text": "明明白天才见过前辈。",
+      "act": 1,
+      "key": "buyback_01_06"
+    },
+    {
+      "kind": "line",
+      "text": "可是闭上眼睛，就又忍不住想起您……",
+      "act": 1,
+      "key": "buyback_01_07"
+    },
+    {
+      "kind": "line",
+      "text": "……很奇怪吧？",
+      "act": 1,
+      "key": "buyback_01_08"
+    },
+    {
+      "kind": "line",
+      "text": "我还是第一次……这么晚跑来找一个人呢。",
+      "act": 1,
+      "key": "buyback_01_09"
+    },
+    {
+      "kind": "line",
+      "text": "有些话，白天站在前辈面前，怎么也说不出口。",
+      "act": 1,
+      "key": "buyback_01_10"
+    },
+    {
+      "kind": "line",
+      "text": "所以……想趁着还有勇气的时候……",
+      "act": 1,
+      "key": "buyback_01_11"
+    },
+    {
+      "kind": "line",
+      "text": "只告诉前辈一个人。♡",
+      "act": 1,
+      "key": "buyback_01_12"
+    },
+    {
+      "kind": "wait",
+      "seconds": 2.0
+    },
+    {
+      "kind": "line",
+      "text": "呐……前辈。",
+      "act": 1,
+      "key": "buyback_01_13"
+    },
+    {
+      "kind": "line",
+      "text": "可以开一下门吗？",
+      "act": 1,
+      "key": "buyback_01_14"
+    },
+    {
+      "kind": "line",
+      "text": "人家可是鼓起了很大的勇气才来的哦……",
+      "act": 1,
+      "key": "buyback_01_15"
+    },
+    {
+      "kind": "line",
+      "text": "……不要让我一个人害羞嘛。",
+      "act": 1,
+      "key": "buyback_01_16"
+    },
+    {
+      "kind": "image",
+      "value": 1,
+      "seconds": 0.55,
+      "act": 1
+    },
+    {
+      "kind": "line",
+      "text": "啊……真的开门了。",
+      "act": 1,
+      "key": "buyback_01_17"
+    },
+    {
+      "kind": "line",
+      "text": "嘿嘿，前辈还是这么温柔呢。",
+      "act": 1,
+      "key": "buyback_01_18"
+    },
+    {
+      "kind": "line",
+      "text": "呐，前辈，我今天美吗？",
+      "act": 1,
+      "key": "buyback_01_19"
+    },
+    {
+      "kind": "line",
+      "text": "……嘿嘿。",
+      "act": 2,
+      "key": "buyback_02_01"
+    },
+    {
+      "kind": "line",
+      "text": "前辈怎么不说话呀？",
+      "act": 2,
+      "key": "buyback_02_02"
+    },
+    {
+      "kind": "line",
+      "text": "其实呢……我今天出门之前，对着镜子看了好久。",
+      "act": 2,
+      "key": "buyback_02_03"
+    },
+    {
+      "kind": "line",
+      "text": "头发也好，眼睛也好……明明都和平时一样。",
+      "act": 2,
+      "key": "buyback_02_04"
+    },
+    {
+      "kind": "line",
+      "text": "可是看着看着，就觉得镜子里的那个女孩，好陌生呀。",
+      "act": 2,
+      "key": "buyback_02_05"
+    },
+    {
+      "kind": "line",
+      "text": "前辈……您也觉得我和平时不太一样了吗？",
+      "act": 2,
+      "key": "buyback_02_06"
+    },
+    {
+      "kind": "wait",
+      "seconds": 1.0
+    },
+    {
+      "kind": "line",
+      "text": "……啊，对了。",
+      "act": 2,
+      "key": "buyback_02_07"
+    },
+    {
+      "kind": "line",
+      "text": "我今天一直在笑呢。",
+      "act": 2,
+      "key": "buyback_02_08"
+    },
+    {
+      "kind": "line",
+      "text": "明明一点都不开心。",
+      "act": 2,
+      "key": "buyback_02_09"
+    },
+    {
+      "kind": "line",
+      "text": "今天，我把酒馆提前关掉了。",
+      "act": 2,
+      "key": "buyback_02_10"
+    },
+    {
+      "kind": "line",
+      "text": "有几位客人喝了酒以后，变得好奇怪。",
+      "act": 2,
+      "key": "buyback_02_11"
+    },
+    {
+      "kind": "line",
+      "text": "一个劲儿地问我，还有没有刚才那种酒……",
+      "act": 2,
+      "key": "buyback_02_12"
+    },
+    {
+      "kind": "line",
+      "text": "刚开始，我还以为是自己调得太好喝了呢。",
+      "act": 2,
+      "key": "buyback_02_13"
+    },
+    {
+      "kind": "line",
+      "text": "后来，我试着换了基酒，又换了糖浆。",
+      "act": 2,
+      "key": "buyback_02_14"
+    },
+    {
+      "kind": "line",
+      "text": "连杯子都换过了。",
+      "act": 2,
+      "key": "buyback_02_15"
+    },
+    {
+      "kind": "line",
+      "text": "最后才发现……",
+      "act": 2,
+      "key": "buyback_02_16"
+    },
+    {
+      "kind": "line",
+      "text": "……原来是水呀。",
+      "act": 2,
+      "key": "buyback_02_17"
+    },
+    {
+      "kind": "line",
+      "text": "前辈知道吗？",
+      "act": 2,
+      "key": "buyback_02_18"
+    },
+    {
+      "kind": "line",
+      "text": "我可是调酒师哦。",
+      "act": 2,
+      "key": "buyback_02_19"
+    },
+    {
+      "kind": "line",
+      "text": "哪怕只差一点点味道，我也能尝出来的。",
+      "act": 2,
+      "key": "buyback_02_20"
+    },
+    {
+      "kind": "line",
+      "text": "可是……",
+      "act": 2,
+      "key": "buyback_02_21"
+    },
+    {
+      "kind": "line",
+      "text": "明明知道不对劲……",
+      "act": 2,
+      "key": "buyback_02_22"
+    },
+    {
+      "kind": "line",
+      "text": "却还是忍不住想再喝一点。",
+      "act": 2,
+      "key": "buyback_02_23"
+    },
+    {
+      "kind": "line",
+      "text": "呵呵……",
+      "act": 2,
+      "key": "buyback_02_24"
+    },
+    {
+      "kind": "line",
+      "text": "是不是很可笑呀？",
+      "act": 2,
+      "key": "buyback_02_25"
+    },
+    {
+      "kind": "line",
+      "text": "我把剩下的水都喝完了",
+      "act": 2,
+      "key": "buyback_02_26"
+    },
+    {
+      "kind": "image",
+      "value": 2,
+      "seconds": 0.55,
+      "act": 2
+    },
+    {
+      "kind": "line",
+      "text": "说起来……",
+      "act": 2,
+      "key": "buyback_02_27"
+    },
+    {
+      "kind": "line",
+      "text": "前辈还记得吗？",
+      "act": 2,
+      "key": "buyback_02_28"
+    },
+    {
+      "kind": "line",
+      "text": "我在您这里，买过两次那种水呢。",
+      "act": 2,
+      "key": "buyback_02_29"
+    },
+    {
+      "kind": "wait",
+      "seconds": 2.0
+    },
+    {
+      "kind": "line",
+      "text": "嘿嘿……真是一笔好生意呢。",
+      "act": 2,
+      "key": "buyback_02_30"
+    },
+    {
+      "kind": "line",
+      "text": "……咦？",
+      "act": 2,
+      "key": "buyback_02_31"
+    },
+    {
+      "kind": "line",
+      "text": "前辈，为什么要往后退呀？",
+      "act": 2,
+      "key": "buyback_02_32"
+    },
+    {
+      "kind": "line",
+      "text": "我还什么都没做呢。",
+      "act": 2,
+      "key": "buyback_02_33"
+    },
+    {
+      "kind": "line",
+      "text": "呐，前辈。",
+      "act": 2,
+      "key": "buyback_02_34"
+    },
+    {
+      "kind": "line",
+      "text": "刚才不是说了吗？",
+      "act": 2,
+      "key": "buyback_02_35"
+    },
+    {
+      "kind": "line",
+      "text": "有很重要的话……",
+      "act": 2,
+      "key": "buyback_02_36"
+    },
+    {
+      "kind": "line",
+      "text": "只想告诉您一个人。",
+      "act": 2,
+      "key": "buyback_02_37"
+    },
+    {
+      "kind": "line",
+      "text": "所以……",
+      "act": 2,
+      "key": "buyback_02_38"
+    },
+    {
+      "kind": "line",
+      "text": "请好好听我说完，好不好？♡",
+      "act": 2,
+      "key": "buyback_02_39"
+    },
+    {
+      "kind": "line",
+      "text": "前辈……",
+      "act": 3,
+      "key": "buyback_03_01"
+    },
+    {
+      "kind": "line",
+      "text": "您知道吗？",
+      "act": 3,
+      "key": "buyback_03_02"
+    },
+    {
+      "kind": "line",
+      "text": "我一直觉得，前辈是个很厉害的生意人呢。",
+      "act": 3,
+      "key": "buyback_03_03"
+    },
+    {
+      "kind": "line",
+      "text": "明明是那么普通的水……",
+      "act": 3,
+      "key": "buyback_03_04"
+    },
+    {
+      "kind": "line",
+      "text": "却能让客人喝过一次，就再也忘不掉。",
+      "act": 3,
+      "key": "buyback_03_05"
+    },
+    {
+      "kind": "line",
+      "text": "嘿嘿……真羡慕呀。",
+      "act": 3,
+      "key": "buyback_03_06"
+    },
+    {
+      "kind": "line",
+      "text": "我的酒馆要是也能这样就好了。",
+      "act": 3,
+      "key": "buyback_03_07"
+    },
+    {
+      "kind": "line",
+      "text": "前辈，您知道吗？",
+      "act": 3,
+      "key": "buyback_03_08"
+    },
+    {
+      "kind": "line",
+      "text": "以前我最开心的，就是调出客人喜欢的酒。",
+      "act": 3,
+      "key": "buyback_03_09"
+    },
+    {
+      "kind": "line",
+      "text": "想调出很好喝的酒……",
+      "act": 3,
+      "key": "buyback_03_10"
+    },
+    {
+      "kind": "line",
+      "text": "想听客人说，下次还会再来……",
+      "act": 3,
+      "key": "buyback_03_11"
+    },
+    {
+      "kind": "line",
+      "text": "我明明……那么喜欢那间店的。",
+      "act": 3,
+      "key": "buyback_03_12"
+    },
+    {
+      "kind": "line",
+      "text": "可现在……我已经放弃了。",
+      "act": 3,
+      "key": "buyback_03_13"
+    },
+    {
+      "kind": "line",
+      "text": "我一直在想。",
+      "act": 3,
+      "key": "buyback_03_14"
+    },
+    {
+      "kind": "line",
+      "text": "我连自己都快认不出来了。",
+      "act": 3,
+      "key": "buyback_03_15"
+    },
+    {
+      "kind": "line",
+      "text": "凭什么……",
+      "act": 3,
+      "key": "buyback_03_16"
+    },
+    {
+      "kind": "line",
+      "text": "凭什么前辈还能像什么都没发生过一样……",
+      "act": 3,
+      "key": "buyback_03_17"
+    },
+    {
+      "kind": "line",
+      "text": "站在那里看着我呀？",
+      "act": 3,
+      "key": "buyback_03_18"
+    },
+    {
+      "kind": "line",
+      "text": "……不公平呀。",
+      "act": 3,
+      "key": "buyback_03_19"
+    },
+    {
+      "kind": "line",
+      "text": "为什么是我……",
+      "act": 3,
+      "key": "buyback_03_20"
+    },
+    {
+      "kind": "line",
+      "text": "……啊。",
+      "act": 3,
+      "key": "buyback_03_21"
+    },
+    {
+      "kind": "line",
+      "text": "说起来……",
+      "act": 3,
+      "key": "buyback_03_22"
+    },
+    {
+      "kind": "line",
+      "text": "前辈刚才还没回答我呢。",
+      "act": 3,
+      "key": "buyback_03_23"
+    },
+    {
+      "kind": "line",
+      "text": "今天的我……",
+      "act": 3,
+      "key": "buyback_03_24"
+    },
+    {
+      "kind": "line",
+      "text": "漂亮吗？",
+      "act": 3,
+      "key": "buyback_03_25"
+    },
+    {
+      "kind": "wait",
+      "seconds": 0.5
+    },
+    {
+      "kind": "line",
+      "text": "……嘿嘿。",
+      "act": 3,
+      "key": "buyback_03_26"
+    },
+    {
+      "kind": "line",
+      "text": "算啦。",
+      "act": 3,
+      "key": "buyback_03_27"
+    },
+    {
+      "kind": "line",
+      "text": "反正……",
+      "act": 3,
+      "key": "buyback_03_28"
+    },
+    {
+      "kind": "image",
+      "value": 3,
+      "seconds": 0.55,
+      "act": 3
+    },
+    {
+      "kind": "line",
+      "text": "把我的人生还回来啊——！！！",
+      "act": 3,
+      "key": "buyback_03_29"
+    },
+    {
+      "kind": "impact",
+      "seconds": 1.2
+    },
+    {
+      "kind": "image",
+      "value": 4,
+      "seconds": 0.55,
+      "act": 4
+    },
+    {
+      "kind": "line",
+      "text": "……前辈？",
+      "act": 4,
+      "key": "buyback_04_01"
+    },
+    {
+      "kind": "line",
+      "text": "还听得见吗？",
+      "act": 4,
+      "key": "buyback_04_02"
+    },
+    {
+      "kind": "line",
+      "text": "嘿嘿……太好了。",
+      "act": 4,
+      "key": "buyback_04_03"
+    },
+    {
+      "kind": "line",
+      "text": "前辈为什么要用这种眼神看着我呀？",
+      "act": 4,
+      "key": "buyback_04_04"
+    },
+    {
+      "kind": "line",
+      "text": "我第一次来买水的时候……",
+      "act": 4,
+      "key": "buyback_04_05"
+    },
+    {
+      "kind": "line",
+      "text": "您明明也笑着跟我说，谢谢惠顾呢。",
+      "act": 4,
+      "key": "buyback_04_06"
+    },
+    {
+      "kind": "line",
+      "text": "我的酒馆……",
+      "act": 4,
+      "key": "buyback_04_07"
+    },
+    {
+      "kind": "line",
+      "text": "还有酒架上那些好不容易买来的酒……",
+      "act": 4,
+      "key": "buyback_04_08"
+    },
+    {
+      "kind": "line",
+      "text": "我原本还有好多事情想做呢。",
+      "act": 4,
+      "key": "buyback_04_09"
+    },
+    {
+      "kind": "line",
+      "text": "……疼吗？",
+      "act": 4,
+      "key": "buyback_04_10"
+    },
+    {
+      "kind": "line",
+      "text": "对不起……",
+      "act": 4,
+      "key": "buyback_04_11"
+    },
+    {
+      "kind": "line",
+      "text": "我刚才……真的好生气。",
+      "act": 4,
+      "key": "buyback_04_12"
+    },
+    {
+      "kind": "line",
+      "text": "可是，前辈。",
+      "act": 4,
+      "key": "buyback_04_13"
+    },
+    {
+      "kind": "line",
+      "text": "您怎么可以……",
+      "act": 4,
+      "key": "buyback_04_14"
+    },
+    {
+      "kind": "line",
+      "text": "收了钱以后，就当作什么都没发生过呢？",
+      "act": 4,
+      "key": "buyback_04_15"
+    },
+    {
+      "kind": "image",
+      "value": 5,
+      "seconds": 0.55,
+      "act": 5
+    },
+    {
+      "kind": "line",
+      "text": "……啊。",
+      "act": 5,
+      "key": "buyback_05_01"
+    },
+    {
+      "kind": "line",
+      "text": "我好像明白了。",
+      "act": 5,
+      "key": "buyback_05_02"
+    },
+    {
+      "kind": "line",
+      "text": "前辈，您看。",
+      "act": 5,
+      "key": "buyback_05_03"
+    },
+    {
+      "kind": "line",
+      "text": "这样一来……",
+      "act": 5,
+      "key": "buyback_05_04"
+    },
+    {
+      "kind": "line",
+      "text": "我就不用每天想着，要不要再去您的店里买水了。",
+      "act": 5,
+      "key": "buyback_05_05"
+    },
+    {
+      "kind": "line",
+      "text": "前辈也不用再去招呼其他客人了。",
+      "act": 5,
+      "key": "buyback_05_06"
+    },
+    {
+      "kind": "line",
+      "text": "嘿嘿……真好。",
+      "act": 5,
+      "key": "buyback_05_07"
+    },
+    {
+      "kind": "line",
+      "text": "明明我那么讨厌前辈。",
+      "act": 5,
+      "key": "buyback_05_08"
+    },
+    {
+      "kind": "line",
+      "text": "可是现在，又觉得前辈好可爱呀。",
+      "act": 5,
+      "key": "buyback_05_09"
+    },
+    {
+      "kind": "line",
+      "text": "到底是喜欢呢……还是讨厌呢？",
+      "act": 5,
+      "key": "buyback_05_10"
+    },
+    {
+      "kind": "line",
+      "text": "啊哈哈……已经搞不清楚了。",
+      "act": 5,
+      "key": "buyback_05_11"
+    },
+    {
+      "kind": "line",
+      "text": "不过，没关系。",
+      "act": 5,
+      "key": "buyback_05_12"
+    },
+    {
+      "kind": "line",
+      "text": "我们再也不用做什么买卖啦。",
+      "act": 5,
+      "key": "buyback_05_13"
+    },
+    {
+      "kind": "line",
+      "text": "……前辈。",
+      "act": 5,
+      "key": "buyback_05_14"
+    },
+    {
+      "kind": "line",
+      "text": "第一次见面的时候，我就觉得前辈很亲切。",
+      "act": 5,
+      "key": "buyback_05_15"
+    },
+    {
+      "kind": "line",
+      "text": "那时候，还想着以后有机会再来呢。",
+      "act": 5,
+      "key": "buyback_05_16"
+    },
+    {
+      "kind": "line",
+      "text": "没想到……",
+      "act": 5,
+      "key": "buyback_05_17"
+    },
+    {
+      "kind": "line",
+      "text": "真的会一直留在这里呀。♡",
+      "act": 5,
+      "key": "buyback_05_18"
+    },
+    {
+      "kind": "black",
+      "seconds": 1.6
+    },
+    {
+      "kind": "lock",
+      "seconds": 4.0
+    },
+    {
+      "kind": "tape",
+      "seconds": 1.0
+    },
+    {
+      "kind": "line",
+      "text": "晚安，前辈。",
+      "act": 5,
+      "key": "buyback_05_19"
+    },
+    {
+      "kind": "line",
+      "text": "……明天也要在一起哦。",
+      "act": 5,
+      "key": "buyback_05_20"
+    },
+    {
+      "kind": "title",
+      "text": "隐藏异常结局：永久回购",
+      "seconds": 1.5
+    }
+  ]
+}

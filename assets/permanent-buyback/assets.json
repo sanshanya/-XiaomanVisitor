@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "source": "作者提供 C:/Users/sansm/Downloads/CG/1.png 至 5.png",
+  "treatment": "原字节保留；无重绘、裁剪或放大",
+  "images": [
+    {
+      "file": "cg_01.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "a64f55698008c18ab2df9a2f3adbb6d92504570c7779c2f0436dac04b90959c3"
+    },
+    {
+      "file": "cg_02.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "04c62af6853fe0051fa50b2ad8ebed230a279ec5182ae78c1fb7e92f61e4f483"
+    },
+    {
+      "file": "cg_03.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "bac3525dc1e60c32d1ba1951a3dc9f5f28cd22278749bc10cab6b404d255cfb4"
+    },
+    {
+      "file": "cg_04.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "4b3d61804797b1bbddf700514fbe664feaba91ca3a6c2c3f1ac722e7923982b7"
+    },
+    {
+      "file": "cg_05.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "d73255b3ac91ae8ee2c8c71a147b0cd40e7e5c84dcc8e8b5e49453a58f09e621"
+    }
+  ],
+  "sound_sources": {
+    "ambience": "原生 StoreSoundPlayer.storeAmbient（通风声暂用当铺环境声）",
+    "knock": "原生 EmporiumAudioPlayer.ratchet（敲金属门占位，三次）",
+    "door_open": "原生 EmporiumAudioPlayer.airlock_ext_open",
+    "impact": "原生 EmporiumAudioPlayer.ratchet2（撞击占位）",
+    "transaction": "原生 EmporiumAudioPlayer.audioRegister（实际交易成功声）",
+    "lock": "原生 EmporiumAudioPlayer.airlock_ext_close（锁门占位）",
+    "tape": "原生 EmporiumAudioPlayer.audioClickClick（机械启动占位）"
+  }
+}
