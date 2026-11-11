@@ -25,7 +25,7 @@ namespace XiaomanVisitor
             return !Active ? -1 : Phase == GunReactionPhase.Startled ? 0 : 1;
         }
         public static bool Protects(bool enabled, string clientId)
-        { return enabled && (clientId == XiaomanMod.ClientId || clientId == XiaomanMod.ClientId+".work_thanks"); }
+        { return enabled && CustomerQueuePolicy.IsXiaoman(clientId); }
     }
 
     public sealed class CharacterMouthPulse

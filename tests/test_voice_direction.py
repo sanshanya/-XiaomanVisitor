@@ -24,7 +24,10 @@ class VoiceDirectionTests(unittest.TestCase):
             direction=plan['lines'][row['key']]
             self.assertEqual(direction['subtitle_ja'],row['subtitle_templates']['ja'])
             self.assertEqual(direction['mood'],lines[row['key']]['mood'])
-            self.assertTrue(row['reviewed'])
+            self.assertEqual(row['reviewed'],direction['reviewed'])
+            if not row['reviewed']:
+                self.assertTrue(row['defer_recording'])
+                self.assertFalse(row['audio'],'rewritten supply text must not reuse the previous recording')
             self.assertTrue(row['delivery'])
             self.assertNotIn('{',row['generate_text'])
             tags=re.findall(r'\[([^]]+)\]',row['generate_text'])

@@ -335,17 +335,17 @@ gift_note_arrived,Xiaoman left you a letter.
 gift_tape_arrived,Xiaoman left you a tape.
 gift_note_stored,Xiaoman's letter was placed in the notebook.
 gift_tape_stored,Xiaoman's tape was placed in the cassette case.
-xm_04_03,"If you have suitable supplies, could I buy from you regularly, from a list?"
-xm_04_04,"You could stock the drinks I make, too. Hehe, we would be proper business partners!"
+xm_04_03,"If you find suitable water or brewing ingredients, could you set some aside for me, senpai? I'll collect them on Wednesdays."
+xm_04_04,I'll turn them into drinks and bring them the following Wednesday. No money for the materials or the drinks—our own little partnership.
 xm_04_accept,Thank you. Just what I needed.
 xm_04_bye,"I should go. We can talk about supplies at my place tonight, if you like."
-xm_04_03_existing,"Senpai, I kept the supply list we agreed on. If you find something suitable, we can work through it at our own pace."
+xm_04_03_existing,"I'll keep collecting brewing materials on Wednesdays, senpai, and bring the finished bottles then too."
 story_note_04_b_title,"Dear shopkeeper,"
 story_note_04_b_body,"After closing last night, I wrote our two shops' supply arrangement into my ledger.\n\nNow we are officially business partners.\n\nThere is still so much you can teach me about running a shop.\n\nAnd if anything comes up at your shop, come to me too! I will help however I can.\n\nNot long ago I only bought a little water from you and carried it home in one small bag.\n\nIf it turns into crates and crates one day, will your counter have room for them all...?\n\nBefore that, though, I need to work out the orders properly. We both have a good business to run.\n\nHere is this week's tape. (´,,•ω•,,)♡"
 story_note_04_b_signature,— Xiaoman
 xm_tavern_w04_supply_01,"Welcome, senpai. I made that list we discussed during the day."
-xm_tavern_w04_supply_02,"I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop."
-xm_tavern_w04_supply_03,The quantities and prices are all written down. I want this to be a fair deal for you.
+xm_tavern_w04_supply_02,"Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; I'll collect them at your shop on Wednesdays, senpai."
+xm_tavern_w04_supply_03,"I'll record the materials' value, make bottles worth thirty percent more, and deliver them the next Wednesday. Neither of us pays cash."
 xm_tavern_w04_supply_yes,"Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
 xm_tavern_w04_supply_later,Of course. No hurry. You have your own shop to look after.
 xm_w04_phone_01,"Hello. Tenquin Asset Corporation, Merchant Development."
@@ -363,14 +363,14 @@ xm_w04_wang_02,You are under my wing. I asked someone to stop that paperwork for
 xm_w04_wang_03,"Do not feel bad about it. They call it support, but once you sign, it is a different story."
 xm_w04_wang_04,"If it is such a good deal, why do they not run the business themselves?"
 xm_w04_wang_bye,"Anyway, look after your shop. Think things through next time."
-xm_tavern_w04_supply_existing,"The list is here, senpai. Are you delivering supplies today, or buying from me?"
+xm_tavern_w04_supply_existing,"Here are the material and bottle records, senpai. I collect and deliver at your shop on Wednesdays, so you don't need to bring supplies here."
 xm_tavern_w04_supply_early,"Welcome, senpai. I made a list of supplies for the bar. May I discuss it with you?"
 xm_tavern_w04_supply_01_unknown,Welcome. I made that list we discussed during the day.
-xm_tavern_w04_supply_02_unknown,"I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop."
-xm_tavern_w04_supply_03_unknown,The quantities and prices are all written down. I want this to be a fair deal for you.
+xm_tavern_w04_supply_02_unknown,Just set aside basic-quality water or better and brewing ingredients. No recipe to assemble; I'll collect them at your shop on Wednesdays.
+xm_tavern_w04_supply_03_unknown,"I'll record the materials' value, make bottles worth thirty percent more, and deliver them the next Wednesday. Neither of us pays cash."
 xm_tavern_w04_supply_yes_unknown,"Wonderful! We will follow the list, then. Hehe, I feel a little closer to you now."
 xm_tavern_w04_supply_later_unknown,Of course. No hurry. You have your own shop to look after.
-xm_tavern_w04_supply_existing_unknown,"The list is here. Are you delivering supplies today, or buying from me?"
+xm_tavern_w04_supply_existing_unknown,"Here are the material and bottle records. I collect and deliver at your shop on Wednesdays, so you don't need to bring supplies here."
 xm_tavern_w04_supply_early_unknown,Welcome. I made a list of supplies for the bar. May I discuss it with you?
 ui_w04_supply,Trade supplies
 ui_w04_contract,Supply agreement
@@ -547,3 +547,19 @@ drink_unique,One of a kind
 drink_buff_saleincome,Credits earned from selling goods +{0}%
 cfg_experimental_tavern_warning,This content is unfinished and intended for experimental testing only.
 ui_tavern_warning_acknowledge,Understood
+xm_brew_hello,"It's Wednesday, senpai. I'm here to collect the brewing materials."
+xm_brew_request,"Basic-quality water or better and brewing ingredients are welcome. Just place them on the trading counter, senpai."
+xm_brew_last,"I've brought the bottles I promised you, senpai."
+xm_brew_wrong,I'm only collecting basic-quality water or better and brewing ingredients this time.
+xm_brew_accept,"I'll take these, then. I'll bring the finished bottles next Wednesday, senpai."
+xm_brew_bye,"I'll head back now. See you next week, senpai."
+ui_brew_terms,"Wednesday collection; delivery the following Wednesday.\nAccepts basic-quality water or better, brewing ingredients and consumable yeast.\nBottles are worth {0}% more than the materials. Neither side pays cash.\nLarge bottle: {1} CR; sample: {2} CR. Smaller remainders carry over."
+ui_brew_table,Place materials for Xiaoman on the trading counter. Neither side pays credits.\nWater containers are handed over too; only their water contents are valued.
+ui_brew_quote,Materials: {0} CR · Bottles next week: {1} CR
+ui_brew_balance,Awaiting bottling: {0} CR
+ui_brew_receipt,Day {0}: materials {1} CR → bottles {2} CR\nDelivery from day {3}
+ui_brew_legacy,Previous trade records (preserved)
+ui_brew_sample_name,Xiaoman's Sample Bottle
+ui_brew_sample_desc,A carefully sealed little bottle. Just enough for a taste.
+ui_brew_bottle_name,Xiaoman's Bottled Drink
+ui_brew_bottle_desc,"Mixed and sealed by Xiaoman, in a plain large bottle."

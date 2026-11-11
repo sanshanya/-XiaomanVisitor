@@ -26,6 +26,7 @@ namespace XiaomanVisitor
 
         private void RegisterCocktailItems(ModItemDirectory directory)
         {
+            RegisterBrewingItems(directory);
             foreach (CocktailSpec spec in CocktailCatalog.All)
             {
                 CocktailSpec captured = spec;

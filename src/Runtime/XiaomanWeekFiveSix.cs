@@ -45,7 +45,7 @@ namespace XiaomanVisitor
             if (day<LuxuryConfig.UnlockDay) return;
             var support=ReadSupport();if (support.Advance(day)) SaveSupport(support);
             var supply=ReadSupply();bool changed=supply.RecordPreview(day);
-            if (supply.ProduceLuxury(day,support.LuxuryChannelAvailable(day))>0) changed=true;
+            if (supply.ProduceLuxury(day,support.LuxuryChannelAvailable(day),false)>0) changed=true;
             if (changed) SaveSupply(supply);
         }
         private void QueueReferralVisitor(StoreClientManager manager)

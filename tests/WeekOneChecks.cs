@@ -23,7 +23,7 @@ internal static class WeekOneChecks
             "master merges cassette discovery and moving tapes before the shopping line");
         var pack = JsonConvert.DeserializeObject<VoicePackDocument>(File.ReadAllText(Path.Combine(package, "Voices/index.json")));
         var voices = new VoiceCatalog(pack.lines);
-        check(pack.pending_lines==0 && voices.Resolve("xm_01_03","ja","あ……ここ、カセットデッキがあるんですね。わたしも引っ越すとき、テープをけっこう持ってきたんです。")!=null
+        check(voices.Resolve("xm_01_03","ja","あ……ここ、カセットデッキがあるんですね。わたしも引っ越すとき、テープをけっこう持ってきたんです。")!=null
             && voices.Preview("xm_01_04", "ja")!=null,"rewritten discovery and follow-up have correctly bound new recordings");
         check(new[] { "intro_1", "xm_01_accept", "xm_01_bye" }
             .All(k => voices.Preview(k, "ja") != null), "unchanged first-visit recordings remain available");

@@ -152,6 +152,8 @@ namespace XiaomanVisitor
             if (!PlayerStore.HasInstance || manager == null || manager.clientStack == null || StoreStation.Instance == null || !EnsurePortraits()) return false;
             StoreClient current = PlayerStore.Instance.currentClientInstance == null ? null : PlayerStore.Instance.currentClientInstance.GetClientBlueprint();
             if (current != null && CustomerQueuePolicy.IsXiaoman(current.identifier)) return false;
+            // A saved Wednesday queue must never spill collection into Thursday.
+            manager.clientStack.RemoveAll(c => c!=null && c.identifier==BrewingProgress.ClientId && !BrewingVisitDue(StoreStation.Instance.dayCounter));
             StoreClient queued = manager.clientStack.Find(c => c != null && CustomerQueuePolicy.IsXiaoman(c.identifier));
             if (queued != null)
             {
@@ -163,9 +165,9 @@ namespace XiaomanVisitor
                 return false;
             }
             int today = StoreStation.Instance.dayCounter;
-            var kind=CustomerQueuePolicy.Next(today,ReadStory(),ReadWork(),TavernMapEnabled);
+            var kind=CustomerQueuePolicy.Next(today,ReadStory(),ReadWork(),TavernMapEnabled,BrewingVisitDue(today));
             if (kind==XiaomanVisitKind.None) return false;
-            StoreClient client = kind==XiaomanVisitKind.Story ? CreateVisitor() : CreateWorkThanksVisitor();
+            StoreClient client = kind==XiaomanVisitKind.Story ? CreateVisitor() : kind==XiaomanVisitKind.Brewing ? CreateBrewingVisitor() : CreateWorkThanksVisitor();
             ModHelper.SetClientSource(client, Id);
             manager.AddClient(client);
             if (!manager.clientStack.Contains(client)) return false;

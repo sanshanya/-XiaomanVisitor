@@ -14,7 +14,7 @@ def apply_to(localizations):
                     'ui_tavern_scene_hint','ui_tavern_drink_list','ui_tavern_drink_price','ui_tavern_takeaway',
                     'ui_tavern_work_wage','ui_tavern_work_confirm','ui_tavern_music','ui_w04_apply'):
                 rows.pop(key)
-    for filename in ("item-presentation.json", "tavern-map-localization.json"):
+    for filename in ("item-presentation.json", "tavern-map-localization.json", "brewing-localization.json"):
         changes = json.loads((ROOT / "assets" / filename).read_text(encoding="utf-8"))
         for language, entries in changes.items():
             missing = set(entries) - set(localizations[language])

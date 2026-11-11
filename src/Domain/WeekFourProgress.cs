@@ -41,7 +41,7 @@ namespace XiaomanVisitor
     }
 
     public sealed class SupplyNoteSnapshot
-    { public int Day,WaterPrice,JuicePrice,Wholesale; }
+    { public int Day,WaterPrice,JuicePrice,Wholesale,ContractSchema; }
 
     public sealed class SupplyBatch
     {

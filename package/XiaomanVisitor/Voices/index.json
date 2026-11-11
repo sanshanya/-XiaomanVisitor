@@ -290,30 +290,6 @@
       "generic": false
     },
     {
-      "line_key": "xm_04_03",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_04_03_8f4d7bab21df",
-      "spoken_text": "先輩のお店にちょうどいい品物があったら、リストを作って定期的に仕入れさせてもらえませんか？",
-      "subtitle_templates": [
-        "前辈这里要是有合适的货，能不能按清单定期卖给我呢？",
-        "先輩のお店にちょうどいい品物があったら、リストを作って定期的に仕入れさせてもらえませんか？",
-        "If you have suitable supplies, could I buy from you regularly, from a list?"
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_04_04",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_04_04_89fa61eb0a5e",
-      "spoken_text": "うちで作った飲み物も、先輩のお店に卸せますよ。えへへ、そうしたら、ちゃんとした商売仲間ですね。",
-      "subtitle_templates": [
-        "我这边调好的饮品，也可以给前辈进货。嘿嘿，这样我们就算正式的生意伙伴啦。",
-        "うちで作った飲み物も、先輩のお店に卸せますよ。えへへ、そうしたら、ちゃんとした商売仲間ですね。",
-        "You could stock the drinks I make, too. Hehe, we would be proper business partners!"
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_04_shop",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_04_shop_f29e2cd5861f",
@@ -358,18 +334,6 @@
         "那我先走啦。供货的事，晚上来店里再慢慢谈也可以哦。",
         "それじゃ、また。仕入れの話は、夜にお店でゆっくりでも大丈夫ですから。",
         "I should go. We can talk about supplies at my place tonight, if you like."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_04_03_existing",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_04_03_existing_fc875223f8b8",
-      "spoken_text": "先輩、この前の取引リストは取ってあります。品物があったら、リストに沿って少しずつで大丈夫ですよ。",
-      "subtitle_templates": [
-        "前辈，上次谈好的货单我已经留着啦。有什么合适的东西，我们照单子慢慢来就好。",
-        "先輩、この前の取引リストは取ってあります。品物があったら、リストに沿って少しずつで大丈夫ですよ。",
-        "Senpai, I kept the supply list we agreed on. If you find something suitable, we can work through it at our own pace."
       ],
       "generic": false
     },
@@ -1994,30 +1958,6 @@
       "generic": false
     },
     {
-      "line_key": "xm_tavern_w04_supply_02",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w04_supply_02_354191d8df55",
-      "spoken_text": "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
-      "subtitle_templates": [
-        "我想从前辈这儿定期买水和原材料。制成成品后，按约定比例，一部分留在店里销售，另一部分供给前辈销售。",
-        "先輩のお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分と先輩に卸す分に分けようと思ってます。",
-        "I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_tavern_w04_supply_03",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w04_supply_03_a850db4c17f1",
-      "spoken_text": "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
-      "subtitle_templates": [
-        "数量和价钱都写清楚了，保证前辈不会吃亏。",
-        "数量も値段もきちんと書いておきました。先輩に損はさせませんから。",
-        "The quantities and prices are all written down. I want this to be a fair deal for you."
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_tavern_w04_supply_yes",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_yes_37fd01269050",
@@ -2038,18 +1978,6 @@
         "好呀，不着急。前辈也有自己的店要忙嘛。",
         "はい、急がなくて大丈夫ですよ。先輩にもご自分のお店がありますから。",
         "Of course. No hurry. You have your own shop to look after."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_tavern_w04_supply_existing",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w04_supply_existing_f5caffb4f7ce",
-      "spoken_text": "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-      "subtitle_templates": [
-        "前辈，货单在这里。今天想给店里送点什么，还是从我这里进货？",
-        "先輩、取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-        "The list is here, senpai. Are you delivering supplies today, or buying from me?"
       ],
       "generic": false
     },
@@ -2078,30 +2006,6 @@
       "generic": false
     },
     {
-      "line_key": "xm_tavern_w04_supply_02_unknown",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w04_supply_02_unknown_1b71e9041f72",
-      "spoken_text": "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
-      "subtitle_templates": [
-        "我想从您这儿定期买水和原材料。制成成品后，按约定比例，一部分留在店里销售，另一部分供给您销售。",
-        "お客さんのお店から水と材料を定期的に仕入れたいんです。出来上がったドリンクは、決めた割合で店で売る分とお客さんに卸す分に分けようと思ってます。",
-        "I would like to buy water and ingredients from you regularly. Once the drinks are made, we will split the batch as agreed: some for the bar, some for your shop."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_tavern_w04_supply_03_unknown",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w04_supply_03_unknown_5582fe1dd4a9",
-      "spoken_text": "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
-      "subtitle_templates": [
-        "数量和价钱都写清楚了，保证您不会吃亏。",
-        "数量も値段もきちんと書いておきました。お客さんに損はさせませんから。",
-        "The quantities and prices are all written down. I want this to be a fair deal for you."
-      ],
-      "generic": false
-    },
-    {
       "line_key": "xm_tavern_w04_supply_yes_unknown",
       "language": "ja",
       "sound_key": "xm_voice_ja_xm_tavern_w04_supply_yes_unknown_d3c134abc6e9",
@@ -2122,18 +2026,6 @@
         "好呀，不着急。您也有自己的店要忙嘛。",
         "はい、急がなくて大丈夫ですよ。お客さんにもご自分のお店がありますから。",
         "Of course. No hurry. You have your own shop to look after."
-      ],
-      "generic": false
-    },
-    {
-      "line_key": "xm_tavern_w04_supply_existing_unknown",
-      "language": "ja",
-      "sound_key": "xm_voice_ja_xm_tavern_w04_supply_existing_unknown_ac2f626c2cf6",
-      "spoken_text": "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-      "subtitle_templates": [
-        "货单在这里。今天想给店里送点什么，还是从我这里进货？",
-        "取引リストはこちらです。今日は納品ですか、それともうちから仕入れますか？",
-        "The list is here. Are you delivering supplies today, or buying from me?"
       ],
       "generic": false
     },
@@ -3470,8 +3362,8 @@
       "generic": false
     }
   ],
-  "pending_lines": 0,
+  "pending_lines": 15,
   "pending_by_language": {
-    "ja": 0
+    "ja": 15
   }
 }
