@@ -108,6 +108,9 @@ namespace XiaomanVisitor
 
         private void TryDeliverThankYouGift()
         {
+#if XIAOMAN_BUYBACK_TEST
+            if (SideStories.BuybackTestMod.LineClosed) return;
+#endif
             if (!enabled || deliveringGifts || !PlayerStore.HasInstance || EmporiumEntry.Instance == null
                 || StoreStation.Instance == null || ModHelper.IsOutsideStore()) return;
             deliveringGifts = true;

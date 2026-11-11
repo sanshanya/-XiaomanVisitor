@@ -1,0 +1,129 @@
+{
+  "schema": 1,
+  "source": "作者提供 C:/Users/sansm/Downloads/CG/1.png 至 5.png",
+  "treatment": "原字节保留；无重绘、裁剪或放大",
+  "images": [
+    {
+      "file": "cg_01.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "a64f55698008c18ab2df9a2f3adbb6d92504570c7779c2f0436dac04b90959c3"
+    },
+    {
+      "file": "cg_02.png",
+      "width": 1024,
+      "height": 1536,
+      "sha256": "04c62af6853fe0051fa50b2ad8ebed230a279ec5182ae78c1fb7e92f61e4f483"
+    },
+    {
+      "file": "cg_03.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "bac3525dc1e60c32d1ba1951a3dc9f5f28cd22278749bc10cab6b404d255cfb4"
+    },
+    {
+      "file": "cg_04.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "4b3d61804797b1bbddf700514fbe664feaba91ca3a6c2c3f1ac722e7923982b7"
+    },
+    {
+      "file": "cg_05.png",
+      "width": 1086,
+      "height": 1448,
+      "sha256": "d73255b3ac91ae8ee2c8c71a147b0cd40e7e5c84dcc8e8b5e49453a58f09e621"
+    }
+  ],
+  "sounds": [
+    {
+      "role": "knock",
+      "source": "mod",
+      "identifier": "buyback_door_knock",
+      "gain": 0.9,
+      "pan": -0.18
+    },
+    {
+      "role": "blade",
+      "identifier": "knife_select",
+      "gain": 0.18,
+      "pan": 0.0
+    },
+    {
+      "role": "lunge",
+      "identifier": "cloth_move2",
+      "gain": 0.5,
+      "pan": 0.0
+    },
+    {
+      "role": "hit",
+      "identifier": "knife_stab",
+      "gain": 0.65,
+      "pan": 0.0
+    },
+    {
+      "role": "blood",
+      "identifier": "wound_blood1",
+      "gain": 0.3,
+      "pan": 0.0
+    },
+    {
+      "role": "fall",
+      "identifier": "blunt_impact",
+      "gain": 0.65,
+      "pan": 0.0
+    },
+    {
+      "role": "touch",
+      "identifier": "cloth_move1",
+      "gain": 0.2,
+      "pan": 0.0
+    },
+    {
+      "role": "tape",
+      "identifier": "cassette_insert",
+      "gain": 0.5,
+      "pan": 0.0
+    }
+  ],
+  "music": {
+    "identifier": "rain_intro",
+    "file": "rain_intro.mp3",
+    "title": "小满的雨夜·Intro",
+    "loop": true,
+    "sha256": "487673a5315b894c16cbbb4ea0cb46d9ffb905d7aa092cd167176fce3ce74047",
+    "seconds": 286.56,
+    "source": "沿用主模组已审核的第二盘磁带：小满的雨夜·Intro；原字节保留"
+  },
+  "knock_audio": {
+    "file": "buyback_door_knock.wav",
+    "seconds": 1.17,
+    "sha256": "56d53d1a9f712c30ac3be1a73801dbfce78de7ba9ee8aae38ff71245a83c7b87",
+    "recording": {
+      "file": "foley/freesound_458007_Fabrizio84.mp3",
+      "title": "Knocking on Door",
+      "author": "Fabrizio84",
+      "url": "https://freesound.org/people/Fabrizio84/sounds/458007/",
+      "download_url": "https://cdn.freesound.org/previews/458/458007_2841496-hq.mp3",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_sha256": "bcbb0de4fc4d7e7770a9e78125e299c058231a2d888cc7f1a656b22ff117ffe5",
+      "trim_seconds": [
+        6.48,
+        7.65
+      ],
+      "knock_count": 3,
+      "treatment": "截取末组连续三次真实敲门；单声道48kHz PCM16；去直流、短淡入淡出及峰值归一，不合成敲击或改变原节奏"
+    }
+  },
+  "sound_sources": {
+    "ambience": "原生 StoreSoundPlayer.storeAmbient（按节点调节环境声）",
+    "knock": "Fabrizio84 / Knocking on Door（CC0-1.0实录；每次点击播放整段，共三次；播放中不叠加）",
+    "door_open": "原生 EmporiumAudioPlayer.airlock_ext_open",
+    "impact": "原生 knife_stab / wound_blood1 / blunt_impact（刀击、溅血、倒地分层）",
+    "transaction": "原生 EmporiumAudioPlayer.audioRegister（实际交易成功声）",
+    "cloth": "原生 cloth_move1 / cloth_move2（靠近与突进）",
+    "blade": "原生 knife_select（露刃轻响）",
+    "lock": "原生 EmporiumAudioPlayer.airlock_ext_close（金属门闭合）",
+    "tape": "原生 cassette_insert（磁带机械启动）"
+  }
+}

@@ -21,12 +21,12 @@ namespace XiaomanVisitor
         { get { return TavernMapEnabled && PlayerStore.HasInstance && ModHelper.GetCurrentAfterhourLocationId()==TavernMapRules.LocationId; } }
         private bool TavernMayAct
         { get { return AtTavern && MapUIManager.Instance!=null && !MapUIManager.Instance.IsInTransit
-            && TavernRules.IsOpen(true,true,StoreStation.Instance.dayCounter,ReadStory().Finished); } }
+            && TavernRules.IsOpen(true,true,StoreStation.Instance.dayCounter,TavernStoryFinished); } }
 
         private bool CanEnterTavern()
         {
             return TavernMapEnabled && PlayerStore.HasInstance
-                && TavernRules.IsOpen(true,true,StoreStation.Instance.dayCounter,ReadStory().Finished) && EnsureTavernStage();
+                && TavernRules.IsOpen(true,true,StoreStation.Instance.dayCounter,TavernStoryFinished) && EnsureTavernStage();
         }
         private bool EnsureTavernStage()
         {
