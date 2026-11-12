@@ -6,6 +6,10 @@ namespace XiaomanVisitor
     public sealed partial class XiaomanMod
     {
         private const string EconomyPhoneId=Id+".economy.phone", EconomyWindowId=Id+".economy.window";
+        private const string EconomyLedgerConfigKey="show_economy_ledger";
+        private const bool EconomyLedgerDefault=false;
+        private ConfigEntry<bool> showEconomyLedger;
+        internal bool EconomyLedgerVisible { get { return TavernMapEnabled && showEconomyLedger!=null && showEconomyLedger.Value; } }
         private TavernEconomyProgress economyCache;
         private string economyCacheData;
         private bool economyBusy;
@@ -27,6 +31,13 @@ namespace XiaomanVisitor
             economyCache=p;economyCacheData=data;
         }
         private bool EconomyAvailable { get { return TavernMapEnabled && PlayerStore.HasInstance && !SideStories.BuybackStory.LineClosed; } }
+        private void UpdateEconomyLedgerAccess()
+        {
+            if (!EconomyLedgerVisible) { CloseEconomyWindow();RemoveEconomyPhone(); }
+            if (!enabled || !TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null) return;
+            if (AtTavern && (tavernMenuPage=="details" || tavernMenuPage=="interaction")) CloseTavernMenu();
+            if (EconomyLedgerVisible) EnsureEconomyPhone(StoreStation.Instance.dayCounter);
+        }
         private bool EconomyStoryApplies {
             get {
                 if (!PlayerStore.HasInstance || SideStories.BuybackStory.LineClosed
@@ -36,6 +47,7 @@ namespace XiaomanVisitor
         }
         private void EnableEconomy()
         {
+            ModHook.OnGameLoadedEarly+=CloseEconomyWindow;
             if (!TavernMapEnabled) { ModHook.OnGameLoadedLate+=RemoveEconomyPhone;RemoveEconomyPhone();return; }
             PhoneClientList.DialogFuncs[EconomyPhoneId]=_ => new Dialogue().SetText(Text("ui_eco_phone"),Text("ui_eco_phone_line"))
                 .SetEndAction(() => { PhoneUIManager.Instance.OnPhoneDialogEnd();if (EconomyAvailable) ShowEconomyWindow(); });
@@ -44,9 +56,11 @@ namespace XiaomanVisitor
             ModHook.OnShutterOpenedLate+=OnEconomyBusinessDay;
             ModHook.OnGoingSleepEarly+=TickEconomy;
             ModHook.OnReturningStoreLate+=TickEconomy;
+            UpdateEconomyLedgerAccess();
         }
         private void DisableEconomy()
         {
+            ModHook.OnGameLoadedEarly-=CloseEconomyWindow;
             ModHook.OnGameLoadedLate-=ReloadEconomy;ModHook.OnWakingUpLate-=TickEconomy;
             ModHook.OnShutterOpenedLate-=OnEconomyBusinessDay;ModHook.OnGoingSleepEarly-=TickEconomy;
             ModHook.OnReturningStoreLate-=TickEconomy;
@@ -83,12 +97,18 @@ namespace XiaomanVisitor
                 if (p.Phase=="legacy") return;
                 if (p.PendingPayment!=null) { p.RecoverPayment(day,PlayerStore.Instance.GetCash());SaveEconomy(p); }
                 if (!p.Blocked) {
+                    foreach (var visit in ReadStory().Visits.Where(v => v.Day<day || v.Day==day
+                        && storySession!=null && storySession.Episode.Index==v.Index && storySession.OpeningFinished))
+                        p.ObserveChapter(visit.Index,visit.Day);
+                    if (p.PacingRecoveryPending) p.Advance(day); // Establish the resume date before importing old native receipts.
                     ImportEconomyReceipts(p);
                     p.Advance(day);SaveEconomy(p);
                 }
                 EnsureEconomyPhone(day);
-                if (p.Reviewing && !p.ReviewAnnounced && StoreUIManager.Instance!=null && ReputationUIManager.Instance!=null) {
-                    StoreUIManager.Instance.Notify(Text("ui_eco_review_arrived"));p.ReviewAnnounced=true;SaveEconomy(p);
+                if (EconomyLedgerVisible && !p.Blocked && !p.Departing && (p.Reviewing || p.ReviewUnlocked && p.RefinanceDay<0) && !p.ReviewAnnounced
+                    && StoreUIManager.Instance!=null && ReputationUIManager.Instance!=null) {
+                    StoreUIManager.Instance.Notify(Text(p.Phase=="remedy"?"ui_eco_remedy_arrived":"ui_eco_review_arrived"));
+                    p.ReviewAnnounced=true;SaveEconomy(p);
                 }
                 TryDeliverEconomyFarewell(p,day);
                 TryDeliverLateStayLetter(p,day);
@@ -98,6 +118,7 @@ namespace XiaomanVisitor
         }
         private void EnsureEconomyPhone(int day)
         {
+            if (!EconomyLedgerVisible) { RemoveEconomyPhone();return; }
             if (day<TavernRules.OpeningDay || ReadStory().VisitIndex<1) return;
             var phones=PlayerStore.Instance.PhoneClientDict;if (phones==null || phones.Values.Any(v => v.dialogFuncId==EconomyPhoneId)) return;
             long number=83427;while (phones.ContainsKey(number)) number++;
@@ -137,7 +158,7 @@ namespace XiaomanVisitor
         }
         internal string EconomyPickupLabel {
             get {
-                if (!EconomyAvailable) return null;
+                if (!EconomyLedgerVisible || !EconomyAvailable) return null;
                 var p=ReadEconomy();
                 return p.Level>=2 || p.ContractReady("orders",StoreStation.Instance.dayCounter)
                     ? Text(TavernTrading?"ui_eco_pickup":"ui_eco_pickup_paused") : null;
@@ -160,7 +181,7 @@ namespace XiaomanVisitor
         }
         private void StartEconomyProject()
         {
-            if (!TavernMayAct || TavernDialogueBusy || !EconomyAvailable) return;
+            if (!TavernMayAct || TavernDialogueBusy || !EconomyLedgerVisible || !EconomyAvailable) return;
             int day=StoreStation.Instance.dayCounter;var p=ReadEconomy();
             if (!p.MayProject(day) || ReadWork().WorkedOn(day) || workRunning) return;
             int level=p.Level+1;CloseEconomyWindow();CloseTavernMenu();
@@ -173,7 +194,7 @@ namespace XiaomanVisitor
         }
         private void PlayStayEnding()
         {
-            if (!TavernMayAct || TavernDialogueBusy) return;
+            if (!TavernMayAct || TavernDialogueBusy || !EconomyLedgerVisible || !EconomyAvailable) return;
             var p=ReadEconomy();if (!p.HasStayed || p.GoodEndingSeen) return;
             CloseEconomyWindow();CloseTavernMenu();
             var keys=new[]{"xm_eco_good_01","xm_eco_good_02","xm_eco_good_03","xm_eco_good_04","xm_eco_good_05","xm_eco_good_06"};
@@ -195,7 +216,7 @@ namespace XiaomanVisitor
         }
         private void MakeEconomyPayment(int amount)
         {
-            if (!enabled || !EconomyAvailable || economyBusy || ModHelper.IsOutsideStore() && !AtTavern) return;
+            if (!enabled || !EconomyLedgerVisible || !EconomyAvailable || economyBusy || ModHelper.IsOutsideStore() && !AtTavern) return;
             economyBusy=true;
             try {
                 var p=ReadEconomy();int cash=PlayerStore.Instance.GetCash();

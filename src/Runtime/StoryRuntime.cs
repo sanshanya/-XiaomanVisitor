@@ -87,7 +87,10 @@ namespace XiaomanVisitor
                 tail.nextDialogue=StoryLine(client,episode.CocktailKey,Mood.Soft);tail=tail.nextDialogue;
             }
             client.mainDialogue.startAction+=() => BeginStorySession(session);
-            tail.SetEndAction(() => { client.OnIntroduced();session.OpeningFinished=true;TickStoryStock();SetMood(client,Mood.Neutral); });
+            tail.SetEndAction(() => {
+                client.OnIntroduced();session.OpeningFinished=true;TickStoryStock();SetMood(client,Mood.Neutral);
+                TickEconomy();
+            });
         }
 
         private void BeginStorySession(StorySession session)

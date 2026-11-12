@@ -5,6 +5,7 @@ using Newtonsoft.Json;
 
 namespace XiaomanVisitor
 {
+    public enum BrewingCollectionState { Ready, Blocked, Processing, WrongDay, Closed, NoAppointment, Collected, AwaitingArrival }
     public sealed class BrewingMaterial
     {
         public int ItemId, Count;
@@ -55,6 +56,18 @@ namespace XiaomanVisitor
             if (Blocked || !AgreementActive) return false;
             AgreementActive=false;NextCollectionDay=-1;AgreementRevision++;return true;
         }
+        public bool ChangeAgreement(int day,int expectedRevision,bool active)
+        {
+            if (day<BrewingConfig.UnlockDay || expectedRevision!=AgreementRevision) return false;
+            return active?Sign(day):Pause();
+        }
+        // The contract menu is visited at night; today's daytime appointment
+        // has passed. A missed appointment stays valid for the next Wednesday.
+        public int NextCollectionAfter(int day)
+        {
+            if (!AgreementActive || NextCollectionDay<BrewingConfig.UnlockDay) return -1;
+            return NextCollectionDay>day?NextCollectionDay:NextWednesday(day);
+        }
         public bool MayCollect(int day)
         { return !Blocked && AgreementActive && NextCollectionDay>=BrewingConfig.UnlockDay && day>=NextCollectionDay && Wednesday(day); }
         public int MaterialLimit(int day)
@@ -64,12 +77,30 @@ namespace XiaomanVisitor
         }
         public bool AcceptsValue(decimal cents,int day)
         { return cents>0 && cents<=MaterialLimit(day)*100m; }
+        public BrewingCollectionState CollectionState(int day,bool businessOpen)
+        {
+            if (Blocked) return BrewingCollectionState.Blocked;
+            if (day<BrewingConfig.UnlockDay || !Wednesday(day)) return BrewingCollectionState.WrongDay;
+            if (!businessOpen) return BrewingCollectionState.Closed;
+            if (Pending!=null) return BrewingCollectionState.Processing;
+            if (Batches.Any(b => b.Day==day && b.Phase!="cancelled")) return BrewingCollectionState.Collected;
+            if (!MayCollect(day)) return BrewingCollectionState.NoAppointment;
+            return LastVisitDay==day?BrewingCollectionState.Ready:BrewingCollectionState.AwaitingArrival;
+        }
+        public bool CanPrepare(int day,List<BrewingMaterial> materials)
+        {
+            if (CollectionState(day,true)!=BrewingCollectionState.Ready || materials==null || materials.Count==0
+                || materials.Any(m => m==null || m.ItemId<=0 || m.Count<=0 || m.ValueCents<=0)
+                || materials.Select(m => m.ItemId).Distinct().Count()!=materials.Count) return false;
+            decimal total=materials.Sum(m => (decimal)m.ValueCents);
+            return AcceptsValue(total,day) && total<=long.MaxValue/(100+BrewingConfig.BonusPercent);
+        }
         public bool ContinueAfterDelivery(string batchId,int revision,int day,bool yes)
         {
             if (!Friday(day) || revision!=AgreementRevision || Renewal?.Id!=batchId) return false;
+            if (!ChangeAgreement(day,revision,yes)) return false;
             foreach (var batch in Batches.Where(b => b.Credited)) batch.RenewalAnswered=true;
-            if (yes) return Sign(day);
-            Pause();return true;
+            return true;
         }
         public bool MayVisit(int day, bool businessOpen)
         {
@@ -84,14 +115,8 @@ namespace XiaomanVisitor
         }
         public BrewingBatch Prepare(string run, int day, List<BrewingMaterial> materials)
         {
-            if (Blocked || Pending != null || !MayCollect(day) || LastVisitDay != day || materials == null || materials.Count == 0
-                || materials.Any(m => m == null || m.ItemId <= 0 || m.Count <= 0 || m.ValueCents <= 0)
-                || materials.Select(m => m.ItemId).Distinct().Count() != materials.Count
-                || Batches.Any(b => b.Day == day && b.Phase != "cancelled")) return null;
-            decimal total=materials.Sum(m => (decimal)m.ValueCents);
-            if (!AcceptsValue(total,day)) return null;
-            long input=(long)total;
-            if (input > long.MaxValue / (100 + BrewingConfig.BonusPercent)) return null;
+            if (!CanPrepare(day,materials)) return null;
+            long input=(long)materials.Sum(m => (decimal)m.ValueCents);
             var batch = new BrewingBatch { Id = run + ":brew:" + day + ":" + Batches.Count, Day = day, DueDay = day + BrewingConfig.DeliveryDays,
                 AgreementRevision=AgreementRevision,
                 Materials = materials, InputCents = input,

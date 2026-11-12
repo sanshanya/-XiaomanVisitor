@@ -8,7 +8,7 @@ namespace XiaomanVisitor
         public const int InitialPrincipal=8800;
         public const int Rent=420;
         public const int OldRateBp=100;
-        public const int OldTerm=10;
+        public const int OldTerm=12;
         public const int TransferFee=240;
         public const int PartitionCost=240;
         public const int FixedCost=345;
@@ -24,7 +24,8 @@ namespace XiaomanVisitor
         public const int NewTerm=52;
         public static readonly int[] ExtensionThresholds=new int[] {1400,2250};
         public static readonly int[] ExtensionFees=new int[] {80,120};
-        public static readonly int[] NaturalOrders=new int[] {15,17,19,20,21,16,14,13,12,11,10,9};
+        public static readonly int[] NaturalOrders=new int[] {15,17,19,20,21,22,23,24};
+        public static readonly int[] CompetitionOrders=new int[] {16,13,11};
         public static readonly int[] ProjectEarliest=new int[] {1,3,5,7};
         public static readonly int[] ProjectCapacity=new int[] {0,2,5,9,14};
         public static readonly int[] ProjectGrowth=new int[] {0,1,2,3,4};

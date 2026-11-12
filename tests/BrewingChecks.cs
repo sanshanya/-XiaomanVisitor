@@ -12,6 +12,9 @@ internal static class BrewingChecks
     internal static void Run(Action<bool,string> check)
     {
         CheckNativeExchange(check);
+        CheckMaterialQuotes(check);
+        CheckQuoteSubmission(check);
+        CheckContractChoices(check);
         var p=new BrewingProgress();
         check(!p.MayVisit(24,true) && !p.Sign(21),"a chapter or Wednesday alone never authorizes material collection");
         check(p.Sign(22) && p.NextCollectionDay==24 && !p.Sign(22),"explicit tavern consent schedules the next Wednesday exactly once");
@@ -91,13 +94,131 @@ internal static class BrewingChecks
         check(CustomerQueuePolicy.IsXiaoman(BrewingProgress.ClientId) && GunReaction.Protects(true,BrewingProgress.ClientId),"both cooperation visits retain native portrait and aim-only protection");
         check(CustomerQueuePolicy.Next(26,new StoryProgress(),new TavernWorkProgress(),true,true)==XiaomanVisitKind.Brewing
             && CustomerQueuePolicy.Next(25,new StoryProgress(),new TavernWorkProgress(),true,true)!=XiaomanVisitKind.Brewing,"native queue selection admits Friday delivery but never a Thursday spillover");
+        var finished=new StoryProgress();
+        for (int i=0;i<14;i++) { StoryVisitRecord visit;finished.BeginVisit(1+i*7,99,0,out visit); }
+        var continued=new BrewingProgress();continued.Sign(92);
+        check(finished.Finished && continued.MayVisit(94,true)
+            && CustomerQueuePolicy.Next(94,finished,new TavernWorkProgress(),true,continued.MayVisit(94,true),true)==XiaomanVisitKind.Brewing,
+            "a continuing tavern still queues its explicitly signed Wednesday appointment after fourteen chapters");
+        var unsigned=new BrewingProgress();
+        check(CustomerQueuePolicy.Next(94,finished,new TavernWorkProgress(),true,unsigned.MayVisit(94,true),true)==XiaomanVisitKind.None
+            && !unsigned.Arrive(94),"continuing after chapter fourteen never invents unsigned material consent");
+        check(CustomerQueuePolicy.Next(94,finished,new TavernWorkProgress(),true,continued.MayVisit(94,true),false)==XiaomanVisitKind.None,
+            "completed departure still blocks further cooperation visitors");
+        continued.Pause();
+        check(CustomerQueuePolicy.Next(94,finished,new TavernWorkProgress(),true,continued.MayVisit(94,true),true)==XiaomanVisitKind.None,
+            "a continuing tavern cannot bypass an explicitly paused material agreement");
+        continued.Sign(93);continued.Arrive(94);continued.Prepare("late",94,goods);continued.RecoverInput(new int[0]);
+        check(!continued.MayVisit(101,true)
+            && CustomerQueuePolicy.Next(96,finished,new TavernWorkProgress(),true,continued.MayVisit(96,false),true)==XiaomanVisitKind.Brewing,
+            "post-story accepted batches still deliver on Friday without silently scheduling next Wednesday");
+        check(CustomerQueuePolicy.Next(96,finished,new TavernWorkProgress(),false,true,true)==XiaomanVisitKind.None,
+            "disabling the tavern blocks post-story side visits too");
         check(ItemPresentation.OwnsItemId(BrewingProgress.SampleId) && ItemPresentation.OwnsItemId(BrewingProgress.BottleId),"bottled goods retain the existing scoped tooltip style");
     }
     private sealed class MaterialItem : GameItem
     {
+        public readonly List<GraphNodeStorage> Nested=new List<GraphNodeStorage>();
+        public override List<GraphNodeStorage> children { get { return Nested; } }
         public MaterialItem(int id) : base("water_ration") { uniqueId=id;unitCount=1; }
         public override void Destroy() { }
         public override void Validate() { }
+    }
+    private static void CheckContractChoices(Action<bool,string> check)
+    {
+        var p=new BrewingProgress();
+        check(p.NextCollectionAfter(22)==-1 && !p.MayVisit(24,true),"unsigned delivery contract cannot create an appointment");
+        check(p.ChangeAgreement(22,0,true) && p.NextCollectionDay==24 && !p.ChangeAgreement(22,0,true),
+            "one accepted signature makes one Wednesday reservation; its duplicate callback is rejected");
+        p=BrewingProgress.Restore(p.Data);
+        string booked=p.Data;
+        check(p.NextCollectionAfter(23)==24 && p.NextCollectionAfter(24)==31 && p.NextCollectionAfter(30)==31
+            && p.Data==booked && p.MayVisit(31,true),"missed Wednesday displays the next real pickup without rewriting consent or the reservation");
+        check(p.ChangeAgreement(23,1,false) && p.NextCollectionAfter(23)==-1 && !p.MayVisit(24,true),
+            "explicit interruption cancels future pickup");
+        check(p.ChangeAgreement(24,2,true) && p.NextCollectionDay==31 && p.MaterialLimit(31)==600,
+            "renewal on Wednesday night schedules next Wednesday and preserves the original capacity start");
+        string renewed=p.Data;
+        check(!p.ChangeAgreement(24,1,false) && !p.ChangeAgreement(24,0,true) && p.Data==renewed,
+            "old pause and sign callbacks cannot overwrite a newer explicit contract choice");
+        var owed=Signed();var batch=owed.Prepare("contract",24,new List<BrewingMaterial>{new BrewingMaterial{ItemId=71,Count=1,ValueCents=25000}});
+        owed.RecoverInput(new int[0]);
+        check(owed.ChangeAgreement(24,1,false) && owed.MayVisit(26,false) && !owed.MayVisit(31,true)
+            && owed.Batches.Single().ReturnMilli==325000,"interrupting during production stops pickup without cancelling the already accepted Friday obligation");
+        check(owed.ChangeAgreement(25,2,true) && owed.NextCollectionDay==31,"an explicit tavern renewal may reserve next week before the old delivery is finished");
+        owed.CreditDue(26);while (owed.PrepareBottle(1000+owed.Bottles.Count)!=null) owed.BottlePlaced(true);
+        string explicitRenewal=owed.Data;
+        check(!owed.ContinueAfterDelivery(batch.Id,1,26,false) && owed.Data==explicitRenewal && owed.MayVisit(31,true),
+            "old Friday response cannot cancel a newer tavern renewal after physical wine delivery");
+        var rejected=Signed();var small=rejected.Prepare("contract",24,new List<BrewingMaterial>{new BrewingMaterial{ItemId=72,Count=1,ValueCents=1}});
+        rejected.RecoverInput(new int[0]);rejected.CreditDue(26);rejected.NextCollectionDay=31;
+        string before=rejected.Data;
+        check(!rejected.ContinueAfterDelivery(small.Id,rejected.AgreementRevision,26,true) && rejected.Data==before,
+            "failed continuation is atomic: it neither consumes the answer nor changes an existing appointment");
+    }
+    private static void CheckQuoteSubmission(Action<bool,string> check)
+    {
+        var goods=new List<BrewingMaterial>{new BrewingMaterial { ItemId=11,Key="water_ration",Count=1,ValueCents=3000 }};
+        var p=new BrewingProgress();p.Sign(22);
+        check(p.MayCollect(24) && p.CollectionState(24,true)==BrewingCollectionState.AwaitingArrival
+            && !p.CanPrepare(24,goods) && p.Prepare("quote",24,goods)==null && p.Batches.Count==0,
+            "a booked but unregistered arrival cannot show an accepted quote that the submit path rejects");
+        check(p.Arrive(24) && !p.Arrive(24),"arrival, greeting and native offer may confirm the same actual visit idempotently");
+        p=BrewingProgress.Restore(p.Data);
+        check(p.CollectionState(24,true)==BrewingCollectionState.Ready && p.CanPrepare(24,goods)
+            && p.CollectionState(24,false)==BrewingCollectionState.Closed,"restored visit and current business state give the form a precise readiness reason");
+        var nativeClient=new StoreClient { identifier=BrewingProgress.ClientId,sourceModId=XiaomanMod.Id,
+            clientIntent=StoreClient.ClientIntent.BARTER,isIntroduced=true };
+        var nativeReady=AccessTools.Method(typeof(XiaomanMod),"MaySubmitBrewingOffer");
+        Func<bool> maySubmit=() => (bool)nativeReady.Invoke(null,new object[]{nativeClient,p,24,true,goods});
+        check(maySubmit(),"a registered, introduced native material collector accepts the ready batch");
+        nativeClient.CompleteBusiness();
+        check(!maySubmit() && p.CanPrepare(24,goods),"native business completion prevents a misleading retry even if cancelled material bookkeeping is still ready");
+        nativeClient.isBusinessComplete=false;nativeClient.isIntroduced=false;
+        check(!maySubmit(),"quote and submit both wait for the native collection introduction");
+        nativeClient.isIntroduced=true;nativeClient.clientIntent=StoreClient.ClientIntent.DIALOGUE;
+        check(!maySubmit(),"Friday delivery dialogue cannot accidentally accept materials");
+        nativeClient.clientIntent=StoreClient.ClientIntent.BARTER;nativeClient.sourceModId="another.mod";
+        check(!maySubmit(),"the material submission guard never claims another mod's client");
+        var duplicate=new List<BrewingMaterial>{goods[0],goods[0]};
+        check(!p.CanPrepare(24,duplicate) && p.Prepare("quote",24,duplicate)==null
+            && !p.CanPrepare(24,null),"quote and submission both reject duplicate identities and an empty counter");
+        var tooMuch=new List<BrewingMaterial>{new BrewingMaterial { ItemId=12,Count=1,ValueCents=50001 }};
+        check(!p.CanPrepare(24,tooMuch) && p.Prepare("quote",24,tooMuch)==null,"over-limit quote cannot enable a failing submit button");
+        check(p.CanPrepare(24,goods) && p.Prepare("quote",24,goods)!=null
+            && p.CollectionState(24,true)==BrewingCollectionState.Processing && !p.CanPrepare(24,goods),
+            "accepted quote creates one batch and exposes its processing state");
+        p.RecoverInput(new[]{11});
+        check(p.CollectionState(24,true)==BrewingCollectionState.Ready && p.CanPrepare(24,goods)
+            && p.Prepare("quote",24,goods)!=null,"unmoved cancelled input permits a real retry with matching quote and submit rules");
+        p.RecoverInput(new int[0]);
+        check(p.CollectionState(24,true)==BrewingCollectionState.Collected && !p.CanPrepare(24,goods)
+            && p.Prepare("quote",24,goods)==null,"a completed batch explains why another Wednesday submission is unavailable");
+        check(p.CollectionState(25,true)==BrewingCollectionState.WrongDay,"weekday rejection is explicit");
+        var paused=new BrewingProgress();paused.Sign(22);paused.Pause();
+        check(paused.CollectionState(24,true)==BrewingCollectionState.NoAppointment && !paused.CanPrepare(24,goods),
+            "neither the quote nor opening an offer can create an unsigned or paused appointment");
+        paused.Blocked=true;
+        check(paused.CollectionState(24,true)==BrewingCollectionState.Blocked,"uncertain records keep their recovery barrier and show its actual reason");
+    }
+    private static void CheckMaterialQuotes(Action<bool,string> check)
+    {
+        var quote=AccessTools.Method(typeof(XiaomanMod),"BrewingMaterialCents");
+        Func<MaterialItem,long> value=item => { item.modifiedState=item.state.Clone();return (long)quote.Invoke(null,new object[]{item}); };
+        Func<string,int,long,MaterialItem> owned=(key,count,price) => {
+            var item=new MaterialItem(100) { identifier=key,unitCount=count,unitValue=price };
+            item.EnableTag("IS_OWNED_TAG",true);return item;
+        };
+        check(value(owned("water_ration",2,9999))==6000 && value(owned("water_ration_small",2,9999))==3000,
+            "real native material valuation counts ration volume and stack size without selling the container price");
+        var berry=owned("wine_berry",2,30);berry.EnableTag(WineHelper.WINE_INGREDIENT_TAG,true);
+        var yeast=owned("wine_yeast",3,10);yeast.EnableTag(WineHelper.WINE_YEAST_TAG,true);
+        check(value(berry)==6000 && value(yeast)==3000,"native berry and consumable yeast tags are accepted by the actual runtime evaluator");
+        yeast.EnableTag(WineHelper.WINE_YEAST_REUSABLE_TAG,true);
+        check(value(yeast)==0,"reusable yeast is not consumed as a material");
+        var unowned=new MaterialItem(101);check(value(unowned)==0,"visitor-owned goods cannot be submitted");
+        berry.Nested.Add(new MaterialItem(102));check(value(berry)==0,"nested contents are not silently transferred with a material container");
+        berry.Nested.Clear();berry.EnableTag("CHEMICAL_PRODUCT_TAG",true);check(value(berry)==0,"a chemical product is not accepted just because it also carries an ingredient tag");
     }
     private static void CheckNativeExchange(Action<bool,string> check)
     {

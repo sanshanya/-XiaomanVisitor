@@ -1,12 +1,12 @@
 {
   "schema": 1,
   "status": "good_ending_first_playtest",
-  "source": "v0.3 candidate; current opening day and existing gameplay take precedence",
+  "source": "Fourteen-visit pacing: high through visit 9, competition from actual visit 10, financial review from actual visit 12; no automatic pre-restructure closure.",
   "initial_cash": 900,
   "initial_principal": 8800,
   "rent": 420,
   "old_rate_bp": 100,
-  "old_term": 10,
+  "old_term": 12,
   "transfer_fee": 240,
   "partition_cost": 240,
   "fixed_cost": 345,
@@ -34,13 +34,14 @@
     19,
     20,
     21,
+    22,
+    23,
+    24
+  ],
+  "competition_orders": [
     16,
-    14,
     13,
-    12,
-    11,
-    10,
-    9
+    11
   ],
   "project_earliest": [
     1,

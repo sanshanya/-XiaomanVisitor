@@ -45,6 +45,9 @@ namespace XiaomanVisitor
             experimentalTavern = config.Define(TavernRules.ExperimentalConfigKey, TavernRules.ExperimentalDefault,
                 "实验性 / Experimental", () => Text("cfg_experimental_tavern"),
                 tooltip: () => Text("cfg_experimental_tavern_tip"), requiresRestart: true);
+            showEconomyLedger = config.Define(EconomyLedgerConfigKey, EconomyLedgerDefault,
+                "实验性 / Experimental", () => Text("cfg_economy_ledger"), tooltip: () => Text("cfg_economy_ledger_tip"));
+            showEconomyLedger.OnChanged += _ => UpdateEconomyLedgerAccess();
             InitVoice(config);
             buyback = new SideStories.BuybackStory();
             buyback.Init(this);
@@ -124,6 +127,7 @@ namespace XiaomanVisitor
         private void OnGameLoaded()
         {
             CloseTavernCassettePlayer();
+            CloseTavernMenu(); // Old contract controls must not survive a same-day reload.
             ResetGunReaction();
             Voice?.ResetConversation();
             moodOwner = null;
@@ -186,7 +190,7 @@ namespace XiaomanVisitor
                 return false;
             }
             int today = StoreStation.Instance.dayCounter;
-            var kind=CustomerQueuePolicy.Next(today,ReadStory(),ReadWork(),TavernMapEnabled,BrewingVisitDue(today));
+            var kind=CustomerQueuePolicy.Next(today,ReadStory(),ReadWork(),TavernMapEnabled,BrewingVisitDue(today),!TavernStoryFinished);
             if (kind==XiaomanVisitKind.None) return false;
             StoreClient client = kind==XiaomanVisitKind.Story ? CreateVisitor() : kind==XiaomanVisitKind.Brewing ? CreateBrewingVisitor() : CreateWorkThanksVisitor();
             ModHelper.SetClientSource(client, Id);

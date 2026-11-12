@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('check','inspect','publish','metadata','gallery','verify')][string]$Action='check',
+    [ValidateSet('check','inspect','content','publish','metadata','gallery','verify')][string]$Action='check',
     [string]$GameRoot,
     [string]$ExpectedSteamId='',
     [ValidateSet('schinese','english','japanese')][string]$Language='schinese'

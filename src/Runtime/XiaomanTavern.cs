@@ -284,13 +284,14 @@ namespace XiaomanVisitor
                 });
                 else if (TavernTrading && StoreStation.Instance.dayCounter>=TavernWorkConfig.UnlockDay)
                     choice(Text("ui_tavern_paid_work",TavernWorkConfig.Wage),RequestTavernWork);
-                choice(Text("ui_eco_more"),() => ShowTavernChoices("details"));
+                if (EconomyLedgerVisible || StoreStation.Instance.dayCounter>=22 || ReadStory().VisitIndex==12 && ReadRokaGift().Phase=="waiting")
+                    choice(Text("ui_eco_more"),() => ShowTavernChoices("details"));
                 choice(Text("ui_tavern_back"),() => ShowTavernMenu("root"));
             }
             else if (page=="details") {
                 if (ReadStory().VisitIndex==12 && ReadRokaGift().Phase=="waiting") choice(Text("ui_w12_roka"),OfferRoka);
                 if (StoreStation.Instance.dayCounter>=22) choice(Text(TavernTrading?"ui_w04_supply":"ui_w13_records"),RequestSupply);
-                choice(Text("ui_eco_open"),() => ShowEconomyWindow("contracts"));
+                if (EconomyLedgerVisible) choice(Text("ui_eco_open"),() => ShowEconomyWindow("contracts"));
                 choice(Text("ui_tavern_back"),() => ShowTavernMenu("interaction"));
             }
             else if (page=="help") {

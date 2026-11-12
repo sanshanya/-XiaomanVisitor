@@ -27,7 +27,16 @@ namespace XiaomanVisitor
             return TavernMapEnabled && !TavernStoryFinished && ReadBrewing().MayVisit(day,TavernTrading);
         }
         private static bool BrewingTarget()
-        { return PlayerStore.HasInstance && PlayerStore.Instance.currentClientInstance?.GetClientBlueprint()?.identifier==BrewingProgress.ClientId; }
+        {
+            var client=PlayerStore.HasInstance?PlayerStore.Instance.currentClientInstance?.GetClientBlueprint():null;
+            return client?.identifier==BrewingProgress.ClientId && client.sourceModId==Id;
+        }
+        internal static bool MaySubmitBrewingOffer(StoreClient client,BrewingProgress progress,int day,bool businessOpen,List<BrewingMaterial> materials)
+        {
+            return client?.identifier==BrewingProgress.ClientId && client.sourceModId==Id
+                && client.clientIntent==StoreClient.ClientIntent.BARTER && client.isIntroduced && !client.isBusinessComplete
+                && businessOpen && progress!=null && progress.CanPrepare(day,materials);
+        }
 
         internal static long BrewingMaterialCents(GameItem item)
         {
@@ -48,14 +57,16 @@ namespace XiaomanVisitor
             }
             return value<=0 || value>long.MaxValue/100m ? 0 : (long)decimal.Floor(value*100m);
         }
-        private List<BrewingMaterial> SelectedBrewingMaterials()
+        private List<BrewingMaterial> SelectedBrewingMaterials() { GameItem rejected;return SelectedBrewingMaterials(out rejected); }
+        private List<BrewingMaterial> SelectedBrewingMaterials(out GameItem rejected)
         {
+            rejected=null;
             var items=EmporiumEntry.Instance.backInvinvElement.childItems;
             if (items.Count==0) return null;
             var result=new List<BrewingMaterial>();
             foreach (var item in items) {
                 long cents=BrewingMaterialCents(item);
-                if (cents<=0) return null;
+                if (cents<=0) { rejected=item;return null; }
                 result.Add(new BrewingMaterial { ItemId=item.GetUniqueID(),Key=item.identifier,Count=item.unitCount,ValueCents=cents });
             }
             return result;
@@ -64,25 +75,41 @@ namespace XiaomanVisitor
         {
             if (!IsBrewingCollection(client)) return "";
             var goods=SelectedBrewingMaterials();
-            return Text("ui_brew_table")+":"+ReadBrewing().MaterialLimit(StoreStation.Instance.dayCounter)+":"+BrewingConfig.BonusPercent+":"
+            var p=ReadBrewing();int day=StoreStation.Instance.dayCounter;
+            return Text("ui_brew_table")+":"+p.MaterialLimit(day)+":"+p.CollectionState(day,TavernTrading)+":"+BrewingConfig.BonusPercent+":"
+                +(client.isIntroduced?"introduced:":"introducing:")
+                +string.Join(",",EmporiumEntry.Instance.backInvinvElement.childItems.Select(i => i.GetHashCode()+":"+i.unitCount))+":"
                 +(goods==null?"invalid:"+EmporiumEntry.Instance.backInvinvElement.childItems.Count:goods.Sum(m => (decimal)m.ValueCents).ToString("0"));
         }
         private bool IsBrewingCollection(StoreClient client)
-        { return enabled && TavernMapEnabled && BrewingTarget() && client?.identifier==BrewingProgress.ClientId && client.clientIntent==StoreClient.ClientIntent.BARTER; }
+        { return enabled && TavernMapEnabled && BrewingTarget() && client?.sourceModId==Id
+                && PlayerStore.Instance.currentClientInstance.GetClientBlueprint()==client && client.clientIntent==StoreClient.ClientIntent.BARTER; }
         internal void ShowBrewingQuote(StoreClient client,NegotiationTabletFrame frame)
         {
             if (!IsBrewingCollection(client) || frame==null) return;
-            var goods=SelectedBrewingMaterials();decimal value=goods==null?0:goods.Sum(m => (decimal)m.ValueCents)/100m;
-            int limit=ReadBrewing().MaterialLimit(StoreStation.Instance.dayCounter);
+            GameItem rejected;var goods=SelectedBrewingMaterials(out rejected);decimal value=goods==null?0:goods.Sum(m => (decimal)m.ValueCents)/100m;
+            var p=ReadBrewing();int day=StoreStation.Instance.dayCounter,limit=p.MaterialLimit(day);
+            var state=p.CollectionState(day,TavernTrading);
             TabletUI.ListRow(frame,frame.content,Text("ui_brew_material_value"),value.ToString("0.##")+" CR",false,null,null);
             TabletUI.ListRow(frame,frame.content,Text("ui_brew_limit"),limit+" CR",false,null,null);
             TabletUI.ListRow(frame,frame.content,Text("ui_brew_return_value"),(value*(100+BrewingConfig.BonusPercent)/100m).ToString("0.##")+" CR",false,null,null);
             bool empty=EmporiumEntry.Instance.backInvinvElement.childItems.Count==0;
-            string status=empty?Text("ui_brew_empty"):goods==null?Text("ui_brew_invalid")
+            string status=state!=BrewingCollectionState.Ready?Text("ui_brew_state_"+state.ToString().ToLowerInvariant())
+                :client.isBusinessComplete?Text("ui_brew_state_visitended")
+                :!client.isIntroduced?Text("ui_brew_state_awaitingarrival")
+                :empty?Text("ui_brew_empty"):goods==null?(rejected==null?Text("ui_brew_invalid"):Text("ui_brew_invalid_item",rejected.GetDisplayName()))
                 :value>limit?Text("ui_brew_over_limit",(value-limit).ToString("0.##"))
                 :value==limit?Text("ui_brew_at_limit")
                 :Text("ui_brew_remaining",(limit-value).ToString("0.##"));
-            TabletUI.TextRow(frame,frame.content,status,18f,(!empty && goods==null || value>limit)?TabletStyle.RED:value==limit?TabletStyle.GREEN:TabletStyle.INK);
+            TabletUI.TextRow(frame,frame.content,status,18f,(state!=BrewingCollectionState.Ready || client.isBusinessComplete || !client.isIntroduced || !empty && goods==null || value>limit)?TabletStyle.RED:value==limit?TabletStyle.GREEN:TabletStyle.INK);
+        }
+        private void RegisterBrewingArrival(StoreClient client)
+        {
+            if (!enabled || !TavernMapEnabled || !BrewingTarget() || client.sourceModId!=Id
+                || PlayerStore.Instance.currentClientInstance.GetClientBlueprint()!=client) return;
+            int day=StoreStation.Instance.dayCounter;
+            if (BrewingProgress.Wednesday(day) && !TavernTrading) return;
+            var p=ReadBrewing();if (p.Arrive(day)) SaveBrewing(p);
         }
         private StoreClient CreateBrewingVisitor()
         {
@@ -92,12 +119,11 @@ namespace XiaomanVisitor
                 IsPersonalConsumption=false,CanReturn=false,CanReturnAsBuyer=false };
             ConfigureGunReaction(c);
             c.barterOffer=new BarterOffer { ownerClient=c,barterTextBody=Text("ui_brew_table"),
-                onInstance=() => { c.isIntroduced=true; },
+                onInstance=() => { RegisterBrewingArrival(c);c.isIntroduced=true; },
                 getBarterResult=() => {
                     var goods=SelectedBrewingMaterials();
                     var p=ReadBrewing();
-                    bool valid=MayCollectBrewing && goods!=null && p.AcceptsValue(goods.Sum(m => (decimal)m.ValueCents),StoreStation.Instance.dayCounter) && p.Pending==null && !p.Blocked
-                        && !p.Batches.Any(b => b.Day==StoreStation.Instance.dayCounter && b.Phase!="cancelled");
+                    bool valid=MaySubmitBrewingOffer(c,p,StoreStation.Instance.dayCounter,TavernTrading,goods);
                     // Valuation and limits belong to the native tablet, never a
                     // generated character line when materials are moved.
                     return new BarterResult { isAccepted=valid,response=goods==null?Text("xm_brew_wrong"):"" };
@@ -109,7 +135,7 @@ namespace XiaomanVisitor
             c.mainDialogue=Line(c,arrival,MayCollectBrewing?Mood.Smile:Mood.Soft);
             var request=MayCollectBrewing?Append(c.mainDialogue,c,"xm_brew_request",Mood.Soft):c.mainDialogue;
             c.mainDialogue.startAction+=() => {
-                var p=ReadBrewing(); if (p.Arrive(StoreStation.Instance.dayCounter)) SaveBrewing(p);
+                RegisterBrewingArrival(c);
                 TryDeliverBrewing();
             };
             request.SetEndAction(() => {
@@ -124,7 +150,7 @@ namespace XiaomanVisitor
             c.repeatDialogue=Line(c,MayCollectBrewing?"xm_brew_request":"xm_brew_last",Mood.Soft);
             c.placedWrongItemWhenSellingToDialogue=Line(c,"xm_brew_wrong",Mood.Soft);
             c.allDoneDialogue=Line(c,"xm_brew_bye",Mood.Soft).SetEndAction(() => PlayerStore.Instance.DismissCurrentClient(false));
-            c.OnArrival=() => SetMood(c,Mood.Neutral);
+            c.OnArrival=() => { SetMood(c,Mood.Neutral);RegisterBrewingArrival(c); };
             c.OnDismiss=() => { brewingRenewalClient=null;Voice?.Stop();ResetGunReaction();SetMood(c,Mood.Neutral); };
             c.CompleteClientCreation();return c;
         }
@@ -134,6 +160,7 @@ namespace XiaomanVisitor
             if (!MayCollectBrewing || brewingBusy) return false;
             try {
                 var materials=SelectedBrewingMaterials();var p=ReadBrewing();
+                if (!MaySubmitBrewingOffer(PlayerStore.Instance.currentClientInstance.GetClientBlueprint(),p,StoreStation.Instance.dayCounter,TavernTrading,materials)) return false;
                 var batch=p.Prepare(WorkRunIdentity,StoreStation.Instance.dayCounter,materials);
                 if (batch==null) return false;
                 SaveBrewing(p);return true;
@@ -178,14 +205,15 @@ namespace XiaomanVisitor
             var renewal=p.Renewal;
             Dialogue next;
             if (TavernTrading && renewal!=null) {
-                string batchId=renewal.Id;int revision=p.AgreementRevision,day=StoreStation.Instance.dayCounter;
+                string batchId=renewal.Id,run=WorkRunIdentity;int revision=p.AgreementRevision,day=StoreStation.Instance.dayCounter;
                 next=Line(c,"xm_brew_renew",Mood.Smile);
                 var yes=new Dialogue().SetText("PLAYER",Text("ui_brew_continue"))
                     .SetNextDialogue(Line(c,"xm_brew_renew_yes",Mood.Smile).SetEndAction(dismiss));
                 var no=new Dialogue().SetText("PLAYER",Text("ui_brew_pause_choice"))
                     .SetNextDialogue(Line(c,"xm_brew_renew_no",Mood.Soft).SetEndAction(dismiss));
                 Action<bool> answer=accept => {
-                    if (!BrewingTarget() || StoreStation.Instance.dayCounter!=day || accept && !TavernTrading) return;
+                    if (!BrewingTarget() || PlayerStore.Instance.currentClientInstance.GetClientBlueprint()!=c
+                        || StoreStation.Instance.dayCounter!=day || WorkRunIdentity!=run || accept && !TavernTrading) return;
                     var state=ReadBrewing();
                     if (state.ContinueAfterDelivery(batchId,revision,day,accept)) SaveBrewing(state);
                 };

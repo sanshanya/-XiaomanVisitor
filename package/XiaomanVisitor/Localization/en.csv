@@ -552,7 +552,7 @@ xm_brew_wrong,I'm only collecting basic-quality water or better and brewing ingr
 xm_brew_accept,"I’ll take these, then. I’ll bring the finished bottles on Friday, senpai."
 xm_brew_bye,"I’ll head back now, senpai."
 ui_brew_terms,"Sign at the tavern for Wednesday collection and Friday delivery. Decide whether to continue after delivery, or pause and renew at the tavern.\nAccepts basic-quality water or better, brewing ingredients and consumable yeast. No recipe or cash payment required.\nBottles are worth {0}% more than the materials. Large: {1} CR; small: {2} CR. Remainders carry over.\nCurrent limit: {3} CR; rises {4} CR each week, up to {5} CR. No minimum; delivery is scheduled only after materials are handed over."
-ui_brew_table,Place materials for Xiaoman on the trading counter. Neither side pays credits.\nWater containers are handed over too; only their water contents are valued.
+ui_brew_table,"Place this batch of materials on the counter together, then accept the offer. Submit each batch once; neither side pays credits.\nWater containers are handed over too, but only the water is valued."
 ui_brew_quote,Materials: {0} CR · Bottles: {1} CR (Friday delivery)
 ui_brew_balance,Awaiting bottling: {0} CR
 ui_brew_receipt,Day {0}: materials {1} CR → bottles {2} CR\nDelivery from day {3}
@@ -598,12 +598,12 @@ ui_eco_dates,"Starts on day {0} · {1} operating weeks settled\nNext settlement:
 ui_eco_week,"Period {0}, through day {1}\nRevenue {2} / ingredients {3} / operating costs {4} / rent paid {5} CR\nFinance charges {6} / rent advanced {7} / repaid {8} CR"
 ui_eco_deliveries,"Order receipt: day {0}, {1} meals/drinks delivered to the two dock teams\nSublet rent receipt: day {2}, repair shop"
 ui_eco_empty,No full operating week has settled yet. Actual purchases and work are counted once per receipt.
-ui_eco_lease,"Opening finance: 8,800 CR (equipment 5,400; fit-out 2,600; deposit 800), paid directly to suppliers and the landlord. Business cash starts at 900 CR; the loan is not counted as cash again.\nWeekly rent is 420: cash rent 90 for five periods, then 260 for two; the lender advances the difference into principal. Old interest is 1% per week; a 240 CR filing fee falls in period six; maturity is after ten operating weeks.\nPersonal living money and Monday shopping budgets remain separate.\n\nThe existing restricted luxury-stock float is listed in the inventory account and cannot repay debt. Only consumed cost is reimbursed to that pool; the operating ledger alone records the sale margin."
+ui_eco_lease,"Opening finance: 8,800 CR (equipment 5,400; fit-out 2,600; deposit 800), paid directly to suppliers and the landlord. Business cash starts at 900 CR; the loan is not counted as cash again.\nWeekly rent is 420: cash rent 90 for five periods, then 260 for two; the lender advances the difference into principal. Old interest is 1% per week; a 240 CR filing fee falls in period six; maturity is after twelve operating weeks. Maturity alone never pauses trading; continued operation is accounted for on the same terms.\nPersonal living money and Monday shopping budgets remain separate.\n\nThe existing restricted luxury-stock float is listed in the inventory account and cannot repay debt. Only consumed cost is reimbursed to that pool; the operating ledger alone records the sale margin."
 ui_eco_migration,"Existing records are preserved. The new account starts on the next complete Monday after acceptance; no historical profit, loan or interest is backfilled. Departed characters stay departed."
 ui_eco_accept_lease,Accept the new lease and start date
-ui_eco_review,"The maturity balance is frozen. Review the figures, then process the two business contracts separately. The handling window starts only after you acknowledge the full notice."
-ui_eco_ack,"Acknowledge the figures, options and handling window"
-ui_eco_deadline,"Acknowledged on day {0}: {1}/7 available handling days used. At the deadline, a final explicit decision is required; departure is never decided invisibly."
+ui_eco_review,"This week is settled and trading is paused for review. No sales, rent or interest accrue while paused. Process the contracts separately, then choose restructuring, extension or closure. Departure is never automatic."
+ui_eco_ack,"Acknowledge the notice, figures and handling window"
+ui_eco_deadline,Notice acknowledged on day {0}: {1}/7 available handling days since trading paused. An explicit choice is still required at expiry; departure is never automatic.
 ui_eco_orders_terms,"Standing order: two distinct dock teams each order ten non-alcoholic drinks/light meals weekly, at 65 CR each, with 30 CR ingredient cost. Xiaoman prepares and delivers them. These are additional buyers, separate from existing regulars. A signed receipt returns next day; deliveries and income start after restructuring."
 ui_eco_sublet_terms,Sublet: the repair shop pays 240 CR weekly for the inner room. Xiaoman keeps the bar and window seats. The landlord gives written consent; total rent remains 420. Reduced idle shifts lower fixed costs to 170 (her pay 110; utilities/cleaning 60). This requires its own signature and next-day receipt.
 ui_eco_sign_orders,Sign standing orders (receipt tomorrow)
@@ -726,6 +726,25 @@ xm_eco_good_05_unknown,"If you are not in a hurry, would you like to stay a litt
 xm_eco_clear_01_unknown,The loan clearance receipt just arrived. I have checked it several times. It really is all paid off.
 xm_eco_review_entry_unknown,Welcome. The ledger is over here. Come sit down.
 ui_eco_repayment_receipt,"Voluntary repayment receipt: day {0}, actual payment {1} CR"
-ui_eco_review_arrived,Xiaoman’s tavern is closed for financial review. Review the figures and options through Business matters at the tavern or the merchants’ association phone shortcut.
+ui_eco_review_arrived,Xiaoman’s tavern has received the settlement notice and promotion records. Review or request handling through Business matters or the merchants’ association phone. This notice does not automatically close the tavern.
 ui_eco_unavailable,"Conditions are not met. Check receipt dates, remaining eligibility and affordability. No payment or duplicate agreement was made."
 ui_eco_unsettled,"This period, receipted and awaiting weekly settlement: received {0} CR; consumed costs and wages {1} CR. This is not yet included in the settled cash above."
+ui_eco_review_available,"The settlement notice and promotion records have arrived. Review the figures and process the two business contracts separately. Trading continues normally. Only an explicit review request pauses trading, after this week is settled."
+ui_eco_request_review,Request review (pause after this week is settled)
+ui_eco_review_scheduled,"Requested. Trading pauses on day {0}, after this week is settled. Actual sales and wages remain included. The handling window starts after the pause."
+ui_eco_contracts_wait,No business adjustment contracts require action yet. Normal accounts and lease terms are available on the other pages.
+ui_eco_phase_maturity_pending,"Matured; action pending, trading continues"
+ui_eco_phase_review_pending,Review requested; pause after this week is settled
+ui_eco_remedy_arrived,Xiaoman’s tavern has a repayment shortfall and has paused for remedy. Check Business matters for the amount and reopening options. No automatic departure or player cash deduction occurs.
+ui_eco_partial_week,"Resumed legacy account: {0} active days this period. Automatic demand, rent, overhead and interest are prorated; actual transaction receipts retain their full amounts."
+ui_brew_invalid_item,“{0}” does not meet the material agreement. Take it back; remove any other items inside its container first.
+ui_brew_state_blocked,The previous material receipt needs review. Keep this save and report the issue; collection is paused.
+ui_brew_state_processing,The previous material handover is being confirmed. Please wait.
+ui_brew_state_wrongday,Materials are collected on Wednesdays. They cannot be submitted today.
+ui_brew_state_closed,Material collection is currently paused. Accepted batches will still be delivered as agreed.
+ui_brew_state_noappointment,No collection is booked. Sign or renew the material partnership at the tavern first.
+ui_brew_state_collected,Today’s batch has already been received. Renew the next collection after the wine delivery.
+ui_brew_state_awaitingarrival,Let Xiaoman finish her collection greeting before submitting materials.
+cfg_economy_ledger,Show business ledger
+cfg_economy_ledger_tip,"Off by default. Enable Business matters, the pickup list and the merchants’ association phone. Turning this off only hides these interfaces; settlements continue and business and story records are retained."
+ui_brew_state_visitended,This visit has already ended and cannot accept another submission. Take back untraded materials and use a later booked collection.

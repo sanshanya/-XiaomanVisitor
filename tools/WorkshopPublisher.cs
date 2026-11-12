@@ -28,8 +28,8 @@ internal static class WorkshopPublisher
     private static int Main(string[] args)
     {
         Console.OutputEncoding = new UTF8Encoding(false);
-        if (args.Length < 2 || !new[] { "check", "inspect", "publish", "metadata", "gallery", "verify" }.Contains(args[0]))
-        { Console.Error.WriteLine("Usage: WorkshopPublisher check|inspect|publish|metadata|gallery|verify <project-root> [expected-SteamID64] [schinese|english|japanese]"); return 2; }
+        if (args.Length < 2 || !new[] { "check", "inspect", "content", "publish", "metadata", "gallery", "verify" }.Contains(args[0]))
+        { Console.Error.WriteLine("Usage: WorkshopPublisher check|inspect|content|publish|metadata|gallery|verify <project-root> [expected-SteamID64] [schinese|english|japanese]"); return 2; }
         language = args.Length > 3 ? args[3] : "schinese";
         Require(new[] { "schinese", "english", "japanese" }.Contains(language), "Unsupported Workshop language.");
         root = Path.GetFullPath(args[1]);
@@ -51,7 +51,8 @@ internal static class WorkshopPublisher
             state["owner_steamid"] = owner.ToString(); state["appid"] = App;
             if (args[0] == "inspect") { Inspect(PublishedId(), owner); return 0; }
             if (args[0] == "verify") { Verify(PublishedId(), owner); return 0; }
-            Publish(owner, args[0] == "gallery", args[0] == "metadata");
+            if (args[0] == "content") PublishContent(owner);
+            else Publish(owner, args[0] == "gallery", args[0] == "metadata");
             return state.Value<bool?>("needs_legal_agreement") == true ? 20 : 0;
         }
         catch (Exception error) { Console.Error.WriteLine(error.ToString()); return 1; }
@@ -60,17 +61,11 @@ internal static class WorkshopPublisher
 
     private static void Publish(ulong owner, bool galleryOnly, bool metadataOnly)
     {
-        JObject manifest = JObject.Parse(File.ReadAllText(Path.Combine(release, "release-manifest.json")));
+        JObject manifest = ReadVerifiedManifest();
         JObject page = JObject.Parse(File.ReadAllText(PageFile));
         bool preserveGallery = page.Value<bool?>("preserve_existing_gallery") == true;
         Require(!galleryOnly || !preserveGallery, "Gallery replacement requires an explicit gallery draft.");
         string content = Path.GetFullPath((string)manifest["content_folder"]);
-        Require(content == Path.Combine(root, "package", "XiaomanVisitor"), "Unexpected content root.");
-        foreach (JProperty file in ((JObject)manifest["files"]).Properties())
-            Require(Hash(Path.Combine(content, file.Name.Replace('/', Path.DirectorySeparatorChar))) == (string)file.Value,
-                "Release content changed: " + file.Name);
-        Require(Directory.GetFiles(content, "*", SearchOption.AllDirectories).Length == ((JObject)manifest["files"]).Count,
-            "Unexpected file added to the publication folder.");
         JArray gallery = (JArray)page["gallery"];
         Require(gallery.Count == 3, "Exactly three approved images are required.");
         string primary = Path.Combine(root, (string)gallery[0]["file"]);
@@ -137,6 +132,83 @@ internal static class WorkshopPublisher
         }
         SaveState(); WriteVdf(id);
         Verify(id, owner);
+    }
+
+    private static JObject ReadVerifiedManifest()
+    {
+        JObject manifest = JObject.Parse(File.ReadAllText(Path.Combine(release, "release-manifest.json")));
+        Require((string)manifest["version"] == version && (string)manifest["mod_id"] == "sansm.xiaoman.visitor",
+            "Release manifest identity does not match the current main mod.");
+        string content = Path.GetFullPath((string)manifest["content_folder"]);
+        Require(content == Path.Combine(root, "package", "XiaomanVisitor"), "Unexpected content root.");
+        foreach (JProperty file in ((JObject)manifest["files"]).Properties())
+            Require(Hash(Path.Combine(content, file.Name.Replace('/', Path.DirectorySeparatorChar))) == (string)file.Value,
+                "Release content changed: " + file.Name);
+        Require(Directory.GetFiles(content, "*", SearchOption.AllDirectories).Length == ((JObject)manifest["files"]).Count,
+            "Unexpected file added to the publication folder.");
+        return manifest;
+    }
+
+    // Explicit content-only updates never set titles, descriptions, visibility or previews.
+    private static void PublishContent(ulong owner)
+    {
+        JObject manifest = ReadVerifiedManifest();
+        ulong id = PublishedId();
+        string requestedLanguage = language;
+        var before = new JObject();
+        foreach (string localizedLanguage in new[] { "schinese", "english", "japanese" })
+        {
+            language = localizedLanguage;
+            RemoteInfo remote = Query(id);
+            Require(remote.Owner == owner && remote.ConsumerApp == App && !remote.Banned,
+                "Existing item ownership/app/state mismatch.");
+            before[language] = MetadataSnapshot(remote);
+        }
+        language = requestedLanguage;
+        state["publishedfileid"] = id.ToString();
+        state["metadata_before_content_update"] = before;
+        state["content_only"] = true;
+        state["status"] = "prepared";
+        SaveState();
+
+        update = SteamUGC.StartItemUpdate(AppId, new PublishedFileId_t(id)); hasUpdate = true;
+        Require(SteamUGC.SetItemUpdateLanguage(update, language), "SetItemUpdateLanguage failed.");
+        Require(SteamUGC.SetItemContent(update, (string)manifest["content_folder"]), "SetItemContent failed.");
+        state["status"] = "uploading"; SaveState();
+        Console.WriteLine("Uploading " + version + " content only; preserving all existing Workshop metadata...");
+        SubmitItemUpdateResult_t submitted = Wait<SubmitItemUpdateResult_t>(SteamUGC.SubmitItemUpdate(update, version + " 更新"), 1800);
+        hasUpdate = false;
+        Require(submitted.m_eResult == EResult.k_EResultOK, "SubmitItemUpdate: " + submitted.m_eResult);
+        state["status"] = "uploaded";
+        state["uploaded_version"] = version;
+        state["uploaded_files_sha256"] = manifest["files"].DeepClone();
+        state["needs_legal_agreement"] = submitted.m_bUserNeedsToAcceptWorkshopLegalAgreement;
+        state["url"] = "https://steamcommunity.com/sharedfiles/filedetails/?id=" + id;
+        SaveState();
+
+        var after = new JObject();
+        foreach (JProperty localized in before.Properties())
+        {
+            language = localized.Name;
+            JObject observed = MetadataSnapshot(Query(id));
+            Require(JToken.DeepEquals(localized.Value, observed), "Workshop metadata changed during content update: " + language);
+            after[language] = observed;
+            Console.WriteLine("Preserved " + language + " title, description, visibility and previews.");
+        }
+        language = requestedLanguage;
+        state["metadata_after_content_update"] = after;
+        state["remote_metadata_verified"] = true;
+        state["status"] = submitted.m_bUserNeedsToAcceptWorkshopLegalAgreement ? "uploaded_needs_legal_agreement" : "published";
+        SaveState();
+        Console.WriteLine("VERIFIED " + state["status"] + ": " + state["url"]);
+    }
+
+    private static JObject MetadataSnapshot(RemoteInfo remote)
+    {
+        return new JObject { ["owner"] = remote.Owner.ToString(), ["consumer_app"] = remote.ConsumerApp,
+            ["title"] = remote.Title, ["description"] = remote.Description,
+            ["visibility"] = remote.Visibility.ToString(), ["banned"] = remote.Banned,
+            ["previews"] = remote.Previews.DeepClone() };
     }
 
     private sealed class RemoteInfo

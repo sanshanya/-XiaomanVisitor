@@ -40,15 +40,23 @@ namespace XiaomanVisitor
         private void BuildSupplyMenu(CustomUIBuilder b,string page)
         {
             var old=ReadSupply();var brewing=ReadBrewing();int day=StoreStation.Instance.dayCounter;
-            Action<string,Action> button=(label,click) => { b.AddButton(label,() => { if (TavernMayAct && !TavernDialogueBusy) click(); });b.Last.SetPreferredSize(360,38); };
+            var owner=b.Handle;string run=WorkRunIdentity;int revision=brewing.AgreementRevision;
+            Action<string,Action> button=(label,click) => {
+                b.AddButton(label,() => {
+                    if (TavernMayAct && !TavernDialogueBusy && ReferenceEquals(tavernMenu,owner) && owner.IsAlive
+                        && tavernMenuPage==page && StoreStation.Instance.dayCounter==day && WorkRunIdentity==run) click();
+                });
+                b.Last.SetPreferredSize(360,38);
+            };
             b.BeginScroll(490);
             if (brewing.Blocked || brewing.Pending!=null || old.Blocked || old.Pending!=null) b.AddWarning(Text("ui_w04_pending"));
             if (page=="support_news") {
                 b.AddLabel(Text("xm_w04_news_title"));b.AddLabel(Text("xm_w04_news_body"));b.AddLabel(Text("ui_w04_phone",ReadSupport().PhoneNumber));
             } else {
                 b.AddLabel(BrewingTerms);
+                int collectionDay=brewing.NextCollectionAfter(day);
                 b.AddLabel(brewing.AgreementActive
-                    ? (brewing.NextCollectionDay>=0?Text("ui_brew_scheduled",brewing.NextCollectionDay):Text("ui_brew_waiting"))
+                    ? (collectionDay>=0?Text("ui_brew_scheduled",collectionDay):Text("ui_brew_waiting"))
                     : Text("ui_brew_inactive"));
                 b.AddLabel(Text("ui_brew_balance",(brewing.CreditMilli/1000m).ToString("0.###")));
                 foreach (var batch in brewing.Batches.Where(v => v.Phase=="complete").Reverse().Take(5))
@@ -61,12 +69,18 @@ namespace XiaomanVisitor
                 if (TavernTrading && !brewing.Blocked && page=="supply") {
                     if (!brewing.AgreementActive || brewing.NextCollectionDay<0)
                         button(Text(brewing.AgreementRevision==0?"ui_w04_sign":"ui_brew_resume"),() => {
-                            var state=ReadBrewing();if (!state.Sign(day)) return;SaveBrewing(state);
+                            if (!TavernTrading) return;
+                            var state=ReadBrewing();if (!state.ChangeAgreement(day,revision,true)) return;SaveBrewing(state);
+                            // Historical W04 note compatibility only. This old
+                            // signature is never authority for a new pickup.
                             var prior=ReadSupply();if (prior.Sign(day)) SaveSupply(prior);
                             CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w04_supply_yes"});
                         });
                     if (brewing.AgreementActive)
-                        button(Text("ui_brew_pause"),() => { var state=ReadBrewing();if (state.Pause()) SaveBrewing(state);ShowTavernMenu("supply"); });
+                        button(Text("ui_brew_pause"),() => {
+                            var state=ReadBrewing();if (!state.ChangeAgreement(day,revision,false)) return;
+                            SaveBrewing(state);ShowTavernMenu("supply");
+                        });
                 }
                 if (day>=SupplyConfig.ContractDay) button(Text("ui_w04_group"),() => ModHelper.OpenPaper(Id,"w04_group_contract"));
             }
