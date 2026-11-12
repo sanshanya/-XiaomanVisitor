@@ -33,7 +33,7 @@ namespace XiaomanVisitor
 
         private StoreClient CreateStoryVisitor(int index)
         {
-            StoryEpisode episode = StoryRules.Episode(index);
+            StoryEpisode episode = EconomyEpisode(index);
             var session = new StorySession { Episode = episode, Day = StoreStation.Instance.dayCounter,
                 ChanceRoll = UnityEngine.Random.Range(0, 100), PairRoll = UnityEngine.Random.Range(0, 3) };
             bool mergedGift=TavernMapEnabled && ReadWork().ThanksDue(session.Day);
@@ -47,27 +47,7 @@ namespace XiaomanVisitor
             ConfigureGunReaction(client);
             client.SetBudget(episode.Credits);
             client.willAcceptItem = item => IsChapterDemand(item, episode.Demand);
-            Dialogue tail = null;
-            foreach (StoryLineSpec spec in episode.Opening)
-            {
-                string key=TavernRules.OpeningLineKey(index,spec.Key,session.Day);
-                if (key=="xm_04_03" && ReadSupply().Signed) key="xm_04_03_existing";
-                if (key=="xm_03_04" && ReadWork().HasWorked) key="xm_03_04_already_worked";
-                Dialogue next = StoryLine(client,key,spec.Mood,episode.Credits);
-                if (key=="xm_05_gift") next.startAction+=TryDeliverImprovGift;
-                if (tail == null) client.mainDialogue = next;
-                else tail.nextDialogue = next;
-                tail = next;
-                if (spec==episode.Opening[0] && TavernMapEnabled && ReadWork().ThanksDue(session.Day))
-                    tail=AppendWorkThanks(tail,client,true);
-            }
-            if (!string.IsNullOrEmpty(episode.CocktailKey) && session.SaleKeys.Length > 0)
-            {
-                tail.nextDialogue = StoryLine(client, episode.CocktailKey, Mood.Soft);
-                tail = tail.nextDialogue;
-            }
-            client.mainDialogue.startAction += () => BeginStorySession(session);
-            tail.SetEndAction(() => { client.OnIntroduced(); session.OpeningFinished = true; TickStoryStock(); SetMood(client, Mood.Neutral); });
+            ConfigureStoryOpening(session);
             client.acceptDealDialogue = StoryLine(client, episode.AcceptKey, episode.AcceptKey == "accept_return" ? Mood.Soft : Mood.Smile);
             client.acceptDealDialogue.startAction += () => session.Flow.DemandAcceptanceDisplayed();
             client.placedWrongItemWhenSellingToDialogue = Line(client, "wrong_item", Mood.Worried);
@@ -76,12 +56,38 @@ namespace XiaomanVisitor
                 : episode.Demand == XiaomanDemand.Food ? "repeat_food" : episode.Demand == XiaomanDemand.Household ? "repeat_household" : "repeat";
             client.repeatDialogue = Line(client, repeat, Mood.Soft);
             AttachStoryTrading(session);
-            client.OnArrival = () => { storySession = session; SetMood(client, Mood.Neutral); };
+            client.OnArrival = () => {
+                if (index>=13 && !session.Started) {
+                    session.Episode=EconomyEpisode(index);ConfigureStoryOpening(session);
+                    client.allDoneDialogue=StoryGoodbye(session);
+                }
+                storySession = session; SetMood(client, Mood.Neutral);
+            };
             client.OnDismiss = () => { Voice?.Stop(); ResetGunReaction(); SetMood(client, Mood.Neutral); if (storySession == session) storySession = null; };
             client.CompleteClientCreation();
             client.noAcceptingContraband = true;
             SideStories.BuybackStory.Instance?.ConfigureStoryBuyer(client, episode.Demand);
             return client;
+        }
+
+        private void ConfigureStoryOpening(StorySession session)
+        {
+            var episode=session.Episode;var client=session.Client;Dialogue tail=null;
+            foreach (var spec in episode.Opening) {
+                string key=TavernRules.OpeningLineKey(episode.Index,spec.Key,session.Day);
+                if (key=="xm_04_03" && ReadSupply().Signed) key="xm_04_03_existing";
+                if (key=="xm_03_04" && ReadWork().HasWorked) key="xm_03_04_already_worked";
+                Dialogue next=StoryLine(client,key,spec.Mood,episode.Credits);
+                if (key=="xm_05_gift") next.startAction+=TryDeliverImprovGift;
+                if (tail==null) client.mainDialogue=next;else tail.nextDialogue=next;
+                tail=next;
+                if (spec==episode.Opening[0] && TavernMapEnabled && ReadWork().ThanksDue(session.Day)) tail=AppendWorkThanks(tail,client,true);
+            }
+            if (!string.IsNullOrEmpty(episode.CocktailKey) && session.SaleKeys.Length>0) {
+                tail.nextDialogue=StoryLine(client,episode.CocktailKey,Mood.Soft);tail=tail.nextDialogue;
+            }
+            client.mainDialogue.startAction+=() => BeginStorySession(session);
+            tail.SetEndAction(() => { client.OnIntroduced();session.OpeningFinished=true;TickStoryStock();SetMood(client,Mood.Neutral); });
         }
 
         private void BeginStorySession(StorySession session)
@@ -94,6 +100,7 @@ namespace XiaomanVisitor
             session.Started = true;
             storySession = session;
             record.SaleKeys=session.SaleKeys;
+            if (record.Index>=13) record.EndingBranch=EconomyStoryApplies?ReadEconomy().ChapterBranch:"leave";
             SaveStory(progress);
             ModHelper.SetModDataInt(Id, "last_visit_day", session.Day);
             if (session.Episode.IsFinal)
@@ -133,6 +140,7 @@ namespace XiaomanVisitor
         {
             bool discount = ReadVisitSummary(session.Day).HasDiscount;
             string key = StoryRules.GoodbyeKey(session.Episode.Index, discount);
+            if (session.Episode.Index>=13 && EconomyStoryApplies && !ReadEconomy().Departing) key="xm_eco_bye";
             Dialogue result = StoryLine(session.Client, key, session.Episode.IsFinal ? Mood.Soft : discount ? Mood.Shy
                 : session.Episode.Index == 1 ? Mood.Smile : Mood.Soft);
             result.startAction += () => session.FarewellShown = true;

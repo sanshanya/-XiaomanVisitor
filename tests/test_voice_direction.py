@@ -3,9 +3,11 @@ import hashlib
 import json
 import re
 import unittest
+import sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'tools'))
 
 
 class VoiceDirectionTests(unittest.TestCase):
@@ -14,13 +16,28 @@ class VoiceDirectionTests(unittest.TestCase):
         story=json.loads((ROOT/'assets/story.json').read_text(encoding='utf-8'))
         script=json.loads((ROOT/'story/配音脚本_ja.json').read_text(encoding='utf-8'))
         lines={r['key']:r for r in story['lines']}
-        self.assertEqual(set(story['voice_keys']),set(plan['lines']))
-        self.assertEqual(set(plan['lines']),{r['key'] for r in script['lines']})
+        import prepare_economy
+        economy=prepare_economy.read()
+        new={r['key']:r for r in economy['lines']}
+        self.assertFalse(set(new)&set(plan['lines']),'new pending speech must not overwrite approved takes')
+        self.assertEqual(set(story['voice_keys']),set(plan['lines'])|set(new))
+        self.assertEqual(set(story['voice_keys']),{r['key'] for r in script['lines']})
         self.assertFalse(any(k.startswith(('xm_w04_','xm_w06_referral_')) for k in story['voice_keys']))
         self.assertTrue({'xm_gun_plead','xm_gun_holstered'}<=set(story['voice_keys']))
         self.assertEqual((script['voice_id'],script['language'],script['speed']),('ayano','ja',1.1))
         self.assertEqual(story['performance_sha256'],hashlib.sha256((ROOT/'story/配音演出_ja.json').read_bytes()).hexdigest())
         for row in script['lines']:
+            if row['key'] in new:
+                source=new[row['key']]
+                self.assertFalse(row['audio'])
+                self.assertFalse(row['reviewed'])
+                self.assertTrue(row['defer_recording'])
+                schedule=json.loads((ROOT/'story/来访安排.json').read_text(encoding='utf-8'))['visits']
+                spoken=source['ja'].format(schedule[source['budget_visit']-1]['credits']) if source.get('budget_visit') else source['ja']
+                self.assertEqual(spoken,row['spoken_text'])
+                self.assertEqual(source['mood'],lines[row['key']]['mood'])
+                self.assertTrue(row['delivery'])
+                continue
             direction=plan['lines'][row['key']]
             self.assertEqual(direction['subtitle_ja'],row['subtitle_templates']['ja'])
             self.assertEqual(direction['mood'],lines[row['key']]['mood'])

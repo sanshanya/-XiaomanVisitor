@@ -582,3 +582,150 @@ ui_brew_over_limit,已达到上限，超出 {0} CR。请取回部分材料。
 ui_brew_remaining,还可提供 {0} CR 的材料。
 ui_wine_crate_name,小满的酒箱
 ui_wine_crate_desc,小满送来的酒箱，隔板正好放她调制的酒。\n只能收纳小满的酒品。
+ui_eco_title,小满的经营账本
+ui_eco_open,经营事务
+ui_eco_more,其他事情
+ui_eco_ledger,收支
+ui_eco_contracts,合同
+ui_eco_projects,经营协作
+ui_eco_loan,租约与借款
+ui_eco_back,返回
+ui_eco_close,关闭
+ui_eco_phone,商户互助会·小满酒馆
+ui_eco_phone_line,这里可以查阅小满酒馆的账目和经营文件，签收回执或办理申请。
+ui_eco_balance,经营现金 {0} CR · 周转金目标 {1} CR\n借款本金 {2} CR · 融资费用 {3} CR · 经营欠款 {4} CR
+ui_eco_dates,起算日：第 {0} 天 · 已结 {1} 个营业周\n下次结账：第 {2} 天（停业核账期间不计租息、无经营收入）
+ui_eco_week,第 {0} 期 · 截至第 {1} 天\n营业收入 {2} / 材料 {3} / 日常开支 {4} / 实付房租 {5} CR\n融资费 {6} / 租差代垫 {7} / 已偿还 {8} CR
+ui_eco_deliveries,订单回执：第 {0} 天 · 甲乙班组合计交付 {1} 份\n隔间租金回执：第 {2} 天 · 修理铺
+ui_eco_empty,尚未完成一个完整营业周。已发生的消费和协作会按唯一回执结算。
+ui_eco_lease,"开业融资 8,800 CR：设备 5,400、装修 2,600、押金 800，直接付给供货商和房东。小满自有经营现金 900 CR；借款不再重复作为现金入账。\n每周票面房租 420；首五期实付 90、随后两期 260，差额由融资方代付并加入本金。旧借款周息 1%，第六期转档费 240；第十个营业周末到期。\n私人生活费、周一采购预算与酒馆现金分开。\n\n原高档酒定向制作周转池在库存账单列，不能用来偿债。实收售价只将已耗成本回补该池，毛利在经营账一处记账。"
+ui_eco_migration,旧记录保留。新经营账从确认后下一个完整周一开始；过去的利润、借款和利息不追补。已离站的旧存档不会被复活。
+ui_eco_accept_lease,确认新租约与起算日
+ui_eco_review,到期余额已冻结。先查看账目，再逐份办理两份经营合同。未看到完整通知前，不启动办理期限。
+ui_eco_ack,已看过金额、方案与办理期限
+ui_eco_deadline,已实际告知：第 {0} 天 · 已经过 {1}/7 个可办事日。期限后再次明确选择，不在后台自动判定离站。
+ui_eco_orders_terms,固定取餐合同：船坞甲、乙两个班组，各每周10份无酒精饮品／简餐，65 CR/份，成本30 CR/份。小满负责备餐交付；是新增班组，不重复计算原熟客。签认后次日收回执，正式重组后才开始履约收款。
+ui_eco_sublet_terms,隔间转租：修理铺每周支付240 CR，使用一块靠内的隔间；小满保留吧台和临窗座位。原房东书面同意，票面房租仍420 CR。调整空班后固定开支降为170 CR，其中小满报酬110、能源清洁维护60。需单独签认，次日回执。
+ui_eco_sign_orders,签认固定订单（次日回执）
+ui_eco_sign_sublet,签认隔间转租（次日回执）
+ui_eco_contract_status,{0}：第 {1} 天签认 · 第 {2} 天生效
+ui_eco_one_document,今天已经办过一份文件。另一份需在下一个可办事日单独签认。
+ui_eco_refinance_quote,换据金额 {0} CR（旧本息、经营欠款、补足900周转金及240施工款）。\n普通周息0.50%，52期，首期最低 {1} CR；20份保底订单及转租，即使无散客熟客，每周也留出350 CR。
+ui_eco_refinance,申请普通重组（无需当铺产权）
+ui_eco_guarantee,另签限额保证（最高300 CR责任）
+ui_eco_guarantee_terms,限额保证自愿签署，仅限已付清原生当铺产权的玩家。周息改为0.35%，不转移产权、不自动扣款；催告和补救期后才可能产生最高累计300 CR的独立保证责任。
+ui_eco_confirm_guarantee,我理解责任，确认签署
+ui_eco_restructured,新票据已生效，等待首个完整周的真实订单交付与还款。此时还不提前宣告留下成功。
+ui_eco_repay,自愿代偿
+ui_eco_repay_terms,这是不可撤销的代偿，不是可收回的借款。金额按实际欠款封顶，先清经营欠款和费用，再还本金；不计作经营回款，不增加展期次数。
+ui_eco_repay_amount,代偿 {0} CR
+ui_eco_repay_confirm,确认支付 {0} CR；不会自动补扣其余款项。
+ui_eco_confirm,确认
+ui_eco_extend,申请一周展期（费用 {0} CR）
+ui_eco_extension,冻结经营回款 {0} CR · 可用展期 {1}/{2}\n停业时签的新合同和玩家代偿不倒填这项资格。
+ui_eco_leave,按原安排关店离站……
+ui_eco_leave_terms,确认后停止经营并清算，走收拾纸箱与告别的剧情。设备回收、押金和清运费用仅用于清账，不给玩家收益。此选择不能通过重新打开窗口撤回。
+ui_eco_project_status,已完成 {0}/4 个经营项目 · 已兑现熟客席位 {1}\n一晚一项，每个营业周最多新增一个项目；与当晚有薪工作互斥。
+ui_eco_project_1,试排夜班交接时段
+ui_eco_project_2,借周转箱、定取餐位置
+ui_eco_project_3,核对两班预约名单
+ui_eco_project_4,排错峰座次、借自取架
+ui_eco_project_wait,下一项尚未到办理时段，或本周已完成一项。已建立的客群会继续稳定增长。
+ui_eco_night_only,经营协作需要在酒馆实际完成；合同可在白天办理。
+ui_eco_blocked,回执存在无法核实的部分，已暂停这一项业务。保留原记录，不自动补扣或重发。
+ui_eco_saved,手续已保存。回执与生效日期可在合同页查阅。
+ui_eco_good_title,结局：灯还亮着
+ui_eco_good_event,在雨声里坐一会儿
+ui_eco_cleared_title,小满的借款已还清
+ui_eco_phase_operating,正常营业
+ui_eco_phase_review,停业核账，等待选择
+ui_eco_phase_decision,办理期已满，需要明确选择
+ui_eco_phase_extension_wait,展期已同意，下个完整周恢复
+ui_eco_phase_extended,展期营业
+ui_eco_phase_restructured,分期已生效，等待首次履约
+ui_eco_phase_stable,稳定留下，正常分期
+ui_eco_phase_cleared,借款已清，继续营业
+ui_eco_phase_remedy,履约不足，停业补救
+ui_eco_phase_leaving,已决定关店离站
+ui_eco_phase_migration,等待确认新租约
+ui_eco_phase_legacy,已完成原离站结局
+ui_eco_phase_new,尚未开业
+ui_eco_remedy,补足已到期费用与欠款后申请恢复营业。正常本金额不重复叠加；保证不会触碰原生当铺产权或自动扣款。
+ui_eco_resume,补救后申请恢复营业
+ui_eco_future,清债后可继续来往。分红与购买物业是独立的后续目标，尚未开放；不影响已经成立的留下结局。
+ui_eco_player_reserve,自留周转金 {0} CR · 当前随身 {1} CR。代偿不会动用自留部分。
+ui_eco_keep_cash,自留信用点（可修改）
+ui_eco_orders_name,固定取餐合同
+ui_eco_sublet_name,隔间转租合同
+xm_eco_review_13_01,晚上好，前辈。我把店里的账重新整理了一遍。
+xm_eco_review_13_02,房租、进货，还有那份扶持协议……得一项一项分开看呢。
+xm_eco_review_13_03,还没决定下一步怎么做。我想先把能谈的办法都问清楚。
+xm_eco_review_13_04,东西先不急着收。前辈有空的话，还是来坐坐吧。
+xm_eco_review_14_01,晚上好，前辈。店里的手续还在办。
+xm_eco_review_14_02,磁带倒是先整理好啦。总不能让前辈一直等着嘛。
+xm_eco_stay_13_01,晚上好，前辈。那两份合同，已经照约定开始做了。
+xm_eco_stay_13_02,取餐的袋子得写上班组名字。不然她们下班一急，又要拿错啦。
+xm_eco_stay_13_03,每周该还多少，也终于能一笔一笔算清楚了。
+xm_eco_stay_13_04,嘿嘿，这回买箱子，是用来送餐的。
+xm_eco_stay_14_01,晚上好，前辈。昨天有客人问我，雨幕能不能再开一会儿。
+xm_eco_stay_14_02,我说可以呀。反正现在，不用急着把它拆下来啦。
+xm_eco_shop_13,今天想买点日用品。带了 {0} 信用点。
+xm_eco_shop_14,今天想买些水。带了 {0} 信用点。
+xm_eco_bye,那我先回店里啦。晚上见，前辈。
+xm_eco_project_1_offer,换班的时候总有人赶不上最后一轮。前辈，陪我把取餐时间试一下吧。
+xm_eco_project_1_done,这下两边都赶得上啦。我把时间写在门口，免得自己又忘了。
+xm_eco_project_2_offer,物业肯借周转箱呢。前辈帮我接一下，我们再找个不挡路的取餐位置。
+xm_eco_project_2_done,放这里就好。以后替同事带单，也不用挤到吧台前啦。
+xm_eco_project_3_offer,两班的名单有几处重了。我怕把甜的和酸的又装反，想请前辈帮我核一下。
+xm_eco_project_3_done,好啦，换班前就能准备齐。原来写清楚一点，真的会省好多事呢。
+xm_eco_project_4_offer,维修班肯借自取架。我们把座位和取餐错开一点，窗边就不用一直让路了。
+xm_eco_project_4_done,嗯，这样好多了。坐着听歌的人，和赶着回去的人，都有自己的位置啦。
+xm_eco_good_01,前辈，今天的取餐单都送完了。
+xm_eco_good_02,隔壁大叔把隔间的钥匙送回来了。他说晚上不用，叫我别总锁得那么早。
+xm_eco_good_03,账上还有要慢慢还的。不过下周的材料、房租，也都留好了。
+xm_eco_good_04,我想……以后还是把店开在这里。
+xm_eco_good_05,前辈要是不急着回去，就再坐一会儿吧。
+xm_eco_good_06,雨还没停呢。
+xm_eco_stable_chat_01,今天又有人点“老样子”啦。这次我可没拿错杯子。
+xm_eco_stable_chat_02,那张取餐名单快写满了。我得再找一支不容易蹭花的笔。
+xm_eco_stable_chat_03,修理店大叔来还箱子，顺便点了杯甜的。明明上次还说自己不爱甜呢。
+xm_eco_clear_01,前辈，那张借款的结清回单，今天终于拿到了。
+xm_eco_clear_02,我检查了两遍，还是零。嘿嘿，这回不是自己少算了一位。
+xm_eco_clear_03,那台制冰机，我又放回收藏夹啦。这次不着急，慢慢挑。
+xm_eco_review_entry,前辈来啦。账本在这边，先坐一会儿吧。
+eco_note_13_review_name,小满的信
+eco_note_13_review_title,致前辈：
+eco_note_13_review_body,今天擦杯子的时候，发现有一只杯脚底下贴着以前的价签。\n难怪每次放到水槽边，它总比别的歪一点。\n\n我泡了好久才把那点胶洗干净。\n\n最近一直在看表格，做完这件小事，反倒觉得脑袋清楚了些。\n\n明天再接着弄吧。
+eco_note_13_review_signature,——小满
+eco_note_13_stay_name,小满的信
+eco_note_13_stay_title,致前辈：
+eco_note_13_stay_body,今天把取餐箱借来了。\n\n本来想用以前写酒单的字，好好写个“取餐处”。\n结果写得太漂亮，维修班的大叔站在旁边看了半天，问这是哪杯新酒。\n\n……看来有些字还是不能太认真呢。\n\n后来换成了粗笔。\n这回他一眼就看懂啦。
+eco_note_13_stay_signature,——小满
+eco_note_14_review_name,小满的信
+eco_note_14_review_title,致前辈：
+eco_note_14_review_body,这盘磁带我找了好久。\n\n最后在吧台下面找到了，和备用的杯垫放在一起。\n明明每次都说要收好，轮到找的时候还是得把抽屉全翻一遍。\n\n先送到前辈那里吧。\n\n店里的事情，我还在慢慢弄。\n窗上的雨幕也好好开着呢。
+eco_note_14_review_signature,——小满
+eco_note_14_stay_name,小满的信
+eco_note_14_stay_title,致前辈：
+eco_note_14_stay_body,妈妈问我，是不是该订回去的船票了。\n\n我把下周的取餐名单拍给她看。\n她看了半天，说字太小，一个名字也看不清。\n\n只好又打电话解释了一遍。\n\n最后她说，那就先把这家店好好开下去吧，回家的事不用急。\n\n我说，好呀。\n\n前辈，下次来，也还是给你留窗边的位置。
+eco_note_14_stay_signature,——小满
+ui_eco_guarantee_due,已催告并过补救期的保证应付款：{0} CR；付款同时冲减小满的欠款，不会双重追偿。
+ui_eco_good_epilogue,取餐箱留在吧台旁，下一周的名单已经贴好。\n窗上的雨幕照常亮着。\n\n这一次，小满没有把它拆下来。\n\n酒馆会继续营业。你仍然可以来坐坐。
+ui_eco_remedy_deadline,已催告：第 {0} 天 · 已经过 {1}/14 个可办事日。补救前不自动执行保证或处置产权。
+ui_eco_close_credit_terms,租差代垫不是赠款。可选择从下一个完整营业周起停止新增代垫，改为每周实付420 CR；已有欠款仍需偿还。
+ui_eco_close_credit,确认停止新增租差代垫
+ui_eco_full_rent,从第 {0} 个营业期起，每周实付房租420 CR，不再新增租差借款。
+ui_eco_pickup,夜班取餐处
+ui_eco_pickup_paused,取餐暂停 · 可查阅名单
+ui_eco_history,查看全部营业期
+xm_eco_project_1_offer_unknown,夜班交接的时间不太好安排。您愿意陪我试一次取餐时间吗？
+xm_eco_project_2_offer_unknown,物业那边有箱子可以借。能请您帮忙接一下，再一起找个取餐的位置吗？
+xm_eco_project_3_offer_unknown,两班的名字有几处对不上。我怕装错了，能麻烦您一起看一下吗？
+xm_eco_good_01_unknown,刚才那批取餐单，已经全都交好了。
+xm_eco_good_05_unknown,如果您还不急着走，愿意再坐一会儿吗？
+xm_eco_clear_01_unknown,刚收到借款结清的回单。我又检查了好几遍，确实都还完了呢。
+xm_eco_review_entry_unknown,您来啦。账本放在这边，进来坐吧。
+ui_eco_repayment_receipt,自愿代偿回执：第 {0} 天，实际支付 {1} CR
+ui_eco_review_arrived,小满的酒馆正在停业核账。可在酒馆“经营事务”或电话快捷拨号“商户互助会·小满酒馆”查看金额、方案并办理。
+ui_eco_unavailable,当前条件尚不满足，请核对回执的生效日期、剩余额度和履约能力。未扣款或重复签约。
+ui_eco_unsettled,本期已有回执、待周结：实收 {0} CR · 已耗成本及工资 {1} CR。此部分尚未计入上面的已结现金。

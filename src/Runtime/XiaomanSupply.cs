@@ -80,7 +80,7 @@ namespace XiaomanVisitor
             foreach (var use in p.BarUses.Where(u => !u.Cancelled && !u.Settled)) {
                 var drink=drinks.Drinks.FirstOrDefault(d => d.Id==use.Id);
                 if (drink==null || drink.Status=="cancelled") { p.CancelBar(use.Id);changed=true; }
-                else if (drink.Status=="complete") { p.SettleBar(use.Id,drink.Paid);changed=true; }
+                else if (drink.Status=="complete") { p.SettleBar(use.Id,SupplySettlementRevenue(drink,p));changed=true; }
             }
             if (changed) SaveSupply(p);
         }

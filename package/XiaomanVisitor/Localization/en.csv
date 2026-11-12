@@ -582,3 +582,150 @@ ui_brew_over_limit,Limit reached; {0} CR over. Remove some materials.
 ui_brew_remaining,Room for another {0} CR of materials.
 ui_wine_crate_name,Xiaoman's Drink Crate
 ui_wine_crate_desc,"A gift from Xiaoman, with dividers for her drinks.\nOnly holds Xiaoman's drinks."
+ui_eco_title,Xiaoman's business ledger
+ui_eco_open,Business matters
+ui_eco_more,Other matters
+ui_eco_ledger,Accounts
+ui_eco_contracts,Contracts
+ui_eco_projects,Projects
+ui_eco_loan,Lease and finance
+ui_eco_back,Back
+ui_eco_close,Close
+ui_eco_phone,Merchants' association: Xiaoman
+ui_eco_phone_line,"You can review the tavern accounts, sign documents and collect replies here."
+ui_eco_balance,Business cash {0} CR · reserve target {1} CR\nPrincipal {2} CR · finance fees {3} CR · operating bills {4} CR
+ui_eco_dates,"Starts on day {0} · {1} operating weeks settled\nNext settlement: day {2}. Review closures accrue no new rent, interest or sales."
+ui_eco_week,"Period {0}, through day {1}\nRevenue {2} / ingredients {3} / operating costs {4} / rent paid {5} CR\nFinance charges {6} / rent advanced {7} / repaid {8} CR"
+ui_eco_deliveries,"Order receipt: day {0}, {1} meals/drinks delivered to the two dock teams\nSublet rent receipt: day {2}, repair shop"
+ui_eco_empty,No full operating week has settled yet. Actual purchases and work are counted once per receipt.
+ui_eco_lease,"Opening finance: 8,800 CR (equipment 5,400; fit-out 2,600; deposit 800), paid directly to suppliers and the landlord. Business cash starts at 900 CR; the loan is not counted as cash again.\nWeekly rent is 420: cash rent 90 for five periods, then 260 for two; the lender advances the difference into principal. Old interest is 1% per week; a 240 CR filing fee falls in period six; maturity is after ten operating weeks.\nPersonal living money and Monday shopping budgets remain separate.\n\nThe existing restricted luxury-stock float is listed in the inventory account and cannot repay debt. Only consumed cost is reimbursed to that pool; the operating ledger alone records the sale margin."
+ui_eco_migration,"Existing records are preserved. The new account starts on the next complete Monday after acceptance; no historical profit, loan or interest is backfilled. Departed characters stay departed."
+ui_eco_accept_lease,Accept the new lease and start date
+ui_eco_review,"The maturity balance is frozen. Review the figures, then process the two business contracts separately. The handling window starts only after you acknowledge the full notice."
+ui_eco_ack,"Acknowledge the figures, options and handling window"
+ui_eco_deadline,"Acknowledged on day {0}: {1}/7 available handling days used. At the deadline, a final explicit decision is required; departure is never decided invisibly."
+ui_eco_orders_terms,"Standing order: two distinct dock teams each order ten non-alcoholic drinks/light meals weekly, at 65 CR each, with 30 CR ingredient cost. Xiaoman prepares and delivers them. These are additional buyers, separate from existing regulars. A signed receipt returns next day; deliveries and income start after restructuring."
+ui_eco_sublet_terms,Sublet: the repair shop pays 240 CR weekly for the inner room. Xiaoman keeps the bar and window seats. The landlord gives written consent; total rent remains 420. Reduced idle shifts lower fixed costs to 170 (her pay 110; utilities/cleaning 60). This requires its own signature and next-day receipt.
+ui_eco_sign_orders,Sign standing orders (receipt tomorrow)
+ui_eco_sign_sublet,Sign the sublet (receipt tomorrow)
+ui_eco_contract_status,"{0}: signed day {1}, effective day {2}"
+ui_eco_one_document,One document has already been processed today. Sign the other on a separate available day.
+ui_eco_refinance_quote,"New note: {0} CR (old debt, operating bills, reserve top-up to 900 and partition work 240).\nStandard interest 0.50% weekly over 52 periods; first minimum {1} CR. Twenty guaranteed orders and the sublet leave 350 CR weekly even with no walk-ins or regulars."
+ui_eco_refinance,Sign standard restructuring (no pawnshop ownership required)
+ui_eco_guarantee,Sign a separate limited guarantee (maximum liability 300 CR)
+ui_eco_guarantee_terms,"Optional guarantee for fully paid pawnshop owners: interest falls to 0.35% weekly. It transfers no property and permits no automatic credit deduction. Only a notified default after its remedy period can create a separate liability, capped at 300 CR in total."
+ui_eco_confirm_guarantee,I understand the liability; sign
+ui_eco_restructured,The new note is effective. The first full week must actually deliver orders and meet its payment before the stay milestone is confirmed.
+ui_eco_repay,Voluntary repayment
+ui_eco_repay_terms,"This is an irreversible payment on her behalf, not a recoverable loan. It is capped at actual debt, pays bills and fees before principal, and never creates operating repayment or extension eligibility."
+ui_eco_repay_amount,Pay {0} CR on her behalf
+ui_eco_repay_confirm,Confirm a payment of {0} CR. No other amount will be deducted automatically.
+ui_eco_confirm,Confirm
+ui_eco_extend,Request a one-week extension (fee {0} CR)
+ui_eco_extension,Frozen operating repayments: {0} CR · extensions remaining {1}/{2}\nLater contracts and player payments cannot backfill this eligibility.
+ui_eco_leave,Proceed with closure and departure…
+ui_eco_leave_terms,"Confirmation stops trading, settles the closing account and selects the packing-and-farewell route. Equipment and deposit recovery only settle her account; none is paid to you. Reopening the window will not undo this choice."
+ui_eco_project_status,Projects completed {0}/4 · realized regular seats {1}\nOne project per operating week; projects and paid shifts share that evening’s work slot.
+ui_eco_project_1,Arrange a shift-change collection time
+ui_eco_project_2,Borrow returnable boxes and mark the collection point
+ui_eco_project_3,Check both shifts’ reservation lists
+ui_eco_project_4,Arrange staggered seats and borrow a collection shelf
+ui_eco_project_wait,"The next project is not available yet, or this week’s project is complete. Existing regular groups continue to grow."
+ui_eco_night_only,Projects require an actual tavern visit; contract paperwork is available during the day.
+ui_eco_blocked,A receipt cannot be verified. This operation is paused with the original record preserved; there is no automatic charge or redelivery.
+ui_eco_saved,Saved. Review receipts and effective dates on the contracts page.
+ui_eco_good_title,Ending: The Light Is Still On
+ui_eco_good_event,Stay a while and listen to the rain
+ui_eco_cleared_title,Xiaoman's loan is paid off
+ui_eco_phase_operating,Trading
+ui_eco_phase_review,Closed for financial review
+ui_eco_phase_decision,Handling window ended; explicit decision required
+ui_eco_phase_extension_wait,Extension agreed; resumes next full week
+ui_eco_phase_extended,Trading under extension
+ui_eco_phase_restructured,Restructured; first delivery pending
+ui_eco_phase_stable,Staying; normal installments
+ui_eco_phase_cleared,Debt free; trading continues
+ui_eco_phase_remedy,Payment shortfall; closed for remedy
+ui_eco_phase_leaving,Closure and departure chosen
+ui_eco_phase_migration,New lease acceptance pending
+ui_eco_phase_legacy,Original departure ending completed
+ui_eco_phase_new,Not open yet
+ui_eco_remedy,Pay overdue fees and arrears to request reopening. Missed principal is not added twice; guarantees never seize native property or debit credits automatically.
+ui_eco_resume,Request reopening after remedy
+ui_eco_future,Visits continue after the debt is cleared. Dividends and buying the property are separate future goals and are not available yet; the stay ending remains valid.
+ui_eco_player_reserve,Keep {0} CR for your own operations; current cash {1} CR. Repayment will not use your reserved amount.
+ui_eco_keep_cash,Credits to keep (editable)
+ui_eco_orders_name,Standing orders
+ui_eco_sublet_name,Sublet agreement
+xm_eco_review_13_01,"Good evening, Senpai. I went through the shop’s accounts again."
+xm_eco_review_13_02,"Rent, supplies, that support agreement… I need to look at each one separately."
+xm_eco_review_13_03,I haven’t decided what comes next. I want to find out which options are actually possible first.
+xm_eco_review_13_04,I’ll wait a little before packing things away. Come sit for a while if you have time.
+xm_eco_review_14_01,"Good evening, Senpai. I’m still working through the shop’s paperwork."
+xm_eco_review_14_02,"I did get the tapes sorted out, though. I can’t keep you waiting for those forever."
+xm_eco_stay_13_01,"Good evening, Senpai. Both of those contracts have started as agreed."
+xm_eco_stay_13_02,I have to label the collection bags with the team names. They’re liable to grab the wrong ones in the rush after work.
+xm_eco_stay_13_03,And I can finally see exactly what needs repaying each week.
+xm_eco_stay_13_04,Hehe. These boxes are for deliveries this time.
+xm_eco_stay_14_01,"Good evening, Senpai. Yesterday a customer asked if I could leave the rain running a little longer."
+xm_eco_stay_14_02,I said of course. There’s no hurry to take it down anymore.
+xm_eco_shop_13,I’d like some everyday supplies. I brought {0} credits.
+xm_eco_shop_14,I’d like some water today. I brought {0} credits.
+xm_eco_bye,"I’ll head back to the shop. See you this evening, Senpai."
+xm_eco_project_1_offer,Some people miss the last round at shift change. Would you help me test a better collection time?
+xm_eco_project_1_done,Now both shifts can make it. I’ll write the times by the door so I don’t forget them myself.
+xm_eco_project_2_offer,The building office will lend us returnable boxes. Help me collect them and find a pickup spot that won’t block the aisle?
+xm_eco_project_2_done,Here should work. People collecting for their colleagues won’t have to crowd the bar anymore.
+xm_eco_project_3_offer,A few names are duplicated on the two shift lists. Could you check them with me before I mix up the sweet and sour orders again?
+xm_eco_project_3_done,There. We can have everything ready before shift change. Writing it down properly really does save trouble.
+xm_eco_project_4_offer,"The maintenance crew will lend us a collection shelf. If we stagger seating and pickup, people at the window won’t keep having to move."
+xm_eco_project_4_done,"Yes, that’s much better. People staying for the music and people hurrying home each have their own space now."
+xm_eco_good_01,"Senpai, all of today’s collections are done."
+xm_eco_good_02,"The repair-shop owner brought back the room key. He doesn’t use it at night, so he told me not to lock up quite so early."
+xm_eco_good_03,"There’s still money to repay, little by little. But next week’s ingredients and rent are set aside."
+xm_eco_good_04,I think… I want to keep running my shop here.
+xm_eco_good_05,"If you’re not in a hurry, Senpai, stay a little longer?"
+xm_eco_good_06,The rain hasn’t stopped yet.
+xm_eco_stable_chat_01,Someone ordered “the usual” again today. I even got the glass right this time.
+xm_eco_stable_chat_02,The collection list is nearly full. I need a pen that doesn’t smudge so easily.
+xm_eco_stable_chat_03,The repair-shop owner returned the boxes and ordered something sweet. Last time he claimed he didn’t like sweet drinks.
+xm_eco_clear_01,"Senpai, I finally got the loan clearance receipt today."
+xm_eco_clear_02,"I checked twice. Still zero. Hehe, I haven’t missed a digit this time."
+xm_eco_clear_03,I put that ice machine back on my favorites list. There’s no rush this time. I can take my time choosing.
+xm_eco_review_entry,"Welcome, Senpai. The ledger is over here. Come sit for a little while."
+eco_note_13_review_name,A letter from Xiaoman
+eco_note_13_review_title,"Dear Senpai,"
+eco_note_13_review_body,"While polishing the glasses, I found an old price sticker under one of the stems.\nNo wonder it always leaned a little by the sink.\n\nIt took ages of soaking to get the glue off.\n\nI have been staring at so many tables lately that finishing this tiny job made my head feel a little clearer.\n\nI can carry on tomorrow."
+eco_note_13_review_signature,— Xiaoman
+eco_note_13_stay_name,A letter from Xiaoman
+eco_note_13_stay_title,"Dear Senpai,"
+eco_note_13_stay_body,"I collected the pickup boxes today.\n\nI tried writing “Collections here” in my nice menu lettering.\nThe maintenance man stared at it for ages, then asked which new drink it was.\n\n…Perhaps some signs do not need quite that much effort.\n\nI redid it with a thick pen.\nHe understood it straight away that time."
+eco_note_13_stay_signature,— Xiaoman
+eco_note_14_review_name,A letter from Xiaoman
+eco_note_14_review_title,"Dear Senpai,"
+eco_note_14_review_body,"I spent ages looking for this tape.\n\nIt was under the bar with the spare coasters.\nEvery time I tell myself to put things away properly, yet I still have to empty every drawer to find them.\n\nI will send it over to you first.\n\nI am still working through things at the shop.\nThe rain on the window is running as usual."
+eco_note_14_review_signature,— Xiaoman
+eco_note_14_stay_name,A letter from Xiaoman
+eco_note_14_stay_title,"Dear Senpai,"
+eco_note_14_stay_body,"Mum asked whether it was time to book a ship home.\n\nI sent her a picture of next week’s collection list.\nShe looked for ages, then said the writing was too small to read a single name.\n\nI had to call and explain it all again.\n\nIn the end she said I should keep looking after this shop, and there was no hurry about coming home.\n\nI said I would.\n\nI will still keep a window seat for you next time, Senpai."
+eco_note_14_stay_signature,— Xiaoman
+ui_eco_guarantee_due,Notified guarantee liability after the remedy window: {0} CR. Payment reduces her debt by the same amount; there is no double recovery.
+ui_eco_good_epilogue,"The collection boxes sit beside the bar. Next week’s list is already on the wall.\nThe rain still shines on the window.\n\nThis time, Xiaoman leaves it running.\n\nThe tavern stays open. You can come back and sit for a while."
+ui_eco_remedy_deadline,Notice acknowledged on day {0}: {1}/14 available remedy days used. No guarantee or native property is enforced automatically.
+ui_eco_close_credit_terms,Rent advances are not grants. You may stop new advances from the next full operating week and pay the full 420 CR weekly. Existing debt remains payable.
+ui_eco_close_credit,Stop new rent advances
+ui_eco_full_rent,"From operating period {0}, cash rent is 420 CR weekly with no new rent-advance borrowing."
+ui_eco_pickup,Night-shift pickup
+ui_eco_pickup_paused,Pickup paused · lists available
+ui_eco_history,View all operating periods
+xm_eco_project_1_offer_unknown,Shift change is a little awkward to arrange. Would you help me test a collection time?
+xm_eco_project_2_offer_unknown,The building office has boxes we can borrow. Could you help me collect them and find a pickup spot?
+xm_eco_project_3_offer_unknown,A few names on the shift lists do not match. Would you check them with me before I pack the wrong orders?
+xm_eco_good_01_unknown,That last batch of collection orders has all been handed over.
+xm_eco_good_05_unknown,"If you are not in a hurry, would you like to stay a little longer?"
+xm_eco_clear_01_unknown,The loan clearance receipt just arrived. I have checked it several times. It really is all paid off.
+xm_eco_review_entry_unknown,Welcome. The ledger is over here. Come sit down.
+ui_eco_repayment_receipt,"Voluntary repayment receipt: day {0}, actual payment {1} CR"
+ui_eco_review_arrived,Xiaoman’s tavern is closed for financial review. Review the figures and options through Business matters at the tavern or the merchants’ association phone shortcut.
+ui_eco_unavailable,"Conditions are not met. Check receipt dates, remaining eligibility and affordability. No payment or duplicate agreement was made."
+ui_eco_unsettled,"This period, receipted and awaiting weekly settlement: received {0} CR; consumed costs and wages {1} CR. This is not yet included in the settled cash above."

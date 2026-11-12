@@ -45,7 +45,7 @@ namespace XiaomanVisitor
             record.Status="complete"; SaveTavern(progress);
             // Optional native relief/sound occurs only after the durable completed receipt.
             // Recovery never repeats a completed receipt or creates an inventory item.
-            var supply=ReadSupply();supply.SettleBar(record.Id,record.Paid);SaveSupply(supply);
+            var supply=ReadSupply();supply.SettleBar(record.Id,SupplySettlementRevenue(record,supply));SaveSupply(supply);
             CocktailConsumed(CocktailCatalog.Find(record.Key));
         }
 

@@ -148,7 +148,7 @@ namespace XiaomanVisitor
                             if (!drinkReceipt.CanDeliverStoryDrink(pending.Day, today)) return;
                         }
                         GameItem item;
-                        if (part == 0) item = ModHelper.SpawnPaperItem(Id, episode.NoteId);
+                        if (part == 0) item = ModHelper.SpawnPaperItem(Id, EconomyNote(pending,episode.NoteId));
                         else if (part == 1)
                         {
                             if (!readyGiftSounds.Contains(episode.TrackKey)) return;

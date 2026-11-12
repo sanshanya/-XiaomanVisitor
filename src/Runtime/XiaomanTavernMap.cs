@@ -17,7 +17,7 @@ namespace XiaomanVisitor
 
         private DelegateAfterhourLocation tavernLocation;
         private XiaomanTavernStage tavernStage;
-        private bool TavernStoryFinished { get { return PlayerStore.HasInstance && (ReadStory().Finished
+        private bool TavernStoryFinished { get { return PlayerStore.HasInstance && (ReadStory().Finished && (!EconomyAvailable || ReadEconomy().Departing || ReadEconomy().Phase=="new" || ReadEconomy().Blocked)
             || SideStories.BuybackStory.LineClosed
             ); } }
         internal string TavernMapDescription { get { return Text(PlayerStore.HasInstance
@@ -27,6 +27,8 @@ namespace XiaomanVisitor
             get {
                 string key = TavernRules.StatusKey(TavernMapRules.LocationId, TavernMapEnabled, PlayerStore.HasInstance,
                     PlayerStore.HasInstance ? StoreStation.Instance.dayCounter : 0, TavernStoryFinished);
+                if (key!=null && EconomyAvailable && !ReadEconomy().Departing && !TavernTrading && StoreStation.Instance.dayCounter>=TavernRules.OpeningDay)
+                    return Text("ui_eco_phase_"+ReadEconomy().Phase);
                 return key == null ? null : Text(key);
             }
         }

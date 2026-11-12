@@ -50,7 +50,7 @@ namespace XiaomanVisitor
         }
         private void QueueReferralVisitor(StoreClientManager manager)
         {
-            if (!enabled || !TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null || manager?.clientStack==null || ReadStory().Finished) return;
+            if (!enabled || !TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null || manager?.clientStack==null || TavernStoryFinished) return;
             int day=StoreStation.Instance.dayCounter;
             var p=ReadReferrals();if (TavernTrading && p.Draw(day)) SaveReferrals(p);
             var due=p.Due(day);

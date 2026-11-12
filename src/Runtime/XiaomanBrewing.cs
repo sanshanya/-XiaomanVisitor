@@ -24,7 +24,7 @@ namespace XiaomanVisitor
         { get { return TavernMapEnabled && TavernTrading && ReadBrewing().MayCollect(StoreStation.Instance.dayCounter); } }
         private bool BrewingVisitDue(int day)
         {
-            return TavernMapEnabled && !ReadStory().Finished && ReadBrewing().MayVisit(day,TavernTrading);
+            return TavernMapEnabled && !TavernStoryFinished && ReadBrewing().MayVisit(day,TavernTrading);
         }
         private static bool BrewingTarget()
         { return PlayerStore.HasInstance && PlayerStore.Instance.currentClientInstance?.GetClientBlueprint()?.identifier==BrewingProgress.ClientId; }
@@ -155,7 +155,7 @@ namespace XiaomanVisitor
                 || ModHelper.IsOutsideStore() || brewingBusy || Time.unscaledTime<nextBrewingTick) return;
             nextBrewingTick=Time.unscaledTime+1f;
             RecoverBrewingInput();
-            if (BrewingTarget() && BrewingProgress.Friday(StoreStation.Instance.dayCounter) || ReadStory().Finished) TryDeliverBrewing();
+            if (BrewingTarget() && BrewingProgress.Friday(StoreStation.Instance.dayCounter) || TavernStoryFinished) TryDeliverBrewing();
             TryFinishBrewingDelivery();
             if (PlayerStore.Instance.storeState==PlayerStore.StoreState.OPEN && BrewingProgress.VisitDay(StoreStation.Instance.dayCounter))
                 Queue(PlayerStore.Instance.storeClientManager);
@@ -197,11 +197,11 @@ namespace XiaomanVisitor
         private void TryDeliverBrewing()
         {
             if (brewingBusy || !TavernMapEnabled || !PlayerStore.HasInstance || ModHelper.IsOutsideStore() || Time.unscaledTime<nextBrewingDelivery
-                || !ReadStory().Finished && !BrewingProgress.Friday(StoreStation.Instance.dayCounter)) return;
+                || !TavernStoryFinished && !BrewingProgress.Friday(StoreStation.Instance.dayCounter)) return;
             brewingBusy=true;
             try {
                 var p=ReadBrewing();if (p.Blocked) return;
-                bool final=ReadStory().Finished;
+                bool final=TavernStoryFinished;
                 long before=p.CreditMilli;
                 p.CreditDue(StoreStation.Instance.dayCounter,final);
                 bool recovering=p.Placing!=null;

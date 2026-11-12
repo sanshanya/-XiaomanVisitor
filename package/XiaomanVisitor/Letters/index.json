@@ -346,6 +346,82 @@
       }
     },
     {
+      "id": "eco_note_13_review",
+      "language": "zh",
+      "file": "Letters/zh/eco_note_13_review.png",
+      "sha256": "0386314806497fcfac853a4ba367f0bfe93158ee97b5b4d9786d935c0f799fc4",
+      "bytes": 55364,
+      "text_sha256": "855113fd0fe00512a308e0cf43daee687f22decf1521958a482c76d7f4ea2663",
+      "layout": {
+        "font": "yozai",
+        "visit": 13,
+        "language": "zh",
+        "body_size": 18.0,
+        "lines": 5,
+        "body_bottom": 334.44,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 495.36
+      }
+    },
+    {
+      "id": "eco_note_13_stay",
+      "language": "zh",
+      "file": "Letters/zh/eco_note_13_stay.png",
+      "sha256": "b0f622a37c61463d6f9ac70f375ef6161a7c89f29a535e8749a509153006992c",
+      "bytes": 56516,
+      "text_sha256": "3bbcb1e25fec3f1f23a18fff5918440344223142efa2c00c72c2efe527364470",
+      "layout": {
+        "font": "yozai",
+        "visit": 13,
+        "language": "zh",
+        "body_size": 18.0,
+        "lines": 5,
+        "body_bottom": 334.44,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 495.36
+      }
+    },
+    {
+      "id": "eco_note_14_review",
+      "language": "zh",
+      "file": "Letters/zh/eco_note_14_review.png",
+      "sha256": "8969aa5f4951b40fdade72e07fb1800212872e03635ca376f910626b1154a08f",
+      "bytes": 56858,
+      "text_sha256": "08d5faa59ababca0c5b90b029f95cbf265bfb38dfaf5f56314650e505fecb886",
+      "layout": {
+        "font": "yozai",
+        "visit": 14,
+        "language": "zh",
+        "body_size": 18.0,
+        "lines": 5,
+        "body_bottom": 334.44,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 483.36
+      }
+    },
+    {
+      "id": "eco_note_14_stay",
+      "language": "zh",
+      "file": "Letters/zh/eco_note_14_stay.png",
+      "sha256": "b0dc430d5d9b8c36ef10f46dc376fa95b0d20d494658ce81dd9d0e0a3cda0ccb",
+      "bytes": 64775,
+      "text_sha256": "d0eda345eca8e315e383d5d9f2c6a4b8304c381020ea5dd40f98a83ab3bd99c7",
+      "layout": {
+        "font": "yozai",
+        "visit": 14,
+        "language": "zh",
+        "body_size": 18.0,
+        "lines": 7,
+        "body_bottom": 430.0,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 495.36
+      }
+    },
+    {
       "id": "story_note_01",
       "language": "ja",
       "file": "Letters/ja/story_note_01.png",
@@ -644,6 +720,82 @@
         "body_size": 18.0,
         "lines": 14,
         "body_bottom": 662.97,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 495.36
+      }
+    },
+    {
+      "id": "eco_note_13_review",
+      "language": "ja",
+      "file": "Letters/ja/eco_note_13_review.png",
+      "sha256": "11c71c2db16769cad919a08c618f42a6ee7b9ada1f7957435549d5ab9cfc7071",
+      "bytes": 58754,
+      "text_sha256": "fe18f1961fd4dada65a615080b42fa8396e90084e1e63ea38642e2a0fa1c3ddb",
+      "layout": {
+        "font": "yozai",
+        "visit": 13,
+        "language": "ja",
+        "body_size": 18.0,
+        "lines": 7,
+        "body_bottom": 391.32,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 495.36
+      }
+    },
+    {
+      "id": "eco_note_13_stay",
+      "language": "ja",
+      "file": "Letters/ja/eco_note_13_stay.png",
+      "sha256": "eeebd6a96b7f3928b36e21f2457ae9d604fa892be85544c242c5e3ed0e798a3e",
+      "bytes": 58112,
+      "text_sha256": "547cdd8bfa49f2bdd0cfaf5b2890da8f08568a6a4f863993590b9783ae10b374",
+      "layout": {
+        "font": "yozai",
+        "visit": 13,
+        "language": "ja",
+        "body_size": 18.0,
+        "lines": 7,
+        "body_bottom": 391.32,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 495.36
+      }
+    },
+    {
+      "id": "eco_note_14_review",
+      "language": "ja",
+      "file": "Letters/ja/eco_note_14_review.png",
+      "sha256": "ca25bac9bbc0021f26e6e30a104eebd44a992a7e8d10643eea9240cd6c31fbf3",
+      "bytes": 60721,
+      "text_sha256": "444834e3780280f4f79ec28711425f8f958f6bbfc714344a5fbc82cbf7578c67",
+      "layout": {
+        "font": "yozai",
+        "visit": 14,
+        "language": "ja",
+        "body_size": 18.0,
+        "lines": 7,
+        "body_bottom": 391.32,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 483.36
+      }
+    },
+    {
+      "id": "eco_note_14_stay",
+      "language": "ja",
+      "file": "Letters/ja/eco_note_14_stay.png",
+      "sha256": "8b2e50234aa183dbe09b0f118c2670a48c9d6d491a3e84954953b6e2332ee011",
+      "bytes": 72528,
+      "text_sha256": "6549caa3d24e6c992e72e41c9880b014006a858e60478bc6b0079658a3398b11",
+      "layout": {
+        "font": "yozai",
+        "visit": 14,
+        "language": "ja",
+        "body_size": 18.0,
+        "lines": 8,
+        "body_bottom": 458.44,
         "available_bottom": 665,
         "fits": true,
         "longest_line": 495.36
@@ -951,6 +1103,82 @@
         "available_bottom": 665,
         "fits": true,
         "longest_line": 489.13
+      }
+    },
+    {
+      "id": "eco_note_13_review",
+      "language": "en",
+      "file": "Letters/en/eco_note_13_review.png",
+      "sha256": "bda13efe3cf7d61e561df85b80c6510d5d4de2c7fc563659593a84576840e3c1",
+      "bytes": 56257,
+      "text_sha256": "a8768dbfc5eb2111bdca04c3d3c9958da530181b54bf38a510bea9e74a05af5d",
+      "layout": {
+        "font": "yozai",
+        "visit": 13,
+        "language": "en",
+        "body_size": 18.0,
+        "lines": 7,
+        "body_bottom": 391.32,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 490.21
+      }
+    },
+    {
+      "id": "eco_note_13_stay",
+      "language": "en",
+      "file": "Letters/en/eco_note_13_stay.png",
+      "sha256": "80d85ce46b9aaa070b2b8c1d9a248ea59e3c83d91a8d6a81f39269af02d3313b",
+      "bytes": 55840,
+      "text_sha256": "943b73a5082285de364aa8997e6ada5000077d0cd11de8ce9d46c6b65d5f2bbe",
+      "layout": {
+        "font": "yozai",
+        "visit": 13,
+        "language": "en",
+        "body_size": 18.0,
+        "lines": 7,
+        "body_bottom": 391.32,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 493.88
+      }
+    },
+    {
+      "id": "eco_note_14_review",
+      "language": "en",
+      "file": "Letters/en/eco_note_14_review.png",
+      "sha256": "4e4a3dad821d7ec27ada7a9c982c6a761d79ee4d8e7890c845044ca23255da71",
+      "bytes": 56064,
+      "text_sha256": "d3a786c9fd5942cd550731054a6ca5d6e8b480c07f4861b3ab5fba8ea1f9c60c",
+      "layout": {
+        "font": "yozai",
+        "visit": 14,
+        "language": "en",
+        "body_size": 18.0,
+        "lines": 7,
+        "body_bottom": 391.32,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 489.52
+      }
+    },
+    {
+      "id": "eco_note_14_stay",
+      "language": "en",
+      "file": "Letters/en/eco_note_14_stay.png",
+      "sha256": "9daf594285a62c8617aee5f53def8f528f043b95e0744acc2fa774201d6aa0c2",
+      "bytes": 69724,
+      "text_sha256": "6e9168a4518789e16e5d269b08fe3375e0b628337eea6a34e5d22834fcc262e8",
+      "layout": {
+        "font": "yozai",
+        "visit": 14,
+        "language": "en",
+        "body_size": 18.0,
+        "lines": 9,
+        "body_bottom": 486.88,
+        "available_bottom": 665,
+        "fits": true,
+        "longest_line": 482.85
       }
     }
   ]

@@ -57,6 +57,7 @@ namespace XiaomanVisitor
             if (!TavernMayAct || !TavernTrading || TavernDialogueBusy || wageBusy) return;
             var p=ReadWork(); int day=StoreStation.Instance.dayCounter;
             CloseTavernMenu();
+            if (EconomyAvailable && ReadEconomy().ProjectTonight(day)) { TavernNotice("ui_eco_project_wait");return; }
             if (p.RecoveryBlocked || p.Pending!=null) { TavernNotice("ui_tavern_wage_pending"); return; }
             if (p.WorkedOn(day)) { QueueTavernSpeech(new[]{"xm_tavern_w03_work_done_today"}); return; }
             if (!p.MayWork(day)) { QueueTavernSpeech(new[]{"xm_tavern_w03_work_no_orders"}); return; }
@@ -75,6 +76,7 @@ namespace XiaomanVisitor
         {
             if (!TavernMayAct || !TavernTrading || TavernDialogueBusy || wageBusy) return;
             var p=ReadWork(); workDay=StoreStation.Instance.dayCounter;
+            if (EconomyAvailable && ReadEconomy().ProjectTonight(workDay)) return;
             if (!p.MayWork(workDay)) { RequestTavernWork(); return; }
             workOrderIds=p.WaitingIds(workDay); workElapsed=0;workSounds=0;
             CloseTavernMenu();

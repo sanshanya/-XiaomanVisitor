@@ -4791,6 +4791,737 @@
       "note": "v5.4口头稿；本轮作者授权录音，读音/非语言标签仅用于合成，显示稿不变。",
       "source_sha256": "b3657fb00e67f88d4310d3d31fe20891710464d5bff4c62d9a361322add7a264",
       "delivery": "受惊后的余悸，收枪后松一口气，尚未完全镇定"
+    },
+    {
+      "key": "xm_eco_review_13_01",
+      "subtitle_templates": {
+        "zh": "晚上好，前辈。我把店里的账重新整理了一遍。",
+        "ja": "こんばんは、先輩。お店の帳簿を、もう一度整理したんです。",
+        "en": "Good evening, Senpai. I went through the shop’s accounts again."
+      },
+      "spoken_text": "こんばんは、先輩。お店の帳簿を、もう一度整理したんです。",
+      "generate_text": "こんばんは、先輩。お店の帳簿を、もう一度整理したんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "9b366bbb0c2bfda03be781af3f174b27e361cad2e64526f3935a685ebe0a6095",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_review_13_02",
+      "subtitle_templates": {
+        "zh": "房租、进货，还有那份扶持协议……得一项一项分开看呢。",
+        "ja": "家賃と仕入れ、それから支援の契約……一つずつ、分けて見ないといけませんね。",
+        "en": "Rent, supplies, that support agreement… I need to look at each one separately."
+      },
+      "spoken_text": "家賃と仕入れ、それから支援の契約……一つずつ、分けて見ないといけませんね。",
+      "generate_text": "家賃と仕入れ、それから支援の契約……一つずつ、分けて見ないといけませんね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "abf0228141710ba32f1e26606dd24f29425cd9b39f31c0c518b1e4fe14af2698",
+      "delivery": "平静自然的少女口语，认真但不播报账务，不故作低沉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_review_13_03",
+      "subtitle_templates": {
+        "zh": "还没决定下一步怎么做。我想先把能谈的办法都问清楚。",
+        "ja": "次をどうするかは、まだ決めていません。相談できることは、ちゃんと聞いてからにしたくて。",
+        "en": "I haven’t decided what comes next. I want to find out which options are actually possible first."
+      },
+      "spoken_text": "次をどうするかは、まだ決めていません。相談できることは、ちゃんと聞いてからにしたくて。",
+      "generate_text": "次をどうするかは、まだ決めていません。相談できることは、ちゃんと聞いてからにしたくて。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "f254928d253533cc5234bd64a721454cd7820131167aca1af7853934835be5a6",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_review_13_04",
+      "subtitle_templates": {
+        "zh": "东西先不急着收。前辈有空的话，还是来坐坐吧。",
+        "ja": "荷物をまとめるのは、もう少し待ちます。先輩も、お時間があったら座りに来てくださいね。",
+        "en": "I’ll wait a little before packing things away. Come sit for a while if you have time."
+      },
+      "spoken_text": "荷物をまとめるのは、もう少し待ちます。先輩も、お時間があったら座りに来てくださいね。",
+      "generate_text": "荷物をまとめるのは、もう少し待ちます。先輩も、お時間があったら座りに来てくださいね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "71876c9a81a6be0b954518c96257b638ff7393fd7202c2c1117472870675ea06",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_review_14_01",
+      "subtitle_templates": {
+        "zh": "晚上好，前辈。店里的手续还在办。",
+        "ja": "こんばんは、先輩。お店の手続き、まだ進めているところです。",
+        "en": "Good evening, Senpai. I’m still working through the shop’s paperwork."
+      },
+      "spoken_text": "こんばんは、先輩。お店の手続き、まだ進めているところです。",
+      "generate_text": "こんばんは、先輩。お店の手続き、まだ進めているところです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "db63d7e80f984f8cf08a2dfa8dc0e693a852f214f7bd7f81f96ba3621d319063",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_review_14_02",
+      "subtitle_templates": {
+        "zh": "磁带倒是先整理好啦。总不能让前辈一直等着嘛。",
+        "ja": "でも、テープは先にまとめておきました。先輩を、ずっと待たせるわけにはいきませんから。",
+        "en": "I did get the tapes sorted out, though. I can’t keep you waiting for those forever."
+      },
+      "spoken_text": "でも、テープは先にまとめておきました。先輩を、ずっと待たせるわけにはいきませんから。",
+      "generate_text": "でも、テープは先にまとめておきました。先輩を、ずっと待たせるわけにはいきませんから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "f91a59806d8c2c0534edd6ff31db91c5b5b25e310561d2853248a8b315eb5d33",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_stay_13_01",
+      "subtitle_templates": {
+        "zh": "晚上好，前辈。那两份合同，已经照约定开始做了。",
+        "ja": "こんばんは、先輩。あの二つの契約、約束どおり始められました。",
+        "en": "Good evening, Senpai. Both of those contracts have started as agreed."
+      },
+      "spoken_text": "こんばんは、先輩。あの二つの契約、約束どおり始められました。",
+      "generate_text": "こんばんは、先輩。あの二つの契約、約束どおり始められました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "c54d5bfe8afb93b1622b54b3bae185d54911cf3c503766af59d7822845737d90",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_stay_13_02",
+      "subtitle_templates": {
+        "zh": "取餐的袋子得写上班组名字。不然她们下班一急，又要拿错啦。",
+        "ja": "持ち帰りの袋には、班の名前を書かないと。退勤のときに慌てて、また取り違えちゃいそうで。",
+        "en": "I have to label the collection bags with the team names. They’re liable to grab the wrong ones in the rush after work."
+      },
+      "spoken_text": "持ち帰りの袋には、班の名前を書かないと。退勤のときに慌てて、また取り違えちゃいそうで。",
+      "generate_text": "持ち帰りの袋には、班の名前を書かないと。退勤のときに慌てて、また取り違えちゃいそうで。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "82f8db6476417862cfa4ec4ab9958ede97cf5ebb877dd26d82a29e41489fe272",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_stay_13_03",
+      "subtitle_templates": {
+        "zh": "每周该还多少，也终于能一笔一笔算清楚了。",
+        "ja": "毎週いくら返すのかも、やっと一つずつ見えるようになりました。",
+        "en": "And I can finally see exactly what needs repaying each week."
+      },
+      "spoken_text": "毎週いくら返すのかも、やっと一つずつ見えるようになりました。",
+      "generate_text": "毎週いくら返すのかも、やっと一つずつ見えるようになりました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "5c6af49719bbae4d54d1d30f9b41070310fae2a3fe78ffed25e9de355b4f33eb",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_stay_13_04",
+      "subtitle_templates": {
+        "zh": "嘿嘿，这回买箱子，是用来送餐的。",
+        "ja": "ふふ。今度の箱は、荷造りじゃなくて、配達に使うんですよ。",
+        "en": "Hehe. These boxes are for deliveries this time."
+      },
+      "spoken_text": "ふふ。今度の箱は、荷造りじゃなくて、配達に使うんですよ。",
+      "generate_text": "ふふ。今度の箱は、荷造りじゃなくて、配達に使うんですよ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "d953b58aba71f3ceada076eb84c70865072cb063cc9298eea888f62a32aff4ce",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_stay_14_01",
+      "subtitle_templates": {
+        "zh": "晚上好，前辈。昨天有客人问我，雨幕能不能再开一会儿。",
+        "ja": "こんばんは、先輩。昨日、お客さんに、雨をもう少し流してほしいって言われたんです。",
+        "en": "Good evening, Senpai. Yesterday a customer asked if I could leave the rain running a little longer."
+      },
+      "spoken_text": "こんばんは、先輩。昨日、お客さんに、雨をもう少し流してほしいって言われたんです。",
+      "generate_text": "こんばんは、先輩。昨日、お客さんに、雨をもう少し流してほしいって言われたんです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "b355702bdcfb0b16f7094ed6acbe634204aef031ad2e2d205fe9d4251117bffd",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_stay_14_02",
+      "subtitle_templates": {
+        "zh": "我说可以呀。反正现在，不用急着把它拆下来啦。",
+        "ja": "もちろん、いいですよって。もう、急いで外さなくていいですから。",
+        "en": "I said of course. There’s no hurry to take it down anymore."
+      },
+      "spoken_text": "もちろん、いいですよって。もう、急いで外さなくていいですから。",
+      "generate_text": "もちろん、いいですよって。もう、急いで外さなくていいですから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "3907fb49c2ec0b3f91984d407180de15c7a499e09712226158c320a42a48c483",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_shop_13",
+      "subtitle_templates": {
+        "zh": "今天想买点日用品。带了 {0} 信用点。",
+        "ja": "今日は日用品を少し。{0}クレジット持ってきました。",
+        "en": "I’d like some everyday supplies. I brought {0} credits."
+      },
+      "spoken_text": "今日は日用品を少し。250クレジット持ってきました。",
+      "generate_text": "今日は日用品を少し。250クレジット持ってきました。",
+      "generic": true,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "460945893f31c473c0ebdd10f7d89c9f2bc9bc9c6e152669727efd3433a97121",
+      "delivery": "平静自然的少女口语，认真但不播报账务，不故作低沉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_shop_14",
+      "subtitle_templates": {
+        "zh": "今天想买些水。带了 {0} 信用点。",
+        "ja": "今日はお水を少し。{0}クレジット持ってきました。",
+        "en": "I’d like some water today. I brought {0} credits."
+      },
+      "spoken_text": "今日はお水を少し。200クレジット持ってきました。",
+      "generate_text": "今日はお水を少し。200クレジット持ってきました。",
+      "generic": true,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "2f800339c35bd406e40d399d319f5189529763fe876cfc5f533378e5fd2fa96a",
+      "delivery": "平静自然的少女口语，认真但不播报账务，不故作低沉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_bye",
+      "subtitle_templates": {
+        "zh": "那我先回店里啦。晚上见，前辈。",
+        "ja": "では、お店に戻りますね。また今夜、先輩。",
+        "en": "I’ll head back to the shop. See you this evening, Senpai."
+      },
+      "spoken_text": "では、お店に戻りますね。また今夜、先輩。",
+      "generate_text": "では、お店に戻りますね。また今夜、先輩。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "b69fb38dde8ae2478bc71f2072f45f876a9c94642fb3a67f9180e658f89971cd",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_1_offer",
+      "subtitle_templates": {
+        "zh": "换班的时候总有人赶不上最后一轮。前辈，陪我把取餐时间试一下吧。",
+        "ja": "交代の時間に、最後の受け取りに間に合わない人がいるんです。先輩、一緒に時間を合わせてみませんか。",
+        "en": "Some people miss the last round at shift change. Would you help me test a better collection time?"
+      },
+      "spoken_text": "交代の時間に、最後の受け取りに間に合わない人がいるんです。先輩、一緒に時間を合わせてみませんか。",
+      "generate_text": "交代の時間に、最後の受け取りに間に合わない人がいるんです。先輩、一緒に時間を合わせてみませんか。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "eca5f2185f45f023bbad1b0ad0f6fd1a5b2703b96f7e395b01ab330aa2493587",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_1_done",
+      "subtitle_templates": {
+        "zh": "这下两边都赶得上啦。我把时间写在门口，免得自己又忘了。",
+        "ja": "これなら、どちらの班も間に合いますね。私が忘れないように、入口にも書いておきます。",
+        "en": "Now both shifts can make it. I’ll write the times by the door so I don’t forget them myself."
+      },
+      "spoken_text": "これなら、どちらの班も間に合いますね。私が忘れないように、入口にも書いておきます。",
+      "generate_text": "これなら、どちらの班も間に合いますね。私が忘れないように、入口にも書いておきます。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "28644fe2bbe1d73fa5ee28e54884c6bbae2367cd8a1f6460fb3dcc8373bfd208",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_2_offer",
+      "subtitle_templates": {
+        "zh": "物业肯借周转箱呢。前辈帮我接一下，我们再找个不挡路的取餐位置。",
+        "ja": "管理所が通い箱を貸してくれるそうです。受け取るのを手伝って、通路をふさがない置き場所も決めませんか。",
+        "en": "The building office will lend us returnable boxes. Help me collect them and find a pickup spot that won’t block the aisle?"
+      },
+      "spoken_text": "管理所が通い箱を貸してくれるそうです。受け取るのを手伝って、通路をふさがない置き場所も決めませんか。",
+      "generate_text": "管理所が通い箱を貸してくれるそうです。受け取るのを手伝って、通路をふさがない置き場所も決めませんか。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "d68ca0afecc8c76dd728562c6b4e660a02724e791e792ebc2fd6009e9047fdbe",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_2_done",
+      "subtitle_templates": {
+        "zh": "放这里就好。以后替同事带单，也不用挤到吧台前啦。",
+        "ja": "ここならよさそうです。同僚の分を持ち帰る人も、カウンターに並ばなくて済みますね。",
+        "en": "Here should work. People collecting for their colleagues won’t have to crowd the bar anymore."
+      },
+      "spoken_text": "ここならよさそうです。同僚の分を持ち帰る人も、カウンターに並ばなくて済みますね。",
+      "generate_text": "ここならよさそうです。同僚の分を持ち帰る人も、カウンターに並ばなくて済みますね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "ca47d835525175a627df52b5c7f9b8df24fb4783e47204baacbf632b89059467",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_3_offer",
+      "subtitle_templates": {
+        "zh": "两班的名单有几处重了。我怕把甜的和酸的又装反，想请前辈帮我核一下。",
+        "ja": "二つの班の名簿、何か所か重なっていて。甘いのと酸っぱいのを間違えないよう、先輩にも見てほしくて。",
+        "en": "A few names are duplicated on the two shift lists. Could you check them with me before I mix up the sweet and sour orders again?"
+      },
+      "spoken_text": "二つの班の名簿、何か所か重なっていて。甘いのと酸っぱいのを間違えないよう、先輩にも見てほしくて。",
+      "generate_text": "二つの班の名簿、何か所か重なっていて。甘いのと酸っぱいのを間違えないよう、先輩にも見てほしくて。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "31b56cbb10d4e1b0c237ce51331045f56c1b4159fea90d8de66512f27d7300f9",
+      "delivery": "平静自然的少女口语，认真但不播报账务，不故作低沉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_3_done",
+      "subtitle_templates": {
+        "zh": "好啦，换班前就能准备齐。原来写清楚一点，真的会省好多事呢。",
+        "ja": "できました。これなら交代前に全部そろえられます。ちゃんと書いておくと、ずいぶん楽になるんですね。",
+        "en": "There. We can have everything ready before shift change. Writing it down properly really does save trouble."
+      },
+      "spoken_text": "できました。これなら交代前に全部そろえられます。ちゃんと書いておくと、ずいぶん楽になるんですね。",
+      "generate_text": "できました。これなら交代前に全部そろえられます。ちゃんと書いておくと、ずいぶん楽になるんですね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "89f45634962255e2b483d4f2696808ef5498c6ed99d86e0d819024d69cbb5bc9",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_4_offer",
+      "subtitle_templates": {
+        "zh": "维修班肯借自取架。我们把座位和取餐错开一点，窗边就不用一直让路了。",
+        "ja": "修理班が受取棚を貸してくれるんです。席と受取の時間をずらせば、窓辺の人も何度も立たなくて済みますね。",
+        "en": "The maintenance crew will lend us a collection shelf. If we stagger seating and pickup, people at the window won’t keep having to move."
+      },
+      "spoken_text": "修理班が受取棚を貸してくれるんです。席と受取の時間をずらせば、窓辺の人も何度も立たなくて済みますね。",
+      "generate_text": "修理班が受取棚を貸してくれるんです。席と受取の時間をずらせば、窓辺の人も何度も立たなくて済みますね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "126922c31a5e2ed4d4aae5933805271e4bc79256b2e63841371872d821354a07",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_4_done",
+      "subtitle_templates": {
+        "zh": "嗯，这样好多了。坐着听歌的人，和赶着回去的人，都有自己的位置啦。",
+        "ja": "うん、よくなりました。音楽を聞く人にも、急いで帰る人にも、ちゃんと居場所ができましたね。",
+        "en": "Yes, that’s much better. People staying for the music and people hurrying home each have their own space now."
+      },
+      "spoken_text": "うん、よくなりました。音楽を聞く人にも、急いで帰る人にも、ちゃんと居場所ができましたね。",
+      "generate_text": "うん、よくなりました。音楽を聞く人にも、急いで帰る人にも、ちゃんと居場所ができましたね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "322b854b83241fb78f5a2f52a3c2dfd671d6bff12dbeb2ae769eda1ebe705181",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_good_01",
+      "subtitle_templates": {
+        "zh": "前辈，今天的取餐单都送完了。",
+        "ja": "先輩、今日の受取分、全部渡し終わりました。",
+        "en": "Senpai, all of today’s collections are done."
+      },
+      "spoken_text": "先輩、今日の受取分、全部渡し終わりました。",
+      "generate_text": "先輩、今日の受取分、全部渡し終わりました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "e38e61602d0a242034ae2de8bd4b2e15878566e31351931c13a06e5ed05c004a",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_good_02",
+      "subtitle_templates": {
+        "zh": "隔壁大叔把隔间的钥匙送回来了。他说晚上不用，叫我别总锁得那么早。",
+        "ja": "隣のおじさんが、奥の部屋の鍵を返しに来たんです。夜は使わないから、そんなに早く閉めなくていいって。",
+        "en": "The repair-shop owner brought back the room key. He doesn’t use it at night, so he told me not to lock up quite so early."
+      },
+      "spoken_text": "隣のおじさんが、奥の部屋の鍵を返しに来たんです。夜は使わないから、そんなに早く閉めなくていいって。",
+      "generate_text": "隣のおじさんが、奥の部屋の鍵を返しに来たんです。夜は使わないから、そんなに早く閉めなくていいって。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "c0baab95b4a9ca674195155ae7575856949ba7f5cb85844a003668f122f1deb5",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_good_03",
+      "subtitle_templates": {
+        "zh": "账上还有要慢慢还的。不过下周的材料、房租，也都留好了。",
+        "ja": "少しずつ返す分は、まだあります。でも来週の材料と家賃は、ちゃんと残せました。",
+        "en": "There’s still money to repay, little by little. But next week’s ingredients and rent are set aside."
+      },
+      "spoken_text": "少しずつ返す分は、まだあります。でも来週の材料と家賃は、ちゃんと残せました。",
+      "generate_text": "少しずつ返す分は、まだあります。でも来週の材料と家賃は、ちゃんと残せました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "73bf2f1463a1c66a82863193cd5438b94960421363d5ac8ca1041b16363bf6e4",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_good_04",
+      "subtitle_templates": {
+        "zh": "我想……以后还是把店开在这里。",
+        "ja": "私……これからも、ここでお店を続けたいです。",
+        "en": "I think… I want to keep running my shop here."
+      },
+      "spoken_text": "私……これからも、ここでお店を続けたいです。",
+      "generate_text": "私……これからも、ここでお店を続けたいです。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "7136a61bf39075e8591965f0fa4d46a3be97f32c89241e91a4e5afa56ad54e80",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_good_05",
+      "subtitle_templates": {
+        "zh": "前辈要是不急着回去，就再坐一会儿吧。",
+        "ja": "先輩、急いでいなければ、もう少し座っていきませんか。",
+        "en": "If you’re not in a hurry, Senpai, stay a little longer?"
+      },
+      "spoken_text": "先輩、急いでいなければ、もう少し座っていきませんか。",
+      "generate_text": "先輩、急いでいなければ、もう少し座っていきませんか。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "9a383534ffa53ffd30c87ab541e0ca368fdbab1e4746ff5e598f9246f7ffb518",
+      "delivery": "轻柔、有一点不好意思，尾句放松，不加突兀惊呼。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_good_06",
+      "subtitle_templates": {
+        "zh": "雨还没停呢。",
+        "ja": "雨、まだやんでいませんから。",
+        "en": "The rain hasn’t stopped yet."
+      },
+      "spoken_text": "雨、まだやんでいませんから。",
+      "generate_text": "雨、まだやんでいませんから。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "9652a159df5e26036bbbcb59cc731be84cf226319428fd2c255a014f06273607",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_stable_chat_01",
+      "subtitle_templates": {
+        "zh": "今天又有人点“老样子”啦。这次我可没拿错杯子。",
+        "ja": "今日も「いつもの」って言われました。今度は、グラスも間違えませんでしたよ。",
+        "en": "Someone ordered “the usual” again today. I even got the glass right this time."
+      },
+      "spoken_text": "今日も「いつもの」って言われました。今度は、グラスも間違えませんでしたよ。",
+      "generate_text": "今日も「いつもの」って言われました。今度は、グラスも間違えませんでしたよ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "b33dec21405b611d49f2ec9c55f5bf2df0a5275c198e0588f032305921069501",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_stable_chat_02",
+      "subtitle_templates": {
+        "zh": "那张取餐名单快写满了。我得再找一支不容易蹭花的笔。",
+        "ja": "受取の名簿、もうすぐいっぱいです。こすっても消えにくいペン、探さないと。",
+        "en": "The collection list is nearly full. I need a pen that doesn’t smudge so easily."
+      },
+      "spoken_text": "受取の名簿、もうすぐいっぱいです。こすっても消えにくいペン、探さないと。",
+      "generate_text": "受取の名簿、もうすぐいっぱいです。こすっても消えにくいペン、探さないと。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "01983851fa07e6076f0752c7f41f06f0ac67baea7417b317d20d942a4dfe7b45",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_stable_chat_03",
+      "subtitle_templates": {
+        "zh": "修理店大叔来还箱子，顺便点了杯甜的。明明上次还说自己不爱甜呢。",
+        "ja": "修理屋のおじさん、箱を返すついでに甘いのを頼んだんです。この前は、甘いのは苦手だって言っていたのに。",
+        "en": "The repair-shop owner returned the boxes and ordered something sweet. Last time he claimed he didn’t like sweet drinks."
+      },
+      "spoken_text": "修理屋のおじさん、箱を返すついでに甘いのを頼んだんです。この前は、甘いのは苦手だって言っていたのに。",
+      "generate_text": "修理屋のおじさん、箱を返すついでに甘いのを頼んだんです。この前は、甘いのは苦手だって言っていたのに。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "4875cf10892fa32f924fafef58029832309c4db0039f491781965d8df8b34d02",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_clear_01",
+      "subtitle_templates": {
+        "zh": "前辈，那张借款的结清回单，今天终于拿到了。",
+        "ja": "先輩、借入の完済証明、今日やっと受け取れました。",
+        "en": "Senpai, I finally got the loan clearance receipt today."
+      },
+      "spoken_text": "先輩、借入の完済証明、今日やっと受け取れました。",
+      "generate_text": "先輩、借入の完済証明、今日やっと受け取れました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "e638ff7cdb1e5035b3d350ab54665a774dcc257cb5a6ca7747743a0b8f4382c9",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_clear_02",
+      "subtitle_templates": {
+        "zh": "我检查了两遍，还是零。嘿嘿，这回不是自己少算了一位。",
+        "ja": "二回確かめても、ゼロでした。ふふ、今度は桁を見落としたんじゃありませんよ。",
+        "en": "I checked twice. Still zero. Hehe, I haven’t missed a digit this time."
+      },
+      "spoken_text": "二回確かめても、ゼロでした。ふふ、今度は桁を見落としたんじゃありませんよ。",
+      "generate_text": "二回確かめても、ゼロでした。ふふ、今度は桁を見落としたんじゃありませんよ。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "80d93a55a4f0a121f7c5b89a2d0852249d1963a1a9d191ba93574cb169999af2",
+      "delivery": "少女带一点轻快的笑意，像和熟悉的前辈分享日常，不夸张。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_clear_03",
+      "subtitle_templates": {
+        "zh": "那台制冰机，我又放回收藏夹啦。这次不着急，慢慢挑。",
+        "ja": "あの製氷機、またお気に入りに戻しました。今度は急がず、ゆっくり選びます。",
+        "en": "I put that ice machine back on my favorites list. There’s no rush this time. I can take my time choosing."
+      },
+      "spoken_text": "あの製氷機、またお気に入りに戻しました。今度は急がず、ゆっくり選びます。",
+      "generate_text": "あの製氷機、またお気に入りに戻しました。今度は急がず、ゆっくり選びます。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "518ab789dbbfc44afaec0a51c392c16a16e4922fc46d8806c40016867d36316b",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_review_entry",
+      "subtitle_templates": {
+        "zh": "前辈来啦。账本在这边，先坐一会儿吧。",
+        "ja": "先輩、いらっしゃい。帳簿はこっちです。まずは、少し座っていってください。",
+        "en": "Welcome, Senpai. The ledger is over here. Come sit for a little while."
+      },
+      "spoken_text": "先輩、いらっしゃい。帳簿はこっちです。まずは、少し座っていってください。",
+      "generate_text": "先輩、いらっしゃい。帳簿はこっちです。まずは、少し座っていってください。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "bcbf4b45ba2d67c9a63ba52a4ba36f57201352e0b577644b8f20ff67243bfe5b",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_1_offer_unknown",
+      "subtitle_templates": {
+        "zh": "夜班交接的时间不太好安排。您愿意陪我试一次取餐时间吗？",
+        "ja": "夜勤の交代時間、なかなかうまく合わなくて。受け取りの時間を、一緒に試してもらえませんか。",
+        "en": "Shift change is a little awkward to arrange. Would you help me test a collection time?"
+      },
+      "spoken_text": "夜勤の交代時間、なかなかうまく合わなくて。受け取りの時間を、一緒に試してもらえませんか。",
+      "generate_text": "夜勤の交代時間、なかなかうまく合わなくて。受け取りの時間を、一緒に試してもらえませんか。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "145407cc1ca5eb7b009d2f2cb60d5fdab79c23bb6f50956784bc05a214493e2f",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_2_offer_unknown",
+      "subtitle_templates": {
+        "zh": "物业那边有箱子可以借。能请您帮忙接一下，再一起找个取餐的位置吗？",
+        "ja": "管理所で箱を借りられるそうです。受け取りを手伝って、一緒に置き場所も考えてもらえますか。",
+        "en": "The building office has boxes we can borrow. Could you help me collect them and find a pickup spot?"
+      },
+      "spoken_text": "管理所で箱を借りられるそうです。受け取りを手伝って、一緒に置き場所も考えてもらえますか。",
+      "generate_text": "管理所で箱を借りられるそうです。受け取りを手伝って、一緒に置き場所も考えてもらえますか。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "d9ed00f5578f112515550950c3e2afde415cacb0d1f9f30741130ee673a6c4be",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_project_3_offer_unknown",
+      "subtitle_templates": {
+        "zh": "两班的名字有几处对不上。我怕装错了，能麻烦您一起看一下吗？",
+        "ja": "二つの班の名前が、何か所か合わなくて。間違えて詰めないよう、一緒に見てもらってもいいですか。",
+        "en": "A few names on the shift lists do not match. Would you check them with me before I pack the wrong orders?"
+      },
+      "spoken_text": "二つの班の名前が、何か所か合わなくて。間違えて詰めないよう、一緒に見てもらってもいいですか。",
+      "generate_text": "二つの班の名前が、何か所か合わなくて。間違えて詰めないよう、一緒に見てもらってもいいですか。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "abad5f0d831ae3ebe73b52ccb3c27a502debf8aa238a0e2e58adb59c2796b5a4",
+      "delivery": "平静自然的少女口语，认真但不播报账务，不故作低沉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_good_01_unknown",
+      "subtitle_templates": {
+        "zh": "刚才那批取餐单，已经全都交好了。",
+        "ja": "さっきの受取分、全部渡し終わりました。",
+        "en": "That last batch of collection orders has all been handed over."
+      },
+      "spoken_text": "さっきの受取分、全部渡し終わりました。",
+      "generate_text": "さっきの受取分、全部渡し終わりました。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "c78b10d46bda5ffe505b3e876f79cbc356f6a2ff54d69c2807975b47ab0d68e1",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_good_05_unknown",
+      "subtitle_templates": {
+        "zh": "如果您还不急着走，愿意再坐一会儿吗？",
+        "ja": "まだお急ぎでなければ、もう少し座っていきませんか。",
+        "en": "If you are not in a hurry, would you like to stay a little longer?"
+      },
+      "spoken_text": "まだお急ぎでなければ、もう少し座っていきませんか。",
+      "generate_text": "まだお急ぎでなければ、もう少し座っていきませんか。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "1caa45ad64a0aef6b60b368e04966c3beccd13de8c22d94f96b75ab58df66851",
+      "delivery": "轻柔、有一点不好意思，尾句放松，不加突兀惊呼。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_clear_01_unknown",
+      "subtitle_templates": {
+        "zh": "刚收到借款结清的回单。我又检查了好几遍，确实都还完了呢。",
+        "ja": "借入の完済証明、さっき届いたんです。何度も確かめましたけど、本当に全部返せたんですね。",
+        "en": "The loan clearance receipt just arrived. I have checked it several times. It really is all paid off."
+      },
+      "spoken_text": "借入の完済証明、さっき届いたんです。何度も確かめましたけど、本当に全部返せたんですね。",
+      "generate_text": "借入の完済証明、さっき届いたんです。何度も確かめましたけど、本当に全部返せたんですね。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "f4e1a31a68369a33fc302a98b11121613e1a89f28059614e4c2d39458b6d00dd",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
+    },
+    {
+      "key": "xm_eco_review_entry_unknown",
+      "subtitle_templates": {
+        "zh": "您来啦。账本放在这边，进来坐吧。",
+        "ja": "いらっしゃい。帳簿はこちらに置いてあります。どうぞ、座っていってください。",
+        "en": "Welcome. The ledger is over here. Come sit down."
+      },
+      "spoken_text": "いらっしゃい。帳簿はこちらに置いてあります。どうぞ、座っていってください。",
+      "generate_text": "いらっしゃい。帳簿はこちらに置いてあります。どうぞ、座っていってください。",
+      "generic": false,
+      "reviewed": false,
+      "audio": "",
+      "note": "新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。",
+      "source_sha256": "417b6062cd93796c4bc61ad34c3ef45e45ebc54443dc7239fcc5237d32699bba",
+      "delivery": "少女自然轻声，温和生活口吻，留短停顿，不演成哭诉。",
+      "defer_recording": true
     }
   ]
 }

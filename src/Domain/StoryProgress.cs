@@ -85,6 +85,7 @@ namespace XiaomanVisitor
         [JsonProperty] public string[] SaleKeys = new string[0];
         [JsonProperty] public string GiftDrinkKey = "";
         [JsonProperty] public string NoteVariant = "";
+        [JsonProperty] public string EndingBranch = "";
         [JsonProperty] public SupplyNoteSnapshot SupplySnapshot;
         public bool HasFixedDrink { get { return Index == 6 && StoryRules.FinalDrinks.Contains(GiftDrinkKey); } }
         public int RequiredMask { get { return Index == 14 ? 31 : HasFixedDrink ? 7 : 3; } }
@@ -171,6 +172,7 @@ namespace XiaomanVisitor
                     if (visit.NoteVariant!="A" && visit.NoteVariant!="B") visit.NoteVariant=visit.HasPart(0)?"A":"";
                 }
                 else visit.NoteVariant="";
+                if ((visit.Index!=13 && visit.Index!=14) || !new[]{"","leave","review","stay"}.Contains(visit.EndingBranch)) visit.EndingBranch="";
                 visit.GiftMask &= visit.RequiredMask;
                 visit.SaleKeys = visit.SaleKeys ?? new string[0];
                 if (visit.SaleKeys.Length != 0 && (visit.SaleKeys.Length != 2 || visit.SaleKeys.Distinct().Count() != 2

@@ -12,12 +12,14 @@ def main():
     index = json.loads((layout.PACKAGE/"Letters/index.json").read_text(encoding="utf-8"))
     assert index["schema"] == 1 and index["font"] == "Yozai Regular"
     assert index["aliases"] == {"thank_you_note":"story_note_01"}
-    assert len(index["letters"]) == 48
+    import prepare_economy
+    extra=list(prepare_economy.read()['letters'])
+    assert len(index["letters"]) == 48+3*len(extra)
     assert index['kaomoji_fallbacks']==[dict(file=p.name,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in layout.FALLBACKS]
     assert {r["file"] for r in index["letters"]} == {
         f"Letters/{language}/{key}.png"
         for language in ("zh","ja","en") for key in
-        [f'story_note_{n:02d}' for n in range(1,15)]+['story_note_03_b','story_note_04_b']}
+        [f'story_note_{n:02d}' for n in range(1,15)]+['story_note_03_b','story_note_04_b']+extra}
     texts = {lang:layout.read_texts(lang) for lang in ("zh","ja","en")}
     rows = []
     for entry in index["letters"]:
@@ -59,7 +61,7 @@ def main():
                   max_resident_texture_bytes=1122*1402*4,
                   lazy_loaded=True,fonts_in_package=False)
     (folder/"layout-report.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("PASS: 48 localized Yozai ink layers (14 letters plus W03/W04 B) match text/hashes and fit; indexed alpha intact, no full fonts in package.")
+    print(f"PASS: {len(rows)} localized Yozai ink layers match source text/hashes and fit; indexed alpha intact, no full fonts in package.")
 
 
 if __name__ == "__main__":

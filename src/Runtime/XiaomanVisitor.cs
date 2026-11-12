@@ -61,6 +61,7 @@ namespace XiaomanVisitor
             ModHook.OnGameLoadedLate += OnGameLoaded;
             ModHook.OnGenerateCustomerVeryLate += GenerateVisitor;
             ModHook.OnShutterOpenedLate += QueueOpeningVisitor;
+            EnableEconomy();
             EnableGifts();
             EnableCocktails();
             EnablePaidWork();
@@ -98,6 +99,7 @@ namespace XiaomanVisitor
             DisablePaidWork();
             DisableWeekFour();
             DisableWeekFiveSix();
+            DisableEconomy();
             DisableTavernMap();
             WithdrawActiveVisitor();
             ModHelper.RemoveDebugFunctions(Id);

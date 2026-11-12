@@ -143,6 +143,9 @@ def main():
                 for field in ('title','body'):assert texts[lang][f'xm_w{visit:02d}_news_'+field]==overlay['news'][field][lang]
         for lang,fields in overlay['letters'].items():
             for field,value in fields.items():assert texts[lang][f'story_note_{visit:02d}_{field}']==value
+    import prepare_economy
+    economy=prepare_economy.read()
+    english.update({row['key']:row['en'] for row in economy['lines']})
     assert set(english) == {line["key"] for line in story["lines"]}
     assert all(texts["en"][key].replace("\\n", "\n") == value for key, value in english.items())
     for note in notes:

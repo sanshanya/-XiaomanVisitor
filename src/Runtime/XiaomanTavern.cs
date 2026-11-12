@@ -58,7 +58,7 @@ namespace XiaomanVisitor
             var progress=ReadTavern();
             bool known=TavernKnown;
             string[] greeting=progress.Enter(StoreStation.Instance.dayCounter,known);
-            if (!TavernTrading) greeting=new[]{"xm_tavern_13_entry"};
+            if (!TavernTrading) greeting=new[]{EconomyAvailable && !ReadEconomy().Departing?"xm_eco_review_entry":"xm_tavern_13_entry"};
             progress.SelectedTrack=TavernRules.MusicKey(ReadStory().VisitIndex);
             SaveTavern(progress);
             tavernStage.PlayMusic(progress.SelectedTrack);
@@ -84,7 +84,7 @@ namespace XiaomanVisitor
             if (!AtTavern) return;
             tavernStage?.CancelSpeech();
             tavernLines.Clear();
-            foreach (string key in keys) tavernLines.Enqueue(TavernDialogue.KeyFor(key,TavernKnown));
+            foreach (string key in keys) tavernLines.Enqueue(EconomyStory.KeyFor(TavernDialogue.KeyFor(key,TavernKnown),TavernKnown));
             tavernDialogueDone=done; tavernSequence=true; tavernInputBlocked=blockInput;
             ShowNextTavernLine();
         }
@@ -93,7 +93,7 @@ namespace XiaomanVisitor
             if (tavernStage==null || tavernStage.Speaking) return;
             if (tavernLines.Count>0) {
                 string key=tavernLines.Dequeue(),text=Text(key);
-                tavernStage.Say(Text("name"),text,TavernDialogue.MoodFor(key),Voices.Resolve(key,SelectedVoiceLanguage,text));
+                tavernStage.Say(Text("name"),text,EconomyStory.MoodFor(key,TavernDialogue.MoodFor(key)),Voices.Resolve(key,SelectedVoiceLanguage,text));
                 return;
             }
             if (!tavernSequence) return;
@@ -133,6 +133,7 @@ namespace XiaomanVisitor
         internal void ClickTavernSpot(string spot)
         {
             if (!TavernMayAct || tavernActionBusy) return;
+            if (economyWindow!=null && economyWindow.IsAlive) { CloseEconomyWindow();return; }
             // A scene click outside the choice bubbles dismisses them only.
             if (tavernStage!=null && tavernStage.ChoicesVisible) { CloseTavernMenu();return; }
             if (TavernDialogueBusy) { if (spot=="actor") AdvanceTavernSpeech(); return; }
@@ -155,6 +156,7 @@ namespace XiaomanVisitor
                     });
                 else ShowTavernMenu("music");
             }
+            else if (spot=="pickup") ShowEconomyWindow("contracts");
         }
         private void CloseTavernMenu()
         {
@@ -169,7 +171,7 @@ namespace XiaomanVisitor
             if (page=="music") { OpenTavernCassettePlayer();return; }
             if (!TavernMayAct || CustomUIManager.Instance==null) return;
             if (!TavernTrading && page.StartsWith("supply")) page="supply_ledger";
-            if (page=="root" || page=="interaction" || page=="help" || page=="work") {
+            if (page=="root" || page=="interaction" || page=="details" || page=="help" || page=="work") {
                 ShowTavernChoices(page);return;
             }
             tavernStage?.HideChoices();
@@ -262,6 +264,7 @@ namespace XiaomanVisitor
             }
             else if (page=="interaction") {
                 choice(Text("ui_tavern_chat"),() => {
+                    if (EconomyAvailable && ReadEconomy().HasStayed) { CloseTavernMenu();PlayEconomyChat();return; }
                     if (ReadStory().VisitIndex>=12) {
                         CloseTavernMenu();QueueTavernSpeech(new[]{TavernTrading?"xm_tavern_chat_rest":"xm_tavern_13_chat"});return;
                     }
@@ -276,20 +279,19 @@ namespace XiaomanVisitor
                     // same logical entry, and only after the full speech finishes.
                     CloseTavernMenu();QueueTavernSpeech(TavernDialogue.ChatSequence(sequence),() => UpdateTavern(p => { if (!p.ChatSeen.Contains(receipt)) p.ChatSeen.Add(receipt); }));
                 });
-                if (ReadStory().VisitIndex==12) {
-                    if (ReadRokaGift().Phase=="waiting") choice(Text("ui_w12_roka"),OfferRoka);
-                    choice(Text("ui_w12_business"),() => {
-                        CloseTavernMenu();QueueTavernSpeech(TavernDialogue.ChatSequence("xm_tavern_12_business_01"),() => ShowTavernMenu("ending_notice"));
-                    });
-                }
-                if (!TavernTrading) choice(Text("ui_w12_notice_name"),() => ShowTavernMenu("ending_notice"));
                 if (TavernTrading && ReadTavern().MayHelp(StoreStation.Instance.dayCounter)) choice(Text("ui_tavern_reception"),() => {
                     CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w02_help_intro"},() => ShowTavernMenu("help"));
                 });
                 else if (TavernTrading && StoreStation.Instance.dayCounter>=TavernWorkConfig.UnlockDay)
                     choice(Text("ui_tavern_paid_work",TavernWorkConfig.Wage),RequestTavernWork);
-                if (StoreStation.Instance.dayCounter>=22) choice(Text(TavernTrading?"ui_w04_supply":"ui_w13_records"),RequestSupply);
+                choice(Text("ui_eco_more"),() => ShowTavernChoices("details"));
                 choice(Text("ui_tavern_back"),() => ShowTavernMenu("root"));
+            }
+            else if (page=="details") {
+                if (ReadStory().VisitIndex==12 && ReadRokaGift().Phase=="waiting") choice(Text("ui_w12_roka"),OfferRoka);
+                if (StoreStation.Instance.dayCounter>=22) choice(Text(TavernTrading?"ui_w04_supply":"ui_w13_records"),RequestSupply);
+                choice(Text("ui_eco_open"),() => ShowEconomyWindow("contracts"));
+                choice(Text("ui_tavern_back"),() => ShowTavernMenu("interaction"));
             }
             else if (page=="help") {
                 choice(Text("ui_tavern_help_confirm"),() => {
@@ -307,6 +309,7 @@ namespace XiaomanVisitor
         }
         private void LeaveTavern()
         {
+            CloseEconomyWindow();
             CancelTavernWork();CloseTavernCassettePlayer();
             tavernLines.Clear(); tavernSequence=false; tavernInputBlocked=false; tavernDialogueDone=null;
             CloseTavernMenu(); tavernStage?.EndSession();

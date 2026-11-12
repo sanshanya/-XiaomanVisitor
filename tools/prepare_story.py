@@ -276,6 +276,22 @@ def main():
     for key in gun_reactions['zh']:
         english[key]=gun_reactions['en'][key]
         add(key,gun_reactions['zh'][key],gun_reactions['ja'][key],'Worried',defer_voice=True)
+    import prepare_economy
+    economy = prepare_economy.generate()
+    for lang, entries in economy['ui'].items():
+        loc[lang].update(entries)
+    for row in economy['lines']:
+        english[row['key']] = row['en']
+        spoken=row['ja'].format(BUDGETS[row['budget_visit']-1]) if row.get('budget_visit') else row['ja']
+        add(row['key'], row['zh'], row['ja'], row['mood'], spoken=spoken, defer_voice=True)
+        lines[row['key']]['delivery']=row['delivery']
+    for key, letter in economy['letters'].items():
+        for lang, full in letter.items():
+            blocks=full.split('\n\n')
+            loc[lang][key+'_name']={'zh':'小满的信','ja':'みちるからの手紙','en':'A letter from Xiaoman'}[lang]
+            loc[lang][key+'_title']=blocks[0]
+            loc[lang][key+'_body']='\n\n'.join(blocks[1:-1])
+            loc[lang][key+'_signature']=blocks[-1]
     for lang, rows in loc.items():
         for obsolete in ("cfg_interval", "cfg_interval_tip", "cfg_budget",
                          "cfg_experimental_tavern_warning", "ui_tavern_warning_acknowledge"):
@@ -401,7 +417,7 @@ def main():
         if line.get('recording_reviewed'): row['reviewed']=True
         if line.get("defer_voice") and not row['audio'] and not line.get('recording_reviewed'):
             row.update(reviewed=False, audio="", defer_recording=True,
-                       note="新增或改写字幕；作者要求暂不生成录音，日语口头稿待审。")
+                       note="新增或改写字幕；本次仅接入文字，未执行配音生成，日语口头稿待审。")
         production.append(row)
     save(old_script_path, dict(schema=1, language="ja", voice_id="ayano", model_id="luna-tts-1.5", speed=1.1, text_normalization=True, lines=production))
     save(ROOT/'story/酒馆配音脚本_ja_待审.json',dict(schema=1,language='ja',voice_id='ayano',speed=1.1,

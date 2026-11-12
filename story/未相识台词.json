@@ -156,6 +156,42 @@
       "zh": "有些客人喝着喝着，就聊起自己去过的地方。明明我哪里都没去，却好像跟着他们旅行了一圈呢。",
       "ja": "飲んでいるうちに、旅した場所の話をしてくれるお客さんもいるんです。私はどこにも行っていないのに、一緒に旅してきたような気分になっちゃいます。",
       "en": "Some start telling me about places they have been. I have not gone anywhere, yet it feels as if I have travelled with them."
+    },
+    "xm_eco_project_1_offer_unknown": {
+      "zh": "夜班交接的时间不太好安排。您愿意陪我试一次取餐时间吗？",
+      "ja": "夜勤の交代時間、なかなかうまく合わなくて。受け取りの時間を、一緒に試してもらえませんか。",
+      "en": "Shift change is a little awkward to arrange. Would you help me test a collection time?"
+    },
+    "xm_eco_project_2_offer_unknown": {
+      "zh": "物业那边有箱子可以借。能请您帮忙接一下，再一起找个取餐的位置吗？",
+      "ja": "管理所で箱を借りられるそうです。受け取りを手伝って、一緒に置き場所も考えてもらえますか。",
+      "en": "The building office has boxes we can borrow. Could you help me collect them and find a pickup spot?"
+    },
+    "xm_eco_project_3_offer_unknown": {
+      "zh": "两班的名字有几处对不上。我怕装错了，能麻烦您一起看一下吗？",
+      "ja": "二つの班の名前が、何か所か合わなくて。間違えて詰めないよう、一緒に見てもらってもいいですか。",
+      "en": "A few names on the shift lists do not match. Would you check them with me before I pack the wrong orders?"
+    },
+    "xm_eco_good_01_unknown": {
+      "zh": "刚才那批取餐单，已经全都交好了。",
+      "ja": "さっきの受取分、全部渡し終わりました。",
+      "en": "That last batch of collection orders has all been handed over."
+    },
+    "xm_eco_good_05_unknown": {
+      "zh": "如果您还不急着走，愿意再坐一会儿吗？",
+      "ja": "まだお急ぎでなければ、もう少し座っていきませんか。",
+      "en": "If you are not in a hurry, would you like to stay a little longer?"
+    },
+    "xm_eco_clear_01_unknown": {
+      "zh": "刚收到借款结清的回单。我又检查了好几遍，确实都还完了呢。",
+      "ja": "借入の完済証明、さっき届いたんです。何度も確かめましたけど、本当に全部返せたんですね。",
+      "en": "The loan clearance receipt just arrived. I have checked it several times. It really is all paid off."
+    },
+    "xm_eco_review_entry_unknown": {
+      "zh": "您来啦。账本放在这边，进来坐吧。",
+      "ja": "いらっしゃい。帳簿はこちらに置いてあります。どうぞ、座っていってください。",
+      "en": "Welcome. The ledger is over here. Come sit down."
     }
-  }
+  },
+  "good_ending_additions": "本次好结局开发稿的逐句未相识差分；保留原有已审校条目，新句尚未录音。"
 }

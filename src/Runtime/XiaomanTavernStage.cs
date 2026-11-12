@@ -14,7 +14,9 @@ namespace XiaomanVisitor
         private RectTransform room;
         internal RectTransform ControlRoot { get;private set; }
         private RawImage background, actor, foreground;
-        private RectTransform actorHit, rainHit, tapeHit;
+        private RectTransform actorHit, rainHit, tapeHit, pickupHit;
+        private TextMeshProUGUI pickupLabel;
+        private float pickupRefresh;
         private RectTransform workBar, workFill;
         private TextMeshProUGUI workLabel;
         private Texture2D backgroundTexture, foregroundTexture;
@@ -63,6 +65,15 @@ namespace XiaomanVisitor
             rainHit=Hotspot("Rain",() => mod.ClickTavernSpot("rain"));
             tapeHit=Hotspot("Tape",() => mod.ClickTavernSpot("tape"));
             actorHit=Hotspot("Actor",() => mod.ClickTavernSpot("actor"));
+            pickupHit=Hotspot("Pickup",() => mod.ClickTavernSpot("pickup"));
+            var pickupText=new GameObject("PickupLabel",typeof(RectTransform),typeof(CanvasRenderer),typeof(TextMeshProUGUI));
+            pickupText.transform.SetParent(pickupHit,false);pickupLabel=pickupText.GetComponent<TextMeshProUGUI>();
+            pickupLabel.font=DialogUIManager.Instance.dialogChoiceBubbles[0].TMP.font;
+            pickupLabel.alignment=TextAlignmentOptions.Bottom;pickupLabel.raycastTarget=false;
+            pickupLabel.color=new Color32(221,217,181,255);
+            pickupLabel.rectTransform.anchorMin=Vector2.zero;pickupLabel.rectTransform.anchorMax=Vector2.one;
+            pickupLabel.rectTransform.offsetMin=pickupLabel.rectTransform.offsetMax=Vector2.zero;
+            pickupHit.gameObject.SetActive(false);
             channel = gameObject.AddComponent<AudioSource>();
             channel.playOnAwake = false; channel.loop = false; channel.spatialBlend = 0;
             music=gameObject.AddComponent<AudioSource>();
@@ -121,6 +132,9 @@ namespace XiaomanVisitor
             PlaceHit(actorHit,TavernSceneLayout.ActorX,TavernSceneLayout.ActorY,TavernSceneLayout.ActorWidth,TavernSceneLayout.ActorHeight,scale);
             PlaceHit(rainHit,TavernSceneLayout.RainX,TavernSceneLayout.RainY,TavernSceneLayout.RainWidth,TavernSceneLayout.RainHeight,scale);
             PlaceHit(tapeHit,TavernSceneLayout.TapeX,TavernSceneLayout.TapeY,TavernSceneLayout.TapeWidth,TavernSceneLayout.TapeHeight,scale);
+            var pickup=TavernEconomyConfig.PickupBounds;
+            PlaceHit(pickupHit,pickup[0],pickup[1],pickup[2],pickup[3],scale);
+            pickupLabel.fontSize=48*scale;
             if (ControlRoot!=null) {
                 float unit=room.rect.height/1080f;ControlRoot.localScale=Vector3.one*unit;
                 ControlRoot.sizeDelta=new Vector2(270,40);ControlRoot.anchoredPosition=new Vector2(-18*unit,18*unit);
@@ -259,6 +273,11 @@ namespace XiaomanVisitor
         {
             if (mod == null || actor == null) return;
             Layout();
+            if (Time.unscaledTime>=pickupRefresh) {
+                pickupRefresh=Time.unscaledTime+.25f;string label=mod.EconomyPickupLabel;
+                pickupHit.gameObject.SetActive(label!=null);
+                if (label!=null && pickupLabel.text!=label) pickupLabel.text=label;
+            }
             conversationBottom=ConversationBottom();
             speech.PrepareLayout(actionPanel==ControlRoot?null:actionPanel);
         }

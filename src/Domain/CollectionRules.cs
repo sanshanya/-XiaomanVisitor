@@ -61,6 +61,9 @@ namespace XiaomanVisitor
         {
             path = null;
             if (modId != XiaomanMod.Id || bookId == null) return false;
+            if (EconomyStory.LetterIds.Contains(bookId)) {
+                path="Letters/"+Language(locale)+"/"+bookId+".png";return true;
+            }
             if (bookId == "thank_you_note") bookId = "story_note_01";
             const string prefix = "story_note_";
             int number;
