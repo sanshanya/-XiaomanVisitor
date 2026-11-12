@@ -9,6 +9,7 @@ Get-XiaomanCompiler | Out-Null
 Get-XiaomanNet8Runtime | Out-Null
 & (Join-Path $PSScriptRoot 'build.ps1') -GameRoot $GameRoot
 & (Join-Path $PSScriptRoot 'check.ps1') -GameRoot $GameRoot
+& (Join-Path $PSScriptRoot 'check-buyback.ps1') -GameRoot $GameRoot
 & $python -m unittest discover -s (Join-Path $projectRoot 'tests') -p 'test_*.py'
 if ($LASTEXITCODE -ne 0) { throw 'Offline authoring and architecture checks failed.' }
 if ($Full) {

@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "お金を受け取ったら、それで何もなかったことにできるんですか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "58",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.946,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 285432
+  },
+  "sha256": "b3559921df0835720afd9e22d15c744e89649e513e81d8aeb845ff49636e7416",
+  "binding": {
+    "key": "buyback_04_15",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "收了钱以后，就当作什么都没发生过呢？",
+      "ja": "お金を受け取ったら、それで何もなかったことにできるんですか？"
+    },
+    "generic": false
+  }
+}

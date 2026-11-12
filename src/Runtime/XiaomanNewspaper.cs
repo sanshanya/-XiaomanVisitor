@@ -67,19 +67,15 @@ namespace XiaomanVisitor
         }
         internal static List<StoreEvent> GetDisplayEvents(StoreEventManager manager)
         {
-#if XIAOMAN_BUYBACK_TEST
-            if (SideStories.BuybackTestMod.LineClosed)
-                return SideStories.BuybackNewspaper.Append(manager.GetActiveEvents(), SideStories.BuybackTestMod.Instance?.RefusalNews());
-#endif
+            if (SideStories.BuybackStory.LineClosed)
+                return SideStories.BuybackNewspaper.Append(manager.GetActiveEvents(), SideStories.BuybackStory.Instance?.RefusalNews());
             // Called only at PopulateUI's own read. All other event consumers
             // and the native newspaper click/toggle/fallback retain vanilla data.
             var display = DisplayEvents(manager.GetActiveEvents(),() => new[] {
                 XiaomanMod.Instance?.RenovationNews(),XiaomanMod.Instance?.LoungeExtensionNews(),
                 XiaomanMod.Instance?.LoungeOpeningNews(),XiaomanMod.Instance?.SupportNews()
             },error => XiaomanMod.Instance?.Log.Warning("Newspaper uses native articles: "+error));
-#if XIAOMAN_BUYBACK_TEST
-            display = SideStories.BuybackNewspaper.Append(display, SideStories.BuybackTestMod.Instance?.RefusalNews());
-#endif
+            display = SideStories.BuybackNewspaper.Append(display, SideStories.BuybackStory.Instance?.RefusalNews());
             return display;
         }
     }

@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "お客さんの好きなお酒を作れたときが、一番うれしかったんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "58",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.381,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 306322
+  },
+  "sha256": "c4ff839fd189c6814d2482b3e3f23c48bb9b7bec6a4ee37a4ac65b0af11c850e",
+  "binding": {
+    "key": "buyback_03_09",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "以前我最开心的，就是调出客人喜欢的酒。",
+      "ja": "お客さんの好きなお酒を作れたときが、一番うれしかったんです。"
+    },
+    "generic": false
+  }
+}

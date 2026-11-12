@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今日の私……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "11",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 1.973,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 94738
+  },
+  "sha256": "5f02e997b448712031f4e260fdff2c875c8bf1511974024bc3dd8d2ff11e30a5",
+  "binding": {
+    "key": "buyback_03_24",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "今天的我……",
+      "ja": "今日の私……。"
+    },
+    "generic": false
+  }
+}

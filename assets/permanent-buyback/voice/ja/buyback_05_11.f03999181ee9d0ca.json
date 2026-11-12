@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "好きなのかな……嫌いなのかな？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "27",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.727,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 178962
+  },
+  "sha256": "adbc0377ed66f9a8046b48fa9a7bdc53e50de1aaa9f67257cb92aaf511b2543b",
+  "binding": {
+    "key": "buyback_05_11",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "到底是喜欢呢……还是讨厌呢？",
+      "ja": "好きなのかな……嫌いなのかな？"
+    },
+    "generic": false
+  }
+}

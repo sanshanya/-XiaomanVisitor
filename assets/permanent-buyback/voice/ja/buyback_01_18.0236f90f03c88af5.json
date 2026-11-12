@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "えへへ。先輩は、やっぱり優しいですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "35",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.109,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 245266
+  },
+  "sha256": "c65ab64f90384a61c539ee8fd44ed6d80741e9cd968e3df050d15c33b8b328b9",
+  "binding": {
+    "key": "buyback_01_18",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "嘿嘿，前辈还是这么温柔呢。",
+      "ja": "えへへ。先輩は、やっぱり優しいですね。"
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "私、あのお店が……あんなに好きだったのに。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "38",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.426,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 260514
+  },
+  "sha256": "26f3eb47fabb49bfa3629d11952d2fb65fd234e1a8838293cf92405e9a1202ab",
+  "binding": {
+    "key": "buyback_03_12",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我明明……那么喜欢那间店的。",
+      "ja": "私、あのお店が……あんなに好きだったのに。"
+    },
+    "generic": false
+  }
+}

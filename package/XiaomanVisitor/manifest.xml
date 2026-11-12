@@ -3,7 +3,7 @@
   <ID>sansm.xiaoman.visitor</ID>
   <Name>深空小满：可能很迷醉？</Name>
   <Author>sansm</Author>
-  <ModVersion>0.0.15.12</ModVersion>
+  <ModVersion>0.0.4</ModVersion>
   <Description>空间站来了一位年轻酒馆女老板，
 将你视作朋友。
 她有什么样的秘密，
@@ -11,27 +11,26 @@
 
 ---
 
+
 - 动态立绘
 - 人物剧情 （目前剧情非最终版）
 - 多种独特酒品道具
 - 全日语配音
 - 14 卷磁带
 
+
 ---
 
 素材来自《雨音に満ちる夜 / A Night Filled With the Sound of Rain》 侵删
 
----
+0.0.4更新内容
 
-0.0.3 更新内容
-
-1. 优化填充 《结局：逃离》剧情线的内容
-2. bugfix
-3. 更新 mod api
+1. 酒馆内容初步完成，默认开启
+2. 更新瘾君子结局
 
 ---
 
-实验性内容：小满的酒馆 未完成，请谨慎开启</Description>
+最好不要在给小满出售饮用水时掺入梦尘等成瘾物!!！</Description>
   <GameVersions>
     <Version>0.46D</Version>
   </GameVersions>

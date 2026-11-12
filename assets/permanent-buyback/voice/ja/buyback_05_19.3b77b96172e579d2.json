@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "本当に、ずっとここにいることになるなんて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "40",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.6,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 220844
+  },
+  "sha256": "98939c528da2573e1aefcd2a0626642c2bf5e882132e5869e4ac571df029e95a",
+  "binding": {
+    "key": "buyback_05_19",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "真的会一直留在这里呀。♡",
+      "ja": "本当に、ずっとここにいることになるなんて。"
+    },
+    "generic": false
+  }
+}

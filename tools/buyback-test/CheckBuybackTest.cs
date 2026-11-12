@@ -29,20 +29,20 @@ internal static class CheckBuybackTest
     {
         string error;
         var manifest = ModLoader.ParseManifestForTools(package, out error);
-        if (manifest == null || manifest.ID != "sansm.xiaoman.buyback_test")
-            throw new Exception(error ?? "Wrong independent mod identity");
+        if (manifest == null || manifest.ID != "sansm.xiaoman.visitor")
+            throw new Exception(error ?? "Wrong main mod identity");
         var scan = ModScanner.Scan(manifest.Assemblies.Select(n => Path.Combine(package, n)).ToArray(),
             System.IO.Directory.GetFiles(managed, "*.dll").Select(Path.GetFileNameWithoutExtension).ToArray(), package, true);
         Console.WriteLine("Native scanner: capabilities=" + scan.Capabilities.Count + "; pending=" + scan.Pending.Count
             + "; hard=" + scan.HardFlags.Count + "; refused=" + scan.Refused);
         if (scan.Refused || scan.Error != null || scan.Capabilities.Count != 0 || scan.Pending.Count != 0 || scan.HardFlags.Count != 0)
             throw new Exception(scan.Error ?? scan.FormatFindings(30) + string.Join(";", scan.Pending));
-        var assembly = Assembly.LoadFrom(Path.Combine(package, "XiaomanBuybackTest.dll"));
+        var assembly = Assembly.LoadFrom(Path.Combine(package, "XiaomanVisitor.dll"));
         var visitorType = assembly.GetType("XiaomanVisitor.XiaomanMod", true);
         if (assembly.GetTypes().Count(t => typeof(IMod).IsAssignableFrom(t)) != 1
-            || typeof(IMod).IsAssignableFrom(visitorType)
-            || (string)visitorType.GetField("Id").GetRawConstantValue() != "sansm.xiaoman.buyback_test")
-            throw new Exception("Test must have one entry and an isolated visitor identity");
+            || !typeof(IMod).IsAssignableFrom(visitorType)
+            || (string)visitorType.GetField("Id").GetRawConstantValue() != "sansm.xiaoman.visitor")
+            throw new Exception("The main package must have exactly one IMod entry and preserve its original identity");
         foreach (var target in new[] {
             new { Type = typeof(StoreBedroll), Method = "OnClick" },
             new { Type = typeof(EndOfDayUIManager), Method = "OnEndDayButtonClick" },
@@ -58,20 +58,21 @@ internal static class CheckBuybackTest
         var parser = stageType.GetMethod("ParseData", BindingFlags.Static | BindingFlags.NonPublic);
         var parseStory = parser.MakeGenericMethod(storyType);
         var parseAssets = parser.MakeGenericMethod(assetType);
-        var story = parseStory.Invoke(null, new object[] { File.ReadAllText(Path.Combine(package, "Scenes/script.json")) });
-        var assets = parseAssets.Invoke(null, new object[] { File.ReadAllText(Path.Combine(package, "Scenes/assets.json")) });
+        var story = parseStory.Invoke(null, new object[] { File.ReadAllText(Path.Combine(package, "Scenes/Buyback/script.json")) });
+        var assets = parseAssets.Invoke(null, new object[] { File.ReadAllText(Path.Combine(package, "Scenes/Buyback/assets.json")) });
         var validate = stageType
             .GetMethod("Validate", BindingFlags.Static | BindingFlags.NonPublic);
         validate.Invoke(null, new[] { story, assets });
         CheckRefusalBranch(assembly, parser);
         CheckWaterPrelude(assembly, parser);
         CheckMusicLifetime(assembly);
+        CheckVoices(assembly, parser, story);
         var dialogueMode = storyType.GetField("dialogue_mode");
         dialogueMode.SetValue(story, "auto");
         ExpectRejected(validate, story, assets, "automatic dialogue in the manual performance");
         dialogueMode.SetValue(story, "manual");
         // Re-read BOM/CRLF input through the runtime parser; broken JSON must not turn into empty fields.
-        var withBom = parseStory.Invoke(null, new object[] { "\uFEFF" + File.ReadAllText(Path.Combine(package, "Scenes/script.json")) });
+        var withBom = parseStory.Invoke(null, new object[] { "\uFEFF" + File.ReadAllText(Path.Combine(package, "Scenes/Buyback/script.json")) });
         validate.Invoke(null, new[] { withBom, assets });
         try { parseStory.Invoke(null, new object[] { "{" }); throw new Exception("Broken JSON was silently accepted"); }
         catch (TargetInvocationException failure) when (failure.InnerException is InvalidOperationException) { }
@@ -204,19 +205,19 @@ internal static class CheckBuybackTest
         var books = System.IO.Directory.GetFiles(Path.Combine(package, "Books"), "*.json");
         var note = (PaperBookData)parser.MakeGenericMethod(typeof(PaperBookData)).Invoke(null,
             new object[] { File.ReadAllText(books.Single(p => Path.GetFileName(p) == "last_note.json")) });
-        if (note.item.id != "sansm.xiaoman.buyback_test.last_note" || note.AllElements().Single(e => e.id == "photo").type != "image"
+        if (note.item.id != "sansm.xiaoman.visitor.last_note" || note.AllElements().Single(e => e.id == "photo").type != "image"
             || !note.AllElements().Single(e => e.id == "message").text.Contains("我们终将重逢！！！"))
             throw new Exception("Photo note content/identity is invalid");
-        if (note.AllElements().Any(e => e.action == "ending") || note.background != "sansm.xiaoman.buyback_test:xiaoman_letter_paper")
+        if (note.AllElements().Any(e => e.action == "ending") || note.background != "sansm.xiaoman.visitor:xiaoman_letter_paper")
             throw new Exception("Last letter must use Xiaoman paper and must not end the run");
         var isLetter = assembly.GetType("XiaomanVisitor.NotebookRules", true).GetMethod("IsLetter");
         if (!(bool)isLetter.Invoke(null, new object[] { note.item.id })) throw new Exception("Last letter cannot enter Xiaoman's notebook");
         if (AccessTools.Method(typeof(RunSummaryUI), "EndingTitle") == null || AccessTools.Method(typeof(GameOverUIManager), "DisplayUI") == null)
             throw new Exception("Native ending UI changed");
         var endPrefix = assembly.GetType("XiaomanVisitor.SideStories.BuybackEndingTitlePatch", true).GetMethod("Prefix");
-        object[] endingArgs = { "sansm.xiaoman.buyback_test.ending.buyback", "" };
+        object[] endingArgs = { "sansm.xiaoman.visitor.ending.buyback", "" };
         if ((bool)endPrefix.Invoke(null, endingArgs) || (string)endingArgs[1] != "永久回购") throw new Exception("Custom ending title missing");
-        Console.WriteLine("PASS: native hooks, five-act data validation/rejection and isolated mod; gameplay was not launched.");
+        Console.WriteLine("PASS: native hooks, five-act data validation/rejection and main mod; gameplay was not launched.");
         return 0;
     }
     private static void ExpectRejected(MethodInfo validate, object story, object assets, string reason)
@@ -270,7 +271,7 @@ internal static class CheckBuybackTest
         catch (TargetInvocationException e) when (e.InnerException is InvalidOperationException) { }
 
         var textType = assembly.GetType("XiaomanVisitor.SideStories.BuybackRefusalText", true);
-        var text = parser.MakeGenericMethod(textType).Invoke(null, new object[] { File.ReadAllText(Path.Combine(package, "Scenes/refusal.json")) });
+        var text = parser.MakeGenericMethod(textType).Invoke(null, new object[] { File.ReadAllText(Path.Combine(package, "Scenes/Buyback/refusal.json")) });
         textType.GetMethod("Validate", instance).Invoke(text, null);
         var newspaper = assembly.GetType("XiaomanVisitor.SideStories.BuybackNewspaper", true);
         var article = (StoreEvent)newspaper.GetMethod("Article", statics).Invoke(null, new[] { text, (object)2 });
@@ -300,6 +301,27 @@ internal static class CheckBuybackTest
 
     private static void CheckWaterPrelude(Assembly assembly, MethodInfo parser)
     {
+        var policy = assembly.GetType("XiaomanVisitor.BuybackProgress", true).GetMethod("CanRecordSale");
+        if (!(bool)policy.Invoke(null, new object[] { 1, false })
+            || !(bool)policy.Invoke(null, new object[] { 2, false })
+            || (bool)policy.Invoke(null, new object[] { 0, false })
+            || (bool)policy.Invoke(null, new object[] { 1, true }))
+            throw new Exception("Special-water sales must be eligible from day one, before tavern opening");
+        var availability = assembly.GetType("XiaomanVisitor.XiaomanMod", true)
+            .GetProperty("BuybackTradingAvailable", BindingFlags.Instance | BindingFlags.NonPublic).GetGetMethod(true);
+        if (!PatchProcessor.GetOriginalInstructions(availability).Any(c => c.Calls(policy)))
+            throw new Exception("Runtime eligibility must use the tested day-one sale policy");
+        var progressType = assembly.GetType("XiaomanVisitor.BuybackProgress", true);
+        var firstDay = Activator.CreateInstance(progressType);
+        progressType.GetMethod("Record").Invoke(firstDay, new object[] { 1, 901 });
+        var firstReturn = progressType.GetMethod("ReturnDue");
+        if ((bool)firstReturn.Invoke(firstDay, new object[] { 1 }) || !(bool)firstReturn.Invoke(firstDay, new object[] { 2 }))
+            throw new Exception("A first-day sale must schedule the next day, not the second week");
+        firstDay = progressType.GetMethod("Restore").Invoke(null,
+            new object[] { (string)progressType.GetProperty("Data").GetValue(firstDay) });
+        if (!(bool)firstReturn.Invoke(firstDay, new object[] { 2 }))
+            throw new Exception("Day-one water return was lost after saving and reloading");
+        Console.WriteLine("PASS: actual runtime sale gate accepts day one; first purchase schedules day-two return and survives reload.");
         var type = assembly.GetType("XiaomanVisitor.BuybackProgress", true);
         var restore = type.GetMethod("Restore");
         var record = type.GetMethod("Record"); var meet = type.GetMethod("MeetReturn");
@@ -330,23 +352,33 @@ internal static class CheckBuybackTest
             throw new Exception("Duplicate saved receipts silently accepted");
         } catch (TargetInvocationException error) when (error.InnerException is InvalidOperationException) { }
         const BindingFlags nonpublic = BindingFlags.Static | BindingFlags.Instance | BindingFlags.NonPublic;
-        var mod = assembly.GetType("XiaomanVisitor.SideStories.BuybackTestMod", true);
+        var mod = assembly.GetType("XiaomanVisitor.SideStories.BuybackStory", true);
         var owns = mod.GetMethod("OwnsVisitor", nonpublic);
         var visitorId = (string)assembly.GetType("XiaomanVisitor.XiaomanMod", true).GetField("ClientId").GetRawConstantValue();
-        var ownClient = new StoreClient { identifier = visitorId, sourceModId = "sansm.xiaoman.buyback_test" };
+        var ownClient = new StoreClient { identifier = visitorId, sourceModId = "sansm.xiaoman.visitor" };
         var otherClient = new StoreClient { identifier = visitorId, sourceModId = "another.mod" };
         if (!(bool)owns.Invoke(null, new object[] { ownClient }) || (bool)owns.Invoke(null, new object[] { otherClient })
             || (bool)owns.Invoke(null, new object[] { null }))
             throw new Exception("Queue removal and sale receipts must require the exact source mod, not just a matching character ID");
         var drugWater = PatchProcessor.GetOriginalInstructions(mod.GetMethod("IsDrugWater", nonpublic));
-        if (!drugWater.Any(c => c.Calls(AccessTools.Method(typeof(ChemicalFeedbackHelper), nameof(ChemicalFeedbackHelper.IsNarcotic)))))
-            throw new Exception("Prelude must use the installed native narcotic threshold");
+        var waterDose = mod.GetMethod("WaterDose", nonpublic);
+        var dosePolicy = progressType.GetMethod("HasEffectiveWaterDose");
+        if (!drugWater.Any(c => c.Calls(dosePolicy)) || !drugWater.Any(c => c.Calls(waterDose))
+            || drugWater.Any(c => c.Calls(AccessTools.Method(typeof(ChemicalFeedbackHelper), nameof(ChemicalFeedbackHelper.IsNarcotic)))))
+            throw new Exception("Xiaoman must use her own low-dose rule, without changing native customer thresholds");
+        foreach (double dose in new[] { 0.0, 19.999, double.NaN, double.PositiveInfinity })
+            if ((bool)dosePolicy.Invoke(null, new object[] { dose })) throw new Exception("Invalid/subthreshold dose accepted: " + dose);
+        foreach (double dose in new[] { 20.0, 20.001, 433.0, 750.0 })
+            if (!(bool)dosePolicy.Invoke(null, new object[] { dose })) throw new Exception("Xiaoman dose rejected: " + dose);
+        if ((double)progressType.GetField("MinimumWaterDose").GetRawConstantValue() != 20)
+            throw new Exception("Xiaoman's authored threshold must remain 20");
+        Console.WriteLine("PASS: exact 20-point threshold, 19.999 rejection, real 433-point bottle acceptance and non-finite rejection; runtime uses its own policy.");
         var queue = PatchProcessor.GetOriginalInstructions(mod.GetMethod("HandleVisitQueue", nonpublic));
         if (!queue.Any(c => c.Calls(AccessTools.Method(typeof(StoreClientManager), nameof(StoreClientManager.AddClient))))
             || queue.Any(c => c.Calls(AccessTools.Method(typeof(StoreClientManager), nameof(StoreClientManager.AddNextClient)))))
             throw new Exception("Return must append, never insert ahead of native clients");
         var texts = parser.MakeGenericMethod(assembly.GetType("XiaomanVisitor.SideStories.BuybackPreludeText", true))
-            .Invoke(null, new object[] { File.ReadAllText(Path.Combine(package, "Scenes/prelude.json")) });
+            .Invoke(null, new object[] { File.ReadAllText(Path.Combine(package, "Scenes/Buyback/prelude.json")) });
         texts.GetType().GetMethod("Validate", nonpublic).Invoke(texts, null);
         if (((string[])texts.GetType().GetField("second_accept").GetValue(texts)).Length < 3)
             throw new Exception("Second-water dialogue missing");
@@ -357,6 +389,54 @@ internal static class CheckBuybackTest
             || labelCode.Any(c => Equals(c.operand, typeof(TextBubble).GetField("textfield"))))
             throw new Exception("Static labels still copy animated speech text");
         Console.WriteLine("PASS: actual sale receipts/reload/dedup, both next-day returns, missed-visit carryover, night eligibility, native chemical/queue bindings and static choice-label template.");
+    }
+
+    private static void CheckVoices(Assembly assembly, MethodInfo parser, object story)
+    {
+        const BindingFlags flags = BindingFlags.Static | BindingFlags.NonPublic;
+        var documentType = assembly.GetType("XiaomanVisitor.VoicePackDocument", true);
+        var document = parser.MakeGenericMethod(documentType).Invoke(null,
+            new object[] { File.ReadAllText(Path.Combine(package, "Voices/index.json")) });
+        var rows = (Array)documentType.GetField("lines").GetValue(document);
+        var catalogType = assembly.GetType("XiaomanVisitor.VoiceCatalog", true);
+        var catalog = catalogType.GetConstructors().Single().Invoke(new object[] { rows });
+        var resolve = catalogType.GetMethod("Resolve");
+        Action<string, string> require = (key, subtitle) => {
+            if (resolve.Invoke(catalog, new object[] { key, "ja", subtitle }) == null
+                || resolve.Invoke(catalog, new object[] { key, "ja", "CHANGED " + subtitle }) != null)
+                throw new Exception("Missing or inexact ending voice binding: " + key);
+        };
+        int count = 0;
+        foreach (var cue in (Array)story.GetType().GetField("cues").GetValue(story)) {
+            var t = cue.GetType();
+            if ((string)t.GetField("kind").GetValue(cue) != "line") continue;
+            require((string)t.GetField("key").GetValue(cue), (string)t.GetField("text").GetValue(cue)); count++;
+        }
+        var preludeType = assembly.GetType("XiaomanVisitor.SideStories.BuybackPreludeText", true);
+        var prelude = parser.MakeGenericMethod(preludeType).Invoke(null,
+            new object[] { File.ReadAllText(Path.Combine(package, "Scenes/Buyback/prelude.json")) });
+        var mod = assembly.GetType("XiaomanVisitor.SideStories.BuybackStory", true);
+        var keyFor = mod.GetMethod("PreludeVoiceKey", flags, null, new[] { preludeType, typeof(string) }, null);
+        foreach (var field in preludeType.GetFields()) {
+            if (field.FieldType != typeof(string) && field.FieldType != typeof(string[])) continue;
+            var values = field.FieldType == typeof(string) ? new[] { (string)field.GetValue(prelude) }
+                : (string[])field.GetValue(prelude);
+            foreach (string text in values) {
+                require((string)keyFor.Invoke(null, new[] { prelude, (object)text }), text); count++;
+            }
+        }
+        if (keyFor.Invoke(null, new[] { prelude, (object)"其他顾客的相似台词" }) != null)
+            throw new Exception("Unowned dialogue acquired a prelude voice");
+        var refusalType = assembly.GetType("XiaomanVisitor.SideStories.BuybackRefusalText", true);
+        var refusal = parser.MakeGenericMethod(refusalType).Invoke(null,
+            new object[] { File.ReadAllText(Path.Combine(package, "Scenes/Buyback/refusal.json")) });
+        foreach (string name in new[] { "retry_line", "farewell_line" }) {
+            require("buyback_refusal_" + name, (string)refusalType.GetField(name).GetValue(refusal)); count++;
+        }
+        var third = (string[])refusalType.GetField("third_lines").GetValue(refusal);
+        for (int i = 0; i < third.Length; i++) { require("buyback_refusal_third_lines_" + i, third[i]); count++; }
+        if (count != 147) throw new Exception("Ending voice coverage changed: " + count);
+        Console.WriteLine("PASS: runtime voice catalog resolves all 147 exact five-act/prelude/refusal subtitles, including delayed returns; changed/unowned text stays silent.");
     }
 
     private static void CheckMusicLifetime(Assembly assembly)

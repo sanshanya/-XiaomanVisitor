@@ -10,6 +10,7 @@ import xml.etree.ElementTree as ET
 import numpy as np
 import soundfile as sf
 import voice_pipeline as pipeline
+import buyback_voice
 from voice_delivery import audio_filename
 
 
@@ -17,6 +18,7 @@ def main():
     sys.stdout.reconfigure(encoding="utf-8")
     version = ET.parse(pipeline.PACKAGE / "manifest.xml").getroot().findtext("ModVersion")
     script = pipeline.load(pipeline.DEFAULT_SCRIPT)
+    ending_script = pipeline.load(buyback_voice.CATALOG)
     texts = pipeline.localized()
     pack = pipeline.load(pipeline.PACKAGE / "Voices/index.json")
     spec = pipeline.load(pipeline.ROOT / "assets/story.json")
@@ -24,18 +26,20 @@ def main():
     expected = {r["key"] for r in script["lines"]}
     deferred = {r["key"] for r in script["lines"] if r.get("defer_recording")}
     assert set(spec["voice_keys"]) == expected
-    assert set(records) == expected - deferred, "Missing, stale or unexpected recording"
+    assert set(records) == (expected - deferred) | {r["key"] for r in ending_script["lines"]}, "Missing, stale or unexpected recording"
     assert pack["pending_lines"] == len(deferred)
     rows, warnings = [], []
-    for row in script["lines"]:
+    for row in script["lines"] + ending_script["lines"]:
         key = row["key"]
         if key in deferred:
             assert not row["reviewed"] and not row["audio"] and pipeline.audio_status(row, script, texts) == "needs_review", key
             continue
-        assert pipeline.audio_status(row, script, texts) == "ready", key
+        ending = key.startswith("buyback_")
+        assert (buyback_voice.status(row, ending_script) if ending else pipeline.audio_status(row, script, texts)) == "ready", key
         file = pipeline.ROOT / row["audio"]
         metadata = pipeline.load(file.with_suffix(".json"))
-        assert pipeline.effective_speed(metadata) == 1.1, key
+        speed = 1.0 if row.get("provider") == "author_recording" else 1.1
+        assert pipeline.effective_speed(metadata) == speed, key
         record = records[key]
         assert record["spoken_text"] == row["spoken_text"]
         packaged = pipeline.PACKAGE / "Sounds" / audio_filename(record)
@@ -67,13 +71,17 @@ def main():
         assert active.size, key
         lead, tail = float(active[0]*.02), max(0.,seconds-float((active[-1]+1)*.02))
         clipping = float(np.mean(np.abs(samples) >= .999))
-        if lead > 1.2 or tail > 1.2 or clipping > .001 or seconds > 25:
+        # Explicit nonverbal breaths may trail the last spoken syllable. Keep
+        # them intact and distinguish this scripted beat from accidental silence.
+        breathing_tail = row.get("generate_text", "").rstrip().endswith(("[breath]", "[inhales]", "[exhale]"))
+        if lead > 1.2 or tail > (2.0 if breathing_tail else 1.2) or clipping > .001 or seconds > 25:
             warnings.append(dict(key=key, leading_silence=round(lead,3), trailing_silence=round(tail,3), clipped_fraction=clipping, seconds=round(seconds,3)))
         rows.append(dict(key=key, seconds=round(seconds,3), peak_dbfs=round(20*math.log10(peak),2),
                          rms_dbfs=round(20*math.log10(rms),2), leading_silence=round(lead,3), trailing_silence=round(tail,3),
-                         clipped_fraction=round(clipping,7), effective_speed=1.1, sha256=metadata["sha256"],
+                         clipped_fraction=round(clipping,7), effective_speed=speed, provider=metadata.get("provider"), sha256=metadata["sha256"],
                          packaged_sha256=packaged_hash, delivery_snr_db=round(snr, 2), energy_correlation=round(correlation, 6),
                          source=row["audio"], packaged=str(packaged.relative_to(pipeline.PACKAGE))))
+        rows[-1]["scripted_breath_tail"] = breathing_tail
     assert not any("shutter_close_02" in r["key"] for r in rows), "Nonverbal SFX must not enter TTS"
     result = dict(version=version, language="ja", voice="ayano", recorded_lines=len(rows), pending_lines=len(deferred), deferred_keys=sorted(deferred),
                   seconds=round(sum(r["seconds"] for r in rows),3), sample_rate=24000, channels=1, source_bit_depth=16,
@@ -83,7 +91,7 @@ def main():
                   speed=1.1, first_performance_preserved=True, warnings=warnings, lines=rows)
     output = pipeline.audio_report_path()
     pipeline.save(output, result)
-    summary = [f"小满 {version} 日语配音文件检查", "", f"录音键：{len(rows)}，明确延后制作：{len(deferred)}。", "音色：Ayano；语言：日语；统一实际语速：1.1。",
+    summary = [f"小满 {version} 日语配音文件检查", "", f"录音键：{len(rows)}，明确延后制作：{len(deferred)}。", "音色：Ayano；语言：日语；TTS实际语速1.1。永久回购爆发声为作者原录音，保持原速。",
                "首句保留已确认原录音，以保持音高的时间伸缩制作1.1倍速副本，原素材未改。",
                "其他录音通过VUI Luna-TTS 1.5离线生成；运行中的模组只读取打包音频。",
                f"总时长：{result['seconds']:.3f}秒。制作源为24000Hz、单声道、16-bit PCM WAV；运行交付格式：{', '.join(result['delivery_formats'])}。",

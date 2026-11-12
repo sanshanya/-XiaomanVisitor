@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "やっとの思いで買って、棚に並べたお酒も……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "40",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.745,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 227806
+  },
+  "sha256": "c6e51e20b4c6e089f5bdeff6366624c2bf8f1ae99a1c644c4b14460710c6540f",
+  "binding": {
+    "key": "buyback_04_08",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "还有酒架上那些好不容易买来的酒……",
+      "ja": "やっとの思いで買って、棚に並べたお酒も……。"
+    },
+    "generic": false
+  }
+}

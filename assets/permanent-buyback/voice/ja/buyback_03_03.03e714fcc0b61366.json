@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩は、本当に商売上手なんだなって、ずっと思ってたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "55",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.024,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 337178
+  },
+  "sha256": "a6b6fe842172aee1e1711d12158465653dd5b7829b21dc44a9b29d6c44dde814",
+  "binding": {
+    "key": "buyback_03_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我一直觉得，前辈是个很厉害的生意人呢。",
+      "ja": "先輩は、本当に商売上手なんだなって、ずっと思ってたんです。"
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "見ているうちに、鏡の中の女の子が、知らない子みたいに思えてきて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "61",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.17,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 344190
+  },
+  "sha256": "3cfcd2009aa78418397c150d5399d9ea02ccbe726225ce4cfab6ae09777b706a",
+  "binding": {
+    "key": "buyback_02_05",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "可是看着看着，就觉得镜子里的那个女孩，好陌生呀。",
+      "ja": "見ているうちに、鏡の中の女の子が、知らない子みたいに思えてきて。"
+    },
+    "generic": false
+  }
+}

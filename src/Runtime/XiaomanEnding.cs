@@ -7,7 +7,7 @@ namespace XiaomanVisitor
     {
         private const string RokaGiftKey="w12_roka_gift_v1",RokaGiftSource="private_roka_visit_12";
         private bool rokaGiftBusy;
-        private bool TavernTrading { get { return StoryRules.BusinessOpen(ReadStory().VisitIndex); } }
+        private bool TavernTrading { get { return !SideStories.BuybackStory.LineClosed && StoryRules.BusinessOpen(ReadStory().VisitIndex); } }
         private ImprovGiftProgress ReadRokaGift()
         { return ImprovGiftProgress.Restore(ModHelper.GetModData(Id,RokaGiftKey,""),RokaGiftSource); }
         private void SaveRokaGift(ImprovGiftProgress p)

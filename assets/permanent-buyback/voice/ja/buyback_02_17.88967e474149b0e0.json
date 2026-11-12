@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……お水だったんですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "21",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.418,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 116088
+  },
+  "sha256": "183a4be35e79ad5a95083fb78e80e553c9e61d40df2fb0f4ee1567a0c923d5a7",
+  "binding": {
+    "key": "buyback_02_17",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……原来是水呀。",
+      "ja": "……お水だったんですね。"
+    },
+    "generic": false
+  }
+}

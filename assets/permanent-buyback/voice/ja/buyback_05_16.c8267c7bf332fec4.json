@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "初めて会ったときから、優しい人だなって思ってました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "50",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.653,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 271404
+  },
+  "sha256": "0fcb9622e2fc597ab31322d17e3f042152c1c34f03b51b70353383da1aadef09",
+  "binding": {
+    "key": "buyback_05_16",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "第一次见面的时候，我就觉得前辈很亲切。",
+      "ja": "初めて会ったときから、優しい人だなって思ってました。"
+    },
+    "generic": false
+  }
+}

@@ -196,6 +196,40 @@ class VoicePipelineTests(unittest.TestCase):
         self.assertEqual(len(result["lines"]), 2)
         self.assertEqual(result["pending_lines"], 0)
 
+    def test_independent_script_uses_its_own_subtitles_and_audio_directory(self):
+        self.row["key"] = "buyback_test_line"
+        texts = {"zh": {"buyback_test_line": "支线专属台词。"}, "ja": {"buyback_test_line": "こんばんは。"}}
+        self.row["subtitle_templates"] = pipeline.templates_for(self.row["key"], texts)
+        self.metadata["binding"] = pipeline.binding_for(self.row, self.script)
+        source = self.root / self.row["audio"]
+        pipeline.save(source.with_suffix(".json"), self.metadata)
+        original = source.read_bytes(), source.with_suffix(".json").read_bytes()
+        self.row["previous_audio"], self.row["audio"] = self.row["audio"], ""
+        pipeline.save(self.script_path, self.script)
+        destination = self.root / "assets/permanent-buyback/voice/ja"
+        with mock.patch.object(pipeline, "localized", side_effect=AssertionError("Read main subtitles")), \
+                mock.patch.object(pipeline.subprocess, "run", side_effect=AssertionError("Duplicate API request")):
+            pipeline.generate(self.script_path, [self.row["key"]], texts=texts, audio_directory=destination)
+        saved = pipeline.load(self.script_path)
+        self.assertTrue((self.root / saved["lines"][0]["audio"]).is_relative_to(destination))
+        self.assertEqual(pipeline.audio_status(saved["lines"][0], saved, texts), "ready")
+        self.assertEqual((source.read_bytes(), source.with_suffix(".json").read_bytes()), original)
+        with self.assertRaises(ValueError):
+            pipeline.generate(self.script_path, [], texts=texts, audio_directory=self.package / "Sounds")
+
+    def test_repacking_main_voices_preserves_hidden_ending_bindings(self):
+        initial = pipeline.pack(self.script_path)
+        original = initial["lines"][0]
+        ending = dict(original, line_key="buyback_01_01", sound_key="buyback_voice_ja_test", audio_file="buyback_voice_ja_test.wav")
+        branch_file = self.package / "Sounds" / ending["audio_file"]
+        branch_file.write_bytes((self.package / "Sounds" / original["audio_file"]).read_bytes())
+        initial["lines"].append(ending)
+        pipeline.save(self.package / "Voices/index.json", initial)
+        result = pipeline.pack(self.script_path)
+        self.assertEqual(next(r for r in result["lines"] if r["line_key"] == "buyback_01_01"), ending)
+        self.assertTrue(branch_file.exists())
+        self.assertEqual({r["line_key"] for r in result["lines"]}, {"intro_1", "buyback_01_01"})
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

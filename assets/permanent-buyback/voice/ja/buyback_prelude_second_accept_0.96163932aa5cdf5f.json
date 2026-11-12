@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……この味。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "9",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 1.545,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 74206
+  },
+  "sha256": "ead18ded0f91374cc2ceac531167463df213eb6a2d710f2a027b6996e453263e",
+  "binding": {
+    "key": "buyback_prelude_second_accept_0",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……这个味道。",
+      "ja": "……この味。"
+    },
+    "generic": false
+  }
+}

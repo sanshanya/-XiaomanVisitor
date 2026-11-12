@@ -32,6 +32,8 @@ def main():
     assert manifest.findtext("ID") == "sansm.xiaoman.visitor", "Keep the save-data namespace stable"
     assert manifest.find("Capabilities") is not None and not list(manifest.find("Capabilities"))
     script = pipeline.load(pipeline.DEFAULT_SCRIPT)
+    from buyback_voice import CATALOG as ending_catalog
+    script["lines"] += pipeline.load(ending_catalog)["lines"]
     report_path = pipeline.audio_report_path()
     if not report_path.exists():
         raise SystemExit("Run tools/verify-dev.ps1 -Full before packaging.")
@@ -86,7 +88,7 @@ def main():
         audio_manifest = dict(version=version, voice="Ayano", language="ja", speed=1.1,
                               seconds=report["seconds"], alias={"xm_01_01": "intro_1"}, lines=[], sfx=["SFX/xm_shutter_knock.wav"])
         by_key = {row["key"]: row for row in report["lines"]}
-        index = [f"小满 v5.4 演出台本日语配音 / {version}", "", "Ayano；有效语速1.1倍；口头台词，不含纸条或其他人物。", ""]
+        index = [f"小满日语配音 / {version}", "", "Ayano生成口播为1.1倍速；永久回购爆发声使用作者原录音、保持原速。纸条不配音。", ""]
         with zipfile.ZipFile(audio_archive, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as z:
             for row in script["lines"]:
                 key = row["key"]
@@ -94,7 +96,8 @@ def main():
                 assert digest(source) == by_key[key]["sha256"]
                 z.write(source, key + ".wav")
                 audio_manifest["lines"].append(dict(key=key, file=key + ".wav", seconds=by_key[key]["seconds"],
-                    sha256=by_key[key]["sha256"], subtitles=row["subtitle_templates"], spoken_ja=row["spoken_text"]))
+                    sha256=by_key[key]["sha256"], subtitles=row["subtitle_templates"], spoken_ja=row["spoken_text"],
+                    provider=by_key[key].get("provider"), speed=by_key[key]["effective_speed"]))
                 index.extend([f"[{key}] {by_key[key]['seconds']:.3f}s", "中文：" + row["subtitle_templates"]["zh"],
                               "日语：" + row["spoken_text"], ""])
             z.write(package / "Sounds/xm_shutter_knock.wav", "SFX/xm_shutter_knock.wav")

@@ -2,7 +2,7 @@
   "schema": 1,
   "language": "zh",
   "dialogue_mode": "manual",
-  "source_sha256": "c993cbc72299918f57478fdeeaac02258c0cf328eb1cc8cfbca800d2b8c25b8e",
+  "source_sha256": "f0b2df53880ea452c1a7d1c9d8ef5641ee01f374e6f3b05ab06a3bc619596cf9",
   "japanese_attack_reference": "返して……返してよ……！\n私の人生……返せよ……！！\n返せよおお！！！！",
   "cues": [
     {
@@ -598,18 +598,38 @@
     {
       "kind": "impact",
       "value": 3,
-      "seconds": 1.6500000000000001,
+      "seconds": 0.25,
       "hold": 0.25
     },
     {
       "kind": "line",
-      "text": "把我的人生还回来啊——！！！",
+      "text": "还给我……还给我啊……！",
       "act": 3,
       "key": "buyback_03_30",
+      "value": 1,
+      "transition": "attack_segment",
+      "impact_seconds": 2.18,
+      "seconds": 5
+    },
+    {
+      "kind": "line",
+      "text": "我的人生……还给我……！！",
+      "act": 3,
+      "key": "buyback_03_31",
+      "value": 2,
+      "transition": "attack_segment",
+      "impact_seconds": 3.08,
+      "seconds": 5
+    },
+    {
+      "kind": "line",
+      "text": "还给我啊——！！！",
+      "act": 3,
+      "key": "buyback_03_32",
       "value": 3,
-      "transition": "late_reveal",
-      "hold": 0.85,
-      "seconds": 0.35
+      "transition": "attack_segment",
+      "impact_seconds": 0.08,
+      "seconds": 2.512666666666666
     },
     {
       "kind": "image",
@@ -865,7 +885,7 @@
     },
     {
       "kind": "title",
-      "text": "隐藏异常结局：永久回购",
+      "text": "隐藏结局：永久回购",
       "seconds": 1.5
     }
   ]

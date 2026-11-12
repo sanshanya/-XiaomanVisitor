@@ -5,9 +5,7 @@ using UnityEngine;
 namespace XiaomanVisitor
 {
     public sealed partial class XiaomanMod
-#if !XIAOMAN_BUYBACK_TEST
         : IMod
-#endif
     {
         public const string Id = "sansm.xiaoman.visitor";
         public const string ModName = "深空小满：可能很迷醉？";
@@ -33,6 +31,7 @@ namespace XiaomanVisitor
         private StoreClient moodOwner;
         private Mood mood;
         private bool enabled;
+        private SideStories.BuybackStory buyback;
 
         public void Init(ModManifest manifest)
         {
@@ -47,6 +46,8 @@ namespace XiaomanVisitor
                 "实验性 / Experimental", () => Text("cfg_experimental_tavern"),
                 tooltip: () => Text("cfg_experimental_tavern_tip"), requiresRestart: true);
             InitVoice(config);
+            buyback = new SideStories.BuybackStory();
+            buyback.Init(this);
             size.OnChanged += _ => { registeredDictionary = null; };
             Log.Log("Initialized: independent customer, original portrait layers, three temporary drink effects.");
         }
@@ -73,6 +74,7 @@ namespace XiaomanVisitor
             nativeRendering = driverObject.AddComponent<XiaomanNativeRendering>();
             Voice = driverObject.AddComponent<XiaomanVoicePlayer>();
             Voice.Configure(this);
+            buyback.OnEnable();
             ModHelper.AddDebugFunction(Id, ModHelper.DEBUG_CATEGORY_SPAWN, "Preview Xiaoman voice", () => Voice?.Preview());
             foreach (LoadedMod mod in ModLoader.Mods)
                 if (mod.Manifest.ID == Id) OnAssetsLoaded(mod);
@@ -80,6 +82,7 @@ namespace XiaomanVisitor
 
         public void OnDisable()
         {
+            buyback?.OnDisable();
             ShutdownGunReaction();
             enabled = false;
             if (nativeRendering != null) nativeRendering.Shutdown();
@@ -99,7 +102,7 @@ namespace XiaomanVisitor
             WithdrawActiveVisitor();
             ModHelper.RemoveDebugFunctions(Id);
             if (PlayerStore.HasInstance && PlayerStore.Instance.storeClientManager != null)
-                PlayerStore.Instance.storeClientManager.clientStack.RemoveAll(c => c != null && CustomerQueuePolicy.IsXiaoman(c.identifier));
+                PlayerStore.Instance.storeClientManager.clientStack.RemoveAll(SideStories.BuybackStory.OwnsVisitor);
             if (registeredDictionary != null) registeredDictionary.Remove(SpriteKey);
             DestroySprites();
             ReleasePortraitAssets();
@@ -163,9 +166,7 @@ namespace XiaomanVisitor
 
         private bool Queue(StoreClientManager manager)
         {
-#if XIAOMAN_BUYBACK_TEST
-            if (SideStories.BuybackTestMod.Instance != null && SideStories.BuybackTestMod.Instance.HandleVisitQueue(manager)) return false;
-#endif
+            if (SideStories.BuybackStory.Instance != null && SideStories.BuybackStory.Instance.HandleVisitQueue(manager)) return false;
             if (!PlayerStore.HasInstance || manager == null || manager.clientStack == null || StoreStation.Instance == null || !EnsurePortraits()) return false;
             StoreClient current = PlayerStore.Instance.currentClientInstance == null ? null : PlayerStore.Instance.currentClientInstance.GetClientBlueprint();
             if (current != null && CustomerQueuePolicy.IsXiaoman(current.identifier)) return false;

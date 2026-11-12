@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ねえ、先輩。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "10",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.346,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 112658
+  },
+  "sha256": "cdb56b91fc3e7af82d29dd4865d0f2cca0ddd9d9ba419cb8c77f642a0a9a41bd",
+  "binding": {
+    "key": "buyback_02_34",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "呐，前辈。",
+      "ja": "ねえ、先輩。"
+    },
+    "generic": false
+  }
+}

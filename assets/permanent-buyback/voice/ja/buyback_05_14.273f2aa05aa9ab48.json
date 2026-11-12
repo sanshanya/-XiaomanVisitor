@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "もう、売ったり買ったり、しなくていいんですから。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "45",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.109,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 245266
+  },
+  "sha256": "b07d8efdf357843c99ccbbd7726714ef4a4cbd22d052de4c70ad9baef94289c3",
+  "binding": {
+    "key": "buyback_05_14",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我们再也不用做什么买卖啦。",
+      "ja": "もう、売ったり買ったり、しなくていいんですから。"
+    },
+    "generic": false
+  }
+}

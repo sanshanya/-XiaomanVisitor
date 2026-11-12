@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "髪も、目も……いつもと同じはずなのに。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "34",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.842,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 232440
+  },
+  "sha256": "b5e5e1c616fa20c5de3b0451ff1b94f37fef838de7b21f8675ae67eeea97a165",
+  "binding": {
+    "key": "buyback_02_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "头发也好，眼睛也好……明明都和平时一样。",
+      "ja": "髪も、目も……いつもと同じはずなのに。"
+    },
+    "generic": false
+  }
+}

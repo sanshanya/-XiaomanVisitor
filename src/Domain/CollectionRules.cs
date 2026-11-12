@@ -10,7 +10,7 @@ namespace XiaomanVisitor
 
         public static bool IsLetter(string identifier)
         {
-            if (identifier == "sansm.xiaoman.buyback_test.last_note") return true;
+            if (identifier == XiaomanMod.Id + ".last_note" || identifier == "sansm.xiaoman.buyback_test.last_note") return true;
             string prefix = XiaomanMod.Id + ".";
             if (identifier == null || !identifier.StartsWith(prefix, StringComparison.Ordinal)) return false;
             string ignored;

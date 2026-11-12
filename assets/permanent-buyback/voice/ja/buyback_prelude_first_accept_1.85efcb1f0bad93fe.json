@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "これは持って帰って、お店を閉めてから飲みますね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "46",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.035,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 241734
+  },
+  "sha256": "bd7ec4bd9998d9f4544cbb1a27f715aeca76fd7806d5f77afedf1c3214c8bdc5",
+  "binding": {
+    "key": "buyback_prelude_first_accept_1",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "这瓶我先带回去，收店以后再喝。",
+      "ja": "これは持って帰って、お店を閉めてから飲みますね。"
+    },
+    "generic": false
+  }
+}

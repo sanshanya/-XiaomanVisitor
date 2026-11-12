@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 import shutil
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,8 +14,8 @@ PRELUDE_SOURCE = ROOT / "story/支线/永久回购_前置.json"
 ASSETS = ROOT / "assets/permanent-buyback"
 MODULE = ROOT / "side-stories/permanent-buyback"
 DIRECTING = json.loads((ASSETS / "direction.json").read_text(encoding="utf-8"))
-ID = "sansm.xiaoman.buyback_test"
-VERSION = DIRECTING["version"]
+ID = "sansm.xiaoman.visitor"
+VERSION = ET.parse(ROOT / "package/XiaomanVisitor/manifest.xml").getroot().findtext("ModVersion")
 
 
 def compile_script():
@@ -47,7 +48,7 @@ def compile_script():
             if image == 3:
                 deferred_attack = image_cue
                 attack = DIRECTING["attack"]
-                cues.append(dict(kind="impact", value=attack["beats"], seconds=attack["beat_seconds"] * attack["beats"], hold=attack["blackout_seconds"]))
+                cues.append(dict(kind="impact", value=attack["beats"], seconds=attack["blackout_seconds"], hold=attack["blackout_seconds"]))
             else:
                 cues.append(image_cue)
         spoken = re.fullmatch(r'(?:\*\*)?“(.*?)”(?:\*\*)?', row)
@@ -57,12 +58,15 @@ def compile_script():
             line_number += 1
             cues.append(dict(kind="line", text=spoken[1], act=act,
                              key=f"buyback_{act:02}_{line_number:02}"))
-            if spoken[1] == "把我的人生还回来啊——！！！":
+            segment = next((part for part in DIRECTING["attack"]["segments"] if part["key"] == cues[-1]["key"]), None)
+            if segment:
                 if deferred_attack is None:
-                    raise ValueError("Attack shout is missing its delayed CG")
-                cues[-1].update(value=3, transition="late_reveal", hold=DIRECTING["attack"]["reveal_ratio"],
-                                seconds=DIRECTING["attack"]["min_black_line_seconds"])
-                cues.append(deferred_attack); deferred_attack = None
+                    raise ValueError("Attack segment is missing its delayed CG")
+                ordinal = DIRECTING["attack"]["segments"].index(segment) + 1
+                cues[-1].update(value=ordinal, transition="attack_segment", impact_seconds=segment["blood_at"],
+                                seconds=segment["end"]-segment["start"])
+                if ordinal == 3:
+                    cues.append(deferred_attack); deferred_attack = None
             if spoken[1] == DIRECTING["beauty_choice"]["after"]:
                 cues.append(dict(kind="reply_choice", key="beauty", options=DIRECTING["beauty_choice"]["options"]))
         elif row == "*停顿两秒。*":
@@ -74,12 +78,15 @@ def compile_script():
         elif row == "*短暂停顿。*":
             cues.append(dict(kind="wait", seconds=0.6))
         elif row == "*一声尖锐的金属撞击。*":
-            pass  # Author moved the three impacts before the shout and the delayed CG03.
+            pass  # The three impacts now follow the three recorded requests during the shout.
         elif row == "*画面逐渐变黑。*":
             cues.extend([dict(kind="black", seconds=DIRECTING["ending_fade_seconds"]), dict(kind="lock", seconds=4.0)])
         elif row == "*很久以后，响起磁带机的机械启动声。*":
             cues.append(dict(kind="tape", seconds=1.0))
-    cues.append(dict(kind="title", text="隐藏异常结局：永久回购", seconds=1.5))
+    title = re.search(r"(?m)^\*\*(隐藏结局：[^*\r\n]+)\*\*$", text)
+    if title is None:
+        raise ValueError("Missing authored hidden ending title")
+    cues.append(dict(kind="title", text=title[1], seconds=1.5))
     counts = {n: sum(c.get("act") == n and c["kind"] == "line" for c in cues) for n in range(1, 6)}
     if any(n == 0 for n in counts.values()):
         raise ValueError(f"Incomplete acts: {counts}")
@@ -158,48 +165,11 @@ def prepare(check=False):
 
 
 def stage_package(stage):
-    import xml.etree.ElementTree as ET
     stage = stage.resolve()
-    stage.relative_to((ROOT / "release").resolve())
-    if stage.name != "XiaomanBuybackTest":
-        raise ValueError("Wrong independent test directory")
-    stage.mkdir(parents=True, exist_ok=True)
-    # Reuse the reviewed visitor implementation under this test ID. The source
-    # workspace and production package remain unchanged; only ignored build
-    # inputs are rewritten. One IMod entry owns both visitor and performance.
-    original_id = "sansm.xiaoman.visitor"
-    def isolated(text):
-        return text.replace(original_id, ID).replace("sansm.xiaoman.customer", ID + ".customer").replace("sansm.xiaoman.female", ID + ".female")
-    base = ROOT / "package/XiaomanVisitor"
-    for path in base.rglob("*"):
-        if not path.is_file() or path.suffix.lower() == ".dll" or path.name == "manifest.xml":
-            continue
-        target = stage / path.relative_to(base)
-        target.parent.mkdir(parents=True, exist_ok=True)
-        if path.suffix.lower() in (".json", ".csv", ".txt"):
-            target.write_text(isolated(path.read_text(encoding="utf-8-sig")), encoding="utf-8")
-        else:
-            shutil.copyfile(path, target)
-    build_sources = ROOT / ".dev/buyback/visitor-src"
-    source_paths = sorted((ROOT / "src").rglob("*.cs"))
-    for path in source_paths:
-        target = build_sources / path.relative_to(ROOT / "src")
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(isolated(path.read_text(encoding="utf-8-sig")), encoding="utf-8")
-    (ROOT / ".dev/buyback/visitor-source-index.json").write_text(encoded(
-        [str(build_sources / path.relative_to(ROOT / "src")) for path in source_paths]), encoding="utf-8")
-    mod = ET.Element("Mod")
-    for key, value in (("ID", ID), ("Name", "小满支线：永久回购（独立演出测试）"),
-                       ("Author", "sansm"), ("ModVersion", VERSION),
-                       ("Description", "独立小满支线测试，复用现有访客/立绘/信纸。关闭主模组及抬枪测试后启用。默认保留第一天睡觉演出预览；关闭跳过前置并重启，可测试开业后两次掺药水实际成交、次日必返与当晚睡觉触发。三次敲门递增，三轮拒绝后正常过夜，次日新闻与最后的信结束小满线，游戏继续。CG黑屏结尾可重新选择或进入原生结算。新对白暂无配音。")):
-        ET.SubElement(mod, key).text = value
-    ET.SubElement(ET.SubElement(mod, "GameVersions"), "Version").text = "0.46D"
-    ET.SubElement(ET.SubElement(mod, "Assemblies"), "Assembly").text = "XiaomanBuybackTest.dll"
-    ET.SubElement(mod, "Capabilities")
-    ET.indent(mod, space="  ")
-    ET.ElementTree(mod).write(stage / "manifest.xml", encoding="utf-8", xml_declaration=True)
-    scenes = stage / "Scenes"
-    scenes.mkdir(exist_ok=True)
+    if stage != (ROOT / "package/XiaomanVisitor").resolve():
+        raise ValueError("Buyback must be merged into the existing main package")
+    scenes = stage / "Scenes/Buyback"
+    scenes.mkdir(parents=True, exist_ok=True)
     for image in asset_manifest()["images"]:
         shutil.copyfile(ASSETS / image["file"], scenes / image["file"])
     shutil.copyfile(MODULE / "script.json", scenes / "script.json")
@@ -208,64 +178,37 @@ def stage_package(stage):
     branch = json.loads(REFUSAL_SOURCE.read_text(encoding="utf-8-sig"))
     books = stage / "Books"
     books.mkdir(exist_ok=True)
+    paper = json.loads((ROOT / "assets/paper-style.json").read_text(encoding="utf-8"))
     note = dict(id="last_note", title=branch["note_name"], background=ID+":xiaoman_letter_paper",
-                width=628, height=960, designWidth=314, designHeight=480,
+                width=paper["display_width"], height=paper["display_height"],
+                designWidth=paper["design_width"], designHeight=paper["design_height"],
                 chrome=[dict(type="button", id="close", action="close", sprite=ID+":xiaoman_note_close",
                              hoverSprite=ID+":xiaoman_note_close_hover", x=297, y=2.5, w=14, h=15)],
                 pages=[dict(name="小满的留言", elements=[
-                    dict(type="image", id="photo", x=30, y=28, w=254, h=339, fit="fit"),
-                    dict(type="text", id="message", text=branch["note_message"], x=30, y=388, w=254, h=70,
-                         style="body", fontSize=11, color="#1B304A", wrap=True)])],
+                    dict(type="image", id="photo", x=52, y=24, w=210, h=280, fit="fit"),
+                    dict(type="text", id="message", text=branch["note_message"], x=30, y=322, w=254, h=44,
+                         style="body", fontSize=10, color="#1B304A", wrap=True)])],
                 item=dict(id=ID+".last_note", name=branch["note_name"], description="小满留下的一张照片纸条。", sprite="items_misc/handnote", value=0, important=True))
     (books / "last_note.json").write_text(encoded(note), encoding="utf-8")
     shutil.copyfile(ASSETS / "assets.json", scenes / "assets.json")
     shutil.copyfile(ASSETS / "direction.json", scenes / "direction.json")
     sounds = stage / "Sounds"
     sounds.mkdir(exist_ok=True)
-    # Delivery formats can change between builds. Do not retain obsolete copies
-    # of the visitor's own recordings in this separate test directory.
-    for old in sounds.glob("xm_voice_*.*"):
-        if old.suffix in (".wav", ".ogg") and not (base / "Sounds" / old.name).is_file():
-            old.unlink()
     shutil.copyfile(ASSETS / "buyback_door_knock.wav", sounds / "buyback_door_knock.wav")
-    music = asset_manifest()["music"]
-    shutil.copyfile(ROOT / "package/XiaomanVisitor/Sounds" / music["file"], sounds / music["file"])
-    shutil.copyfile(MODULE / "测试说明.txt", stage / "测试说明.txt")
-    # Reuse an existing approved preview; the supplied CG originals stay untouched.
-    shutil.copyfile(ROOT / "package/XiaomanVisitor/preview.png", stage / "preview.png")
+    from buyback_voice import pack as pack_ending_voice
+    pack_ending_voice(stage)
     licenses = stage / "Licenses"
     licenses.mkdir(exist_ok=True)
-    (licenses / "素材来源.txt").write_text(
-        "五张CG由作者提供，原文件1.png至5.png，来源与哈希见Scenes/assets.json。\n"
+    (licenses / "永久回购素材来源.txt").write_text(
+        "五张CG由作者提供，原文件1.png至5.png，来源与哈希见Scenes/Buyback/assets.json。\n"
         "角色小满来自《雨音に満ちる夜 / A Night Filled With the Sound of Rain》。\n"
         "Sounds/buyback_door_knock.wav截取自Fabrizio84的Knocking on Door录音末组三下，CC0-1.0。\n"
         "原录音：https://freesound.org/people/Fabrizio84/sounds/458007/\n"
         "授权：https://creativecommons.org/publicdomain/zero/1.0/\n"
-        "处理：单声道PCM、去直流、短淡入淡出与峰值归一；保留原敲门节奏。原录音哈希和截取范围见Scenes/assets.json。\n"
-        "Sounds/rain_intro.mp3沿用主模组第二盘磁带“小满的雨夜·Intro”，来自《雨音に満ちる夜》，原音频字节保留，哈希见Scenes/assets.json。\n"
-        "本实验不分发原生游戏程序集或原生音效；运行时引用已安装游戏的音源。\n", encoding="utf-8-sig")
-
-
-def archive(stage):
-    import zipfile
-    stage = stage.resolve()
-    stage.relative_to((ROOT / "release").resolve())
-    destination = stage.parent / f"XiaomanBuybackTest-{VERSION}.zip"
-    files = sorted(p for p in stage.rglob("*") if p.is_file())
-    with zipfile.ZipFile(destination, "w", zipfile.ZIP_DEFLATED, compresslevel=6) as out:
-        for path in files:
-            out.write(path, stage.name + "/" + path.relative_to(stage).as_posix())
-    with zipfile.ZipFile(destination) as out:
-        if out.testzip() is not None:
-            raise ValueError("Corrupt ZIP")
-        for path in files:
-            if out.read(stage.name + "/" + path.relative_to(stage).as_posix()) != path.read_bytes():
-                raise ValueError("ZIP differs from checked package")
-    report = dict(mod_id=ID, version=VERSION, sha256=hashlib.sha256(destination.read_bytes()).hexdigest(),
-                  gameplay_tested=False, bytes=destination.stat().st_size,
-                  files={p.relative_to(stage).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in files})
-    (stage.parent / "test-package.json").write_text(encoded(report), encoding="utf-8")
-    print(f"ZIP: {destination} ({report['bytes']} bytes)")
+        "处理：单声道PCM、去直流、短淡入淡出与峰值归一；保留原敲门节奏。原录音哈希和截取范围见Scenes/Buyback/assets.json。\n"
+        "Sounds/rain_intro.mp3沿用主模组第二盘磁带“小满的雨夜·Intro”，来自《雨音に満ちる夜》，原音频字节保留，哈希见Scenes/Buyback/assets.json。\n"
+        "新增日语对白由作者授权使用VUI Labs Ayano生成（1.1倍速）；第三幕爆发声为作者提供的录音，保留原速。制作源及逐句来源见side-stories/permanent-buyback/voice-script.json，运行包只含离线音频，不含生成接口或凭据。\n"
+        "本模组不分发原生游戏程序集或原生音效；运行时引用已安装游戏的音源。\n", encoding="utf-8-sig")
 
 
 def main():
@@ -273,14 +216,10 @@ def main():
     parser.add_argument("--version", action="version", version=VERSION)
     parser.add_argument("--check", action="store_true")
     parser.add_argument("--stage", type=Path)
-    parser.add_argument("--zip", action="store_true")
     args = parser.parse_args()
     prepare(args.check)
     if args.stage:
-        if args.zip:
-            archive(args.stage)
-        else:
-            stage_package(args.stage)
+        stage_package(args.stage)
     print("PASS: author lines, five CGs and deterministic offline timeline")
 
 

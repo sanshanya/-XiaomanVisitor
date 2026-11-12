@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "また来られたらいいなって、思ってたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "40",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.455,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 213880
+  },
+  "sha256": "0b7301164109773ac98d6dd0b100b06ea4754a9f4362b3ec3bae27b3b851b473",
+  "binding": {
+    "key": "buyback_05_17",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "那时候，还想着以后有机会再来呢。",
+      "ja": "また来られたらいいなって、思ってたんです。"
+    },
+    "generic": false
+  }
+}

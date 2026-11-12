@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "どうして……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "11",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 1.619,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 77740
+  },
+  "sha256": "2ba88ebf14a120ff8723da082ff122e773db32b021c915270116918b85f0e885",
+  "binding": {
+    "key": "buyback_04_14",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "您怎么可以……",
+      "ja": "どうして……。"
+    },
+    "generic": false
+  }
+}

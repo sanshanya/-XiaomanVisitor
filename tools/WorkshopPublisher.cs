@@ -62,6 +62,8 @@ internal static class WorkshopPublisher
     {
         JObject manifest = JObject.Parse(File.ReadAllText(Path.Combine(release, "release-manifest.json")));
         JObject page = JObject.Parse(File.ReadAllText(PageFile));
+        bool preserveGallery = page.Value<bool?>("preserve_existing_gallery") == true;
+        Require(!galleryOnly || !preserveGallery, "Gallery replacement requires an explicit gallery draft.");
         string content = Path.GetFullPath((string)manifest["content_folder"]);
         Require(content == Path.Combine(root, "package", "XiaomanVisitor"), "Unexpected content root.");
         foreach (JProperty file in ((JObject)manifest["files"]).Properties())
@@ -86,6 +88,7 @@ internal static class WorkshopPublisher
                 "Publish the matching content before updating localized text.");
         RemoteInfo old = Query(id);
         Require(old.Owner == owner && old.ConsumerApp == App, "Existing item belongs to another account or game.");
+        if (preserveGallery) VerifyGallery(page, old.Previews);
         string priorDescription = (string)page["base_description_bbcode"];
         if (!galleryOnly && priorDescription != null)
             Require((old.Title == (string)page["title"] || old.Title == (string)page["base_title"])
@@ -98,9 +101,12 @@ internal static class WorkshopPublisher
         if (!galleryOnly && !metadataOnly) Require(SteamUGC.SetItemContent(update, content), "SetItemContent failed.");
         if (!metadataOnly)
         {
-            Require(SteamUGC.SetItemPreview(update, primary), "SetItemPreview failed.");
             Require(SteamUGC.SetItemVisibility(update, ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic),
                 "SetItemVisibility failed.");
+        }
+        if (!metadataOnly && !preserveGallery)
+        {
+            Require(SteamUGC.SetItemPreview(update, primary), "SetItemPreview failed.");
             // Main preview and the three-image carousel are separate native fields.
             for (int i = (int)old.AdditionalPreviews - 1; i >= 0; i--)
                 Require(SteamUGC.RemoveItemPreview(update, (uint)i), "Could not replace old additional previews.");
@@ -111,7 +117,8 @@ internal static class WorkshopPublisher
         state["publishedfileid"] = id.ToString();
         state["status"] = "uploading"; SaveState();
         Console.WriteLine(metadataOnly ? "Updating " + language + " Workshop text..."
-            : "Uploading approved " + version + " content, public visibility, portrait + screenshot + expression sheet...");
+            : "Uploading approved " + version + " content, public visibility, "
+                + (preserveGallery ? "preserving existing previews..." : "portrait + screenshot + expression sheet..."));
         string notePath = Path.Combine(release, "workshop-update-note.txt");
         string changeNote = metadataOnly ? null : galleryOnly ? "完善发布图片：设定图、实机截图、表情图。"
             : File.Exists(notePath) ? File.ReadAllText(notePath).Trim() : version + " 更新";
@@ -182,11 +189,7 @@ internal static class WorkshopPublisher
             "Uploaded title or description did not match the approved text.");
         Require(remote.Visibility == ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic,
             "The item is not set to public.");
-        Require(remote.AdditionalPreviews == 3, "Uploaded carousel must contain all three approved images.");
-        JArray gallery = (JArray)page["gallery"];
-        for (int i=0; i<gallery.Count; i++)
-            Require((string)remote.Previews[i]["filename"] == Path.GetFileName((string)gallery[i]["file"]),
-                "Remote carousel image order differs from the approved order.");
+        VerifyGallery(page, remote.Previews);
         state["visibility"] = "public"; state["additional_previews"] = remote.AdditionalPreviews;
         state["carousel"] = remote.Previews;
         if (language == "schinese") state["title"] = remote.Title;
@@ -198,6 +201,24 @@ internal static class WorkshopPublisher
         state["status"] = state.Value<bool?>("needs_legal_agreement") == true ? "uploaded_needs_legal_agreement" : "published";
         SaveState();
         Console.WriteLine("VERIFIED " + state["status"] + ": https://steamcommunity.com/sharedfiles/filedetails/?id=" + id);
+    }
+
+    private static void VerifyGallery(JObject page, JArray actual)
+    {
+        bool preserved = page.Value<bool?>("preserve_existing_gallery") == true;
+        JArray expected = (JArray)page[preserved ? "base_gallery" : "gallery"];
+        Require(expected != null && actual.Count == expected.Count, "Remote carousel image count changed.");
+        for (int i=0; i<expected.Count; i++)
+        {
+            string filename = preserved ? (string)expected[i]["filename"] : Path.GetFileName((string)expected[i]["file"]);
+            Require((string)actual[i]["filename"] == filename, "Remote carousel image order differs from the inspected order.");
+            if (preserved)
+            {
+                Require((string)actual[i]["type"] == (string)expected[i]["type"], "Remote carousel preview type changed.");
+                string url = (string)expected[i]["url"];
+                if (!string.IsNullOrEmpty(url)) Require((string)actual[i]["url"] == url, "Remote carousel preview changed.");
+            }
+        }
     }
 
     private static void Inspect(ulong id, ulong owner)

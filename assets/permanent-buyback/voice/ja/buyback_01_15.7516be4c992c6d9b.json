@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "私、すごく勇気を出して来たんですよ……？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "36",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.455,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 213880
+  },
+  "sha256": "5991794b5615b87991e59b785266fa59008f3430d787b0e33c520433742a6540",
+  "binding": {
+    "key": "buyback_01_15",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "人家可是鼓起了很大的勇气才来的哦……",
+      "ja": "私、すごく勇気を出して来たんですよ……？"
+    },
+    "generic": false
+  }
+}

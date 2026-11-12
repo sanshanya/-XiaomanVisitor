@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "まだ、聞こえてますか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "20",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.781,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 133548
+  },
+  "sha256": "896a724c341cd6e379a037a7d6f1f31682cc6469d6a08edcf86e80de5911e856",
+  "binding": {
+    "key": "buyback_04_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "还听得见吗？",
+      "ja": "まだ、聞こえてますか？"
+    },
+    "generic": false
+  }
+}

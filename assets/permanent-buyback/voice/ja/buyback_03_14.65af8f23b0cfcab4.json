@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ずっと、考えてたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "22",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.219,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 154540
+  },
+  "sha256": "f4a485ee73aa7a1737528a8a6e845d62f107fd2cb9aa31f3bde07f2d489c0bb7",
+  "binding": {
+    "key": "buyback_03_14",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我一直在想。",
+      "ja": "ずっと、考えてたんです。"
+    },
+    "generic": false
+  }
+}

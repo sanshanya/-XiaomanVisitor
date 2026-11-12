@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "この前のと、同じですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "22",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.219,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 154540
+  },
+  "sha256": "77fcc91c401a0fb964a48198b6dc1b1184cc413f92c0d82d2a23941fe1d2cbc1",
+  "binding": {
+    "key": "buyback_prelude_second_accept_1",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "和上次那瓶一样呢。",
+      "ja": "この前のと、同じですね。"
+    },
+    "generic": false
+  }
+}

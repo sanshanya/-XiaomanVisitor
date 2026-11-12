@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、知ってますか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "18",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.926,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 140510
+  },
+  "sha256": "97cc59ebcf0c014ad027ea465c2384a1dd0ad37981cf1315e7b3106f04dc0a6d",
+  "binding": {
+    "key": "buyback_02_18",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈知道吗？",
+      "ja": "先輩、知ってますか？"
+    },
+    "generic": false
+  }
+}

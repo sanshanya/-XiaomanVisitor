@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "なんで先輩は、何もなかったみたいに……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "36",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.272,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 205100
+  },
+  "sha256": "729584631c7e7c85603c1cee162e4c7e9fd9b535d63322ceed5e0ac2e11932ce",
+  "binding": {
+    "key": "buyback_03_17",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "凭什么前辈还能像什么都没发生过一样……",
+      "ja": "なんで先輩は、何もなかったみたいに……。"
+    },
+    "generic": false
+  }
+}

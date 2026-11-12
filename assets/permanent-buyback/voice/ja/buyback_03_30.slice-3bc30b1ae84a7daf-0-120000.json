@@ -1,0 +1,32 @@
+{
+  "provider": "author_recording",
+  "source": "assets/permanent-buyback/voice/reference/attack.mp3",
+  "source_sha256": "3bc30b1ae84a7daf05d7ba6ebfe00fae28550d15eeb5a99d27d667a14e47c132",
+  "source_name": "角色_20261111155857-2026-11-11-18-33-返して……返してよ……！-私の人生……返せよ……！！-返せよおお！！！！.mp3",
+  "processing": {
+    "resample_rate": 24000,
+    "effective_speed": 1.0,
+    "original_unchanged": true,
+    "slice_start_frame": 0,
+    "slice_end_frame": 120000,
+    "original_frames": 300304
+  },
+  "binding": {
+    "key": "buyback_03_30",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "还给我……还给我啊……！",
+      "ja": "返して……返してよ……！"
+    },
+    "generic": false
+  },
+  "sha256": "bcc4d9ade68c72bab8427eaa551cd606b0c746d7981e33058a83ed0650808c0e",
+  "audio": {
+    "seconds": 5.0,
+    "sample_rate": 24000,
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "frames": 120000,
+    "bytes": 240044
+  }
+}

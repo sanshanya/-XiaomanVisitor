@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "私、ここで、あのお水を二回買ったんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "39",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.399,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 259192
+  },
+  "sha256": "b9d5a76a7bc7738f084575efd0941248858e75da721b853aa5a0a083f60659c7",
+  "binding": {
+    "key": "buyback_02_29",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我在您这里，买过两次那种水呢。",
+      "ja": "私、ここで、あのお水を二回買ったんですよ。"
+    },
+    "generic": false
+  }
+}

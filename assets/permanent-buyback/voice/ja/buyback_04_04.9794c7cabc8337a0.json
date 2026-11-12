@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、どうしてそんな目で私を見るんですか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "40",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.035,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 241734
+  },
+  "sha256": "8b74fddf1ae45ae240efd73ed8cd5253b629fbddd02cd4cd19a46f98763b6da5",
+  "binding": {
+    "key": "buyback_04_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈为什么要用这种眼神看着我呀？",
+      "ja": "先輩、どうしてそんな目で私を見るんですか？"
+    },
+    "generic": false
+  }
+}

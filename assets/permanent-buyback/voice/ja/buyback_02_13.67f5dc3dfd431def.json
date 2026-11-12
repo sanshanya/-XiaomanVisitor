@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "最初は、私のお酒がそんなにおいしかったのかなって思ってました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "60",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.709,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 322066
+  },
+  "sha256": "c7ea5ad6a1ce828e6dda6da2b0b1e86eb862c5f570aa0e29f89433abad4df540",
+  "binding": {
+    "key": "buyback_02_13",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "刚开始，我还以为是自己调得太好喝了呢。",
+      "ja": "最初は、私のお酒がそんなにおいしかったのかなって思ってました。"
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "私、まだ何もしてませんよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "24",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.69,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 177144
+  },
+  "sha256": "22d71deca145f8f08c43321b33a68341f37c3ab1c783cbf5c2377a6ad4b13ec9",
+  "binding": {
+    "key": "buyback_02_33",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我还什么都没做呢。",
+      "ja": "私、まだ何もしてませんよ。"
+    },
+    "generic": false
+  }
+}

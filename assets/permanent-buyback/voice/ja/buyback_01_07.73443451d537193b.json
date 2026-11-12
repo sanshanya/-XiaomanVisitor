@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "目を閉じると、また先輩のことを考えちゃうんです……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "48",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.173,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 248328
+  },
+  "sha256": "5d651c067c20dbe876ed91aa8748200572bdcee0c1d1a29af02d7477cf807f67",
+  "binding": {
+    "key": "buyback_01_07",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "可是闭上眼睛，就又忍不住想起您……",
+      "ja": "目を閉じると、また先輩のことを考えちゃうんです……。"
+    },
+    "generic": false
+  }
+}

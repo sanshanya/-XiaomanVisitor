@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "残っていたお水、全部飲んじゃいました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "36",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.272,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 205100
+  },
+  "sha256": "784ab447575f778ec136ccd57b75c28efcd35c81defaa9371915ba86ea5e4ad4",
+  "binding": {
+    "key": "buyback_02_26",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我把剩下的水都喝完了",
+      "ja": "残っていたお水、全部飲んじゃいました。"
+    },
+    "generic": false
+  }
+}

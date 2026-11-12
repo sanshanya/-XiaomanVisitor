@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩は、自分の命で支払ってくれるつもりだったんですね。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "52",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.091,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 292396
+  },
+  "sha256": "d6d6bd1be2142f1301fa03ef9904546864b16adea7f56fc7c7cc5633450729ec",
+  "binding": {
+    "key": "buyback_05_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "原来前辈是想要用自己的生命来作为代价",
+      "ja": "先輩は、自分の命で支払ってくれるつもりだったんですね。"
+    },
+    "generic": false
+  }
+}

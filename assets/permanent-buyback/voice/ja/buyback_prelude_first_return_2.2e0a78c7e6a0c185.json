@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "でも今日、出かけるときも、真っ先に先輩のお店に向かってました……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "61",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.745,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 323782
+  },
+  "sha256": "830381116e22ceab201429ba42a0e76de40c2c60b76eb44b15783421e30e5219",
+  "binding": {
+    "key": "buyback_prelude_first_return_2",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "可今天出门的时候，还是先往您这边走了……",
+      "ja": "でも今日、出かけるときも、真っ先に先輩のお店に向かってました……。"
+    },
+    "generic": false
+  }
+}

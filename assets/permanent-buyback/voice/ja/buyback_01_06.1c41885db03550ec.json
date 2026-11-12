@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "昼間、先輩に会ったばかりなのに。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "30",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.972,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 190722
+  },
+  "sha256": "fea6cbeb2bf7dc6e80bf1e9b01c5ea3a2d1903d170075846c6ebfd644e57593e",
+  "binding": {
+    "key": "buyback_01_06",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "明明白天才见过前辈。",
+      "ja": "昼間、先輩に会ったばかりなのに。"
+    },
+    "generic": false
+  }
+}

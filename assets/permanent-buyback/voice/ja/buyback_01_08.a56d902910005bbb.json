@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……変、ですよね？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "14",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.346,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 112658
+  },
+  "sha256": "6188c69eca9d695dede3f8c35fa9e41a47ad8ee44996d5f9f57041bae2978ce1",
+  "binding": {
+    "key": "buyback_01_08",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……很奇怪吧？",
+      "ja": "……変、ですよね？"
+    },
+    "generic": false
+  }
+}

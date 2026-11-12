@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ふふ……[chuckles]",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "16",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.234,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 107256
+  },
+  "sha256": "3e68119a4217ead6e4c337da1a93e3e1c415ec75fcf52e63e0c31e7201fe0700",
+  "binding": {
+    "key": "buyback_02_24",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "呵呵……",
+      "ja": "ふふ……。"
+    },
+    "generic": false
+  }
+}

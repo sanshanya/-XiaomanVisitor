@@ -181,8 +181,13 @@ def adopt(path, key, audio, approve=False):
     save(path, script)
 
 
-def generate(path, keys):
-    script, texts = load(path), localized()
+def generate(path, keys, *, texts=None, audio_directory=None):
+    script = load(path)
+    texts = localized() if texts is None else texts
+    audio_directory = (ROOT / "assets/audio/voice" / script["language"]
+                       if audio_directory is None else Path(audio_directory))
+    if not audio_directory.resolve().is_relative_to((ROOT / "assets").resolve()):
+        raise ValueError("Voice masters must stay under assets")
     selected = set(keys or [])
     known = {row["key"] for row in script["lines"]}
     if selected - known:
@@ -203,7 +208,7 @@ def generate(path, keys):
         request_key = hashlib.sha256(json.dumps({"text": generate_text, "voice": script["voice_id"], "speed": speed, "normalization": normalize,
             "language": script["language"], "model": script["model_id"]}, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:16]
         safe_key = re.sub("[^a-z0-9_]", "_", row["key"].lower())
-        audio = ROOT / "assets/audio/voice" / script["language"] / f"{safe_key}.{request_key}.wav"
+        audio = audio_directory / f"{safe_key}.{request_key}.wav"
         if not audio.exists():
             previous = [ROOT / r for r in (row.get("audio"), row.get("previous_audio")) if r]
             previous += [ROOT / other["audio"] for other in script["lines"] if other.get("audio") and other["key"] != row["key"]]
@@ -234,7 +239,8 @@ def pack(path):
     sounds = PACKAGE / "Sounds"
     previous_path = PACKAGE / "Voices/index.json"
     previous = load(previous_path) if previous_path.exists() else {}
-    records = [r for r in previous.get("lines", []) if r["language"] != script["language"]]
+    records = [r for r in previous.get("lines", []) if r["language"] != script["language"]
+               or r["line_key"].startswith("buyback_")]
     pending = dict(previous.get("pending_by_language", {}))
     report, kept = [], {audio_filename(r) for r in records}
     delivery = VoiceDelivery(ROOT)

@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "分かった気がします。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "19",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.272,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 109124
+  },
+  "sha256": "dcbaac6e4e55697ec812cbd4726eec48b227de75a5daf5b23b6b056392527c86",
+  "binding": {
+    "key": "buyback_05_02",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我好像明白了。",
+      "ja": "分かった気がします。"
+    },
+    "generic": false
+  }
+}

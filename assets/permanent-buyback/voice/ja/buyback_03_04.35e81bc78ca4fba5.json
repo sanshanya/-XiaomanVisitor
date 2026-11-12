@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あんな、普通のお水なのに……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "26",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.399,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 163218
+  },
+  "sha256": "4c53127c4f008271f01a1a6dc7289d864e8915e8bbfdb44496e12d33b1415db8",
+  "binding": {
+    "key": "buyback_03_04",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "明明是那么普通的水……",
+      "ja": "あんな、普通のお水なのに……。"
+    },
+    "generic": false
+  }
+}

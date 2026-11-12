@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、この前のお水……まだありますか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "34",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.145,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 246982
+  },
+  "sha256": "e90ae8cce1df0c9d3c9b807c699054fe36a13e0d80cf704bf3289f9a9903ce19",
+  "binding": {
+    "key": "buyback_prelude_late_return",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，上次那种水……还有吗？",
+      "ja": "先輩、この前のお水……まだありますか？"
+    },
+    "generic": false
+  }
+}

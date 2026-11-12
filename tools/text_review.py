@@ -11,6 +11,7 @@ def instruction_outputs(root):
     package = root / 'package/XiaomanVisitor'
     manifest = ET.parse(package / 'manifest.xml').getroot()
     script = json.loads((root / 'story/配音脚本_ja.json').read_text(encoding='utf-8'))
+    script['lines'] += json.loads((root / 'side-stories/permanent-buyback/voice-script.json').read_text(encoding='utf-8'))['lines']
     snapshot = json.loads((root / 'assets/story.json').read_text(encoding='utf-8'))
     through = max(weekly_story_source.SOURCES)
     bound = sum(bool(row.get('audio')) for row in script['lines'])

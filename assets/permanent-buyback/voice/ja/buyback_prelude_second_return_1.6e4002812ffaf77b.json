@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "今日は、先輩の顔を見たくて来ただけです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "38",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.6,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 220844
+  },
+  "sha256": "456b89b5e50a1f7f4f0fff981190ef226365d06a5d541eb7bd49ab478091dbf8",
+  "binding": {
+    "key": "buyback_prelude_second_return_1",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "今天只想过来看看您。",
+      "ja": "今日は、先輩の顔を見たくて来ただけです。"
+    },
+    "generic": false
+  }
+}

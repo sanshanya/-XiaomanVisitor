@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "あ……本当に開けてくれた。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "23",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.573,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 171530
+  },
+  "sha256": "85ecd99483bd2a961ab894286017dd28bc3571875a59421e2fa271081fee6632",
+  "binding": {
+    "key": "buyback_01_17",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "啊……真的开门了。",
+      "ja": "あ……本当に開けてくれた。"
+    },
+    "generic": false
+  }
+}

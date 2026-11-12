@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩も、ほかのお客さんを相手にしなくていいんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "48",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.473,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 262726
+  },
+  "sha256": "1c5d719f8424f80b97eece829314d5a7365f87e20c8dcdff5b5b762d0820772d",
+  "binding": {
+    "key": "buyback_05_07",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈也不用再去招呼其他客人了。",
+      "ja": "先輩も、ほかのお客さんを相手にしなくていいんです。"
+    },
+    "generic": false
+  }
+}

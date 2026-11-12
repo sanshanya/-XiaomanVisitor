@@ -3,12 +3,15 @@ import importlib.util
 import hashlib
 import json
 import re
+import sys
 import unittest
 import wave
 from array import array
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "tools"))
+import buyback_voice
 spec = importlib.util.spec_from_file_location("prepare_buyback", ROOT / "tools/prepare_buyback.py")
 buyback = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(buyback)
@@ -25,7 +28,7 @@ class BuybackContractTests(unittest.TestCase):
         author_lines = re.findall("“([^”\n]+)”", acts)
         actual = [c["text"] for c in self.cues if c["kind"] == "line"]
         self.assertEqual(actual, author_lines)
-        self.assertEqual(len(actual), 124)
+        self.assertEqual(len(actual), 126)
         self.assertIn("前辈也没有机会说了。", actual)
         index = actual.index("我好像明白了。")
         self.assertEqual(actual[index + 1], "原来前辈是想要用自己的生命来作为代价")
@@ -35,7 +38,7 @@ class BuybackContractTests(unittest.TestCase):
     def test_attack_and_finale_do_not_move_ahead_of_their_art(self):
         images = [(i, c["value"]) for i, c in enumerate(self.cues) if c["kind"] == "image"]
         self.assertEqual([n for _, n in images], [1, 2, 3, 4, 5])
-        attack = next(i for i, c in enumerate(self.cues) if c.get("text") == "把我的人生还回来啊——！！！")
+        attack = next(i for i, c in enumerate(self.cues) if c.get("text") == "还给我……还给我啊……！")
         impact = next(i for i, c in enumerate(self.cues) if c["kind"] == "impact")
         missing = next(i for i, c in enumerate(self.cues) if c.get("text") == "前辈也没有机会说了。")
         self.assertLess(images[1][0], missing)
@@ -44,8 +47,12 @@ class BuybackContractTests(unittest.TestCase):
         self.assertLess(attack, images[2][0])
         self.assertLess(impact, images[3][0])
         self.assertEqual(self.cues[impact]["value"], 3)
-        self.assertEqual(self.cues[attack]["transition"], "late_reveal")
-        self.assertGreaterEqual(self.cues[attack]["hold"], .8)
+        parts = self.cues[attack:attack+3]
+        self.assertEqual([c["value"] for c in parts], [1, 2, 3])
+        self.assertTrue(all(c["transition"] == "attack_segment" for c in parts))
+        self.assertEqual([c["text"] for c in parts], ["还给我……还给我啊……！", "我的人生……还给我……！！", "还给我啊——！！！"])
+        self.assertTrue(all(0 <= c["impact_seconds"] < c["seconds"] for c in parts))
+        self.assertLess(attack+2, images[2][0])
         black = next(i for i, c in enumerate(self.cues) if c["kind"] == "black")
         self.assertLess(images[4][0], black)
         self.assertEqual([c["text"] for c in self.cues[black:] if c["kind"] == "line"],
@@ -117,6 +124,7 @@ class BuybackContractTests(unittest.TestCase):
     def test_performance_requires_manual_dialogue(self):
         script = json.loads((buyback.MODULE / "script.json").read_text(encoding="utf-8"))
         self.assertEqual(script["dialogue_mode"], "manual")
+        self.assertEqual(script["cues"][-1]["text"], "隐藏结局：永久回购")
 
     def test_refusal_branch_preserves_the_new_author_lines(self):
         branch = json.loads(buyback.REFUSAL_SOURCE.read_text(encoding="utf-8"))
@@ -139,6 +147,41 @@ class BuybackContractTests(unittest.TestCase):
         self.assertTrue(music["loop"])
         self.assertEqual(music["sha256"], track["sha256"])
         self.assertEqual(music["sha256"], hashlib.sha256((ROOT / "package/XiaomanVisitor/Sounds" / music["file"]).read_bytes()).hexdigest())
+
+    def test_all_ending_recordings_keep_authored_subtitles_and_import_provenance(self):
+        script = buyback_voice.vp.load(buyback_voice.CATALOG)
+        self.assertEqual(len(script["lines"]), 147)
+        buyback_voice.checked(script)
+        main = [r for r in script["lines"] if r["group"] == "main"]
+        self.assertEqual([(r["key"], r["subtitle_templates"]["zh"]) for r in main],
+                         [(c["key"], c["text"]) for c in self.cues if c["kind"] == "line"])
+        imports = [r for r in script["lines"] if r.get("provider") == "author_recording"]
+        self.assertEqual([r["key"] for r in imports], ["buyback_03_30", "buyback_03_31", "buyback_03_32"])
+        row = imports[0]
+        meta = buyback_voice.vp.load((ROOT / row["audio"]).with_suffix(".json"))
+        self.assertEqual(meta["provider"], "author_recording")
+        self.assertNotIn("request", meta)
+        self.assertEqual(meta["processing"]["effective_speed"], 1)
+        self.assertTrue(meta["processing"]["original_unchanged"])
+        cue = next(c for c in self.cues if c.get("key") == row["key"])
+        self.assertEqual(cue["impact_seconds"], row["blood_at"])
+        self.assertLess(cue["impact_seconds"], meta["audio"]["seconds"])
+        import numpy as np
+        import soundfile as sf
+        slices = [sf.read(ROOT / r["audio"], dtype="int16")[0] for r in imports]
+        import shutil
+        import subprocess
+        decoded = subprocess.run([shutil.which("ffmpeg"), "-hide_banner", "-loglevel", "error", "-nostdin",
+                                  "-i", str(ROOT / meta["source"]), "-ar", "24000", "-ac", "1",
+                                  "-f", "s16le", "-c:a", "pcm_s16le", "pipe:1"], check=True, capture_output=True).stdout
+        self.assertTrue(np.array_equal(np.concatenate(slices), np.frombuffer(decoded, dtype="<i2")))
+
+    def test_ending_packer_rejects_the_retired_separate_package(self):
+        main = ROOT / "package/XiaomanVisitor"
+        before = (main / "Voices/index.json").read_bytes()
+        with self.assertRaises(ValueError):
+            buyback_voice.pack(ROOT / "release/XiaomanBuybackTest")
+        self.assertEqual((main / "Voices/index.json").read_bytes(), before)
 
 
 if __name__ == "__main__":

@@ -9,6 +9,9 @@ $projectRoot = Split-Path -Parent $PSScriptRoot
 $managed = Join-Path $GameRoot 'Probably Stolen_Data\Managed'
 $compiler = Get-XiaomanCompiler
 $package = Join-Path $projectRoot 'package\XiaomanVisitor'
+$python = Join-Path $projectRoot '.venv\Scripts\python.exe'
+& $python (Join-Path $PSScriptRoot 'prepare_buyback.py') --check --stage $package
+if ($LASTEXITCODE -ne 0) { throw 'Main-package hidden ending assets are incomplete' }
 $refs = @('mscorlib.dll','netstandard.dll','System.dll','System.Core.dll','Assembly-CSharp.dll','Assembly-CSharp-firstpass.dll','0Harmony.dll','Newtonsoft.Json.dll',
     'UnityEngine.CoreModule.dll','UnityEngine.AudioModule.dll','UnityEngine.VideoModule.dll','UnityEngine.InputLegacyModule.dll','Febucci.TextAnimator.Runtime.dll',
     'Febucci.TextAnimator.TMP.Runtime.dll','Unity.TextMeshPro.dll','UnityEngine.UI.dll','UnityEngine.UIModule.dll','UnityEngine.TextRenderingModule.dll','UnityEngine.ImageConversionModule.dll','Unity.2D.PixelPerfect.dll')

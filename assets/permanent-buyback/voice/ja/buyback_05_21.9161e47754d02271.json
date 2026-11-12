@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "……明日も、一緒にいましょうね……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "30",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.219,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 154540
+  },
+  "sha256": "ffedfc5a4713ac09a888ff8f158760fce21367fe4e68ca13609f14703a3c699b",
+  "binding": {
+    "key": "buyback_05_21",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "……明天也要在一起哦。",
+      "ja": "……明日も、一緒にいましょうね。"
+    },
+    "generic": false
+  }
+}

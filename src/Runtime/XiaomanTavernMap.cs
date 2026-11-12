@@ -18,9 +18,7 @@ namespace XiaomanVisitor
         private DelegateAfterhourLocation tavernLocation;
         private XiaomanTavernStage tavernStage;
         private bool TavernStoryFinished { get { return PlayerStore.HasInstance && (ReadStory().Finished
-#if XIAOMAN_BUYBACK_TEST
-            || SideStories.BuybackTestMod.LineClosed
-#endif
+            || SideStories.BuybackStory.LineClosed
             ); } }
         internal string TavernMapDescription { get { return Text(PlayerStore.HasInstance
             && StoreStation.Instance.dayCounter >= TavernRules.OpeningDay ? "ui_tavern_open_desc" : "ui_tavern_map_desc"); } }

@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ねえ、先輩。今日の私、きれいですか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "32",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.618,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 269688
+  },
+  "sha256": "258697392d2927574c6fbe330097a91396f0cf58198c181826573418d21c8f17",
+  "binding": {
+    "key": "buyback_01_19",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "呐，前辈，我今天美吗？",
+      "ja": "ねえ、先輩。今日の私、きれいですか？"
+    },
+    "generic": false
+  }
+}

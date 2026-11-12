@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "まだ、やりたいことが、たくさんあったんですよ。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "43",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.926,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 236484
+  },
+  "sha256": "e27e1487248cd8340be5b9c1a68eaa1a8e1d522eeb32a85004e118e83ee994fc",
+  "binding": {
+    "key": "buyback_04_09",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我原本还有好多事情想做呢。",
+      "ja": "まだ、やりたいことが、たくさんあったんですよ。"
+    },
+    "generic": false
+  }
+}

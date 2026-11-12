@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "さっきのお酒、まだないのかって……そればっかり聞くんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "54",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.2,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 297644
+  },
+  "sha256": "be81323e1535950b55d31f9d7bfb1aeef318f0837e74e7bda9e5334e0bac18a5",
+  "binding": {
+    "key": "buyback_02_12",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "一个劲儿地问我，还有没有刚才那种酒……",
+      "ja": "さっきのお酒、まだないのかって……そればっかり聞くんです。"
+    },
+    "generic": false
+  }
+}

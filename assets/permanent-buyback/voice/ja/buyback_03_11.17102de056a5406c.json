@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "また来るねって、言ってほしくて……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "32",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.545,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 170180
+  },
+  "sha256": "cd67dee1bc4f00375122350ef5d56ef71087edf12a31fc8b380984e019dc00a5",
+  "binding": {
+    "key": "buyback_03_11",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "想听客人说，下次还会再来……",
+      "ja": "また来るねって、言ってほしくて……。"
+    },
+    "generic": false
+  }
+}

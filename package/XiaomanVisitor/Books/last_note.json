@@ -1,0 +1,59 @@
+{
+  "id": "last_note",
+  "title": "小满留下的照片纸条",
+  "background": "sansm.xiaoman.visitor:xiaoman_letter_paper",
+  "width": 628,
+  "height": 784.7201426024956,
+  "designWidth": 314,
+  "designHeight": 392.3600713012478,
+  "chrome": [
+    {
+      "type": "button",
+      "id": "close",
+      "action": "close",
+      "sprite": "sansm.xiaoman.visitor:xiaoman_note_close",
+      "hoverSprite": "sansm.xiaoman.visitor:xiaoman_note_close_hover",
+      "x": 297,
+      "y": 2.5,
+      "w": 14,
+      "h": 15
+    }
+  ],
+  "pages": [
+    {
+      "name": "小满的留言",
+      "elements": [
+        {
+          "type": "image",
+          "id": "photo",
+          "x": 52,
+          "y": 24,
+          "w": 210,
+          "h": 280,
+          "fit": "fit"
+        },
+        {
+          "type": "text",
+          "id": "message",
+          "text": "我的心上人，请一定要等我~无论你在哪里，我们终将重逢！！！",
+          "x": 30,
+          "y": 322,
+          "w": 254,
+          "h": 44,
+          "style": "body",
+          "fontSize": 10,
+          "color": "#1B304A",
+          "wrap": true
+        }
+      ]
+    }
+  ],
+  "item": {
+    "id": "sansm.xiaoman.visitor.last_note",
+    "name": "小满留下的照片纸条",
+    "description": "小满留下的一张照片纸条。",
+    "sprite": "items_misc/handnote",
+    "value": 0,
+    "important": true
+  }
+}

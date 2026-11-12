@@ -4485,6 +4485,2064 @@
         "…You startled me."
       ],
       "generic": false
+    },
+    {
+      "line_key": "buyback_01_01",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_01_387b753e5183",
+      "audio_file": "buyback_voice_ja_buyback_01_01_387b753e5183.ogg",
+      "source_sha256": "387b753e5183b3e79c1e6d987952fe6505f063148130974ea57550d040fc808f",
+      "packaged_sha256": "a8ca2d75b7e1c655d063049249304f8a47565afa86eaaeb0d621c4570bc7ae49",
+      "spoken_text": "……先輩？",
+      "subtitle_templates": [
+        "……前辈？",
+        "……先輩？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_02",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_02_62a2f463d121",
+      "audio_file": "buyback_voice_ja_buyback_01_02_62a2f463d121.ogg",
+      "source_sha256": "62a2f463d121839a203c940cf58855b559a75ce527ce545c12d681f65357300d",
+      "packaged_sha256": "9967828f43738af93cb4bfc93b42e886072ee49e31f969d7e6047011ffe58079",
+      "spoken_text": "みちるです。",
+      "subtitle_templates": [
+        "是我，小满。",
+        "みちるです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_03",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_03_905ad990bd6d",
+      "audio_file": "buyback_voice_ja_buyback_01_03_905ad990bd6d.ogg",
+      "source_sha256": "905ad990bd6d09ca5147ef14ac85ab41d0d1003d6d90daefa368e59c75859580",
+      "packaged_sha256": "a21330af29959846699e03878cfa216a5cddc64cdfa7353efb72462fb05b40a5",
+      "spoken_text": "こんな時間に……ごめんなさい。",
+      "subtitle_templates": [
+        "这么晚了……真不好意思呢。",
+        "こんな時間に……ごめんなさい。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_04",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_04_02adeef7c879",
+      "audio_file": "buyback_voice_ja_buyback_01_04_02adeef7c879.ogg",
+      "source_sha256": "02adeef7c8791e1771ddb050c5704fc4da1f2bcdb091414480c1b9c8a9822c83",
+      "packaged_sha256": "31586f3516996ef0ce6331b1894f95ae639c2b3d6605df8d33368dea08ea83c4",
+      "spoken_text": "実は……今日はずっと、眠れなくて。",
+      "subtitle_templates": [
+        "其实……我今天一直睡不着。",
+        "実は……今日はずっと、眠れなくて。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_05",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_05_5eb2ac2ded16",
+      "audio_file": "buyback_voice_ja_buyback_01_05_5eb2ac2ded16.ogg",
+      "source_sha256": "5eb2ac2ded16ffa150f0f251f4e35f2a6ab45f9dacdcb23111cbee6133345711",
+      "packaged_sha256": "db21dc9d9b094d9b11a18e7a9c6d58d432a45813557a5c77314d33531ac10e8e",
+      "spoken_text": "体がぽかぽかして、胸もどきどきして……。",
+      "subtitle_templates": [
+        "浑身都热热的，心跳也好快……",
+        "体がぽかぽかして、胸もどきどきして……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_06",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_06_fea6cbeb2bf7",
+      "audio_file": "buyback_voice_ja_buyback_01_06_fea6cbeb2bf7.ogg",
+      "source_sha256": "fea6cbeb2bf7dc6e80bf1e9b01c5ea3a2d1903d170075846c6ebfd644e57593e",
+      "packaged_sha256": "ca9467e05b58a63003f7b051dddf2c335003006648597e0ad3c4c254e61f3ece",
+      "spoken_text": "昼間、先輩に会ったばかりなのに。",
+      "subtitle_templates": [
+        "明明白天才见过前辈。",
+        "昼間、先輩に会ったばかりなのに。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_07",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_07_5d651c067c20",
+      "audio_file": "buyback_voice_ja_buyback_01_07_5d651c067c20.ogg",
+      "source_sha256": "5d651c067c20dbe876ed91aa8748200572bdcee0c1d1a29af02d7477cf807f67",
+      "packaged_sha256": "187e715c79398c5072be6ced4a06063456e4754f8c799d48b36b24f7c1b9a305",
+      "spoken_text": "目を閉じると、また先輩のことを考えちゃうんです……。",
+      "subtitle_templates": [
+        "可是闭上眼睛，就又忍不住想起您……",
+        "目を閉じると、また先輩のことを考えちゃうんです……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_08",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_08_6188c69eca9d",
+      "audio_file": "buyback_voice_ja_buyback_01_08_6188c69eca9d.ogg",
+      "source_sha256": "6188c69eca9d695dede3f8c35fa9e41a47ad8ee44996d5f9f57041bae2978ce1",
+      "packaged_sha256": "856284f0b62f8351026b8228596c650fc0c23513f8c17b9f199e0c1b90171bf4",
+      "spoken_text": "……変、ですよね？",
+      "subtitle_templates": [
+        "……很奇怪吧？",
+        "……変、ですよね？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_09",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_09_5f37ebedb502",
+      "audio_file": "buyback_voice_ja_buyback_01_09_5f37ebedb502.ogg",
+      "source_sha256": "5f37ebedb5028e9738ab223a0de0001623882e8d6a1ebb9c8fe9ca7884e07e12",
+      "packaged_sha256": "edb39c7d60a6c50b13b38bfdad012f1143d95612885277d184fb951e41d4c6cf",
+      "spoken_text": "こんな夜中に……誰かに会いに来たの、初めてなんです。",
+      "subtitle_templates": [
+        "我还是第一次……这么晚跑来找一个人呢。",
+        "こんな夜中に……誰かに会いに来たの、初めてなんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_10",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_10_148d9baf44ed",
+      "audio_file": "buyback_voice_ja_buyback_01_10_148d9baf44ed.ogg",
+      "source_sha256": "148d9baf44edd0b813b12bd2984fc82ea4532e4ce4bbb43971bd495237d37de5",
+      "packaged_sha256": "9881b7a2a11b19b502dcf7f0fb322b041017832973f2960763ad77386702afb7",
+      "spoken_text": "昼間、先輩の前に立つと、どうしても言えないことがあって。",
+      "subtitle_templates": [
+        "有些话，白天站在前辈面前，怎么也说不出口。",
+        "昼間、先輩の前に立つと、どうしても言えないことがあって。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_11",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_11_fcf91786e73b",
+      "audio_file": "buyback_voice_ja_buyback_01_11_fcf91786e73b.ogg",
+      "source_sha256": "fcf91786e73bbcc50277b31665cf546914596b6b4db8be13061862f375b2e738",
+      "packaged_sha256": "0cf092ff4abf32c17b1c541acd6a38bf42ee0449bb6ce0f5520e15f98d08b21b",
+      "spoken_text": "だから……まだ勇気があるうちに……。",
+      "subtitle_templates": [
+        "所以……想趁着还有勇气的时候……",
+        "だから……まだ勇気があるうちに……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_12",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_12_a3a17bcd7304",
+      "audio_file": "buyback_voice_ja_buyback_01_12_a3a17bcd7304.ogg",
+      "source_sha256": "a3a17bcd73041e84e6e8c5e4a9108a98e1a9a1a4da16b280dc32cc30edfaa5e9",
+      "packaged_sha256": "76b661eecf5cd2ea3ccf105d7c54719528097ecacdd173c40a2ca4eca96b5269",
+      "spoken_text": "先輩にだけ、聞いてほしいんです。",
+      "subtitle_templates": [
+        "只告诉前辈一个人。♡",
+        "先輩にだけ、聞いてほしいんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_13",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_13_9c2d0e5504ec",
+      "audio_file": "buyback_voice_ja_buyback_01_13_9c2d0e5504ec.ogg",
+      "source_sha256": "9c2d0e5504ec00e81c9dbadb06211f767e0c54d0b76a138ac80c905cbea79ae2",
+      "packaged_sha256": "6d2214722a870da963f2f5f0f74fe36c72968a6f66dd6291c19ae2d23b6e75da",
+      "spoken_text": "ねえ……先輩。",
+      "subtitle_templates": [
+        "呐……前辈。",
+        "ねえ……先輩。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_14",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_14_96e22ea1dd48",
+      "audio_file": "buyback_voice_ja_buyback_01_14_96e22ea1dd48.ogg",
+      "source_sha256": "96e22ea1dd4864b84b76e4f24442a22f22d6e9962ba5fe51c57c9722c0d1da16",
+      "packaged_sha256": "7e339ab257b54125ec61dc31f77f5713bbdd8c0b01f3d11529f9e12cad8c467a",
+      "spoken_text": "少しだけ、ドアを開けてくれませんか？",
+      "subtitle_templates": [
+        "可以开一下门吗？",
+        "少しだけ、ドアを開けてくれませんか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_15",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_15_5991794b5615",
+      "audio_file": "buyback_voice_ja_buyback_01_15_5991794b5615.ogg",
+      "source_sha256": "5991794b5615b87991e59b785266fa59008f3430d787b0e33c520433742a6540",
+      "packaged_sha256": "26c4c41300a6154209c5989d8cd75b728de5ad0c89a965d284597601964d52aa",
+      "spoken_text": "私、すごく勇気を出して来たんですよ……？",
+      "subtitle_templates": [
+        "人家可是鼓起了很大的勇气才来的哦……",
+        "私、すごく勇気を出して来たんですよ……？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_16",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_16_23734a8a8b98",
+      "audio_file": "buyback_voice_ja_buyback_01_16_23734a8a8b98.ogg",
+      "source_sha256": "23734a8a8b98be99e5ecd13a6a0282662ec777b4b2067b8e3509021c6c91c3ae",
+      "packaged_sha256": "966168e8b9b922cf32a5cad615d43dde2dfe5baea2ee602b785f0a96ef6d7b40",
+      "spoken_text": "……私ばっかり、恥ずかしいじゃないですか。",
+      "subtitle_templates": [
+        "……不要让我一个人害羞嘛。",
+        "……私ばっかり、恥ずかしいじゃないですか。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_17",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_17_85ecd99483bd",
+      "audio_file": "buyback_voice_ja_buyback_01_17_85ecd99483bd.ogg",
+      "source_sha256": "85ecd99483bd2a961ab894286017dd28bc3571875a59421e2fa271081fee6632",
+      "packaged_sha256": "94a5c117a793507f9756259503d4a587b41d6143aa0cf4aff94090cac4a726d2",
+      "spoken_text": "あ……本当に開けてくれた。",
+      "subtitle_templates": [
+        "啊……真的开门了。",
+        "あ……本当に開けてくれた。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_18",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_18_c65ab64f9038",
+      "audio_file": "buyback_voice_ja_buyback_01_18_c65ab64f9038.ogg",
+      "source_sha256": "c65ab64f90384a61c539ee8fd44ed6d80741e9cd968e3df050d15c33b8b328b9",
+      "packaged_sha256": "b5c77cd0141ccbfd6e0fac288313e10b0c525e29dad79cdc9fee0c5e49b087b8",
+      "spoken_text": "えへへ。先輩は、やっぱり優しいですね。",
+      "subtitle_templates": [
+        "嘿嘿，前辈还是这么温柔呢。",
+        "えへへ。先輩は、やっぱり優しいですね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_01_19",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_19_258697392d29",
+      "audio_file": "buyback_voice_ja_buyback_01_19_258697392d29.ogg",
+      "source_sha256": "258697392d2927574c6fbe330097a91396f0cf58198c181826573418d21c8f17",
+      "packaged_sha256": "1fa6c875f648bc885a86c8d7f7678a95afd73b29bf2c94720e6864c15ea3d17e",
+      "spoken_text": "ねえ、先輩。今日の私、きれいですか？",
+      "subtitle_templates": [
+        "呐，前辈，我今天美吗？",
+        "ねえ、先輩。今日の私、きれいですか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_01",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_01_35a8f00c33d9",
+      "audio_file": "buyback_voice_ja_buyback_02_01_35a8f00c33d9.ogg",
+      "source_sha256": "35a8f00c33d96f541db56b1cd0814df8b535e4918b39226173760468baceb00f",
+      "packaged_sha256": "c255859db6cc51607e199fe6adc5b6bd490cf03e0343e3794ba80075e134e45a",
+      "spoken_text": "……えへへ。",
+      "subtitle_templates": [
+        "……嘿嘿。",
+        "……えへへ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_02",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_02_05ea9068a782",
+      "audio_file": "buyback_voice_ja_buyback_02_02_05ea9068a782.ogg",
+      "source_sha256": "05ea9068a7827d228f2a2909d356603b5c19fdf6e3ec0607dbc63fd98d69988a",
+      "packaged_sha256": "d9b06624918713b1d1f998eb0e22701c6aa13981e93f6e215e0e61cc30b41d90",
+      "spoken_text": "先輩、どうして何も言ってくれないんですか？",
+      "subtitle_templates": [
+        "前辈怎么不说话呀？",
+        "先輩、どうして何も言ってくれないんですか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_03",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_03_725307b8628a",
+      "audio_file": "buyback_voice_ja_buyback_02_03_725307b8628a.ogg",
+      "source_sha256": "725307b8628ad2f866daa0d22b6d4804e034168b7b11f112016b8f6e48e9aad2",
+      "packaged_sha256": "e12181628568677bae772f83147b0a491a4eb6aa3ca4a3f7ede2bf485b04fde3",
+      "spoken_text": "実はね……出かける前、ずっと鏡を見ていたんです。",
+      "subtitle_templates": [
+        "其实呢……我今天出门之前，对着镜子看了好久。",
+        "実はね……出かける前、ずっと鏡を見ていたんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_04",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_04_b5e5e1c616fa",
+      "audio_file": "buyback_voice_ja_buyback_02_04_b5e5e1c616fa.ogg",
+      "source_sha256": "b5e5e1c616fa20c5de3b0451ff1b94f37fef838de7b21f8675ae67eeea97a165",
+      "packaged_sha256": "1f721a693f65f9c44971f2ee9d71927e34dcfad17301155b4bdb66daf0c883dd",
+      "spoken_text": "髪も、目も……いつもと同じはずなのに。",
+      "subtitle_templates": [
+        "头发也好，眼睛也好……明明都和平时一样。",
+        "髪も、目も……いつもと同じはずなのに。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_05",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_05_3cfcd2009aa7",
+      "audio_file": "buyback_voice_ja_buyback_02_05_3cfcd2009aa7.ogg",
+      "source_sha256": "3cfcd2009aa78418397c150d5399d9ea02ccbe726225ce4cfab6ae09777b706a",
+      "packaged_sha256": "1ac890f8fc11651da1cf29240de2879c42261b7704eeb27676962d41d65c1ad3",
+      "spoken_text": "見ているうちに、鏡の中の女の子が、知らない子みたいに思えてきて。",
+      "subtitle_templates": [
+        "可是看着看着，就觉得镜子里的那个女孩，好陌生呀。",
+        "見ているうちに、鏡の中の女の子が、知らない子みたいに思えてきて。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_06",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_06_51903acc9faf",
+      "audio_file": "buyback_voice_ja_buyback_02_06_51903acc9faf.ogg",
+      "source_sha256": "51903acc9faff54c9ccf9c51f5d7e9884d2f81c39238a5ebc64434d2b0b98386",
+      "packaged_sha256": "f6df67afa407618720f5589e05ac07b7864f09aa44ce517c1ab52a7b2a8a6225",
+      "spoken_text": "先輩にも……いつもの私と、少し違って見えますか？",
+      "subtitle_templates": [
+        "前辈……您也觉得我和平时不太一样了吗？",
+        "先輩にも……いつもの私と、少し違って見えますか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_07",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_07_9f64668694e0",
+      "audio_file": "buyback_voice_ja_buyback_02_07_9f64668694e0.ogg",
+      "source_sha256": "9f64668694e0f7ffea0885ef920ba1c96d37ed9094337f6718f86e916ecbb537",
+      "packaged_sha256": "0e14a1a71fea4e8e2e665773a2334cbfb44e6924e48771df83612475df38ea0a",
+      "spoken_text": "……あ、そうだ。",
+      "subtitle_templates": [
+        "……啊，对了。",
+        "……あ、そうだ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_08",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_08_2a26e1a75e07",
+      "audio_file": "buyback_voice_ja_buyback_02_08_2a26e1a75e07.ogg",
+      "source_sha256": "2a26e1a75e079d833ebf5aa9301c451997cc3587715129068bb0500fe2049cfc",
+      "packaged_sha256": "77fd4f1d5845c944181b89f9f0c4b369e7e3178f165141ed574e771af138edad",
+      "spoken_text": "私、今日はずっと笑ってるんです。",
+      "subtitle_templates": [
+        "我今天一直在笑呢。",
+        "私、今日はずっと笑ってるんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_09",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_09_deee30044200",
+      "audio_file": "buyback_voice_ja_buyback_02_09_deee30044200.ogg",
+      "source_sha256": "deee3004420041ae6c3bc85fadae137b2f420f4a3324c59e81c9390d3f310844",
+      "packaged_sha256": "0b2ca7019dbc94647fb6972fc26182189ccdf042f9c5752ca15d4737da5a46dc",
+      "spoken_text": "ちっとも、楽しくないのに。",
+      "subtitle_templates": [
+        "明明一点都不开心。",
+        "ちっとも、楽しくないのに。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_10",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_10_71ab4053f042",
+      "audio_file": "buyback_voice_ja_buyback_02_10_71ab4053f042.ogg",
+      "source_sha256": "71ab4053f042f72cd0d27534ff4f8786979b4808b9fe8de82a3b0b7b6189c9b9",
+      "packaged_sha256": "41d653f71a38f9a1cd5d578f12fced6383b4bf076546fac82538c53b35d751b7",
+      "spoken_text": "今日、お店を早めに閉めたんです。",
+      "subtitle_templates": [
+        "今天，我把酒馆提前关掉了。",
+        "今日、お店を早めに閉めたんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_11",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_11_c283274714b6",
+      "audio_file": "buyback_voice_ja_buyback_02_11_c283274714b6.ogg",
+      "source_sha256": "c283274714b66f2ac2ab40eaddeabdfe1bfa1712d48eaa849d3a3bfd8eef2298",
+      "packaged_sha256": "0c95b59b0edeab29ce3725faeb2282fa9fa037f78f2c9681149ca4256ddeae57",
+      "spoken_text": "お酒を飲んだお客さんが、何人か、おかしくなっちゃって。",
+      "subtitle_templates": [
+        "有几位客人喝了酒以后，变得好奇怪。",
+        "お酒を飲んだお客さんが、何人か、おかしくなっちゃって。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_12",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_12_be81323e1535",
+      "audio_file": "buyback_voice_ja_buyback_02_12_be81323e1535.ogg",
+      "source_sha256": "be81323e1535950b55d31f9d7bfb1aeef318f0837e74e7bda9e5334e0bac18a5",
+      "packaged_sha256": "7744045e8d877cf0cb9d7adb5cf013c47a59583d13b7f3c83e2c87cfedeab0ef",
+      "spoken_text": "さっきのお酒、まだないのかって……そればっかり聞くんです。",
+      "subtitle_templates": [
+        "一个劲儿地问我，还有没有刚才那种酒……",
+        "さっきのお酒、まだないのかって……そればっかり聞くんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_13",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_13_c7ea5ad6a1ce",
+      "audio_file": "buyback_voice_ja_buyback_02_13_c7ea5ad6a1ce.ogg",
+      "source_sha256": "c7ea5ad6a1ce828e6dda6da2b0b1e86eb862c5f570aa0e29f89433abad4df540",
+      "packaged_sha256": "f323ba612fd4fb4102b720c98cbc380a13dce6aaf83c17b50707ab8b1636d7ac",
+      "spoken_text": "最初は、私のお酒がそんなにおいしかったのかなって思ってました。",
+      "subtitle_templates": [
+        "刚开始，我还以为是自己调得太好喝了呢。",
+        "最初は、私のお酒がそんなにおいしかったのかなって思ってました。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_14",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_14_7a98dfdd8e88",
+      "audio_file": "buyback_voice_ja_buyback_02_14_7a98dfdd8e88.ogg",
+      "source_sha256": "7a98dfdd8e886fa178505bd9995106065d59346c0ba693942ab57379ef4f6729",
+      "packaged_sha256": "4d6a0774e2bbb49fcd41eb501d34ffe577a62d0269b00cc53f1fff2ea8388cc3",
+      "spoken_text": "それから、ベースのお酒を替えて、シロップも替えてみました。",
+      "subtitle_templates": [
+        "后来，我试着换了基酒，又换了糖浆。",
+        "それから、ベースのお酒を替えて、シロップも替えてみました。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_15",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_15_b91c46cdf81b",
+      "audio_file": "buyback_voice_ja_buyback_02_15_b91c46cdf81b.ogg",
+      "source_sha256": "b91c46cdf81ba34586f93e3e65dc66afedbe966589365e3ddf49f0721331a3f1",
+      "packaged_sha256": "1b5c45945232fbab5c69cba73a8bf0f6279302fd9f7450dd59358b908218107f",
+      "spoken_text": "グラスまで替えたんですよ。",
+      "subtitle_templates": [
+        "连杯子都换过了。",
+        "グラスまで替えたんですよ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_16",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_16_7241186af5eb",
+      "audio_file": "buyback_voice_ja_buyback_02_16_7241186af5eb.ogg",
+      "source_sha256": "7241186af5eb62d1f7bf263ded3361a5e728e30380de37d5519f5c9ea27b2c5e",
+      "packaged_sha256": "93588b1e1e2e3503990f2072b65c68c73785bc8270f4bec9840944692647e15f",
+      "spoken_text": "それで、やっと分かったんです……。",
+      "subtitle_templates": [
+        "最后才发现……",
+        "それで、やっと分かったんです……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_17",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_17_183a4be35e79",
+      "audio_file": "buyback_voice_ja_buyback_02_17_183a4be35e79.ogg",
+      "source_sha256": "183a4be35e79ad5a95083fb78e80e553c9e61d40df2fb0f4ee1567a0c923d5a7",
+      "packaged_sha256": "977980152ccdc3aea7c5911ef992ef70b2794da1a213efea88dedb58041de7c6",
+      "spoken_text": "……お水だったんですね。",
+      "subtitle_templates": [
+        "……原来是水呀。",
+        "……お水だったんですね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_18",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_18_97cc59ebcf0c",
+      "audio_file": "buyback_voice_ja_buyback_02_18_97cc59ebcf0c.ogg",
+      "source_sha256": "97cc59ebcf0c014ad027ea465c2384a1dd0ad37981cf1315e7b3106f04dc0a6d",
+      "packaged_sha256": "def95d6b7ba147993fc1851b890bbff829c6723972229b17846e2824a307e304",
+      "spoken_text": "先輩、知ってますか？",
+      "subtitle_templates": [
+        "前辈知道吗？",
+        "先輩、知ってますか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_19",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_19_92d86b29daad",
+      "audio_file": "buyback_voice_ja_buyback_02_19_92d86b29daad.ogg",
+      "source_sha256": "92d86b29daad72f216f1bd436cc7b89e9c2d11145c0cec5b79d74157ce07ea81",
+      "packaged_sha256": "adfdfcdc9e912c295c5df1dd1bc065cd000ac482c11670bf5c1fc305050e8b6c",
+      "spoken_text": "私、バーテンダーなんですよ。",
+      "subtitle_templates": [
+        "我可是调酒师哦。",
+        "私、バーテンダーなんですよ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_20",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_20_5f5409ed1628",
+      "audio_file": "buyback_voice_ja_buyback_02_20_5f5409ed1628.ogg",
+      "source_sha256": "5f5409ed162833d0328eedf8018d4ff703de16f21c84e0aed1a9ec159c25df42",
+      "packaged_sha256": "c7707bbb2b9defff1375dfaa46cf3b0c777735030e9beb0c0fb220232ec7f6c3",
+      "spoken_text": "ほんの少し味が違うだけでも、ちゃんと分かるんです。",
+      "subtitle_templates": [
+        "哪怕只差一点点味道，我也能尝出来的。",
+        "ほんの少し味が違うだけでも、ちゃんと分かるんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_21",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_21_3d50ba45d5a3",
+      "audio_file": "buyback_voice_ja_buyback_02_21_3d50ba45d5a3.ogg",
+      "source_sha256": "3d50ba45d5a333a3dcd119195ad70f4ba8f56f730c75ea6e6466b6f8c84a468e",
+      "packaged_sha256": "a06c93fcdb359db22189c6ac87744cda8206c29f6cead1ba91e4b19a4ebb2bb1",
+      "spoken_text": "なのに……。",
+      "subtitle_templates": [
+        "可是……",
+        "なのに……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_22",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_22_2ddf59bf0f79",
+      "audio_file": "buyback_voice_ja_buyback_02_22_2ddf59bf0f79.ogg",
+      "source_sha256": "2ddf59bf0f79dc4726859b6e750ffa06a7ae8929ca28508ad2c9a42e7b1f1585",
+      "packaged_sha256": "a68ac134d62dcb8d047e7694d34b4e333f59d4a7b3bc4bdc9abc028183812741",
+      "spoken_text": "おかしいって、分かってるのに……。",
+      "subtitle_templates": [
+        "明明知道不对劲……",
+        "おかしいって、分かってるのに……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_23",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_23_ce42ab7c43b7",
+      "audio_file": "buyback_voice_ja_buyback_02_23_ce42ab7c43b7.ogg",
+      "source_sha256": "ce42ab7c43b7ad403035db0ebb4d4e046c0a232aa861ee1ce6fd57eff484d9d6",
+      "packaged_sha256": "2180e232a4de567de5f77f0aaecc5b9c90668c5c380459dc38970ffadc4355be",
+      "spoken_text": "それでも、もう少し飲みたくなっちゃうんです。",
+      "subtitle_templates": [
+        "却还是忍不住想再喝一点。",
+        "それでも、もう少し飲みたくなっちゃうんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_24",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_24_3e68119a4217",
+      "audio_file": "buyback_voice_ja_buyback_02_24_3e68119a4217.wav",
+      "source_sha256": "3e68119a4217ead6e4c337da1a93e3e1c415ec75fcf52e63e0c31e7201fe0700",
+      "packaged_sha256": "3e68119a4217ead6e4c337da1a93e3e1c415ec75fcf52e63e0c31e7201fe0700",
+      "spoken_text": "ふふ……。",
+      "subtitle_templates": [
+        "呵呵……",
+        "ふふ……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_25",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_25_c66757f8347d",
+      "audio_file": "buyback_voice_ja_buyback_02_25_c66757f8347d.ogg",
+      "source_sha256": "c66757f8347dc444e5660fd39642650cda2beec5704628795aeb204128071dab",
+      "packaged_sha256": "a8342360f31820faa059d3a4828fe36c436027ff3628d996322a4cd5c99bede3",
+      "spoken_text": "おかしいですよね？",
+      "subtitle_templates": [
+        "是不是很可笑呀？",
+        "おかしいですよね？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_26",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_26_784ab447575f",
+      "audio_file": "buyback_voice_ja_buyback_02_26_784ab447575f.ogg",
+      "source_sha256": "784ab447575f778ec136ccd57b75c28efcd35c81defaa9371915ba86ea5e4ad4",
+      "packaged_sha256": "873d32a6836b9e16191fbbb3622a271e476dba3ad7192f954096b7ffcf901d82",
+      "spoken_text": "残っていたお水、全部飲んじゃいました。",
+      "subtitle_templates": [
+        "我把剩下的水都喝完了",
+        "残っていたお水、全部飲んじゃいました。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_27",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_27_0c432f08e4d2",
+      "audio_file": "buyback_voice_ja_buyback_02_27_0c432f08e4d2.ogg",
+      "source_sha256": "0c432f08e4d292d38bd5646c4f773c16d0b90c7d13eef52e56630d0c0b14e04b",
+      "packaged_sha256": "9bdf580baa1fb1a6b786a8c13ec945dba4f5c95cf716b2433e34cb7df9995695",
+      "spoken_text": "そういえば……。",
+      "subtitle_templates": [
+        "说起来……",
+        "そういえば……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_28",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_28_f9583ae7541d",
+      "audio_file": "buyback_voice_ja_buyback_02_28_f9583ae7541d.ogg",
+      "source_sha256": "f9583ae7541dd05b46c6f52f22801b4b407c229ae0d2d616912277561e7bf620",
+      "packaged_sha256": "973f51b95101f8daece11899a79d7cf32b8f1d03a4093c7156cdb25ecae24336",
+      "spoken_text": "先輩、覚えてますか？",
+      "subtitle_templates": [
+        "前辈还记得吗？",
+        "先輩、覚えてますか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_29",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_29_b9d5a76a7bc7",
+      "audio_file": "buyback_voice_ja_buyback_02_29_b9d5a76a7bc7.ogg",
+      "source_sha256": "b9d5a76a7bc7738f084575efd0941248858e75da721b853aa5a0a083f60659c7",
+      "packaged_sha256": "762fd8dcc81d9accdbebfc6f13045274bc7e0939f3201dc4cf3d3a533d00be50",
+      "spoken_text": "私、ここで、あのお水を二回買ったんですよ。",
+      "subtitle_templates": [
+        "我在您这里，买过两次那种水呢。",
+        "私、ここで、あのお水を二回買ったんですよ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_30",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_30_4b844fd68163",
+      "audio_file": "buyback_voice_ja_buyback_02_30_4b844fd68163.ogg",
+      "source_sha256": "4b844fd6816308dc28e5bfc95990b90a8c916c3fabc8dc090692bbfac9c12247",
+      "packaged_sha256": "bd6313eef13a1d10ba75aec711ad28878401884a16fcdca8d117ed6223c1d209",
+      "spoken_text": "えへへ……いい商売でしたね。",
+      "subtitle_templates": [
+        "嘿嘿……真是一笔好生意呢。",
+        "えへへ……いい商売でしたね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_31",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_31_67a81f331539",
+      "audio_file": "buyback_voice_ja_buyback_02_31_67a81f331539.ogg",
+      "source_sha256": "67a81f331539bce370000fbb7d7301739708bc896caac369aab04a4d9212d252",
+      "packaged_sha256": "9b2bb718be13b5235d83d0149c7ac85fa8f3b5b7f8ded414859e6361a65ce202",
+      "spoken_text": "……あれ？",
+      "subtitle_templates": [
+        "……咦？",
+        "……あれ？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_32",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_32_517e9aec3ff4",
+      "audio_file": "buyback_voice_ja_buyback_02_32_517e9aec3ff4.ogg",
+      "source_sha256": "517e9aec3ff47924dd72703000fb8ac7b2e896d5ad13118dc86a0afee70b4ca6",
+      "packaged_sha256": "a009826aefc55e5ddec14d6b484950537d96782d6ce36d55b241071f6949b04a",
+      "spoken_text": "先輩、どうして後ろに下がるんですか？",
+      "subtitle_templates": [
+        "前辈，为什么要往后退呀？",
+        "先輩、どうして後ろに下がるんですか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_33",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_33_22d71deca145",
+      "audio_file": "buyback_voice_ja_buyback_02_33_22d71deca145.ogg",
+      "source_sha256": "22d71deca145f8f08c43321b33a68341f37c3ab1c783cbf5c2377a6ad4b13ec9",
+      "packaged_sha256": "0b61aaff5c569c901cee62f801b172d3ca06be869b0c643e06b8ca3e8e5ba9bc",
+      "spoken_text": "私、まだ何もしてませんよ。",
+      "subtitle_templates": [
+        "我还什么都没做呢。",
+        "私、まだ何もしてませんよ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_34",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_34_cdb56b91fc3e",
+      "audio_file": "buyback_voice_ja_buyback_02_34_cdb56b91fc3e.ogg",
+      "source_sha256": "cdb56b91fc3e7af82d29dd4865d0f2cca0ddd9d9ba419cb8c77f642a0a9a41bd",
+      "packaged_sha256": "94fd2a3df0be1de7ff0485c9153268f39e0b5df5ae63447409484e48edf7ea53",
+      "spoken_text": "ねえ、先輩。",
+      "subtitle_templates": [
+        "呐，前辈。",
+        "ねえ、先輩。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_35",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_35_5bc7325c8845",
+      "audio_file": "buyback_voice_ja_buyback_02_35_5bc7325c8845.ogg",
+      "source_sha256": "5bc7325c884547586d2f6ce286c1d76caf7a0d4d01440fe91625d4820f187e18",
+      "packaged_sha256": "5bdc28b12fbd47e382dcc821ffb34bdb0f0ec9d6ead024298d42938705289f0d",
+      "spoken_text": "さっき、言いましたよね？",
+      "subtitle_templates": [
+        "刚才不是说了吗？",
+        "さっき、言いましたよね？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_36",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_36_ba2a5f3bbac3",
+      "audio_file": "buyback_voice_ja_buyback_02_36_ba2a5f3bbac3.ogg",
+      "source_sha256": "ba2a5f3bbac3314d6ae6ed1a45ee4eb6e02106a970aa953b5bad688834314953",
+      "packaged_sha256": "d832925e6bd8f237aa7a23a0d4f097966ce10c6eae95ed3e955b804c2510c635",
+      "spoken_text": "大事な話があるって……。",
+      "subtitle_templates": [
+        "有很重要的话……",
+        "大事な話があるって……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_37",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_01_12_a3a17bcd7304",
+      "audio_file": "buyback_voice_ja_buyback_01_12_a3a17bcd7304.ogg",
+      "source_sha256": "a3a17bcd73041e84e6e8c5e4a9108a98e1a9a1a4da16b280dc32cc30edfaa5e9",
+      "packaged_sha256": "76b661eecf5cd2ea3ccf105d7c54719528097ecacdd173c40a2ca4eca96b5269",
+      "spoken_text": "先輩にだけ、聞いてほしいんです。",
+      "subtitle_templates": [
+        "只想告诉您一个人。",
+        "先輩にだけ、聞いてほしいんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_38",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_38_7dcb68bdae0f",
+      "audio_file": "buyback_voice_ja_buyback_02_38_7dcb68bdae0f.ogg",
+      "source_sha256": "7dcb68bdae0fed2d052ae19af32dd5a85d139507007e761033f2614427ab339c",
+      "packaged_sha256": "2b38968886d1522361c5dda6488fb9b05475400bf0f4eae33b566835ee8ea84e",
+      "spoken_text": "だから……。",
+      "subtitle_templates": [
+        "所以……",
+        "だから……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_02_39",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_39_7b2e1fec0216",
+      "audio_file": "buyback_voice_ja_buyback_02_39_7b2e1fec0216.ogg",
+      "source_sha256": "7b2e1fec02166a6e2504b47359f2733f0375517dcf4944848db1218da5303821",
+      "packaged_sha256": "8f022fa223b044cb1791f3d9960d747ea6e7fe66915cbe38948736740d28a8b3",
+      "spoken_text": "最後まで、ちゃんと聞いてくれますよね？",
+      "subtitle_templates": [
+        "请好好听我说完，好不好？♡",
+        "最後まで、ちゃんと聞いてくれますよね？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_01",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_01_5488301e8970",
+      "audio_file": "buyback_voice_ja_buyback_03_01_5488301e8970.ogg",
+      "source_sha256": "5488301e897089ae57735178789cb6bd5c758fa6813e6f384543ca1555f13421",
+      "packaged_sha256": "0ab1d9093b6fe8ecb220e913e78ee992ea430de9f48329bd208b111d2339fac4",
+      "spoken_text": "先輩……。",
+      "subtitle_templates": [
+        "前辈……",
+        "先輩……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_02",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_02_576c0f5f0a1a",
+      "audio_file": "buyback_voice_ja_buyback_03_02_576c0f5f0a1a.ogg",
+      "source_sha256": "576c0f5f0a1ae72ac12f720c80b1c81d26c5a4ae16a13851e153556480f7d009",
+      "packaged_sha256": "4f84bc59bffd6e939698b74add1eaa15296a202740122e4b2719fa7966a37146",
+      "spoken_text": "知ってますか？",
+      "subtitle_templates": [
+        "您知道吗？",
+        "知ってますか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_03",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_03_a6b6fe842172",
+      "audio_file": "buyback_voice_ja_buyback_03_03_a6b6fe842172.ogg",
+      "source_sha256": "a6b6fe842172aee1e1711d12158465653dd5b7829b21dc44a9b29d6c44dde814",
+      "packaged_sha256": "ddf3d0485491f5a087c46be4562587711fa908d75cb6549dc87c4379990c34f9",
+      "spoken_text": "先輩は、本当に商売上手なんだなって、ずっと思ってたんです。",
+      "subtitle_templates": [
+        "我一直觉得，前辈是个很厉害的生意人呢。",
+        "先輩は、本当に商売上手なんだなって、ずっと思ってたんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_04",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_04_4c53127c4f00",
+      "audio_file": "buyback_voice_ja_buyback_03_04_4c53127c4f00.ogg",
+      "source_sha256": "4c53127c4f008271f01a1a6dc7289d864e8915e8bbfdb44496e12d33b1415db8",
+      "packaged_sha256": "71711eda164ef4aa1059130eec8b7b400cbb48c53a68e4b8783e3da437c1a0e9",
+      "spoken_text": "あんな、普通のお水なのに……。",
+      "subtitle_templates": [
+        "明明是那么普通的水……",
+        "あんな、普通のお水なのに……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_05",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_05_abc442f3d891",
+      "audio_file": "buyback_voice_ja_buyback_03_05_abc442f3d891.ogg",
+      "source_sha256": "abc442f3d891a4bdf40ece450259ecf5af6c6b82707d3555e356df0fdbdbd587",
+      "packaged_sha256": "aa9fd706f07f1064e0f0a819ba219392cf56d289028f7adea8765734fb544d2d",
+      "spoken_text": "一度飲んだら、二度と忘れられなくなるんですもん。",
+      "subtitle_templates": [
+        "却能让客人喝过一次，就再也忘不掉。",
+        "一度飲んだら、二度と忘れられなくなるんですもん。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_06",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_06_50167e64facf",
+      "audio_file": "buyback_voice_ja_buyback_03_06_50167e64facf.ogg",
+      "source_sha256": "50167e64facf4f15c810711378cc78338dd3dbab57933baa32e253c335308e4f",
+      "packaged_sha256": "e6770b7a2aea5aca22b64a0a5c80576ec1c05e0da720030a06dea2a8dd0acbb4",
+      "spoken_text": "えへへ……うらやましいな。",
+      "subtitle_templates": [
+        "嘿嘿……真羡慕呀。",
+        "えへへ……うらやましいな。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_07",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_07_15370115b7a5",
+      "audio_file": "buyback_voice_ja_buyback_03_07_15370115b7a5.ogg",
+      "source_sha256": "15370115b7a5835b2b60aff4fc15e3c5954bd2116a532ef4419bc227befd0a9d",
+      "packaged_sha256": "7a57d417781b582868a9c3133e9ec4cc373cfdb50da67e8d495986b81859c74f",
+      "spoken_text": "私のお店も、そうなれたらよかったのに。",
+      "subtitle_templates": [
+        "我的酒馆要是也能这样就好了。",
+        "私のお店も、そうなれたらよかったのに。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_08",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_08_93d9a46b2890",
+      "audio_file": "buyback_voice_ja_buyback_03_08_93d9a46b2890.ogg",
+      "source_sha256": "93d9a46b2890552e88d2052cb3d41d4bd57d08f68db2e1780bfac78b7bd62838",
+      "packaged_sha256": "ca9af58a7abdc81f3c5febd18dc35271b738443934e7a894f00f93684cb4edca",
+      "spoken_text": "先輩、知ってますか……？",
+      "subtitle_templates": [
+        "前辈，您知道吗？",
+        "先輩、知ってますか……？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_09",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_09_c4ff839fd189",
+      "audio_file": "buyback_voice_ja_buyback_03_09_c4ff839fd189.ogg",
+      "source_sha256": "c4ff839fd189c6814d2482b3e3f23c48bb9b7bec6a4ee37a4ac65b0af11c850e",
+      "packaged_sha256": "abc071634f081b11cf3b2b70b80cf73ad3c8457d14d76ef6cf46b186e374b5eb",
+      "spoken_text": "お客さんの好きなお酒を作れたときが、一番うれしかったんです。",
+      "subtitle_templates": [
+        "以前我最开心的，就是调出客人喜欢的酒。",
+        "お客さんの好きなお酒を作れたときが、一番うれしかったんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_10",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_10_2a2e415be4b0",
+      "audio_file": "buyback_voice_ja_buyback_03_10_2a2e415be4b0.ogg",
+      "source_sha256": "2a2e415be4b0dbe83cd0947e0f84b2d45504683b4526424e47375634508b5f90",
+      "packaged_sha256": "9a227295869fbd62829bd95bfce4f1cb866f57e80d65f1d4980765aa78a151ab",
+      "spoken_text": "おいしいお酒を作りたくて……。",
+      "subtitle_templates": [
+        "想调出很好喝的酒……",
+        "おいしいお酒を作りたくて……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_11",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_11_cd67dee1bc4f",
+      "audio_file": "buyback_voice_ja_buyback_03_11_cd67dee1bc4f.ogg",
+      "source_sha256": "cd67dee1bc4f00375122350ef5d56ef71087edf12a31fc8b380984e019dc00a5",
+      "packaged_sha256": "5b6727e4277fae4e26fa09713a5872f0d1cde33c8b7b402bed441860a2820c00",
+      "spoken_text": "また来るねって、言ってほしくて……。",
+      "subtitle_templates": [
+        "想听客人说，下次还会再来……",
+        "また来るねって、言ってほしくて……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_12",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_12_26f3eb47fabb",
+      "audio_file": "buyback_voice_ja_buyback_03_12_26f3eb47fabb.ogg",
+      "source_sha256": "26f3eb47fabb49bfa3629d11952d2fb65fd234e1a8838293cf92405e9a1202ab",
+      "packaged_sha256": "6f5505ee5d539df3780eb6eda00791e7b24d2d9085ddb1b5111795b2e4fd5782",
+      "spoken_text": "私、あのお店が……あんなに好きだったのに。",
+      "subtitle_templates": [
+        "我明明……那么喜欢那间店的。",
+        "私、あのお店が……あんなに好きだったのに。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_13",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_13_da2746addef0",
+      "audio_file": "buyback_voice_ja_buyback_03_13_da2746addef0.ogg",
+      "source_sha256": "da2746addef00fabbe98a0bf75a9563a272ffd722a7e7c6a22ee122efdb008b8",
+      "packaged_sha256": "90b3b98339dfedae4f140758362492aa6af9699fa67e21595e9f5492aa609b3f",
+      "spoken_text": "でも、もう……諦めました。",
+      "subtitle_templates": [
+        "可现在……我已经放弃了。",
+        "でも、もう……諦めました。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_14",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_14_f4a485ee73aa",
+      "audio_file": "buyback_voice_ja_buyback_03_14_f4a485ee73aa.ogg",
+      "source_sha256": "f4a485ee73aa7a1737528a8a6e845d62f107fd2cb9aa31f3bde07f2d489c0bb7",
+      "packaged_sha256": "86d384d3b4862453b89afbaf351b331d669dd51753ff763a20570d6c1bddc5a3",
+      "spoken_text": "ずっと、考えてたんです。",
+      "subtitle_templates": [
+        "我一直在想。",
+        "ずっと、考えてたんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_15",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_15_721413f6c5b3",
+      "audio_file": "buyback_voice_ja_buyback_03_15_721413f6c5b3.ogg",
+      "source_sha256": "721413f6c5b3d1ede851c6db9ad788186274f1b92bffa12c534012ab4345bd06",
+      "packaged_sha256": "f925f9fc370831ef1c3f710c650c2d32ad19b7863ac7378e211c92ccbcd16391",
+      "spoken_text": "自分のことも、分からなくなってきちゃった。",
+      "subtitle_templates": [
+        "我连自己都快认不出来了。",
+        "自分のことも、分からなくなってきちゃった。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_16",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_16_ca92f54a84ad",
+      "audio_file": "buyback_voice_ja_buyback_03_16_ca92f54a84ad.wav",
+      "source_sha256": "ca92f54a84adbf696e96bff15c70585247ff58cbc6a45b60398b6bd1264ccb5f",
+      "packaged_sha256": "ca92f54a84adbf696e96bff15c70585247ff58cbc6a45b60398b6bd1264ccb5f",
+      "spoken_text": "なんで……。",
+      "subtitle_templates": [
+        "凭什么……",
+        "なんで……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_17",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_17_729584631c7e",
+      "audio_file": "buyback_voice_ja_buyback_03_17_729584631c7e.ogg",
+      "source_sha256": "729584631c7e7c85603c1cee162e4c7e9fd9b535d63322ceed5e0ac2e11932ce",
+      "packaged_sha256": "943c2a754c160b7f852a114527dadaf60278b6741021fafddb5628511ce8cb27",
+      "spoken_text": "なんで先輩は、何もなかったみたいに……。",
+      "subtitle_templates": [
+        "凭什么前辈还能像什么都没发生过一样……",
+        "なんで先輩は、何もなかったみたいに……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_18",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_18_fcb386b631ef",
+      "audio_file": "buyback_voice_ja_buyback_03_18_fcb386b631ef.ogg",
+      "source_sha256": "fcb386b631ef95c3e775e8a0e0773ceccb5a592d13e1acd576397332ecd7ee3a",
+      "packaged_sha256": "7c55d0142bcdd5121067c4eed54e3e44694000de6e69260578b8164208e26208",
+      "spoken_text": "そんなところから、私を見てるんですか？",
+      "subtitle_templates": [
+        "站在那里看着我呀？",
+        "そんなところから、私を見てるんですか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_19",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_19_0ae292099f62",
+      "audio_file": "buyback_voice_ja_buyback_03_19_0ae292099f62.ogg",
+      "source_sha256": "0ae292099f62f100585bccd9e2f0574f951801a00a8c4d407dc4f9c085de8a72",
+      "packaged_sha256": "2b321ae9b16e1f67267e3314610fa15d6f442128fa61ec21610e9109dd7cdd7f",
+      "spoken_text": "……ずるいですよ。",
+      "subtitle_templates": [
+        "……不公平呀。",
+        "……ずるいですよ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_20",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_20_9a60640c8764",
+      "audio_file": "buyback_voice_ja_buyback_03_20_9a60640c8764.ogg",
+      "source_sha256": "9a60640c87640b84d98a0948fcfabd5aacadc14cf7e851dbc56b9c130071caf9",
+      "packaged_sha256": "810f6aa732c3a0c812199bb23d1b22871494281cba077de29343fd0e68ee91ef",
+      "spoken_text": "どうして、私が……。",
+      "subtitle_templates": [
+        "为什么是我……",
+        "どうして、私が……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_21",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_21_8a2cfdcddefc",
+      "audio_file": "buyback_voice_ja_buyback_03_21_8a2cfdcddefc.ogg",
+      "source_sha256": "8a2cfdcddefcf5403dbe38d0a361938f797f5d1ebe8c82ac8979d6f3ceade7ce",
+      "packaged_sha256": "91498bb1522f75c09d4438d19f69d2d4e3f2bc0824276525f55ec65cecba65c6",
+      "spoken_text": "……あ。",
+      "subtitle_templates": [
+        "……啊。",
+        "……あ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_22",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_27_0c432f08e4d2",
+      "audio_file": "buyback_voice_ja_buyback_02_27_0c432f08e4d2.ogg",
+      "source_sha256": "0c432f08e4d292d38bd5646c4f773c16d0b90c7d13eef52e56630d0c0b14e04b",
+      "packaged_sha256": "9bdf580baa1fb1a6b786a8c13ec945dba4f5c95cf716b2433e34cb7df9995695",
+      "spoken_text": "そういえば……。",
+      "subtitle_templates": [
+        "说起来……",
+        "そういえば……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_23",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_23_c1917035a357",
+      "audio_file": "buyback_voice_ja_buyback_03_23_c1917035a357.ogg",
+      "source_sha256": "c1917035a3573881ecf99e78804351a4f61ff6ef33cfe97bfa60503d18321066",
+      "packaged_sha256": "867ba444998c086648a103d60e3f10eb3e902607069cd2351ce825c0c77354bf",
+      "spoken_text": "先輩、まだ答えてくれてませんよね。",
+      "subtitle_templates": [
+        "前辈刚才还没回答我呢。",
+        "先輩、まだ答えてくれてませんよね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_24",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_24_5f02e997b448",
+      "audio_file": "buyback_voice_ja_buyback_03_24_5f02e997b448.ogg",
+      "source_sha256": "5f02e997b448712031f4e260fdff2c875c8bf1511974024bc3dd8d2ff11e30a5",
+      "packaged_sha256": "f2fa8581db0a95d6efd82481d02be8fda9aeb2bb8894c3be973c4d9a9d0d2703",
+      "spoken_text": "今日の私……。",
+      "subtitle_templates": [
+        "今天的我……",
+        "今日の私……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_25",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_25_b6f362672182",
+      "audio_file": "buyback_voice_ja_buyback_03_25_b6f362672182.ogg",
+      "source_sha256": "b6f3626721828a2c14cc9ad3ef7319ba6038cdd526c3f2e390a2cf77d537b111",
+      "packaged_sha256": "0d82cae23de3fe95b8d81c48367e5901048393d1b9d561292ce5c733c285fc5d",
+      "spoken_text": "きれいですか？",
+      "subtitle_templates": [
+        "漂亮吗？",
+        "きれいですか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_26",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_02_01_35a8f00c33d9",
+      "audio_file": "buyback_voice_ja_buyback_02_01_35a8f00c33d9.ogg",
+      "source_sha256": "35a8f00c33d96f541db56b1cd0814df8b535e4918b39226173760468baceb00f",
+      "packaged_sha256": "c255859db6cc51607e199fe6adc5b6bd490cf03e0343e3794ba80075e134e45a",
+      "spoken_text": "……えへへ。",
+      "subtitle_templates": [
+        "……嘿嘿。",
+        "……えへへ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_27",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_27_d172156efa72",
+      "audio_file": "buyback_voice_ja_buyback_03_27_d172156efa72.ogg",
+      "source_sha256": "d172156efa7234f4dea39de86aa87d41950154ba087ffe619361bbd373c7ce5e",
+      "packaged_sha256": "71c43fcb4fc43cfac3647c1949e8488c4ef81b36aa05a17895a7ad7e97f1b45b",
+      "spoken_text": "もう、いいです。",
+      "subtitle_templates": [
+        "算啦。",
+        "もう、いいです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_28",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_28_ed7402fa777a",
+      "audio_file": "buyback_voice_ja_buyback_03_28_ed7402fa777a.ogg",
+      "source_sha256": "ed7402fa777a907f8fd15be5263efad4496517ad89ef96db7d7bcf09a18c0bf7",
+      "packaged_sha256": "4d12f21b9d4973e2d62d37d89d3a074012dfcd658338434eba2d9d724401b8ed",
+      "spoken_text": "どうせ……。",
+      "subtitle_templates": [
+        "反正……",
+        "どうせ……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_29",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_29_782848ff862c",
+      "audio_file": "buyback_voice_ja_buyback_03_29_782848ff862c.ogg",
+      "source_sha256": "782848ff862c3d84534d370bc28e6ed8fb2484d344a1601de1b703a293a2c474",
+      "packaged_sha256": "6d1c0b1a7c4c6b3d4dc8323cbdabef8ce96c1ef6cd538fd1be2b8443469dc429",
+      "spoken_text": "先輩には、もう答える機会なんてないんですから。",
+      "subtitle_templates": [
+        "前辈也没有机会说了。",
+        "先輩には、もう答える機会なんてないんですから。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_30",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_30_bcc4d9ade68c",
+      "audio_file": "buyback_voice_ja_buyback_03_30_bcc4d9ade68c.ogg",
+      "source_sha256": "bcc4d9ade68c72bab8427eaa551cd606b0c746d7981e33058a83ed0650808c0e",
+      "packaged_sha256": "eca4bca241995c7317d67838c1c2deb4fdfa2f7fdea214d86edb41d0dd811d30",
+      "spoken_text": "返して……返してよ……！",
+      "subtitle_templates": [
+        "还给我……还给我啊……！",
+        "返して……返してよ……！"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_31",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_31_040368020f47",
+      "audio_file": "buyback_voice_ja_buyback_03_31_040368020f47.ogg",
+      "source_sha256": "040368020f478e93915cc1a2030ff83a648a8aac48c45e18f2c2eff0d5e08406",
+      "packaged_sha256": "6e6010ece7c2362d84acc4e5494ef0b81c9f58ec12e90b76787693e80e75ac6a",
+      "spoken_text": "私の人生……返せよ……！！",
+      "subtitle_templates": [
+        "我的人生……还给我……！！",
+        "私の人生……返せよ……！！"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_03_32",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_32_5172dcfaff1c",
+      "audio_file": "buyback_voice_ja_buyback_03_32_5172dcfaff1c.ogg",
+      "source_sha256": "5172dcfaff1c95ab25ccefef249ead5440de9ef2f7cf67951f3d72037dbaac2c",
+      "packaged_sha256": "0d64ccf245d7f38c419c43c62913c2f62e9b8b562822e131d50ebc2000e2bfe2",
+      "spoken_text": "返せよおお！！！！",
+      "subtitle_templates": [
+        "还给我啊——！！！",
+        "返せよおお！！！！"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_01",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_01_89767f3743cf",
+      "audio_file": "buyback_voice_ja_buyback_04_01_89767f3743cf.ogg",
+      "source_sha256": "89767f3743cf2828a8646fd776666dead2883c4b76de15e97ad54a264c10a06c",
+      "packaged_sha256": "f40022e1b3ee9c4f6f5978929a07e96eaaadced0c13a1b4e144e4f0d6d596f60",
+      "spoken_text": "……先輩？",
+      "subtitle_templates": [
+        "……前辈？",
+        "……先輩？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_02",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_02_896a724c341c",
+      "audio_file": "buyback_voice_ja_buyback_04_02_896a724c341c.ogg",
+      "source_sha256": "896a724c341cd6e379a037a7d6f1f31682cc6469d6a08edcf86e80de5911e856",
+      "packaged_sha256": "65500b21b6789a4657a4cb6cb6d02b345e9af5fc361b54db040e4784b0747732",
+      "spoken_text": "まだ、聞こえてますか？",
+      "subtitle_templates": [
+        "还听得见吗？",
+        "まだ、聞こえてますか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_03",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_03_326f4bc766d5",
+      "audio_file": "buyback_voice_ja_buyback_04_03_326f4bc766d5.wav",
+      "source_sha256": "326f4bc766d5f4357113a8bbe434fb0598560b2abc5dd1dff5706b762ce1d157",
+      "packaged_sha256": "326f4bc766d5f4357113a8bbe434fb0598560b2abc5dd1dff5706b762ce1d157",
+      "spoken_text": "えへへ……よかった。",
+      "subtitle_templates": [
+        "嘿嘿……太好了。",
+        "えへへ……よかった。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_04",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_04_8b74fddf1ae4",
+      "audio_file": "buyback_voice_ja_buyback_04_04_8b74fddf1ae4.ogg",
+      "source_sha256": "8b74fddf1ae45ae240efd73ed8cd5253b629fbddd02cd4cd19a46f98763b6da5",
+      "packaged_sha256": "f772131a38afa706892324cd9c7371424885ed2f7adb45954ce86663d0c66011",
+      "spoken_text": "先輩、どうしてそんな目で私を見るんですか？",
+      "subtitle_templates": [
+        "前辈为什么要用这种眼神看着我呀？",
+        "先輩、どうしてそんな目で私を見るんですか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_05",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_05_7440ad5ce451",
+      "audio_file": "buyback_voice_ja_buyback_04_05_7440ad5ce451.ogg",
+      "source_sha256": "7440ad5ce451e80d4050bfce61a263e1ee0b2d2066c0110183ac8fb512ee1be0",
+      "packaged_sha256": "5f104e9c4eea83726df12788be603505661abae502874644dea9e465f3cee561",
+      "spoken_text": "私が初めて、お水を買いに来たとき……。",
+      "subtitle_templates": [
+        "我第一次来买水的时候……",
+        "私が初めて、お水を買いに来たとき……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_06",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_06_147f663846d4",
+      "audio_file": "buyback_voice_ja_buyback_04_06_147f663846d4.ogg",
+      "source_sha256": "147f663846d4430813942e1d8623948d9ce99525bef48aa25733131c9d030b85",
+      "packaged_sha256": "e72db2b43d6d081cd8d3b463e94c15a1705b961f09272e7e0882ad37cf42ea8f",
+      "spoken_text": "先輩だって、笑って、ありがとうございましたって言ってくれたのに。",
+      "subtitle_templates": [
+        "您明明也笑着跟我说，谢谢惠顾呢。",
+        "先輩だって、笑って、ありがとうございましたって言ってくれたのに。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_07",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_07_f6c53e0bc76d",
+      "audio_file": "buyback_voice_ja_buyback_04_07_f6c53e0bc76d.ogg",
+      "source_sha256": "f6c53e0bc76df22b4da4a12659e380968816475e4cd6e48241e9a236a80658e8",
+      "packaged_sha256": "08c41395484fba25c3c51809ad512cc6a6047a1675c82c2c9cc495994b4f330a",
+      "spoken_text": "私のお店……。",
+      "subtitle_templates": [
+        "我的酒馆……",
+        "私のお店……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_08",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_08_c6e51e20b4c6",
+      "audio_file": "buyback_voice_ja_buyback_04_08_c6e51e20b4c6.ogg",
+      "source_sha256": "c6e51e20b4c6e089f5bdeff6366624c2bf8f1ae99a1c644c4b14460710c6540f",
+      "packaged_sha256": "f63ee97e7cc4f3f523e906953ddbcf51485a858fb091044061666515e07e7c21",
+      "spoken_text": "やっとの思いで買って、棚に並べたお酒も……。",
+      "subtitle_templates": [
+        "还有酒架上那些好不容易买来的酒……",
+        "やっとの思いで買って、棚に並べたお酒も……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_09",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_09_e27e1487248c",
+      "audio_file": "buyback_voice_ja_buyback_04_09_e27e1487248c.ogg",
+      "source_sha256": "e27e1487248cd8340be5b9c1a68eaa1a8e1d522eeb32a85004e118e83ee994fc",
+      "packaged_sha256": "fd5122b7d4e5421d6e79cc77caa7fbe5d6a9a51107360b29d233a9e2a20a7e20",
+      "spoken_text": "まだ、やりたいことが、たくさんあったんですよ。",
+      "subtitle_templates": [
+        "我原本还有好多事情想做呢。",
+        "まだ、やりたいことが、たくさんあったんですよ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_10",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_10_532bfd26beff",
+      "audio_file": "buyback_voice_ja_buyback_04_10_532bfd26beff.ogg",
+      "source_sha256": "532bfd26beff21a7977f5996b822878ce6dc655fba8f531f04f7958f37360e88",
+      "packaged_sha256": "a0e52b45f0efc809f6ecd7a4fb0f5521930f9010bd676bc773b9b1757e6d3ca5",
+      "spoken_text": "……痛いですか？",
+      "subtitle_templates": [
+        "……疼吗？",
+        "……痛いですか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_11",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_11_298d3e303ec6",
+      "audio_file": "buyback_voice_ja_buyback_04_11_298d3e303ec6.ogg",
+      "source_sha256": "298d3e303ec6c484255bab31401b7009c64769a7963c9fe319fd45ebd159a543",
+      "packaged_sha256": "52e8a24ed448c062be7553463c12489d89a49c0bd7cc30c2d3e7fbd6034fc4a2",
+      "spoken_text": "ごめんなさい……。",
+      "subtitle_templates": [
+        "对不起……",
+        "ごめんなさい……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_12",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_12_2b6bbb91ae79",
+      "audio_file": "buyback_voice_ja_buyback_04_12_2b6bbb91ae79.ogg",
+      "source_sha256": "2b6bbb91ae7917910872c3757658074877d8c350422630fff057842e28faab77",
+      "packaged_sha256": "ecd1ab4c83e7d6f1663ec65e3adce53932372b35a741eb97eba935c4acbff3a2",
+      "spoken_text": "さっきは……本当に、腹が立って。",
+      "subtitle_templates": [
+        "我刚才……真的好生气。",
+        "さっきは……本当に、腹が立って。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_13",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_13_e96d2c14f640",
+      "audio_file": "buyback_voice_ja_buyback_04_13_e96d2c14f640.ogg",
+      "source_sha256": "e96d2c14f640b52396aabedfe93d26c6d2421c3ad27c1109438fbd81fc14fef0",
+      "packaged_sha256": "ffb8dc85aaa10fe4c9245ac05415febd329f22746ae978bd0dcc1e9a1663b3e1",
+      "spoken_text": "でも、先輩。",
+      "subtitle_templates": [
+        "可是，前辈。",
+        "でも、先輩。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_14",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_14_2ba88ebf14a1",
+      "audio_file": "buyback_voice_ja_buyback_04_14_2ba88ebf14a1.ogg",
+      "source_sha256": "2ba88ebf14a120ff8723da082ff122e773db32b021c915270116918b85f0e885",
+      "packaged_sha256": "fd1ff426ea64e36bc137a8c0576776fc1d509a4be4ae876ef6e609eb419e8b8b",
+      "spoken_text": "どうして……。",
+      "subtitle_templates": [
+        "您怎么可以……",
+        "どうして……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_04_15",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_15_b3559921df08",
+      "audio_file": "buyback_voice_ja_buyback_04_15_b3559921df08.ogg",
+      "source_sha256": "b3559921df0835720afd9e22d15c744e89649e513e81d8aeb845ff49636e7416",
+      "packaged_sha256": "2798154d56495b2a8cdb2c1ffa50300bd5b4900f45cb0ba0bf4146b3ce0bed6a",
+      "spoken_text": "お金を受け取ったら、それで何もなかったことにできるんですか？",
+      "subtitle_templates": [
+        "收了钱以后，就当作什么都没发生过呢？",
+        "お金を受け取ったら、それで何もなかったことにできるんですか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_01",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_03_21_8a2cfdcddefc",
+      "audio_file": "buyback_voice_ja_buyback_03_21_8a2cfdcddefc.ogg",
+      "source_sha256": "8a2cfdcddefcf5403dbe38d0a361938f797f5d1ebe8c82ac8979d6f3ceade7ce",
+      "packaged_sha256": "91498bb1522f75c09d4438d19f69d2d4e3f2bc0824276525f55ec65cecba65c6",
+      "spoken_text": "……あ。",
+      "subtitle_templates": [
+        "……啊。",
+        "……あ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_02",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_02_dcbaac6e4e55",
+      "audio_file": "buyback_voice_ja_buyback_05_02_dcbaac6e4e55.ogg",
+      "source_sha256": "dcbaac6e4e55697ec812cbd4726eec48b227de75a5daf5b23b6b056392527c86",
+      "packaged_sha256": "19e2c324e81b74075a31b8c2e8b42b9054c5dd888ce77bfb1ad192378ed532da",
+      "spoken_text": "分かった気がします。",
+      "subtitle_templates": [
+        "我好像明白了。",
+        "分かった気がします。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_03",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_03_d6d6bd1be214",
+      "audio_file": "buyback_voice_ja_buyback_05_03_d6d6bd1be214.ogg",
+      "source_sha256": "d6d6bd1be2142f1301fa03ef9904546864b16adea7f56fc7c7cc5633450729ec",
+      "packaged_sha256": "55594bc291f454a5251bc9dc5683541d3cb2ce39e8d83fb6d8ae553d5f0c203e",
+      "spoken_text": "先輩は、自分の命で支払ってくれるつもりだったんですね。",
+      "subtitle_templates": [
+        "原来前辈是想要用自己的生命来作为代价",
+        "先輩は、自分の命で支払ってくれるつもりだったんですね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_04",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_04_6595123eddce",
+      "audio_file": "buyback_voice_ja_buyback_05_04_6595123eddce.ogg",
+      "source_sha256": "6595123eddcef7507e9e09068513ad3c4f6be94edd6cbb6069c8a759163cd46c",
+      "packaged_sha256": "309e1a8b3ce39f478524a4b1e38eceb2b8e9ab2320338b3c10794543dfdf5cdc",
+      "spoken_text": "先輩、見て。",
+      "subtitle_templates": [
+        "前辈，您看。",
+        "先輩、見て。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_05",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_05_12c4137dc550",
+      "audio_file": "buyback_voice_ja_buyback_05_05_12c4137dc550.ogg",
+      "source_sha256": "12c4137dc550e01130d1f2e1ef8d9ed2d5c0d011a7de522a5778c1d257caee8a",
+      "packaged_sha256": "9be864480e1c0ce44be5db891655b189ef0a96c62c94676463a81f063d266951",
+      "spoken_text": "これで……。",
+      "subtitle_templates": [
+        "这样一来……",
+        "これで……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_06",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_06_477fceafffab",
+      "audio_file": "buyback_voice_ja_buyback_05_06_477fceafffab.ogg",
+      "source_sha256": "477fceafffabe033bddaa124eecdd9e6d789892d5672936a3b472388c05c1972",
+      "packaged_sha256": "ad4edbd24111f854070cd598792916d1dcadc450d22edfe132797cde90611241",
+      "spoken_text": "もう毎日、先輩のお店にお水を買いに行こうかって、悩まなくていいんですね。",
+      "subtitle_templates": [
+        "我就不用每天想着，要不要再去您的店里买水了。",
+        "もう毎日、先輩のお店にお水を買いに行こうかって、悩まなくていいんですね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_07",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_07_1c5d719f8424",
+      "audio_file": "buyback_voice_ja_buyback_05_07_1c5d719f8424.ogg",
+      "source_sha256": "1c5d719f8424f80b97eece829314d5a7365f87e20c8dcdff5b5b762d0820772d",
+      "packaged_sha256": "50b35e888efd619225fdaf3a36f2a67a03e58200f8d4a7bd01005cc360b1a834",
+      "spoken_text": "先輩も、ほかのお客さんを相手にしなくていいんです。",
+      "subtitle_templates": [
+        "前辈也不用再去招呼其他客人了。",
+        "先輩も、ほかのお客さんを相手にしなくていいんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_08",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_04_03_326f4bc766d5",
+      "audio_file": "buyback_voice_ja_buyback_04_03_326f4bc766d5.wav",
+      "source_sha256": "326f4bc766d5f4357113a8bbe434fb0598560b2abc5dd1dff5706b762ce1d157",
+      "packaged_sha256": "326f4bc766d5f4357113a8bbe434fb0598560b2abc5dd1dff5706b762ce1d157",
+      "spoken_text": "えへへ……よかった。",
+      "subtitle_templates": [
+        "嘿嘿……真好。",
+        "えへへ……よかった。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_09",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_09_8e7077d8d8ef",
+      "audio_file": "buyback_voice_ja_buyback_05_09_8e7077d8d8ef.ogg",
+      "source_sha256": "8e7077d8d8efa9f700830598745ede69713c8574f8ea4b1fcec4e9dd26676bf5",
+      "packaged_sha256": "2845b60004d0e1386e19d3078d7becd221abb859b4e3af93f94551a7862d267b",
+      "spoken_text": "先輩のこと、あんなに嫌いだったのに。",
+      "subtitle_templates": [
+        "明明我那么讨厌前辈。",
+        "先輩のこと、あんなに嫌いだったのに。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_10",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_10_a0e9f6775a9f",
+      "audio_file": "buyback_voice_ja_buyback_05_10_a0e9f6775a9f.ogg",
+      "source_sha256": "a0e9f6775a9fe024a6dda8eb42a7d5ee48bb5fad5f9825ca4bacf5ccdffb2049",
+      "packaged_sha256": "5866a1dc2392ce0564801756a89a3122adfc9819417221c7e01b3f9e9b940be0",
+      "spoken_text": "今は、先輩がとってもかわいく見えるんです。",
+      "subtitle_templates": [
+        "可是现在，又觉得前辈好可爱呀。",
+        "今は、先輩がとってもかわいく見えるんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_11",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_11_adbc0377ed66",
+      "audio_file": "buyback_voice_ja_buyback_05_11_adbc0377ed66.ogg",
+      "source_sha256": "adbc0377ed66f9a8046b48fa9a7bdc53e50de1aaa9f67257cb92aaf511b2543b",
+      "packaged_sha256": "3b4ddff30cd7251a910c3abde5e167413dcff7c7190fbadb17db581e73490f5f",
+      "spoken_text": "好きなのかな……嫌いなのかな？",
+      "subtitle_templates": [
+        "到底是喜欢呢……还是讨厌呢？",
+        "好きなのかな……嫌いなのかな？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_12",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_12_6473cc61876d",
+      "audio_file": "buyback_voice_ja_buyback_05_12_6473cc61876d.ogg",
+      "source_sha256": "6473cc61876dc403439edd7a1601b09c4018a4f9b96950b0caef84de6b245522",
+      "packaged_sha256": "5672f9f01086f41ca2af1bd6236630af6edf0cb2b2880b57823d16a07f5705db",
+      "spoken_text": "あはは……もう、分かんなくなっちゃった。",
+      "subtitle_templates": [
+        "啊哈哈……已经搞不清楚了。",
+        "あはは……もう、分かんなくなっちゃった。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_13",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_13_99f5d61cf06f",
+      "audio_file": "buyback_voice_ja_buyback_05_13_99f5d61cf06f.ogg",
+      "source_sha256": "99f5d61cf06f1607c485898cbc1f0727681c07f12deb988176eae164c2ebce8c",
+      "packaged_sha256": "93ebd9d1bb1621b895758bf47eca7b646f5e6c275a416ad70536fb1b1633922d",
+      "spoken_text": "でも、大丈夫。",
+      "subtitle_templates": [
+        "不过，没关系。",
+        "でも、大丈夫。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_14",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_14_b07d8efdf357",
+      "audio_file": "buyback_voice_ja_buyback_05_14_b07d8efdf357.ogg",
+      "source_sha256": "b07d8efdf357843c99ccbbd7726714ef4a4cbd22d052de4c70ad9baef94289c3",
+      "packaged_sha256": "c037dadf0ac930a35aed6ce4b25bf0f53802cc31447cd61942057d671e6d12e5",
+      "spoken_text": "もう、売ったり買ったり、しなくていいんですから。",
+      "subtitle_templates": [
+        "我们再也不用做什么买卖啦。",
+        "もう、売ったり買ったり、しなくていいんですから。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_15",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_15_f7a1454dbd96",
+      "audio_file": "buyback_voice_ja_buyback_05_15_f7a1454dbd96.ogg",
+      "source_sha256": "f7a1454dbd96646547716ae7b88ea40ac9e627aef948ecde7bfb0eae89c14a81",
+      "packaged_sha256": "0c2b1ae395188d515b9f7f234bc8d8af7d94854bc6a79fbfef11774e1c5dbc02",
+      "spoken_text": "……先輩。",
+      "subtitle_templates": [
+        "……前辈。",
+        "……先輩。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_16",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_16_0fcb9622e2fc",
+      "audio_file": "buyback_voice_ja_buyback_05_16_0fcb9622e2fc.ogg",
+      "source_sha256": "0fcb9622e2fc597ab31322d17e3f042152c1c34f03b51b70353383da1aadef09",
+      "packaged_sha256": "a93fc09e09abf387b9734e02792e45780f0e7fbb20cc3a16c5666d31a8413883",
+      "spoken_text": "初めて会ったときから、優しい人だなって思ってました。",
+      "subtitle_templates": [
+        "第一次见面的时候，我就觉得前辈很亲切。",
+        "初めて会ったときから、優しい人だなって思ってました。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_17",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_17_0b7301164109",
+      "audio_file": "buyback_voice_ja_buyback_05_17_0b7301164109.ogg",
+      "source_sha256": "0b7301164109773ac98d6dd0b100b06ea4754a9f4362b3ec3bae27b3b851b473",
+      "packaged_sha256": "9042ea472d7d01d8567bab1f265780fdd07250891e3069b95cd04d192a660cb7",
+      "spoken_text": "また来られたらいいなって、思ってたんです。",
+      "subtitle_templates": [
+        "那时候，还想着以后有机会再来呢。",
+        "また来られたらいいなって、思ってたんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_18",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_18_0178cc79ad7d",
+      "audio_file": "buyback_voice_ja_buyback_05_18_0178cc79ad7d.ogg",
+      "source_sha256": "0178cc79ad7d1b4dfaf8842461af6df7c6cc82c977e06a0853c3a1fc54c14f79",
+      "packaged_sha256": "e5370e0fbc51507e871b0e2154d06664eef62869c16070298123d01e64802777",
+      "spoken_text": "まさか……。",
+      "subtitle_templates": [
+        "没想到……",
+        "まさか……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_19",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_19_98939c528da2",
+      "audio_file": "buyback_voice_ja_buyback_05_19_98939c528da2.ogg",
+      "source_sha256": "98939c528da2573e1aefcd2a0626642c2bf5e882132e5869e4ac571df029e95a",
+      "packaged_sha256": "164a001fbf1bc19e8b911f2fa9be3a0f487648c3bf70fb1f21d202c74523451f",
+      "spoken_text": "本当に、ずっとここにいることになるなんて。",
+      "subtitle_templates": [
+        "真的会一直留在这里呀。♡",
+        "本当に、ずっとここにいることになるなんて。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_20",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_20_f8a30fdbc0f1",
+      "audio_file": "buyback_voice_ja_buyback_05_20_f8a30fdbc0f1.ogg",
+      "source_sha256": "f8a30fdbc0f17c7532d8653770f752d38f4b547bf4f988b9791697a7de305197",
+      "packaged_sha256": "7f3928b0a5d34bd3f360ad9ccc44304e421e6d462f74f95a81f945f90ad996df",
+      "spoken_text": "おやすみなさい、先輩。",
+      "subtitle_templates": [
+        "晚安，前辈。",
+        "おやすみなさい、先輩。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_05_21",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_21_ffedfc5a4713",
+      "audio_file": "buyback_voice_ja_buyback_05_21_ffedfc5a4713.ogg",
+      "source_sha256": "ffedfc5a4713ac09a888ff8f158760fce21367fe4e68ca13609f14703a3c699b",
+      "packaged_sha256": "1d587e6b09726006f9a2105aee90de71fc7fb20c15ee33a4fd1ef0d000362c53",
+      "spoken_text": "……明日も、一緒にいましょうね。",
+      "subtitle_templates": [
+        "……明天也要在一起哦。",
+        "……明日も、一緒にいましょうね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_first_accept_0",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_first_accept_0_8cc66f78c330",
+      "audio_file": "buyback_voice_ja_buyback_prelude_first_accept_0_8cc66f78c330.ogg",
+      "source_sha256": "8cc66f78c330b54f51d2b74962158574cb33817792941166af6853b304053bdb",
+      "packaged_sha256": "358b133403aad8fb013e5603c7945c5c4522009fc89b3d86be4c287a39924c53",
+      "spoken_text": "ありがとうございます、先輩。最近お店が忙しくて、お水がいつも足りなくなるんです。",
+      "subtitle_templates": [
+        "谢谢前辈。最近店里忙，水总是不够用。",
+        "ありがとうございます、先輩。最近お店が忙しくて、お水がいつも足りなくなるんです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_first_accept_1",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_first_accept_1_bd7ec4bd9998",
+      "audio_file": "buyback_voice_ja_buyback_prelude_first_accept_1_bd7ec4bd9998.ogg",
+      "source_sha256": "bd7ec4bd9998d9f4544cbb1a27f715aeca76fd7806d5f77afedf1c3214c8bdc5",
+      "packaged_sha256": "34ec281816330d715d5be72d026dfc14b6d9df897c07a88360b18eea83934907",
+      "spoken_text": "これは持って帰って、お店を閉めてから飲みますね。",
+      "subtitle_templates": [
+        "这瓶我先带回去，收店以后再喝。",
+        "これは持って帰って、お店を閉めてから飲みますね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_first_return_0",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_first_return_0_8062cf806a44",
+      "audio_file": "buyback_voice_ja_buyback_prelude_first_return_0_8062cf806a44.ogg",
+      "source_sha256": "8062cf806a44a4c60af3e005a4a5d617cf61b17bd15d00d6589d072f8e2670c5",
+      "packaged_sha256": "e718c3d98f8116b619be807d509f3923466cbadd2978db645e9e6f55ed434966",
+      "spoken_text": "先輩、昨日のお水……まだありますか？",
+      "subtitle_templates": [
+        "前辈，昨天那种水……还有吗？",
+        "先輩、昨日のお水……まだありますか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_first_return_1",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_first_return_1_bc2570fbbc7a",
+      "audio_file": "buyback_voice_ja_buyback_prelude_first_return_1_bc2570fbbc7a.ogg",
+      "source_sha256": "bc2570fbbc7a1b04d4e647ecc9a4e30c2c31403da1ec4cd55f1659a1f87a4bd0",
+      "packaged_sha256": "1e9bc7e0e95d900dff81bf2740d90ea2e1030bb6af0c30d4878b8ebfce198d12",
+      "spoken_text": "お店を閉めてから少し飲んだら、ずっと眠れなくて。",
+      "subtitle_templates": [
+        "收店后喝了一点，后来一直睡不着。",
+        "お店を閉めてから少し飲んだら、ずっと眠れなくて。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_first_return_2",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_first_return_2_830381116e22",
+      "audio_file": "buyback_voice_ja_buyback_prelude_first_return_2_830381116e22.ogg",
+      "source_sha256": "830381116e22ceab201429ba42a0e76de40c2c60b76eb44b15783421e30e5219",
+      "packaged_sha256": "2067406a57d852b6e1eaa9b74e4e1744d0d34ae5652efb441602ea66c399e360",
+      "spoken_text": "でも今日、出かけるときも、真っ先に先輩のお店に向かってました……。",
+      "subtitle_templates": [
+        "可今天出门的时候，还是先往您这边走了……",
+        "でも今日、出かけるときも、真っ先に先輩のお店に向かってました……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_second_accept_0",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_second_accept_0_ead18ded0f91",
+      "audio_file": "buyback_voice_ja_buyback_prelude_second_accept_0_ead18ded0f91.ogg",
+      "source_sha256": "ead18ded0f91374cc2ceac531167463df213eb6a2d710f2a027b6996e453263e",
+      "packaged_sha256": "1e4b46c4db8d0129dec4a51441dfc9c6c19550045c296fe2fb0cdb64b7f6a38f",
+      "spoken_text": "……この味。",
+      "subtitle_templates": [
+        "……这个味道。",
+        "……この味。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_second_accept_1",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_second_accept_1_77fcc91c401a",
+      "audio_file": "buyback_voice_ja_buyback_prelude_second_accept_1_77fcc91c401a.ogg",
+      "source_sha256": "77fcc91c401a0fb964a48198b6dc1b1184cc413f92c0d82d2a23941fe1d2cbc1",
+      "packaged_sha256": "97c8919e8d48b534ea744483fdf4d0e7b819fc91cc7dcb61d7931b8b91be6102",
+      "spoken_text": "この前のと、同じですね。",
+      "subtitle_templates": [
+        "和上次那瓶一样呢。",
+        "この前のと、同じですね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_second_accept_2",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_second_accept_2_5f9cba91cffa",
+      "audio_file": "buyback_voice_ja_buyback_prelude_second_accept_2_5f9cba91cffa.ogg",
+      "source_sha256": "5f9cba91cffa1b2cd2b022aad75c42b040536d777b33088ab306f54836e055d3",
+      "packaged_sha256": "087f3df4ce2a1980ef61efb1ba26b6366cfe85cadfea2269fa7ac1afaf37daaf",
+      "spoken_text": "先輩、このお水……まだありますか？",
+      "subtitle_templates": [
+        "前辈，这种水……还有吗？",
+        "先輩、このお水……まだありますか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_second_accept_3",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_second_accept_3_36eae93b2e1b",
+      "audio_file": "buyback_voice_ja_buyback_prelude_second_accept_3_36eae93b2e1b.ogg",
+      "source_sha256": "36eae93b2e1bf34e435b1238df939b696a86398699adf7e8eecaf519a82398c4",
+      "packaged_sha256": "b398f674455a5acf9778a8807cbd5a55046b03b31f9793088ca156f2ece6dd8c",
+      "spoken_text": "……いえ、何でもないです。",
+      "subtitle_templates": [
+        "……不，没什么。",
+        "……いえ、何でもないです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_second_accept_4",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_second_accept_4_dc6066b4f429",
+      "audio_file": "buyback_voice_ja_buyback_prelude_second_accept_4_dc6066b4f429.ogg",
+      "source_sha256": "dc6066b4f4291b39334ff6b54276332666999882aa49e186ea39eb779596f6bb",
+      "packaged_sha256": "17f53aae9b90c6cc7f31ad33f419c121810a9a795bb88bfcc83e0c2d6e48bcfb",
+      "spoken_text": "今日は、これだけで。お店に戻らなくちゃ。",
+      "subtitle_templates": [
+        "今天就这些。我该回店里了。",
+        "今日は、これだけで。お店に戻らなくちゃ。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_second_return_0",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_05_15_f7a1454dbd96",
+      "audio_file": "buyback_voice_ja_buyback_05_15_f7a1454dbd96.ogg",
+      "source_sha256": "f7a1454dbd96646547716ae7b88ea40ac9e627aef948ecde7bfb0eae89c14a81",
+      "packaged_sha256": "0c2b1ae395188d515b9f7f234bc8d8af7d94854bc6a79fbfef11774e1c5dbc02",
+      "spoken_text": "……先輩。",
+      "subtitle_templates": [
+        "……前辈。",
+        "……先輩。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_second_return_1",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_second_return_1_456b89b5e50a",
+      "audio_file": "buyback_voice_ja_buyback_prelude_second_return_1_456b89b5e50a.ogg",
+      "source_sha256": "456b89b5e50a1f7f4f0fff981190ef226365d06a5d541eb7bd49ab478091dbf8",
+      "packaged_sha256": "5f6f32dd1b9e34d96b1f7218bcdf1b0d19f65a40ec76a0e599bae346112cdb25",
+      "spoken_text": "今日は、先輩の顔を見たくて来ただけです。",
+      "subtitle_templates": [
+        "今天只想过来看看您。",
+        "今日は、先輩の顔を見たくて来ただけです。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_second_return_2",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_second_return_2_79cd84408f88",
+      "audio_file": "buyback_voice_ja_buyback_prelude_second_return_2_79cd84408f88.ogg",
+      "source_sha256": "79cd84408f88fc3fdab19d1df7054ceaafdfa100166c87b06a5a0f6d244f3a33",
+      "packaged_sha256": "f792b182bfcd5d9557eb6ffb4bf72ba28a33ea9baca0da85ea6c7837586e3dd0",
+      "spoken_text": "何でもないです……お仕事、続けてください。",
+      "subtitle_templates": [
+        "没什么事……您忙您的就好。",
+        "何でもないです……お仕事、続けてください。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_late_return",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_late_return_e90ae8cce1df",
+      "audio_file": "buyback_voice_ja_buyback_prelude_late_return_e90ae8cce1df.ogg",
+      "source_sha256": "e90ae8cce1df0c9d3c9b807c699054fe36a13e0d80cf704bf3289f9a9903ce19",
+      "packaged_sha256": "18c004d13b8d6fe7b783f7a8009b6951f94e5074530f01152ad2906011c6b981",
+      "spoken_text": "先輩、この前のお水……まだありますか？",
+      "subtitle_templates": [
+        "前辈，上次那种水……还有吗？",
+        "先輩、この前のお水……まだありますか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_repeat",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_repeat_b740315cbbe4",
+      "audio_file": "buyback_voice_ja_buyback_prelude_repeat_b740315cbbe4.ogg",
+      "source_sha256": "b740315cbbe45910176f655d82df3bd16fb081153ccf274f6a4b14f14c5e01cc",
+      "packaged_sha256": "9f13cfe4847f4260130bf7b4717db0be21eb6de4e7a6fa87157836bd62d12509",
+      "spoken_text": "……先輩、お水を、もう少し見せてもらえますか。",
+      "subtitle_templates": [
+        "……前辈，我想再看看水。",
+        "……先輩、お水を、もう少し見せてもらえますか。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_accept_clean",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_accept_clean_38d075b3983a",
+      "audio_file": "buyback_voice_ja_buyback_prelude_accept_clean_38d075b3983a.ogg",
+      "source_sha256": "38d075b3983af825d768ac961742f61c589bf7daf97b8fbd5a7f0527183e7181",
+      "packaged_sha256": "81d1a29ee8693490d7d59b087f4d68077cf75f101d63e49496cbdd5794feb54e",
+      "spoken_text": "はい。ありがとうございます、先輩。",
+      "subtitle_templates": [
+        "嗯，谢谢前辈。",
+        "はい。ありがとうございます、先輩。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_prelude_goodbye",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_prelude_goodbye_3c573ff48681",
+      "audio_file": "buyback_voice_ja_buyback_prelude_goodbye_3c573ff48681.ogg",
+      "source_sha256": "3c573ff48681326070ebb6a28c5d951947851fb53b59fc715d2837b6ab9365b7",
+      "packaged_sha256": "e54f615c4b5e255eea2301fbcebe38c0aa7001e1c463347658a7779f0f48c803",
+      "spoken_text": "……それじゃ、戻りますね。",
+      "subtitle_templates": [
+        "……那我先回去了。",
+        "……それじゃ、戻りますね。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_refusal_retry_line",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_refusal_retry_line_f72e98aaf442",
+      "audio_file": "buyback_voice_ja_buyback_refusal_retry_line_f72e98aaf442.ogg",
+      "source_sha256": "f72e98aaf442d8844737086feb1d0939480d334e22eb0faacf149f1e3932e02e",
+      "packaged_sha256": "e589645d868845808cdc7a4dcfa9d09a570df8e91c5c4a42631292d5551f60a6",
+      "spoken_text": "先輩、起きてるの、分かってます。お願い、ドアを開けてくれませんか？",
+      "subtitle_templates": [
+        "前辈我知道你没睡，求你开开门好不好？",
+        "先輩、起きてるの、分かってます。お願い、ドアを開けてくれませんか？"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_refusal_third_lines_0",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_refusal_third_lines_0_d88d2787ec82",
+      "audio_file": "buyback_voice_ja_buyback_refusal_third_lines_0_d88d2787ec82.ogg",
+      "source_sha256": "d88d2787ec825abae468f1df5dde928498807abb75268d9679ce70e758ff6617",
+      "packaged_sha256": "025c498fe4ceb6344b0400aa2d2d8df988f5e67c4835e799ff6cb82e1ecb3db3",
+      "spoken_text": "先輩、お願いです。どうか、開けてください。",
+      "subtitle_templates": [
+        "前辈，求求你一定要开门。",
+        "先輩、お願いです。どうか、開けてください。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_refusal_third_lines_1",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_refusal_third_lines_1_21046df3ac3a",
+      "audio_file": "buyback_voice_ja_buyback_refusal_third_lines_1_21046df3ac3a.ogg",
+      "source_sha256": "21046df3ac3a464aa0b3bb2f79e10579b283aaaf6e8e53b34f5c15877fa86bb1",
+      "packaged_sha256": "15526662cb073705b52b5979948158b8bd2b917dbd4f5894f35a93c79dac3cba",
+      "spoken_text": "何でもしますから……。",
+      "subtitle_templates": [
+        "你让我做什么都可以~",
+        "何でもしますから……。"
+      ],
+      "generic": false
+    },
+    {
+      "line_key": "buyback_refusal_farewell_line",
+      "language": "ja",
+      "sound_key": "buyback_voice_ja_buyback_refusal_farewell_line_21320e9d3d5c",
+      "audio_file": "buyback_voice_ja_buyback_refusal_farewell_line_21320e9d3d5c.ogg",
+      "source_sha256": "21320e9d3d5cc86454dfb7fbc6e9c1915a98daaa43b9f5d1fd28217210bffb14",
+      "packaged_sha256": "63ebcb7319c4c7dba0e1ed137751a9151fc346fa2ff554094cda41360264ce42",
+      "spoken_text": "もういいです。明日、また会いに来ますから。先輩、待っていてくださいね……。",
+      "subtitle_templates": [
+        "算了，明天我再来找前辈，前辈请耐心等我......。",
+        "もういいです。明日、また会いに来ますから。先輩、待っていてくださいね……。"
+      ],
+      "generic": false
     }
   ],
   "pending_lines": 0,

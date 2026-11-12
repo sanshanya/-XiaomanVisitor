@@ -1,0 +1,9 @@
+﻿五张CG由作者提供，原文件1.png至5.png，来源与哈希见Scenes/Buyback/assets.json。
+角色小满来自《雨音に満ちる夜 / A Night Filled With the Sound of Rain》。
+Sounds/buyback_door_knock.wav截取自Fabrizio84的Knocking on Door录音末组三下，CC0-1.0。
+原录音：https://freesound.org/people/Fabrizio84/sounds/458007/
+授权：https://creativecommons.org/publicdomain/zero/1.0/
+处理：单声道PCM、去直流、短淡入淡出与峰值归一；保留原敲门节奏。原录音哈希和截取范围见Scenes/Buyback/assets.json。
+Sounds/rain_intro.mp3沿用主模组第二盘磁带“小满的雨夜·Intro”，来自《雨音に満ちる夜》，原音频字节保留，哈希见Scenes/Buyback/assets.json。
+新增日语对白由作者授权使用VUI Labs Ayano生成（1.1倍速）；第三幕爆发声为作者提供的录音，保留原速。制作源及逐句来源见side-stories/permanent-buyback/voice-script.json，运行包只含离线音频，不含生成接口或凭据。
+本模组不分发原生游戏程序集或原生音效；运行时引用已安装游戏的音源。

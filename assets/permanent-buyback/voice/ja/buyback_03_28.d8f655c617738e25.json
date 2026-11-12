@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "どうせ……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "9",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 1.498,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 71934
+  },
+  "sha256": "ed7402fa777a907f8fd15be5263efad4496517ad89ef96db7d7bcf09a18c0bf7",
+  "binding": {
+    "key": "buyback_03_28",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "反正……",
+      "ja": "どうせ……。"
+    },
+    "generic": false
+  }
+}

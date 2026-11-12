@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "お店を閉めてから少し飲んだら、ずっと眠れなくて。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "46",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.182,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 248798
+  },
+  "sha256": "bc2570fbbc7a1b04d4e647ecc9a4e30c2c31403da1ec4cd55f1659a1f87a4bd0",
+  "binding": {
+    "key": "buyback_prelude_first_return_1",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "收店后喝了一点，后来一直睡不着。",
+      "ja": "お店を閉めてから少し飲んだら、ずっと眠れなくて。"
+    },
+    "generic": false
+  }
+}

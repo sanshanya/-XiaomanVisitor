@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、どうして後ろに下がるんですか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "34",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 4.272,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 205100
+  },
+  "sha256": "517e9aec3ff47924dd72703000fb8ac7b2e896d5ad13118dc86a0afee70b4ca6",
+  "binding": {
+    "key": "buyback_02_32",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈，为什么要往后退呀？",
+      "ja": "先輩、どうして後ろに下がるんですか？"
+    },
+    "generic": false
+  }
+}

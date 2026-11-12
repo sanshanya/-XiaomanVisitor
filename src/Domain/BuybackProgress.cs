@@ -12,6 +12,10 @@ namespace XiaomanVisitor
         [JsonProperty] public int Schema = 1;
         [JsonProperty] public List<BuybackWaterReceipt> Sales = new List<BuybackWaterReceipt>();
         [JsonProperty] public int ReturnSeenDay = -1;
+        public const double MinimumWaterDose = 20;
+        public static bool HasEffectiveWaterDose(double potency)
+        { return !double.IsNaN(potency) && !double.IsInfinity(potency) && potency >= MinimumWaterDose; }
+        public static bool CanRecordSale(int day, bool storyFinished) { return day >= 1 && !storyFinished; }
         public int Count { get { return Sales.Count; } }
         public int ReturnDueDay { get { return Count == 0 ? -1 : Sales[Count - 1].Day + 1; } }
         public bool ReturnDue(int today) { return Count > 0 && today >= ReturnDueDay && ReturnSeenDay < ReturnDueDay; }

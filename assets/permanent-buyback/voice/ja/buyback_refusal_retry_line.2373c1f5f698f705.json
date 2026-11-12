@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "先輩、起きてるの、分かってます。お願い、ドアを開けてくれませんか？",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "61",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 7.899,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 379190
+  },
+  "sha256": "f72e98aaf442d8844737086feb1d0939480d334e22eb0faacf149f1e3932e02e",
+  "binding": {
+    "key": "buyback_refusal_retry_line",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "前辈我知道你没睡，求你开开门好不好？",
+      "ja": "先輩、起きてるの、分かってます。お願い、ドアを開けてくれませんか？"
+    },
+    "generic": false
+  }
+}

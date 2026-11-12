@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "それから、ベースのお酒を替えて、シロップも替えてみました。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "55",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.966,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 286398
+  },
+  "sha256": "7a98dfdd8e886fa178505bd9995106065d59346c0ba693942ab57379ef4f6729",
+  "binding": {
+    "key": "buyback_02_14",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "后来，我试着换了基酒，又换了糖浆。",
+      "ja": "それから、ベースのお酒を替えて、シロップも替えてみました。"
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "なんで……[inhales]",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "17",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.382,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 114372
+  },
+  "sha256": "ca92f54a84adbf696e96bff15c70585247ff58cbc6a45b60398b6bd1264ccb5f",
+  "binding": {
+    "key": "buyback_03_16",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "凭什么……",
+      "ja": "なんで……。"
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,2233 @@
+{
+  "schema": 1,
+  "language": "ja",
+  "voice_id": "ayano",
+  "model_id": "luna-tts-1.5",
+  "speed": 1.1,
+  "text_normalization": true,
+  "lines": [
+    {
+      "key": "buyback_01_01",
+      "subtitle_templates": {
+        "zh": "……前辈？",
+        "ja": "……先輩？"
+      },
+      "spoken_text": "……先輩？",
+      "generate_text": "……先輩？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_01.fe23d06927b430eb.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_02",
+      "subtitle_templates": {
+        "zh": "是我，小满。",
+        "ja": "みちるです。"
+      },
+      "spoken_text": "みちるです。",
+      "generate_text": "みちるです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_02.21b49621d8b66c9b.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_03",
+      "subtitle_templates": {
+        "zh": "这么晚了……真不好意思呢。",
+        "ja": "こんな時間に……ごめんなさい。"
+      },
+      "spoken_text": "こんな時間に……ごめんなさい。",
+      "generate_text": "こんな時間に……ごめんなさい。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_03.95a1a353a8425cbd.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_04",
+      "subtitle_templates": {
+        "zh": "其实……我今天一直睡不着。",
+        "ja": "実は……今日はずっと、眠れなくて。"
+      },
+      "spoken_text": "実は……今日はずっと、眠れなくて。",
+      "generate_text": "実は……今日はずっと、眠れなくて。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_04.92d72299f5e6e6e0.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_05",
+      "subtitle_templates": {
+        "zh": "浑身都热热的，心跳也好快……",
+        "ja": "体がぽかぽかして、胸もどきどきして……。"
+      },
+      "spoken_text": "体がぽかぽかして、胸もどきどきして……。",
+      "generate_text": "体がぽかぽかして、胸もどきどきして……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_05.6dec3cc1e640016d.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_06",
+      "subtitle_templates": {
+        "zh": "明明白天才见过前辈。",
+        "ja": "昼間、先輩に会ったばかりなのに。"
+      },
+      "spoken_text": "昼間、先輩に会ったばかりなのに。",
+      "generate_text": "昼間、先輩に会ったばかりなのに。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_06.1c41885db03550ec.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_07",
+      "subtitle_templates": {
+        "zh": "可是闭上眼睛，就又忍不住想起您……",
+        "ja": "目を閉じると、また先輩のことを考えちゃうんです……。"
+      },
+      "spoken_text": "目を閉じると、また先輩のことを考えちゃうんです……。",
+      "generate_text": "目を閉じると、また先輩のことを考えちゃうんです……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_07.73443451d537193b.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_08",
+      "subtitle_templates": {
+        "zh": "……很奇怪吧？",
+        "ja": "……変、ですよね？"
+      },
+      "spoken_text": "……変、ですよね？",
+      "generate_text": "……変、ですよね？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_08.a56d902910005bbb.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_09",
+      "subtitle_templates": {
+        "zh": "我还是第一次……这么晚跑来找一个人呢。",
+        "ja": "こんな夜中に……誰かに会いに来たの、初めてなんです。"
+      },
+      "spoken_text": "こんな夜中に……誰かに会いに来たの、初めてなんです。",
+      "generate_text": "こんな夜中に……誰かに会いに来たの、初めてなんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_09.32fbc82354fdcb74.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_10",
+      "subtitle_templates": {
+        "zh": "有些话，白天站在前辈面前，怎么也说不出口。",
+        "ja": "昼間、先輩の前に立つと、どうしても言えないことがあって。"
+      },
+      "spoken_text": "昼間、先輩の前に立つと、どうしても言えないことがあって。",
+      "generate_text": "昼間、先輩の前に立つと、どうしても言えないことがあって。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_10.c7c180fb60835734.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_11",
+      "subtitle_templates": {
+        "zh": "所以……想趁着还有勇气的时候……",
+        "ja": "だから……まだ勇気があるうちに……。"
+      },
+      "spoken_text": "だから……まだ勇気があるうちに……。",
+      "generate_text": "だから……まだ勇気があるうちに……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_11.1a3560cc2e9b9419.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_12",
+      "subtitle_templates": {
+        "zh": "只告诉前辈一个人。♡",
+        "ja": "先輩にだけ、聞いてほしいんです。"
+      },
+      "spoken_text": "先輩にだけ、聞いてほしいんです。",
+      "generate_text": "先輩にだけ、聞いてほしいんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_12.86224ff2f12c7a21.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_13",
+      "subtitle_templates": {
+        "zh": "呐……前辈。",
+        "ja": "ねえ……先輩。"
+      },
+      "spoken_text": "ねえ……先輩。",
+      "generate_text": "ねえ……先輩。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_13.0c18535f69e8e958.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_14",
+      "subtitle_templates": {
+        "zh": "可以开一下门吗？",
+        "ja": "少しだけ、ドアを開けてくれませんか？"
+      },
+      "spoken_text": "少しだけ、ドアを開けてくれませんか？",
+      "generate_text": "少しだけ、ドアを開けてくれませんか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_14.0fc26bef41aa0265.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_15",
+      "subtitle_templates": {
+        "zh": "人家可是鼓起了很大的勇气才来的哦……",
+        "ja": "私、すごく勇気を出して来たんですよ……？"
+      },
+      "spoken_text": "私、すごく勇気を出して来たんですよ……？",
+      "generate_text": "私、すごく勇気を出して来たんですよ……？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_15.7516be4c992c6d9b.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_16",
+      "subtitle_templates": {
+        "zh": "……不要让我一个人害羞嘛。",
+        "ja": "……私ばっかり、恥ずかしいじゃないですか。"
+      },
+      "spoken_text": "……私ばっかり、恥ずかしいじゃないですか。",
+      "generate_text": "……私ばっかり、恥ずかしいじゃないですか。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_16.34d4761bbe9a0a2e.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_17",
+      "subtitle_templates": {
+        "zh": "啊……真的开门了。",
+        "ja": "あ……本当に開けてくれた。"
+      },
+      "spoken_text": "あ……本当に開けてくれた。",
+      "generate_text": "あ……本当に開けてくれた。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_17.551fe3ecb3876d32.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_18",
+      "subtitle_templates": {
+        "zh": "嘿嘿，前辈还是这么温柔呢。",
+        "ja": "えへへ。先輩は、やっぱり優しいですね。"
+      },
+      "spoken_text": "えへへ。先輩は、やっぱり優しいですね。",
+      "generate_text": "えへへ。先輩は、やっぱり優しいですね。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_18.0236f90f03c88af5.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_01_19",
+      "subtitle_templates": {
+        "zh": "呐，前辈，我今天美吗？",
+        "ja": "ねえ、先輩。今日の私、きれいですか？"
+      },
+      "spoken_text": "ねえ、先輩。今日の私、きれいですか？",
+      "generate_text": "ねえ、先輩。今日の私、きれいですか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_01_19.792a963e274cd164.wav",
+      "group": "main",
+      "act": 1,
+      "delivery": "门外轻声、害羞而不安；开门后带一点撒娇，别过早预告发怒。"
+    },
+    {
+      "key": "buyback_02_01",
+      "subtitle_templates": {
+        "zh": "……嘿嘿。",
+        "ja": "……えへへ。"
+      },
+      "spoken_text": "……えへへ。",
+      "generate_text": "……えへへ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_01.7fe7ebe231b4307f.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_02",
+      "subtitle_templates": {
+        "zh": "前辈怎么不说话呀？",
+        "ja": "先輩、どうして何も言ってくれないんですか？"
+      },
+      "spoken_text": "先輩、どうして何も言ってくれないんですか？",
+      "generate_text": "先輩、どうして何も言ってくれないんですか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_02.8bc51b48ee6240ba.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_03",
+      "subtitle_templates": {
+        "zh": "其实呢……我今天出门之前，对着镜子看了好久。",
+        "ja": "実はね……出かける前、ずっと鏡を見ていたんです。"
+      },
+      "spoken_text": "実はね……出かける前、ずっと鏡を見ていたんです。",
+      "generate_text": "実はね……出かける前、ずっと鏡を見ていたんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_03.d8ec00dd6a990337.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_04",
+      "subtitle_templates": {
+        "zh": "头发也好，眼睛也好……明明都和平时一样。",
+        "ja": "髪も、目も……いつもと同じはずなのに。"
+      },
+      "spoken_text": "髪も、目も……いつもと同じはずなのに。",
+      "generate_text": "髪も、目も……いつもと同じはずなのに。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_04.25f42b9fad178ca5.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_05",
+      "subtitle_templates": {
+        "zh": "可是看着看着，就觉得镜子里的那个女孩，好陌生呀。",
+        "ja": "見ているうちに、鏡の中の女の子が、知らない子みたいに思えてきて。"
+      },
+      "spoken_text": "見ているうちに、鏡の中の女の子が、知らない子みたいに思えてきて。",
+      "generate_text": "見ているうちに、鏡の中の女の子が、知らない子みたいに思えてきて。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_05.c9b21b0e7593ffb4.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_06",
+      "subtitle_templates": {
+        "zh": "前辈……您也觉得我和平时不太一样了吗？",
+        "ja": "先輩にも……いつもの私と、少し違って見えますか？"
+      },
+      "spoken_text": "先輩にも……いつもの私と、少し違って見えますか？",
+      "generate_text": "先輩にも……いつもの私と、少し違って見えますか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_06.a31ef10b6eca7804.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_07",
+      "subtitle_templates": {
+        "zh": "……啊，对了。",
+        "ja": "……あ、そうだ。"
+      },
+      "spoken_text": "……あ、そうだ。",
+      "generate_text": "……あ、そうだ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_07.b010bfc457df0bc1.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_08",
+      "subtitle_templates": {
+        "zh": "我今天一直在笑呢。",
+        "ja": "私、今日はずっと笑ってるんです。"
+      },
+      "spoken_text": "私、今日はずっと笑ってるんです。",
+      "generate_text": "私、今日はずっと笑ってるんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_08.debd055f242618a6.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_09",
+      "subtitle_templates": {
+        "zh": "明明一点都不开心。",
+        "ja": "ちっとも、楽しくないのに。"
+      },
+      "spoken_text": "ちっとも、楽しくないのに。",
+      "generate_text": "ちっとも、楽しくないのに。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_09.e814437141860a90.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_10",
+      "subtitle_templates": {
+        "zh": "今天，我把酒馆提前关掉了。",
+        "ja": "今日、お店を早めに閉めたんです。"
+      },
+      "spoken_text": "今日、お店を早めに閉めたんです。",
+      "generate_text": "今日、お店を早めに閉めたんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_10.6818aa709f036c76.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_11",
+      "subtitle_templates": {
+        "zh": "有几位客人喝了酒以后，变得好奇怪。",
+        "ja": "お酒を飲んだお客さんが、何人か、おかしくなっちゃって。"
+      },
+      "spoken_text": "お酒を飲んだお客さんが、何人か、おかしくなっちゃって。",
+      "generate_text": "お酒を飲んだお客さんが、何人か、おかしくなっちゃって。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_11.51eb886e139bfc9b.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_12",
+      "subtitle_templates": {
+        "zh": "一个劲儿地问我，还有没有刚才那种酒……",
+        "ja": "さっきのお酒、まだないのかって……そればっかり聞くんです。"
+      },
+      "spoken_text": "さっきのお酒、まだないのかって……そればっかり聞くんです。",
+      "generate_text": "さっきのお酒、まだないのかって……そればっかり聞くんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_12.b2e3b6055b8615fc.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_13",
+      "subtitle_templates": {
+        "zh": "刚开始，我还以为是自己调得太好喝了呢。",
+        "ja": "最初は、私のお酒がそんなにおいしかったのかなって思ってました。"
+      },
+      "spoken_text": "最初は、私のお酒がそんなにおいしかったのかなって思ってました。",
+      "generate_text": "最初は、私のお酒がそんなにおいしかったのかなって思ってました。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_13.67f5dc3dfd431def.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_14",
+      "subtitle_templates": {
+        "zh": "后来，我试着换了基酒，又换了糖浆。",
+        "ja": "それから、ベースのお酒を替えて、シロップも替えてみました。"
+      },
+      "spoken_text": "それから、ベースのお酒を替えて、シロップも替えてみました。",
+      "generate_text": "それから、ベースのお酒を替えて、シロップも替えてみました。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_14.c3c7280143ce4e70.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_15",
+      "subtitle_templates": {
+        "zh": "连杯子都换过了。",
+        "ja": "グラスまで替えたんですよ。"
+      },
+      "spoken_text": "グラスまで替えたんですよ。",
+      "generate_text": "グラスまで替えたんですよ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_15.71b86bba872bdde7.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_16",
+      "subtitle_templates": {
+        "zh": "最后才发现……",
+        "ja": "それで、やっと分かったんです……。"
+      },
+      "spoken_text": "それで、やっと分かったんです……。",
+      "generate_text": "それで、やっと分かったんです……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_16.e44fc1e587ea866c.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_17",
+      "subtitle_templates": {
+        "zh": "……原来是水呀。",
+        "ja": "……お水だったんですね。"
+      },
+      "spoken_text": "……お水だったんですね。",
+      "generate_text": "……お水だったんですね。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_17.88967e474149b0e0.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_18",
+      "subtitle_templates": {
+        "zh": "前辈知道吗？",
+        "ja": "先輩、知ってますか？"
+      },
+      "spoken_text": "先輩、知ってますか？",
+      "generate_text": "先輩、知ってますか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_18.220f609907c4642a.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_19",
+      "subtitle_templates": {
+        "zh": "我可是调酒师哦。",
+        "ja": "私、バーテンダーなんですよ。"
+      },
+      "spoken_text": "私、バーテンダーなんですよ。",
+      "generate_text": "私、バーテンダーなんですよ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_19.2ba36655281c44bb.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_20",
+      "subtitle_templates": {
+        "zh": "哪怕只差一点点味道，我也能尝出来的。",
+        "ja": "ほんの少し味が違うだけでも、ちゃんと分かるんです。"
+      },
+      "spoken_text": "ほんの少し味が違うだけでも、ちゃんと分かるんです。",
+      "generate_text": "ほんの少し味が違うだけでも、ちゃんと分かるんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_20.f766a49675def82a.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_21",
+      "subtitle_templates": {
+        "zh": "可是……",
+        "ja": "なのに……。"
+      },
+      "spoken_text": "なのに……。",
+      "generate_text": "なのに……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_21.f62f36bb0434de6a.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_22",
+      "subtitle_templates": {
+        "zh": "明明知道不对劲……",
+        "ja": "おかしいって、分かってるのに……。"
+      },
+      "spoken_text": "おかしいって、分かってるのに……。",
+      "generate_text": "おかしいって、分かってるのに……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_22.d5b1de8c528db30d.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_23",
+      "subtitle_templates": {
+        "zh": "却还是忍不住想再喝一点。",
+        "ja": "それでも、もう少し飲みたくなっちゃうんです。"
+      },
+      "spoken_text": "それでも、もう少し飲みたくなっちゃうんです。",
+      "generate_text": "それでも、もう少し飲みたくなっちゃうんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_23.c1f7777248a59ddb.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_24",
+      "subtitle_templates": {
+        "zh": "呵呵……",
+        "ja": "ふふ……。"
+      },
+      "spoken_text": "ふふ……。",
+      "generate_text": "ふふ……[chuckles]",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_24.a35871037122efd9.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_25",
+      "subtitle_templates": {
+        "zh": "是不是很可笑呀？",
+        "ja": "おかしいですよね？"
+      },
+      "spoken_text": "おかしいですよね？",
+      "generate_text": "おかしいですよね？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_25.24a8f27b0318bb55.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_26",
+      "subtitle_templates": {
+        "zh": "我把剩下的水都喝完了",
+        "ja": "残っていたお水、全部飲んじゃいました。"
+      },
+      "spoken_text": "残っていたお水、全部飲んじゃいました。",
+      "generate_text": "残っていたお水、全部飲んじゃいました。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_26.844d46d18b0fa750.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_27",
+      "subtitle_templates": {
+        "zh": "说起来……",
+        "ja": "そういえば……。"
+      },
+      "spoken_text": "そういえば……。",
+      "generate_text": "そういえば……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_27.74710488024c11ca.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_28",
+      "subtitle_templates": {
+        "zh": "前辈还记得吗？",
+        "ja": "先輩、覚えてますか？"
+      },
+      "spoken_text": "先輩、覚えてますか？",
+      "generate_text": "先輩、覚えてますか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_28.cd7b4a965ccc0f57.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_29",
+      "subtitle_templates": {
+        "zh": "我在您这里，买过两次那种水呢。",
+        "ja": "私、ここで、あのお水を二回買ったんですよ。"
+      },
+      "spoken_text": "私、ここで、あのお水を二回買ったんですよ。",
+      "generate_text": "私、ここで、あのお水を二回買ったんですよ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_29.a3c01e2184bb53f2.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_30",
+      "subtitle_templates": {
+        "zh": "嘿嘿……真是一笔好生意呢。",
+        "ja": "えへへ……いい商売でしたね。"
+      },
+      "spoken_text": "えへへ……いい商売でしたね。",
+      "generate_text": "えへへ……いい商売でしたね。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_30.50a66b48a191cec8.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_31",
+      "subtitle_templates": {
+        "zh": "……咦？",
+        "ja": "……あれ？"
+      },
+      "spoken_text": "……あれ？",
+      "generate_text": "……あれ？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_31.b11d7a6bd3dd570e.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_32",
+      "subtitle_templates": {
+        "zh": "前辈，为什么要往后退呀？",
+        "ja": "先輩、どうして後ろに下がるんですか？"
+      },
+      "spoken_text": "先輩、どうして後ろに下がるんですか？",
+      "generate_text": "先輩、どうして後ろに下がるんですか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_32.676be7c502ed79cf.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_33",
+      "subtitle_templates": {
+        "zh": "我还什么都没做呢。",
+        "ja": "私、まだ何もしてませんよ。"
+      },
+      "spoken_text": "私、まだ何もしてませんよ。",
+      "generate_text": "私、まだ何もしてませんよ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_33.86eee46571e709fc.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_34",
+      "subtitle_templates": {
+        "zh": "呐，前辈。",
+        "ja": "ねえ、先輩。"
+      },
+      "spoken_text": "ねえ、先輩。",
+      "generate_text": "ねえ、先輩。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_34.189d97544f0a883f.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_35",
+      "subtitle_templates": {
+        "zh": "刚才不是说了吗？",
+        "ja": "さっき、言いましたよね？"
+      },
+      "spoken_text": "さっき、言いましたよね？",
+      "generate_text": "さっき、言いましたよね？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_35.8a35c73c0db42dba.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_36",
+      "subtitle_templates": {
+        "zh": "有很重要的话……",
+        "ja": "大事な話があるって……。"
+      },
+      "spoken_text": "大事な話があるって……。",
+      "generate_text": "大事な話があるって……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_36.aedd8aa4670a03a8.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_37",
+      "subtitle_templates": {
+        "zh": "只想告诉您一个人。",
+        "ja": "先輩にだけ、聞いてほしいんです。"
+      },
+      "spoken_text": "先輩にだけ、聞いてほしいんです。",
+      "generate_text": "先輩にだけ、聞いてほしいんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_37.86224ff2f12c7a21.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_38",
+      "subtitle_templates": {
+        "zh": "所以……",
+        "ja": "だから……。"
+      },
+      "spoken_text": "だから……。",
+      "generate_text": "だから……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_38.9ebdf54c94c0bbac.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_02_39",
+      "subtitle_templates": {
+        "zh": "请好好听我说完，好不好？♡",
+        "ja": "最後まで、ちゃんと聞いてくれますよね？"
+      },
+      "spoken_text": "最後まで、ちゃんと聞いてくれますよね？",
+      "generate_text": "最後まで、ちゃんと聞いてくれますよね？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_02_39.7c035e438b8c68e8.wav",
+      "group": "main",
+      "act": 2,
+      "delivery": "努力保持平常的温柔；讲起水时逐渐发冷，笑声短，反问近距离。"
+    },
+    {
+      "key": "buyback_03_01",
+      "subtitle_templates": {
+        "zh": "前辈……",
+        "ja": "先輩……。"
+      },
+      "spoken_text": "先輩……。",
+      "generate_text": "先輩……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_01.c39944a2bc745978.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_02",
+      "subtitle_templates": {
+        "zh": "您知道吗？",
+        "ja": "知ってますか？"
+      },
+      "spoken_text": "知ってますか？",
+      "generate_text": "知ってますか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_02.e2f1f3dc8bb78791.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_03",
+      "subtitle_templates": {
+        "zh": "我一直觉得，前辈是个很厉害的生意人呢。",
+        "ja": "先輩は、本当に商売上手なんだなって、ずっと思ってたんです。"
+      },
+      "spoken_text": "先輩は、本当に商売上手なんだなって、ずっと思ってたんです。",
+      "generate_text": "先輩は、本当に商売上手なんだなって、ずっと思ってたんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_03.03e714fcc0b61366.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_04",
+      "subtitle_templates": {
+        "zh": "明明是那么普通的水……",
+        "ja": "あんな、普通のお水なのに……。"
+      },
+      "spoken_text": "あんな、普通のお水なのに……。",
+      "generate_text": "あんな、普通のお水なのに……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_04.35e81bc78ca4fba5.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_05",
+      "subtitle_templates": {
+        "zh": "却能让客人喝过一次，就再也忘不掉。",
+        "ja": "一度飲んだら、二度と忘れられなくなるんですもん。"
+      },
+      "spoken_text": "一度飲んだら、二度と忘れられなくなるんですもん。",
+      "generate_text": "一度飲んだら、二度と忘れられなくなるんですもん。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_05.406dbe4bef9f50a2.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_06",
+      "subtitle_templates": {
+        "zh": "嘿嘿……真羡慕呀。",
+        "ja": "えへへ……うらやましいな。"
+      },
+      "spoken_text": "えへへ……うらやましいな。",
+      "generate_text": "えへへ……うらやましいな。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_06.079923b22f702441.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_07",
+      "subtitle_templates": {
+        "zh": "我的酒馆要是也能这样就好了。",
+        "ja": "私のお店も、そうなれたらよかったのに。"
+      },
+      "spoken_text": "私のお店も、そうなれたらよかったのに。",
+      "generate_text": "私のお店も、そうなれたらよかったのに。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_07.6937dd200dcfb1af.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_08",
+      "subtitle_templates": {
+        "zh": "前辈，您知道吗？",
+        "ja": "先輩、知ってますか……？"
+      },
+      "spoken_text": "先輩、知ってますか……？",
+      "generate_text": "先輩、知ってますか……？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_08.97fe7effb82d6222.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_09",
+      "subtitle_templates": {
+        "zh": "以前我最开心的，就是调出客人喜欢的酒。",
+        "ja": "お客さんの好きなお酒を作れたときが、一番うれしかったんです。"
+      },
+      "spoken_text": "お客さんの好きなお酒を作れたときが、一番うれしかったんです。",
+      "generate_text": "お客さんの好きなお酒を作れたときが、一番うれしかったんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_09.31d8e1120ee35bcd.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_10",
+      "subtitle_templates": {
+        "zh": "想调出很好喝的酒……",
+        "ja": "おいしいお酒を作りたくて……。"
+      },
+      "spoken_text": "おいしいお酒を作りたくて……。",
+      "generate_text": "おいしいお酒を作りたくて……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_10.9d3a2487bd70d8f0.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_11",
+      "subtitle_templates": {
+        "zh": "想听客人说，下次还会再来……",
+        "ja": "また来るねって、言ってほしくて……。"
+      },
+      "spoken_text": "また来るねって、言ってほしくて……。",
+      "generate_text": "また来るねって、言ってほしくて……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_11.17102de056a5406c.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_12",
+      "subtitle_templates": {
+        "zh": "我明明……那么喜欢那间店的。",
+        "ja": "私、あのお店が……あんなに好きだったのに。"
+      },
+      "spoken_text": "私、あのお店が……あんなに好きだったのに。",
+      "generate_text": "私、あのお店が……あんなに好きだったのに。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_12.868a585d61bf90d4.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_13",
+      "subtitle_templates": {
+        "zh": "可现在……我已经放弃了。",
+        "ja": "でも、もう……諦めました。"
+      },
+      "spoken_text": "でも、もう……諦めました。",
+      "generate_text": "でも、もう……[exhale] 諦めました。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_13.ee4f5e671c17eb3d.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_14",
+      "subtitle_templates": {
+        "zh": "我一直在想。",
+        "ja": "ずっと、考えてたんです。"
+      },
+      "spoken_text": "ずっと、考えてたんです。",
+      "generate_text": "ずっと、考えてたんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_14.65af8f23b0cfcab4.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_15",
+      "subtitle_templates": {
+        "zh": "我连自己都快认不出来了。",
+        "ja": "自分のことも、分からなくなってきちゃった。"
+      },
+      "spoken_text": "自分のことも、分からなくなってきちゃった。",
+      "generate_text": "自分のことも、分からなくなってきちゃった。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_15.403e5563c5202387.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_16",
+      "subtitle_templates": {
+        "zh": "凭什么……",
+        "ja": "なんで……。"
+      },
+      "spoken_text": "なんで……。",
+      "generate_text": "なんで……[inhales]",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_16.9c7dbb58fb561330.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_17",
+      "subtitle_templates": {
+        "zh": "凭什么前辈还能像什么都没发生过一样……",
+        "ja": "なんで先輩は、何もなかったみたいに……。"
+      },
+      "spoken_text": "なんで先輩は、何もなかったみたいに……。",
+      "generate_text": "なんで先輩は、何もなかったみたいに……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_17.228ff01f73eeaeb6.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_18",
+      "subtitle_templates": {
+        "zh": "站在那里看着我呀？",
+        "ja": "そんなところから、私を見てるんですか？"
+      },
+      "spoken_text": "そんなところから、私を見てるんですか？",
+      "generate_text": "そんなところから、私を見てるんですか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_18.d19be3a2b380fb79.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_19",
+      "subtitle_templates": {
+        "zh": "……不公平呀。",
+        "ja": "……ずるいですよ。"
+      },
+      "spoken_text": "……ずるいですよ。",
+      "generate_text": "……ずるいですよ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_19.1714536e678d9aaa.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_20",
+      "subtitle_templates": {
+        "zh": "为什么是我……",
+        "ja": "どうして、私が……。"
+      },
+      "spoken_text": "どうして、私が……。",
+      "generate_text": "どうして、私が……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_20.2c8550b8e2c18772.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_21",
+      "subtitle_templates": {
+        "zh": "……啊。",
+        "ja": "……あ。"
+      },
+      "spoken_text": "……あ。",
+      "generate_text": "……あ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_21.512fb78e232bcaaf.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_22",
+      "subtitle_templates": {
+        "zh": "说起来……",
+        "ja": "そういえば……。"
+      },
+      "spoken_text": "そういえば……。",
+      "generate_text": "そういえば……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_22.74710488024c11ca.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_23",
+      "subtitle_templates": {
+        "zh": "前辈刚才还没回答我呢。",
+        "ja": "先輩、まだ答えてくれてませんよね。"
+      },
+      "spoken_text": "先輩、まだ答えてくれてませんよね。",
+      "generate_text": "先輩、まだ答えてくれてませんよね。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_23.727ffe6839d0d3e6.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_24",
+      "subtitle_templates": {
+        "zh": "今天的我……",
+        "ja": "今日の私……。"
+      },
+      "spoken_text": "今日の私……。",
+      "generate_text": "今日の私……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_24.9d8de6fc98448d55.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_25",
+      "subtitle_templates": {
+        "zh": "漂亮吗？",
+        "ja": "きれいですか？"
+      },
+      "spoken_text": "きれいですか？",
+      "generate_text": "きれいですか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_25.3fe6e8834a5a5ec3.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_26",
+      "subtitle_templates": {
+        "zh": "……嘿嘿。",
+        "ja": "……えへへ。"
+      },
+      "spoken_text": "……えへへ。",
+      "generate_text": "……えへへ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_26.7fe7ebe231b4307f.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_27",
+      "subtitle_templates": {
+        "zh": "算啦。",
+        "ja": "もう、いいです。"
+      },
+      "spoken_text": "もう、いいです。",
+      "generate_text": "もう、いいです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_27.b36bcbd45d348c21.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_28",
+      "subtitle_templates": {
+        "zh": "反正……",
+        "ja": "どうせ……。"
+      },
+      "spoken_text": "どうせ……。",
+      "generate_text": "どうせ……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_28.d8f655c617738e25.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_29",
+      "subtitle_templates": {
+        "zh": "前辈也没有机会说了。",
+        "ja": "先輩には、もう答える機会なんてないんですから。"
+      },
+      "spoken_text": "先輩には、もう答える機会なんてないんですから。",
+      "generate_text": "先輩には、もう答える機会なんてないんですから。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_29.25d0f4eeae78fd0c.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。"
+    },
+    {
+      "key": "buyback_03_30",
+      "subtitle_templates": {
+        "zh": "还给我……还给我啊……！",
+        "ja": "返して……返してよ……！"
+      },
+      "spoken_text": "返して……返してよ……！",
+      "generate_text": "返して……返してよ……！",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_30.slice-3bc30b1ae84a7daf-0-120000.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。",
+      "provider": "author_recording",
+      "speed": 1.0,
+      "attack_ordinal": 1,
+      "segment_start": 0,
+      "segment_end": 5,
+      "blood_at": 2.18
+    },
+    {
+      "key": "buyback_03_31",
+      "subtitle_templates": {
+        "zh": "我的人生……还给我……！！",
+        "ja": "私の人生……返せよ……！！"
+      },
+      "spoken_text": "私の人生……返せよ……！！",
+      "generate_text": "私の人生……返せよ……！！",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_31.slice-3bc30b1ae84a7daf-120000-240000.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。",
+      "provider": "author_recording",
+      "speed": 1.0,
+      "attack_ordinal": 2,
+      "segment_start": 5,
+      "segment_end": 10,
+      "blood_at": 3.08
+    },
+    {
+      "key": "buyback_03_32",
+      "subtitle_templates": {
+        "zh": "还给我啊——！！！",
+        "ja": "返せよおお！！！！"
+      },
+      "spoken_text": "返せよおお！！！！",
+      "generate_text": "返せよおお！！！！",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_03_32.slice-3bc30b1ae84a7daf-240000-300304.wav",
+      "group": "main",
+      "act": 3,
+      "delivery": "前半克制，回想酒馆时难过，质问断续；爆发使用作者原录音。",
+      "provider": "author_recording",
+      "speed": 1.0,
+      "attack_ordinal": 3,
+      "segment_start": 10,
+      "segment_end": 12.512666666666666,
+      "blood_at": 0.08
+    },
+    {
+      "key": "buyback_04_01",
+      "subtitle_templates": {
+        "zh": "……前辈？",
+        "ja": "……先輩？"
+      },
+      "spoken_text": "……先輩？",
+      "generate_text": "……先輩？[breath]",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_01.08587438a3491a04.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_02",
+      "subtitle_templates": {
+        "zh": "还听得见吗？",
+        "ja": "まだ、聞こえてますか？"
+      },
+      "spoken_text": "まだ、聞こえてますか？",
+      "generate_text": "まだ、聞こえてますか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_02.1914f4fd913443a6.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_03",
+      "subtitle_templates": {
+        "zh": "嘿嘿……太好了。",
+        "ja": "えへへ……よかった。"
+      },
+      "spoken_text": "えへへ……よかった。",
+      "generate_text": "えへへ……よかった。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_03.d762b6687b22cbd4.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_04",
+      "subtitle_templates": {
+        "zh": "前辈为什么要用这种眼神看着我呀？",
+        "ja": "先輩、どうしてそんな目で私を見るんですか？"
+      },
+      "spoken_text": "先輩、どうしてそんな目で私を見るんですか？",
+      "generate_text": "先輩、どうしてそんな目で私を見るんですか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_04.9794c7cabc8337a0.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_05",
+      "subtitle_templates": {
+        "zh": "我第一次来买水的时候……",
+        "ja": "私が初めて、お水を買いに来たとき……。"
+      },
+      "spoken_text": "私が初めて、お水を買いに来たとき……。",
+      "generate_text": "私が初めて、お水を買いに来たとき……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_05.601e810ea7ad533e.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_06",
+      "subtitle_templates": {
+        "zh": "您明明也笑着跟我说，谢谢惠顾呢。",
+        "ja": "先輩だって、笑って、ありがとうございましたって言ってくれたのに。"
+      },
+      "spoken_text": "先輩だって、笑って、ありがとうございましたって言ってくれたのに。",
+      "generate_text": "先輩だって、笑って、ありがとうございましたって言ってくれたのに。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_06.daa3cc8a0257bde1.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_07",
+      "subtitle_templates": {
+        "zh": "我的酒馆……",
+        "ja": "私のお店……。"
+      },
+      "spoken_text": "私のお店……。",
+      "generate_text": "私のお店……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_07.7f1e3b1b8d4267fb.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_08",
+      "subtitle_templates": {
+        "zh": "还有酒架上那些好不容易买来的酒……",
+        "ja": "やっとの思いで買って、棚に並べたお酒も……。"
+      },
+      "spoken_text": "やっとの思いで買って、棚に並べたお酒も……。",
+      "generate_text": "やっとの思いで買って、棚に並べたお酒も……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_08.f5eeb1c0c73846e8.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_09",
+      "subtitle_templates": {
+        "zh": "我原本还有好多事情想做呢。",
+        "ja": "まだ、やりたいことが、たくさんあったんですよ。"
+      },
+      "spoken_text": "まだ、やりたいことが、たくさんあったんですよ。",
+      "generate_text": "まだ、やりたいことが、たくさんあったんですよ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_09.489a90ee5b46e11f.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_10",
+      "subtitle_templates": {
+        "zh": "……疼吗？",
+        "ja": "……痛いですか？"
+      },
+      "spoken_text": "……痛いですか？",
+      "generate_text": "……痛いですか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_10.ce901a6b29f45e9f.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_11",
+      "subtitle_templates": {
+        "zh": "对不起……",
+        "ja": "ごめんなさい……。"
+      },
+      "spoken_text": "ごめんなさい……。",
+      "generate_text": "ごめんなさい……[exhale]",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_11.3370925dfa9a71c5.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_12",
+      "subtitle_templates": {
+        "zh": "我刚才……真的好生气。",
+        "ja": "さっきは……本当に、腹が立って。"
+      },
+      "spoken_text": "さっきは……本当に、腹が立って。",
+      "generate_text": "さっきは……本当に、腹が立って。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_12.ece381e0997e47aa.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_13",
+      "subtitle_templates": {
+        "zh": "可是，前辈。",
+        "ja": "でも、先輩。"
+      },
+      "spoken_text": "でも、先輩。",
+      "generate_text": "でも、先輩。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_13.d57008a36e78cff6.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_14",
+      "subtitle_templates": {
+        "zh": "您怎么可以……",
+        "ja": "どうして……。"
+      },
+      "spoken_text": "どうして……。",
+      "generate_text": "どうして……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_14.7b8e913eedc10c34.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_04_15",
+      "subtitle_templates": {
+        "zh": "收了钱以后，就当作什么都没发生过呢？",
+        "ja": "お金を受け取ったら、それで何もなかったことにできるんですか？"
+      },
+      "spoken_text": "お金を受け取ったら、それで何もなかったことにできるんですか？",
+      "generate_text": "お金を受け取ったら、それで何もなかったことにできるんですか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_04_15.708f11e7ac0beb4a.wav",
+      "group": "main",
+      "act": 4,
+      "delivery": "喘息后重新轻柔，带一点歉意，但不撤回责问；不演成平静旁白。"
+    },
+    {
+      "key": "buyback_05_01",
+      "subtitle_templates": {
+        "zh": "……啊。",
+        "ja": "……あ。"
+      },
+      "spoken_text": "……あ。",
+      "generate_text": "……あ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_01.512fb78e232bcaaf.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_02",
+      "subtitle_templates": {
+        "zh": "我好像明白了。",
+        "ja": "分かった気がします。"
+      },
+      "spoken_text": "分かった気がします。",
+      "generate_text": "分かった気がします。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_02.79f3fe06f0c004b1.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_03",
+      "subtitle_templates": {
+        "zh": "原来前辈是想要用自己的生命来作为代价",
+        "ja": "先輩は、自分の命で支払ってくれるつもりだったんですね。"
+      },
+      "spoken_text": "先輩は、自分の命で支払ってくれるつもりだったんですね。",
+      "generate_text": "先輩は、自分の命で支払ってくれるつもりだったんですね。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_03.fcdfa553f99041de.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_04",
+      "subtitle_templates": {
+        "zh": "前辈，您看。",
+        "ja": "先輩、見て。"
+      },
+      "spoken_text": "先輩、見て。",
+      "generate_text": "先輩、見て。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_04.c5ce688a468ee940.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_05",
+      "subtitle_templates": {
+        "zh": "这样一来……",
+        "ja": "これで……。"
+      },
+      "spoken_text": "これで……。",
+      "generate_text": "これで……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_05.e91e625d8967fba6.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_06",
+      "subtitle_templates": {
+        "zh": "我就不用每天想着，要不要再去您的店里买水了。",
+        "ja": "もう毎日、先輩のお店にお水を買いに行こうかって、悩まなくていいんですね。"
+      },
+      "spoken_text": "もう毎日、先輩のお店にお水を買いに行こうかって、悩まなくていいんですね。",
+      "generate_text": "もう毎日、先輩のお店にお水を買いに行こうかって、悩まなくていいんですね。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_06.c036dfec946c347b.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_07",
+      "subtitle_templates": {
+        "zh": "前辈也不用再去招呼其他客人了。",
+        "ja": "先輩も、ほかのお客さんを相手にしなくていいんです。"
+      },
+      "spoken_text": "先輩も、ほかのお客さんを相手にしなくていいんです。",
+      "generate_text": "先輩も、ほかのお客さんを相手にしなくていいんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_07.3ee241a0c9256964.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_08",
+      "subtitle_templates": {
+        "zh": "嘿嘿……真好。",
+        "ja": "えへへ……よかった。"
+      },
+      "spoken_text": "えへへ……よかった。",
+      "generate_text": "えへへ……よかった。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_08.d762b6687b22cbd4.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_09",
+      "subtitle_templates": {
+        "zh": "明明我那么讨厌前辈。",
+        "ja": "先輩のこと、あんなに嫌いだったのに。"
+      },
+      "spoken_text": "先輩のこと、あんなに嫌いだったのに。",
+      "generate_text": "先輩のこと、あんなに嫌いだったのに。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_09.623c2a9601397317.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_10",
+      "subtitle_templates": {
+        "zh": "可是现在，又觉得前辈好可爱呀。",
+        "ja": "今は、先輩がとってもかわいく見えるんです。"
+      },
+      "spoken_text": "今は、先輩がとってもかわいく見えるんです。",
+      "generate_text": "今は、先輩がとってもかわいく見えるんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_10.f2276d6bf78c75ce.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_11",
+      "subtitle_templates": {
+        "zh": "到底是喜欢呢……还是讨厌呢？",
+        "ja": "好きなのかな……嫌いなのかな？"
+      },
+      "spoken_text": "好きなのかな……嫌いなのかな？",
+      "generate_text": "好きなのかな……嫌いなのかな？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_11.f03999181ee9d0ca.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_12",
+      "subtitle_templates": {
+        "zh": "啊哈哈……已经搞不清楚了。",
+        "ja": "あはは……もう、分かんなくなっちゃった。"
+      },
+      "spoken_text": "あはは……もう、分かんなくなっちゃった。",
+      "generate_text": "あはは……[laughs] もう、分かんなくなっちゃった。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_12.5b64cab9464a0a1f.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_13",
+      "subtitle_templates": {
+        "zh": "不过，没关系。",
+        "ja": "でも、大丈夫。"
+      },
+      "spoken_text": "でも、大丈夫。",
+      "generate_text": "でも、大丈夫。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_13.b42542d36c92dd58.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_14",
+      "subtitle_templates": {
+        "zh": "我们再也不用做什么买卖啦。",
+        "ja": "もう、売ったり買ったり、しなくていいんですから。"
+      },
+      "spoken_text": "もう、売ったり買ったり、しなくていいんですから。",
+      "generate_text": "もう、売ったり買ったり、しなくていいんですから。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_14.273f2aa05aa9ab48.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_15",
+      "subtitle_templates": {
+        "zh": "……前辈。",
+        "ja": "……先輩。"
+      },
+      "spoken_text": "……先輩。",
+      "generate_text": "……先輩。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_15.6324bd4292c75b5c.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_16",
+      "subtitle_templates": {
+        "zh": "第一次见面的时候，我就觉得前辈很亲切。",
+        "ja": "初めて会ったときから、優しい人だなって思ってました。"
+      },
+      "spoken_text": "初めて会ったときから、優しい人だなって思ってました。",
+      "generate_text": "初めて会ったときから、優しい人だなって思ってました。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_16.c8267c7bf332fec4.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_17",
+      "subtitle_templates": {
+        "zh": "那时候，还想着以后有机会再来呢。",
+        "ja": "また来られたらいいなって、思ってたんです。"
+      },
+      "spoken_text": "また来られたらいいなって、思ってたんです。",
+      "generate_text": "また来られたらいいなって、思ってたんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_17.bcd4fc43e37bd0fc.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_18",
+      "subtitle_templates": {
+        "zh": "没想到……",
+        "ja": "まさか……。"
+      },
+      "spoken_text": "まさか……。",
+      "generate_text": "まさか……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_18.50b2b6b86eabf42e.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_19",
+      "subtitle_templates": {
+        "zh": "真的会一直留在这里呀。♡",
+        "ja": "本当に、ずっとここにいることになるなんて。"
+      },
+      "spoken_text": "本当に、ずっとここにいることになるなんて。",
+      "generate_text": "本当に、ずっとここにいることになるなんて。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_19.3b77b96172e579d2.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_20",
+      "subtitle_templates": {
+        "zh": "晚安，前辈。",
+        "ja": "おやすみなさい、先輩。"
+      },
+      "spoken_text": "おやすみなさい、先輩。",
+      "generate_text": "おやすみなさい、先輩。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_20.8e2963edfe2608d5.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_05_21",
+      "subtitle_templates": {
+        "zh": "……明天也要在一起哦。",
+        "ja": "……明日も、一緒にいましょうね。"
+      },
+      "spoken_text": "……明日も、一緒にいましょうね。",
+      "generate_text": "……明日も、一緒にいましょうね……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_05_21.9161e47754d02271.wav",
+      "group": "main",
+      "act": 5,
+      "delivery": "渐渐明亮、亲昵而扭曲；最后两句轻下来，不继续大声哭喊。"
+    },
+    {
+      "key": "buyback_prelude_first_accept_0",
+      "subtitle_templates": {
+        "zh": "谢谢前辈。最近店里忙，水总是不够用。",
+        "ja": "ありがとうございます、先輩。最近お店が忙しくて、お水がいつも足りなくなるんです。"
+      },
+      "spoken_text": "ありがとうございます、先輩。最近お店が忙しくて、お水がいつも足りなくなるんです。",
+      "generate_text": "ありがとうございます、先輩。最近お店が忙しくて、お水がいつも足りなくなるんです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_first_accept_0.84f40f1177792ea5.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_first_accept_1",
+      "subtitle_templates": {
+        "zh": "这瓶我先带回去，收店以后再喝。",
+        "ja": "これは持って帰って、お店を閉めてから飲みますね。"
+      },
+      "spoken_text": "これは持って帰って、お店を閉めてから飲みますね。",
+      "generate_text": "これは持って帰って、お店を閉めてから飲みますね。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_first_accept_1.85efcb1f0bad93fe.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_first_return_0",
+      "subtitle_templates": {
+        "zh": "前辈，昨天那种水……还有吗？",
+        "ja": "先輩、昨日のお水……まだありますか？"
+      },
+      "spoken_text": "先輩、昨日のお水……まだありますか？",
+      "generate_text": "先輩、昨日のお水……まだありますか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_first_return_0.ffd41daaa7222d9d.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_first_return_1",
+      "subtitle_templates": {
+        "zh": "收店后喝了一点，后来一直睡不着。",
+        "ja": "お店を閉めてから少し飲んだら、ずっと眠れなくて。"
+      },
+      "spoken_text": "お店を閉めてから少し飲んだら、ずっと眠れなくて。",
+      "generate_text": "お店を閉めてから少し飲んだら、ずっと眠れなくて。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_first_return_1.87ad59e90046ec41.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_first_return_2",
+      "subtitle_templates": {
+        "zh": "可今天出门的时候，还是先往您这边走了……",
+        "ja": "でも今日、出かけるときも、真っ先に先輩のお店に向かってました……。"
+      },
+      "spoken_text": "でも今日、出かけるときも、真っ先に先輩のお店に向かってました……。",
+      "generate_text": "でも今日、出かけるときも、真っ先に先輩のお店に向かってました……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_first_return_2.2e0a78c7e6a0c185.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_second_accept_0",
+      "subtitle_templates": {
+        "zh": "……这个味道。",
+        "ja": "……この味。"
+      },
+      "spoken_text": "……この味。",
+      "generate_text": "……この味。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_second_accept_0.96163932aa5cdf5f.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_second_accept_1",
+      "subtitle_templates": {
+        "zh": "和上次那瓶一样呢。",
+        "ja": "この前のと、同じですね。"
+      },
+      "spoken_text": "この前のと、同じですね。",
+      "generate_text": "この前のと、同じですね。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_second_accept_1.c4c5e7e030d6895a.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_second_accept_2",
+      "subtitle_templates": {
+        "zh": "前辈，这种水……还有吗？",
+        "ja": "先輩、このお水……まだありますか？"
+      },
+      "spoken_text": "先輩、このお水……まだありますか？",
+      "generate_text": "先輩、このお水……まだありますか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_second_accept_2.a784cbbe45f514fe.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_second_accept_3",
+      "subtitle_templates": {
+        "zh": "……不，没什么。",
+        "ja": "……いえ、何でもないです。"
+      },
+      "spoken_text": "……いえ、何でもないです。",
+      "generate_text": "……いえ、何でもないです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_second_accept_3.7ea5a8ff22fcf793.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_second_accept_4",
+      "subtitle_templates": {
+        "zh": "今天就这些。我该回店里了。",
+        "ja": "今日は、これだけで。お店に戻らなくちゃ。"
+      },
+      "spoken_text": "今日は、これだけで。お店に戻らなくちゃ。",
+      "generate_text": "今日は、これだけで。お店に戻らなくちゃ。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_second_accept_4.5c9a26248956298a.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_second_return_0",
+      "subtitle_templates": {
+        "zh": "……前辈。",
+        "ja": "……先輩。"
+      },
+      "spoken_text": "……先輩。",
+      "generate_text": "……先輩。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_second_return_0.6324bd4292c75b5c.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_second_return_1",
+      "subtitle_templates": {
+        "zh": "今天只想过来看看您。",
+        "ja": "今日は、先輩の顔を見たくて来ただけです。"
+      },
+      "spoken_text": "今日は、先輩の顔を見たくて来ただけです。",
+      "generate_text": "今日は、先輩の顔を見たくて来ただけです。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_second_return_1.6e4002812ffaf77b.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_second_return_2",
+      "subtitle_templates": {
+        "zh": "没什么事……您忙您的就好。",
+        "ja": "何でもないです……お仕事、続けてください。"
+      },
+      "spoken_text": "何でもないです……お仕事、続けてください。",
+      "generate_text": "何でもないです……お仕事、続けてください。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_second_return_2.95fb142bf74da937.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_late_return",
+      "subtitle_templates": {
+        "zh": "前辈，上次那种水……还有吗？",
+        "ja": "先輩、この前のお水……まだありますか？"
+      },
+      "spoken_text": "先輩、この前のお水……まだありますか？",
+      "generate_text": "先輩、この前のお水……まだありますか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_late_return.f31e63d357e77b70.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_repeat",
+      "subtitle_templates": {
+        "zh": "……前辈，我想再看看水。",
+        "ja": "……先輩、お水を、もう少し見せてもらえますか。"
+      },
+      "spoken_text": "……先輩、お水を、もう少し見せてもらえますか。",
+      "generate_text": "……先輩、お水を、もう少し見せてもらえますか。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_repeat.a7da26022277f9bc.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_accept_clean",
+      "subtitle_templates": {
+        "zh": "嗯，谢谢前辈。",
+        "ja": "はい。ありがとうございます、先輩。"
+      },
+      "spoken_text": "はい。ありがとうございます、先輩。",
+      "generate_text": "はい。ありがとうございます、先輩。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_accept_clean.9ae83bb22c080f2c.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_prelude_goodbye",
+      "subtitle_templates": {
+        "zh": "……那我先回去了。",
+        "ja": "……それじゃ、戻りますね。"
+      },
+      "spoken_text": "……それじゃ、戻りますね。",
+      "generate_text": "……それじゃ、戻りますね。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_prelude_goodbye.e47cf9489b33a44d.wav",
+      "group": "prelude",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_refusal_retry_line",
+      "subtitle_templates": {
+        "zh": "前辈我知道你没睡，求你开开门好不好？",
+        "ja": "先輩、起きてるの、分かってます。お願い、ドアを開けてくれませんか？"
+      },
+      "spoken_text": "先輩、起きてるの、分かってます。お願い、ドアを開けてくれませんか？",
+      "generate_text": "先輩、起きてるの、分かってます。お願い、ドアを開けてくれませんか？",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_refusal_retry_line.2373c1f5f698f705.wav",
+      "group": "refusal",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_refusal_third_lines_0",
+      "subtitle_templates": {
+        "zh": "前辈，求求你一定要开门。",
+        "ja": "先輩、お願いです。どうか、開けてください。"
+      },
+      "spoken_text": "先輩、お願いです。どうか、開けてください。",
+      "generate_text": "先輩、お願いです。どうか、開けてください。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_refusal_third_lines_0.ae83873c27dedd98.wav",
+      "group": "refusal",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_refusal_third_lines_1",
+      "subtitle_templates": {
+        "zh": "你让我做什么都可以~",
+        "ja": "何でもしますから……。"
+      },
+      "spoken_text": "何でもしますから……。",
+      "generate_text": "何でもしますから……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_refusal_third_lines_1.ed7beb4f3673564d.wav",
+      "group": "refusal",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    },
+    {
+      "key": "buyback_refusal_farewell_line",
+      "subtitle_templates": {
+        "zh": "算了，明天我再来找前辈，前辈请耐心等我......。",
+        "ja": "もういいです。明日、また会いに来ますから。先輩、待っていてくださいね……。"
+      },
+      "spoken_text": "もういいです。明日、また会いに来ますから。先輩、待っていてくださいね……。",
+      "generate_text": "もういいです。明日、また会いに来ますから。先輩、待っていてくださいね……。",
+      "reviewed": true,
+      "generic": false,
+      "audio": "assets/permanent-buyback/voice/ja/buyback_refusal_farewell_line.2ef80a5a5656deb1.wav",
+      "group": "refusal",
+      "act": 0,
+      "delivery": "少女自然口语；前置逐渐不安，门外拒绝分支带恳求。"
+    }
+  ]
+}

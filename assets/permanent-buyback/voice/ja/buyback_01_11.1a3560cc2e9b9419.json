@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "だから……まだ勇気があるうちに……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "31",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.908,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 187640
+  },
+  "sha256": "fcf91786e73bbcc50277b31665cf546914596b6b4db8be13061862f375b2e738",
+  "binding": {
+    "key": "buyback_01_11",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "所以……想趁着还有勇气的时候……",
+      "ja": "だから……まだ勇気があるうちに……。"
+    },
+    "generic": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "こんな夜中に……誰かに会いに来たの、初めてなんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "48",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 6.045,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 290204
+  },
+  "sha256": "5f37ebedb5028e9738ab223a0de0001623882e8d6a1ebb9c8fe9ca7884e07e12",
+  "binding": {
+    "key": "buyback_01_09",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "我还是第一次……这么晚跑来找一个人呢。",
+      "ja": "こんな夜中に……誰かに会いに来たの、初めてなんです。"
+    },
+    "generic": false
+  }
+}

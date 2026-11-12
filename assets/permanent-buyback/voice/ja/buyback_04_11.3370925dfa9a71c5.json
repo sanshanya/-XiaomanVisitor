@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "ごめんなさい……[exhale]",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "22",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 2.708,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 130014
+  },
+  "sha256": "298d3e303ec6c484255bab31401b7009c64769a7963c9fe319fd45ebd159a543",
+  "binding": {
+    "key": "buyback_04_11",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "对不起……",
+      "ja": "ごめんなさい……。"
+    },
+    "generic": false
+  }
+}

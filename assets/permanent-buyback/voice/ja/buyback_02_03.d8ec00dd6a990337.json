@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "実はね……出かける前、ずっと鏡を見ていたんです。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "44",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 5.763,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 276652
+  },
+  "sha256": "725307b8628ad2f866daa0d22b6d4804e034168b7b11f112016b8f6e48e9aad2",
+  "binding": {
+    "key": "buyback_02_03",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "其实呢……我今天出门之前，对着镜子看了好久。",
+      "ja": "実はね……出かける前、ずっと鏡を見ていたんです。"
+    },
+    "generic": false
+  }
+}

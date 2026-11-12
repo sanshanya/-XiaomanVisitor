@@ -1,0 +1,37 @@
+{
+  "provider": "VUI Labs",
+  "request": {
+    "voice_id": "ayano",
+    "generate_text": "おかしいって、分かってるのに……。",
+    "language": "ja",
+    "model_id": "luna-tts-1.5",
+    "text_normalization": true,
+    "speed": 1.1,
+    "volume": 0,
+    "audio_format": "wav"
+  },
+  "response_headers": {
+    "X-Luna-Resolved-Model": "luna-tts-1.5",
+    "X-Luna-Billable-Characters": "30",
+    "X-Audio-Sample-Rate": "24000",
+    "X-Audio-Channels": "1",
+    "X-Audio-Bit-Depth": "16"
+  },
+  "audio": {
+    "seconds": 3.399,
+    "sample_rate": 24000,
+    "channels": 1,
+    "bit_depth": 16,
+    "bytes": 163218
+  },
+  "sha256": "2ddf59bf0f79dc4726859b6e750ffa06a7ae8929ca28508ad2c9a42e7b1f1585",
+  "binding": {
+    "key": "buyback_02_22",
+    "language": "ja",
+    "subtitle_templates": {
+      "zh": "明明知道不对劲……",
+      "ja": "おかしいって、分かってるのに……。"
+    },
+    "generic": false
+  }
+}
