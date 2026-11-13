@@ -12,7 +12,7 @@ namespace XiaomanVisitor
         private void SaveSupport(SupportProgress p) { ModHelper.SetModData(Id,SupportProgress.SaveKey,p.Data); }
         private void EnableWeekFour()
         {
-            PhoneClientList.DialogFuncs[SupportPhoneId]=_ => SupportCall();
+            PhoneClientList.DialogFuncs[SupportPhoneId]=SupportCall;
             ModHook.OnGameLoadedLate+=TickWeekFour;
             ModHook.OnWakingUpLate+=TickWeekFour;
             ModHook.OnShutterOpenedLate+=TickWeekFour;
@@ -79,18 +79,18 @@ namespace XiaomanVisitor
             return XiaomanNewspaper.SupportArticle(StoreStation.Instance.dayCounter,Text("xm_w04_news_title"),
                 Text("xm_w04_news_body")+"\n\n"+Text("ui_w04_phone",p.PhoneNumber>0?p.PhoneNumber:SupplyConfig.PhoneNumber));
         }
-        private Dialogue SupportCall()
+        private Dialogue SupportCall(StorePhoneClient owner)
         {
+            long call=++phoneCallSequence;
             var p=ReadSupport();int day=StoreStation.Instance.dayCounter;
             string speaker=Text("ui_w04_phone_name");
             Func<string,Dialogue> line=key => new Dialogue().SetText(speaker,Text(key));
-            Action end=() => PhoneUIManager.Instance.OnPhoneDialogEnd();
+            Action end=PhoneAction(owner,call,() => PhoneUIManager.Instance.OnPhoneDialogEnd());
             if (!enabled || !SupportProgress.RegistrationOpen(day)) return line("xm_w04_phone_closed").SetEndAction(end);
             if (p.AppliedDay>=22) return line("ui_w04_registered").SetEndAction(end);
-            return line("xm_w04_phone_01").SetNextDialogue(SupportPhoneDialog.Choices((title,key) => new Dialogue().SetText(title??speaker,Text(key)),() => DirectoryMaster.Item("$"),() => {
-                if (!enabled) return;
+            return line("xm_w04_phone_01").SetNextDialogue(SupportPhoneDialog.Choices((title,key) => new Dialogue().SetText(title??speaker,Text(key)),() => DirectoryMaster.Item("$"),PhoneAction(owner,call,() => {
                 var state=ReadSupport();if (state.Apply(StoreStation.Instance.dayCounter,WorkRunIdentity)) SaveSupport(state);
-            },end));
+            }),end));
         }
         private void QueueSupportVisitors(StoreClientManager manager)
         {
@@ -123,19 +123,19 @@ namespace XiaomanVisitor
                 if (tail==null) c.mainDialogue=d;else tail.nextDialogue=d;tail=d;
             }
             c.mainDialogue.startAction+=() => { var p=ReadSupport();if (wang) p.WangSeen=true;else p.AuditorSeen=true;SaveSupport(p); };
-            if (wang) tail.SetEndAction(() => PlayerStore.Instance.DismissCurrentClient(false));
+            if (wang) tail.SetEndAction(VisitorAction(c,() => PlayerStore.Instance.DismissCurrentClient(false)));
             else {
                 c.SetBudget(SupplyConfig.AuditorBudget);c.clientBuyingTagList.Add("SUBSTANCE");
                 c.willAcceptItem=item => item!=null && item.IsTag("SUBSTANCE") && !item.IsTag("CONTRABAND");
-                tail.SetEndAction(c.OnIntroduced);
+                tail.SetEndAction(VisitorAction(c,c.OnIntroduced));
                 c.acceptDealDialogue=new Dialogue().SetText(c.displayName,Text("xm_w04_audit_accept"));
                 c.repeatDialogue=new Dialogue().SetText(c.displayName,Text("xm_w04_audit_shop",SupplyConfig.AuditorBudget));
-                c.allDoneDialogue=new Dialogue().SetText(c.displayName,Text("xm_w04_audit_bye")).SetEndAction(() => PlayerStore.Instance.DismissCurrentClient(false));
+                c.allDoneDialogue=new Dialogue().SetText(c.displayName,Text("xm_w04_audit_bye")).SetEndAction(VisitorAction(c,() => PlayerStore.Instance.DismissCurrentClient(false)));
                 bool sold=false,saidBye=false;c.onItemBought+=(i,cost) => sold=true;
                 c.tryInterceptDismiss=() => {
                     if (saidBye) return false;saidBye=true;
                     var d=new Dialogue().SetText(c.displayName,Text(sold?"xm_w04_audit_bye":"xm_w04_audit_no_trade"));
-                    d.SetEndAction(() => PlayerStore.Instance.DismissCurrentClient(false));return DialogUIManager.Instance.StartDialogue(d);
+                    d.SetEndAction(VisitorAction(c,() => PlayerStore.Instance.DismissCurrentClient(false)));return DialogUIManager.Instance.StartDialogue(d);
                 };
                 c.OnDismiss=() => { var p=ReadSupport();p.AuditorComplete=true;SaveSupport(p); };
             }

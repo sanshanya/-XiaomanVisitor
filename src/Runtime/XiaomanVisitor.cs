@@ -86,6 +86,7 @@ namespace XiaomanVisitor
 
         public void OnDisable()
         {
+            phoneCallSequence++;
             buyback?.OnDisable();
             ShutdownGunReaction();
             enabled = false;
@@ -126,6 +127,8 @@ namespace XiaomanVisitor
 
         private void OnGameLoaded()
         {
+            phoneCallSequence++;
+            CancelTavernSpeech(); // Loading never completes an abandoned night conversation.
             CloseTavernCassettePlayer();
             CloseTavernMenu(); // Old contract controls must not survive a same-day reload.
             ResetGunReaction();

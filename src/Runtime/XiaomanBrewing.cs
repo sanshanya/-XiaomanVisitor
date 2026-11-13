@@ -138,18 +138,18 @@ namespace XiaomanVisitor
                 RegisterBrewingArrival(c);
                 TryDeliverBrewing();
             };
-            request.SetEndAction(() => {
+            request.SetEndAction(VisitorAction(c,() => {
                 c.OnIntroduced();
                 if (c.clientIntent==StoreClient.ClientIntent.BARTER) {
                     c.barterOffer.InstanciateOffer();
                     NegociationUIManager.Instance.OpenUI();
                 }
                 else TryFinishBrewingDelivery();
-            });
+            }));
             c.acceptDealDialogue=Line(c,"xm_brew_accept",Mood.Smile);
             c.repeatDialogue=Line(c,MayCollectBrewing?"xm_brew_request":"xm_brew_last",Mood.Soft);
             c.placedWrongItemWhenSellingToDialogue=Line(c,"xm_brew_wrong",Mood.Soft);
-            c.allDoneDialogue=Line(c,"xm_brew_bye",Mood.Soft).SetEndAction(() => PlayerStore.Instance.DismissCurrentClient(false));
+            c.allDoneDialogue=Line(c,"xm_brew_bye",Mood.Soft).SetEndAction(VisitorAction(c,() => PlayerStore.Instance.DismissCurrentClient(false)));
             c.OnArrival=() => { SetMood(c,Mood.Neutral);RegisterBrewingArrival(c); };
             c.OnDismiss=() => { brewingRenewalClient=null;Voice?.Stop();ResetGunReaction();SetMood(c,Mood.Neutral); };
             c.CompleteClientCreation();return c;

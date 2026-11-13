@@ -31,7 +31,7 @@ namespace XiaomanVisitor
             var tail=AppendWorkThanks(head,client,false);
             client.mainDialogue=head.nextDialogue;
             tail=Append(tail,client,"xm_w03_thanks_shop",Mood.Neutral);
-            tail.SetEndAction(() => { client.OnIntroduced();SetMood(client,Mood.Neutral); });
+            tail.SetEndAction(VisitorAction(client,() => { client.OnIntroduced();SetMood(client,Mood.Neutral); }));
             client.acceptDealDialogue=Line(client,"accept_return",Mood.Smile);
             client.placedWrongItemWhenSellingToDialogue=Line(client,"wrong_item",Mood.Worried);
             client.placeRightItemWhenSellingToDialogue=Line(client,"right_item",Mood.Soft);

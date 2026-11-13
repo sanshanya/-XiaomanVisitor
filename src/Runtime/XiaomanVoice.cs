@@ -250,23 +250,31 @@ namespace XiaomanVisitor
             action = () => ModHelper.StartCoroutine(XiaomanMod.Id, WaitFlow(owner, line, original));
         }
 
+        private bool WaitingForLine(Dialogue line)
+        {
+            // Native final lines schedule closing and the end action separately.
+            // Finish the queued action before closing or advancing its owner;
+            // otherwise the cleared currentDialog makes WaitAction drop the trade.
+            return mod != null && (mod.VoiceWait.Value && BusyFor(line) || pendingActions.Contains(line));
+        }
+
         private IEnumerator WaitFlow(DialogUIManager owner, Dialogue line, Action action)
         {
-            while (owner != null && owner.currentDialog == line && mod != null && mod.VoiceWait.Value && BusyFor(line)) yield return null;
+            while (owner != null && owner.currentDialog == line && WaitingForLine(line)) yield return null;
             if (owner != null && owner.isActiveAndEnabled && owner.currentDialog == line) action();
         }
 
         internal bool DeferEnd(DialogUIManager owner)
         {
             Dialogue line = owner.currentDialog;
-            if (mod == null || !mod.VoiceWait.Value || !BusyFor(line)) return false;
+            if (!WaitingForLine(line)) return false;
             if (pendingEnds.Add(line)) ModHelper.StartCoroutine(XiaomanMod.Id, WaitEnd(owner, line));
             return true;
         }
 
         private IEnumerator WaitEnd(DialogUIManager owner, Dialogue line)
         {
-            while (owner != null && owner.currentDialog == line && mod != null && mod.VoiceWait.Value && BusyFor(line)) yield return null;
+            while (owner != null && owner.currentDialog == line && WaitingForLine(line)) yield return null;
             pendingEnds.Remove(line);
             if (owner != null && owner.isActiveAndEnabled && owner.currentDialog == line) owner.EndConversation();
         }

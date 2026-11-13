@@ -49,14 +49,19 @@ namespace XiaomanVisitor
         {
             ModHook.OnGameLoadedEarly+=CloseEconomyWindow;
             if (!TavernMapEnabled) { ModHook.OnGameLoadedLate+=RemoveEconomyPhone;RemoveEconomyPhone();return; }
-            PhoneClientList.DialogFuncs[EconomyPhoneId]=_ => new Dialogue().SetText(Text("ui_eco_phone"),Text("ui_eco_phone_line"))
-                .SetEndAction(() => { PhoneUIManager.Instance.OnPhoneDialogEnd();if (EconomyAvailable) ShowEconomyWindow(); });
+            PhoneClientList.DialogFuncs[EconomyPhoneId]=EconomyCall;
             ModHook.OnGameLoadedLate+=ReloadEconomy;
             ModHook.OnWakingUpLate+=TickEconomy;
             ModHook.OnShutterOpenedLate+=OnEconomyBusinessDay;
             ModHook.OnGoingSleepEarly+=TickEconomy;
             ModHook.OnReturningStoreLate+=TickEconomy;
             UpdateEconomyLedgerAccess();
+        }
+        private Dialogue EconomyCall(StorePhoneClient owner)
+        {
+            long call=++phoneCallSequence;
+            return new Dialogue().SetText(Text("ui_eco_phone"),Text("ui_eco_phone_line"))
+                .SetEndAction(PhoneAction(owner,call,() => { PhoneUIManager.Instance.OnPhoneDialogEnd();if (EconomyAvailable) ShowEconomyWindow(); }));
         }
         private void DisableEconomy()
         {

@@ -88,6 +88,11 @@ namespace XiaomanVisitor
             tavernDialogueDone=done; tavernSequence=true; tavernInputBlocked=blockInput;
             ShowNextTavernLine();
         }
+        private void CancelTavernSpeech()
+        {
+            tavernLines.Clear();tavernSequence=false;tavernInputBlocked=false;tavernDialogueDone=null;
+            tavernStage?.CancelSpeech();
+        }
         private void ShowNextTavernLine()
         {
             if (tavernStage==null || tavernStage.Speaking) return;
@@ -312,7 +317,7 @@ namespace XiaomanVisitor
         {
             CloseEconomyWindow();
             CancelTavernWork();CloseTavernCassettePlayer();
-            tavernLines.Clear(); tavernSequence=false; tavernInputBlocked=false; tavernDialogueDone=null;
+            CancelTavernSpeech();
             CloseTavernMenu(); tavernStage?.EndSession();
             // Disable every owned hotspot even if a native travel callback is interrupted.
             if (tavernStage!=null) tavernStage.gameObject.SetActive(false);

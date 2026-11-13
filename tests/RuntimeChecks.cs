@@ -37,6 +37,7 @@ internal static class CheckMod
         CheckStory.Run(package, Require); WeekOneChecks.Run(package, Require); CheckDrinks(); CheckBuffs(); CheckNativeBindings(); CheckVoices(); CheckPortraitTiming(); CheckPaper(); CheckNotebook(); CheckCassetteCase(); CheckTavernMap(); CheckTavernProgress(); CheckPortraitDetail(); CheckShopPortrait(); GunReactionChecks.Run(package, Require); WeekFourChecks.Run(package,Require); WeekFiveSixChecks.Run(Require); WeekSevenEightChecks.Run(Require); WeekNineChecks.Run(Require); WeekTenChecks.Run(Require); WeekElevenChecks.Run(Require);
         EndingChecks.Run(Require);
         BrewingChecks.Run(Require);
+        DialogueCallbackChecks.Run(Require);
         EconomyChecks.Run(Require);
         Console.WriteLine("PASS: " + assertions + " assertions; native manifest, capability scanner and paper parser accepted.");
         return 0;

@@ -44,7 +44,7 @@ namespace XiaomanVisitor
             };
             var last = first; while (last.nextDialogue != null) last = last.nextDialogue;
             var final = last;
-            final.SetEndAction(() => client.OnDealAccepted(final));
+            final.SetEndAction(VisitorAction(client,() => client.OnDealAccepted(final)));
             client.acceptDealDialogue = first; client.acceptDealDialoguePlayed = false;
         }
         internal StoreClient BuybackReturn(string[] text, string repeat, string accept, string goodbye, Action seen)
@@ -56,7 +56,7 @@ namespace XiaomanVisitor
             client.mainDialogue = BuybackLines(client, text, "buyback_return", Mood.Worried);
             client.mainDialogue.startAction += seen;
             var last = client.mainDialogue; while (last.nextDialogue != null) last = last.nextDialogue;
-            last.SetEndAction(() => client.OnIntroduced());
+            last.SetEndAction(VisitorAction(client,() => client.OnIntroduced()));
             client.repeatDialogue = BuybackLines(client, new[] { repeat }, "buyback_repeat", Mood.Worried);
             client.acceptDealDialogue = BuybackLines(client, new[] { accept }, "buyback_clean", Mood.Soft);
             client.allDoneDialogue = BuybackLines(client, new[] { goodbye }, "buyback_goodbye", Mood.Worried)
