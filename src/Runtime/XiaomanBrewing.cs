@@ -270,11 +270,23 @@ namespace XiaomanVisitor
                 bottle.name=Text(small?"ui_brew_sample_name":"ui_brew_bottle_name");
                 bottle.shortDescription=Text(small?"ui_brew_sample_desc":"ui_brew_bottle_desc");
                 bottle.unitValue=small?BrewingConfig.SampleValue:BrewingConfig.BottleValue;
+                ApplyBrewingBottleAppearance(bottle,small);
             };
             describe(item);item.onLoaded+=describe;
             item.SetGameItemType("SUBSTANCE");item.SetGameItemType("ALCOHOL");
             AudioHelper.InitGlass(item);ConsumableHelper.InitAlcohol(item,1);
             ModHelper.SetSource(item,Id,ModName);return item;
+        }
+        private void ApplyBrewingBottleAppearance(GameItem bottle,bool small)
+        {
+            string key=small?"xiaoman_brewing_small":"xiaoman_brewing_large";
+            var loaded=ModLoader.Mods.Find(entry => entry.Manifest.ID==Id);
+            UnityEngine.Sprite sprite;
+            if (loaded==null || !loaded.Sprites.TryGetValue(key,out sprite) || sprite==null) return;
+            // SetSprite changes presentation only. Preserve the native template's
+            // shape (small 1x2 / large 1x4), including saved item orientation.
+            bottle.useSpriteFromMod=true;
+            bottle.SetSprite(Id,key);
         }
     }
     [HarmonyPatch(typeof(PlayerStore),"AcceptBarter")]

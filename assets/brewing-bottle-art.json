@@ -1,0 +1,62 @@
+{
+  "schema": 1,
+  "method": "individual_mod_sprites_preserving_native_shapes",
+  "provider": "built-in imagegen",
+  "note": "按原生瓶型制作的青蓝瓶身／浅色雨滴标签；仅外观，不导入参考模组图片或代码。",
+  "files": [
+    {
+      "key": "small",
+      "native_item": "mini_bottle",
+      "native_atlas": "Items/water_container3",
+      "native_sprite": "mini",
+      "source": "assets/drinks/bottled/small-source.png",
+      "packaged": "Textures/Items/xiaoman_brewing_small.png",
+      "sprite_key": "xiaoman_brewing_small",
+      "size": [
+        16,
+        32
+      ],
+      "footprint": [
+        1,
+        2
+      ],
+      "price": 30,
+      "prompt": "Edit target: the attached tiny 16x32-pixel transparent game inventory bottle sprite. Create Xiaoman's SMALL bottled tavern drink using this identical upright silhouette, canvas proportions and simple low-resolution retro pixel-art style. Keep one slim short bottle, no extra objects. The exact desired logical resolution is 16 pixels wide x32 pixels high; all details must remain legible at that size. Replace the empty gray plastic appearance with muted blue-teal glass containing a pale blue drink, an indigo sealed cap, and a small warm ivory paper label with just a dark teal raindrop symbol (no words). Limited muted palette, dark blue-purple single-pixel outline, small cool glass highlights, solid square pixels, flat 2D inventory icon. Fill the canvas to exactly the same relative position and scale as the reference. Transparent background and transparent corner pixels. No cast shadows, frame, scene, gradients, antialiasing, realistic rendering or perspective. Output only the finished sprite. If the renderer requires a larger image, use an exact nearest-neighbor enlargement of a 16x32 pixel design; do not add surrounding margins.",
+      "native_bounds": [
+        1,
+        0,
+        15,
+        32
+      ],
+      "source_sha256": "e58b5cf8abc7aa5f6d8df0a5212357258eef518c42a170cc3976f185e5bfeee2",
+      "sha256": "1a1f64d92aa9857d531b00d68d2863cd1d3619ef92705114ee38bc19888168ec"
+    },
+    {
+      "key": "large",
+      "native_item": "wine_bottle",
+      "native_atlas": "Items/items_winemaking",
+      "native_sprite": "wine_bottle",
+      "source": "assets/drinks/bottled/large-source.png",
+      "packaged": "Textures/Items/xiaoman_brewing_large.png",
+      "sprite_key": "xiaoman_brewing_large",
+      "size": [
+        16,
+        64
+      ],
+      "footprint": [
+        1,
+        4
+      ],
+      "price": 150,
+      "prompt": "Edit target: the attached tiny 16x64-pixel transparent game inventory wine bottle sprite. Create Xiaoman's LARGE bottled tavern drink using this identical upright tall thin bottle silhouette, long neck, canvas proportions and low-resolution retro pixel-art style. One bottle only. The exact desired logical resolution is 16 pixels wide x64 pixels high; design strictly for this extremely narrow icon. Replace the empty brown-gray glass appearance with muted rich blue-teal glass containing pale blue drink, an indigo sealed neck with a narrow ivory collar, and a warm ivory paper label on the body with a tiny dark teal raindrop symbol and two short abstract horizontal marks (no words). It must look like the large companion of a small blue-teal bottle with ivory label and indigo cap. Limited muted palette, dark blue-purple single-pixel outline, few cool glass highlights, solid square pixels, flat 2D inventory icon. Preserve the same relative bounds, bottle thickness and exact relative position as the reference. Transparent background and transparent corner pixels. No cast shadows, frame, scene, gradients, antialiasing, realistic rendering or perspective. Output only the finished sprite. If the renderer requires a larger image, use an exact nearest-neighbor enlargement of a 16x64 pixel design; do not add surrounding margins.",
+      "native_bounds": [
+        0,
+        3,
+        16,
+        63
+      ],
+      "source_sha256": "aade9485001b3f2c211914f6cef8b415adea49c41152b052ff9084073028b173",
+      "sha256": "dd6c32654e7cf91a601a4c00121bac8c1e5267154dce9bc747163c7e1e1fe8d6"
+    }
+  ]
+}

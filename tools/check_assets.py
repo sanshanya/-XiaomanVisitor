@@ -97,6 +97,16 @@ def main():
         assert target.size==(16,32) and target.tobytes()==derived.tobytes(), 'Special drink palette/shape differs from its source recipe'
     assert len({art['sha256'] for art in luxury_art['files']})==4, 'Special drinks need distinct colors'
     crate=json.loads((ROOT/'assets/wine-crate-style.json').read_text(encoding='utf-8'))
+    bottle_style=json.loads((ROOT/'assets/brewing-bottle-art.json').read_text(encoding='utf-8'))
+    from prepare_brewing_bottle_art import render as render_bottle
+    for art in bottle_style['files']:
+        expected[art['packaged']]=art['sha256']
+        assert hashlib.sha256((ROOT/art['source']).read_bytes()).hexdigest()==art['source_sha256']
+        target=Image.open(PACKAGE/art['packaged']).convert('RGBA')
+        imported=render_bottle(art)
+        assert list(target.size)==art['size'] and target.tobytes()==imported.tobytes(), 'Stale bottle artwork import'
+        assert set(target.getchannel('A').tobytes()).issubset({0,255}), 'Bottle alpha must match the pixel style'
+    assert [(a['size'],a['footprint'],a['price']) for a in bottle_style['files']]==[([16,32],[1,2],30),([16,64],[1,4],150)]
     expected[crate['packaged']]=crate['sha256']
     crate_image=Image.open(PACKAGE/crate['packaged']).convert('RGBA')
     assert list(crate_image.size)==crate['size']==[48,48] and crate['footprint']==[3,3], 'Wine crate sprite exceeds its inventory footprint'
