@@ -236,6 +236,15 @@ namespace XiaomanVisitor
             return effects.TryGetValue(effect, out buff) ? buff.ActiveAmount(effect, today) : 0;
         }
 
+        public bool SameEffect(DrinkBuffCollection other, DrinkEffect effect, int today)
+        {
+            DrinkBuffProgress left, right;
+            bool hasLeft=effects.TryGetValue(effect,out left) && left.IsActive(today);
+            bool hasRight=other.effects.TryGetValue(effect,out right) && right.IsActive(today);
+            return !hasLeft && !hasRight || hasLeft && hasRight && left.Key==right.Key
+                && left.Amount==right.Amount && left.UntilDay==right.UntilDay;
+        }
+
         public bool Expire(int today)
         {
             bool changed = false;

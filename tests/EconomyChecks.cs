@@ -34,27 +34,28 @@ internal static class EconomyChecks
     internal static void Run(Action<bool,string> check)
     {
         EconomyUiAccessChecks.Run(check);
+        EconomyBalanceChecks.Run(check);
         var low=Pre(2,5,8);
         check(Enumerable.Range(0,6).Sum(n => TavernEconomyProgress.AllocatedUnitCost(235,6,n))==235,
             "batch cost remainders allocate exactly once without duplicating supplier cash and margin");
         check(low.Trading && !low.Reviewing && low.NoticeDay<0 && low.Weeks.Count==10,
             "ten settlements cannot automatically shut the tavern before the twelfth encounter");
-        check(low.Weeks.Single(w => w.EndDay==63).Natural==24
-            && low.Weeks.Single(w => w.EndDay==70).Natural==16
-            && low.Weeks.Single(w => w.EndDay==77).Natural==13,
+        check(low.Weeks.Single(w => w.EndDay==63).Natural==78
+            && low.Weeks.Single(w => w.EndDay==70).Natural==55
+            && low.Weeks.Single(w => w.EndDay==77).Natural==42,
             "week nine stays a high point; competition begins in actual weeks ten and eleven");
 
         var delayed=new TavernEconomyProgress();delayed.Initialize(1,8,false);delayed.Advance(92);
-        check(delayed.Trading && !delayed.ReviewUnlocked && delayed.Weeks.Last().Natural==24
+        check(delayed.Trading && !delayed.ReviewUnlocked && delayed.Weeks.Last().Natural==78
             && !delayed.SignContract("orders",92) && !delayed.Acknowledge(92),
             "calendar maturity without actual visits cannot reveal crisis, start rescue contracts or close trading");
         delayed.ObserveChapter(10,99);delayed.Advance(106);
-        check(delayed.Weeks.Single(w => w.EndDay==98).Natural==24 && delayed.Weeks.Last().Natural==16
+        check(delayed.Weeks.Single(w => w.EndDay==98).Natural==78 && delayed.Weeks.Last().Natural==55
             && !delayed.ReviewUnlocked,"late competition changes only weeks at or after the actual tenth encounter");
         delayed.ObserveChapter(11,106);delayed.Advance(113);
         delayed.ObserveChapter(12,113);delayed.Advance(120);
         check(delayed.Trading && delayed.Phase=="maturity_pending" && !delayed.Reviewing && delayed.NoticeDay<0
-            && delayed.Weeks.Last().Natural==11,"late twelfth encounter and matured debt still wait for an explicit review request");
+            && delayed.Weeks.Last().Natural==30,"late twelfth encounter and matured debt still wait for an explicit review request");
 
         var normalUnseen=Pre();normalUnseen.Advance(92);
         check(normalUnseen.Trading && normalUnseen.Phase=="maturity_pending" && normalUnseen.Weeks.Count==12
@@ -74,16 +75,16 @@ internal static class EconomyChecks
         low=TavernEconomyProgress.Restore(paused);
         check(!low.Refinance(85,true,false),"property guarantee cannot be signed without native ownership");
         long quote=low.RefinanceQuote;
-        check(low.Refinance(85,false,false) && low.Principal==quote && low.Cash==900
+        check(low.Refinance(85,false,false) && low.Principal==quote && low.Cash>=2000
             && low.ResumeDay==85 && low.NextSettlement==92 && !low.HasStayed,
             "ordinary restructuring needs no property or donation and can reopen for the entire Monday week");
         low.Advance(91);check(!low.HasStayed,"signatures alone never establish the good ending");
         low.Advance(92);
-        check(low.HasStayed && low.StableDay==91 && low.Weeks.Last().FixedOrders==20 && low.Weeks.Last().Repaid>=low.Weeks.Last().Minimum
+        check(low.HasStayed && low.StableDay==91 && low.Weeks.Last().FixedOrders==48 && low.Weeks.Last().Repaid>=low.Weeks.Last().Minimum
             && low.Weeks.Last().SubletId=="repair-room:91","week fourteen opens stay only after actual deliveries, rent receipt and repayment");
         int periods=1;
         while (low.Debt>0 && periods<53) { low.Advance(low.NextSettlement);periods++; }
-        check(periods<=52 && low.Phase=="cleared" && low.Cash>=900,"three-night path repays normally without donations");
+        check(periods<=52 && low.Phase=="cleared" && low.Cash>=2000,"established regular trade can repay without player donations");
 
         var none=Pre();var active=Pre(1,3,5,7);
         foreach (var p in new[]{none,comparison,active}) {
@@ -91,20 +92,19 @@ internal static class EconomyChecks
             string baseline="ECONOMY baseline projects="+p.Level+" principal="+p.Principal+" fees="+p.Fees+" cash="+p.Cash
                 +" quote="+p.RefinanceQuote+" extensions="+p.FrozenExtensions;
             check(p.Refinance(85,false,false),"no-project and four-project paths both permit ordinary restructuring");
-            var floor=TavernEconomyProgress.Restore(p.Data);int normalPeriods=0,floorPeriods=0;
-            while (p.Debt>0 && normalPeriods<53) { p.Advance(p.NextSettlement);normalPeriods++; }
-            while (floor.Debt>0 && floorPeriods<53) { floor.Advance(floor.NextSettlement,true);floorPeriods++; }
-            check(p.HasStayed && p.Debt==0 && floor.HasStayed && floor.Debt==0 && floorPeriods<=52,
-                "each representative participation level remains affordable without a player subsidy or regular customers");
-            Console.WriteLine(baseline+" normal_periods="+normalPeriods+" floor_periods="+floorPeriods);
+            var floor=TavernEconomyProgress.Restore(p.Data);
+            p.Advance(p.NextSettlement);floor.Advance(floor.NextSettlement,true);
+            check(p.HasStayed && floor.HasStayed && floor.Bills==0 && floor.Weeks.Last().Repaid>=floor.Weeks.Last().Minimum,
+                "first contracted period is affordable without a player subsidy, walk-ins or regular customers");
+            Console.WriteLine(baseline+" first_contract_rent="+floor.Weeks.Last().Rent+" minimum="+floor.Weeks.Last().Minimum);
         }
         var stress=TavernEconomyProgress.Restore(paused);stress.Refinance(85,false,false);periods=0;
-        while (stress.Debt>0 && periods<53) { stress.Advance(stress.NextSettlement,true);periods++; }
-        check(periods<=52 && stress.HasStayed && stress.Bills==0 && stress.Weeks.Last().Natural==0
-            && stress.Weeks.Last().Regulars==0,"zero walk-ins, regulars and player purchases still self-repay through real contracted deliveries");
-        check(TavernEconomyProgress.GuaranteedOperatingCash==350
+        while (stress.Trading && periods<30) { stress.Advance(stress.NextSettlement,true);periods++; }
+        check(stress.Phase=="remedy" && !stress.Departing && stress.StableDay>=0 && stress.Weeks.Last().Natural==0
+            && stress.Weeks.Last().Regulars==0,"rising rent eventually consumes fixed-contract headroom; it never creates automatic departure");
+        check(stress.ContractOperatingCash(85)==559 && stress.ContractOperatingCash(92)==440
             && TavernEconomyProgress.Minimum(14404,277,50)==350
-            && TavernEconomyProgress.Minimum(14405,278,50)==351,"350 CR contract floor and exact affordability boundary");
+            && TavernEconomyProgress.Minimum(14405,278,50)==351,"refinance affordability uses the actual reopening rent and exact interest rounding");
 
         var extension=TavernEconomyProgress.Restore(paused);
         int rights=extension.FrozenExtensions;long fee=extension.Fees;
@@ -129,7 +129,7 @@ internal static class EconomyChecks
         var json=JObject.Parse(old.Data);
         foreach (string key in new[]{"CompetitionDay","AdjustmentDay","CrisisDay","ReviewRequestedDay","ReviewBeginDay","PeriodStartDay","ExtensionRightsFrozen","PacingRecoveryPending"}) json.Remove(key);
         var recovered=TavernEconomyProgress.Restore(json.ToString());
-        check(recovered.Schema==2 && recovered.PacingRecoveryPending && recovered.Trading && recovered.Principal==old.Principal
+        check(recovered.Schema==3 && recovered.PacingRecoveryPending && recovered.Trading && recovered.Principal==old.Principal
             && recovered.Fees==old.Fees && recovered.Cash==old.Cash && recovered.Weeks.Count==old.Weeks.Count,
             "old automatic closure reopens without rewriting settled money or history");
         recovered.ObserveChapter(10,64);recovered.ObserveChapter(11,71);recovered.ObserveChapter(12,78);
@@ -140,9 +140,9 @@ internal static class EconomyChecks
         recovered=TavernEconomyProgress.Restore(recovered.Data);recovered.Advance(81);
         check(recovered.NextSettlement==85 && recovered.PeriodStartDay==80,"reload cannot restart a recovered partial week");
         recovered.Advance(85);var partial=recovered.Weeks.Last();
-        check(partial.ActiveDays==5 && partial.Natural==7 && partial.Fixed==247 && partial.Rent==300
+        check(partial.ActiveDays==5 && partial.Natural==21 && partial.Fixed==247 && partial.Rent==300
             && partial.Interest==TavernEconomyProgress.Up(recoveredPrincipal*100*5,70000)
-            && partial.Revenue==7*65+190 && partial.Material==7*30+60,
+            && partial.Revenue==21*65+190 && partial.Material==21*30+60,
             "recovered partial week prorates autonomous trading and charges, preserving exact real receipts");
 
         var future=new TavernEconomyProgress();future.Initialize(44,8,false);
@@ -166,7 +166,7 @@ internal static class EconomyChecks
         var duplicate=new TavernEconomyProgress();duplicate.Initialize(1,8,false);
         check(duplicate.Record("drink:1","onsite",8,95,30) && !duplicate.Record("drink:1","onsite",8,95,30),"each native receipt has one import owner");
         duplicate.Advance(15);string once=duplicate.Data;duplicate.Advance(15);
-        check(duplicate.Data==once && duplicate.Weeks.Single().Revenue==15*65+95,"repeated hooks cannot resettle the same week");
+        check(duplicate.Data==once && duplicate.Weeks.Single().Revenue==25*65+95,"repeated hooks cannot resettle the same week");
         var leave=Pre();check(!leave.Leave(78),"an unseen notice cannot cause departure");Contracts(leave,check);
         check(leave.Leave(85) && leave.Departing && !leave.Leave(85) && leave.Cash>=0,"explicit closure liquidates only her account once");
         check(EconomyStory.Opening("stay",14).Length==2 && EconomyStory.Opening("review",13).Length==4

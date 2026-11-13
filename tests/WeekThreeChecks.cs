@@ -8,7 +8,7 @@ internal static class WeekThreeChecks
     private static TavernWorkProgress Worked(string identity,int day)
     {
         var p=TavernWorkProgress.Restore("",identity,day);
-        p.EnsureDemand(day,3);
+        p.EnsureDemand(day,TavernWorkConfig.DailyOrders);
         p.Complete(p.PrepareShift(day,100));
         return p;
     }
@@ -21,46 +21,46 @@ internal static class WeekThreeChecks
     public static void Run(string package,Action<bool,string> check)
     {
         var work=TavernWorkProgress.Restore("","run-A",15);
-        check(!work.EnsureDemand(14,3) && !work.MayWork(14),"W03-A01: paid shifts begin on calendar day fifteen");
-        check(work.EnsureDemand(15,3) && work.MayWork(15) && !work.HasWorked,
+        check(!work.EnsureDemand(14,TavernWorkConfig.DailyOrders) && !work.MayWork(14),"W03-A01: paid shifts begin on calendar day fifteen");
+        check(work.EnsureDemand(15,TavernWorkConfig.DailyOrders) && work.MayWork(15) && !work.HasWorked,
             "W03-A02/A07: a new paid-work ledger needs neither shop encounters nor opening help");
         string initial=work.Data;
         check(!work.EnsureDemand(15,30) && work.Data==initial,"menu/re-entry cannot replenish the day's finite orders");
         work=TavernWorkProgress.Restore(work.Data,"run-A",15);
-        check(work.Demand.Single().Orders.Select(o => o.Id).Distinct().Count()==3
+        check(work.Demand.Single().Orders.Select(o => o.Id).Distinct().Count()==6
             && work.Demand.Single().Orders.All(o => o.Source==TavernWorkConfig.Source),"demand has stable source-tagged unique IDs across reload");
         var shift=work.PrepareShift(15,100,work.WaitingIds(15));
-        check(shift!=null && shift.Revenue==195 && shift.Material==90 && shift.Wage==60 && shift.Net==45,
-            "W03-A04: three fulfilled orders leave 45 after materials and a real 60 wage");
+        check(shift!=null && shift.Revenue==390 && shift.Material==180 && shift.Wage==120 && shift.Net==90,
+            "W03-A04: six fulfilled orders leave 90 after materials and a real 120 wage");
         check(!work.HasWorked && work.IncrementalNet==0 && !work.Thanks.Drawn,
             "confirming/animating cannot record earnings or draw the surprise");
-        check(work.Recover(15,100)==WageRecovery.Cancel && work.Recover(15,160)==WageRecovery.Finish,
+        check(work.Recover(15,100)==WageRecovery.Cancel && work.Recover(15,220)==WageRecovery.Finish,
             "W03-A11: untouched/paid wallet snapshots recover without replaying AddCredit");
-        check(work.Recover(15,161)==WageRecovery.Hold && work.Recover(16,160)==WageRecovery.Hold,
+        check(work.Recover(15,221)==WageRecovery.Hold && work.Recover(16,220)==WageRecovery.Hold,
             "unrelated money changes or a different day never justify a second wage");
         work=TavernWorkProgress.Restore(work.Data,"run-A",15);shift=work.Pending;
         check(work.Complete(shift) && !work.Complete(shift) && !work.MayWork(15) && work.PrepareShift(15,160)==null,
             "W03-A05/A20: one stable shift commits only once, including repeated callbacks");
         work=TavernWorkProgress.Restore(work.Data,"run-A",15);
-        check(work.WorkedOn(15) && work.IncrementalNet==45 && work.Demand.Single().Orders.All(o => o.RevenueOwner==shift.Id),
+        check(work.WorkedOn(15) && work.IncrementalNet==90 && work.Demand.Single().Orders.All(o => o.RevenueOwner==shift.Id),
             "W03-A11: wage and order ownership survive reload");
-        check(!work.TryAssignOrder(shift.OrderIds[0],"L1") && work.IncrementalNet==45,
+        check(!work.TryAssignOrder(shift.OrderIds[0],"L1") && work.IncrementalNet==90,
             "W03-A14: fulfilled overflow cannot also become baseline/L1 revenue");
-        var claimed=TavernWorkProgress.Restore("","run-B",15);claimed.EnsureDemand(15,3);
+        var claimed=TavernWorkProgress.Restore("","run-B",15);claimed.EnsureDemand(15,TavernWorkConfig.DailyOrders);
         claimed.TryAssignOrder(claimed.WaitingIds(15)[0],"baseline");
         check(!claimed.MayWork(15),"an order assigned elsewhere reduces available demand before offering a shift");
         var quiet=TavernWorkProgress.Restore("","run-C",16);
         quiet.EnsureDemand(15,0);quiet.EnsureDemand(16,2);
-        check(!quiet.MayWork(15) && !quiet.MayWork(16) && !quiet.EnsureDemand(15,3),
+        check(!quiet.MayWork(15) && !quiet.MayWork(16) && !quiet.EnsureDemand(15,TavernWorkConfig.DailyOrders),
             "W03-A10: zero/insufficient orders remain quiet after reload/menu refresh");
-        var cancel=TavernWorkProgress.Restore("","run-D",15);cancel.EnsureDemand(15,3);
+        var cancel=TavernWorkProgress.Restore("","run-D",15);cancel.EnsureDemand(15,TavernWorkConfig.DailyOrders);
         var attempt=cancel.PrepareShift(15,400);attempt.Status="cancelled";
         cancel=TavernWorkProgress.Restore(cancel.Data,"run-D",15);
         check(cancel.MayWork(15) && cancel.PrepareShift(15,400)!=null && cancel.Shifts.Count==1 && !cancel.Thanks.Drawn,
             "W03-A06: a verified untouched cancellation can restart without consuming orders");
         var drink=new TavernProgress();
         var glass=drink.PrepareDrink(15,"sunset_blue",500,"");glass.Status="complete";
-        check(work.WorkedOn(15) && !drink.MayDrink(15) && work.EnsureDemand(16,3) && work.MayWork(16),
+        check(work.WorkedOn(15) && !drink.MayDrink(15) && work.EnsureDemand(16,TavernWorkConfig.DailyOrders) && work.MayWork(16),
             "W03-A09/A13: drink and paid-shift limits use independent daily receipts");
         check(!work.MayWork(15) && new TavernProgress().MayDrink(15),"working leaves the daily glass available");
         check(TavernWorkProgress.Restore("broken","run",15).RecoveryBlocked
@@ -98,7 +98,7 @@ internal static class WeekThreeChecks
         check(won.Thanks.Won && !lost.Thanks.Won && won.Thanks.DueDay==16
             && !won.ThanksDue(15) && won.ThanksDue(16),"W03-A15: a single stable 35% draw schedules only next-day thanks");
         lost=TavernWorkProgress.Restore(lost.Data,lostId,16);
-        lost.EnsureDemand(16,3);lost.Complete(lost.PrepareShift(16,160));
+        lost.EnsureDemand(16,TavernWorkConfig.DailyOrders);lost.Complete(lost.PrepareShift(16,160));
         check(lost.Thanks.ShiftId=="paid_shift_16" && lost.ThanksHistory.Count==1
             && StoryRules.BasicDrinks.Contains(lost.Thanks.DrinkKey),"W04 supersedes first-only: a later paid shift may draw once; the previous miss stays archived");
         var emptyStory=new StoryProgress();

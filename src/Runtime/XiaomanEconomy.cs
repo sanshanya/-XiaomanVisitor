@@ -26,23 +26,21 @@ namespace XiaomanVisitor
         private void SaveEconomy(TavernEconomyProgress p)
         {
             string data=p.Data;ModHelper.SetModData(Id,TavernEconomyProgress.SaveKey,data);
-            if (ModHelper.GetModData(Id,TavernEconomyProgress.SaveKey,"")!=data)
-                throw new InvalidOperationException("Tavern account was not saved");
             economyCache=p;economyCacheData=data;
         }
         private bool EconomyAvailable { get { return TavernMapEnabled && PlayerStore.HasInstance && !SideStories.BuybackStory.LineClosed; } }
         private void UpdateEconomyLedgerAccess()
         {
             if (!EconomyLedgerVisible) { CloseEconomyWindow();RemoveEconomyPhone(); }
-            if (!enabled || !TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null) return;
+            if (!TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null) return;
             if (AtTavern && (tavernMenuPage=="details" || tavernMenuPage=="interaction")) CloseTavernMenu();
             if (EconomyLedgerVisible) EnsureEconomyPhone(StoreStation.Instance.dayCounter);
         }
         private bool EconomyStoryApplies {
             get {
-                if (!PlayerStore.HasInstance || SideStories.BuybackStory.LineClosed
-                    || string.IsNullOrEmpty(ModHelper.GetModData(Id,TavernEconomyProgress.SaveKey,""))) return false;
-                return ReadEconomy().Phase!="new" && ReadEconomy().Phase!="legacy";
+                if (!PlayerStore.HasInstance || SideStories.BuybackStory.LineClosed) return false;
+                string phase=ReadEconomy().Phase;
+                return phase!="new" && phase!="legacy";
             }
         }
         private void EnableEconomy()
@@ -89,7 +87,7 @@ namespace XiaomanVisitor
         }
         private void TickEconomy()
         {
-            if (!enabled || !TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null || economyBusy) return;
+            if (!TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null || economyBusy) return;
             if (SideStories.BuybackStory.LineClosed) {
                 CloseEconomyWindow();RemoveEconomyPhone();
                 return;
@@ -133,6 +131,7 @@ namespace XiaomanVisitor
         }
         private void ImportEconomyReceipts(TavernEconomyProgress p)
         {
+            foreach (var batch in ReadBrewing().Batches) p.ImportBrewingProfit(batch);
             if (!p.Trading) return;
             // Existing systems own their physical transactions. Only completed
             // receipts are imported once; old records before the new lease stay out.

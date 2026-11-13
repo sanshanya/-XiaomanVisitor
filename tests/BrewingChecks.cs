@@ -73,7 +73,7 @@ internal static class BrewingChecks
         check(final.CreditMilli==325000,"departure honors an already accepted promise without reviving a visitor");
         var legacy=Signed();legacy.Prepare("r",24,goods);legacy.RecoverInput(new int[0]);legacy.Schema=1;legacy.Batches[0].DueDay=31;
         legacy=BrewingProgress.Restore(legacy.Data);
-        check(!legacy.Blocked && legacy.Schema==3 && legacy.Batches[0].DueDay==26 && legacy.Batches[0].ReturnMilli==325000
+        check(!legacy.Blocked && legacy.Schema==4 && legacy.Batches[0].DueDay==26 && legacy.Batches[0].ReturnMilli==325000
             && !legacy.AgreementActive && !legacy.MayVisit(31,true),"old seven-day receipts migrate to Friday without silently creating agreement consent");
         legacy.CreditDue(26);legacy.PrepareBottle(77);legacy.BottlePlaced(true);legacy.PrepareBottle(78);legacy.BottlePlaced(true);
         legacy.Bottles.Add(new BrewingBottle{Id="old_sample",ItemId=79,Value=10,Phase="complete"});legacy.CreditMilli-=10000;legacy.Schema=2;

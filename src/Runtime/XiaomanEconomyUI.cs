@@ -71,9 +71,12 @@ namespace XiaomanVisitor
                 if (p.FullRentFromPeriod>0) b.AddLabel(Text("ui_eco_full_rent",p.FullRentFromPeriod));
             }
             else if (page=="ledger" || page=="history") {
-                b.AddLabel(Text("ui_eco_balance",p.Cash,TavernEconomyConfig.Reserve,p.Principal,p.Fees,p.Bills));
+                b.AddLabel(Text("ui_eco_balance",p.Cash,p.ReserveTarget,p.Principal,p.Fees,p.Bills));
                 b.AddLabel(Text("ui_eco_dates",p.StartDay,p.OperatingWeeks,p.NextSettlement));
-                var unsettled=p.Receipts.Where(r => r.Day>=p.NextSettlement-7 && r.Day<p.NextSettlement).ToArray();
+                b.AddLabel(Text("ui_eco_rent_now",p.RentAt(day),p.RentAt(day+7),TavernEconomyConfig.RentIncreasePercent));
+                if (p.ReviewUnlocked && p.PenaltyAssessed && p.PerformanceRevenue>0)
+                    b.AddLabel(Text("ui_eco_performance_result",p.PerformanceRevenue,TavernEconomyConfig.PerformanceTarget,p.AssessedPenalty));
+                var unsettled=p.Receipts.Where(r => !r.CashBooked && r.Day>=p.NextSettlement-7 && r.Day<p.NextSettlement).ToArray();
                 if (unsettled.Length>0) b.AddLabel(Text("ui_eco_unsettled",unsettled.Sum(r => r.Revenue),unsettled.Sum(r => r.Cost)));
                 foreach (var w in p.Weeks.Skip(page=="history"?0:Math.Max(0,p.Weeks.Count-3))) {
                     b.AddLabel(Text("ui_eco_week",w.Number,w.EndDay,w.Revenue,w.Material,w.Fixed,w.Rent,w.Interest+w.OneOffFee,w.RentAdvance,w.Repaid));
@@ -106,15 +109,19 @@ namespace XiaomanVisitor
                 }
                 if (p.Reviewing) {
                     b.AddLabel(Text("ui_eco_review"));
-                    b.AddLabel(Text("ui_eco_balance",p.Cash,TavernEconomyConfig.Reserve,p.Principal,p.Fees,p.Bills));
+                    b.AddLabel(Text("ui_eco_balance",p.Cash,p.ReserveTarget,p.Principal,p.Fees,p.Bills));
                     b.AddLabel(Text(p.Phase=="remedy"?"ui_eco_remedy_deadline":"ui_eco_deadline",p.NoticeDay,p.HandlingDays.Count));
                     if (p.NoticeDay<0) button("ui_eco_ack",() => change(s => s.Acknowledge(day)));
                 }
                 if (!p.ReviewUnlocked && p.RefinanceDay<0) b.AddLabel(Text("ui_eco_contracts_wait"));
-                if (p.ReviewUnlocked || p.RefinanceDay>=0) b.AddLabel(Text("ui_eco_orders_terms"));
+                if (p.ReviewUnlocked || p.RefinanceDay>=0) {
+                    b.AddLabel(Text("ui_eco_performance_terms",TavernEconomyConfig.PerformanceTarget,TavernEconomyConfig.ContractPenalty));
+                    b.AddLabel(Text("ui_eco_orders_terms",p.ContractOrders>0?p.ContractOrders:TavernEconomyConfig.ContractOrders,
+                        TavernEconomyConfig.OrderPrice,TavernEconomyConfig.OrderMaterial));
+                }
                 if (p.ReviewUnlocked && !p.Contracts.Any(c => c.Kind=="orders") && p.RefinanceDay<0 && !p.Departing)
                     button("ui_eco_sign_orders",() => change(s => s.SignContract("orders",day)));
-                if (p.ReviewUnlocked || p.RefinanceDay>=0) b.AddLabel(Text("ui_eco_sublet_terms"));
+                if (p.ReviewUnlocked || p.RefinanceDay>=0) b.AddLabel(Text("ui_eco_sublet_terms",p.SubletRent>0?p.SubletRent:TavernEconomyConfig.SubletRent));
                 if (p.ReviewUnlocked && !p.Contracts.Any(c => c.Kind=="sublet") && p.RefinanceDay<0 && !p.Departing)
                     button("ui_eco_sign_sublet",() => change(s => s.SignContract("sublet",day)));
                 foreach (var contract in p.Contracts)
@@ -122,7 +129,7 @@ namespace XiaomanVisitor
                 if (p.PaperDay==day) b.AddLabel(Text("ui_eco_one_document"));
                 if (p.ReviewUnlocked && p.RefinanceDay<0 && !p.Departing && p.Active) {
                     long minimum=TavernEconomyProgress.Minimum(p.RefinanceQuote,(int)TavernEconomyProgress.Up(p.RefinanceQuote,TavernEconomyConfig.NewTerm),TavernEconomyConfig.NewRateBp);
-                    b.AddLabel(Text("ui_eco_refinance_quote",p.RefinanceQuote,minimum));
+                    b.AddLabel(Text("ui_eco_refinance_quote",p.RefinanceQuote,minimum,p.ContractOperatingCash(TavernEconomyProgress.MondayOnOrAfter(day))));
                     if (p.Reviewing && p.NoticeDay>=0 && p.ContractReady("orders",day) && p.ContractReady("sublet",day)) {
                         button("ui_eco_refinance",() => change(s => s.Refinance(day,false,false)));
                         if (PlayerStore.Instance.IsPropertyPaid) button("ui_eco_guarantee",() => ShowEconomyWindow("guarantee"));

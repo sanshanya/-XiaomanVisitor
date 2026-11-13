@@ -1,6 +1,7 @@
 {
   "unlock_day": 22,
   "bonus_percent": 30,
+  "tavern_bonus_percent": 30,
   "initial_material_limit": 500,
   "weekly_material_increase": 100,
   "maximum_material_limit": 3000,

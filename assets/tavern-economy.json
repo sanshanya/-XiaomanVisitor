@@ -1,10 +1,13 @@
 {
   "schema": 1,
-  "status": "good_ending_first_playtest",
-  "source": "Fourteen-visit pacing: high through visit 9, competition from actual visit 10, financial review from actual visit 12; no automatic pre-restructure closure.",
+  "status": "rising_rent_balance_playtest",
+  "source": "Own lease rent compounds 10% each calendar week. High through visit 9; competition from actual visit 10; a single performance assessment after visit 12. No automatic pre-restructure closure.",
   "initial_cash": 900,
   "initial_principal": 8800,
   "rent": 420,
+  "rent_increase_percent": 10,
+  "performance_target": 9000,
+  "contract_penalty": 1500,
   "old_rate_bp": 100,
   "old_term": 12,
   "transfer_fee": 240,
@@ -13,9 +16,10 @@
   "stable_fixed_cost": 170,
   "order_price": 65,
   "order_material": 30,
-  "contract_orders": 20,
+  "contract_orders": 48,
   "sublet_rent": 240,
-  "reserve": 900,
+  "reserve": 2000,
+  "support_cash_retention_percent": 50,
   "new_rate_bp": 50,
   "guaranteed_rate_bp": 35,
   "guarantee_limit": 300,
@@ -29,19 +33,19 @@
     120
   ],
   "natural_orders": [
-    15,
-    17,
-    19,
-    20,
-    21,
-    22,
-    23,
-    24
+    25,
+    32,
+    42,
+    50,
+    60,
+    68,
+    74,
+    78
   ],
   "competition_orders": [
-    16,
-    13,
-    11
+    55,
+    42,
+    30
   ],
   "project_earliest": [
     1,

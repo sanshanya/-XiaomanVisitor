@@ -38,7 +38,7 @@ namespace XiaomanVisitor
     public sealed class TavernWorkProgress
     {
         public const string SaveKey="tavern_paid_work_v1";
-        [JsonProperty] public int Schema=2;
+        [JsonProperty] public int Schema=3;
         [JsonProperty] public string RunIdentity, PreservedData;
         [JsonProperty] public bool RecoveryBlocked, WorkIntroSeen, OpeningCallbackSeen, ShopkeeperKnown;
         [JsonProperty] public readonly List<WorkDemandBatch> Demand=new List<WorkDemandBatch>();
@@ -154,7 +154,7 @@ namespace XiaomanVisitor
             TavernWorkProgress p;
             try { p=JsonConvert.DeserializeObject<TavernWorkProgress>(data); }
             catch (JsonException) { return Blocked(data,identity); }
-            if (p==null || (p.Schema!=1 && p.Schema!=2) || p.Demand==null || p.Shifts==null || p.Thanks==null
+            if (p==null || p.Schema<1 || p.Schema>3 || p.Demand==null || p.Shifts==null || p.Thanks==null
                 || p.Thanks.PurchasedItemIds==null || string.IsNullOrEmpty(p.RunIdentity)) return Blocked(data,identity);
             if (p.Schema==1) {
                 if (p.Thanks.Drawn) {
@@ -175,7 +175,7 @@ namespace XiaomanVisitor
             if (p.Shifts.GroupBy(s => s==null ? -1:s.Day).Any(g => g.Count()>1)) return Blocked(data,identity);
             foreach (var s in p.Shifts) {
                 if (s==null || s.Id!="paid_shift_"+s.Day || s.Day<TavernWorkConfig.UnlockDay || s.Day>today || s.Wage<1
-                    || s.BeforeCash>int.MaxValue-s.Wage || s.OrderIds==null || s.OrderIds.Length!=TavernWorkConfig.OrdersPerShift
+                    || s.BeforeCash>int.MaxValue-s.Wage || s.OrderIds==null || s.OrderIds.Length<1 || s.OrderIds.Length>30
                     || s.OrderIds.Distinct().Count()!=s.OrderIds.Length || !new[]{"prepared","credited","complete","cancelled","uncertain"}.Contains(s.Status)) return Blocked(data,identity);
                 var own=orders.Where(o => s.OrderIds.Contains(o.Id)).ToArray();
                 if (own.Length!=s.OrderIds.Length || own.Any(o => o.Day!=s.Day) || own.Sum(o => (long)o.Revenue)!=s.Revenue
@@ -189,6 +189,15 @@ namespace XiaomanVisitor
                 || p.Thanks.PurchasedItemIds.Any(id => id<=0) || p.Thanks.PurchasedItemIds.Distinct().Count()!=p.Thanks.PurchasedItemIds.Count
                 || (p.Thanks.Seen && !p.Thanks.Won) || (p.Thanks.Merged && p.Thanks.PrivateSpent!=0)
                 || (p.Thanks.GiftPhase!="waiting" && (!p.Thanks.Seen || p.Thanks.GiftItemId<=0))) return Blocked(data,identity);
+            if (p.Schema==2) {
+                // Upgrade only today's old three-order batch, once. Frozen
+                // shift identities/wages remain intact; quiet days stay quiet.
+                var batch=p.Demand.FirstOrDefault(d => d.Day==today && d.Orders.Count==3);
+                if (batch!=null) for (int i=3;i<TavernWorkConfig.DailyOrders;i++) batch.Orders.Add(new WorkOrder {
+                    Id=TavernWorkConfig.Source+":"+today+":balance:"+i,Source=TavernWorkConfig.Source,Day=today,
+                    Revenue=TavernWorkConfig.OrderRevenue,Material=TavernWorkConfig.OrderMaterial });
+                p.Schema=3;
+            }
             return p;
         }
         private static TavernWorkProgress Blocked(string raw,string identity)

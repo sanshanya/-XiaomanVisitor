@@ -1,5 +1,8 @@
 using System;
+using System.Linq;
 using System.Reflection;
+using System.Reflection.Emit;
+using HarmonyLib;
 using UnityEngine;
 using XiaomanVisitor;
 
@@ -26,6 +29,32 @@ internal static class TavernMenuChecks
             "an open backpack keeps the menu above speech instead of shifting speech left or covering the bag");
         var idle=menu(null,1080,new Vector2(180,124));
         check(idle.xMin==1046 && idle.yMin==575,"speech-free choices retain their normal actor-side anchor");
+        CheckCallbackBindings(check);
         Console.WriteLine("PASS: native choice menus yield rightward to speech; constrained layouts preserve speech and backpack access.");
+    }
+    private static void CheckCallbackBindings(Action<bool,string> check)
+    {
+        var type=typeof(XiaomanMod);const BindingFlags flags=BindingFlags.Instance|BindingFlags.NonPublic;
+        var guard=type.GetMethod("TavernMenuAction",flags);
+        foreach (string entry in new[]{"BuildTavernDrinkMenu","ShowTavernChoices","BuildSupplyMenu","ShowTavernMenu"}) {
+            var callbacks=type.GetNestedTypes(BindingFlags.NonPublic).SelectMany(t => t.GetMethods(flags))
+                .Where(m => m.Name.StartsWith("<"+entry+">",StringComparison.Ordinal));
+            check(new[]{type.GetMethod(entry,flags)}.Concat(callbacks)
+                .Any(m => PatchProcessor.GetOriginalInstructions(m).Any(i => i.Calls(guard))),
+                "production buttons capture the current menu context: "+entry);
+        }
+        var revision=type.GetField("tavernMenuRevision",flags);
+        var close=type.GetMethod("CloseTavernMenu",flags);
+        var code=PatchProcessor.GetOriginalInstructions(close).ToArray();
+        int invalidate=Array.FindIndex(code,i => i.opcode==OpCodes.Stfld && Equals(i.operand,revision));
+        int destroy=Array.FindIndex(code,i => i.Calls(AccessTools.Method(typeof(CustomUIManager),nameof(CustomUIManager.CloseWindow))));
+        check(invalidate>=0 && destroy>invalidate,"closing invalidates queued menu clicks before native controls are destroyed");
+        foreach (string entry in new[]{"OnGameLoaded","LeaveTavern","ShowTavernChoices"})
+            check(PatchProcessor.GetOriginalInstructions(type.GetMethod(entry,flags)).Any(i => i.Calls(close)),
+                "load, leave and choice replacement invalidate the old menu: "+entry);
+        var rebuild=PatchProcessor.GetOriginalInstructions(type.GetMethod("ShowTavernMenu",flags)).ToArray();
+        int fresh=Array.FindIndex(rebuild,i => i.opcode==OpCodes.Stfld && Equals(i.operand,revision));
+        int clear=Array.FindIndex(rebuild,i => i.Calls(AccessTools.Method(typeof(CustomUIBuilder),nameof(CustomUIBuilder.ClearContainer))));
+        check(fresh>=0 && clear>fresh,"refreshing the same window invalidates its old controls before rebuilding");
     }
 }

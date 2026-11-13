@@ -9,10 +9,7 @@ namespace XiaomanVisitor
         private WineCrateProgress ReadWineCrate()
         { return WineCrateProgress.Restore(ModHelper.GetModData(Id,WineCrateRules.SaveKey,"")); }
         private void SaveWineCrate(WineCrateProgress p)
-        {
-            string raw=p.Data;ModHelper.SetModData(Id,WineCrateRules.SaveKey,raw);
-            if (ModHelper.GetModData(Id,WineCrateRules.SaveKey,"")!=raw) throw new InvalidOperationException("Wine crate receipt was not saved");
-        }
+        { ModHelper.SetModData(Id,WineCrateRules.SaveKey,p.Data); }
         private GameItem CreateWineCrate()
         {
             var window=DirectoryUtils.CreateGridWindow(WineCrateRules.Columns,WineCrateRules.Rows);

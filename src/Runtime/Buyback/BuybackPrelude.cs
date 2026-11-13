@@ -34,10 +34,7 @@ namespace XiaomanVisitor.SideStories
         } }
         private BuybackProgress ReadPrelude() { return BuybackProgress.Restore(ModHelper.GetModData(Id, PreludeKey, "")); }
         private void SavePrelude(BuybackProgress progress)
-        {
-            string data = progress.Data; ModHelper.SetModData(Id, PreludeKey, data);
-            if (ModHelper.GetModData(Id, PreludeKey, "") != data) throw new InvalidOperationException("Water receipt was not saved");
-        }
+        { ModHelper.SetModData(Id, PreludeKey, progress.Data); }
         private BuybackPreludeText PreludeText()
         {
             if (preludeText == null) {

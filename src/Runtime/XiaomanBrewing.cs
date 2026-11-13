@@ -16,10 +16,7 @@ namespace XiaomanVisitor
             ReadBrewing().MaterialLimit(StoreStation.Instance.dayCounter),BrewingConfig.WeeklyMaterialIncrease,BrewingConfig.MaximumMaterialLimit); } }
         private BrewingProgress ReadBrewing() { return BrewingProgress.Restore(ModHelper.GetModData(Id, BrewingProgress.SaveKey, "")); }
         private void SaveBrewing(BrewingProgress p)
-        {
-            string raw=p.Data; ModHelper.SetModData(Id,BrewingProgress.SaveKey,raw);
-            if (ModHelper.GetModData(Id,BrewingProgress.SaveKey,"")!=raw) throw new InvalidOperationException("Brewing receipt was not saved");
-        }
+        { ModHelper.SetModData(Id,BrewingProgress.SaveKey,p.Data); }
         private bool MayCollectBrewing
         { get { return TavernMapEnabled && TavernTrading && ReadBrewing().MayCollect(StoreStation.Instance.dayCounter); } }
         private bool BrewingVisitDue(int day)
@@ -82,7 +79,7 @@ namespace XiaomanVisitor
                 +(goods==null?"invalid:"+EmporiumEntry.Instance.backInvinvElement.childItems.Count:goods.Sum(m => (decimal)m.ValueCents).ToString("0"));
         }
         private bool IsBrewingCollection(StoreClient client)
-        { return enabled && TavernMapEnabled && BrewingTarget() && client?.sourceModId==Id
+        { return TavernMapEnabled && BrewingTarget()
                 && PlayerStore.Instance.currentClientInstance.GetClientBlueprint()==client && client.clientIntent==StoreClient.ClientIntent.BARTER; }
         internal void ShowBrewingQuote(StoreClient client,NegotiationTabletFrame frame)
         {
@@ -105,7 +102,7 @@ namespace XiaomanVisitor
         }
         private void RegisterBrewingArrival(StoreClient client)
         {
-            if (!enabled || !TavernMapEnabled || !BrewingTarget() || client.sourceModId!=Id
+            if (!TavernMapEnabled || !BrewingTarget()
                 || PlayerStore.Instance.currentClientInstance.GetClientBlueprint()!=client) return;
             int day=StoreStation.Instance.dayCounter;
             if (BrewingProgress.Wednesday(day) && !TavernTrading) return;
@@ -113,8 +110,10 @@ namespace XiaomanVisitor
         }
         private StoreClient CreateBrewingVisitor()
         {
+            var ledger=ReadBrewing();int day=StoreStation.Instance.dayCounter;
+            bool collecting=TavernMapEnabled && TavernTrading && ledger.MayCollect(day);
             var c=new StoreClient { identifier=BrewingProgress.ClientId,displayName=Text("name"),realName=Text("name"),spriteName=SpriteKey,
-                clientFaction=StoreClient.FACTION_LOWER,clientIntent=MayCollectBrewing?StoreClient.ClientIntent.BARTER:StoreClient.ClientIntent.DIALOGUE,cooldown=0,
+                clientFaction=StoreClient.FACTION_LOWER,clientIntent=collecting?StoreClient.ClientIntent.BARTER:StoreClient.ClientIntent.DIALOGUE,cooldown=0,
                 arrestable=false,nonShootable=true,noAcceptingContraband=true,
                 IsPersonalConsumption=false,CanReturn=false,CanReturnAsBuyer=false };
             ConfigureGunReaction(c);
@@ -129,11 +128,10 @@ namespace XiaomanVisitor
                     return new BarterResult { isAccepted=valid,response=goods==null?Text("xm_brew_wrong"):"" };
                 } };
             c.willAcceptItem=item => BrewingMaterialCents(item)>0;
-            var ledger=ReadBrewing();
-            decimal ready=ledger.CreditMilli+ledger.Batches.Where(b => b.Phase=="complete" && !b.Credited && b.DueDay<=StoreStation.Instance.dayCounter).Sum(b => (decimal)b.ReturnMilli);
-            string arrival=MayCollectBrewing?"xm_brew_hello":ready<BrewingConfig.SampleValue*1000L?"xm_brew_small_batch":"xm_brew_last";
-            c.mainDialogue=Line(c,arrival,MayCollectBrewing?Mood.Smile:Mood.Soft);
-            var request=MayCollectBrewing?Append(c.mainDialogue,c,"xm_brew_request",Mood.Soft):c.mainDialogue;
+            decimal ready=ledger.CreditMilli+ledger.Batches.Where(b => b.Phase=="complete" && !b.Credited && b.DueDay<=day).Sum(b => (decimal)b.ReturnMilli);
+            string arrival=collecting?"xm_brew_hello":ready<BrewingConfig.SampleValue*1000L?"xm_brew_small_batch":"xm_brew_last";
+            c.mainDialogue=Line(c,arrival,collecting?Mood.Smile:Mood.Soft);
+            var request=collecting?Append(c.mainDialogue,c,"xm_brew_request",Mood.Soft):c.mainDialogue;
             c.mainDialogue.startAction+=() => {
                 RegisterBrewingArrival(c);
                 TryDeliverBrewing();
@@ -147,7 +145,7 @@ namespace XiaomanVisitor
                 else TryFinishBrewingDelivery();
             }));
             c.acceptDealDialogue=Line(c,"xm_brew_accept",Mood.Smile);
-            c.repeatDialogue=Line(c,MayCollectBrewing?"xm_brew_request":"xm_brew_last",Mood.Soft);
+            c.repeatDialogue=Line(c,collecting?"xm_brew_request":"xm_brew_last",Mood.Soft);
             c.placedWrongItemWhenSellingToDialogue=Line(c,"xm_brew_wrong",Mood.Soft);
             c.allDoneDialogue=Line(c,"xm_brew_bye",Mood.Soft).SetEndAction(VisitorAction(c,() => PlayerStore.Instance.DismissCurrentClient(false)));
             c.OnArrival=() => { SetMood(c,Mood.Neutral);RegisterBrewingArrival(c); };
@@ -157,7 +155,7 @@ namespace XiaomanVisitor
         internal bool BeginBrewingExchange()
         {
             if (!BrewingTarget()) return true;
-            if (!MayCollectBrewing || brewingBusy) return false;
+            if (!TavernMapEnabled || brewingBusy) return false;
             try {
                 var materials=SelectedBrewingMaterials();var p=ReadBrewing();
                 if (!MaySubmitBrewingOffer(PlayerStore.Instance.currentClientInstance.GetClientBlueprint(),p,StoreStation.Instance.dayCounter,TavernTrading,materials)) return false;
@@ -178,7 +176,7 @@ namespace XiaomanVisitor
         }
         internal void TickBrewing()
         {
-            if (!enabled || !TavernMapEnabled || !PlayerStore.HasInstance || EmporiumEntry.Instance==null || StoreStation.Instance==null
+            if (!TavernMapEnabled || !PlayerStore.HasInstance || EmporiumEntry.Instance==null || StoreStation.Instance==null
                 || ModHelper.IsOutsideStore() || brewingBusy || Time.unscaledTime<nextBrewingTick) return;
             nextBrewingTick=Time.unscaledTime+1f;
             RecoverBrewingInput();

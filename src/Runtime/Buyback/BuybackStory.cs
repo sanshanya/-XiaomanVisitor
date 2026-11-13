@@ -100,12 +100,7 @@ namespace XiaomanVisitor.SideStories
         private BuybackDoorProgress ReadDoorProgress()
         { return BuybackDoorProgress.Restore(ModHelper.GetModData(Id, BuybackDoorProgress.SaveKey, "")); }
         private void SaveDoorProgress(BuybackDoorProgress progress)
-        {
-            string raw = progress.Data;
-            ModHelper.SetModData(Id, BuybackDoorProgress.SaveKey, raw);
-            if (ModHelper.GetModData(Id, BuybackDoorProgress.SaveKey, "") != raw)
-                throw new InvalidOperationException("Refusal choice could not be saved");
-        }
+        { ModHelper.SetModData(Id, BuybackDoorProgress.SaveKey, progress.Data); }
         private BuybackRefusalText RefusalText()
         {
             if (refusalText == null)

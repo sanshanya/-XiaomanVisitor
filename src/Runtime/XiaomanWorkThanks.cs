@@ -67,7 +67,7 @@ namespace XiaomanVisitor
 
         private void TryDeliverWorkThanksGift()
         {
-            if (!enabled || !TavernMapEnabled || deliveringWorkGift || !PlayerStore.HasInstance
+            if (!TavernMapEnabled || deliveringWorkGift || !PlayerStore.HasInstance
                 || EmporiumEntry.Instance==null || ModHelper.IsOutsideStore()) return;
             var p=ReadWork();
             if (!p.Thanks.Won || !p.Thanks.Seen || p.Thanks.GiftComplete) return;

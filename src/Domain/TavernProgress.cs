@@ -89,7 +89,9 @@ namespace XiaomanVisitor
         [JsonProperty] public bool IntroSeen, UnknownIntroSeen, RainIntroSeen, TapeIntroSeen, OpeningReceptionHelped, RecoveryBlocked;
         [JsonProperty] public int LastEntryDay = -1, EntriesToday;
         [JsonProperty] public string SelectedTrack = "title", LegacyData;
-        public TavernDrinkRecord Pending { get { return Drinks.FirstOrDefault(d => d.Status != "complete" && d.Status != "cancelled"); } }
+        // An unproven old payment keeps its receipt and that day's allowance,
+        // not a permanent lock on every subsequent day's purchases.
+        public TavernDrinkRecord Pending { get { return Drinks.FirstOrDefault(d => d.Status == "prepared" || d.Status == "charged"); } }
         public bool Drank(int day) { return Drinks.Any(d => d.Day == day && d.Status != "cancelled"); }
         public bool MayDrink(int day) { return day >= TavernRules.OpeningDay && !RecoveryBlocked && Pending == null && !Drank(day); }
         public bool MayHelp(int day) { return TavernRules.OpeningWeek(day) && !OpeningReceptionHelped; }
@@ -141,9 +143,20 @@ namespace XiaomanVisitor
         {
             var pending = Pending;
             if (pending == null) return TavernRecovery.None;
-            if (RecoveryBlocked || pending.Status == "uncertain" || pending.Day != today) return TavernRecovery.Hold;
-            bool before = (buffs ?? "") == pending.BeforeBuffs, after = (buffs ?? "") == pending.AfterBuffs;
-            if (pending.Status == "prepared" && cash == pending.BeforeCash && before) return TavernRecovery.Cancel;
+            if (RecoveryBlocked || pending.Day>today) return TavernRecovery.Hold;
+            var spec=CocktailCatalog.Find(pending.Key);
+            var current=DrinkBuffCollection.Restore(buffs);
+            bool before=current.SameEffect(DrinkBuffCollection.Restore(pending.BeforeBuffs),spec.Effect,today);
+            bool after=current.SameEffect(DrinkBuffCollection.Restore(pending.AfterBuffs),spec.Effect,today);
+            if (pending.Status=="charged") {
+                // The verified debit is already saved. Later purchases/wages do
+                // not invalidate it; never extend expiry or replace a newer drink.
+                if (today>=pending.Day+spec.DurationDays || after || !before && current.ActiveAmount(spec.Effect,today)>0)
+                    return TavernRecovery.Finish;
+                return TavernRecovery.ApplyBuff;
+            }
+            if (pending.Day!=today) return TavernRecovery.Hold;
+            if (cash == pending.BeforeCash && before) return TavernRecovery.Cancel;
             if (cash != pending.BeforeCash-pending.Paid) return TavernRecovery.Hold;
             return after ? TavernRecovery.Finish : before ? TavernRecovery.ApplyBuff : TavernRecovery.Hold;
         }

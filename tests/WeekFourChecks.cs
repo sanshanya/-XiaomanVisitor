@@ -92,17 +92,17 @@ internal static class WeekFourChecks
         var work=TavernWorkProgress.Restore("","weekly",15);
         // Find a persisted win without relying on Unity RNG.
         string identity=Enumerable.Range(0,1000).Select(i=>"weekly-"+i).First(s=>TavernWorkProgress.StableRoll(s,"paid_shift_15","visit")%100<35);
-        work=TavernWorkProgress.Restore("",identity,15);work.EnsureDemand(15,3);work.Complete(work.PrepareShift(15,100));
+        work=TavernWorkProgress.Restore("",identity,15);work.EnsureDemand(15,TavernWorkConfig.DailyOrders);work.Complete(work.PrepareShift(15,100));
         var legacy=Newtonsoft.Json.Linq.JObject.Parse(work.Data);legacy["Schema"]=1;
         legacy.Remove("ThanksHistory");legacy.Remove("ThanksVisitWeeks");
         ((Newtonsoft.Json.Linq.JObject)legacy["Thanks"]).Remove("Week");
         ((Newtonsoft.Json.Linq.JObject)legacy["Thanks"]).Remove("ShiftId");
         var migrated=TavernWorkProgress.Restore(legacy.ToString(),identity,22);
-        check(!migrated.RecoveryBlocked && migrated.Schema==2 && migrated.Thanks.Roll==work.Thanks.Roll && migrated.ThanksDue(22),"W04 legacy first-shift win migrates as the same pending thanks, without reroll");
+        check(!migrated.RecoveryBlocked && migrated.Schema==3 && migrated.Thanks.Roll==work.Thanks.Roll && migrated.ThanksDue(22),"W04 legacy first-shift win migrates as the same pending thanks, without reroll");
         work.BeginThanks(16,false);work.PrepareGift(999);work.GiftPlacementResult(true);work.Thanks.ProcurementClosed=true;
-        work.EnsureDemand(16,3);work.Complete(work.PrepareShift(16,100));
+        work.EnsureDemand(16,TavernWorkConfig.DailyOrders);work.Complete(work.PrepareShift(16,100));
         check(work.ThanksHistory.Count==0 && work.ThanksVisitWeeks.Count==1,"W04 one successful thanks per week, no reroll after win");
-        work.EnsureDemand(22,3);work.Complete(work.PrepareShift(22,100));
+        work.EnsureDemand(22,TavernWorkConfig.DailyOrders);work.Complete(work.PrepareShift(22,100));
         work=TavernWorkProgress.Restore(work.Data,identity,22);
         check(!work.RecoveryBlocked && work.ThanksHistory.Count==1 && work.Thanks.ShiftId=="paid_shift_22","W04 next calendar week can draw again without losing the old gift receipt");
         Console.WriteLine("PASS: W04 independent calendars, application/defer/refusal/Joe, conserved supply batches, unique receipts, exact-night letter and weekly thanks migration.");

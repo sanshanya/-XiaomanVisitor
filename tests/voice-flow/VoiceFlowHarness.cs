@@ -45,7 +45,7 @@ public static class ModHelper
 namespace XiaomanVisitor
 {
     public sealed class TestSetting { public bool Value=true; }
-    public sealed class XiaomanMod
+    public sealed partial class XiaomanMod
     {
         public const string Id="sansm.xiaoman.visitor";
         public readonly TestSetting VoiceWait=new TestSetting();
@@ -148,6 +148,7 @@ internal static class VoiceFlowHarness
     }
     private static int Main()
     {
+        MenuFlowHarness.Run();
         foreach (bool reverse in new[]{false,true}) {
             foreach (bool autoFirst in new[]{false,true}) {
                 Collection(reverse,autoFirst,false,false);

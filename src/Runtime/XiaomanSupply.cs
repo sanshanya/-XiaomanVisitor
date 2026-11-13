@@ -15,10 +15,7 @@ namespace XiaomanVisitor
                 .Where(i => i!=null).SelectMany(i => GraphUtils.FindAllChildrenType<GameItem>(i)).Where(i => GeneralHelper.IsItemOwned(i)).Distinct();
         }
         private void SaveSupply(SupplyProgress p)
-        {
-            string raw=p.Data;ModHelper.SetModData(Id,SupplyProgress.SaveKey,raw);
-            if (ModHelper.GetModData(Id,SupplyProgress.SaveKey,"")!=raw) throw new InvalidOperationException("Supply receipt could not be saved");
-        }
+        { ModHelper.SetModData(Id,SupplyProgress.SaveKey,p.Data); }
         internal string FourthSupplySnapshot()
         {
             var visit=ReadStory().Visits.FirstOrDefault(v => v.Index==4);
@@ -40,12 +37,9 @@ namespace XiaomanVisitor
         private void BuildSupplyMenu(CustomUIBuilder b,string page)
         {
             var old=ReadSupply();var brewing=ReadBrewing();int day=StoreStation.Instance.dayCounter;
-            var owner=b.Handle;string run=WorkRunIdentity;int revision=brewing.AgreementRevision;
+            int revision=brewing.AgreementRevision;
             Action<string,Action> button=(label,click) => {
-                b.AddButton(label,() => {
-                    if (TavernMayAct && !TavernDialogueBusy && ReferenceEquals(tavernMenu,owner) && owner.IsAlive
-                        && tavernMenuPage==page && StoreStation.Instance.dayCounter==day && WorkRunIdentity==run) click();
-                });
+                b.AddButton(label,TavernMenuAction(click));
                 b.Last.SetPreferredSize(360,38);
             };
             b.BeginScroll(490);

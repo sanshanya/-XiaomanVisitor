@@ -16,6 +16,7 @@ namespace XiaomanVisitor
     {
         public string Id, Phase = "prepared";
         public int Day, DueDay, AgreementRevision;
+        public int TavernProfit, ProfitDay=-1;
         public List<BrewingMaterial> Materials = new List<BrewingMaterial>();
         public long InputCents, ReturnMilli;
         public bool Credited, RenewalAnswered;
@@ -30,7 +31,7 @@ namespace XiaomanVisitor
         public const string SaveKey = "tavern_brewing_v1";
         public const string ClientId = XiaomanMod.ClientId + ".brewing";
         public const string SampleId = XiaomanMod.Id + ".brewing.sample", BottleId = XiaomanMod.Id + ".brewing.bottle";
-        public int Schema = 3, LastVisitDay = -1, NextCollectionDay = -1, CapacityStartWeek = -1, AgreementRevision;
+        public int Schema = 4, LastVisitDay = -1, NextCollectionDay = -1, CapacityStartWeek = -1, AgreementRevision;
         public bool Blocked, AgreementActive;
         public string PreservedData = "";
         public long CreditMilli;
@@ -120,6 +121,7 @@ namespace XiaomanVisitor
             var batch = new BrewingBatch { Id = run + ":brew:" + day + ":" + Batches.Count, Day = day, DueDay = day + BrewingConfig.DeliveryDays,
                 AgreementRevision=AgreementRevision,
                 Materials = materials, InputCents = input,
+                TavernProfit=(int)(input*BrewingConfig.TavernBonusPercent/10000),
                 ReturnMilli = checked(input * (100 + BrewingConfig.BonusPercent) / 10) };
             Batches.Add(batch); return batch;
         }
@@ -138,7 +140,7 @@ namespace XiaomanVisitor
             if (Blocked || !finalSettlement && !Friday(day)) return;
             foreach (var batch in Batches.Where(b => b.Phase == "complete" && !b.Credited && (finalSettlement || b.DueDay <= day))) {
                 if (CreditMilli > long.MaxValue - batch.ReturnMilli) { Blocked = true; return; }
-                CreditMilli += batch.ReturnMilli; batch.Credited = true;
+                CreditMilli += batch.ReturnMilli; batch.Credited = true;batch.ProfitDay=day;
             }
         }
         public BrewingBottle PrepareBottle(int itemId)
@@ -176,13 +178,21 @@ namespace XiaomanVisitor
                     p.Schema=3;
                     p.CapacityStartWeek=p.Batches.Count>0?(p.Batches.Min(b => b.Day)-1)/7:p.NextCollectionDay>=0?(p.NextCollectionDay-1)/7:-1;
                 }
-                if (p != null && p.Schema == 3 && p.CreditMilli >= 0 && p.Batches != null && p.Bottles != null && p.AgreementRevision>=0
+                if (p!=null && p.Schema==3 && p.Batches!=null) {
+                    // Existing batches retain their quoted return. The new
+                    // operating profit applies only to newly accepted materials.
+                    foreach (var b in p.Batches) { if (b==null) return new BrewingProgress { Blocked=true,PreservedData=raw };b.TavernProfit=0;b.ProfitDay=-1; }
+                    p.Schema=4;
+                }
+                if (p != null && p.Schema == 4 && p.CreditMilli >= 0 && p.Batches != null && p.Bottles != null && p.AgreementRevision>=0
                     && p.CapacityStartWeek>=-1 && (!p.AgreementActive || p.CapacityStartWeek>=0)
                     && (p.LastVisitDay == -1 || VisitDay(p.LastVisitDay))
                     && (p.NextCollectionDay==-1 || p.AgreementActive && p.NextCollectionDay>=BrewingConfig.UnlockDay && Wednesday(p.NextCollectionDay))
                     && p.Batches.All(b => b != null && !string.IsNullOrEmpty(b.Id) && Wednesday(b.Day) && b.DueDay == b.Day + BrewingConfig.DeliveryDays
                         && b.AgreementRevision>=0 && b.AgreementRevision<=p.AgreementRevision
                         && b.InputCents > 0 && b.ReturnMilli > 0 && b.Materials != null && b.Materials.Count > 0
+                        && b.TavernProfit>=0 && b.TavernProfit<=b.InputCents/100
+                        && (b.ProfitDay==-1 || b.Credited && b.ProfitDay>=b.Day)
                         && b.Materials.All(m => m != null && m.ItemId > 0 && m.Count > 0 && m.ValueCents > 0)
                         && b.Materials.Sum(m => m.ValueCents) == b.InputCents
                         && new[] { "prepared", "complete", "cancelled", "uncertain" }.Contains(b.Phase)

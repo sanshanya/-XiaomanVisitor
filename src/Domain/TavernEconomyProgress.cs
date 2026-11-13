@@ -9,6 +9,7 @@ namespace XiaomanVisitor
     {
         public string Id, Kind;
         public int Day, Revenue, Cost;
+        public bool CashBooked;
     }
     public sealed class EconomyProject
     {
@@ -17,12 +18,12 @@ namespace XiaomanVisitor
     public sealed class EconomyContract
     {
         public string Kind;
-        public int SignedDay, EffectiveDay;
+        public int SignedDay, EffectiveDay, WeeklyOrders, WeeklyRent;
     }
     public sealed class EconomyWeek
     {
         public int Number, EndDay, Natural, Regulars, FixedOrders, Revenue, Material, Fixed, Rent, RentAdvance;
-        public int ActiveDays=7;
+        public int ActiveDays=7, ContractPenalty;
         public long Interest, OneOffFee, Repaid, Cash, Principal, Fees, Bills, Minimum;
         public string OrdersId, SubletId;
     }
@@ -38,7 +39,7 @@ namespace XiaomanVisitor
     public sealed class TavernEconomyProgress
     {
         public const string SaveKey="tavern_economy_v1";
-        [JsonProperty] public int Schema=2;
+        [JsonProperty] public int Schema=3;
         [JsonProperty] public string Phase="new", PreservedData;
         [JsonProperty] public bool Blocked, LeaseSeen, GoodEndingSeen, DebtFreeSeen;
         [JsonProperty] public bool ReviewAnnounced;
@@ -47,6 +48,9 @@ namespace XiaomanVisitor
         [JsonProperty] public bool ExtensionRightsFrozen, PacingRecoveryPending;
         [JsonProperty] public int StartDay=-1, NextSettlement=-1, LastDay=-1, OperatingWeeks, Regulars;
         [JsonProperty] public int FullRentFromPeriod=-1;
+        [JsonProperty] public int RentStartDay=-1;
+        [JsonProperty] public bool PenaltyAssessed;
+        [JsonProperty] public int AssessedPenalty, PerformanceRevenue;
         [JsonProperty] public long Cash, Principal, Fees, Bills, OperatingRepaid;
         [JsonProperty] public int FrozenExtensions, ExtensionsUsed, NoticeDay=-1, PaperDay=-1, ResumeDay=-1;
         [JsonProperty] public long FrozenOperatingRepaid;
@@ -77,8 +81,27 @@ namespace XiaomanVisitor
         public bool HasStayed { get { return StableDay>=0 && (Phase=="stable" || Phase=="cleared"); } }
         public long Debt { get { return Principal+Fees+Bills; } }
         public int Level { get { return Projects.Count; } }
+        public long ReserveTarget {
+            get {
+                long contribution=Receipts.Where(r => r.Day>=RentStartDay && (r.Kind=="onsite" || r.Kind=="overflow_orders" || r.Kind=="brewing_profit"))
+                    .Sum(r => Math.Max(0,(long)r.Revenue-r.Cost));
+                return TavernEconomyConfig.Reserve+contribution*TavernEconomyConfig.SupportCashRetentionPercent/100;
+            }
+        }
         public static int MondayOnOrAfter(int day) { return day+(7-(day-1)%7)%7; }
         public int WeekAt(int day) { return StartDay<0 || day<StartDay ? 0 : (day-StartDay)/7+1; }
+        public int RentAt(int day)
+        {
+            // The lease clock is independent of story encounters, operation
+            // pauses and the player's property. Round each rise as native rent does.
+            long rent=TavernEconomyConfig.Rent;
+            int weeks=RentStartDay<0?0:Math.Max(0,(day-RentStartDay)/7);
+            for (int i=0;i<weeks;i++) {
+                rent=rent*(100+TavernEconomyConfig.RentIncreasePercent)/100;
+                if (rent>=1000000000) return 1000000000;
+            }
+            return (int)rent;
+        }
 
         // These dates come from displayed story visits, never from the calendar
         // week or the count of financial settlements. Missed meetings delay them.
@@ -118,7 +141,7 @@ namespace XiaomanVisitor
         }
         private void Open(int day)
         {
-            StartDay=day;NextSettlement=day+7;Phase="operating";
+            StartDay=RentStartDay=day;NextSettlement=day+7;Phase="operating";
             Cash=TavernEconomyConfig.InitialCash;Principal=TavernEconomyConfig.InitialPrincipal;
         }
         public bool Record(string id,string kind,int day,int revenue,int cost)
@@ -127,6 +150,18 @@ namespace XiaomanVisitor
                 || string.IsNullOrEmpty(id) || Receipts.Any(r => r.Id==id) || revenue<0 || cost<0
                 || revenue>1000000 || cost>1000000) return false;
             Receipts.Add(new EconomyReceipt { Id=id,Kind=kind,Day=day,Revenue=revenue,Cost=cost });return true;
+        }
+        public bool ImportBrewingProfit(BrewingBatch batch)
+        {
+            if (!Active || Departing || batch==null || batch.Phase!="complete" || !batch.Credited
+                || batch.ProfitDay<StartDay || batch.TavernProfit<=0) return false;
+            string id="brewing-profit:"+batch.Id;
+            if (Receipts.Any(r => r.Id==id)) return false;
+            // Only the frozen net margin is cash. Materials and the player's
+            // wine return are never counted as the tavern's sales or cash.
+            Cash+=batch.TavernProfit;
+            Receipts.Add(new EconomyReceipt { Id=id,Kind="brewing_profit",Day=batch.ProfitDay,
+                Revenue=batch.TavernProfit,CashBooked=true });return true;
         }
         public bool MayProject(int day)
         {
@@ -147,7 +182,9 @@ namespace XiaomanVisitor
                 || kind!="orders" && kind!="sublet" || Contracts.Any(c => c.Kind==kind)) return false;
             // Separate signatures, counterparties and next-day receipts. They do
             // not create any income while the shop is under financial review.
-            Contracts.Add(new EconomyContract { Kind=kind,SignedDay=day,EffectiveDay=day+1 });PaperDay=day;return true;
+            Contracts.Add(new EconomyContract { Kind=kind,SignedDay=day,EffectiveDay=day+1,
+                WeeklyOrders=kind=="orders"?TavernEconomyConfig.ContractOrders:0,
+                WeeklyRent=kind=="sublet"?TavernEconomyConfig.SubletRent:0 });PaperDay=day;return true;
         }
         public bool Acknowledge(int day)
         {
@@ -185,9 +222,15 @@ namespace XiaomanVisitor
             if (total<0 || produced<=0 || ordinal<0 || ordinal>=produced) throw new ArgumentOutOfRangeException();
             return (int)((long)total*(ordinal+1)/produced-(long)total*ordinal/produced);
         }
-        public static long GuaranteedOperatingCash
-        { get { return (TavernEconomyConfig.OrderPrice-TavernEconomyConfig.OrderMaterial)*TavernEconomyConfig.ContractOrders
-                    -TavernEconomyConfig.StableFixedCost-TavernEconomyConfig.Rent+TavernEconomyConfig.SubletRent; } }
+        public int ContractOrders { get { return Contracts.Where(c => c.Kind=="orders").Sum(c => c.WeeklyOrders); } }
+        public int SubletRent { get { return Contracts.Where(c => c.Kind=="sublet").Sum(c => c.WeeklyRent); } }
+        public long ContractOperatingCash(int day)
+        {
+            int orders=Contracts.Any(c => c.Kind=="orders")?ContractOrders:TavernEconomyConfig.ContractOrders;
+            int sublet=Contracts.Any(c => c.Kind=="sublet")?SubletRent:TavernEconomyConfig.SubletRent;
+            return (long)(TavernEconomyConfig.OrderPrice-TavernEconomyConfig.OrderMaterial)*orders
+                    -TavernEconomyConfig.StableFixedCost-RentAt(day)+sublet;
+        }
         public bool Refinance(int day,bool guarantee,bool ownsNativeProperty)
         {
             if (Blocked || PendingPayment!=null || !Reviewing || NoticeDay<0 || RefinanceDay>=0
@@ -196,7 +239,7 @@ namespace XiaomanVisitor
             long quote=RefinanceQuote;
             int rate=guarantee?TavernEconomyConfig.GuaranteedRateBp:TavernEconomyConfig.NewRateBp;
             int installment=(int)Up(quote,TavernEconomyConfig.NewTerm);
-            if (Minimum(quote,installment,rate)>GuaranteedOperatingCash) return false;
+            if (Minimum(quote,installment,rate)>ContractOperatingCash(MondayOnOrAfter(day))) return false;
             Principal=RefinancePrincipal=quote;Fees=Bills=OverduePrincipal=0;Cash=Math.Max(Cash,TavernEconomyConfig.Reserve);
             RefinanceDay=day;RateBp=rate;PrincipalInstallment=installment;Guaranteed=guarantee;
             DebtFreeDay=-1;DebtFreeSeen=false;
@@ -266,15 +309,16 @@ namespace XiaomanVisitor
             bool reorganized=RefinanceDay>=0;
             int natural=stress?0:(reorganized?2:NaturalOrders(end))*days/7;
             int regular=stress?0:Regulars*days/7;
-            int fixedOrders=reorganized?TavernEconomyConfig.ContractOrders:0;
+            int fixedOrders=reorganized?ContractOrders:0;
             int count=natural+regular+fixedOrders;
             var receipts=Receipts.Where(r => r.Day>=NextSettlement-7 && r.Day<=end).ToArray();
-            int revenue=count*TavernEconomyConfig.OrderPrice+receipts.Sum(r => r.Revenue)+(reorganized?TavernEconomyConfig.SubletRent:0);
+            int revenue=count*TavernEconomyConfig.OrderPrice+receipts.Sum(r => r.Revenue)+(reorganized?SubletRent:0);
             int material=count*TavernEconomyConfig.OrderMaterial+receipts.Sum(r => r.Cost);
             int fixedCost=(int)Up((reorganized?TavernEconomyConfig.StableFixedCost:TavernEconomyConfig.FixedCost)*days,7);
-            int rent=reorganized || period>7 || FullRentFromPeriod>0 && period>=FullRentFromPeriod?TavernEconomyConfig.Rent:period<=5?90:260;
-            rent=(int)Up(rent*days,7);
-            int rentAdvance=(int)Up(TavernEconomyConfig.Rent*days,7)-rent;
+            int faceRent=RentAt(end);
+            int rent=reorganized || period>7 || FullRentFromPeriod>0 && period>=FullRentFromPeriod?faceRent:period<=5?90:260;
+            rent=(int)Up((long)rent*days,7);
+            int rentAdvance=(int)Up((long)faceRent*days,7)-rent;
             long interest=Up(Principal*(reorganized?RateBp:TavernEconomyConfig.OldRateBp)*days,70000);
             long oneOff=!reorganized && period==6?TavernEconomyConfig.TransferFee:0;
             long minimum=reorganized?Math.Min(Principal,PrincipalInstallment)+interest:0;
@@ -282,13 +326,26 @@ namespace XiaomanVisitor
             long beforePrincipal=Principal;
             Principal+=rentAdvance;
             Fees+=interest+oneOff;
-            long operating=Cash+revenue-material-fixedCost-rent-Bills;
+            long operating=Cash+revenue-receipts.Where(r => r.CashBooked).Sum(r => r.Revenue)-material-fixedCost-rent-Bills;
             Cash=Math.Max(0,operating);Bills=Math.Max(0,-operating);
-            long sweep=Math.Min(Math.Max(0,Cash-TavernEconomyConfig.Reserve),Principal+Fees);
-            Cash-=sweep;PayDebt(sweep);OperatingRepaid+=sweep;
+            int penalty=0;
+            if (!PenaltyAssessed && !reorganized && CrisisDay>=0 && end>=CrisisDay+6) {
+                PenaltyAssessed=true;
+                // The last three operating weeks are assessed only after the
+                // twelfth displayed visit. Genuine sales can satisfy the target;
+                // gifts of materials and rent income cannot.
+                PerformanceRevenue=Weeks.Where(w => w.EndDay>end-21).Sum(w => (w.Natural+w.Regulars)*TavernEconomyConfig.OrderPrice)
+                    +(natural+regular)*TavernEconomyConfig.OrderPrice
+                    +Receipts.Where(r => r.Day>end-21 && r.Day<=end && (r.Kind=="onsite" || r.Kind=="overflow_orders")).Sum(r => r.Revenue);
+                if (PerformanceRevenue<TavernEconomyConfig.PerformanceTarget) penalty=TavernEconomyConfig.ContractPenalty;
+                AssessedPenalty=penalty;
+            }
+            long penaltyPaid=Math.Min(Cash,penalty);Cash-=penaltyPaid;Fees+=penalty-penaltyPaid;
+            long sweep=Math.Min(Math.Max(0,Cash-ReserveTarget),Principal+Fees);
+            Cash-=sweep;PayDebt(sweep);OperatingRepaid+=sweep+penaltyPaid;
             var row=new EconomyWeek { Number=period,EndDay=end,ActiveDays=days,Natural=natural,Regulars=regular,FixedOrders=fixedOrders,
                 Revenue=revenue,Material=material,Fixed=fixedCost,Rent=rent,RentAdvance=rentAdvance,
-                Interest=interest,OneOffFee=oneOff,Repaid=sweep,Cash=Cash,Principal=Principal,Fees=Fees,Bills=Bills,Minimum=minimum,
+                Interest=interest,OneOffFee=oneOff+penalty,ContractPenalty=penalty,Repaid=sweep+penaltyPaid,Cash=Cash,Principal=Principal,Fees=Fees,Bills=Bills,Minimum=minimum,
                 OrdersId=reorganized?"dock-teams:"+end:"natural-and-regular:"+end,
                 SubletId=reorganized?"repair-room:"+end:"" };
             Weeks.Add(row);OperatingWeeks++;
@@ -300,7 +357,7 @@ namespace XiaomanVisitor
                 if (MissedPeriods>=2 || OverduePrincipal>PrincipalInstallment || Bills>0) {
                     Phase="remedy";NoticeDay=-1;ReviewAnnounced=false;HandlingDays.Clear();
                 }
-                else if (fixedOrders==20 && Cash>=TavernEconomyConfig.Reserve && sweep>=minimum) {
+                else if (fixedOrders>0 && Cash>=TavernEconomyConfig.Reserve && sweep>=minimum) {
                     if (StableDay<0) StableDay=end;Phase=Debt==0?"cleared":"stable";
                 }
             }
@@ -359,7 +416,7 @@ namespace XiaomanVisitor
             if (string.IsNullOrEmpty(data)) return new TavernEconomyProgress();
             try {
                 var p=JsonConvert.DeserializeObject<TavernEconomyProgress>(data);
-                if (p==null || p.Schema!=1 && p.Schema!=2 || p.Receipts==null || p.Projects==null || p.Contracts==null || p.Weeks==null
+                if (p==null || p.Schema<1 || p.Schema>3 || p.Receipts==null || p.Projects==null || p.Contracts==null || p.Weeks==null
                     || p.Payments==null || p.PaymentHistory==null || p.HandlingDays==null || p.OperatingWeeks!=p.Weeks.Count
                     || !new[]{"new","migration","legacy","operating","maturity_pending","review_pending","review","decision","extension_wait","extended","restructured","stable","cleared","remedy","leaving"}.Contains(p.Phase)
                     || p.Cash<0 || p.Principal<0 || p.Fees<0 || p.Bills<0 || p.OverduePrincipal<0
@@ -367,7 +424,7 @@ namespace XiaomanVisitor
                     || p.PlayerReserve<0 || p.GuaranteeDue<0 || p.GuaranteePaid<0 || p.GuaranteeDue+p.GuaranteePaid>TavernEconomyConfig.GuaranteeLimit
                     || p.Receipts.Any(r => r==null || string.IsNullOrEmpty(r.Id) || r.Revenue<0 || r.Cost<0)
                     || p.Receipts.GroupBy(r => r.Id).Any(g => g.Count()>1)
-                    || p.Contracts.Any(c => c==null || c.Kind!="orders" && c.Kind!="sublet" || c.EffectiveDay!=c.SignedDay+1)
+                    || p.Contracts.Any(c => c==null || c.Kind!="orders" && c.Kind!="sublet" || c.EffectiveDay!=c.SignedDay+1 || c.WeeklyOrders<0 || c.WeeklyRent<0)
                     || p.Contracts.GroupBy(c => c.Kind).Any(g => g.Count()>1)
                     || p.Projects.Where((r,i) => r==null || r.Level!=i+1).Any()
                     || p.Weeks.Any(w => w==null || w.Cash<0 || w.Principal<0 || w.Fees<0 || w.Bills<0 || w.ActiveDays<1 || w.ActiveDays>7)
@@ -390,6 +447,20 @@ namespace XiaomanVisitor
                     p.ExtensionRightsFrozen=p.OperatingWeeks>=10;
                     p.Schema=2;
                 }
+                if (p.Schema==2) {
+                    // Start the new escalator prospectively; settled rows, cash,
+                    // old contracts and completed departure choices remain frozen.
+                    p.RentStartDay=p.StartDay<0?-1:MondayOnOrAfter(Math.Max(p.StartDay,p.LastDay));
+                    p.PenaltyAssessed=p.CrisisDay>=0 || p.OperatingWeeks>=10 || p.RefinanceDay>=0 || p.Departing;
+                    foreach (var c in p.Contracts) {
+                        c.WeeklyOrders=c.Kind=="orders"?20:0;c.WeeklyRent=c.Kind=="sublet"?240:0;
+                    }
+                    p.Schema=3;
+                }
+                if (p.Active && (p.RentStartDay<1 || !StoryRules.IsMonday(p.RentStartDay))
+                    || p.AssessedPenalty<0 || p.PerformanceRevenue<0
+                    || p.Contracts.Any(c => c.Kind=="orders" ? c.WeeklyOrders<1 || c.WeeklyOrders>10000 || c.WeeklyRent!=0
+                        : c.WeeklyRent<1 || c.WeeklyRent>1000000 || c.WeeklyOrders!=0)) return Invalid(data);
                 return p;
             } catch (JsonException) { return Invalid(data); }
         }

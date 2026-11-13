@@ -11,6 +11,7 @@ namespace XiaomanVisitor
         private CustomUIWindow tavernPanel,tavernMenu;
         private CustomUIElement tavernBackpackButton,tavernReturnButton;
         private string tavernLocale,tavernMenuPage;
+        private long tavernMenuRevision;
         private bool tavernActionBusy,tavernSequence,tavernInputBlocked;
         private float tavernNextRefresh;
         private readonly Queue<string> tavernLines=new Queue<string>();
@@ -163,12 +164,23 @@ namespace XiaomanVisitor
             }
             else if (spot=="pickup") ShowEconomyWindow("contracts");
         }
+        private Action TavernMenuAction(Action action)
+        {
+            long revision=tavernMenuRevision;
+            // Close, rebuild, load and leave all invalidate this menu generation.
+            return () => {
+                if (revision==tavernMenuRevision && TavernMayAct
+                    && !TavernDialogueBusy && !tavernActionBusy) action();
+            };
+        }
         private void CloseTavernMenu()
         {
+            // Invalidate queued clicks before native controls are destroyed.
+            tavernMenuRevision++;
             tavernMenuPage=null;
+            tavernMenu=null;
             tavernStage?.HideChoices();
             if (CustomUIManager.Instance!=null) CustomUIManager.Instance.CloseWindow(TavernMenuId);
-            tavernMenu=null;
             tavernStage?.AttachPanel(tavernPanel?.Rect);
         }
         private void ShowTavernMenu(string page)
@@ -185,6 +197,9 @@ namespace XiaomanVisitor
             bool notice=page=="ending_notice";
             if (drinks && !TavernTrading) return;
             if (!drinks && !supply && !notice) return;
+            // A window can reuse its handle when switching or refreshing pages.
+            // Handle identity alone does not make its previous buttons current.
+            tavernMenuRevision++;
             bool fresh=tavernMenu==null || !tavernMenu.IsAlive;
             CustomUIBuilder builder;
             if (tavernMenu!=null && tavernMenu.IsAlive) {
@@ -194,12 +209,17 @@ namespace XiaomanVisitor
             else {
                 builder=CustomUIManager.Window(TavernMenuId,Text("ui_tavern_name"),"meta");
                 tavernMenu=builder.Handle;
-                builder.SetDraggable(true).OnClose(() => { tavernMenuPage=null; tavernStage?.AttachPanel(tavernPanel?.Rect); });
+                var opened=tavernMenu;
+                builder.SetDraggable(true).OnClose(() => {
+                    if (!ReferenceEquals(tavernMenu,opened)) return;
+                    tavernMenuRevision++;tavernMenuPage=null;tavernMenu=null;
+                    tavernStage?.AttachPanel(tavernPanel?.Rect);
+                });
             }
             tavernMenu.SetTitle(Text(notice?"ui_w12_notice_name":drinks?"ui_tavern_menu":"ui_tavern_name"));
             if (notice) {
                 builder.SetSize(440,520);builder.AddLabel(Text(ReadStory().VisitIndex>=13?"ui_w13_notice":"ui_w12_notice"));
-                builder.AddButton(Text("ui_tavern_back"),() => ShowTavernMenu("interaction"));
+                builder.AddButton(Text("ui_tavern_back"),TavernMenuAction(() => ShowTavernMenu("interaction")));
             }
             else if (supply) { builder.SetSize(420,620);BuildSupplyMenu(builder,page); }
             else BuildTavernDrinkMenu(builder,page=="luxury");
@@ -216,7 +236,7 @@ namespace XiaomanVisitor
         {
             var progress=ReadTavern();
             var skin=XiaomanTavernMenuSkin.Read();skin?.Window(tavernMenu);
-            Action<string,Action> button=(key,click) => { builder.AddButton(Text(key),() => { if (!TavernDialogueBusy && !tavernActionBusy) click(); }); builder.Last.SetPreferredSize(334,48);skin?.Button(builder.Last); };
+            Action<string,Action> button=(key,click) => { builder.AddButton(Text(key),TavernMenuAction(click)); builder.Last.SetPreferredSize(334,48);skin?.Button(builder.Last); };
             builder.AddLabel(Text("ui_tavern_cash",PlayerStore.Instance.GetCash()));
             skin?.Label(builder.Last);
             builder.AddLabel(Text(progress.Drank(StoreStation.Instance.dayCounter)?"ui_tavern_drunk_today":"ui_tavern_one_glass"));
@@ -243,7 +263,7 @@ namespace XiaomanVisitor
                 builder.AddLabel(Text("drink_buff_"+spec.Effect.ToString().ToLowerInvariant(),spec.EffectAmount)+"\n"+Text("drink_buff_duration"));
                 builder.Last.SetPreferredSize(cardWidth-16,78);skin?.Label(builder.Last);
                 builder.End();
-                builder.AddButton(Text("ui_tavern_confirm_drink"),() => BuyTavernDrink(key));
+                builder.AddButton(Text("ui_tavern_confirm_drink"),TavernMenuAction(() => BuyTavernDrink(key)));
                 skin?.Button(builder.Last);
                 builder.Last.SetPreferredSize(cardWidth,40).SetInteractable(!progress.Drank(StoreStation.Instance.dayCounter) && PlayerStore.Instance.GetCash()>=TavernPrices.For(spec) && (!luxury || supply.Batches.Any(b => b.Key==key && b.StoreRemaining>0)));
                 builder.End();
@@ -259,9 +279,7 @@ namespace XiaomanVisitor
         {
             CloseTavernMenu();
             var options=new List<TavernChoice>();
-            Action<string,Action> choice=(label,click) => options.Add(new TavernChoice(label,() => {
-                if (TavernMayAct && !TavernDialogueBusy && !tavernActionBusy) click();
-            }));
+            Action<string,Action> choice=(label,click) => options.Add(new TavernChoice(label,TavernMenuAction(click)));
             if (page=="root") {
                 if (TavernTrading) choice(Text("ui_tavern_menu"),() => { CloseTavernMenu();QueueTavernSpeech(new[]{"xm_tavern_w02_menu"},blockInput:false);ShowTavernMenu("drinks"); });
                 choice(Text("ui_tavern_interaction"),() => ShowTavernMenu("interaction"));

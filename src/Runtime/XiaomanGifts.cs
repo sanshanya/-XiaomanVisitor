@@ -99,13 +99,6 @@ namespace XiaomanVisitor
             ModHelper.SetSource(item, Id, ModName);
         }
 
-        // Compatibility entry point for old test scripts. Actual story rewards now use visits.
-        public static bool CompleteStoryNode(string nodeId)
-        {
-            Instance?.Log.Log("Story reward " + nodeId + " follows the fourteen-visit schedule; no trade unlock is needed.");
-            return false;
-        }
-
         private void TryDeliverThankYouGift()
         {
             if (SideStories.BuybackStory.LineClosed) return;

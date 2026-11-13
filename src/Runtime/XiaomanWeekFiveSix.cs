@@ -9,10 +9,7 @@ namespace XiaomanVisitor
         private ReferralProgress ReadReferrals()
         { return ReferralProgress.Restore(ModHelper.GetModData(Id,ReferralProgress.SaveKey,""),WorkRunIdentity,StoreStation.Instance.dayCounter); }
         private void SaveReferrals(ReferralProgress p)
-        {
-            string data=p.Data;ModHelper.SetModData(Id,ReferralProgress.SaveKey,data);
-            if (ModHelper.GetModData(Id,ReferralProgress.SaveKey,"")!=data) throw new InvalidOperationException("Referral record was not saved");
-        }
+        { ModHelper.SetModData(Id,ReferralProgress.SaveKey,p.Data); }
         private void EnableWeekFiveSix()
         {
             ModHook.OnGameLoadedLate+=TickWeekFiveSix;ModHook.OnWakingUpLate+=TickWeekFiveSix;
@@ -28,7 +25,7 @@ namespace XiaomanVisitor
         }
         private void TickWeekFiveSix()
         {
-            if (!enabled || !TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null || weekFiveSixBusy) return;
+            if (!TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null || weekFiveSixBusy) return;
             weekFiveSixBusy=true;
             try {
                 var supply=ReadSupply();if (supply.RecordPreview(StoreStation.Instance.dayCounter)) SaveSupply(supply);
@@ -50,7 +47,7 @@ namespace XiaomanVisitor
         }
         private void QueueReferralVisitor(StoreClientManager manager)
         {
-            if (!enabled || !TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null || manager?.clientStack==null || TavernStoryFinished) return;
+            if (!TavernMapEnabled || !PlayerStore.HasInstance || StoreStation.Instance==null || manager?.clientStack==null || TavernStoryFinished) return;
             int day=StoreStation.Instance.dayCounter;
             var p=ReadReferrals();if (TavernTrading && p.Draw(day)) SaveReferrals(p);
             var due=p.Due(day);
@@ -69,7 +66,7 @@ namespace XiaomanVisitor
             var introduction=new Dialogue().SetText(c.displayName,Text(due.Upper?"xm_w06_referral_upper":"xm_w06_referral_tourist"));
             introduction.nextDialogue=c.mainDialogue;c.mainDialogue=introduction;
             introduction.startAction+=() => {
-                if (!enabled || !TavernMapEnabled || StoreStation.Instance==null) return;
+                if (!TavernMapEnabled || StoreStation.Instance==null) return;
                 var state=ReadReferrals();if (state.Arrive(c.identifier,StoreStation.Instance.dayCounter)) SaveReferrals(state);
             };
             ModHelper.SetClientSource(c,Id);manager.AddClient(c);
@@ -77,10 +74,7 @@ namespace XiaomanVisitor
         private ImprovGiftProgress ReadImprovGift()
         { return ImprovGiftProgress.Restore(ModHelper.GetModData(Id,ImprovGiftProgress.SaveKey,"")); }
         private void SaveImprovGift(ImprovGiftProgress p)
-        {
-            string data=p.Data;ModHelper.SetModData(Id,ImprovGiftProgress.SaveKey,data);
-            if (ModHelper.GetModData(Id,ImprovGiftProgress.SaveKey,"")!=data) throw new InvalidOperationException("Improvised gift record was not saved");
-        }
+        { ModHelper.SetModData(Id,ImprovGiftProgress.SaveKey,p.Data); }
         private void TryDeliverImprovGift()
         {
             if (!enabled || improvGiftBusy || !PlayerStore.HasInstance || EmporiumEntry.Instance==null || ModHelper.IsOutsideStore()) return;

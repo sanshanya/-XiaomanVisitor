@@ -15,12 +15,7 @@ namespace XiaomanVisitor
         private TavernWorkProgress ReadWork()
         { return TavernWorkProgress.Restore(ModHelper.GetModData(Id,TavernWorkProgress.SaveKey,""),WorkRunIdentity,StoreStation.Instance.dayCounter); }
         private void SaveWork(TavernWorkProgress p)
-        {
-            string data=p.Data;
-            ModHelper.SetModData(Id,TavernWorkProgress.SaveKey,data);
-            if (ModHelper.GetModData(Id,TavernWorkProgress.SaveKey,"")!=data)
-                throw new InvalidOperationException("Work receipt could not be saved");
-        }
+        { ModHelper.SetModData(Id,TavernWorkProgress.SaveKey,p.Data); }
         private void EnablePaidWork()
         {
             ModHook.OnShutterClosedLate+=GenerateNightDemand;

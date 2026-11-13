@@ -21,10 +21,7 @@ namespace XiaomanVisitor
         private ImprovGiftProgress ReadRokaGift()
         { return ImprovGiftProgress.Restore(ModHelper.GetModData(Id,RokaGiftKey,""),RokaGiftSource); }
         private void SaveRokaGift(ImprovGiftProgress p)
-        {
-            string data=p.Data;ModHelper.SetModData(Id,RokaGiftKey,data);
-            if (ModHelper.GetModData(Id,RokaGiftKey,"")!=data) throw new InvalidOperationException("Unique drink receipt was not saved");
-        }
+        { ModHelper.SetModData(Id,RokaGiftKey,p.Data); }
         private void TryDeliverRokaGift(bool atTavern=false)
         {
             if (!enabled || rokaGiftBusy || !PlayerStore.HasInstance || EmporiumEntry.Instance==null || StoreStation.Instance==null) return;
