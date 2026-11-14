@@ -650,8 +650,8 @@ ui_eco_phase_leaving,閉店・帰郷を決定済み
 ui_eco_phase_migration,新契約の確認待ち
 ui_eco_phase_legacy,既存の帰郷結末を完了済み
 ui_eco_phase_new,開業前
-ui_eco_remedy,期日の費用・未払を補って営業再開を申請できます。元金の二重加算、所有権への介入、自動引落はしません。
-ui_eco_resume,是正後の営業再開を申請
+ui_eco_remedy,再開申請時、店舗の現金で期日の費用・営業未払・延滞元金を支払います。不足分の肩代わりは任意です。元金を重複計上せず、プレイヤーの所持金を自動で引き落としません。
+ui_eco_resume,店舗資金で滞納分を支払い再開申請
 ui_eco_future,完済後も会えますが、上がり続ける賃料は経営に影響します。配当と酒場の店舗購入は未実装。達成済みの残留物語は保持されます。
 ui_eco_player_reserve,手元に残す運転資金 {0} CR・現在の所持金 {1} CR。残す分は肩代わりに使いません。
 ui_eco_keep_cash,残す信用点（変更可）
@@ -752,3 +752,4 @@ ui_eco_rent_now,今週の賃料 {0} CR・来週 {1} CR・週{2}%増\n審査休�
 ui_eco_performance_terms,第12回訪問後、その週を締めて直近3週の売上を確認。目標{0} CR、未達時の違約金{1} CRは一度だけ。実売上のみを数え、材料・贈答品・間貸し収入は除外します。達成なら免除。
 ui_eco_performance_result,今回の実績 {0} / {1} CR・一度限りの違約金 {2} CR。
 ui_tavern_receipt_blocked,酒場の取引記録を読み込めません。元の記録は保持しています。セーブデータの確認が必要です。
+ui_eco_tavern_repayment_receipt,店舗資金による返済受領証：{0}日目・実払 {1} CR

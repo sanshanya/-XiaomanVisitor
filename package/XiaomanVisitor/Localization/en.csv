@@ -650,8 +650,8 @@ ui_eco_phase_leaving,Closure and departure chosen
 ui_eco_phase_migration,New lease acceptance pending
 ui_eco_phase_legacy,Original departure ending completed
 ui_eco_phase_new,Not open yet
-ui_eco_remedy,Pay overdue fees and arrears to request reopening. Missed principal is not added twice; guarantees never seize native property or debit credits automatically.
-ui_eco_resume,Request reopening after remedy
+ui_eco_remedy,"Requesting reopening first uses available tavern cash to pay overdue fees, operating bills and overdue principal. Any player contribution is separate and voluntary. Principal is not counted twice; player credits are never deducted automatically."
+ui_eco_resume,Pay arrears from tavern cash and request reopening
 ui_eco_future,"Visits continue after repayment, but rising rent still affects the business. Dividends and buying the tavern premises are not implemented. The completed stay story remains recorded."
 ui_eco_player_reserve,Keep {0} CR for your own operations; current cash {1} CR. Repayment will not use your reserved amount.
 ui_eco_keep_cash,Credits to keep (editable)
@@ -752,3 +752,4 @@ ui_eco_rent_now,"This week's rent {0} CR · next week {1} CR · weekly rise {2}%
 ui_eco_performance_terms,"After visit twelve and that week's close, assess sales over the last three weeks against {0} CR. A shortfall incurs one {1} CR penalty. Only genuine sales count, excluding material gifts, returned wine and sublet income. Meeting the target waives the penalty."
 ui_eco_performance_result,Assessed sales {0} / {1} CR · one-time penalty {2} CR.
 ui_tavern_receipt_blocked,The tavern transaction record could not be read. The original data is retained; please provide the save for investigation.
+ui_eco_tavern_repayment_receipt,"Tavern-funded repayment receipt: day {0}, actual payment {1} CR"

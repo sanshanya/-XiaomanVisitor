@@ -650,8 +650,8 @@ ui_eco_phase_leaving,已决定关店离站
 ui_eco_phase_migration,等待确认新租约
 ui_eco_phase_legacy,已完成原离站结局
 ui_eco_phase_new,尚未开业
-ui_eco_remedy,补足已到期费用与欠款后申请恢复营业。正常本金额不重复叠加；保证不会触碰原生当铺产权或自动扣款。
-ui_eco_resume,补救后申请恢复营业
+ui_eco_remedy,申请恢复营业时，先用店内现金补足已到期费用、经营欠款和逾期本金；不足部分可另行自愿代偿。不重复计算本金，不自动扣玩家信用点。
+ui_eco_resume,用店内现金补缴并申请恢复营业
 ui_eco_future,清债后仍可来往，但上涨的房租继续影响经营。分红与购买酒馆物业尚未开放；已经经历的留下剧情保留。
 ui_eco_player_reserve,自留周转金 {0} CR · 当前随身 {1} CR。代偿不会动用自留部分。
 ui_eco_keep_cash,自留信用点（可修改）
@@ -752,3 +752,4 @@ ui_eco_rent_now,本周票面房租 {0} CR · 下周 {1} CR · 每周上涨 {2}%\
 ui_eco_performance_terms,第十二次来访后，结完当周核对最近三周销售。销售目标{0} CR；未达标一次收取{1} CR违约金。只计实际营业销售，供料价值、赠酒及分租不充抵。达标免收，不重复结算。
 ui_eco_performance_result,本次考核销售 {0} / {1} CR · 一次性违约金 {2} CR。
 ui_tavern_receipt_blocked,酒馆交易记录无法读取，已保留原记录，请提供存档排查。
+ui_eco_tavern_repayment_receipt,酒馆现金还款回执：第 {0} 天，实际支付 {1} CR

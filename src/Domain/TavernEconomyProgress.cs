@@ -29,7 +29,7 @@ namespace XiaomanVisitor
     }
     public sealed class EconomyPayment
     {
-        public string Id, Phase="prepared";
+        public string Id, Phase="prepared", Source="player";
         public int Day, BeforeCash, Amount;
     }
 
@@ -264,7 +264,15 @@ namespace XiaomanVisitor
         }
         public bool ResumeAfterRemedy(int day)
         {
-            if (Blocked || Phase!="remedy" || Bills>0 || Fees>0 || OverduePrincipal>0 || PendingPayment!=null) return false;
+            if (Blocked || Phase!="remedy" || PendingPayment!=null) return false;
+            long principalDue=Math.Min(Principal,OverduePrincipal),due=Bills+Fees+principalDue;
+            if (Cash<due) return false;
+            if (due>0) {
+                var payment=new EconomyPayment { Id="tavern-remedy:"+day+":"+Payments.Count,Source="tavern",
+                    Phase="complete",Day=day,BeforeCash=(int)Cash,Amount=(int)due };
+                Cash-=due;PayDebt(Fees+principalDue);Bills=OverduePrincipal=0;OperatingRepaid+=due;
+                Payments.Add(payment.Id);PaymentHistory.Add(payment);
+            }
             MissedPeriods=0;NoticeDay=-1;HandlingDays.Clear();ResumeDay=MondayOnOrAfter(day+1);
             NextSettlement=ResumeDay+7;Phase=StableDay>=0?"stable":"restructured";return true;
         }
@@ -341,7 +349,10 @@ namespace XiaomanVisitor
                 AssessedPenalty=penalty;
             }
             long penaltyPaid=Math.Min(Cash,penalty);Cash-=penaltyPaid;Fees+=penalty-penaltyPaid;
-            long sweep=Math.Min(Math.Max(0,Cash-ReserveTarget),Principal+Fees);
+            // A reserve is a savings target, not permission to miss an agreed
+            // installment while cash is available (including older 900 CR loans).
+            long required=reorganized?Fees+Math.Min(Principal,PrincipalInstallment+OverduePrincipal):0;
+            long sweep=Math.Min(Math.Min(Cash,Principal+Fees),Math.Max(Math.Max(0,Cash-ReserveTarget),required));
             Cash-=sweep;PayDebt(sweep);OperatingRepaid+=sweep+penaltyPaid;
             var row=new EconomyWeek { Number=period,EndDay=end,ActiveDays=days,Natural=natural,Regulars=regular,FixedOrders=fixedOrders,
                 Revenue=revenue,Material=material,Fixed=fixedCost,Rent=rent,RentAdvance=rentAdvance,
@@ -429,7 +440,8 @@ namespace XiaomanVisitor
                     || p.Projects.Where((r,i) => r==null || r.Level!=i+1).Any()
                     || p.Weeks.Any(w => w==null || w.Cash<0 || w.Principal<0 || w.Fees<0 || w.Bills<0 || w.ActiveDays<1 || w.ActiveDays>7)
                     || p.Payments.Distinct().Count()!=p.Payments.Count
-                    || p.PaymentHistory.Count!=p.Payments.Count || p.PaymentHistory.Any(r => r==null || r.Amount<=0 || r.Phase!="complete" || !p.Payments.Contains(r.Id))
+                    || p.PaymentHistory.Count!=p.Payments.Count || p.PaymentHistory.Any(r => r==null || r.Amount<=0 || r.Phase!="complete"
+                        || r.Source!="player" && r.Source!="tavern" || !p.Payments.Contains(r.Id))
                     || p.PaymentHistory.Select(r => r.Id).Distinct().Count()!=p.Payments.Count
                     || p.FrozenExtensions<0 || p.FrozenExtensions>2 || p.ExtensionsUsed<0 || p.ExtensionsUsed>p.FrozenExtensions
                     || p.RefinanceDay>=0 && (p.RateBp!=TavernEconomyConfig.NewRateBp && p.RateBp!=TavernEconomyConfig.GuaranteedRateBp

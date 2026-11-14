@@ -67,6 +67,21 @@ internal static class WeekThreeChecks
             && TavernWorkProgress.Restore("{\"Schema\":9}","run",15).RecoveryBlocked,
             "future or damaged paid ledgers preserve history and cannot reset earnings");
 
+        var oldUnknown=new TavernWorkProgress { Schema=2,RunIdentity="old-uncertain" };oldUnknown.EnsureDemand(15,3);
+        oldUnknown.Shifts.Add(new PaidWorkShift { Id="paid_shift_15",Day=15,Status="uncertain",BeforeCash=100,Wage=60,
+            Revenue=195,Material=90,Net=45,OrderIds=oldUnknown.Demand.Single().Orders.Select(o => o.Id).ToArray() });
+        oldUnknown=TavernWorkProgress.Restore(oldUnknown.Data,"old-uncertain",15);
+        check(!oldUnknown.RecoveryBlocked && oldUnknown.Pending==null && !oldUnknown.MayWork(15),
+            "an unproven old wage retains that day's slot without becoming an active global payment");
+        check(oldUnknown.EnsureDemand(16,TavernWorkConfig.DailyOrders) && oldUnknown.MayWork(16),
+            "an uncertain old wage cannot lock a later day's real orders");
+        var newShift=oldUnknown.PrepareShift(16,100);
+        check(newShift.Wage==120 && oldUnknown.Complete(newShift) && oldUnknown.IncrementalNet==90,
+            "later work uses new terms without guessing old wages or counting uncertain old sales");
+        oldUnknown=TavernWorkProgress.Restore(oldUnknown.Data,"old-uncertain",16);
+        check(!oldUnknown.RecoveryBlocked && oldUnknown.Shifts[0].Status=="uncertain" && oldUnknown.Shifts[0].Wage==60
+            && oldUnknown.WorkedOn(16),"new paid work and the unchanged uncertain old receipt coexist after reload");
+
         var story=ThirdVisit();
         check(!story.FreezeThirdNote(15,work.WorkedOn) && story.Visits[2].NoteVariant=="",
             "W03-A03B: do not choose a letter during the daytime encounter");

@@ -106,6 +106,28 @@ internal static class EconomyChecks
             && TavernEconomyProgress.Minimum(14404,277,50)==350
             && TavernEconomyProgress.Minimum(14405,278,50)==351,"refinance affordability uses the actual reopening rent and exact interest rounding");
 
+        var legacyLoan=Pre();Contracts(legacyLoan,check);legacyLoan.Refinance(85,false,false);legacyLoan.Advance(92);
+        legacyLoan.Cash=900;legacyLoan.Schema=2;
+        legacyLoan=TavernEconomyProgress.Restore(legacyLoan.Data);
+        check(!legacyLoan.Blocked && legacyLoan.ContractOrders==20 && legacyLoan.HasStayed && legacyLoan.Cash==900,
+            "a saved old loan retains its original signed orders and actual 900 CR cash");
+        for (int n=0;n<3;n++) {
+            legacyLoan.Advance(legacyLoan.NextSettlement);
+            check(legacyLoan.HasStayed && legacyLoan.MissedPeriods==0 && legacyLoan.Weeks.Last().Repaid>=legacyLoan.Weeks.Last().Minimum,
+                "available old-save cash pays contractual installments before building the new reserve target");
+        }
+        var repair=TavernEconomyProgress.Restore(legacyLoan.Data);
+        repair.Phase="remedy";repair.Cash=1698;repair.Fees=114;repair.OverduePrincipal=452;repair.MissedPeriods=2;
+        long repairDebt=repair.Debt,repairCash=repair.Cash;int priorPayments=repair.Payments.Count;
+        var poor=TavernEconomyProgress.Restore(repair.Data);poor.Cash=565;string poorBefore=poor.Data;
+        check(!poor.ResumeAfterRemedy(poor.LastDay) && poor.Data==poorBefore,"insufficient store cash cannot waive arrears or invent a repayment");
+        check(repair.ResumeAfterRemedy(repair.LastDay) && repair.Cash==repairCash-566 && repair.Debt==repairDebt-566
+            && repair.Fees==0 && repair.OverduePrincipal==0 && repair.PaymentHistory.Last().Source=="tavern"
+            && repair.Payments.Count==priorPayments+1,"explicit reopening may clear real arrears once from the tavern's own available cash");
+        repair=TavernEconomyProgress.Restore(repair.Data);string repaired=repair.Data;
+        check(!repair.Blocked && !repair.ResumeAfterRemedy(repair.LastDay) && repair.Data==repaired,
+            "store-funded remedy receipt survives reload without repeating a debit or becoming player-funded");
+
         var extension=TavernEconomyProgress.Restore(paused);
         int rights=extension.FrozenExtensions;long fee=extension.Fees;
         check(rights>0 && extension.Extend(85) && extension.Fees==fee+80 && extension.Phase=="extension_wait",

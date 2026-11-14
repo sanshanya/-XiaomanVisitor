@@ -72,8 +72,8 @@
       "ui_eco_phase_migration": "等待确认新租约",
       "ui_eco_phase_legacy": "已完成原离站结局",
       "ui_eco_phase_new": "尚未开业",
-      "ui_eco_remedy": "补足已到期费用与欠款后申请恢复营业。正常本金额不重复叠加；保证不会触碰原生当铺产权或自动扣款。",
-      "ui_eco_resume": "补救后申请恢复营业",
+      "ui_eco_remedy": "申请恢复营业时，先用店内现金补足已到期费用、经营欠款和逾期本金；不足部分可另行自愿代偿。不重复计算本金，不自动扣玩家信用点。",
+      "ui_eco_resume": "用店内现金补缴并申请恢复营业",
       "ui_eco_future": "清债后仍可来往，但上涨的房租继续影响经营。分红与购买酒馆物业尚未开放；已经经历的留下剧情保留。",
       "ui_eco_player_reserve": "自留周转金 {0} CR · 当前随身 {1} CR。代偿不会动用自留部分。",
       "ui_eco_keep_cash": "自留信用点（可修改）",
@@ -104,7 +104,8 @@
       "cfg_economy_ledger_tip": "默认关闭。开启后显示经营事务、取餐名单和商户互助会电话入口。关闭只隐藏界面，经营结算照常，已有经营与剧情记录保留。",
       "ui_eco_rent_now": "本周票面房租 {0} CR · 下周 {1} CR · 每周上涨 {2}%\n核账暂停期免收租金，但租约周次继续，恢复营业不会重置租金。",
       "ui_eco_performance_terms": "第十二次来访后，结完当周核对最近三周销售。销售目标{0} CR；未达标一次收取{1} CR违约金。只计实际营业销售，供料价值、赠酒及分租不充抵。达标免收，不重复结算。",
-      "ui_eco_performance_result": "本次考核销售 {0} / {1} CR · 一次性违约金 {2} CR。"
+      "ui_eco_performance_result": "本次考核销售 {0} / {1} CR · 一次性违约金 {2} CR。",
+      "ui_eco_tavern_repayment_receipt": "酒馆现金还款回执：第 {0} 天，实际支付 {1} CR"
     },
     "ja": {
       "ui_eco_title": "みちるのお店の帳簿",
@@ -175,8 +176,8 @@
       "ui_eco_phase_migration": "新契約の確認待ち",
       "ui_eco_phase_legacy": "既存の帰郷結末を完了済み",
       "ui_eco_phase_new": "開業前",
-      "ui_eco_remedy": "期日の費用・未払を補って営業再開を申請できます。元金の二重加算、所有権への介入、自動引落はしません。",
-      "ui_eco_resume": "是正後の営業再開を申請",
+      "ui_eco_remedy": "再開申請時、店舗の現金で期日の費用・営業未払・延滞元金を支払います。不足分の肩代わりは任意です。元金を重複計上せず、プレイヤーの所持金を自動で引き落としません。",
+      "ui_eco_resume": "店舗資金で滞納分を支払い再開申請",
       "ui_eco_future": "完済後も会えますが、上がり続ける賃料は経営に影響します。配当と酒場の店舗購入は未実装。達成済みの残留物語は保持されます。",
       "ui_eco_player_reserve": "手元に残す運転資金 {0} CR・現在の所持金 {1} CR。残す分は肩代わりに使いません。",
       "ui_eco_keep_cash": "残す信用点（変更可）",
@@ -207,7 +208,8 @@
       "cfg_economy_ledger_tip": "初期設定はオフです。オンにすると経営手続き、受取名簿、商店互助会への電話を表示します。オフは表示だけを隠し、営業の精算は続き、経営と物語の記録は残ります。",
       "ui_eco_rent_now": "今週の賃料 {0} CR・来週 {1} CR・週{2}%増\n審査休業中の家賃は免除されますが、賃貸暦は進み、再開で賃料は戻りません。",
       "ui_eco_performance_terms": "第12回訪問後、その週を締めて直近3週の売上を確認。目標{0} CR、未達時の違約金{1} CRは一度だけ。実売上のみを数え、材料・贈答品・間貸し収入は除外します。達成なら免除。",
-      "ui_eco_performance_result": "今回の実績 {0} / {1} CR・一度限りの違約金 {2} CR。"
+      "ui_eco_performance_result": "今回の実績 {0} / {1} CR・一度限りの違約金 {2} CR。",
+      "ui_eco_tavern_repayment_receipt": "店舗資金による返済受領証：{0}日目・実払 {1} CR"
     },
     "en": {
       "ui_eco_title": "Xiaoman's business ledger",
@@ -278,8 +280,8 @@
       "ui_eco_phase_migration": "New lease acceptance pending",
       "ui_eco_phase_legacy": "Original departure ending completed",
       "ui_eco_phase_new": "Not open yet",
-      "ui_eco_remedy": "Pay overdue fees and arrears to request reopening. Missed principal is not added twice; guarantees never seize native property or debit credits automatically.",
-      "ui_eco_resume": "Request reopening after remedy",
+      "ui_eco_remedy": "Requesting reopening first uses available tavern cash to pay overdue fees, operating bills and overdue principal. Any player contribution is separate and voluntary. Principal is not counted twice; player credits are never deducted automatically.",
+      "ui_eco_resume": "Pay arrears from tavern cash and request reopening",
       "ui_eco_future": "Visits continue after repayment, but rising rent still affects the business. Dividends and buying the tavern premises are not implemented. The completed stay story remains recorded.",
       "ui_eco_player_reserve": "Keep {0} CR for your own operations; current cash {1} CR. Repayment will not use your reserved amount.",
       "ui_eco_keep_cash": "Credits to keep (editable)",
@@ -310,7 +312,8 @@
       "cfg_economy_ledger_tip": "Off by default. Enable Business matters, the pickup list and the merchants’ association phone. Turning this off only hides these interfaces; settlements continue and business and story records are retained.",
       "ui_eco_rent_now": "This week's rent {0} CR · next week {1} CR · weekly rise {2}%\nReview pauses waive rent charges, but the lease calendar keeps moving; reopening does not reset rent.",
       "ui_eco_performance_terms": "After visit twelve and that week's close, assess sales over the last three weeks against {0} CR. A shortfall incurs one {1} CR penalty. Only genuine sales count, excluding material gifts, returned wine and sublet income. Meeting the target waives the penalty.",
-      "ui_eco_performance_result": "Assessed sales {0} / {1} CR · one-time penalty {2} CR."
+      "ui_eco_performance_result": "Assessed sales {0} / {1} CR · one-time penalty {2} CR.",
+      "ui_eco_tavern_repayment_receipt": "Tavern-funded repayment receipt: day {0}, actual payment {1} CR"
     }
   },
   "lines": [

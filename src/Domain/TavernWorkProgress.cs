@@ -48,7 +48,7 @@ namespace XiaomanVisitor
         [JsonProperty] public List<int> ThanksVisitWeeks=new List<int>();
         public bool HasWorked { get { return Shifts.Any(s => s.Status=="complete"); } }
         public long IncrementalNet { get { return Shifts.Where(s => s.Status=="complete").Sum(s => (long)s.Net); } }
-        public PaidWorkShift Pending { get { return Shifts.FirstOrDefault(s => s.Status!="complete" && s.Status!="cancelled"); } }
+        public PaidWorkShift Pending { get { return Shifts.FirstOrDefault(s => s.Status=="prepared" || s.Status=="credited"); } }
         public bool WorkedOn(int day) { return Shifts.Any(s => s.Day==day && s.Status=="complete"); }
         public bool ThanksDue(int day) { return !RecoveryBlocked && Thanks.Drawn && Thanks.Won && !Thanks.Seen && day>=Thanks.DueDay && !ThanksVisitWeeks.Contains(SupplyProgress.Week(day)); }
         public int PurchaseRemaining { get { return Thanks.Merged ? 0 : Math.Max(0,TavernWorkConfig.PrivateReserve-Thanks.PrivateSpent); } }
@@ -67,7 +67,7 @@ namespace XiaomanVisitor
         public string[] WaitingIds(int day)
         { return Waiting(day).Take(TavernWorkConfig.OrdersPerShift).Select(o => o.Id).ToArray(); }
         public bool MayWork(int day)
-        { return !RecoveryBlocked && day>=TavernWorkConfig.UnlockDay && Pending==null && !WorkedOn(day)
+        { return !RecoveryBlocked && day>=TavernWorkConfig.UnlockDay && Pending==null && !Shifts.Any(s => s.Day==day && s.Status!="cancelled")
             && Waiting(day).Length>=TavernWorkConfig.OrdersPerShift; }
         // Future consumers must claim the same ID, not count an order again as L1/baseline traffic.
         public bool TryAssignOrder(string id,string owner)
@@ -182,7 +182,7 @@ namespace XiaomanVisitor
                     || own.Sum(o => (long)o.Material)!=s.Material || s.Net!=(long)s.Revenue-s.Material-s.Wage || s.Net<0
                     || (s.Status=="complete" && own.Any(o => o.RevenueOwner!=s.Id))) return Blocked(data,identity);
             }
-            if (p.Shifts.Count(s => s.Status!="complete" && s.Status!="cancelled")>1) return Blocked(data,identity);
+            if (p.Shifts.Count(s => s.Status=="prepared" || s.Status=="credited")>1) return Blocked(data,identity);
             if (p.Thanks.Drawn && (p.Thanks.Roll<0 || p.Thanks.Roll>=100 || !StoryRules.BasicDrinks.Contains(p.Thanks.DrinkKey))
                 || p.Thanks.Drawn && !p.HasWorked || p.Thanks.PrivateSpent<0 || p.Thanks.PrivateSpent>TavernWorkConfig.PrivateReserve
                 || !new[]{"waiting","placing","complete","uncertain"}.Contains(p.Thanks.GiftPhase)

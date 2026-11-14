@@ -85,7 +85,7 @@ namespace XiaomanVisitor
                 }
                 if (p.Weeks.Count==0) b.AddLabel(Text("ui_eco_empty"));
                 foreach (var paid in p.PaymentHistory.Skip(Math.Max(0,p.PaymentHistory.Count-5)))
-                    b.AddLabel(Text("ui_eco_repayment_receipt",paid.Day,paid.Amount));
+                    b.AddLabel(Text(paid.Source=="tavern"?"ui_eco_tavern_repayment_receipt":"ui_eco_repayment_receipt",paid.Day,paid.Amount));
                 if (page=="ledger" && p.Weeks.Count>3) button("ui_eco_history",() => ShowEconomyWindow("history"));
                 if (p.HasStayed && !p.GoodEndingSeen && AtTavern) button("ui_eco_good_event",PlayStayEnding);
                 if (p.Debt==0 && p.HasStayed) b.AddLabel(Text("ui_eco_future"));
